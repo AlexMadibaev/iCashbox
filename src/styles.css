@@ -961,6 +961,19 @@ th {
   font-family: Consolas, "Courier New", monospace;
 }
 
+.receipt-text {
+  margin: 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #121c17;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.28;
+  white-space: pre-wrap;
+}
+
 .receipt-line,
 .receipt-payments div {
   display: flex;
@@ -1127,8 +1140,18 @@ th {
 }
 
 @media print {
+  @page {
+    size: 80mm auto;
+    margin: 2mm;
+  }
+
   body * {
     visibility: hidden;
+  }
+
+  body {
+    margin: 0;
+    background: #ffffff;
   }
 
   .receipt-modal,
@@ -1139,8 +1162,18 @@ th {
   .receipt-modal {
     position: fixed;
     inset: 0;
-    width: 100%;
+    width: 80mm;
+    padding: 0;
+    border-radius: 0;
     box-shadow: none;
+  }
+
+  .receipt-text {
+    padding: 0;
+    border-radius: 0;
+    font-size: 10.5pt;
+    font-weight: 600;
+    line-height: 1.22;
   }
 
   .no-print {

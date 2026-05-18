@@ -276,13 +276,10 @@ function receiptText(payload) {
     rows.push(center('Заклад', width));
     rows.push('');
     rows.push(padColumns('Чек №', order.id || '', width));
-    rows.push(padColumns('Тип замовлення', 'у закладі', width));
-    rows.push(padColumns('Офіціант', payload.shift?.cashier || 'Кассир', width));
-    rows.push(padColumns('Відкрито', time, width));
-    rows.push(padColumns('Надруковано', time, width));
-    rows.push(padColumns('Стіл №', '1 (Основной зал)', width));
-    rows.push(padColumns('К-сть гостей', '1', width));
-    rows.push(padColumns('Замовлення №', String(order.id || '').slice(-3), width));
+    rows.push(padColumns('Кассир', payload.shift?.cashier || 'Кассир', width));
+    rows.push(padColumns('Открыто', time, width));
+    rows.push(padColumns('Напечатано', time, width));
+    rows.push(padColumns('Заказ №', String(order.id || '').slice(-3), width));
     rows.push(line(width));
   } else {
     rows.push(center(isSticker ? 'НАКЛЕЙКА' : 'КУХОННЫЙ ТАЛОН', width));
@@ -300,7 +297,7 @@ function receiptText(payload) {
   }
 
   if (!isSticker && !isKitchen) {
-    rows.push('Наименування   К-сть  Ціна  Загалом');
+    rows.push('Наименование   Кол-во Цена  Итого');
     rows.push(line(width));
   }
 
@@ -327,7 +324,7 @@ function receiptText(payload) {
 
   if (!isKitchen && !isSticker) {
     rows.push('');
-    rows.push(`До оплати  ${'.'.repeat(12)} ${money(order.total)} грн`);
+    rows.push(`К оплате ${'.'.repeat(10)} ${money(order.total)} TJS`);
     if (payments.length) {
       rows.push('');
       rows.push(line(width));
@@ -335,17 +332,13 @@ function receiptText(payload) {
       rows.push('Оплата');
       rows.push('');
       for (const [method, value] of payments) {
-        rows.push(padColumns(method, `${money(value)} грн`, width));
+        rows.push(padColumns(method, `${money(value)} TJS`, width));
       }
     }
     rows.push('');
     rows.push(line(width));
-    rows.push('проспект Олександра Поля, Дніпро,');
-    rows.push('Дніпропетровська область, 49000');
-    rows.push(line(width));
-    rows.push('Мережа Wi-Fi Poster пароль 12345');
-    rows.push(line(width));
-    rows.push('На вас чекає приємний сюрприз!');
+    rows.push('Спасибо за покупку!');
+    rows.push(time);
     rows.push(line(width));
   }
 
@@ -389,7 +382,7 @@ $doc.add_PrintPage({
   $y = 6
   $lineIndex = 0
   foreach ($line in ($text -split "\\r?\\n")) {
-    $fontToUse = if ($lineIndex -lt 1) { $title } elseif ($line -match '^До оплати') { $bold } else { $font }
+    $fontToUse = if ($lineIndex -lt 1) { $title } elseif ($line -match '^К оплате') { $bold } else { $font }
     $e.Graphics.DrawString($line, $fontToUse, $brush, $x, $y)
     $y += [Math]::Ceiling($fontToUse.GetHeight($e.Graphics)) + 1
     $lineIndex += 1

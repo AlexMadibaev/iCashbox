@@ -39,6 +39,11 @@ const currency = new Intl.NumberFormat('ru-RU', {
   maximumFractionDigits: 0
 });
 
+const receiptMoney = new Intl.NumberFormat('ru-RU', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+});
+
 const blankPayments = { Наличные: 0, Alif: 0, 'Dushanbe City': 0, Карта: 0, Перевод: 0 };
 const paymentMethods = Object.keys(blankPayments);
 
@@ -455,19 +460,25 @@ function App() {
   };
 
   const sendToReceiptPrinter = async (order, type = 'receipt', silent = false) => {
+    const printerName = type === 'sticker' ? printSettings.stickerPrinterName : printSettings.printerName;
+    const payload = {
+      order,
+      printerName: printerName.trim(),
+      shift,
+      type
+    };
+
     try {
-      const printerName = type === 'sticker' ? printSettings.stickerPrinterName : printSettings.printerName;
-      const response = await fetch('http://127.0.0.1:8787/print', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          order,
-          printerName: printerName.trim(),
-          shift,
-          type
-        })
-      });
-      if (!response.ok) throw new Error('print failed');
+      if (window.icashboxPrint?.print) {
+        await window.icashboxPrint.print(payload);
+      } else {
+        const response = await fetch('http://127.0.0.1:8787/print', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (!response.ok) throw new Error('print failed');
+      }
       setLastMessage(
         type === 'sticker'
           ? 'Комментарий отправлен на принтер самоклеек'
@@ -485,9 +496,13 @@ function App() {
 
   const loadPrinters = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8787/printers');
-      const payload = await response.json();
-      setPrinters(payload.printers || []);
+      if (window.icashboxPrint?.listPrinters) {
+        setPrinters(await window.icashboxPrint.listPrinters());
+      } else {
+        const response = await fetch('http://127.0.0.1:8787/printers');
+        const payload = await response.json();
+        setPrinters(payload.printers || []);
+      }
       setLastMessage('Список принтеров обновлён');
     } catch {
       setLastMessage('Print-agent не отвечает. Запустите npm run print-agent');
@@ -1344,6 +1359,146 @@ function SettingsModal({ loadPrinters, onClose, printSettings, printers, setPrin
   );
 }
 
+function receiptCenter(text, width = 36) {
+  const value = String(text || '').slice(0, width);
+  return `${' '.repeat(Math.max(0, Math.floor((width - value.length) / 2)))}${value}`;
+}
+
+function receiptRule(width = 36) {
+  return '-'.repeat(width);
+}
+
+function receiptColumns(left, right, width = 36) {
+  const leftValue = String(left || '');
+  const rightValue = String(right || '');
+  const gap = Math.max(1, width - leftValue.length - rightValue.length);
+  return `${leftValue}${' '.repeat(gap)}${rightValue}`.slice(0, width);
+}
+
+function receiptWrap(text, width = 36) {
+  const words = String(text || '').split(/\s+/).filter(Boolean);
+  const rows = [];
+  let current = '';
+
+  for (const word of words) {
+    const next = current ? `${current} ${word}` : word;
+    if (next.length > width && current) {
+      rows.push(current);
+      current = word;
+    } else {
+      current = next;
+    }
+  }
+
+  if (current) rows.push(current);
+  return rows.length ? rows : [''];
+}
+
+function printableOrderLines(order) {
+  if (Array.isArray(order.lines) && order.lines.length) return order.lines;
+
+  const fallbackPrice = order.items?.length ? Number(order.total || 0) / order.items.length : 0;
+  return (order.items || []).map((item, index) => {
+    const match = String(item).match(/^(.*)\s+x(\d+)$/);
+    const qty = match ? Number(match[2]) : 1;
+    return {
+      id: `${order.id}-${index}`,
+      name: match ? match[1] : String(item),
+      price: fallbackPrice,
+      qty,
+      total: fallbackPrice * qty
+    };
+  });
+}
+
+function buildPrintableReceipt(order, shift, type) {
+  const width = 36;
+  const isKitchen = type === 'kitchen';
+  const isSticker = type === 'sticker';
+  const rows = [];
+  const lines = printableOrderLines(order);
+  const now = new Date();
+  const printedAt = now.toLocaleString('ru-RU', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+
+  if (isSticker) {
+    rows.push(receiptCenter('НАКЛЕЙКА', width));
+    rows.push(receiptCenter('КОММЕНТАРИЙ', width));
+    rows.push(receiptRule(width));
+    rows.push(receiptColumns(`Заказ #${order.id || ''}`, printedAt, width));
+    rows.push(receiptRule(width));
+    receiptWrap(order.comment || 'Без комментария', width).forEach((row) => rows.push(row));
+    rows.push(receiptRule(width));
+    return rows.join('\n');
+  }
+
+  if (isKitchen) {
+    rows.push(receiptCenter('КУХОННЫЙ ТАЛОН', width));
+    rows.push(receiptRule(width));
+    rows.push(receiptColumns(`Заказ #${order.id || ''}`, `Смена #${shift.number || ''}`, width));
+    rows.push(receiptColumns('Статус', order.status || 'Принят', width));
+    rows.push(receiptRule(width));
+    for (const item of lines) {
+      receiptWrap(`${item.qty} x ${item.name}`, width).forEach((row) => rows.push(row));
+    }
+    if (order.comment) {
+      rows.push(receiptRule(width));
+      rows.push('Комментарий:');
+      receiptWrap(order.comment, width).forEach((row) => rows.push(row));
+    }
+    rows.push(receiptRule(width));
+    rows.push(receiptCenter(printedAt, width));
+    return rows.join('\n');
+  }
+
+  rows.push(receiptCenter('Заклад', width));
+  rows.push('');
+  rows.push(receiptColumns('Чек №', order.id || '', width));
+  rows.push(receiptColumns('Кассир', shift.cashier || 'Кассир', width));
+  rows.push(receiptColumns('Открыто', printedAt, width));
+  rows.push(receiptColumns('Напечатано', printedAt, width));
+  rows.push(receiptColumns('Заказ №', String(order.id || '').slice(-3), width));
+  rows.push(receiptRule(width));
+  rows.push('Наименование   Кол-во Цена  Итого');
+  rows.push(receiptRule(width));
+
+  for (const item of lines) {
+    const qty = String(item.qty).padStart(3, ' ');
+    const price = receiptMoney.format(item.price).padStart(6, ' ');
+    const total = receiptMoney.format(item.total).padStart(7, ' ');
+    const nameWidth = Math.max(10, width - qty.length - price.length - total.length - 3);
+    const wrapped = receiptWrap(item.name, nameWidth);
+    rows.push(`${wrapped[0].padEnd(nameWidth)} ${qty} ${price} ${total}`);
+    wrapped.slice(1).forEach((row) => rows.push(row));
+  }
+
+  rows.push('');
+  rows.push(`К оплате ${'.'.repeat(10)} ${receiptMoney.format(order.total)} TJS`);
+  rows.push('');
+  rows.push(receiptRule(width));
+  rows.push('');
+  rows.push('Оплата');
+  rows.push('');
+
+  const paid = Object.entries(order.payments || {}).filter(([, value]) => Number(value) > 0);
+  if (paid.length) {
+    paid.forEach(([method, value]) => rows.push(receiptColumns(method, `${receiptMoney.format(value)} TJS`, width)));
+  } else {
+    rows.push(receiptColumns('Оплата', 'Ожидает', width));
+  }
+
+  rows.push(receiptRule(width));
+  rows.push('Спасибо за покупку!');
+  rows.push(printedAt);
+  rows.push('');
+  return rows.join('\n');
+}
+
 function PrintModal({ autoPrint, order, onClose, shift, type }) {
   useEffect(() => {
     if (!autoPrint) return;
@@ -1351,9 +1506,9 @@ function PrintModal({ autoPrint, order, onClose, shift, type }) {
     return () => window.clearTimeout(timer);
   }, [autoPrint]);
 
-  const paid = Object.entries(order.payments || {}).filter(([, value]) => Number(value) > 0);
   const isKitchen = type === 'kitchen';
   const isSticker = type === 'sticker';
+  const receiptText = buildPrintableReceipt(order, shift, type);
 
   return (
     <div className="modal-backdrop">
@@ -1371,61 +1526,7 @@ function PrintModal({ autoPrint, order, onClose, shift, type }) {
           </button>
         </div>
         <div className="receipt-body">
-          <div className="receipt-line">
-            <span>Тип</span>
-            <strong>{order.type}</strong>
-          </div>
-          <div className="receipt-line">
-            <span>Место</span>
-            <strong>{order.table}</strong>
-          </div>
-          <div className="receipt-line">
-            <span>Статус</span>
-            <strong>{order.status}</strong>
-          </div>
-          <div className="receipt-items">
-            {order.items.map((item) => (
-              <div key={item}>
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-          {order.comment && <p className="order-comment">{order.comment}</p>}
-          {!isKitchen && !isSticker && (
-            <>
-              <div className="receipt-line total">
-                <span>Итого</span>
-                <strong>{currency.format(order.total)}</strong>
-              </div>
-              <div className="receipt-payments">
-                {paid.length ? (
-                  paid.map(([method, value]) => (
-                    <div key={method}>
-                      <span>{method}</span>
-                      <strong>{currency.format(value)}</strong>
-                    </div>
-                  ))
-                ) : (
-                  <div>
-                    <span>Оплата</span>
-                    <strong>Ожидает</strong>
-                  </div>
-                )}
-              </div>
-            </>
-          )}
-          {isKitchen && (
-            <div className="kitchen-print-note">
-              <strong>Передать на приготовление</strong>
-              <span>Таймер и статус меняются на кухонном экране</span>
-            </div>
-          )}
-          {isSticker && (
-            <div className="kitchen-print-note">
-              <strong>{order.comment || 'Без комментария'}</strong>
-              <span>Печать на самоклейку</span>
-            </div>
-          )}
+          <pre className="receipt-text">{receiptText}</pre>
         </div>
         <div className="modal-actions no-print">
           <button className="secondary-action" onClick={() => window.print()}>

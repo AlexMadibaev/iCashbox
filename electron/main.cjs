@@ -2,7 +2,7 @@ const { app, BrowserWindow, Menu, ipcMain, shell } = require('electron');
 const { createServer } = require('node:http');
 const { spawn } = require('node:child_process');
 const { appendFileSync, existsSync, mkdirSync } = require('node:fs');
-const { writeFile, unlink } = require('node:fs/promises');
+const { readFile, writeFile, unlink } = require('node:fs/promises');
 const { join } = require('node:path');
 const { tmpdir } = require('node:os');
 
@@ -300,7 +300,7 @@ function wrapText(text, width = 36) {
 }
 
 function receiptText(payload) {
-  const width = 36;
+  const width = 30;
   const order = payload.order || {};
   const isKitchen = payload.type === 'kitchen';
   const isSticker = payload.type === 'sticker';
@@ -339,7 +339,7 @@ function receiptText(payload) {
   }
 
   if (!isSticker && !isKitchen) {
-    rows.push('Наименование   Кол-во Цена  Итого');
+    rows.push('Наименование К-во Цена Итого');
     rows.push(line(width));
   }
 
@@ -396,9 +396,23 @@ async function printText(text, printerName, options = {}) {
   const filePath = join(tmpdir(), `icashbox-${Date.now()}.txt`);
   const scriptPath = join(tmpdir(), `icashbox-print-${Date.now()}.ps1`);
   await writeFile(filePath, text, 'utf8');
-  const logoPath = options.logo ? receiptLogoPath() : '';
+  let logoPath = '';
+  let tempLogoPath = '';
+  if (options.logo) {
+    const sourceLogoPath = receiptLogoPath();
+    if (sourceLogoPath) {
+      tempLogoPath = join(tmpdir(), `icashbox-logo-${Date.now()}.png`);
+      try {
+        await writeFile(tempLogoPath, await readFile(sourceLogoPath));
+        logoPath = tempLogoPath;
+      } catch {
+        tempLogoPath = '';
+        logoPath = sourceLogoPath;
+      }
+    }
+  }
   const copies = Math.min(20, Math.max(1, Math.round(Number(options.copies || 1))));
-  const paperHeight = Math.max(320, Math.ceil(text.split(/\r?\n/).length * 18 + (logoPath ? 130 : 80)));
+  const paperHeight = Math.max(320, Math.ceil(text.split(/\r?\n/).length * 17 + (logoPath ? 120 : 76)));
   const script = `
 param(
   [string]$TextPath,
@@ -420,20 +434,20 @@ $doc.PrintController = New-Object System.Drawing.Printing.StandardPrintControlle
 $text = Get-Content -LiteralPath $TextPath -Raw -Encoding UTF8
 $logo = $null
 if ($LogoPath -and (Test-Path -LiteralPath $LogoPath)) { $logo = [System.Drawing.Image]::FromFile($LogoPath) }
-$font = New-Object System.Drawing.Font('Consolas', 10.5, [System.Drawing.FontStyle]::Regular)
-$bold = New-Object System.Drawing.Font('Consolas', 12.5, [System.Drawing.FontStyle]::Bold)
+$font = New-Object System.Drawing.Font('Consolas', 8.8, [System.Drawing.FontStyle]::Regular)
+$bold = New-Object System.Drawing.Font('Consolas', 10.8, [System.Drawing.FontStyle]::Bold)
 $brush = [System.Drawing.Brushes]::Black
 $doc.add_PrintPage({
   param($sender, $e)
-  $x = 6
+  $x = 3
   $y = 6
   if ($logo) {
-    $maxLogoWidth = 170.0
-    $maxLogoHeight = 38.0
+    $maxLogoWidth = 190.0
+    $maxLogoHeight = 42.0
     $scale = [Math]::Min($maxLogoWidth / $logo.Width, $maxLogoHeight / $logo.Height)
     $logoWidth = [int][Math]::Round($logo.Width * $scale)
     $logoHeight = [int][Math]::Round($logo.Height * $scale)
-    $logoX = [int][Math]::Round(($PaperWidth - $logoWidth) / 2)
+    $logoX = [Math]::Max(0, [int][Math]::Round((($PaperWidth - $logoWidth) / 2) - 18))
     $e.Graphics.DrawImage($logo, $logoX, $y, $logoWidth, $logoHeight)
     $y += $logoHeight + 8
   }
@@ -477,6 +491,7 @@ $doc.Dispose()
   } finally {
     unlink(filePath).catch(() => {});
     unlink(scriptPath).catch(() => {});
+    if (tempLogoPath) unlink(tempLogoPath).catch(() => {});
   }
 }
 

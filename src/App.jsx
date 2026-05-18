@@ -48,7 +48,7 @@ const receiptMoney = new Intl.NumberFormat('ru-RU', {
 
 const blankPayments = { Наличные: 0, Alif: 0, 'Dushanbe City': 0, Карта: 0, Перевод: 0 };
 const paymentMethods = Object.keys(blankPayments);
-const receiptLogoUrl = `${import.meta.env.BASE_URL}pos-logo.svg`;
+const receiptLogoUrl = `${import.meta.env.BASE_URL}pos-logo.png`;
 
 const defaultAccounts = [
   {
@@ -1655,7 +1655,7 @@ function printableOrderLines(order) {
 }
 
 function buildPrintableReceipt(order, shift, type) {
-  const width = 36;
+  const width = 30;
   const isSticker = type === 'sticker';
   const rows = [];
   const lines = printableOrderLines(order);
@@ -1685,7 +1685,7 @@ function buildPrintableReceipt(order, shift, type) {
   rows.push(receiptColumns('Напечатано', printedAt, width));
   rows.push(receiptColumns('Заказ №', String(order.id || '').slice(-3), width));
   rows.push(receiptRule(width));
-  rows.push('Наименование   Кол-во Цена  Итого');
+  rows.push('Наименование К-во Цена Итого');
   rows.push(receiptRule(width));
 
   for (const item of lines) {

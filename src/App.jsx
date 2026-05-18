@@ -583,7 +583,7 @@ function App() {
       if (!silent) {
         setLastMessage('Print-agent не отвечает. Запустите npm run print-agent');
       }
-      setPrintJob({ order, type, autoPrint: !silent });
+      setPrintJob({ order, type, autoPrint: false });
     }
   };
 
@@ -768,9 +768,15 @@ function App() {
       </main>
       {printJob && (
         <PrintModal
-          autoPrint={printJob.autoPrint}
           order={printJob.order}
           onClose={() => setPrintJob(null)}
+          onPrint={(order, type) => {
+            if (type === 'receipt') {
+              setCopyRequest({ order, type, copies: 1 });
+            } else {
+              sendToReceiptPrinter(order, type, false, 1);
+            }
+          }}
           shift={shift}
           type={printJob.type}
         />
@@ -792,6 +798,7 @@ function App() {
           onPrint={() => {
             sendToReceiptPrinter(copyRequest.order, copyRequest.type, false, copyRequest.copies);
             setCopyRequest(null);
+            setPrintJob(null);
           }}
           order={copyRequest.order}
         />
@@ -1716,13 +1723,7 @@ function buildPrintableReceipt(order, shift, type) {
   return rows.join('\n');
 }
 
-function PrintModal({ autoPrint, order, onClose, shift, type }) {
-  useEffect(() => {
-    if (!autoPrint) return;
-    const timer = window.setTimeout(() => window.print(), 250);
-    return () => window.clearTimeout(timer);
-  }, [autoPrint]);
-
+function PrintModal({ order, onClose, onPrint, shift, type }) {
   const isSticker = type === 'sticker';
   const receiptText = buildPrintableReceipt(order, shift, type);
 
@@ -1746,7 +1747,7 @@ function PrintModal({ autoPrint, order, onClose, shift, type }) {
           <pre className="receipt-text">{receiptText}</pre>
         </div>
         <div className="modal-actions no-print">
-          <button className="secondary-action" onClick={() => window.print()}>
+          <button className="secondary-action" onClick={() => onPrint(order, type)}>
             <Printer size={18} />
             <span>Печатать</span>
           </button>

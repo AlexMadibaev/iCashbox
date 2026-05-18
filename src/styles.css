@@ -370,8 +370,7 @@ h3 {
 
 .network-toggle,
 .secondary-action,
-.primary-action,
-.kitchen-column button {
+.primary-action {
   gap: 8px;
   min-height: 42px;
   padding: 0 14px;
@@ -726,23 +725,6 @@ h3 {
 .payment-status.done {
   background: #e8f8dc;
   color: #315a15;
-}
-
-.kitchen-board {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(190px, 1fr));
-  gap: 14px;
-  overflow-x: auto;
-}
-
-.kitchen-column {
-  display: grid;
-  align-content: start;
-  gap: 10px;
-  min-height: 680px;
-  padding: 14px;
-  border-radius: 8px;
-  background: #edf1ed;
 }
 
 .order-card,
@@ -1184,31 +1166,8 @@ th {
   line-height: 1.45;
 }
 
-.kitchen-print .receipt-items {
-  font-size: 20px;
-  font-weight: 800;
-}
-
 .sticker-print {
   width: min(360px, 100%);
-}
-
-.sticker-print .receipt-items,
-.sticker-print .kitchen-print-note {
-  font-size: 18px;
-}
-
-.kitchen-print-note {
-  display: grid;
-  gap: 4px;
-  padding: 12px;
-  border-radius: 8px;
-  background: #fff7e9;
-  color: #7a4c00;
-}
-
-.kitchen-print-note span {
-  font-size: 13px;
 }
 
 .receipt-payments {
@@ -1319,10 +1278,6 @@ th {
   .menu-card img {
     width: 100%;
     max-height: 220px;
-  }
-
-  .kitchen-board {
-    grid-template-columns: repeat(5, 230px);
   }
 }
 

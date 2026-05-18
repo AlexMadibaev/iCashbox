@@ -4,7 +4,6 @@ import {
   Bell,
   Boxes,
   Check,
-  ChefHat,
   ClipboardList,
   CircleDollarSign,
   Cloud,
@@ -73,8 +72,8 @@ const roleLabels = {
 };
 
 const roleAccess = {
-  admin: ['pos', 'menu', 'orders', 'kitchen', 'inventory', 'analytics', 'cloud', 'roles'],
-  cashier: ['pos', 'orders', 'kitchen']
+  admin: ['pos', 'menu', 'orders', 'inventory', 'analytics', 'cloud', 'roles'],
+  cashier: ['pos', 'orders']
 };
 
 const productSeed = [
@@ -222,7 +221,6 @@ const navItems = [
   { id: 'pos', label: 'Касса', icon: ReceiptText },
   { id: 'menu', label: 'Меню', icon: MenuSquare },
   { id: 'orders', label: 'Заказы', icon: ClipboardList },
-  { id: 'kitchen', label: 'Кухня', icon: ChefHat },
   { id: 'inventory', label: 'Склад', icon: Boxes },
   { id: 'analytics', label: 'Отчёты', icon: BarChart3 },
   { id: 'cloud', label: 'Облако', icon: Cloud },
@@ -286,7 +284,6 @@ function App() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [printSettings, setPrintSettings] = useStoredState('icashbox.printSettings', {
     autoReceipt: false,
-    autoKitchen: true,
     directAgent: true,
     printerName: '',
     stickerPrinterName: ''
@@ -402,12 +399,10 @@ function App() {
     queueSync('Создание заказа');
     queueSync('Списание ингредиентов');
     setLastMessage(`Заказ #${nextOrder.id} сохранён локально`);
-    if (printSettings.directAgent && (printSettings.autoReceipt || printSettings.autoKitchen)) {
-      sendToReceiptPrinter(nextOrder, printSettings.autoReceipt ? 'receipt' : 'kitchen', true);
+    if (printSettings.directAgent && printSettings.autoReceipt) {
+      sendToReceiptPrinter(nextOrder, 'receipt', true);
     } else if (printSettings.autoReceipt) {
       setPrintJob({ order: nextOrder, type: 'receipt', autoPrint: true });
-    } else if (printSettings.autoKitchen) {
-      setPrintJob({ order: nextOrder, type: 'kitchen', autoPrint: true });
     } else {
       setPrintJob({ order: nextOrder, type: 'receipt', autoPrint: false });
     }
@@ -473,6 +468,14 @@ function App() {
     );
     queueSync('Отмена заказа');
     setLastMessage(`Заказ #${id} отменён`);
+  };
+
+  const markOrderReady = (id) => {
+    setOrders((current) =>
+      current.map((order) => (order.id === id ? { ...order, status: 'Готов' } : order))
+    );
+    queueSync('Изменение статуса заказа');
+    setLastMessage(`Заказ #${id} отмечен как готов`);
   };
 
   const addExpense = () => {
@@ -556,9 +559,7 @@ function App() {
       setLastMessage(
         type === 'sticker'
           ? 'Комментарий отправлен на принтер самоклеек'
-          : type === 'kitchen'
-            ? 'Кухонный талон отправлен на принтер'
-            : 'Чек отправлен на принтер'
+          : 'Чек отправлен на принтер'
       );
     } catch {
       if (!silent) {
@@ -709,18 +710,10 @@ function App() {
           <OrderHistory
             orders={orders}
             cancelOrder={cancelOrder}
+            markOrderReady={markOrderReady}
             printOrder={(order, type = 'receipt') => setPrintJob({ order, type, autoPrint: false })}
             sendToReceiptPrinter={sendToReceiptPrinter}
             refundOrder={refundOrder}
-          />
-        )}
-        {activeView === 'kitchen' && (
-          <Kitchen
-            orders={orders}
-            printKitchenTicket={(order) => setPrintJob({ order, type: 'kitchen', autoPrint: false })}
-            sendToReceiptPrinter={sendToReceiptPrinter}
-            setOrders={setOrders}
-            queueSync={queueSync}
           />
         )}
         {activeView === 'inventory' && <Inventory stock={stock} receiveStock={receiveStock} />}
@@ -1046,7 +1039,7 @@ function RecipePreview({ productId, stock }) {
   );
 }
 
-function OrderHistory({ orders, cancelOrder, printOrder, refundOrder, sendToReceiptPrinter }) {
+function OrderHistory({ orders, cancelOrder, markOrderReady, printOrder, refundOrder, sendToReceiptPrinter }) {
   return (
     <section className="data-section">
       <div className="section-row">
@@ -1088,9 +1081,13 @@ function OrderHistory({ orders, cancelOrder, printOrder, refundOrder, sendToRece
                 <Printer size={17} />
                 <span>Наклейка</span>
               </button>
-              <button className="secondary-action" onClick={() => printOrder(order, 'kitchen')}>
-                <ChefHat size={17} />
-                <span>Кухня</span>
+              <button
+                className="secondary-action"
+                disabled={['Готов', 'Выдан', 'Отменён', 'Возврат'].includes(order.status)}
+                onClick={() => markOrderReady(order.id)}
+              >
+                <Check size={17} />
+                <span>Готово</span>
               </button>
               <button className="secondary-action" disabled={order.cancelled} onClick={() => cancelOrder(order.id)}>
                 <X size={17} />
@@ -1104,56 +1101,6 @@ function OrderHistory({ orders, cancelOrder, printOrder, refundOrder, sendToRece
           </article>
         ))}
       </div>
-    </section>
-  );
-}
-
-function Kitchen({ orders, printKitchenTicket, sendToReceiptPrinter, setOrders, queueSync }) {
-  const statuses = ['Новый', 'Принят', 'Готовится', 'Готов', 'Выдан', 'Оплачен'];
-  return (
-    <section className="kitchen-board">
-      {statuses.map((status) => (
-        <div className="kitchen-column" key={status}>
-          <h2>{status}</h2>
-          {orders
-            .filter((order) => order.status === status)
-            .map((order) => (
-              <article className="order-card" key={order.id}>
-                <div className="order-head">
-                  <strong>#{order.id}</strong>
-                  <span>{order.minutes} мин</span>
-                </div>
-                <p>{order.type} · {order.table} · {currency.format(order.total)}</p>
-                <ul>
-                  {order.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                <button
-                  onClick={() => {
-                    setOrders((current) =>
-                      current.map((item) =>
-                        item.id === order.id ? { ...item, status: nextStatus(status) } : item
-                      )
-                    );
-                    queueSync('Изменение статуса заказа');
-                  }}
-                >
-                  <Check size={16} />
-                  <span>Далее</span>
-                </button>
-                <button onClick={() => printKitchenTicket(order)}>
-                  <Printer size={16} />
-                  <span>Экран</span>
-                </button>
-                <button onClick={() => sendToReceiptPrinter(order, 'kitchen')}>
-                  <ReceiptText size={16} />
-                  <span>Принтер</span>
-                </button>
-              </article>
-            ))}
-        </div>
-      ))}
     </section>
   );
 }
@@ -1377,7 +1324,6 @@ function Roles({ accounts }) {
   const rights = [
     { id: 'pos', label: 'Касса' },
     { id: 'orders', label: 'Заказы' },
-    { id: 'kitchen', label: 'Кухня' },
     { id: 'menu', label: 'Меню' },
     { id: 'inventory', label: 'Склад' },
     { id: 'analytics', label: 'Отчёты' },
@@ -1386,7 +1332,7 @@ function Roles({ accounts }) {
   ];
   const roles = [
     { id: 'admin', title: 'Админ', text: 'Полный доступ к кассе, меню, складу, отчётам и настройкам.' },
-    { id: 'cashier', title: 'Кассир', text: 'Работа с продажами, заказами и кухонным экраном.' }
+    { id: 'cashier', title: 'Кассир', text: 'Работа с продажами и заказами.' }
   ];
 
   return (
@@ -1499,16 +1445,6 @@ function PrinterSettingsFields({ loadPrinters, printSettings, printers, setPrint
         />
         <span>Автопечать чека после заказа</span>
       </label>
-      <label>
-        <input
-          checked={printSettings.autoKitchen}
-          type="checkbox"
-          onChange={(event) =>
-            setPrintSettings((current) => ({ ...current, autoKitchen: event.target.checked }))
-          }
-        />
-        <span>Автопечать кухонного талона</span>
-      </label>
     </div>
   );
 }
@@ -1606,7 +1542,6 @@ function printableOrderLines(order) {
 
 function buildPrintableReceipt(order, shift, type) {
   const width = 36;
-  const isKitchen = type === 'kitchen';
   const isSticker = type === 'sticker';
   const rows = [];
   const lines = printableOrderLines(order);
@@ -1627,25 +1562,6 @@ function buildPrintableReceipt(order, shift, type) {
     rows.push(receiptRule(width));
     receiptWrap(order.comment || 'Без комментария', width).forEach((row) => rows.push(row));
     rows.push(receiptRule(width));
-    return rows.join('\n');
-  }
-
-  if (isKitchen) {
-    rows.push(receiptCenter('КУХОННЫЙ ТАЛОН', width));
-    rows.push(receiptRule(width));
-    rows.push(receiptColumns(`Заказ #${order.id || ''}`, `Смена #${shift.number || ''}`, width));
-    rows.push(receiptColumns('Статус', order.status || 'Принят', width));
-    rows.push(receiptRule(width));
-    for (const item of lines) {
-      receiptWrap(`${item.qty} x ${item.name}`, width).forEach((row) => rows.push(row));
-    }
-    if (order.comment) {
-      rows.push(receiptRule(width));
-      rows.push('Комментарий:');
-      receiptWrap(order.comment, width).forEach((row) => rows.push(row));
-    }
-    rows.push(receiptRule(width));
-    rows.push(receiptCenter(printedAt, width));
     return rows.join('\n');
   }
 
@@ -1699,20 +1615,19 @@ function PrintModal({ autoPrint, order, onClose, shift, type }) {
     return () => window.clearTimeout(timer);
   }, [autoPrint]);
 
-  const isKitchen = type === 'kitchen';
   const isSticker = type === 'sticker';
   const receiptText = buildPrintableReceipt(order, shift, type);
 
   return (
     <div className="modal-backdrop">
       <section
-        className={isSticker ? 'receipt-modal sticker-print' : isKitchen ? 'receipt-modal kitchen-print' : 'receipt-modal'}
+        className={isSticker ? 'receipt-modal sticker-print' : 'receipt-modal'}
         aria-label="Печать заказа"
       >
         <div className="section-row compact">
           <div>
-            <h2>{isSticker ? 'Самоклейка' : isKitchen ? 'Кухонный талон' : 'Чек'} #{order.id}</h2>
-            <p>{isSticker ? 'Комментарий' : isKitchen ? 'Кухня' : 'iCashbox Cafe'} · смена #{shift.number}</p>
+            <h2>{isSticker ? 'Самоклейка' : 'Чек'} #{order.id}</h2>
+            <p>{isSticker ? 'Комментарий' : 'iCashbox Cafe'} · смена #{shift.number}</p>
           </div>
           <button className="icon-button no-print" title="Закрыть" onClick={onClose}>
             <X size={18} />
@@ -1728,7 +1643,7 @@ function PrintModal({ autoPrint, order, onClose, shift, type }) {
           </button>
           <button className="primary-action" onClick={onClose}>
             <Check size={18} />
-            <span>Готово</span>
+            <span>Закрыть</span>
           </button>
         </div>
       </section>
@@ -1756,7 +1671,6 @@ function pageTitle(view) {
     pos: 'Касса и заказы',
     menu: 'Меню и стоп-лист',
     orders: 'История заказов',
-    kitchen: 'Кухонный экран',
     inventory: 'Склад и техкарты',
     analytics: 'Аналитика и смены',
     cloud: 'Синхронизация',
@@ -1768,17 +1682,6 @@ function orderStatusClass(status) {
   if (status === 'Отменён' || status === 'Возврат') return 'badge danger';
   if (status === 'Новый' || status === 'Принят' || status === 'Готовится') return 'badge warning';
   return 'badge';
-}
-
-function nextStatus(status) {
-  return {
-    Новый: 'Принят',
-    Принят: 'Готовится',
-    Готовится: 'Готов',
-    Готов: 'Выдан',
-    Выдан: 'Оплачен',
-    Оплачен: 'Оплачен'
-  }[status];
 }
 
 export default App;

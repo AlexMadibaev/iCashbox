@@ -362,18 +362,21 @@ async function printText(text, printerName, options = {}) {
   const scriptPath = join(tmpdir(), `icashbox-print-${Date.now()}.ps1`);
   await writeFile(filePath, text, 'utf8');
   const logoPath = options.logo ? receiptLogoPath() : '';
+  const copies = Math.min(20, Math.max(1, Math.round(Number(options.copies || 1))));
   const paperHeight = Math.max(320, Math.ceil(text.split(/\r?\n/).length * 18 + (logoPath ? 130 : 80)));
   const script = `
 param(
   [string]$TextPath,
   [string]$PrinterName,
   [string]$LogoPath,
+  [int]$Copies,
   [int]$PaperWidth,
   [int]$PaperHeight
 )
 Add-Type -AssemblyName System.Drawing
 $doc = New-Object System.Drawing.Printing.PrintDocument
 if ($PrinterName) { $doc.PrinterSettings.PrinterName = $PrinterName }
+$doc.PrinterSettings.Copies = [int16][Math]::Max(1, $Copies)
 $paper = New-Object System.Drawing.Printing.PaperSize('Receipt80mm', $PaperWidth, $PaperHeight)
 $doc.DefaultPageSettings.PaperSize = $paper
 $doc.PrinterSettings.DefaultPageSettings.PaperSize = $paper
@@ -425,6 +428,8 @@ if ($logo) { $logo.Dispose() }
       filePath,
       '-PaperWidth',
       '315',
+      '-Copies',
+      String(copies),
       '-PaperHeight',
       String(paperHeight)
     ];
@@ -464,7 +469,10 @@ createServer(async (req, res) => {
 
   try {
     const payload = JSON.parse(await readBody(req));
-    await printText(receiptText(payload), payload.printerName, { logo: !payload.type || payload.type === 'receipt' });
+    await printText(receiptText(payload), payload.printerName, {
+      copies: payload.copies,
+      logo: !payload.type || payload.type === 'receipt'
+    });
     sendJson(res, 200, { ok: true });
   } catch (error) {
     sendJson(res, 500, { ok: false, error: error.message });

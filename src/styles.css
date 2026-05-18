@@ -1174,6 +1174,54 @@ th {
   box-shadow: 0 24px 80px rgba(18, 28, 23, 0.24);
 }
 
+.copies-modal {
+  width: min(430px, 100%);
+  padding: 18px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 24px 80px rgba(18, 28, 23, 0.24);
+}
+
+.copy-stepper {
+  display: grid;
+  grid-template-columns: 72px 1fr 72px;
+  gap: 10px;
+  align-items: center;
+  margin: 8px 0 12px;
+}
+
+.copy-stepper button,
+.copy-presets button {
+  min-height: 62px;
+  border: 1px solid #dbe2dc;
+  border-radius: 8px;
+  background: #f8faf8;
+  color: #17201b;
+  font-weight: 900;
+}
+
+.copy-stepper strong {
+  display: grid;
+  min-height: 72px;
+  place-items: center;
+  border: 1px solid #dbe2dc;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 36px;
+}
+
+.copy-presets {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.copy-presets button.selected {
+  border-color: #17201b;
+  background: #17201b;
+  color: #ffffff;
+}
+
 .settings-panel {
   display: grid;
   gap: 16px;

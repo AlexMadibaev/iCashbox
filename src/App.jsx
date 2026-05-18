@@ -257,6 +257,12 @@ function canAccessView(account, viewId) {
   return (roleAccess[account.role] || []).includes(viewId);
 }
 
+function normalizeCopies(value) {
+  const copies = Number(value);
+  if (!Number.isFinite(copies)) return 1;
+  return Math.min(20, Math.max(1, Math.round(copies)));
+}
+
 function App() {
   const [activeView, setActiveView] = useState('pos');
   const [accounts] = useStoredState('icashbox.accounts', defaultAccounts);
@@ -287,6 +293,7 @@ function App() {
   const [payments, setPayments] = useState(blankPayments);
   const [lastMessage, setLastMessage] = useState('Локальная база готова к работе');
   const [printJob, setPrintJob] = useState(null);
+  const [copyRequest, setCopyRequest] = useState(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [printSettings, setPrintSettings] = useStoredState('icashbox.printSettings', {
     autoReceipt: false,
@@ -296,6 +303,7 @@ function App() {
   });
   const [printers, setPrinters] = useState([]);
   const importInputRef = useRef(null);
+  const creatingOrderRef = useRef(false);
   const currentUser = accounts.find((account) => account.id === session?.accountId) || null;
   const visibleNavItems = useMemo(
     () => navItems.filter((item) => canAccessView(currentUser, item.id)),
@@ -340,6 +348,7 @@ function App() {
     setOrderComment('');
     setPayments(blankPayments);
     setPrintJob(null);
+    setCopyRequest(null);
     setSettingsOpen(false);
     setLastMessage('Вы вышли из аккаунта');
   };
@@ -377,7 +386,8 @@ function App() {
   };
 
   const createOrder = () => {
-    if (!cart.length || !shift.open) return;
+    if (!cart.length || !shift.open || creatingOrderRef.current) return;
+    creatingOrderRef.current = true;
     const nextOrder = {
       id: Math.max(1044, ...orders.map((order) => order.id)) + 1,
       type: 'Продажа',
@@ -405,16 +415,17 @@ function App() {
     queueSync('Создание заказа');
     queueSync('Списание ингредиентов');
     setLastMessage(`Заказ #${nextOrder.id} сохранён локально`);
-    if (printSettings.directAgent && printSettings.autoReceipt) {
-      sendToReceiptPrinter(nextOrder, 'receipt', true);
-    } else if (printSettings.autoReceipt) {
-      setPrintJob({ order: nextOrder, type: 'receipt', autoPrint: true });
+    if (printSettings.autoReceipt) {
+      sendToReceiptPrinter(nextOrder, 'receipt', true, 1);
     } else {
       setPrintJob({ order: nextOrder, type: 'receipt', autoPrint: false });
     }
     setCart([]);
     setOrderComment('');
     setPayments(blankPayments);
+    window.setTimeout(() => {
+      creatingOrderRef.current = false;
+    }, 900);
   };
 
   const toggleNetwork = () => {
@@ -542,9 +553,10 @@ function App() {
     event.target.value = '';
   };
 
-  const sendToReceiptPrinter = async (order, type = 'receipt', silent = false) => {
+  const sendToReceiptPrinter = async (order, type = 'receipt', silent = false, copies = 1) => {
     const printerName = type === 'sticker' ? printSettings.stickerPrinterName : printSettings.printerName;
     const payload = {
+      copies: normalizeCopies(copies),
       order,
       printerName: printerName.trim(),
       shift,
@@ -565,7 +577,7 @@ function App() {
       setLastMessage(
         type === 'sticker'
           ? 'Комментарий отправлен на принтер самоклеек'
-          : 'Чек отправлен на принтер'
+          : `Чек отправлен на принтер: ${payload.copies} коп.`
       );
     } catch {
       if (!silent) {
@@ -573,6 +585,10 @@ function App() {
       }
       setPrintJob({ order, type, autoPrint: !silent });
     }
+  };
+
+  const requestReceiptCopies = (order) => {
+    setCopyRequest({ order, type: 'receipt', copies: 1 });
   };
 
   const loadPrinters = async () => {
@@ -718,6 +734,7 @@ function App() {
             cancelOrder={cancelOrder}
             markOrderReady={markOrderReady}
             printOrder={(order, type = 'receipt') => setPrintJob({ order, type, autoPrint: false })}
+            requestReceiptCopies={requestReceiptCopies}
             sendToReceiptPrinter={sendToReceiptPrinter}
             refundOrder={refundOrder}
           />
@@ -765,6 +782,18 @@ function App() {
           printSettings={printSettings}
           printers={printers}
           setPrintSettings={setPrintSettings}
+        />
+      )}
+      {copyRequest && (
+        <CopiesModal
+          copies={copyRequest.copies}
+          onChange={(copies) => setCopyRequest((current) => ({ ...current, copies: normalizeCopies(copies) }))}
+          onClose={() => setCopyRequest(null)}
+          onPrint={() => {
+            sendToReceiptPrinter(copyRequest.order, copyRequest.type, false, copyRequest.copies);
+            setCopyRequest(null);
+          }}
+          order={copyRequest.order}
         />
       )}
     </div>
@@ -1061,7 +1090,15 @@ function RecipePreview({ productId, stock }) {
   );
 }
 
-function OrderHistory({ orders, cancelOrder, markOrderReady, printOrder, refundOrder, sendToReceiptPrinter }) {
+function OrderHistory({
+  orders,
+  cancelOrder,
+  markOrderReady,
+  printOrder,
+  refundOrder,
+  requestReceiptCopies,
+  sendToReceiptPrinter
+}) {
   return (
     <section className="data-section">
       <div className="section-row">
@@ -1095,7 +1132,7 @@ function OrderHistory({ orders, cancelOrder, markOrderReady, printOrder, refundO
                 <Printer size={17} />
                 <span>Экран</span>
               </button>
-              <button className="secondary-action" onClick={() => sendToReceiptPrinter(order, 'receipt')}>
+              <button className="secondary-action" onClick={() => requestReceiptCopies(order)}>
                 <ReceiptText size={17} />
                 <span>Принтер</span>
               </button>
@@ -1503,6 +1540,57 @@ function SettingsModal({ loadPrinters, onClose, printSettings, printers, setPrin
           <button className="primary-action" onClick={onClose}>
             <Check size={18} />
             <span>Сохранить</span>
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function CopiesModal({ copies, onChange, onClose, onPrint, order }) {
+  const quickCopies = [1, 2, 3];
+
+  return (
+    <div className="modal-backdrop">
+      <section className="copies-modal" aria-label="Количество копий чека">
+        <div className="section-row compact">
+          <div>
+            <h2>Печать чека #{order.id}</h2>
+            <p>Выберите количество копий</p>
+          </div>
+          <button className="icon-button" title="Закрыть" onClick={onClose}>
+            <X size={18} />
+          </button>
+        </div>
+        <div className="copy-stepper">
+          <button type="button" onClick={() => onChange(copies - 1)}>
+            <Minus size={22} />
+          </button>
+          <strong>{copies}</strong>
+          <button type="button" onClick={() => onChange(copies + 1)}>
+            <Plus size={22} />
+          </button>
+        </div>
+        <div className="copy-presets">
+          {quickCopies.map((value) => (
+            <button
+              className={copies === value ? 'selected' : ''}
+              key={value}
+              type="button"
+              onClick={() => onChange(value)}
+            >
+              {value} коп.
+            </button>
+          ))}
+        </div>
+        <div className="modal-actions">
+          <button className="secondary-action" onClick={onClose}>
+            <X size={18} />
+            <span>Отмена</span>
+          </button>
+          <button className="primary-action" onClick={onPrint}>
+            <Printer size={18} />
+            <span>Печатать</span>
           </button>
         </div>
       </section>

@@ -771,6 +771,7 @@ function App() {
           order={printJob.order}
           onClose={() => setPrintJob(null)}
           onPrint={(order, type) => {
+            setPrintJob(null);
             if (type === 'receipt') {
               setCopyRequest({ order, type, copies: 1 });
             } else {

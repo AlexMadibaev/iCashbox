@@ -393,7 +393,6 @@ param(
 Add-Type -AssemblyName System.Drawing
 $doc = New-Object System.Drawing.Printing.PrintDocument
 if ($PrinterName) { $doc.PrinterSettings.PrinterName = $PrinterName }
-$doc.PrinterSettings.Copies = [int16][Math]::Max(1, $Copies)
 $paper = New-Object System.Drawing.Printing.PaperSize('Receipt80mm', $PaperWidth, $PaperHeight)
 $doc.DefaultPageSettings.PaperSize = $paper
 $doc.PrinterSettings.DefaultPageSettings.PaperSize = $paper
@@ -429,8 +428,12 @@ $doc.add_PrintPage({
   }
   $e.HasMorePages = $false
 })
-$doc.Print()
+$copyCount = [Math]::Min(20, [Math]::Max(1, $Copies))
+for ($copyIndex = 0; $copyIndex -lt $copyCount; $copyIndex++) {
+  $doc.Print()
+}
 if ($logo) { $logo.Dispose() }
+$doc.Dispose()
 `;
   await writeFile(scriptPath, script, 'utf8');
 

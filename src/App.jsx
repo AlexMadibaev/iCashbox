@@ -304,6 +304,14 @@ function App() {
       minutes: 0,
       total: cartTotal,
       items: cart.map((item) => `${item.name} ${item.size} x${item.qty}`),
+      lines: cart.map((item) => ({
+        id: item.id,
+        name: item.name,
+        size: item.size,
+        price: item.price,
+        qty: item.qty,
+        total: item.price * item.qty
+      })),
       comment: orderComment,
       paid: paidAmount >= cartTotal,
       payments: { ...payments },
@@ -1219,33 +1227,32 @@ function Roles() {
 function PrinterSettingsFields({ loadPrinters, printSettings, printers, setPrintSettings }) {
   return (
     <div className="printer-settings">
+      <datalist id="windows-printers">
+        {printers.map((printer) => (
+          <option key={printer} value={printer} />
+        ))}
+      </datalist>
       <label>
         <span>Принтер чеков</span>
-        <select
+        <input
+          list="windows-printers"
+          placeholder="Например: POS-80C"
           value={printSettings.printerName}
           onChange={(event) =>
             setPrintSettings((current) => ({ ...current, printerName: event.target.value }))
           }
-        >
-          <option value="">Принтер по умолчанию</option>
-          {printers.map((printer) => (
-            <option key={printer} value={printer}>{printer}</option>
-          ))}
-        </select>
+        />
       </label>
       <label>
         <span>Принтер стикеров</span>
-        <select
+        <input
+          list="windows-printers"
+          placeholder="Например: XP-365B"
           value={printSettings.stickerPrinterName}
           onChange={(event) =>
             setPrintSettings((current) => ({ ...current, stickerPrinterName: event.target.value }))
           }
-        >
-          <option value="">Принтер по умолчанию</option>
-          {printers.map((printer) => (
-            <option key={printer} value={printer}>{printer}</option>
-          ))}
-        </select>
+        />
       </label>
       <button className="secondary-action" onClick={loadPrinters}>
         <RotateCcw size={18} />

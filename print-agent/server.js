@@ -264,6 +264,43 @@ function wrapText(text, width = 36) {
   return lines.length ? lines : [''];
 }
 
+function stickerPages(payload, width = 28) {
+  const order = payload.order || {};
+  const lines = orderLines(order);
+  const now = new Date();
+  const time = now.toLocaleString('ru-RU', {
+    day: '2-digit',
+    month: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+  const pages = [];
+
+  for (const item of lines) {
+    const qty = Math.max(1, Math.round(Number(item.qty || 1)));
+    for (let index = 1; index <= qty; index += 1) {
+      const rows = [];
+      rows.push(padColumns(`Заказ #${order.id || ''}`, time, width));
+      rows.push(line(width));
+      wrapText(String(item.name || '').toUpperCase(), width).forEach((row) => rows.push(center(row, width)));
+      if (qty > 1) rows.push(center(`${index}/${qty}`, width));
+      if (order.comment) {
+        rows.push(line(width));
+        wrapText(order.comment, width).forEach((row) => rows.push(row));
+      }
+      rows.push(line(width));
+      rows.push('\n');
+      pages.push(rows.join('\r\n'));
+    }
+  }
+
+  if (!pages.length) {
+    pages.push([padColumns(`Заказ #${order.id || ''}`, time, width), line(width), center('НЕТ ПОЗИЦИЙ', width)].join('\r\n'));
+  }
+
+  return pages.join('\f');
+}
+
 function receiptText(payload) {
   const width = 30;
   const order = payload.order || {};
@@ -281,6 +318,8 @@ function receiptText(payload) {
   });
   const rows = [];
 
+  if (isSticker) return stickerPages(payload);
+
   if (!isKitchen && !isSticker) {
     rows.push(padColumns('Чек №', order.id || '', width));
     rows.push(padColumns('Кассир', payload.shift?.cashier || 'Кассир', width));
@@ -294,12 +333,6 @@ function receiptText(payload) {
     rows.push(line(width));
     rows.push(padColumns(`Заказ #${order.id || ''}`, `Смена #${payload.shift?.number || ''}`, width));
     rows.push(padColumns(order.type || 'Продажа', order.status || '', width));
-    rows.push(line(width));
-  }
-
-  if (isSticker) {
-    rows.push('КОММЕНТАРИЙ:');
-    wrapText(order.comment || 'Без комментария', width).forEach((row) => rows.push(row));
     rows.push(line(width));
   }
 
@@ -377,7 +410,11 @@ async function printText(text, printerName, options = {}) {
     }
   }
   const copies = Math.min(20, Math.max(1, Math.round(Number(options.copies || 1))));
-  const paperHeight = Math.max(320, Math.ceil(text.split(/\r?\n/).length * 17 + (logoPath ? 120 : 76)));
+  const pages = text.split('\f');
+  const maxPageLines = Math.max(...pages.map((page) => page.split(/\r?\n/).length));
+  const paperHeight = options.sticker
+    ? Math.max(150, Math.ceil(maxPageLines * 18 + 34))
+    : Math.max(320, Math.ceil(maxPageLines * 17 + (logoPath ? 120 : 76)));
   const script = `
 param(
   [string]$TextPath,
@@ -397,6 +434,8 @@ $doc.DefaultPageSettings.Margins = New-Object System.Drawing.Printing.Margins(0,
 $doc.OriginAtMargins = $false
 $doc.PrintController = New-Object System.Drawing.Printing.StandardPrintController
 $text = Get-Content -LiteralPath $TextPath -Raw -Encoding UTF8
+$script:pages = $text -split [char]12
+$script:pageIndex = 0
 $logo = $null
 if ($LogoPath -and (Test-Path -LiteralPath $LogoPath)) { $logo = [System.Drawing.Image]::FromFile($LogoPath) }
 $font = New-Object System.Drawing.Font('Consolas', 8.8, [System.Drawing.FontStyle]::Regular)
@@ -417,16 +456,19 @@ $doc.add_PrintPage({
     $y += $logoHeight + 8
   }
   $lineIndex = 0
-  foreach ($line in ($text -split "\\r?\\n")) {
+  $pageText = $script:pages[$script:pageIndex]
+  foreach ($line in ($pageText -split "\\r?\\n")) {
     $fontToUse = if ($line -match '\\.{4,}.*TJS$') { $bold } else { $font }
     $e.Graphics.DrawString($line, $fontToUse, $brush, $x, $y)
     $y += [Math]::Ceiling($fontToUse.GetHeight($e.Graphics)) + 1
     $lineIndex += 1
   }
-  $e.HasMorePages = $false
+  $script:pageIndex += 1
+  $e.HasMorePages = $script:pageIndex -lt $script:pages.Count
 })
 $copyCount = [Math]::Min(20, [Math]::Max(1, $Copies))
 for ($copyIndex = 0; $copyIndex -lt $copyCount; $copyIndex++) {
+  $script:pageIndex = 0
   $doc.Print()
 }
 if ($logo) { $logo.Dispose() }
@@ -489,7 +531,8 @@ createServer(async (req, res) => {
     const payload = JSON.parse(await readBody(req));
     await printText(receiptText(payload), payload.printerName, {
       copies: payload.copies,
-      logo: !payload.type || payload.type === 'receipt'
+      logo: !payload.type || payload.type === 'receipt',
+      sticker: payload.type === 'sticker'
     });
     sendJson(res, 200, { ok: true });
   } catch (error) {

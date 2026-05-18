@@ -576,7 +576,7 @@ function App() {
       }
       setLastMessage(
         type === 'sticker'
-          ? 'Комментарий отправлен на принтер самоклеек'
+          ? `Наклейки отправлены: ${countStickerLabels(order)} шт.`
           : `Чек отправлен на принтер: ${payload.copies} коп.`
       );
     } catch {
@@ -1140,9 +1140,9 @@ function OrderHistory({
                 <ReceiptText size={17} />
                 <span>Принтер</span>
               </button>
-              <button className="secondary-action" disabled={!order.comment} onClick={() => sendToReceiptPrinter(order, 'sticker')}>
+              <button className="secondary-action" onClick={() => sendToReceiptPrinter(order, 'sticker')}>
                 <Printer size={17} />
-                <span>Наклейка</span>
+                <span>Стикеры</span>
               </button>
               <button
                 className="secondary-action"
@@ -1669,14 +1669,7 @@ function buildPrintableReceipt(order, shift, type) {
   });
 
   if (isSticker) {
-    rows.push(receiptCenter('НАКЛЕЙКА', width));
-    rows.push(receiptCenter('КОММЕНТАРИЙ', width));
-    rows.push(receiptRule(width));
-    rows.push(receiptColumns(`Заказ #${order.id || ''}`, printedAt, width));
-    rows.push(receiptRule(width));
-    receiptWrap(order.comment || 'Без комментария', width).forEach((row) => rows.push(row));
-    rows.push(receiptRule(width));
-    return rows.join('\n');
+    return buildStickerPreview(order, printedAt);
   }
 
   rows.push(receiptColumns('Чек №', order.id || '', width));
@@ -1718,6 +1711,34 @@ function buildPrintableReceipt(order, shift, type) {
   rows.push(printedAt);
   rows.push('');
   return rows.join('\n');
+}
+
+function countStickerLabels(order) {
+  return printableOrderLines(order).reduce((total, item) => total + Math.max(1, Math.round(Number(item.qty || 1))), 0);
+}
+
+function buildStickerPreview(order, printedAt) {
+  const width = 28;
+  const pages = [];
+
+  for (const item of printableOrderLines(order)) {
+    const qty = Math.max(1, Math.round(Number(item.qty || 1)));
+    for (let index = 1; index <= qty; index += 1) {
+      const rows = [];
+      rows.push(receiptColumns(`Заказ #${order.id || ''}`, printedAt.slice(-5), width));
+      rows.push(receiptRule(width));
+      receiptWrap(String(item.name || '').toUpperCase(), width).forEach((row) => rows.push(receiptCenter(row, width)));
+      if (qty > 1) rows.push(receiptCenter(`${index}/${qty}`, width));
+      if (order.comment) {
+        rows.push(receiptRule(width));
+        receiptWrap(order.comment, width).forEach((row) => rows.push(row));
+      }
+      rows.push(receiptRule(width));
+      pages.push(rows.join('\n'));
+    }
+  }
+
+  return pages.join('\n\n');
 }
 
 function PrintModal({ order, onClose, onPrint, shift, type }) {

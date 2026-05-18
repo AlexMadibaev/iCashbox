@@ -149,7 +149,10 @@ function line(width = 36) {
 }
 
 function money(value) {
-  return `${Math.round(Number(value || 0))}`;
+  return Number(value || 0).toLocaleString('ru-RU', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
 }
 
 function padColumns(left, right, width = 36) {
@@ -217,15 +220,36 @@ function receiptText(payload) {
   const isSticker = payload.type === 'sticker';
   const payments = Object.entries(order.payments || {}).filter(([, value]) => Number(value) > 0);
   const lines = orderLines(order);
-  const rows = [
-    center(isSticker ? 'НАКЛЕЙКА' : isKitchen ? 'КУХОННЫЙ ТАЛОН' : 'ICASHBOX'),
-    center(isSticker ? 'КОММЕНТАРИЙ' : isKitchen ? 'НА ПРИГОТОВЛЕНИЕ' : 'КАССОВЫЙ ЧЕК'),
-    line(width),
-    padColumns(`Заказ #${order.id || ''}`, `Смена #${payload.shift?.number || ''}`, width),
-    padColumns(order.type || 'Продажа', order.status || '', width),
-    padColumns(order.table || 'Касса', new Date().toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' }), width),
-    line(width)
-  ];
+  const now = new Date();
+  const time = now.toLocaleString('ru-RU', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+  const rows = [];
+
+  if (!isKitchen && !isSticker) {
+    rows.push(center('Заклад', width));
+    rows.push('');
+    rows.push(padColumns('Чек №', order.id || '', width));
+    rows.push(padColumns('Тип замовлення', 'у закладі', width));
+    rows.push(padColumns('Офіціант', payload.shift?.cashier || 'Кассир', width));
+    rows.push(padColumns('Відкрито', time, width));
+    rows.push(padColumns('Надруковано', time, width));
+    rows.push(padColumns('Стіл №', '1 (Основной зал)', width));
+    rows.push(padColumns('К-сть гостей', '1', width));
+    rows.push(padColumns('Замовлення №', String(order.id || '').slice(-3), width));
+    rows.push(line(width));
+  } else {
+    rows.push(center(isSticker ? 'НАКЛЕЙКА' : 'КУХОННЫЙ ТАЛОН', width));
+    rows.push(center(isSticker ? 'КОММЕНТАРИЙ' : 'НА ПРИГОТОВЛЕНИЕ', width));
+    rows.push(line(width));
+    rows.push(padColumns(`Заказ #${order.id || ''}`, `Смена #${payload.shift?.number || ''}`, width));
+    rows.push(padColumns(order.type || 'Продажа', order.status || '', width));
+    rows.push(line(width));
+  }
 
   if (isSticker) {
     rows.push('КОММЕНТАРИЙ:');
@@ -234,7 +258,7 @@ function receiptText(payload) {
   }
 
   if (!isSticker && !isKitchen) {
-    rows.push(padColumns('Наименование', 'К-во Сумма', width));
+    rows.push('Наименування   К-сть  Ціна  Загалом');
     rows.push(line(width));
   }
 
@@ -244,10 +268,12 @@ function receiptText(payload) {
       continue;
     }
 
-    const right = `${item.qty}  ${money(item.total)}`;
-    const firstWidth = width - right.length - 1;
-    const wrapped = wrapText(item.name, Math.max(16, firstWidth));
-    rows.push(padColumns(wrapped[0], right, width));
+    const qty = String(item.qty).padStart(3, ' ');
+    const price = money(item.price).padStart(6, ' ');
+    const total = money(item.total).padStart(7, ' ');
+    const nameWidth = Math.max(10, width - qty.length - price.length - total.length - 3);
+    const wrapped = wrapText(item.name, nameWidth);
+    rows.push(`${wrapped[0].padEnd(nameWidth)} ${qty} ${price} ${total}`);
     wrapped.slice(1).forEach((row) => rows.push(row));
   }
 
@@ -258,19 +284,33 @@ function receiptText(payload) {
   }
 
   if (!isKitchen && !isSticker) {
-    rows.push(line(width));
-    rows.push(padColumns('ИТОГО:', `${money(order.total)} TJS`, width));
+    rows.push('');
+    rows.push(`До оплати  ${'.'.repeat(12)} ${money(order.total)} грн`);
     if (payments.length) {
+      rows.push('');
       rows.push(line(width));
+      rows.push('');
+      rows.push('Оплата');
+      rows.push('');
       for (const [method, value] of payments) {
-        rows.push(padColumns(method, `${money(value)} TJS`, width));
+        rows.push(padColumns(method, `${money(value)} грн`, width));
       }
     }
+    rows.push('');
+    rows.push(line(width));
+    rows.push('проспект Олександра Поля, Дніпро,');
+    rows.push('Дніпропетровська область, 49000');
+    rows.push(line(width));
+    rows.push('Мережа Wi-Fi Poster пароль 12345');
+    rows.push(line(width));
+    rows.push('На вас чекає приємний сюрприз!');
+    rows.push(line(width));
   }
 
-  rows.push(line(width));
-  rows.push(center('Спасибо за покупку!', width));
-  rows.push(center(new Date().toLocaleString('ru-RU'), width));
+  if (isKitchen || isSticker) {
+    rows.push(line(width));
+    rows.push(center(now.toLocaleString('ru-RU'), width));
+  }
   rows.push('\n\n\n');
   return rows.join('\r\n');
 }
@@ -307,7 +347,7 @@ $doc.add_PrintPage({
   $y = 6
   $lineIndex = 0
   foreach ($line in ($text -split "\\r?\\n")) {
-    $fontToUse = if ($lineIndex -lt 2) { $title } elseif ($line -match '^ИТОГО:') { $bold } else { $font }
+    $fontToUse = if ($lineIndex -lt 1) { $title } elseif ($line -match '^До оплати') { $bold } else { $font }
     $e.Graphics.DrawString($line, $fontToUse, $brush, $x, $y)
     $y += [Math]::Ceiling($fontToUse.GetHeight($e.Graphics)) + 1
     $lineIndex += 1

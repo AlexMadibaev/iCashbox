@@ -261,6 +261,7 @@ function App() {
   const [payments, setPayments] = useState(blankPayments);
   const [lastMessage, setLastMessage] = useState('Локальная база готова к работе');
   const [printJob, setPrintJob] = useState(null);
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [printSettings, setPrintSettings] = useStoredState('icashbox.printSettings', {
     autoReceipt: false,
     autoKitchen: true,
@@ -567,7 +568,14 @@ function App() {
             <button className="icon-button" title="Уведомления">
               <Bell size={19} />
             </button>
-            <button className="icon-button" title="Настройки">
+            <button
+              className="icon-button"
+              title="Настройки"
+              onClick={() => {
+                setSettingsOpen(true);
+                loadPrinters();
+              }}
+            >
               <Settings size={19} />
             </button>
             <button className="network-toggle" onClick={toggleNetwork}>
@@ -661,6 +669,15 @@ function App() {
           onClose={() => setPrintJob(null)}
           shift={shift}
           type={printJob.type}
+        />
+      )}
+      {settingsOpen && (
+        <SettingsModal
+          loadPrinters={loadPrinters}
+          onClose={() => setSettingsOpen(false)}
+          printSettings={printSettings}
+          printers={printers}
+          setPrintSettings={setPrintSettings}
         />
       )}
     </div>
@@ -1193,70 +1210,12 @@ function CloudSync({
           </div>
           <Printer size={22} />
         </div>
-        <div className="printer-settings">
-          <label>
-            <span>Принтер чеков</span>
-            <select
-              value={printSettings.printerName}
-              onChange={(event) =>
-                setPrintSettings((current) => ({ ...current, printerName: event.target.value }))
-              }
-            >
-              <option value="">Принтер по умолчанию</option>
-              {printers.map((printer) => (
-                <option key={printer} value={printer}>{printer}</option>
-              ))}
-            </select>
-          </label>
-          <label>
-            <span>Принтер самоклеек</span>
-            <select
-              value={printSettings.stickerPrinterName}
-              onChange={(event) =>
-                setPrintSettings((current) => ({ ...current, stickerPrinterName: event.target.value }))
-              }
-            >
-              <option value="">Принтер по умолчанию</option>
-              {printers.map((printer) => (
-                <option key={printer} value={printer}>{printer}</option>
-              ))}
-            </select>
-          </label>
-          <button className="secondary-action" onClick={loadPrinters}>
-            <RotateCcw size={18} />
-            <span>Обновить список</span>
-          </button>
-          <label>
-            <input
-              checked={printSettings.directAgent}
-              type="checkbox"
-              onChange={(event) =>
-                setPrintSettings((current) => ({ ...current, directAgent: event.target.checked }))
-              }
-            />
-            <span>Печатать через print-agent</span>
-          </label>
-          <label>
-            <input
-              checked={printSettings.autoReceipt}
-              type="checkbox"
-              onChange={(event) =>
-                setPrintSettings((current) => ({ ...current, autoReceipt: event.target.checked }))
-              }
-            />
-            <span>Автопечать чека после заказа</span>
-          </label>
-          <label>
-            <input
-              checked={printSettings.autoKitchen}
-              type="checkbox"
-              onChange={(event) =>
-                setPrintSettings((current) => ({ ...current, autoKitchen: event.target.checked }))
-              }
-            />
-            <span>Автопечать кухонного талона</span>
-          </label>
-        </div>
+        <PrinterSettingsFields
+          loadPrinters={loadPrinters}
+          printSettings={printSettings}
+          printers={printers}
+          setPrintSettings={setPrintSettings}
+        />
       </div>
       <div className="data-section">
         <div className="section-row">
@@ -1314,6 +1273,114 @@ function Roles() {
         ))}
       </div>
     </section>
+  );
+}
+
+function PrinterSettingsFields({ loadPrinters, printSettings, printers, setPrintSettings }) {
+  return (
+    <div className="printer-settings">
+      <label>
+        <span>Принтер чеков</span>
+        <select
+          value={printSettings.printerName}
+          onChange={(event) =>
+            setPrintSettings((current) => ({ ...current, printerName: event.target.value }))
+          }
+        >
+          <option value="">Принтер по умолчанию</option>
+          {printers.map((printer) => (
+            <option key={printer} value={printer}>{printer}</option>
+          ))}
+        </select>
+      </label>
+      <label>
+        <span>Принтер стикеров</span>
+        <select
+          value={printSettings.stickerPrinterName}
+          onChange={(event) =>
+            setPrintSettings((current) => ({ ...current, stickerPrinterName: event.target.value }))
+          }
+        >
+          <option value="">Принтер по умолчанию</option>
+          {printers.map((printer) => (
+            <option key={printer} value={printer}>{printer}</option>
+          ))}
+        </select>
+      </label>
+      <button className="secondary-action" onClick={loadPrinters}>
+        <RotateCcw size={18} />
+        <span>Обновить список принтеров</span>
+      </button>
+      <label>
+        <input
+          checked={printSettings.directAgent}
+          type="checkbox"
+          onChange={(event) =>
+            setPrintSettings((current) => ({ ...current, directAgent: event.target.checked }))
+          }
+        />
+        <span>Печатать напрямую через локальный агент</span>
+      </label>
+      <label>
+        <input
+          checked={printSettings.autoReceipt}
+          type="checkbox"
+          onChange={(event) =>
+            setPrintSettings((current) => ({ ...current, autoReceipt: event.target.checked }))
+          }
+        />
+        <span>Автопечать чека после заказа</span>
+      </label>
+      <label>
+        <input
+          checked={printSettings.autoKitchen}
+          type="checkbox"
+          onChange={(event) =>
+            setPrintSettings((current) => ({ ...current, autoKitchen: event.target.checked }))
+          }
+        />
+        <span>Автопечать кухонного талона</span>
+      </label>
+    </div>
+  );
+}
+
+function SettingsModal({ loadPrinters, onClose, printSettings, printers, setPrintSettings }) {
+  return (
+    <div className="modal-backdrop">
+      <section className="settings-modal" aria-label="Настройки программы">
+        <div className="section-row compact">
+          <div>
+            <h2>Настройки</h2>
+            <p>Принтеры чеков и самоклеек выбираются отдельно</p>
+          </div>
+          <button className="icon-button" title="Закрыть" onClick={onClose}>
+            <X size={18} />
+          </button>
+        </div>
+        <div className="settings-panel">
+          <div className="settings-panel-title">
+            <Printer size={22} />
+            <div>
+              <h3>Печать</h3>
+              <p>Список берётся из установленных Windows-принтеров</p>
+            </div>
+          </div>
+          <PrinterSettingsFields
+            loadPrinters={loadPrinters}
+            printSettings={printSettings}
+            printers={printers}
+            setPrintSettings={setPrintSettings}
+          />
+        </div>
+        <div className="modal-actions">
+          <button className="primary-action" onClick={onClose}>
+            <Check size={18} />
+            <span>Сохранить</span>
+          </button>
+        </div>
+      </section>
+    </div>
   );
 }
 

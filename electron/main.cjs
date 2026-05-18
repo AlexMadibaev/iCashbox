@@ -299,7 +299,7 @@ function wrapText(text, width = 36) {
   return lines.length ? lines : [''];
 }
 
-function stickerPages(payload, width = 28) {
+function stickerPages(payload, width = 38) {
   const order = payload.order || {};
   const lines = orderLines(order);
   const now = new Date();

@@ -1718,7 +1718,7 @@ function countStickerLabels(order) {
 }
 
 function buildStickerPreview(order, printedAt) {
-  const width = 28;
+  const width = 38;
   const pages = [];
 
   for (const item of printableOrderLines(order)) {

@@ -404,7 +404,7 @@ $doc.add_PrintPage({
   }
   $lineIndex = 0
   foreach ($line in ($text -split "\\r?\\n")) {
-    $fontToUse = if ($line -match '^К оплате') { $bold } else { $font }
+    $fontToUse = if ($line -match '\\.{4,}.*TJS$') { $bold } else { $font }
     $e.Graphics.DrawString($line, $fontToUse, $brush, $x, $y)
     $y += [Math]::Ceiling($fontToUse.GetHeight($e.Graphics)) + 1
     $lineIndex += 1
@@ -418,7 +418,7 @@ for ($copyIndex = 0; $copyIndex -lt $copyCount; $copyIndex++) {
 if ($logo) { $logo.Dispose() }
 $doc.Dispose()
 `;
-  await writeFile(scriptPath, script, 'utf8');
+  await writeFile(scriptPath, `\uFEFF${script}`, 'utf8');
 
   try {
     const args = [

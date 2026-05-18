@@ -12,7 +12,7 @@
     "preview": "vite preview --host 127.0.0.1",
     "print-agent": "node print-agent/server.js",
     "desktop": "npm run build:desktop && electron .",
-    "dist:win": "npm run build:desktop && electron-builder --win nsis portable"
+    "dist:win": "npm run build:desktop && electron-builder --win portable"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
@@ -39,12 +39,6 @@
     "win": {
       "signAndEditExecutable": false,
       "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64"
-          ]
-        },
         {
           "target": "portable",
           "arch": [

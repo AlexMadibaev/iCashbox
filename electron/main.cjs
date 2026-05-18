@@ -1,7 +1,7 @@
 const { app, BrowserWindow, Menu, ipcMain, shell } = require('electron');
 const { createServer } = require('node:http');
 const { spawn } = require('node:child_process');
-const { existsSync } = require('node:fs');
+const { appendFileSync, existsSync, mkdirSync } = require('node:fs');
 const { writeFile, unlink } = require('node:fs/promises');
 const { join } = require('node:path');
 const { tmpdir } = require('node:os');
@@ -9,6 +9,24 @@ const { tmpdir } = require('node:os');
 const PRINT_PORT = 8787;
 let mainWindow;
 let printServer;
+
+function logLine(message) {
+  try {
+    const dir = app.isReady() ? app.getPath('userData') : tmpdir();
+    mkdirSync(dir, { recursive: true });
+    appendFileSync(join(dir, 'icashbox-main.log'), `[${new Date().toISOString()}] ${message}\n`, 'utf8');
+  } catch {
+    // Logging must never stop the POS from opening.
+  }
+}
+
+process.on('uncaughtException', (error) => {
+  logLine(`uncaughtException: ${error.stack || error.message}`);
+});
+
+process.on('unhandledRejection', (error) => {
+  logLine(`unhandledRejection: ${error?.stack || error}`);
+});
 
 function receiptLogoPath() {
   const candidates = [
@@ -421,7 +439,7 @@ $doc.add_PrintPage({
   }
   $lineIndex = 0
   foreach ($line in ($text -split "\\r?\\n")) {
-    $fontToUse = if ($line -match '^К оплате') { $bold } else { $font }
+    $fontToUse = if ($line -match '\\.{4,}.*TJS$') { $bold } else { $font }
     $e.Graphics.DrawString($line, $fontToUse, $brush, $x, $y)
     $y += [Math]::Ceiling($fontToUse.GetHeight($e.Graphics)) + 1
     $lineIndex += 1
@@ -435,7 +453,7 @@ for ($copyIndex = 0; $copyIndex -lt $copyCount; $copyIndex++) {
 if ($logo) { $logo.Dispose() }
 $doc.Dispose()
 `;
-  await writeFile(scriptPath, script, 'utf8');
+  await writeFile(scriptPath, `\uFEFF${script}`, 'utf8');
 
   try {
     const args = [
@@ -520,6 +538,7 @@ function registerPrintIpc() {
 }
 
 function createWindow() {
+  logLine('createWindow');
   mainWindow = new BrowserWindow({
     width: 1440,
     height: 920,
@@ -535,7 +554,24 @@ function createWindow() {
   });
 
   Menu.setApplicationMenu(null);
-  mainWindow.loadFile(join(__dirname, '..', 'dist', 'index.html'));
+  mainWindow.once('ready-to-show', () => {
+    logLine('ready-to-show');
+    mainWindow.show();
+    mainWindow.focus();
+  });
+  mainWindow.webContents.on('did-fail-load', (_event, errorCode, errorDescription) => {
+    logLine(`did-fail-load: ${errorCode} ${errorDescription}`);
+  });
+  mainWindow.webContents.on('render-process-gone', (_event, details) => {
+    logLine(`render-process-gone: ${JSON.stringify(details)}`);
+  });
+  mainWindow.on('closed', () => {
+    logLine('mainWindow closed');
+    mainWindow = null;
+  });
+  mainWindow.loadFile(join(__dirname, '..', 'dist', 'index.html')).catch((error) => {
+    logLine(`loadFile failed: ${error.stack || error.message}`);
+  });
   mainWindow.webContents.setWindowOpenHandler(({ url }) => {
     shell.openExternal(url);
     return { action: 'deny' };
@@ -543,6 +579,7 @@ function createWindow() {
 }
 
 app.whenReady().then(() => {
+  logLine('app ready');
   registerPrintIpc();
   startPrintServer();
   createWindow();

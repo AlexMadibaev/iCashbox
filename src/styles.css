@@ -166,7 +166,6 @@ h3 {
 .topbar-actions,
 .section-row,
 .segmented,
-.order-types,
 .qty-control,
 .ticket-total,
 .payment-status,
@@ -244,7 +243,6 @@ h3 {
 .network-toggle,
 .secondary-action,
 .primary-action,
-.order-types button,
 .kitchen-column button {
   gap: 8px;
   min-height: 42px;
@@ -272,12 +270,6 @@ h3 {
 .primary-action {
   justify-content: center;
   width: 100%;
-  border-color: #17201b;
-  background: #17201b;
-  color: #ffffff;
-}
-
-.order-types button.selected {
   border-color: #17201b;
   background: #17201b;
   color: #ffffff;
@@ -333,42 +325,10 @@ h3 {
   background: transparent;
 }
 
-.segmented,
-.order-types {
+.segmented {
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 16px;
-}
-
-.table-picker {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.table-picker button {
-  display: grid;
-  gap: 3px;
-  min-height: 58px;
-  padding: 8px 10px;
-  border: 1px solid #dbe2dc;
-  border-radius: 8px;
-  background: #ffffff;
-  color: #26372d;
-  text-align: left;
-}
-
-.table-picker button.selected {
-  border-color: #17201b;
-  background: #17201b;
-  color: #ffffff;
-}
-
-.table-picker span {
-  color: inherit;
-  font-size: 12px;
-  opacity: 0.78;
 }
 
 .segmented button {

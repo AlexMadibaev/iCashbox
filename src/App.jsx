@@ -25,9 +25,6 @@ import {
   Settings,
   ShieldCheck,
   Smartphone,
-  Store,
-  Table2,
-  Truck,
   Undo2,
   Upload,
   UserRoundCog,
@@ -153,8 +150,8 @@ const recipes = {
 const orderSeed = [
   {
     id: 1042,
-    type: 'В заведении',
-    table: 'Стол 7',
+    type: 'Продажа',
+    table: 'Касса',
     status: 'Готовится',
     minutes: 12,
     total: 136,
@@ -164,8 +161,8 @@ const orderSeed = [
   },
   {
     id: 1043,
-    type: 'Доставка',
-    table: 'Курьер',
+    type: 'Продажа',
+    table: 'Касса',
     status: 'Новый',
     minutes: 3,
     total: 104,
@@ -175,8 +172,8 @@ const orderSeed = [
   },
   {
     id: 1044,
-    type: 'Навынос',
-    table: 'Гость',
+    type: 'Продажа',
+    table: 'Касса',
     status: 'Готов',
     minutes: 18,
     total: 57,
@@ -195,21 +192,6 @@ const navItems = [
   { id: 'analytics', label: 'Отчёты', icon: BarChart3 },
   { id: 'cloud', label: 'Облако', icon: Cloud },
   { id: 'roles', label: 'Роли', icon: ShieldCheck }
-];
-
-const orderTypes = [
-  { label: 'В заведении', caption: 'Стол', icon: Table2 },
-  { label: 'Навынос', caption: 'Навынос', icon: Store },
-  { label: 'Доставка', caption: 'Доставка', icon: Truck }
-];
-
-const diningTables = [
-  { id: 'A1', zone: 'Зал', seats: 2 },
-  { id: 'A2', zone: 'Зал', seats: 4 },
-  { id: 'A3', zone: 'Зал', seats: 4 },
-  { id: 'B1', zone: 'Терраса', seats: 2 },
-  { id: 'B2', zone: 'Терраса', seats: 6 },
-  { id: 'VIP', zone: 'Кабинет', seats: 8 }
 ];
 
 function readStored(key, fallback) {
@@ -238,7 +220,7 @@ function App() {
   const [stock, setStock] = useStoredState('icashbox.stock', stockSeed);
   const [orders, setOrders] = useStoredState('icashbox.orders', orderSeed);
   const [expenses, setExpenses] = useStoredState('icashbox.expenses', [
-    { id: 1, title: 'Доставка продуктов', category: 'Логистика', amount: 120, time: '09:45' },
+    { id: 1, title: 'Закупка продуктов', category: 'Логистика', amount: 120, time: '09:45' },
     { id: 2, title: 'Хозтовары', category: 'Операционные', amount: 85, time: '11:10' }
   ]);
   const [syncQueue, setSyncQueue] = useStoredState('icashbox.syncQueue', [
@@ -255,8 +237,6 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState('Все');
   const [search, setSearch] = useState('');
   const [cart, setCart] = useState([]);
-  const [orderType, setOrderType] = useState('В заведении');
-  const [selectedTable, setSelectedTable] = useState('A1');
   const [orderComment, setOrderComment] = useState('');
   const [payments, setPayments] = useState(blankPayments);
   const [lastMessage, setLastMessage] = useState('Локальная база готова к работе');
@@ -318,8 +298,8 @@ function App() {
     if (!cart.length || !shift.open) return;
     const nextOrder = {
       id: Math.max(1044, ...orders.map((order) => order.id)) + 1,
-      type: orderType,
-      table: orderType === 'В заведении' ? `Стол ${selectedTable}` : orderType,
+      type: 'Продажа',
+      table: 'Касса',
       status: paidAmount >= cartTotal ? 'Оплачен' : 'Принят',
       minutes: 0,
       total: cartTotal,
@@ -596,19 +576,15 @@ function App() {
             cartTotal={cartTotal}
             categories={categories}
             createOrder={createOrder}
-            orderType={orderType}
             orderComment={orderComment}
             paidAmount={paidAmount}
             payments={payments}
             products={visibleProducts}
             search={search}
-            selectedTable={selectedTable}
             selectedCategory={selectedCategory}
             setOrderComment={setOrderComment}
-            setOrderType={setOrderType}
             setPayments={setPayments}
             setSearch={setSearch}
-            setSelectedTable={setSelectedTable}
             setSelectedCategory={setSelectedCategory}
             shift={shift}
             updateQty={updateQty}
@@ -690,18 +666,14 @@ function PosView({
   categories,
   createOrder,
   orderComment,
-  orderType,
   paidAmount,
   payments,
   products,
   search,
-  selectedTable,
   selectedCategory,
   setOrderComment,
-  setOrderType,
   setPayments,
   setSearch,
-  setSelectedTable,
   setSelectedCategory,
   shift,
   updateQty,
@@ -734,38 +706,6 @@ function PosView({
           ))}
         </div>
 
-        <div className="order-types">
-          {orderTypes.map((type) => {
-            const Icon = type.icon;
-            return (
-              <button
-                key={type.label}
-                className={orderType === type.label ? 'selected' : ''}
-                onClick={() => setOrderType(type.label)}
-                title={type.caption}
-              >
-                <Icon size={18} />
-                <span>{type.caption}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {orderType === 'В заведении' && (
-          <div className="table-picker">
-            {diningTables.map((table) => (
-              <button
-                key={table.id}
-                className={selectedTable === table.id ? 'selected' : ''}
-                onClick={() => setSelectedTable(table.id)}
-              >
-                <strong>{table.id}</strong>
-                <span>{table.zone} · {table.seats} мест</span>
-              </button>
-            ))}
-          </div>
-        )}
-
         <div className="product-grid">
           {products.map((product) => (
             <button className="product-card" key={product.id} onClick={() => addToCart(product)}>
@@ -783,7 +723,7 @@ function PosView({
         <div className="section-row compact">
           <div>
             <h2>Заказ</h2>
-            <p>{orderType} · смена #{shift.number}</p>
+            <p>Кассовая продажа · смена #{shift.number}</p>
           </div>
           <button className="icon-button" title="Очистить заказ" onClick={clearCart}>
             <X size={18} />

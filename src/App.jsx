@@ -53,7 +53,7 @@ const defaultAccounts = [
   {
     id: 'admin',
     username: 'admin',
-    password: 'admin123',
+    password: '0000',
     name: 'Администратор',
     role: 'admin'
   },
@@ -69,6 +69,11 @@ const defaultAccounts = [
 const roleLabels = {
   admin: 'Админ',
   cashier: 'Кассир'
+};
+
+const fallbackRolePins = {
+  admin: ['0000', 'admin123'],
+  cashier: ['1234']
 };
 
 const roleAccess = {
@@ -313,11 +318,11 @@ function App() {
     }
   }, [activeView, currentUser]);
 
-  const login = ({ password, username }) => {
+  const login = ({ password, role }) => {
     const account = accounts.find(
       (item) =>
-        item.username.toLowerCase() === username.trim().toLowerCase() &&
-        item.password === password
+        item.role === role &&
+        [item.password, ...(fallbackRolePins[item.role] || [])].includes(password)
     );
 
     if (!account) return false;
@@ -766,14 +771,19 @@ function App() {
 }
 
 function LoginScreen({ onLogin }) {
-  const [username, setUsername] = useState('');
+  const [role, setRole] = useState('cashier');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const loginRoles = [
+    { id: 'cashier', label: 'Кассир', text: 'Продажи и заказы' },
+    { id: 'admin', label: 'Админ', text: 'Полный доступ' }
+  ];
+  const keypad = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'clear', '0', 'back'];
 
   const submitLogin = (event) => {
     event.preventDefault();
-    const ok = onLogin({ username, password });
-    if (!ok) setError('Неверный аккаунт или пароль');
+    const ok = onLogin({ role, password });
+    if (!ok) setError('Неверный пароль');
   };
 
   return (
@@ -790,55 +800,66 @@ function LoginScreen({ onLogin }) {
         </div>
         <div className="login-heading">
           <p className="eyebrow">Локальный вход</p>
-          <h1>Войдите в кассу</h1>
+          <h1>Выберите роль</h1>
         </div>
         <form className="login-form" onSubmit={submitLogin}>
-          <label>
-            <span>Аккаунт</span>
-            <div className="login-input">
-              <User size={18} />
-              <input
-                autoComplete="username"
-                autoFocus
-                value={username}
-                onChange={(event) => {
-                  setUsername(event.target.value);
+          <div className="login-role-grid" role="group" aria-label="Роль пользователя">
+            {loginRoles.map((item) => (
+              <button
+                className={role === item.id ? 'login-role active' : 'login-role'}
+                key={item.id}
+                type="button"
+                onClick={() => {
+                  setRole(item.id);
+                  setPassword('');
                   setError('');
                 }}
-              />
-            </div>
-          </label>
+              >
+                <strong>{item.label}</strong>
+                <span>{item.text}</span>
+              </button>
+            ))}
+          </div>
           <label>
             <span>Пароль</span>
             <div className="login-input">
               <KeyRound size={18} />
               <input
                 autoComplete="current-password"
+                inputMode="numeric"
+                placeholder="PIN"
+                readOnly
                 type="password"
                 value={password}
-                onChange={(event) => {
-                  setPassword(event.target.value);
-                  setError('');
-                }}
               />
             </div>
           </label>
+          <div className="pin-keypad" aria-label="Цифровая клавиатура">
+            {keypad.map((key) => (
+              <button
+                key={key}
+                type="button"
+                onClick={() => {
+                  setError('');
+                  if (key === 'clear') {
+                    setPassword('');
+                  } else if (key === 'back') {
+                    setPassword((value) => value.slice(0, -1));
+                  } else {
+                    setPassword((value) => `${value}${key}`.slice(0, 8));
+                  }
+                }}
+              >
+                {key === 'clear' ? 'Сброс' : key === 'back' ? '←' : key}
+              </button>
+            ))}
+          </div>
           {error && <div className="login-error">{error}</div>}
           <button className="primary-action" type="submit">
             <ShieldCheck size={18} />
             <span>Войти</span>
           </button>
         </form>
-        <div className="login-demo">
-          <div>
-            <strong>Админ</strong>
-            <span>admin / admin123</span>
-          </div>
-          <div>
-            <strong>Кассир</strong>
-            <span>cashier / 1234</span>
-          </div>
-        </div>
       </section>
     </main>
   );
@@ -1354,7 +1375,7 @@ function Roles({ accounts }) {
               <strong>{account.name}</strong>
               <span>{roleLabels[account.role]}</span>
             </div>
-            <code>{account.username}</code>
+            <code>PIN</code>
           </article>
         ))}
       </div>

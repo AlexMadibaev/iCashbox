@@ -710,15 +710,16 @@ h3 {
 
 .order-history {
   display: grid;
-  gap: 12px;
+  gap: 8px;
+  font-size: 13px;
 }
 
 .history-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 220px;
-  gap: 14px;
-  align-items: center;
-  padding: 14px;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 10px;
+  align-items: start;
+  padding: 10px;
   border: 1px solid #e1e7e2;
   border-radius: 8px;
   background: #ffffff;
@@ -726,17 +727,17 @@ h3 {
 
 .history-main {
   display: grid;
-  gap: 8px;
+  gap: 5px;
 }
 
 .history-main p,
 .order-comment {
   color: #64736a;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .order-comment {
-  padding: 8px 10px;
+  padding: 6px 8px;
   border-radius: 8px;
   background: #f6f8f6;
 }
@@ -744,11 +745,24 @@ h3 {
 .history-main ul {
   margin: 0;
   padding-left: 18px;
+  line-height: 1.35;
 }
 
 .history-actions {
   display: grid;
-  gap: 8px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.history-actions .secondary-action {
+  min-height: 38px;
+  padding: 0 9px;
+  font-size: 12px;
+}
+
+.history-actions .secondary-action svg {
+  width: 15px;
+  height: 15px;
 }
 
 .ticket-total {
@@ -793,7 +807,19 @@ h3 {
 
 .order-head {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 10px;
+}
+
+.history-card .order-head strong {
+  font-size: 15px;
+}
+
+.history-card .badge {
+  min-height: 26px;
+  padding: 0 8px;
+  font-size: 11px;
 }
 
 .order-card ul {
@@ -1329,6 +1355,10 @@ th {
   .history-card,
   .expense-list div {
     grid-template-columns: 1fr;
+  }
+
+  .history-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .menu-card img {

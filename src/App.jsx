@@ -1224,36 +1224,49 @@ function Roles() {
   );
 }
 
+function PrinterPicker({ label, onChange, placeholder, printers, value }) {
+  const printerOptions = [...new Set(printers.filter(Boolean))];
+  const selectedValue = printerOptions.includes(value) ? value : '';
+
+  return (
+    <div className="printer-field">
+      <span>{label}</span>
+      <select value={selectedValue} onChange={(event) => onChange(event.target.value)}>
+        <option value="">Системный принтер Windows</option>
+        {printerOptions.map((printer) => (
+          <option key={printer} value={printer}>
+            {printer}
+          </option>
+        ))}
+      </select>
+      <input
+        placeholder={placeholder}
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+      />
+    </div>
+  );
+}
+
 function PrinterSettingsFields({ loadPrinters, printSettings, printers, setPrintSettings }) {
   return (
     <div className="printer-settings">
-      <datalist id="windows-printers">
-        {printers.map((printer) => (
-          <option key={printer} value={printer} />
-        ))}
-      </datalist>
-      <label>
-        <span>Принтер чеков</span>
-        <input
-          list="windows-printers"
-          placeholder="Например: POS-80C"
-          value={printSettings.printerName}
-          onChange={(event) =>
-            setPrintSettings((current) => ({ ...current, printerName: event.target.value }))
-          }
-        />
-      </label>
-      <label>
-        <span>Принтер стикеров</span>
-        <input
-          list="windows-printers"
-          placeholder="Например: XP-365B"
-          value={printSettings.stickerPrinterName}
-          onChange={(event) =>
-            setPrintSettings((current) => ({ ...current, stickerPrinterName: event.target.value }))
-          }
-        />
-      </label>
+      <PrinterPicker
+        label="Принтер чеков"
+        placeholder="Или введите имя вручную, например POS-80C"
+        printers={printers}
+        value={printSettings.printerName}
+        onChange={(printerName) => setPrintSettings((current) => ({ ...current, printerName }))}
+      />
+      <PrinterPicker
+        label="Принтер стикеров"
+        placeholder="Или введите имя вручную, например XP-365B"
+        printers={printers}
+        value={printSettings.stickerPrinterName}
+        onChange={(stickerPrinterName) =>
+          setPrintSettings((current) => ({ ...current, stickerPrinterName }))
+        }
+      />
       <button className="secondary-action" onClick={loadPrinters}>
         <RotateCcw size={18} />
         <span>Обновить список принтеров</span>

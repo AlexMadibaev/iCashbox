@@ -64,22 +64,51 @@ function runCommand(file, args) {
   });
 }
 
+function addPrinterName(value, names) {
+  const name = String(value || '').trim().replace(/^"|"$/g, '');
+  if (!name || /^Name$/i.test(name) || /^-+$/.test(name) || name.startsWith('HKEY_')) return;
+
+  if (name.startsWith(',,') && name.includes(',')) {
+    const [, , server, ...printerParts] = name.split(',');
+    const printer = printerParts.join(',').trim();
+    if (server && printer) {
+      names.add(`\\\\${server}\\${printer}`);
+      return;
+    }
+  }
+
+  names.add(name);
+}
+
+function addLinePrinterNames(output, names) {
+  output
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .forEach((line) => addPrinterName(line, names));
+}
+
 function addRegistryPrinterNames(output, names) {
-  const printerRoot = 'HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Print\\Printers\\';
+  const printerRoots = [
+    'HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Print\\Printers\\',
+    'HKEY_CURRENT_USER\\Printers\\Connections\\'
+  ];
   const ignoredValues = new Set(['DefaultSpoolDirectory', 'ResetDevmodesAttempts', 'LANGIDOfLastDefaultDevmode']);
   output
     .split(/\r?\n/)
     .map((line) => line.trim())
     .filter(Boolean)
     .forEach((line) => {
-      if (line.startsWith(printerRoot)) {
-        names.add(line.slice(printerRoot.length));
-        return;
+      for (const printerRoot of printerRoots) {
+        if (line.startsWith(printerRoot)) {
+          addPrinterName(line.slice(printerRoot.length), names);
+          return;
+        }
       }
 
-      const deviceMatch = line.match(/^(.+?)\s+REG_SZ\s+/);
+      const deviceMatch = line.match(/^(.+?)\s+REG_(?:SZ|MULTI_SZ|EXPAND_SZ)\s+/);
       if (deviceMatch && !deviceMatch[1].startsWith('HKEY_') && !ignoredValues.has(deviceMatch[1].trim())) {
-        names.add(deviceMatch[1].trim());
+        addPrinterName(deviceMatch[1], names);
       }
     });
 }
@@ -88,7 +117,9 @@ async function listPrinters() {
   const names = new Set();
   const registryCommands = [
     ['reg.exe', ['query', 'HKLM\\SYSTEM\\CurrentControlSet\\Control\\Print\\Printers']],
-    ['reg.exe', ['query', 'HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Devices']]
+    ['reg.exe', ['query', 'HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Devices']],
+    ['reg.exe', ['query', 'HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\PrinterPorts']],
+    ['reg.exe', ['query', 'HKCU\\Printers\\Connections', '/s']]
   ];
 
   for (const [file, args] of registryCommands) {
@@ -99,12 +130,27 @@ async function listPrinters() {
     }
   }
 
+  const commandLinePrinterCommands = [['wmic.exe', ['printer', 'get', 'name']]];
+  for (const [file, args] of commandLinePrinterCommands) {
+    try {
+      addLinePrinterNames(await runCommand(file, args), names);
+    } catch {
+      // WMIC is unavailable on some Windows installations.
+    }
+  }
+
   const commands = [
+    "[System.Drawing.Printing.PrinterSettings]::InstalledPrinters | ForEach-Object { $_ } | ConvertTo-Json",
     "Get-Printer | Select-Object -ExpandProperty Name | ConvertTo-Json",
+    "Get-CimInstance -ClassName Win32_Printer | Select-Object -ExpandProperty Name | ConvertTo-Json",
+    "Get-WmiObject -Class Win32_Printer | Select-Object -ExpandProperty Name | ConvertTo-Json",
     "Get-ChildItem 'HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Print\\Printers' | Select-Object -ExpandProperty PSChildName | ConvertTo-Json",
     "Get-ItemProperty 'HKCU:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Devices' | Select-Object -Property * | ConvertTo-Json",
+    "Get-ItemProperty 'HKCU:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\PrinterPorts' | Select-Object -Property * | ConvertTo-Json",
+    "Get-ChildItem 'HKCU:\\Printers\\Connections' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty PSChildName | ConvertTo-Json",
     "Get-ChildItem 'HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Print\\Printers' | ForEach-Object { $_.PSChildName }",
-    "Get-ItemProperty 'HKCU:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Devices' | ForEach-Object { $_.PSObject.Properties.Name | Where-Object { $_ -notlike 'PS*' } }"
+    "Get-ItemProperty 'HKCU:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Devices' | ForEach-Object { $_.PSObject.Properties.Name | Where-Object { $_ -notlike 'PS*' } }",
+    "Get-ItemProperty 'HKCU:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\PrinterPorts' | ForEach-Object { $_.PSObject.Properties.Name | Where-Object { $_ -notlike 'PS*' } }"
   ];
 
   for (const command of commands) {
@@ -115,20 +161,16 @@ async function listPrinters() {
       try {
         const parsed = JSON.parse(trimmed);
         if (Array.isArray(parsed)) {
-          parsed.filter(Boolean).forEach((name) => names.add(String(name)));
+          parsed.filter(Boolean).forEach((name) => addPrinterName(name, names));
         } else if (typeof parsed === 'string') {
-          names.add(parsed);
+          addPrinterName(parsed, names);
         } else if (parsed && typeof parsed === 'object') {
           Object.keys(parsed)
             .filter((key) => !key.startsWith('PS') && parsed[key])
-            .forEach((name) => names.add(name));
+            .forEach((name) => addPrinterName(name, names));
         }
       } catch {
-        trimmed
-          .split(/\r?\n/)
-          .map((name) => name.trim())
-          .filter(Boolean)
-          .forEach((name) => names.add(name));
+        addLinePrinterNames(trimmed, names);
       }
     } catch {
       // Try the next method.

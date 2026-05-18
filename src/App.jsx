@@ -48,6 +48,7 @@ const receiptMoney = new Intl.NumberFormat('ru-RU', {
 
 const blankPayments = { Наличные: 0, Alif: 0, 'Dushanbe City': 0, Карта: 0, Перевод: 0 };
 const paymentMethods = Object.keys(blankPayments);
+const receiptLogoUrl = `${import.meta.env.BASE_URL}pos-logo.svg`;
 
 const defaultAccounts = [
   {
@@ -1586,8 +1587,6 @@ function buildPrintableReceipt(order, shift, type) {
     return rows.join('\n');
   }
 
-  rows.push(receiptCenter('Заклад', width));
-  rows.push('');
   rows.push(receiptColumns('Чек №', order.id || '', width));
   rows.push(receiptColumns('Кассир', shift.cashier || 'Кассир', width));
   rows.push(receiptColumns('Открыто', printedAt, width));
@@ -1654,6 +1653,7 @@ function PrintModal({ autoPrint, order, onClose, shift, type }) {
             <X size={18} />
           </button>
         </div>
+        {!isSticker && <img className="receipt-logo" src={receiptLogoUrl} alt="" />}
         <div className="receipt-body">
           <pre className="receipt-text">{receiptText}</pre>
         </div>

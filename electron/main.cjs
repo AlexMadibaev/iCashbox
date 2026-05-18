@@ -1,6 +1,7 @@
 const { app, BrowserWindow, Menu, ipcMain, shell } = require('electron');
 const { createServer } = require('node:http');
 const { spawn } = require('node:child_process');
+const { existsSync } = require('node:fs');
 const { writeFile, unlink } = require('node:fs/promises');
 const { join } = require('node:path');
 const { tmpdir } = require('node:os');
@@ -8,6 +9,14 @@ const { tmpdir } = require('node:os');
 const PRINT_PORT = 8787;
 let mainWindow;
 let printServer;
+
+function receiptLogoPath() {
+  const candidates = [
+    join(__dirname, '..', 'dist', 'pos-logo.png'),
+    join(__dirname, '..', 'public', 'pos-logo.png')
+  ];
+  return candidates.find((candidate) => existsSync(candidate)) || '';
+}
 
 function sendJson(res, status, payload) {
   res.writeHead(status, {
@@ -290,8 +299,6 @@ function receiptText(payload) {
   const rows = [];
 
   if (!isKitchen && !isSticker) {
-    rows.push(center('Заклад', width));
-    rows.push('');
     rows.push(padColumns('Чек №', order.id || '', width));
     rows.push(padColumns('Кассир', payload.shift?.cashier || 'Кассир', width));
     rows.push(padColumns('Открыто', time, width));
@@ -367,15 +374,17 @@ function receiptText(payload) {
   return rows.join('\r\n');
 }
 
-async function printText(text, printerName) {
+async function printText(text, printerName, options = {}) {
   const filePath = join(tmpdir(), `icashbox-${Date.now()}.txt`);
   const scriptPath = join(tmpdir(), `icashbox-print-${Date.now()}.ps1`);
   await writeFile(filePath, text, 'utf8');
-  const paperHeight = Math.max(320, Math.ceil(text.split(/\r?\n/).length * 18 + 80));
+  const logoPath = options.logo ? receiptLogoPath() : '';
+  const paperHeight = Math.max(320, Math.ceil(text.split(/\r?\n/).length * 18 + (logoPath ? 130 : 80)));
   const script = `
 param(
   [string]$TextPath,
   [string]$PrinterName,
+  [string]$LogoPath,
   [int]$PaperWidth,
   [int]$PaperHeight
 )
@@ -389,17 +398,28 @@ $doc.DefaultPageSettings.Margins = New-Object System.Drawing.Printing.Margins(0,
 $doc.OriginAtMargins = $false
 $doc.PrintController = New-Object System.Drawing.Printing.StandardPrintController
 $text = Get-Content -LiteralPath $TextPath -Raw -Encoding UTF8
+$logo = $null
+if ($LogoPath -and (Test-Path -LiteralPath $LogoPath)) { $logo = [System.Drawing.Image]::FromFile($LogoPath) }
 $font = New-Object System.Drawing.Font('Consolas', 10.5, [System.Drawing.FontStyle]::Regular)
 $bold = New-Object System.Drawing.Font('Consolas', 12.5, [System.Drawing.FontStyle]::Bold)
-$title = New-Object System.Drawing.Font('Consolas', 14, [System.Drawing.FontStyle]::Bold)
 $brush = [System.Drawing.Brushes]::Black
 $doc.add_PrintPage({
   param($sender, $e)
   $x = 6
   $y = 6
+  if ($logo) {
+    $maxLogoWidth = 170.0
+    $maxLogoHeight = 38.0
+    $scale = [Math]::Min($maxLogoWidth / $logo.Width, $maxLogoHeight / $logo.Height)
+    $logoWidth = [int][Math]::Round($logo.Width * $scale)
+    $logoHeight = [int][Math]::Round($logo.Height * $scale)
+    $logoX = [int][Math]::Round(($PaperWidth - $logoWidth) / 2)
+    $e.Graphics.DrawImage($logo, $logoX, $y, $logoWidth, $logoHeight)
+    $y += $logoHeight + 8
+  }
   $lineIndex = 0
   foreach ($line in ($text -split "\\r?\\n")) {
-    $fontToUse = if ($lineIndex -lt 1) { $title } elseif ($line -match '^К оплате') { $bold } else { $font }
+    $fontToUse = if ($line -match '^К оплате') { $bold } else { $font }
     $e.Graphics.DrawString($line, $fontToUse, $brush, $x, $y)
     $y += [Math]::Ceiling($fontToUse.GetHeight($e.Graphics)) + 1
     $lineIndex += 1
@@ -407,6 +427,7 @@ $doc.add_PrintPage({
   $e.HasMorePages = $false
 })
 $doc.Print()
+if ($logo) { $logo.Dispose() }
 `;
   await writeFile(scriptPath, script, 'utf8');
 
@@ -425,6 +446,7 @@ $doc.Print()
       String(paperHeight)
     ];
     if (printerName) args.push('-PrinterName', printerName);
+    if (logoPath) args.push('-LogoPath', logoPath);
     await runCommand('powershell.exe', args);
   } finally {
     unlink(filePath).catch(() => {});
@@ -462,7 +484,7 @@ function startPrintServer() {
 
     try {
       const payload = JSON.parse(await readBody(req));
-      await printText(receiptText(payload), payload.printerName);
+      await printText(receiptText(payload), payload.printerName, { logo: !payload.type || payload.type === 'receipt' });
       sendJson(res, 200, { ok: true });
     } catch (error) {
       sendJson(res, 500, { ok: false, error: error.message });
@@ -478,7 +500,7 @@ function startPrintServer() {
 function registerPrintIpc() {
   ipcMain.handle('icashbox:list-printers', async () => listPrinters());
   ipcMain.handle('icashbox:print', async (_event, payload) => {
-    await printText(receiptText(payload), payload.printerName);
+    await printText(receiptText(payload), payload.printerName, { logo: !payload.type || payload.type === 'receipt' });
     return { ok: true };
   });
 }

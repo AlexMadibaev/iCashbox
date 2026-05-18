@@ -12,7 +12,9 @@ import {
   CreditCard,
   Database,
   Download,
+  KeyRound,
   Landmark,
+  LogOut,
   MenuSquare,
   Minus,
   PackagePlus,
@@ -27,6 +29,7 @@ import {
   Smartphone,
   Undo2,
   Upload,
+  User,
   UserRoundCog,
   Wifi,
   WifiOff,
@@ -46,6 +49,33 @@ const receiptMoney = new Intl.NumberFormat('ru-RU', {
 
 const blankPayments = { Наличные: 0, Alif: 0, 'Dushanbe City': 0, Карта: 0, Перевод: 0 };
 const paymentMethods = Object.keys(blankPayments);
+
+const defaultAccounts = [
+  {
+    id: 'admin',
+    username: 'admin',
+    password: 'admin123',
+    name: 'Администратор',
+    role: 'admin'
+  },
+  {
+    id: 'cashier',
+    username: 'cashier',
+    password: '1234',
+    name: 'Кассир',
+    role: 'cashier'
+  }
+];
+
+const roleLabels = {
+  admin: 'Админ',
+  cashier: 'Кассир'
+};
+
+const roleAccess = {
+  admin: ['pos', 'menu', 'orders', 'kitchen', 'inventory', 'analytics', 'cloud', 'roles'],
+  cashier: ['pos', 'orders', 'kitchen']
+};
 
 const productSeed = [
   {
@@ -218,8 +248,15 @@ function useStoredState(key, fallback) {
   return [value, setValue];
 }
 
+function canAccessView(account, viewId) {
+  if (!account) return false;
+  return (roleAccess[account.role] || []).includes(viewId);
+}
+
 function App() {
   const [activeView, setActiveView] = useState('pos');
+  const [accounts] = useStoredState('icashbox.accounts', defaultAccounts);
+  const [session, setSession] = useStoredState('icashbox.session', null);
   const [isOnline, setIsOnline] = useStoredState('icashbox.online', false);
   const [products, setProducts] = useStoredState('icashbox.products', productSeed);
   const [stock, setStock] = useStoredState('icashbox.stock', stockSeed);
@@ -256,6 +293,11 @@ function App() {
   });
   const [printers, setPrinters] = useState([]);
   const importInputRef = useRef(null);
+  const currentUser = accounts.find((account) => account.id === session?.accountId) || null;
+  const visibleNavItems = useMemo(
+    () => navItems.filter((item) => canAccessView(currentUser, item.id)),
+    [currentUser]
+  );
 
   const categories = useMemo(() => ['Все', ...new Set(products.map((item) => item.category))], [products]);
   const visibleProducts = products.filter((item) => {
@@ -266,6 +308,38 @@ function App() {
   const cartTotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
   const paidAmount = Object.values(payments).reduce((sum, value) => sum + Number(value || 0), 0);
   const pendingSync = syncQueue.filter((item) => item.status === 'Ожидает').length;
+
+  useEffect(() => {
+    if (!currentUser) return;
+    if (!canAccessView(currentUser, activeView)) {
+      setActiveView(roleAccess[currentUser.role]?.[0] || 'pos');
+    }
+  }, [activeView, currentUser]);
+
+  const login = ({ password, username }) => {
+    const account = accounts.find(
+      (item) =>
+        item.username.toLowerCase() === username.trim().toLowerCase() &&
+        item.password === password
+    );
+
+    if (!account) return false;
+
+    setSession({ accountId: account.id, loggedAt: new Date().toISOString() });
+    setShift((current) => ({ ...current, cashier: account.name }));
+    setLastMessage(`Вход выполнен: ${account.name}`);
+    return true;
+  };
+
+  const logout = () => {
+    setSession(null);
+    setCart([]);
+    setOrderComment('');
+    setPayments(blankPayments);
+    setPrintJob(null);
+    setSettingsOpen(false);
+    setLastMessage('Вы вышли из аккаунта');
+  };
 
   const queueSync = (type, source = 'Локально') => {
     const now = new Date();
@@ -509,6 +583,10 @@ function App() {
     }
   };
 
+  if (!currentUser) {
+    return <LoginScreen onLogin={login} />;
+  }
+
   return (
     <div className="app-shell">
       <aside className="sidebar">
@@ -523,7 +601,7 @@ function App() {
         </div>
 
         <nav className="nav-list" aria-label="Основные разделы">
-          {navItems.map((item) => {
+          {visibleNavItems.map((item) => {
             const Icon = item.icon;
             return (
               <button
@@ -538,6 +616,17 @@ function App() {
             );
           })}
         </nav>
+
+        <div className="user-card">
+          <User size={18} />
+          <div>
+            <strong>{currentUser.name}</strong>
+            <span>{roleLabels[currentUser.role]}</span>
+          </div>
+          <button className="sidebar-icon-button" title="Выйти" onClick={logout}>
+            <LogOut size={17} />
+          </button>
+        </div>
 
         <div className={isOnline ? 'network online' : 'network offline'}>
           {isOnline ? <Wifi size={18} /> : <WifiOff size={18} />}
@@ -659,7 +748,7 @@ function App() {
             toggleNetwork={toggleNetwork}
           />
         )}
-        {activeView === 'roles' && <Roles />}
+        {activeView === 'roles' && <Roles accounts={accounts} />}
       </main>
       {printJob && (
         <PrintModal
@@ -680,6 +769,85 @@ function App() {
         />
       )}
     </div>
+  );
+}
+
+function LoginScreen({ onLogin }) {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const submitLogin = (event) => {
+    event.preventDefault();
+    const ok = onLogin({ username, password });
+    if (!ok) setError('Неверный аккаунт или пароль');
+  };
+
+  return (
+    <main className="login-shell">
+      <section className="login-panel" aria-label="Вход в iCashbox">
+        <div className="brand login-brand">
+          <div className="brand-mark">
+            <CircleDollarSign size={26} />
+          </div>
+          <div>
+            <strong>iCashbox</strong>
+            <span>Hybrid POS</span>
+          </div>
+        </div>
+        <div className="login-heading">
+          <p className="eyebrow">Локальный вход</p>
+          <h1>Войдите в кассу</h1>
+        </div>
+        <form className="login-form" onSubmit={submitLogin}>
+          <label>
+            <span>Аккаунт</span>
+            <div className="login-input">
+              <User size={18} />
+              <input
+                autoComplete="username"
+                autoFocus
+                value={username}
+                onChange={(event) => {
+                  setUsername(event.target.value);
+                  setError('');
+                }}
+              />
+            </div>
+          </label>
+          <label>
+            <span>Пароль</span>
+            <div className="login-input">
+              <KeyRound size={18} />
+              <input
+                autoComplete="current-password"
+                type="password"
+                value={password}
+                onChange={(event) => {
+                  setPassword(event.target.value);
+                  setError('');
+                }}
+              />
+            </div>
+          </label>
+          {error && <div className="login-error">{error}</div>}
+          <button className="primary-action" type="submit">
+            <ShieldCheck size={18} />
+            <span>Войти</span>
+          </button>
+        </form>
+        <div className="login-demo">
+          <div>
+            <strong>Админ</strong>
+            <span>admin / admin123</span>
+          </div>
+          <div>
+            <strong>Кассир</strong>
+            <span>cashier / 1234</span>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
 
@@ -1205,30 +1373,55 @@ function CloudSync({
   );
 }
 
-function Roles() {
-  const roles = ['Владелец', 'Администратор', 'Кассир', 'Официант', 'Повар', 'Склад', 'Бухгалтер'];
-  const rights = ['Касса', 'Отчёты', 'Меню', 'Склад', 'Финансы', 'Сотрудники'];
+function Roles({ accounts }) {
+  const rights = [
+    { id: 'pos', label: 'Касса' },
+    { id: 'orders', label: 'Заказы' },
+    { id: 'kitchen', label: 'Кухня' },
+    { id: 'menu', label: 'Меню' },
+    { id: 'inventory', label: 'Склад' },
+    { id: 'analytics', label: 'Отчёты' },
+    { id: 'cloud', label: 'Облако' },
+    { id: 'roles', label: 'Роли' }
+  ];
+  const roles = [
+    { id: 'admin', title: 'Админ', text: 'Полный доступ к кассе, меню, складу, отчётам и настройкам.' },
+    { id: 'cashier', title: 'Кассир', text: 'Работа с продажами, заказами и кухонным экраном.' }
+  ];
+
   return (
     <section className="data-section">
       <div className="section-row">
         <div>
           <h2>Сотрудники и роли</h2>
-          <p>Гибкая матрица доступа для локальной и облачной части</p>
+          <p>Два уровня доступа для MVP-версии</p>
         </div>
-        <button className="secondary-action">
+        <button className="secondary-action" disabled>
           <UserRoundCog size={18} />
-          <span>Сотрудник</span>
+          <span>2 аккаунта</span>
         </button>
       </div>
-      <div className="role-grid">
-        {roles.map((role, roleIndex) => (
-          <article className="role-card" key={role}>
-            <h3>{role}</h3>
+      <div className="account-grid">
+        {accounts.map((account) => (
+          <article className="account-card" key={account.id}>
             <div>
-              {rights.map((right, index) => (
-                <label key={right}>
-                  <input type="checkbox" defaultChecked={roleIndex < 2 || index <= Math.max(0, 4 - roleIndex)} />
-                  <span>{right}</span>
+              <strong>{account.name}</strong>
+              <span>{roleLabels[account.role]}</span>
+            </div>
+            <code>{account.username}</code>
+          </article>
+        ))}
+      </div>
+      <div className="role-grid">
+        {roles.map((role) => (
+          <article className="role-card" key={role.id}>
+            <h3>{role.title}</h3>
+            <p>{role.text}</p>
+            <div>
+              {rights.map((right) => (
+                <label key={right.id}>
+                  <input type="checkbox" checked={roleAccess[role.id].includes(right.id)} readOnly />
+                  <span>{right.label}</span>
                 </label>
               ))}
             </div>

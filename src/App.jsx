@@ -1219,13 +1219,13 @@ function App() {
       .catch(() => {});
   }, [orders, paymentMethods, shift]);
 
-  const pushRemoteLiveSnapshot = useCallback(async (manual = false) => {
+  const pushRemoteLiveSnapshot = useCallback(async (manual = false, overrideOrders = orders) => {
     if (!printSettings.remoteLiveEnabled || !printSettings.remoteLiveUrl) {
       if (manual) setRemoteLiveStatus('Включите Live через интернет и укажите API URL');
       return false;
     }
 
-    const snapshot = buildLiveSnapshot({ orders, paymentMethods, shift });
+    const snapshot = buildLiveSnapshot({ orders: overrideOrders, paymentMethods, shift });
     try {
       const response = await fetch(printSettings.remoteLiveUrl.trim(), {
         body: JSON.stringify(snapshot),
@@ -1592,7 +1592,9 @@ function App() {
       createdAt
     };
 
-    setOrders([nextOrder, ...orders]);
+    const nextOrders = [nextOrder, ...orders];
+    setOrders(nextOrders);
+    pushRemoteLiveSnapshot(false, nextOrders);
     setStock(applyRecipeWriteOff(stock, cart));
     queueSync('Создание заказа');
     queueSync('Списание ингредиентов');

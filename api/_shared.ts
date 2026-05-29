@@ -1,6 +1,8 @@
-import type { DailyReport, ReportCategory, ReportItem } from '../analytics-pwa/src/types/report';
-
 declare const Buffer: any;
+
+type DailyReport = any;
+type ReportCategory = any;
+type ReportItem = any;
 
 const token = process.env.GITHUB_TOKEN || '';
 const owner = process.env.GITHUB_OWNER || '';

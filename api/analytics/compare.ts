@@ -1,4 +1,4 @@
-import { buildMonthlyAnalytics, handleOptions, queryValue, readMonthFromGithub, sendJson, trend } from '../_shared';
+import { buildMonthlyAnalytics, handleOptions, queryValue, readMonthFromGithub, sendJson, trend } from '../_shared.js';
 
 function monthKeysBetween(from: string, to: string) {
   const keys: string[] = [];

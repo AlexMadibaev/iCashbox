@@ -1,4 +1,4 @@
-import { aggregateProducts, handleOptions, queryValue, readMonthFromGithub, sendJson } from '../_shared';
+import { aggregateProducts, handleOptions, queryValue, readMonthFromGithub, sendJson } from '../_shared.js';
 
 export default async function handler(request: any, response: any) {
   if (handleOptions(request, response)) return;

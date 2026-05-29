@@ -1,0 +1,11 @@
+{
+  "installCommand": "npm install --prefix analytics-pwa",
+  "buildCommand": "npm run build --prefix analytics-pwa",
+  "outputDirectory": "analytics-pwa/dist",
+  "rewrites": [
+    {
+      "source": "/((?!api/.*).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

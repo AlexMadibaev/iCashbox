@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   BarChart3,
   Bell,
@@ -1166,6 +1166,7 @@ function App() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [autoLaunch, setAutoLaunch] = useState(false);
   const [liveUrls, setLiveUrls] = useState([]);
+  const [remoteLiveStatus, setRemoteLiveStatus] = useState('');
   const [printSettings, setPrintSettings] = useStoredState('icashbox.printSettings', {
     autoReceipt: false,
     directAgent: true,
@@ -1218,26 +1219,33 @@ function App() {
       .catch(() => {});
   }, [orders, paymentMethods, shift]);
 
-  useEffect(() => {
-    if (!printSettings.remoteLiveEnabled || !printSettings.remoteLiveUrl) return undefined;
-    const controller = new AbortController();
-    const timeout = window.setTimeout(() => {
-      const snapshot = buildLiveSnapshot({ orders, paymentMethods, shift });
-      fetch(printSettings.remoteLiveUrl, {
+  const pushRemoteLiveSnapshot = useCallback(async (manual = false) => {
+    if (!printSettings.remoteLiveEnabled || !printSettings.remoteLiveUrl) {
+      if (manual) setRemoteLiveStatus('Включите Live через интернет и укажите API URL');
+      return false;
+    }
+
+    const snapshot = buildLiveSnapshot({ orders, paymentMethods, shift });
+    try {
+      const response = await fetch(printSettings.remoteLiveUrl.trim(), {
         body: JSON.stringify(snapshot),
         headers: {
           'Content-Type': 'application/json',
-          ...(printSettings.remoteLiveToken ? { 'x-live-token': printSettings.remoteLiveToken } : {})
+          ...(printSettings.remoteLiveToken ? { 'x-live-token': printSettings.remoteLiveToken.trim() } : {})
         },
-        method: 'POST',
-        signal: controller.signal
-      }).catch(() => {});
-    }, 700);
-
-    return () => {
-      controller.abort();
-      window.clearTimeout(timeout);
-    };
+        method: 'POST'
+      });
+      const text = await response.text();
+      if (!response.ok) {
+        throw new Error(text || `HTTP ${response.status}`);
+      }
+      setRemoteLiveStatus(`Отправлено ${new Date().toLocaleTimeString('ru-RU')}`);
+      return true;
+    } catch (caught) {
+      const message = caught instanceof Error ? caught.message : 'Не удалось отправить Live';
+      setRemoteLiveStatus(message.slice(0, 160));
+      return false;
+    }
   }, [
     orders,
     paymentMethods,
@@ -1246,6 +1254,17 @@ function App() {
     printSettings.remoteLiveUrl,
     shift
   ]);
+
+  useEffect(() => {
+    if (!printSettings.remoteLiveEnabled || !printSettings.remoteLiveUrl) return undefined;
+    const timeout = window.setTimeout(() => {
+      pushRemoteLiveSnapshot(false);
+    }, 700);
+
+    return () => {
+      window.clearTimeout(timeout);
+    };
+  }, [printSettings.remoteLiveEnabled, printSettings.remoteLiveUrl, pushRemoteLiveSnapshot]);
 
   const archiveOrdersForDate = async (dateKey, reason = 'auto', options = {}) => {
     const dayOrders = orders.filter((order) => orderShiftKey(order, shift) === dateKey).map(normalizeOrderStatus);
@@ -2613,9 +2632,11 @@ function App() {
           loadPrinters={loadPrinters}
           onClearMenu={requestClearProductsMenu}
           onClose={() => setSettingsOpen(false)}
+          onPushRemoteLive={() => pushRemoteLiveSnapshot(true)}
           printSettings={printSettings}
           productsCount={products.length}
           printers={printers}
+          remoteLiveStatus={remoteLiveStatus}
           setPrintSettings={setPrintSettings}
         />
       )}
@@ -4719,7 +4740,7 @@ function PrinterPicker({ label, onChange, placeholder, printers, value }) {
   );
 }
 
-function PrinterSettingsFields({ loadPrinters, printSettings, printers, setPrintSettings }) {
+function PrinterSettingsFields({ loadPrinters, onPushRemoteLive, printSettings, printers, remoteLiveStatus, setPrintSettings }) {
   return (
     <div className="printer-settings">
       <PrinterPicker
@@ -4793,11 +4814,26 @@ function PrinterSettingsFields({ loadPrinters, printSettings, printers, setPrint
           }
         />
       </label>
+      <button className="secondary-action" type="button" onClick={onPushRemoteLive}>
+        <RotateCcw size={18} />
+        <span>Отправить Live сейчас</span>
+      </button>
+      {remoteLiveStatus && <p className="settings-hint">{remoteLiveStatus}</p>}
     </div>
   );
 }
 
-function SettingsModal({ loadPrinters, onClearMenu, onClose, printSettings, productsCount, printers, setPrintSettings }) {
+function SettingsModal({
+  loadPrinters,
+  onClearMenu,
+  onClose,
+  onPushRemoteLive,
+  printSettings,
+  productsCount,
+  printers,
+  remoteLiveStatus,
+  setPrintSettings
+}) {
   return (
     <div className="modal-backdrop">
       <section className="settings-modal" aria-label="Настройки программы">
@@ -4821,8 +4857,10 @@ function SettingsModal({ loadPrinters, onClearMenu, onClose, printSettings, prod
             </div>
             <PrinterSettingsFields
               loadPrinters={loadPrinters}
+              onPushRemoteLive={onPushRemoteLive}
               printSettings={printSettings}
               printers={printers}
+              remoteLiveStatus={remoteLiveStatus}
               setPrintSettings={setPrintSettings}
             />
           </div>

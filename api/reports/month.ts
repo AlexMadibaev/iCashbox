@@ -1,4 +1,15 @@
-import bridge from '../_bridge';
-import handler from '../../analytics-pwa/api/reports/month';
+import { handleOptions, queryValue, readMonthFromGithub, sendJson } from '../_shared';
 
-export default (request: any, response: any) => bridge(request, response, handler);
+export default async function handler(request: any, response: any) {
+  if (handleOptions(request, response)) return;
+  const year = queryValue(request, 'year');
+  const month = queryValue(request, 'month');
+  if (!year || !month) return sendJson(response, { error: 'year and month are required' }, 400);
+
+  try {
+    return sendJson(response, await readMonthFromGithub(year, month));
+  } catch (caught) {
+    console.error(caught);
+    return sendJson(response, []);
+  }
+}

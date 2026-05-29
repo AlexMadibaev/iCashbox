@@ -9,6 +9,7 @@ export default async function handler(request: Request) {
     if (!year || !month) return error('year and month are required', 400);
     return json(await readMonthFromGithub(year, month));
   } catch (caught) {
-    return error(caught instanceof Error ? caught.message : 'Failed to load month');
+    console.error(caught);
+    return json([]);
   }
 }

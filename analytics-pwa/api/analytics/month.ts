@@ -10,6 +10,7 @@ export default async function handler(request: Request) {
     if (!year || !month) return error('year and month are required', 400);
     return json(buildMonthlyAnalytics(await readMonthFromGithub(year, month)));
   } catch (caught) {
-    return error(caught instanceof Error ? caught.message : 'Failed to build analytics');
+    console.error(caught);
+    return json(buildMonthlyAnalytics([]));
   }
 }

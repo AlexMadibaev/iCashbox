@@ -10,6 +10,7 @@ export default async function handler(request: Request) {
     if (!year || !month) return error('year and month are required', 400);
     return json(aggregateProducts(await readMonthFromGithub(year, month)).slice(0, 10));
   } catch (caught) {
-    return error(caught instanceof Error ? caught.message : 'Failed to load top products');
+    console.error(caught);
+    return json([]);
   }
 }

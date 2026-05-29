@@ -10,6 +10,7 @@ export default async function handler(request: Request) {
     const reports = await readMonthFromGithub(year, month);
     return json(reports.find((report) => report.date === date) || null);
   } catch (caught) {
-    return error(caught instanceof Error ? caught.message : 'Failed to load day');
+    console.error(caught);
+    return json(null);
   }
 }

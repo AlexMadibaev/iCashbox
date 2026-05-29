@@ -8,6 +8,7 @@ export default async function handler() {
   try {
     return json(await readJsonFromGithub<LiveSnapshot>(livePath));
   } catch (caught) {
-    return error(caught instanceof Error ? caught.message : 'Failed to load live snapshot');
+    console.error(caught);
+    return json(null);
   }
 }

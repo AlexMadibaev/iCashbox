@@ -40,6 +40,14 @@ export default async function handler(request: Request) {
       averageCheckTrend: trend(current.averageCheck, previous.averageCheck)
     });
   } catch (caught) {
-    return error(caught instanceof Error ? caught.message : 'Failed to compare reports');
+    console.error(caught);
+    const empty = buildMonthlyAnalytics([]);
+    return json({
+      current: empty,
+      previous: empty,
+      salesTrend: trend(0, 0),
+      checksTrend: trend(0, 0),
+      averageCheckTrend: trend(0, 0)
+    });
   }
 }

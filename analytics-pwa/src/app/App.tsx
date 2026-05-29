@@ -30,7 +30,7 @@ const tabs: Array<{ id: Tab; label: string }> = [
 ];
 
 export function App() {
-  const [activeTab, setActiveTab] = useState<Tab>('dashboard');
+  const [activeTab, setActiveTab] = useState<Tab>('live');
   const [month, setMonth] = useState('2026-05');
   const [reports, setReports] = useState<DailyReport[]>(() => cachedReports());
   const [liveSnapshot, setLiveSnapshot] = useState<LiveSnapshot | null>(null);
@@ -79,7 +79,9 @@ export function App() {
   const content = () => {
     if (loading && !reports.length) return <LoadingState />;
     if (error) return <ErrorState message={error} />;
-    if (!reports.length && activeTab !== 'settings') return <EmptyState text="Нет отчётов за выбранный месяц" />;
+    if (!reports.length && activeTab !== 'settings' && activeTab !== 'live') {
+      return <EmptyState text="Нет отчётов за выбранный месяц" />;
+    }
 
     switch (activeTab) {
       case 'live':

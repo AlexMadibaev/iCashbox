@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
+    "exceljs": "^4.4.0",
     "lucide-react": "latest",
+    "pdfmake": "^0.3.8",
     "react": "latest",
     "react-dom": "latest",
     "vite": "latest"
@@ -37,6 +39,7 @@
       "package.json"
     ],
     "win": {
+      "icon": "public/app-icon.ico",
       "signAndEditExecutable": false,
       "target": [
         {
@@ -52,6 +55,9 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true
+    },
+    "portable": {
+      "splashImage": "build/portable-splash.bmp"
     }
   }
 }

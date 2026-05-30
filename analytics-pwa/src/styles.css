@@ -561,32 +561,55 @@ button { cursor: pointer; }
   text-align: center;
 }
 .state.error { color: #b83232; }
+.report-switch {
+  display: flex;
+  gap: 7px;
+  padding: 7px;
+  overflow-x: auto;
+  border: 1px solid #dde6de;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 32px rgba(25, 38, 30, 0.08);
+  scrollbar-width: none;
+}
+.report-switch::-webkit-scrollbar { display: none; }
+.report-switch button {
+  flex: 0 0 auto;
+  min-height: 36px;
+  padding: 0 13px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #607064;
+  font-size: 12px;
+  font-weight: 900;
+}
+.report-switch button.active {
+  background: #17201b;
+  color: #fff;
+}
 .bottom-tabs {
   position: fixed;
   right: max(10px, calc((100vw - 540px) / 2 + 10px));
   bottom: 12px;
   left: max(10px, calc((100vw - 540px) / 2 + 10px));
   z-index: 6;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 7px;
   padding: 8px;
-  overflow-x: auto;
   border: 1px solid #dde6dc;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 18px 50px rgba(20, 32, 25, 0.14);
   backdrop-filter: blur(16px);
-  scrollbar-width: none;
 }
-.bottom-tabs::-webkit-scrollbar { display: none; }
 .bottom-tabs button {
   display: grid;
   place-items: center;
   gap: 2px;
-  flex: 0 0 auto;
-  min-width: 72px;
   min-height: 44px;
-  padding: 4px 10px;
+  padding: 4px 6px;
   border: 0;
   border-radius: 8px;
   background: transparent;
@@ -615,7 +638,8 @@ button { cursor: pointer; }
   .panel,
   .section-title,
   .daily-list,
-  .daily-detail {
+  .daily-detail,
+  .report-switch {
     grid-column: 1 / -1;
   }
   .bottom-tabs {

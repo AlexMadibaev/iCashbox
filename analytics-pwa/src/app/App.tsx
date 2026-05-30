@@ -17,22 +17,27 @@ import { AuthGate } from '../components/AuthGate';
 import { EmptyState, ErrorState, LoadingState } from '../components/States';
 import type { LiveSnapshot } from '../types/live';
 
-type Tab = 'live' | 'dashboard' | 'days' | 'month' | 'dynamics' | 'products' | 'categories' | 'settings';
+type MainTab = 'live' | 'dashboard' | 'reports' | 'settings';
+type ReportView = 'days' | 'month' | 'dynamics' | 'products' | 'categories';
 
-const tabs: Array<{ id: Tab; label: string }> = [
+const mainTabs: Array<{ id: MainTab; label: string }> = [
   { id: 'live', label: 'Live' },
   { id: 'dashboard', label: 'Главная' },
+  { id: 'reports', label: 'Отчёты' },
+  { id: 'settings', label: 'Настройки' }
+];
+
+const reportViews: Array<{ id: ReportView; label: string }> = [
   { id: 'days', label: 'Дни' },
   { id: 'month', label: 'Месяц' },
   { id: 'dynamics', label: 'Графики' },
   { id: 'products', label: 'Товары' },
-  { id: 'categories', label: 'Категории' },
-  { id: 'settings', label: 'Настройки' }
+  { id: 'categories', label: 'Категории' }
 ];
 
-function TabIcon({ id }: { id: Tab }) {
+function TabIcon({ id }: { id: MainTab }) {
   const common = { fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2 } as const;
-  const paths: Record<Tab, JSX.Element> = {
+  const paths: Record<MainTab, JSX.Element> = {
     live: (
       <>
         <path {...common} d="M6.3 18.7a8 8 0 0 1 0-13.4" />
@@ -47,40 +52,11 @@ function TabIcon({ id }: { id: Tab }) {
         <path {...common} d="M10 19v-5h4v5" />
       </>
     ),
-    days: (
+    reports: (
       <>
         <rect {...common} height="15" rx="3" width="16" x="4" y="5" />
         <path {...common} d="M8 3v4M16 3v4M4 10h16" />
-        <path {...common} d="M8 14h.01M12 14h.01M16 14h.01" />
-      </>
-    ),
-    month: (
-      <>
-        <path {...common} d="M5 19V5" />
-        <path {...common} d="M5 19h14" />
-        <rect {...common} height="5" rx="1" width="3" x="8" y="12" />
-        <rect {...common} height="9" rx="1" width="3" x="13" y="8" />
-      </>
-    ),
-    dynamics: (
-      <>
-        <path {...common} d="M4 18 9 12l4 3 7-9" />
-        <path {...common} d="M15 6h5v5" />
-      </>
-    ),
-    products: (
-      <>
-        <path {...common} d="M12 3 4.5 7 12 11l7.5-4L12 3Z" />
-        <path {...common} d="M4.5 7v9L12 21l7.5-5V7" />
-        <path {...common} d="M12 11v10" />
-      </>
-    ),
-    categories: (
-      <>
-        <rect {...common} height="6" rx="2" width="6" x="4" y="4" />
-        <rect {...common} height="6" rx="2" width="6" x="14" y="4" />
-        <rect {...common} height="6" rx="2" width="6" x="4" y="14" />
-        <rect {...common} height="6" rx="2" width="6" x="14" y="14" />
+        <path {...common} d="M8 14h8M8 17h5" />
       </>
     ),
     settings: (
@@ -99,7 +75,8 @@ function TabIcon({ id }: { id: Tab }) {
 }
 
 export function App() {
-  const [activeTab, setActiveTab] = useState<Tab>('live');
+  const [activeTab, setActiveTab] = useState<MainTab>('live');
+  const [reportView, setReportView] = useState<ReportView>('days');
   const [month, setMonth] = useState(currentMonthKey());
   const [reports, setReports] = useState<DailyReport[]>(() => cachedReports());
   const [liveSnapshot, setLiveSnapshot] = useState<LiveSnapshot | null>(null);
@@ -145,18 +122,9 @@ export function App() {
     setSyncAt('');
   };
 
-  const content = () => {
-    if (loading && !reports.length) return <LoadingState />;
-    if (error) return <ErrorState message={error} />;
-    if (!reports.length && activeTab !== 'settings' && activeTab !== 'live') {
-      return <EmptyState text="Нет отчётов за выбранный месяц" />;
-    }
-
-    switch (activeTab) {
-      case 'live':
-        return <LivePage snapshot={liveSnapshot} />;
-      case 'dashboard':
-        return <DashboardPage summary={dashboard} />;
+  const reportContent = () => {
+    if (!reports.length) return <EmptyState text="Нет отчётов за выбранный месяц" />;
+    switch (reportView) {
       case 'days':
         return <DailyReportsPage reports={reports} />;
       case 'month':
@@ -167,6 +135,38 @@ export function App() {
         return <ProductsPage analytics={analytics} />;
       case 'categories':
         return <CategoriesPage analytics={analytics} />;
+      default:
+        return null;
+    }
+  };
+
+  const content = () => {
+    if (loading && !reports.length) return <LoadingState />;
+    if (error) return <ErrorState message={error} />;
+
+    switch (activeTab) {
+      case 'live':
+        return <LivePage snapshot={liveSnapshot} />;
+      case 'dashboard':
+        return reports.length ? <DashboardPage summary={dashboard} /> : <EmptyState text="Нет отчётов за выбранный месяц" />;
+      case 'reports':
+        return (
+          <div className="page">
+            <section className="report-switch" aria-label="Разделы отчётов">
+              {reportViews.map((view) => (
+                <button
+                  className={reportView === view.id ? 'active' : ''}
+                  key={view.id}
+                  type="button"
+                  onClick={() => setReportView(view.id)}
+                >
+                  {view.label}
+                </button>
+              ))}
+            </section>
+            {reportContent()}
+          </div>
+        );
       case 'settings':
         return (
           <SettingsPage
@@ -196,7 +196,7 @@ export function App() {
         {content()}
 
         <nav className="bottom-tabs">
-          {tabs.map((tab) => (
+          {mainTabs.map((tab) => (
             <button className={activeTab === tab.id ? 'active' : ''} key={tab.id} onClick={() => setActiveTab(tab.id)}>
               <TabIcon id={tab.id} />
               <small>{tab.label}</small>

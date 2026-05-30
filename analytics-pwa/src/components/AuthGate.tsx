@@ -1,9 +1,10 @@
 import { useState } from 'react';
 
 const sessionKey = 'icashbox.analytics.auth';
+const customHashKey = 'icashbox.analytics.passwordHash';
 const defaultPasswordHash = '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4';
 
-async function sha256(value: string) {
+export async function sha256(value: string) {
   const bytes = new TextEncoder().encode(value);
   const hash = await crypto.subtle.digest('SHA-256', bytes);
   return Array.from(new Uint8Array(hash))
@@ -12,11 +13,20 @@ async function sha256(value: string) {
 }
 
 function expectedHash() {
-  return import.meta.env.VITE_ANALYTICS_PASSWORD_HASH || defaultPasswordHash;
+  return localStorage.getItem(customHashKey) || import.meta.env.VITE_ANALYTICS_PASSWORD_HASH || defaultPasswordHash;
 }
 
 export function isAuthenticated() {
   return localStorage.getItem(sessionKey) === expectedHash();
+}
+
+export async function changeAnalyticsPassword(currentPassword: string, nextPassword: string) {
+  const currentHash = await sha256(currentPassword);
+  if (currentHash !== expectedHash()) throw new Error('Старый пароль неверный');
+  if (nextPassword.trim().length < 4) throw new Error('Новый пароль минимум 4 символа');
+  const nextHash = await sha256(nextPassword);
+  localStorage.setItem(customHashKey, nextHash);
+  localStorage.setItem(sessionKey, nextHash);
 }
 
 export function logoutAnalytics() {

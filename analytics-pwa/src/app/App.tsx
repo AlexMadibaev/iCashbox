@@ -18,15 +18,15 @@ import type { LiveSnapshot } from '../types/live';
 
 type Tab = 'live' | 'dashboard' | 'days' | 'month' | 'dynamics' | 'products' | 'categories' | 'settings';
 
-const tabs: Array<{ id: Tab; label: string }> = [
-  { id: 'live', label: 'Live' },
-  { id: 'dashboard', label: 'Дом' },
-  { id: 'days', label: 'Дни' },
-  { id: 'month', label: 'Итог' },
-  { id: 'dynamics', label: 'Граф' },
-  { id: 'products', label: 'Товары' },
-  { id: 'categories', label: 'Кат' },
-  { id: 'settings', label: 'Ещё' }
+const tabs: Array<{ id: Tab; icon: string; label: string }> = [
+  { id: 'live', icon: '●', label: 'Live' },
+  { id: 'dashboard', icon: '⌂', label: 'Главная' },
+  { id: 'days', icon: '◷', label: 'Дни' },
+  { id: 'month', icon: 'Σ', label: 'Месяц' },
+  { id: 'dynamics', icon: '↗', label: 'Графики' },
+  { id: 'products', icon: '▣', label: 'Товары' },
+  { id: 'categories', icon: '◫', label: 'Категории' },
+  { id: 'settings', icon: '⚙', label: 'Настройки' }
 ];
 
 export function App() {
@@ -128,7 +128,8 @@ export function App() {
       <nav className="bottom-tabs">
         {tabs.map((tab) => (
           <button className={activeTab === tab.id ? 'active' : ''} key={tab.id} onClick={() => setActiveTab(tab.id)}>
-            {tab.label}
+            <span aria-hidden="true">{tab.icon}</span>
+            <small>{tab.label}</small>
           </button>
         ))}
       </nav>

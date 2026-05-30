@@ -137,6 +137,78 @@ button { cursor: pointer; }
 .rank-list span, .daily-card span { color: #64736a; font-size: 12px; }
 .rank-list em, .daily-card b, .category-list em { font-style: normal; font-weight: 900; }
 .daily-card { grid-template-columns: 1fr auto; }
+.daily-detail {
+  display: grid;
+  gap: 14px;
+}
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.detail-grid div {
+  display: grid;
+  gap: 5px;
+  min-height: 76px;
+  padding: 10px;
+  border: 1px solid #e0e6e1;
+  border-radius: 8px;
+  background: #f9fbf7;
+}
+.detail-grid span,
+.detail-meta span,
+.detail-list span {
+  color: #64736a;
+  font-size: 12px;
+  font-weight: 800;
+}
+.detail-grid strong {
+  font-size: 18px;
+  line-height: 1.15;
+}
+.detail-meta {
+  display: grid;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid #e0e6e1;
+  border-radius: 8px;
+  background: #fff;
+}
+.detail-section {
+  display: grid;
+  gap: 8px;
+}
+.detail-section h3 {
+  margin: 0;
+  font-size: 15px;
+}
+.detail-list {
+  display: grid;
+  gap: 8px;
+}
+.detail-list article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #e0e6e1;
+  border-radius: 8px;
+  background: #f9fbf7;
+}
+.detail-list article div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+.detail-list strong {
+  overflow-wrap: anywhere;
+}
+.detail-list em {
+  flex: 0 0 auto;
+  font-style: normal;
+  font-weight: 900;
+}
 .settings-list label { display: grid; gap: 6px; }
 .settings-list input {
   height: 48px;

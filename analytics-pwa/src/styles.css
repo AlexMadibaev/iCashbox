@@ -10,6 +10,60 @@ body {
 }
 button, input { font: inherit; }
 button { cursor: pointer; }
+.auth-screen {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 18px;
+}
+.auth-card {
+  display: grid;
+  gap: 14px;
+  width: min(100%, 380px);
+  padding: 22px;
+  border: 1px solid #dde6de;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 50px rgba(20, 32, 25, 0.14);
+}
+.auth-card span {
+  color: #34a853;
+  font-size: 12px;
+  font-weight: 900;
+}
+.auth-card h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.05;
+}
+.auth-card label {
+  display: grid;
+  gap: 7px;
+  color: #607064;
+  font-size: 13px;
+  font-weight: 850;
+}
+.auth-card input {
+  height: 52px;
+  padding: 0 14px;
+  border: 1px solid #dbe2dc;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 20px;
+}
+.auth-card p {
+  margin: 0;
+  color: #b83232;
+  font-weight: 850;
+}
+.auth-card button {
+  min-height: 46px;
+  border: 0;
+  border-radius: 8px;
+  background: #17201b;
+  color: #fff;
+  font-weight: 900;
+}
 .app-shell {
   width: min(100%, 540px);
   min-height: 100vh;

@@ -13,6 +13,7 @@ import { ProductsPage } from '../pages/ProductsPage';
 import { CategoriesPage } from '../pages/CategoriesPage';
 import { SettingsPage } from '../pages/SettingsPage';
 import { LivePage } from '../pages/LivePage';
+import { AuthGate } from '../components/AuthGate';
 import { EmptyState, ErrorState, LoadingState } from '../components/States';
 import type { LiveSnapshot } from '../types/live';
 
@@ -182,25 +183,27 @@ export function App() {
   };
 
   return (
-    <main className="app-shell">
-      <header className="app-header">
-        <div>
-          <span>iCashbox · {month}</span>
-          <h1>Статистика кафе</h1>
-        </div>
-        <button onClick={loadReports}>{loading ? '...' : 'Обновить'}</button>
-      </header>
+    <AuthGate>
+      <main className="app-shell">
+        <header className="app-header">
+          <div>
+            <span>iCashbox · {month}</span>
+            <h1>Статистика кафе</h1>
+          </div>
+          <button onClick={loadReports}>{loading ? '...' : 'Обновить'}</button>
+        </header>
 
-      {content()}
+        {content()}
 
-      <nav className="bottom-tabs">
-        {tabs.map((tab) => (
-          <button className={activeTab === tab.id ? 'active' : ''} key={tab.id} onClick={() => setActiveTab(tab.id)}>
-            <TabIcon id={tab.id} />
-            <small>{tab.label}</small>
-          </button>
-        ))}
-      </nav>
-    </main>
+        <nav className="bottom-tabs">
+          {tabs.map((tab) => (
+            <button className={activeTab === tab.id ? 'active' : ''} key={tab.id} onClick={() => setActiveTab(tab.id)}>
+              <TabIcon id={tab.id} />
+              <small>{tab.label}</small>
+            </button>
+          ))}
+        </nav>
+      </main>
+    </AuthGate>
   );
 }

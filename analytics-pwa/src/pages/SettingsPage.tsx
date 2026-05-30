@@ -1,5 +1,6 @@
 import { PageHeader } from '../components/PageHeader';
 import { SyncStatus } from '../components/States';
+import { logoutAnalytics } from '../components/AuthGate';
 
 type Props = {
   lastSync: string;
@@ -26,6 +27,15 @@ export function SettingsPage({ lastSync, month, onClearCache, onMonthChange, onR
           <button onClick={onRefresh}>Обновить данные</button>
           <button className="ghost-button" onClick={onClearCache}>Очистить кэш</button>
         </div>
+        <button
+          className="ghost-button"
+          onClick={() => {
+            logoutAnalytics();
+            window.location.reload();
+          }}
+        >
+          Выйти
+        </button>
       </section>
       <SyncStatus lastSync={lastSync} />
     </div>

@@ -20,13 +20,13 @@ type Tab = 'live' | 'dashboard' | 'days' | 'month' | 'dynamics' | 'products' | '
 
 const tabs: Array<{ id: Tab; label: string }> = [
   { id: 'live', label: 'Live' },
-  { id: 'dashboard', label: 'Главная' },
+  { id: 'dashboard', label: 'Дом' },
   { id: 'days', label: 'Дни' },
-  { id: 'month', label: 'Месяц' },
-  { id: 'dynamics', label: 'Графики' },
+  { id: 'month', label: 'Итог' },
+  { id: 'dynamics', label: 'Граф' },
   { id: 'products', label: 'Товары' },
-  { id: 'categories', label: 'Категории' },
-  { id: 'settings', label: 'Настройки' }
+  { id: 'categories', label: 'Кат' },
+  { id: 'settings', label: 'Ещё' }
 ];
 
 export function App() {

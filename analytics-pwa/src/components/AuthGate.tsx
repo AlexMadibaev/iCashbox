@@ -61,7 +61,6 @@ export function AuthGate({ children }: { children: React.ReactNode }) {
           Пароль
           <input
             autoFocus
-            inputMode="numeric"
             type="password"
             value={password}
             onChange={(event) => {

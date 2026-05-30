@@ -24,7 +24,8 @@ export function DailyReportsPage({ reports }: { reports: DailyReport[] }) {
         <h2>Дни месяца</h2>
         <span>{reports.length} отчётов</span>
       </div>
-      <div className="daily-list">
+      {selectedReport && <DailyReportDetail report={selectedReport} />}
+      <div className="daily-list day-list">
         {sortedReports.map((report) => (
           <DailyReportCard
             key={report.report_id}
@@ -33,7 +34,6 @@ export function DailyReportsPage({ reports }: { reports: DailyReport[] }) {
           />
         ))}
       </div>
-      {selectedReport && <DailyReportDetail report={selectedReport} />}
     </div>
   );
 }

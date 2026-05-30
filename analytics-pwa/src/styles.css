@@ -311,6 +311,36 @@ button { cursor: pointer; }
   gap: 10px;
   text-align: left;
 }
+.day-list {
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid #dde6de;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(25, 38, 30, 0.08);
+}
+.day-list .daily-card {
+  min-height: 60px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #edf1ed;
+  background: #fff;
+  box-shadow: none;
+}
+.day-list .daily-card:last-child {
+  border-bottom: 0;
+}
+.day-list .daily-card:hover,
+.day-list .daily-card:focus-visible {
+  background: #f6faf4;
+}
+.day-list .daily-card strong {
+  font-size: 15px;
+}
+.day-list .daily-card b {
+  font-size: 15px;
+}
 .daily-card:focus-visible,
 .bottom-tabs button:focus-visible,
 .settings-list button:focus-visible {

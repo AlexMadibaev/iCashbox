@@ -18,16 +18,84 @@ import type { LiveSnapshot } from '../types/live';
 
 type Tab = 'live' | 'dashboard' | 'days' | 'month' | 'dynamics' | 'products' | 'categories' | 'settings';
 
-const tabs: Array<{ id: Tab; icon: string; label: string }> = [
-  { id: 'live', icon: '●', label: 'Live' },
-  { id: 'dashboard', icon: '⌂', label: 'Главная' },
-  { id: 'days', icon: '◷', label: 'Дни' },
-  { id: 'month', icon: 'Σ', label: 'Месяц' },
-  { id: 'dynamics', icon: '↗', label: 'Графики' },
-  { id: 'products', icon: '▣', label: 'Товары' },
-  { id: 'categories', icon: '◫', label: 'Категории' },
-  { id: 'settings', icon: '⚙', label: 'Настройки' }
+const tabs: Array<{ id: Tab; label: string }> = [
+  { id: 'live', label: 'Live' },
+  { id: 'dashboard', label: 'Главная' },
+  { id: 'days', label: 'Дни' },
+  { id: 'month', label: 'Месяц' },
+  { id: 'dynamics', label: 'Графики' },
+  { id: 'products', label: 'Товары' },
+  { id: 'categories', label: 'Категории' },
+  { id: 'settings', label: 'Настройки' }
 ];
+
+function TabIcon({ id }: { id: Tab }) {
+  const common = { fill: 'none', stroke: 'currentColor', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: 2 } as const;
+  const paths: Record<Tab, JSX.Element> = {
+    live: (
+      <>
+        <path {...common} d="M6.3 18.7a8 8 0 0 1 0-13.4" />
+        <path {...common} d="M17.7 5.3a8 8 0 0 1 0 13.4" />
+        <circle {...common} cx="12" cy="12" r="3" />
+      </>
+    ),
+    dashboard: (
+      <>
+        <path {...common} d="M4 10.5 12 4l8 6.5" />
+        <path {...common} d="M6.5 10v9h11v-9" />
+        <path {...common} d="M10 19v-5h4v5" />
+      </>
+    ),
+    days: (
+      <>
+        <rect {...common} height="15" rx="3" width="16" x="4" y="5" />
+        <path {...common} d="M8 3v4M16 3v4M4 10h16" />
+        <path {...common} d="M8 14h.01M12 14h.01M16 14h.01" />
+      </>
+    ),
+    month: (
+      <>
+        <path {...common} d="M5 19V5" />
+        <path {...common} d="M5 19h14" />
+        <rect {...common} height="5" rx="1" width="3" x="8" y="12" />
+        <rect {...common} height="9" rx="1" width="3" x="13" y="8" />
+      </>
+    ),
+    dynamics: (
+      <>
+        <path {...common} d="M4 18 9 12l4 3 7-9" />
+        <path {...common} d="M15 6h5v5" />
+      </>
+    ),
+    products: (
+      <>
+        <path {...common} d="M12 3 4.5 7 12 11l7.5-4L12 3Z" />
+        <path {...common} d="M4.5 7v9L12 21l7.5-5V7" />
+        <path {...common} d="M12 11v10" />
+      </>
+    ),
+    categories: (
+      <>
+        <rect {...common} height="6" rx="2" width="6" x="4" y="4" />
+        <rect {...common} height="6" rx="2" width="6" x="14" y="4" />
+        <rect {...common} height="6" rx="2" width="6" x="4" y="14" />
+        <rect {...common} height="6" rx="2" width="6" x="14" y="14" />
+      </>
+    ),
+    settings: (
+      <>
+        <circle {...common} cx="12" cy="12" r="3" />
+        <path {...common} d="M19 12a7 7 0 0 0-.1-1.2l2-1.5-2-3.4-2.4 1a7 7 0 0 0-2-1.1L14.2 3h-4.4l-.4 2.8a7 7 0 0 0-2 1.1l-2.4-1-2 3.4 2 1.5A7 7 0 0 0 5 12c0 .4 0 .8.1 1.2l-2 1.5 2 3.4 2.4-1a7 7 0 0 0 2 1.1l.4 2.8h4.4l.4-2.8a7 7 0 0 0 2-1.1l2.4 1 2-3.4-2-1.5c.1-.4.1-.8.1-1.2Z" />
+      </>
+    )
+  };
+
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24">
+      {paths[id]}
+    </svg>
+  );
+}
 
 export function App() {
   const [activeTab, setActiveTab] = useState<Tab>('live');
@@ -128,7 +196,7 @@ export function App() {
       <nav className="bottom-tabs">
         {tabs.map((tab) => (
           <button className={activeTab === tab.id ? 'active' : ''} key={tab.id} onClick={() => setActiveTab(tab.id)}>
-            <span aria-hidden="true">{tab.icon}</span>
+            <TabIcon id={tab.id} />
             <small>{tab.label}</small>
           </button>
         ))}

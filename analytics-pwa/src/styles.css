@@ -645,12 +645,72 @@ button { cursor: pointer; }
   }
   .desktop-blocker section {
     width: min(100%, 520px);
-    padding: 28px;
+    padding: 30px 28px 32px;
     border: 1px solid #dde6de;
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.96);
     box-shadow: 0 18px 50px rgba(20, 32, 25, 0.14);
     text-align: center;
+  }
+  .desktop-mascot {
+    width: 220px;
+    margin: 0 auto 8px;
+  }
+  .desktop-mascot svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .desktop-mascot .signal {
+    fill: none;
+    stroke: #34a853;
+    stroke-width: 2;
+    opacity: 0;
+    transform-origin: 110px 82px;
+    animation: signal-pulse 2.8s ease-out infinite;
+  }
+  .desktop-mascot .signal-two {
+    animation-delay: 0.8s;
+  }
+  .desktop-mascot .phone-body {
+    fill: #17201b;
+    animation: phone-float 3s ease-in-out infinite;
+  }
+  .desktop-mascot .phone-screen {
+    fill: #f6faf4;
+    animation: phone-float 3s ease-in-out infinite;
+  }
+  .desktop-mascot .phone-home,
+  .desktop-mascot .face-eye {
+    fill: #34a853;
+    animation: phone-float 3s ease-in-out infinite;
+  }
+  .desktop-mascot .face-smile,
+  .desktop-mascot .arm {
+    fill: none;
+    stroke: #34a853;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 5;
+    animation: phone-float 3s ease-in-out infinite;
+  }
+  .desktop-mascot .arm-left {
+    transform-origin: 76px 103px;
+    animation: arm-wave-left 2.2s ease-in-out infinite;
+  }
+  .desktop-mascot .arm-right {
+    transform-origin: 144px 103px;
+    animation: arm-wave-right 2.2s ease-in-out infinite;
+  }
+  .desktop-mascot .spark {
+    fill: #f59e0b;
+    transform-origin: center;
+    animation: spark-pop 2.4s ease-in-out infinite;
+  }
+  .desktop-mascot .spark-two {
+    fill: #3b82f6;
+    animation-delay: 0.7s;
   }
   .desktop-blocker span {
     color: #34a853;
@@ -667,5 +727,25 @@ button { cursor: pointer; }
     color: #607064;
     font-size: 15px;
     line-height: 1.45;
+  }
+  @keyframes phone-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+  }
+  @keyframes signal-pulse {
+    0% { opacity: 0.42; transform: scale(0.74); }
+    70%, 100% { opacity: 0; transform: scale(1.18); }
+  }
+  @keyframes arm-wave-left {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(-7deg); }
+  }
+  @keyframes arm-wave-right {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(7deg); }
+  }
+  @keyframes spark-pop {
+    0%, 100% { opacity: 0.45; transform: scale(0.85); }
+    50% { opacity: 1; transform: scale(1.08); }
   }
 }

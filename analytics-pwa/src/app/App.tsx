@@ -186,9 +186,25 @@ export function App() {
     <>
       <main className="desktop-blocker">
         <section>
+          <div className="desktop-mascot" aria-hidden="true">
+            <svg viewBox="0 0 220 180">
+              <circle className="signal signal-one" cx="110" cy="82" r="58" />
+              <circle className="signal signal-two" cx="110" cy="82" r="76" />
+              <rect className="phone-body" height="116" rx="22" width="72" x="74" y="34" />
+              <rect className="phone-screen" height="86" rx="14" width="54" x="83" y="48" />
+              <circle className="phone-home" cx="110" cy="141" r="4" />
+              <circle className="face-eye" cx="101" cy="82" r="4" />
+              <circle className="face-eye" cx="119" cy="82" r="4" />
+              <path className="face-smile" d="M99 98c7 8 15 8 22 0" />
+              <path className="arm arm-left" d="M76 103c-18 2-29 12-34 28" />
+              <path className="arm arm-right" d="M144 103c18 2 29 12 34 28" />
+              <path className="spark spark-one" d="M43 49l5 10 10 5-10 5-5 10-5-10-10-5 10-5 5-10Z" />
+              <path className="spark spark-two" d="M174 31l4 8 8 4-8 4-4 8-4-8-8-4 8-4 4-8Z" />
+            </svg>
+          </div>
           <span>iCashbox</span>
           <h1>Пока доступна только мобильная версия</h1>
-          <p>Откройте этот адрес с телефона, чтобы посмотреть статистику кассы.</p>
+          <p>Откройте этот адрес с телефона. Там интерфейс легче, быстрее и сделан специально под просмотр кассы на ходу.</p>
         </section>
       </main>
       <AuthGate>

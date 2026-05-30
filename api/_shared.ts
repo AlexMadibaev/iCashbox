@@ -175,7 +175,7 @@ function aggregatePayments(reports: DailyReport[]) {
 
 export function buildMonthlyAnalytics(reports: DailyReport[]) {
   const closedReports = [...reports]
-    .filter((report) => report.status === 'closed')
+    .filter((report) => report.status === 'closed' || report.status === 'pending')
     .sort((a, b) => a.date.localeCompare(b.date));
   const netSales = sum(closedReports.map((report) => report.totals.net_sales));
   const checksCount = sum(closedReports.map((report) => report.totals.checks_count));

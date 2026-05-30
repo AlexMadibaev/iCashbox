@@ -17,7 +17,7 @@ export function trend(current: number, previous: number): Trend {
 
 export function aggregateProducts(reports: DailyReport[]): ReportItem[] {
   const map = new Map<string, ReportItem>();
-  reports.flatMap((report) => report.items).forEach((item) => {
+  reports.flatMap((report) => report.items || []).forEach((item) => {
     const key = item.id || item.name;
     const existing = map.get(key);
     if (!existing) {
@@ -32,7 +32,7 @@ export function aggregateProducts(reports: DailyReport[]): ReportItem[] {
 
 export function aggregateCategories(reports: DailyReport[]): ReportCategory[] {
   const map = new Map<string, ReportCategory>();
-  reports.flatMap((report) => report.categories).forEach((category) => {
+  reports.flatMap((report) => report.categories || []).forEach((category) => {
     const existing = map.get(category.name);
     if (!existing) {
       map.set(category.name, { ...category });
@@ -60,7 +60,7 @@ export function aggregatePayments(reports: DailyReport[]) {
 }
 
 export function buildMonthlyAnalytics(reports: DailyReport[]): MonthlyAnalytics {
-  const closedReports = [...reports].filter((report) => report.status === 'closed').sort((a, b) => a.date.localeCompare(b.date));
+  const closedReports = [...reports].filter((report) => report.status === 'closed' || report.status === 'pending').sort((a, b) => a.date.localeCompare(b.date));
   const netSales = sum(closedReports.map((report) => report.totals.net_sales));
   const checksCount = sum(closedReports.map((report) => report.totals.checks_count));
   return {

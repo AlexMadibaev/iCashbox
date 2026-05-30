@@ -183,27 +183,36 @@ export function App() {
   };
 
   return (
-    <AuthGate>
-      <main className="app-shell">
-        <header className="app-header">
-          <div>
-            <span>iCashbox · {month}</span>
-            <h1>Статистика кафе</h1>
-          </div>
-          <button onClick={loadReports}>{loading ? '...' : 'Обновить'}</button>
-        </header>
-
-        {content()}
-
-        <nav className="bottom-tabs">
-          {mainTabs.map((tab) => (
-            <button className={activeTab === tab.id ? 'active' : ''} key={tab.id} onClick={() => setActiveTab(tab.id)}>
-              <TabIcon id={tab.id} />
-              <small>{tab.label}</small>
-            </button>
-          ))}
-        </nav>
+    <>
+      <main className="desktop-blocker">
+        <section>
+          <span>iCashbox</span>
+          <h1>Пока доступна только мобильная версия</h1>
+          <p>Откройте этот адрес с телефона, чтобы посмотреть статистику кассы.</p>
+        </section>
       </main>
-    </AuthGate>
+      <AuthGate>
+        <main className="app-shell">
+          <header className="app-header">
+            <div>
+              <span>iCashbox · {month}</span>
+              <h1>Статистика кафе</h1>
+            </div>
+            <button onClick={loadReports}>{loading ? '...' : 'Обновить'}</button>
+          </header>
+
+          {content()}
+
+          <nav className="bottom-tabs">
+            {mainTabs.map((tab) => (
+              <button className={activeTab === tab.id ? 'active' : ''} key={tab.id} onClick={() => setActiveTab(tab.id)}>
+                <TabIcon id={tab.id} />
+                <small>{tab.label}</small>
+              </button>
+            ))}
+          </nav>
+        </main>
+      </AuthGate>
+    </>
   );
 }

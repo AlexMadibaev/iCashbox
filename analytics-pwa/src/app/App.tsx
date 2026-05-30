@@ -31,7 +31,7 @@ const tabs: Array<{ id: Tab; label: string }> = [
 
 export function App() {
   const [activeTab, setActiveTab] = useState<Tab>('live');
-  const [month, setMonth] = useState('2026-05');
+  const [month, setMonth] = useState(currentMonthKey());
   const [reports, setReports] = useState<DailyReport[]>(() => cachedReports());
   const [liveSnapshot, setLiveSnapshot] = useState<LiveSnapshot | null>(null);
   const [loading, setLoading] = useState(false);
@@ -117,8 +117,8 @@ export function App() {
     <main className="app-shell">
       <header className="app-header">
         <div>
-          <span>iCashbox</span>
-          <h1>Аналитика кафе</h1>
+          <span>iCashbox · {month}</span>
+          <h1>Статистика кафе</h1>
         </div>
         <button onClick={loadReports}>{loading ? '...' : 'Обновить'}</button>
       </header>

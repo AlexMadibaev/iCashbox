@@ -6,6 +6,10 @@ function maxValue(points: Point[]) {
   return Math.max(1, ...points.map((point) => point.value));
 }
 
+function shortDate(label: string) {
+  return label.includes('-') ? label.slice(8) : label;
+}
+
 export function SalesLineChart({ points }: { points: Point[] }) {
   const width = 360;
   const height = 180;
@@ -13,7 +17,7 @@ export function SalesLineChart({ points }: { points: Point[] }) {
   const path = points
     .map((point, index) => {
       const x = points.length <= 1 ? 0 : (index / (points.length - 1)) * width;
-      const y = height - (point.value / max) * (height - 24) - 12;
+      const y = height - (point.value / max) * (height - 28) - 14;
       return `${index === 0 ? 'M' : 'L'} ${x.toFixed(1)} ${y.toFixed(1)}`;
     })
     .join(' ');
@@ -21,17 +25,27 @@ export function SalesLineChart({ points }: { points: Point[] }) {
   return (
     <div className="chart-card">
       <div className="chart-head">
-        <strong>Выручка по дням</strong>
-        <span>{formatMoney(max)}</span>
+        <div>
+          <strong>Выручка по дням</strong>
+          <span>{points.length ? `${points.length} дней` : 'нет данных'}</span>
+        </div>
+        <em>{formatMoney(max)}</em>
       </div>
       <svg viewBox={`0 0 ${width} ${height}`} role="img">
+        <line x1="0" x2={width} y1="42" y2="42" />
+        <line x1="0" x2={width} y1="96" y2="96" />
+        <line x1="0" x2={width} y1="150" y2="150" />
         <path d={path} fill="none" stroke="#17201b" strokeLinecap="round" strokeWidth="4" />
         {points.map((point, index) => {
           const x = points.length <= 1 ? 0 : (index / (points.length - 1)) * width;
-          const y = height - (point.value / max) * (height - 24) - 12;
-          return <circle cx={x} cy={y} fill="#b7f071" key={point.label} r="4" />;
+          const y = height - (point.value / max) * (height - 28) - 14;
+          return <circle cx={x} cy={y} fill="#34a853" key={point.label} r="4" />;
         })}
       </svg>
+      <div className="chart-scale">
+        <span>{points[0] ? shortDate(points[0].label) : '-'}</span>
+        <span>{points[points.length - 1] ? shortDate(points[points.length - 1].label) : '-'}</span>
+      </div>
     </div>
   );
 }
@@ -41,7 +55,10 @@ export function BarChart({ title, points }: { title: string; points: Point[] }) 
   return (
     <section className="chart-card">
       <div className="chart-head">
-        <strong>{title}</strong>
+        <div>
+          <strong>{title}</strong>
+          <span>{points.length} строк</span>
+        </div>
       </div>
       <div className="bar-list">
         {points.map((point) => (
@@ -63,13 +80,17 @@ export function PaymentPieChart({ payments }: { payments: Record<string, number>
   return (
     <section className="chart-card pie-card">
       <div className="chart-head">
-        <strong>Способы оплаты</strong>
+        <div>
+          <strong>Оплаты</strong>
+          <span>{formatMoney(total)}</span>
+        </div>
       </div>
       <div className="pie-layout">
         <svg viewBox="0 0 42 42">
+          <circle cx="21" cy="21" fill="transparent" r="15.9" stroke="#edf1ed" strokeWidth="7" />
           {entries.map(([method, value], index) => {
             const dash = (value / total) * 100;
-            const stroke = ['#17201b', '#7fbf2f', '#91a6ff', '#ffb86b', '#d474a2'][index % 5];
+            const stroke = ['#17201b', '#34a853', '#3b82f6', '#f59e0b', '#d9467a'][index % 5];
             const circle = (
               <circle
                 cx="21"

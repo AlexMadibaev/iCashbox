@@ -1,22 +1,33 @@
 import type { LiveSnapshot } from '../types/live';
 import { formatMoney } from '../utils/money';
 import { StatCard } from '../components/StatCard';
+import { PageHeader } from '../components/PageHeader';
 
 export function LivePage({ snapshot }: { snapshot: LiveSnapshot | null }) {
   if (!snapshot) {
-    return <div className="state">Live-данных пока нет</div>;
+    return (
+      <div className="page">
+        <PageHeader kicker="Live" title="Касса онлайн" subtitle="Данные появятся после первой отправки из portable." />
+        <div className="state">Live-данных пока нет</div>
+      </div>
+    );
   }
 
   return (
     <div className="page">
+      <PageHeader
+        kicker="Live"
+        title="Касса сейчас"
+        subtitle={`Обновлено ${new Date(snapshot.updatedAt).toLocaleTimeString('ru-RU')}`}
+      />
       <section className="hero-panel">
-        <span>{new Date(snapshot.updatedAt).toLocaleTimeString('ru-RU')}</span>
+        <span>{snapshot.shift.open ? 'Смена открыта' : 'Смена закрыта'}</span>
         <h1>{formatMoney(snapshot.summary.revenue)}</h1>
-        <p>{snapshot.shift.label} · {snapshot.shift.open ? 'открыта' : 'закрыта'} · {snapshot.shift.cashier || 'кассир'}</p>
+        <p>{snapshot.shift.label} · {snapshot.shift.cashier || 'кассир не указан'}</p>
       </section>
       <div className="stat-grid">
-        <StatCard label="Чеки" value={String(snapshot.summary.checks)} />
-        <StatCard label="Средний чек" value={formatMoney(snapshot.summary.average)} />
+        <StatCard accent="blue" label="Чеки" value={String(snapshot.summary.checks)} />
+        <StatCard accent="amber" label="Средний чек" value={formatMoney(snapshot.summary.average)} />
       </div>
       <section className="panel">
         <div className="section-title"><h2>Оплаты</h2></div>
@@ -34,7 +45,7 @@ export function LivePage({ snapshot }: { snapshot: LiveSnapshot | null }) {
         <div className="category-list">
           {snapshot.recentOrders.map((order) => (
             <article key={order.id}>
-              <div><strong>#{order.id}</strong><span>{order.items.join(', ')}</span></div>
+              <div><strong>#{order.id}</strong><span>{order.items.join(', ') || order.status}</span></div>
               <em>{formatMoney(order.total)}</em>
             </article>
           ))}

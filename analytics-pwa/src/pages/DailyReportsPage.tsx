@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { DailyReportCard } from '../components/Lists';
+import { PageHeader } from '../components/PageHeader';
 import type { DailyReport } from '../types/report';
 import { humanDate } from '../utils/date';
 import { formatMoney } from '../utils/money';
@@ -14,6 +15,11 @@ export function DailyReportsPage({ reports }: { reports: DailyReport[] }) {
 
   return (
     <div className="page">
+      <PageHeader
+        kicker="Дни"
+        title="Отчёты по дням"
+        subtitle="Нажмите на день, чтобы посмотреть оплаты, товары и категории."
+      />
       <div className="section-title">
         <h2>Дни месяца</h2>
         <span>{reports.length} отчётов</span>

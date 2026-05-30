@@ -14,7 +14,7 @@ export function SyncStatus({ lastSync }: { lastSync: string }) {
   return (
     <div className="sync-status">
       <span>GitHub/API</span>
-      <strong>{lastSync ? `Синхронизировано ${new Date(lastSync).toLocaleString('ru-RU')}` : 'Mock-режим'}</strong>
+      <strong>{lastSync ? `Синхронизировано ${new Date(lastSync).toLocaleString('ru-RU')}` : 'Данных ещё нет'}</strong>
     </div>
   );
 }

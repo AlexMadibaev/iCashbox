@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react';
-import { DailyReportCard } from '../components/Lists';
 import { PageHeader } from '../components/PageHeader';
 import type { DailyReport } from '../types/report';
 import { humanDate } from '../utils/date';
@@ -11,6 +10,7 @@ export function DailyReportsPage({ reports }: { reports: DailyReport[] }) {
     [reports]
   );
   const [selectedReportId, setSelectedReportId] = useState(sortedReports[0]?.report_id || '');
+  const [daysOpen, setDaysOpen] = useState(false);
   const selectedReport = sortedReports.find((report) => report.report_id === selectedReportId) || sortedReports[0];
 
   return (
@@ -24,16 +24,36 @@ export function DailyReportsPage({ reports }: { reports: DailyReport[] }) {
         <h2>Дни месяца</h2>
         <span>{reports.length} отчётов</span>
       </div>
+      {selectedReport && (
+        <section className="panel day-picker">
+          <button className="day-picker-button" type="button" onClick={() => setDaysOpen((open) => !open)}>
+            <div>
+              <span>Выбранный день</span>
+              <strong>{humanDate(selectedReport.date)}</strong>
+            </div>
+            <em>{daysOpen ? 'Скрыть' : 'Выбрать'}</em>
+          </button>
+          {daysOpen && (
+            <div className="day-picker-list">
+              {sortedReports.map((report) => (
+                <button
+                  className={report.report_id === selectedReport.report_id ? 'active' : ''}
+                  key={report.report_id}
+                  type="button"
+                  onClick={() => {
+                    setSelectedReportId(report.report_id);
+                    setDaysOpen(false);
+                  }}
+                >
+                  <span>{humanDate(report.date)}</span>
+                  <strong>{formatMoney(report.totals.net_sales)}</strong>
+                </button>
+              ))}
+            </div>
+          )}
+        </section>
+      )}
       {selectedReport && <DailyReportDetail report={selectedReport} />}
-      <div className="daily-list day-list">
-        {sortedReports.map((report) => (
-          <DailyReportCard
-            key={report.report_id}
-            report={report}
-            onOpen={(openedReport) => setSelectedReportId(openedReport.report_id)}
-          />
-        ))}
-      </div>
     </div>
   );
 }

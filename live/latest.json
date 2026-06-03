@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.083333333333336,
-    "checks": 24,
+    "average": 35.44,
+    "checks": 25,
     "expenseTotal": 205,
-    "net": 661,
-    "revenue": 866
+    "net": 681,
+    "revenue": 886
   },
   "data": {
-    "actions": 1285,
+    "actions": 1287,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 466,
+    "orders": 467,
     "products": 39,
     "shifts": 12
   },
   "activity": [
     {
+      "id": 1780461858164,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:44",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780461858164,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:44",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780461027217,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:46",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780456516133,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:15",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780456516133,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:15",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 466,
+    "current": 467,
     "old": [
       {
         "createdAt": "2026-06-02T10:16:50.464Z",
@@ -14153,6 +14153,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-03T04:45:59.077Z",
+        "id": 1512,
+        "items": [
+          "Манго Маракуя mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-03",
+        "shiftLabel": "Смена 03.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-03T04:44:18.108Z",
         "id": 1511,
@@ -28902,14 +28931,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 24,
-        "expectedOrders": 24,
+        "databaseOrders": 25,
+        "expectedOrders": 25,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-03",
         "label": "Смена 03.06",
         "missingOrders": 0,
-        "revenue": 866,
+        "revenue": 886,
         "status": "ok"
       },
       {
@@ -29069,12 +29098,12 @@
         "status": "ok"
       }
     ],
-    "total": 466
+    "total": 467
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 640
+      "total": 660
     },
     {
       "method": "Карта",
@@ -29094,6 +29123,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1512,
+      "items": [
+        "Манго Маракуя mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 1511,
       "items": [
@@ -29151,15 +29188,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1504,
-      "items": [
-        "Манго Маракуя mini x1",
-        "Клубничный жасмин mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -29295,6 +29323,11 @@
   },
   "topProducts": [
     {
+      "name": "Манго Маракуя mini",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "Мороженое классическое",
       "qty": 5,
       "total": 100
@@ -29315,11 +29348,6 @@
       "total": 80
     },
     {
-      "name": "Манго Маракуя mini",
-      "qty": 4,
-      "total": 80
-    },
-    {
       "name": "Мороженое манго",
       "qty": 4,
       "total": 80
@@ -29336,5 +29364,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-03T11:46:15.633Z"
+  "updatedAt": "2026-06-03T11:47:55.609Z"
 }

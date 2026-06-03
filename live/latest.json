@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.125,
-    "checks": 8,
+    "average": 35,
+    "checks": 9,
     "expenseTotal": 205,
-    "net": 60,
-    "revenue": 265
+    "net": 110,
+    "revenue": 315
   },
   "data": {
-    "actions": 1253,
+    "actions": 1255,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 450,
+    "orders": 451,
     "products": 39,
     "shifts": 12
   },
   "activity": [
     {
+      "id": 1780445711492,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:15",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780445711492,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:15",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780445166663,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "10:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780440499443,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:48",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780440499443,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:48",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 450,
+    "current": 451,
     "old": [
       {
         "createdAt": "2026-06-02T10:16:50.464Z",
@@ -14153,6 +14153,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-03T00:17:41.190Z",
+        "id": 1496,
+        "items": [
+          "Мороженое манго x1",
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 50,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-03",
+        "shiftLabel": "Смена 03.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-03T00:15:11.452Z",
         "id": 1495,
@@ -28375,14 +28413,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 8,
-        "expectedOrders": 8,
+        "databaseOrders": 9,
+        "expectedOrders": 9,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-03",
         "label": "Смена 03.06",
         "missingOrders": 0,
-        "revenue": 265,
+        "revenue": 315,
         "status": "ok"
       },
       {
@@ -28542,7 +28580,7 @@
         "status": "ok"
       }
     ],
-    "total": 450
+    "total": 451
   },
   "payments": [
     {
@@ -28555,7 +28593,7 @@
     },
     {
       "method": "Alif",
-      "total": 40
+      "total": 90
     },
     {
       "method": "Dushanbe City",
@@ -28567,6 +28605,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1496,
+      "items": [
+        "Мороженое манго x1",
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 1495,
       "items": [
@@ -28624,14 +28671,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 1488,
-      "items": [
-        "Черника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -28787,6 +28826,11 @@
       "total": 40
     },
     {
+      "name": "Айс Латте",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Черника big",
       "qty": 1,
       "total": 30
@@ -28797,11 +28841,11 @@
       "total": 25
     },
     {
-      "name": "Жасмин лимон mini",
+      "name": "Мороженое манго",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-03T07:17:09.095Z"
+  "updatedAt": "2026-06-03T07:19:37.867Z"
 }

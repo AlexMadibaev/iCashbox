@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.526315789473685,
-    "checks": 19,
+    "average": 35.05,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 451,
-    "revenue": 656
+    "net": 496,
+    "revenue": 701
   },
   "data": {
-    "actions": 1275,
+    "actions": 1277,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 461,
+    "orders": 462,
     "products": 39,
     "shifts": 12
   },
   "activity": [
     {
+      "id": 1780458379488,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:46",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780458379488,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:46",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780456516133,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780447973576,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:52",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780447973576,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:52",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 461,
+    "current": 462,
     "old": [
       {
         "createdAt": "2026-06-02T10:16:50.464Z",
@@ -14153,6 +14153,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-03T03:49:38.309Z",
+        "id": 1507,
+        "items": [
+          "МангоБанан mini x1",
+          "Манго Маракуя mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-03",
+        "shiftLabel": "Смена 03.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-06-03T03:46:19.432Z",
         "id": 1506,
@@ -28739,14 +28777,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-03",
         "label": "Смена 03.06",
         "missingOrders": 0,
-        "revenue": 656,
+        "revenue": 701,
         "status": "ok"
       },
       {
@@ -28906,12 +28944,12 @@
         "status": "ok"
       }
     ],
-    "total": 461
+    "total": 462
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 460
+      "total": 505
     },
     {
       "method": "Карта",
@@ -28931,6 +28969,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1507,
+      "items": [
+        "МангоБанан mini x1",
+        "Манго Маракуя mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 1506,
       "items": [
@@ -28986,14 +29033,6 @@
       "id": 1500,
       "items": [
         "Мороженое рожок x2"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 1499,
-      "items": [
-        "Мороженое классическое x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -29142,6 +29181,11 @@
       "total": 90
     },
     {
+      "name": "Манго Маракуя mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Мороженое манго",
       "qty": 4,
       "total": 80
@@ -29150,11 +29194,6 @@
       "name": "Клубничный жасмин mini",
       "qty": 4,
       "total": 80
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 3,
-      "total": 60
     },
     {
       "name": "Babl tea mini",
@@ -29173,5 +29212,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-03T10:48:16.812Z"
+  "updatedAt": "2026-06-03T10:51:34.856Z"
 }

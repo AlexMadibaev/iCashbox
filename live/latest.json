@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.2,
-    "checks": 30,
+    "average": 35.67741935483871,
+    "checks": 31,
     "expenseTotal": 205,
-    "net": 851,
-    "revenue": 1056
+    "net": 901,
+    "revenue": 1106
   },
   "data": {
-    "actions": 1297,
+    "actions": 1299,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 472,
+    "orders": 473,
     "products": 39,
     "shifts": 12
   },
   "activity": [
     {
+      "id": 1780464718652,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:31",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780464718652,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:31",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780463249273,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:45",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780461858164,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:44",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780461858164,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:44",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 472,
+    "current": 473,
     "old": [
       {
         "createdAt": "2026-06-02T10:16:50.464Z",
@@ -14153,6 +14153,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-03T05:43:56.242Z",
+        "id": 1518,
+        "items": [
+          "ПиноКолада mini x1",
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 50,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-03",
+        "shiftLabel": "Смена 03.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-03T05:31:58.585Z",
         "id": 1517,
@@ -29085,14 +29123,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 30,
-        "expectedOrders": 30,
+        "databaseOrders": 31,
+        "expectedOrders": 31,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-03",
         "label": "Смена 03.06",
         "missingOrders": 0,
-        "revenue": 1056,
+        "revenue": 1106,
         "status": "ok"
       },
       {
@@ -29252,7 +29290,7 @@
         "status": "ok"
       }
     ],
-    "total": 472
+    "total": 473
   },
   "payments": [
     {
@@ -29265,7 +29303,7 @@
     },
     {
       "method": "Alif",
-      "total": 196
+      "total": 246
     },
     {
       "method": "Dushanbe City",
@@ -29277,6 +29315,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1518,
+      "items": [
+        "ПиноКолада mini x1",
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 1517,
       "items": [
@@ -29333,15 +29380,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1510,
-      "items": [
-        "Matcha mini x1",
-        "Капучино x1"
-      ],
-      "status": "Оплачен",
-      "total": 55
     }
   ],
   "shifts": {
@@ -29518,5 +29556,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-03T12:33:56.306Z"
+  "updatedAt": "2026-06-03T12:45:53.897Z"
 }

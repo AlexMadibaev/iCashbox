@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.44,
-    "checks": 25,
+    "average": 36.38461538461539,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 681,
-    "revenue": 886
+    "net": 741,
+    "revenue": 946
   },
   "data": {
-    "actions": 1287,
+    "actions": 1289,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 467,
+    "orders": 468,
     "products": 39,
     "shifts": 12
   },
   "activity": [
     {
+      "id": 1780461959150,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:45",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780461959150,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:45",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780461858164,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:49",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780458379488,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:46",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780458379488,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:46",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 467,
+    "current": 468,
     "old": [
       {
         "createdAt": "2026-06-02T10:16:50.464Z",
@@ -14153,6 +14153,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-03T04:49:55.563Z",
+        "id": 1513,
+        "items": [
+          "Черника big x1",
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-03",
+        "shiftLabel": "Смена 03.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-03T04:45:59.077Z",
         "id": 1512,
@@ -28931,14 +28969,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-03",
         "label": "Смена 03.06",
         "missingOrders": 0,
-        "revenue": 886,
+        "revenue": 946,
         "status": "ok"
       },
       {
@@ -29098,12 +29136,12 @@
         "status": "ok"
       }
     ],
-    "total": 467
+    "total": 468
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 660
+      "total": 720
     },
     {
       "method": "Карта",
@@ -29123,6 +29161,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1513,
+      "items": [
+        "Черника big x1",
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 1512,
       "items": [
@@ -29180,14 +29227,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 1505,
-      "items": [
-        "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -29333,6 +29372,11 @@
       "total": 100
     },
     {
+      "name": "Клубничный big",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Matcha mini",
       "qty": 3,
       "total": 90
@@ -29356,13 +29400,8 @@
       "name": "Клубничный жасмин mini",
       "qty": 4,
       "total": 80
-    },
-    {
-      "name": "Клубничный big",
-      "qty": 2,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-03T11:47:55.609Z"
+  "updatedAt": "2026-06-03T11:51:52.018Z"
 }

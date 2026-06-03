@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.54545454545455,
-    "checks": 11,
+    "average": 33.333333333333336,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 175,
-    "revenue": 380
+    "net": 195,
+    "revenue": 400
   },
   "data": {
-    "actions": 1259,
+    "actions": 1261,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 453,
+    "orders": 454,
     "products": 39,
     "shifts": 12
   },
   "activity": [
     {
+      "id": 1780446229535,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:23",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780446229535,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:23",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780445938157,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:46",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780442014004,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:13",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780442014004,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:13",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 453,
+    "current": 454,
     "old": [
       {
         "createdAt": "2026-06-02T10:16:50.464Z",
@@ -14153,6 +14153,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-03T00:52:41.373Z",
+        "id": 1499,
+        "items": [
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 20,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-03",
+        "shiftLabel": "Смена 03.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-03T00:23:49.486Z",
         "id": 1498,
@@ -28480,14 +28509,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-03",
         "label": "Смена 03.06",
         "missingOrders": 0,
-        "revenue": 380,
+        "revenue": 400,
         "status": "ok"
       },
       {
@@ -28647,7 +28676,7 @@
         "status": "ok"
       }
     ],
-    "total": 453
+    "total": 454
   },
   "payments": [
     {
@@ -28660,7 +28689,7 @@
     },
     {
       "method": "Alif",
-      "total": 110
+      "total": 130
     },
     {
       "method": "Dushanbe City",
@@ -28672,6 +28701,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1499,
+      "items": [
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 1498,
       "items": [
@@ -28729,16 +28766,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 1491,
-      "items": [
-        "Манго Маракуя mini x2",
-        "Клубничный жасмин mini x1",
-        "Жасмин лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 80
     }
   ],
   "shifts": {
@@ -28884,6 +28911,11 @@
       "total": 60
     },
     {
+      "name": "Мороженое классическое",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Манго Маракуя mini",
       "qty": 2,
       "total": 40
@@ -28907,13 +28939,8 @@
       "name": "Клубничный mini",
       "qty": 1,
       "total": 25
-    },
-    {
-      "name": "Черника mini",
-      "qty": 1,
-      "total": 25
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-03T07:25:46.178Z"
+  "updatedAt": "2026-06-03T07:54:38.899Z"
 }

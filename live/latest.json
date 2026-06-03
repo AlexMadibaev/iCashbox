@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 35.630434782608695,
-    "checks": 46,
+    "average": 36.04255319148936,
+    "checks": 47,
     "expenseTotal": 205,
-    "net": 1434,
-    "revenue": 1639
+    "net": 1489,
+    "revenue": 1694
   },
   "data": {
-    "actions": 1329,
+    "actions": 1331,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 488,
+    "orders": 489,
     "products": 39,
     "shifts": 12
   },
   "activity": [
+    {
+      "id": 1780473990130,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780473990130,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:06",
+      "type": "Создание заказа"
+    },
     {
       "id": 1780473749739,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780470028690,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780470028690,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:00",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 488,
+    "current": 489,
     "old": [
       {
         "createdAt": "2026-06-02T10:16:50.464Z",
@@ -14153,6 +14153,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-03T08:50:32.847Z",
+        "id": 1534,
+        "items": [
+          "Айс Латте x1",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 55,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-03",
+        "shiftLabel": "Смена 03.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 55
+      },
       {
         "createdAt": "2026-06-03T08:06:30.085Z",
         "id": 1533,
@@ -29603,14 +29641,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 46,
-        "expectedOrders": 46,
+        "databaseOrders": 47,
+        "expectedOrders": 47,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-03",
         "label": "Смена 03.06",
         "missingOrders": 0,
-        "revenue": 1639,
+        "revenue": 1694,
         "status": "ok"
       },
       {
@@ -29770,7 +29808,7 @@
         "status": "ok"
       }
     ],
-    "total": 488
+    "total": 489
   },
   "payments": [
     {
@@ -29787,7 +29825,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 198
+      "total": 253
     },
     {
       "method": "Семья",
@@ -29795,6 +29833,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1534,
+      "items": [
+        "Айс Латте x1",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 55
+    },
     {
       "id": 1533,
       "items": [
@@ -29851,14 +29898,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 1526,
-      "items": [
-        "Виноградный тропический mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -30024,16 +30063,16 @@
       "total": 110
     },
     {
-      "name": "Черника big",
-      "qty": 3,
-      "total": 90
+      "name": "Клубничный mini",
+      "qty": 4,
+      "total": 100
     },
     {
-      "name": "Matcha mini",
+      "name": "Айс Латте",
       "qty": 3,
       "total": 90
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-03T15:08:26.578Z"
+  "updatedAt": "2026-06-03T15:52:30.550Z"
 }

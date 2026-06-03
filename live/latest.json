@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.5,
-    "checks": 10,
+    "average": 34.54545454545455,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 130,
-    "revenue": 335
+    "net": 175,
+    "revenue": 380
   },
   "data": {
-    "actions": 1257,
+    "actions": 1259,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 452,
+    "orders": 453,
     "products": 39,
     "shifts": 12
   },
   "activity": [
     {
+      "id": 1780445938157,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780445938157,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:18",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780445861262,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:13",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780441976949,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:12",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780441976949,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:12",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 452,
+    "current": 453,
     "old": [
       {
         "createdAt": "2026-06-02T10:16:50.464Z",
@@ -14153,6 +14153,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-03T00:23:49.486Z",
+        "id": 1498,
+        "items": [
+          "Мороженое рожок x2",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 2,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 45,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-03",
+        "shiftLabel": "Смена 03.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-06-03T00:18:58.079Z",
         "id": 1497,
@@ -28442,14 +28480,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-03",
         "label": "Смена 03.06",
         "missingOrders": 0,
-        "revenue": 335,
+        "revenue": 380,
         "status": "ok"
       },
       {
@@ -28609,12 +28647,12 @@
         "status": "ok"
       }
     ],
-    "total": 452
+    "total": 453
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 225
+      "total": 270
     },
     {
       "method": "Карта",
@@ -28634,6 +28672,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1498,
+      "items": [
+        "Мороженое рожок x2",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 1497,
       "items": [
@@ -28692,14 +28739,6 @@
       ],
       "status": "Оплачен",
       "total": 80
-    },
-    {
-      "id": 1490,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -28835,14 +28874,14 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое рожок",
+      "qty": 7,
+      "total": 70
+    },
+    {
       "name": "Клубничный жасмин mini",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 5,
-      "total": 50
     },
     {
       "name": "Манго Маракуя mini",
@@ -28865,16 +28904,16 @@
       "total": 30
     },
     {
-      "name": "Черника mini",
+      "name": "Клубничный mini",
       "qty": 1,
       "total": 25
     },
     {
-      "name": "Мороженое классическое",
+      "name": "Черника mini",
       "qty": 1,
-      "total": 20
+      "total": 25
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-03T07:20:54.643Z"
+  "updatedAt": "2026-06-03T07:25:46.178Z"
 }

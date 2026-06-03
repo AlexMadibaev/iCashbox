@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.26923076923077,
-    "checks": 52,
+    "average": 40.35849056603774,
+    "checks": 53,
     "expenseTotal": 205,
-    "net": 1889,
-    "revenue": 2094
+    "net": 1934,
+    "revenue": 2139
   },
   "data": {
-    "actions": 1343,
+    "actions": 1345,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 494,
+    "orders": 495,
     "products": 39,
     "shifts": 12
   },
   "activity": [
     {
+      "id": 1780482300975,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:25",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780482300975,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:25",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780481915153,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780476632889,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:50",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780476632889,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:50",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 494,
+    "current": 495,
     "old": [
       {
         "createdAt": "2026-06-02T10:16:50.464Z",
@@ -14153,6 +14153,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-03T10:25:00.921Z",
+        "id": 1540,
+        "items": [
+          "МангоБанан mini x1",
+          "Жасмин лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-жасмин-tea-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 45,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-03",
+        "shiftLabel": "Смена 03.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-06-03T10:18:35.093Z",
         "id": 1539,
@@ -29822,14 +29860,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 52,
-        "expectedOrders": 52,
+        "databaseOrders": 53,
+        "expectedOrders": 53,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-03",
         "label": "Смена 03.06",
         "missingOrders": 0,
-        "revenue": 2094,
+        "revenue": 2139,
         "status": "ok"
       },
       {
@@ -29989,12 +30027,12 @@
         "status": "ok"
       }
     ],
-    "total": 494
+    "total": 495
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1460
+      "total": 1505
     },
     {
       "method": "Карта",
@@ -30014,6 +30052,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1540,
+      "items": [
+        "МангоБанан mini x1",
+        "Жасмин лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 1539,
       "items": [
@@ -30074,15 +30121,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1532,
-      "items": [
-        "МангоБанан big x1",
-        "МангоБанан mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 55
     }
   ],
   "shifts": {
@@ -30259,5 +30297,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-03T17:20:33.040Z"
+  "updatedAt": "2026-06-03T17:26:58.733Z"
 }

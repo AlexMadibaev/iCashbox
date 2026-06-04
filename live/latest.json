@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.73529411764706,
-    "checks": 34,
+    "average": 41,
+    "checks": 35,
     "expenseTotal": 205,
-    "net": 1180,
-    "revenue": 1385
+    "net": 1230,
+    "revenue": 1435
   },
   "data": {
-    "actions": 1414,
+    "actions": 1416,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 530,
+    "orders": 531,
     "products": 39,
     "shifts": 13
   },
   "activity": [
     {
+      "id": 1780553666759,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:14",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780553666759,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:14",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780553565882,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780552555681,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:55",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780552555681,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:55",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 530,
+    "current": 531,
     "old": [
       {
         "createdAt": "2026-06-03T10:36:28.148Z",
@@ -15917,6 +15917,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-04T06:21:47.344Z",
+        "id": 1576,
+        "items": [
+          "Манго Маракуя mini x1",
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 50,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-04",
+        "shiftLabel": "Смена 04.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-04T06:14:26.715Z",
         "id": 1575,
@@ -32747,14 +32785,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-04",
         "label": "Смена 04.06",
         "missingOrders": 0,
-        "revenue": 1385,
+        "revenue": 1435,
         "status": "ok"
       },
       {
@@ -32927,7 +32965,7 @@
         "status": "ok"
       }
     ],
-    "total": 530
+    "total": 531
   },
   "payments": [
     {
@@ -32944,7 +32982,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 90
+      "total": 140
     },
     {
       "method": "Семья",
@@ -32952,6 +32990,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1576,
+      "items": [
+        "Манго Маракуя mini x1",
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 1575,
       "items": [
@@ -33012,15 +33059,6 @@
       ],
       "status": "Оплачен",
       "total": 138
-    },
-    {
-      "id": 1568,
-      "items": [
-        "Капучино x1",
-        "Жасмин лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 45
     }
   ],
   "shifts": {
@@ -33171,6 +33209,11 @@
       "total": 120
     },
     {
+      "name": "Айс Латте",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 8,
       "total": 80
@@ -33186,16 +33229,11 @@
       "total": 80
     },
     {
-      "name": "Айс Латте",
-      "qty": 2,
-      "total": 60
-    },
-    {
       "name": "Babl tea mini",
       "qty": 3,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-04T13:16:25.015Z"
+  "updatedAt": "2026-06-04T13:23:47.248Z"
 }

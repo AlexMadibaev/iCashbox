@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.583333333333336,
-    "checks": 12,
+    "average": 38.84615384615385,
+    "checks": 13,
     "expenseTotal": 205,
-    "net": 270,
-    "revenue": 475
+    "net": 300,
+    "revenue": 505
   },
   "data": {
-    "actions": 1370,
+    "actions": 1372,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 508,
+    "orders": 509,
     "products": 39,
     "shifts": 13
   },
   "activity": [
     {
+      "id": 1780541257831,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780541257831,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:47",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780541025141,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:05",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780528998213,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780528998213,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:23",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 508,
+    "current": 509,
     "old": [
       {
         "createdAt": "2026-06-03T10:36:28.148Z",
@@ -15917,6 +15917,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-04T02:53:25.274Z",
+        "id": 1554,
+        "items": [
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 30,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-04",
+        "shiftLabel": "Смена 04.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-04T02:47:37.769Z",
         "id": 1553,
@@ -32028,14 +32057,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 12,
-        "expectedOrders": 12,
+        "databaseOrders": 13,
+        "expectedOrders": 13,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-04",
         "label": "Смена 04.06",
         "missingOrders": 0,
-        "revenue": 475,
+        "revenue": 505,
         "status": "ok"
       },
       {
@@ -32208,7 +32237,7 @@
         "status": "ok"
       }
     ],
-    "total": 508
+    "total": 509
   },
   "payments": [
     {
@@ -32221,7 +32250,7 @@
     },
     {
       "method": "Alif",
-      "total": 178
+      "total": 208
     },
     {
       "method": "Dushanbe City",
@@ -32233,6 +32262,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1554,
+      "items": [
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 1553,
       "items": [
@@ -32290,14 +32327,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 1546,
-      "items": [
-        "Мороженое клубничное x3"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -32443,6 +32472,11 @@
       "total": 75
     },
     {
+      "name": "Matcha mini",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 2,
       "total": 52
@@ -32451,11 +32485,6 @@
       "name": "Matcha big",
       "qty": 1,
       "total": 40
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 1,
-      "total": 30
     },
     {
       "name": "Айс Латте",
@@ -32474,5 +32503,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-04T09:49:36.296Z"
+  "updatedAt": "2026-06-04T09:55:24.213Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.083333333333336,
-    "checks": 48,
+    "average": 41.36734693877551,
+    "checks": 49,
     "expenseTotal": 205,
-    "net": 1767,
-    "revenue": 1972
+    "net": 1822,
+    "revenue": 2027
   },
   "data": {
-    "actions": 1442,
+    "actions": 1444,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 544,
+    "orders": 545,
     "products": 39,
     "shifts": 13
   },
   "activity": [
     {
+      "id": 1780565131958,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:25",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780565131958,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:25",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780563105215,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780557464954,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:17",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780557464954,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:17",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 544,
+    "current": 545,
     "old": [
       {
         "createdAt": "2026-06-03T10:36:28.148Z",
@@ -15917,6 +15917,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-04T09:31:22.828Z",
+        "id": 1590,
+        "items": [
+          "Matcha mini x1",
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-04",
+        "shiftLabel": "Смена 04.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 55
+      },
       {
         "createdAt": "2026-06-04T09:25:31.888Z",
         "id": 1589,
@@ -33171,14 +33209,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 48,
-        "expectedOrders": 48,
+        "databaseOrders": 49,
+        "expectedOrders": 49,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-04",
         "label": "Смена 04.06",
         "missingOrders": 0,
-        "revenue": 1972,
+        "revenue": 2027,
         "status": "ok"
       },
       {
@@ -33351,12 +33389,12 @@
         "status": "ok"
       }
     ],
-    "total": 544
+    "total": 545
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1304
+      "total": 1359
     },
     {
       "method": "Карта",
@@ -33376,6 +33414,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1590,
+      "items": [
+        "Matcha mini x1",
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 55
+    },
     {
       "id": 1589,
       "items": [
@@ -33432,14 +33479,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1582,
-      "items": [
-        "Мороженое клубничное x3"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -33585,14 +33624,14 @@
       "total": 208
     },
     {
+      "name": "Matcha mini",
+      "qty": 6,
+      "total": 180
+    },
+    {
       "name": "Клубничный mini",
       "qty": 7,
       "total": 175
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 5,
-      "total": 150
     },
     {
       "name": "Мороженое рожок",
@@ -33616,5 +33655,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-04T16:27:31.365Z"
+  "updatedAt": "2026-06-04T16:33:22.100Z"
 }

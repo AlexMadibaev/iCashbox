@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40,
-    "checks": 18,
+    "average": 38.94736842105263,
+    "checks": 19,
     "expenseTotal": 205,
-    "net": 515,
-    "revenue": 720
+    "net": 535,
+    "revenue": 740
   },
   "data": {
-    "actions": 1382,
+    "actions": 1384,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 514,
+    "orders": 515,
     "products": 39,
     "shifts": 13
   },
   "activity": [
     {
+      "id": 1780545805663,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:03",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780545805663,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:03",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780545032046,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:53",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780541257831,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:47",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780541257831,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:47",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 514,
+    "current": 515,
     "old": [
       {
         "createdAt": "2026-06-03T10:36:28.148Z",
@@ -15917,6 +15917,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-04T04:34:37.893Z",
+        "id": 1560,
+        "items": [
+          "Мороженое рожок x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 2,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-04",
+        "shiftLabel": "Смена 04.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-04T04:03:25.596Z",
         "id": 1559,
@@ -32211,14 +32240,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 18,
-        "expectedOrders": 18,
+        "databaseOrders": 19,
+        "expectedOrders": 19,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-04",
         "label": "Смена 04.06",
         "missingOrders": 0,
-        "revenue": 720,
+        "revenue": 740,
         "status": "ok"
       },
       {
@@ -32391,12 +32420,12 @@
         "status": "ok"
       }
     ],
-    "total": 514
+    "total": 515
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 422
+      "total": 442
     },
     {
       "method": "Карта",
@@ -32416,6 +32445,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1560,
+      "items": [
+        "Мороженое рожок x2"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 1559,
       "items": [
@@ -32472,14 +32509,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 1552,
-      "items": [
-        "Манго Маракуя big x2"
-      ],
-      "status": "Оплачен",
-      "total": 52
     }
   ],
   "shifts": {
@@ -32640,6 +32669,11 @@
       "total": 52
     },
     {
+      "name": "Мороженое рожок",
+      "qty": 4,
+      "total": 40
+    },
+    {
       "name": "Babl tea mini",
       "qty": 2,
       "total": 40
@@ -32648,13 +32682,8 @@
       "name": "Мороженое манго",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Matcha big",
-      "qty": 1,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-04T11:05:25.222Z"
+  "updatedAt": "2026-06-04T11:36:37.873Z"
 }

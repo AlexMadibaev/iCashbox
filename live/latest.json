@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32,
-    "checks": 39,
+    "average": 32.95,
+    "checks": 40,
     "expenseTotal": 205,
-    "net": 1043,
-    "revenue": 1248
+    "net": 1113,
+    "revenue": 1318
   },
   "data": {
-    "actions": 1529,
+    "actions": 1531,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 587,
+    "orders": 588,
     "products": 39,
     "shifts": 14
   },
   "activity": [
     {
+      "id": 1780649974507,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780649974507,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:59",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780649360310,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780644781988,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:33",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780644781988,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:33",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 587,
+    "current": 588,
     "old": [
       {
         "createdAt": "2026-06-04T10:46:44.492Z",
@@ -17560,6 +17560,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-05T09:04:09.683Z",
+        "id": 1633,
+        "items": [
+          "Айс Латте x1",
+          "Мороженое классическое x1",
+          "Виноградный тропический mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-05",
+        "shiftLabel": "Смена 05.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-06-05T08:59:34.459Z",
         "id": 1632,
@@ -36178,14 +36225,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 39,
-        "expectedOrders": 39,
+        "databaseOrders": 40,
+        "expectedOrders": 40,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-05",
         "label": "Смена 05.06",
         "missingOrders": 0,
-        "revenue": 1248,
+        "revenue": 1318,
         "status": "ok"
       },
       {
@@ -36371,12 +36418,12 @@
         "status": "ok"
       }
     ],
-    "total": 587
+    "total": 588
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 721
+      "total": 791
     },
     {
       "method": "Карта",
@@ -36396,6 +36443,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1633,
+      "items": [
+        "Айс Латте x1",
+        "Мороженое классическое x1",
+        "Виноградный тропический mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 1632,
       "items": [
@@ -36456,14 +36513,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 1625,
-      "items": [
-        "Жасмин лимон big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -36609,14 +36658,14 @@
       "total": 125
     },
     {
-      "name": "Matcha mini",
+      "name": "Айс Латте",
       "qty": 4,
       "total": 120
     },
     {
-      "name": "Айс Латте",
-      "qty": 3,
-      "total": 90
+      "name": "Matcha mini",
+      "qty": 4,
+      "total": 120
     },
     {
       "name": "Мороженое клубничное",
@@ -36640,5 +36689,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-05T16:01:35.003Z"
+  "updatedAt": "2026-06-05T16:06:09.303Z"
 }

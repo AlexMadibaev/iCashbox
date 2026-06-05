@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 27.36842105263158,
-    "checks": 19,
+    "average": 27.5,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 315,
-    "revenue": 520
+    "net": 345,
+    "revenue": 550
   },
   "data": {
-    "actions": 1489,
+    "actions": 1493,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 567,
+    "orders": 568,
     "products": 39,
     "shifts": 14
   },
   "activity": [
     {
+      "id": 1780637696013,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:34",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780637696013,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:34",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1780636938284,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780636938284,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780636930228,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:09",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780636062313,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:07",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780636062313,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:07",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780635630607,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780635630607,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:00",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 567,
+    "current": 568,
     "old": [
       {
         "createdAt": "2026-06-04T10:46:44.492Z",
@@ -17560,6 +17560,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-05T05:34:55.965Z",
+        "id": 1613,
+        "items": [
+          "ПиноКолада big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-05",
+        "shiftLabel": "Смена 05.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-05T05:22:18.236Z",
         "id": 1612,
@@ -35499,14 +35528,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-05",
         "label": "Смена 05.06",
         "missingOrders": 0,
-        "revenue": 520,
+        "revenue": 550,
         "status": "ok"
       },
       {
@@ -35692,12 +35721,12 @@
         "status": "ok"
       }
     ],
-    "total": 567
+    "total": 568
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 455
+      "total": 485
     },
     {
       "method": "Карта",
@@ -35717,6 +35746,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1613,
+      "items": [
+        "ПиноКолада big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 1612,
       "items": [
@@ -35773,14 +35810,6 @@
       ],
       "status": "Оплачен",
       "total": 45
-    },
-    {
-      "id": 1605,
-      "items": [
-        "МангоБанан mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -35941,6 +35970,11 @@
       "total": 60
     },
     {
+      "name": "ПиноКолада big",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "МангоБанан big",
       "qty": 1,
       "total": 30
@@ -35949,13 +35983,8 @@
       "name": "Matcha mini",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Клубничный mini",
-      "qty": 1,
-      "total": 25
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-05T12:24:17.679Z"
+  "updatedAt": "2026-06-05T12:36:56.901Z"
 }

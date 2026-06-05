@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.95,
-    "checks": 40,
+    "average": 35.68292682926829,
+    "checks": 41,
     "expenseTotal": 205,
-    "net": 1113,
-    "revenue": 1318
+    "net": 1258,
+    "revenue": 1463
   },
   "data": {
-    "actions": 1531,
+    "actions": 1533,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 588,
+    "orders": 589,
     "products": 39,
     "shifts": 14
   },
   "activity": [
     {
+      "id": 1780650249726,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:04",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780650249726,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:04",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780649974507,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:26",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780645079042,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780645079042,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:37",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 588,
+    "current": 589,
     "old": [
       {
         "createdAt": "2026-06-04T10:46:44.492Z",
@@ -17560,6 +17560,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-05T09:37:32.071Z",
+        "id": 1634,
+        "items": [
+          "Мороженое клубничное x2",
+          "Мороженое классическое x3",
+          "Черника mini x1",
+          "Мороженое манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 3,
+            "size": "",
+            "total": 60
+          },
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 200,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-05",
+        "shiftLabel": "Смена 05.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 145
+      },
       {
         "createdAt": "2026-06-05T09:04:09.683Z",
         "id": 1633,
@@ -36225,14 +36281,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 40,
-        "expectedOrders": 40,
+        "databaseOrders": 41,
+        "expectedOrders": 41,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-05",
         "label": "Смена 05.06",
         "missingOrders": 0,
-        "revenue": 1318,
+        "revenue": 1463,
         "status": "ok"
       },
       {
@@ -36418,12 +36474,12 @@
         "status": "ok"
       }
     ],
-    "total": 588
+    "total": 589
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 791
+      "total": 936
     },
     {
       "method": "Карта",
@@ -36443,6 +36499,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1634,
+      "items": [
+        "Мороженое клубничное x2",
+        "Мороженое классическое x3",
+        "Черника mini x1",
+        "Мороженое манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 145
+    },
     {
       "id": 1633,
       "items": [
@@ -36504,15 +36571,6 @@
       ],
       "status": "Оплачен",
       "total": 80
-    },
-    {
-      "id": 1626,
-      "items": [
-        "Айс Латте x1",
-        "Мороженое рожок x2"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -36654,8 +36712,13 @@
     },
     {
       "name": "Черника mini",
-      "qty": 5,
-      "total": 125
+      "qty": 6,
+      "total": 150
+    },
+    {
+      "name": "Мороженое клубничное",
+      "qty": 6,
+      "total": 120
     },
     {
       "name": "Айс Латте",
@@ -36668,9 +36731,9 @@
       "total": 120
     },
     {
-      "name": "Мороженое клубничное",
-      "qty": 4,
-      "total": 80
+      "name": "Мороженое классическое",
+      "qty": 5,
+      "total": 100
     },
     {
       "name": "Клубничный mini",
@@ -36681,13 +36744,8 @@
       "name": "МангоБанан mini",
       "qty": 3,
       "total": 75
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 7,
-      "total": 70
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-05T16:06:09.303Z"
+  "updatedAt": "2026-06-05T16:39:33.024Z"
 }

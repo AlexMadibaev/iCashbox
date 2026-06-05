@@ -6,23 +6,51 @@
     "open": true
   },
   "summary": {
-    "average": 20,
-    "checks": 2,
+    "average": 23.333333333333332,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -165,
-    "revenue": 40
+    "net": -135,
+    "revenue": 70
   },
   "data": {
-    "actions": 1455,
+    "actions": 1459,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 550,
+    "orders": 551,
     "products": 39,
     "shifts": 14
   },
   "activity": [
+    {
+      "id": 1780626256601,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:24",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780626256601,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:24",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1780620450989,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780620450989,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:47",
+      "type": "Создание заказа"
+    },
     {
       "id": 1780620412345,
       "source": "Локально",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780565862176,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780565482869,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:31",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780565482869,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:31",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780565131958,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:25",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 550,
+    "current": 551,
     "old": [
       {
         "createdAt": "2026-06-04T10:46:44.492Z",
@@ -17560,6 +17560,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-05T02:24:16.558Z",
+        "id": 1596,
+        "items": [
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-05",
+        "shiftLabel": "Смена 05.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-05T00:47:30.942Z",
         "id": 1595,
@@ -34997,14 +35026,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-05",
         "label": "Смена 05.06",
         "missingOrders": 0,
-        "revenue": 40,
+        "revenue": 70,
         "status": "ok"
       },
       {
@@ -35190,12 +35219,12 @@
         "status": "ok"
       }
     ],
-    "total": 550
+    "total": 551
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 20
+      "total": 50
     },
     {
       "method": "Карта",
@@ -35215,6 +35244,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1596,
+      "items": [
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 1595,
       "items": [
@@ -35365,6 +35402,11 @@
   },
   "topProducts": [
     {
+      "name": "Айс Латте",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Жасмин лимон mini",
       "qty": 1,
       "total": 20
@@ -35376,5 +35418,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-05T07:49:30.897Z"
+  "updatedAt": "2026-06-05T09:26:17.566Z"
 }

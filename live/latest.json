@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 24,
-    "checks": 5,
+    "average": 25,
+    "checks": 6,
     "expenseTotal": 205,
-    "net": -85,
-    "revenue": 120
+    "net": -55,
+    "revenue": 150
   },
   "data": {
-    "actions": 1461,
+    "actions": 1463,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 553,
+    "orders": 554,
     "products": 39,
     "shifts": 14
   },
   "activity": [
+    {
+      "id": 1780627209859,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:40",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780627209859,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:40",
+      "type": "Создание заказа"
+    },
     {
       "id": 1780626907019,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:46",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780570004569,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:46",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780568406027,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:20",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 553,
+    "current": 554,
     "old": [
       {
         "createdAt": "2026-06-04T10:46:44.492Z",
@@ -17560,6 +17560,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-05T03:00:59.638Z",
+        "id": 1599,
+        "items": [
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-05",
+        "shiftLabel": "Смена 05.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-05T02:40:09.809Z",
         "id": 1598,
@@ -35084,14 +35113,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 5,
-        "expectedOrders": 5,
+        "databaseOrders": 6,
+        "expectedOrders": 6,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-05",
         "label": "Смена 05.06",
         "missingOrders": 0,
-        "revenue": 120,
+        "revenue": 150,
         "status": "ok"
       },
       {
@@ -35277,12 +35306,12 @@
         "status": "ok"
       }
     ],
-    "total": 553
+    "total": 554
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 100
+      "total": 130
     },
     {
       "method": "Карта",
@@ -35302,6 +35331,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1599,
+      "items": [
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 1598,
       "items": [
@@ -35476,14 +35513,14 @@
   },
   "topProducts": [
     {
+      "name": "Айс Латте",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Babl tea mini",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 1,
-      "total": 30
     },
     {
       "name": "Жасмин лимон mini",
@@ -35502,5 +35539,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-05T09:42:09.894Z"
+  "updatedAt": "2026-06-05T10:03:00.478Z"
 }

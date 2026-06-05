@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.97727272727273,
-    "checks": 44,
+    "average": 38.8,
+    "checks": 45,
     "expenseTotal": 205,
-    "net": 1466,
-    "revenue": 1671
+    "net": 1541,
+    "revenue": 1746
   },
   "data": {
-    "actions": 1539,
+    "actions": 1541,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 592,
+    "orders": 593,
     "products": 39,
     "shifts": 14
   },
   "activity": [
     {
+      "id": 1780653680406,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:01",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780653680406,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:01",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780653140379,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:59",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780649360310,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:49",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780649360310,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:49",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 592,
+    "current": 593,
     "old": [
       {
         "createdAt": "2026-06-04T10:46:44.492Z",
@@ -17560,6 +17560,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-05T10:34:39.194Z",
+        "id": 1638,
+        "items": [
+          "МангоБанан mini x1",
+          "Черника mini x1",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 25,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-05",
+        "shiftLabel": "Смена 05.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 75
+      },
       {
         "createdAt": "2026-06-05T10:01:20.338Z",
         "id": 1637,
@@ -36395,14 +36442,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 44,
-        "expectedOrders": 44,
+        "databaseOrders": 45,
+        "expectedOrders": 45,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-05",
         "label": "Смена 05.06",
         "missingOrders": 0,
-        "revenue": 1671,
+        "revenue": 1746,
         "status": "ok"
       },
       {
@@ -36588,12 +36635,12 @@
         "status": "ok"
       }
     ],
-    "total": 592
+    "total": 593
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 986
+      "total": 1036
     },
     {
       "method": "Карта",
@@ -36605,7 +36652,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 358
+      "total": 383
     },
     {
       "method": "Семья",
@@ -36613,6 +36660,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1638,
+      "items": [
+        "МангоБанан mini x1",
+        "Черника mini x1",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 75
+    },
     {
       "id": 1637,
       "items": [
@@ -36676,14 +36733,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1630,
-      "items": [
-        "Babl tea mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -36825,8 +36874,13 @@
     },
     {
       "name": "Черника mini",
-      "qty": 6,
-      "total": 150
+      "qty": 7,
+      "total": 175
+    },
+    {
+      "name": "Клубничный mini",
+      "qty": 5,
+      "total": 125
     },
     {
       "name": "Мороженое классическое",
@@ -36849,16 +36903,11 @@
       "total": 120
     },
     {
-      "name": "Клубничный mini",
+      "name": "МангоБанан mini",
       "qty": 4,
       "total": 100
-    },
-    {
-      "name": "МангоБанан mini",
-      "qty": 3,
-      "total": 75
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-05T17:03:21.345Z"
+  "updatedAt": "2026-06-05T17:36:39.672Z"
 }

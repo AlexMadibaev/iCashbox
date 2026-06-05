@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 20,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -185,
+    "revenue": 20
   },
   "data": {
     "actions": 1453,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 548,
+    "orders": 549,
     "products": 39,
     "shifts": 14
   },
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 548,
+    "current": 549,
     "old": [
       {
         "createdAt": "2026-06-04T10:46:44.492Z",
@@ -17560,6 +17560,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-05T00:46:52.297Z",
+        "id": 1594,
+        "items": [
+          "Мороженое с тапиокой x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 20,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-05",
+        "shiftLabel": "Смена 05.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-04T10:46:44.492Z",
         "id": 1593,
@@ -34939,15 +34968,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-06-05",
         "label": "Смена 05.06",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 20,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -35132,7 +35161,7 @@
         "status": "ok"
       }
     ],
-    "total": 548
+    "total": 549
   },
   "payments": [
     {
@@ -35145,7 +35174,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 20
     },
     {
       "method": "Dushanbe City",
@@ -35156,7 +35185,16 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 1594,
+      "items": [
+        "Мороженое с тапиокой x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -35288,7 +35326,13 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Мороженое с тапиокой",
+      "qty": 1,
+      "total": 20
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-06-05T07:48:46.443Z"
+  "updatedAt": "2026-06-05T07:48:51.932Z"
 }

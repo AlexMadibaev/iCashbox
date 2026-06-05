@@ -7,22 +7,36 @@
   },
   "summary": {
     "average": 20,
-    "checks": 1,
+    "checks": 2,
     "expenseTotal": 205,
-    "net": -185,
-    "revenue": 20
+    "net": -165,
+    "revenue": 40
   },
   "data": {
-    "actions": 1453,
+    "actions": 1455,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 549,
+    "orders": 550,
     "products": 39,
     "shifts": 14
   },
   "activity": [
+    {
+      "id": 1780620412345,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:46",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780620412345,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:46",
+      "type": "Создание заказа"
+    },
     {
       "id": 1780620405429,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:25",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780565131958,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:25",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780563105215,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:51",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 549,
+    "current": 550,
     "old": [
       {
         "createdAt": "2026-06-04T10:46:44.492Z",
@@ -17560,6 +17560,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-05T00:47:30.942Z",
+        "id": 1595,
+        "items": [
+          "Жасмин лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-tea-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-05",
+        "shiftLabel": "Смена 05.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-05T00:46:52.297Z",
         "id": 1594,
@@ -34968,14 +34997,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 1,
-        "expectedOrders": 1,
+        "databaseOrders": 2,
+        "expectedOrders": 2,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-05",
         "label": "Смена 05.06",
         "missingOrders": 0,
-        "revenue": 20,
+        "revenue": 40,
         "status": "ok"
       },
       {
@@ -35161,12 +35190,12 @@
         "status": "ok"
       }
     ],
-    "total": 549
+    "total": 550
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 20
     },
     {
       "method": "Карта",
@@ -35186,6 +35215,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1595,
+      "items": [
+        "Жасмин лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 1594,
       "items": [
@@ -35328,11 +35365,16 @@
   },
   "topProducts": [
     {
+      "name": "Жасмин лимон mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Мороженое с тапиокой",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-05T07:48:51.932Z"
+  "updatedAt": "2026-06-05T07:49:30.897Z"
 }

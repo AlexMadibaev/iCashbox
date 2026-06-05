@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 27.77777777777778,
-    "checks": 18,
+    "average": 27.36842105263158,
+    "checks": 19,
     "expenseTotal": 205,
-    "net": 295,
-    "revenue": 500
+    "net": 315,
+    "revenue": 520
   },
   "data": {
-    "actions": 1487,
+    "actions": 1489,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 566,
+    "orders": 567,
     "products": 39,
     "shifts": 14
   },
   "activity": [
     {
+      "id": 1780636930228,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780636930228,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780636706200,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:00",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780635313149,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:55",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780635313149,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:55",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 566,
+    "current": 567,
     "old": [
       {
         "createdAt": "2026-06-04T10:46:44.492Z",
@@ -17560,6 +17560,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-05T05:22:18.236Z",
+        "id": 1612,
+        "items": [
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 20,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-05",
+        "shiftLabel": "Смена 05.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-05T05:22:10.177Z",
         "id": 1611,
@@ -35470,14 +35499,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 18,
-        "expectedOrders": 18,
+        "databaseOrders": 19,
+        "expectedOrders": 19,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-05",
         "label": "Смена 05.06",
         "missingOrders": 0,
-        "revenue": 500,
+        "revenue": 520,
         "status": "ok"
       },
       {
@@ -35663,7 +35692,7 @@
         "status": "ok"
       }
     ],
-    "total": 566
+    "total": 567
   },
   "payments": [
     {
@@ -35676,7 +35705,7 @@
     },
     {
       "method": "Alif",
-      "total": 20
+      "total": 40
     },
     {
       "method": "Dushanbe City",
@@ -35688,6 +35717,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1612,
+      "items": [
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 1611,
       "items": [
@@ -35741,14 +35778,6 @@
       "id": 1605,
       "items": [
         "МангоБанан mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
-    },
-    {
-      "id": 1604,
-      "items": [
-        "Черника mini x1"
       ],
       "status": "Оплачен",
       "total": 25
@@ -35897,6 +35926,11 @@
       "total": 75
     },
     {
+      "name": "Babl tea mini",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 3,
       "total": 60
@@ -35905,11 +35939,6 @@
       "name": "Айс Латте",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 2,
-      "total": 40
     },
     {
       "name": "МангоБанан big",
@@ -35928,5 +35957,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-05T12:24:10.142Z"
+  "updatedAt": "2026-06-05T12:24:17.679Z"
 }

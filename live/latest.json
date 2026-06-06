@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 38.45,
-    "checks": 20,
+    "average": 39.76190476190476,
+    "checks": 21,
     "expenseTotal": 205,
-    "net": 564,
-    "revenue": 769
+    "net": 630,
+    "revenue": 835
   },
   "data": {
     "actions": 1586,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 614,
+    "orders": 615,
     "products": 39,
     "shifts": 15
   },
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 614,
+    "current": 615,
     "old": [
       {
         "createdAt": "2026-06-05T10:45:42.311Z",
@@ -19101,6 +19101,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-06T04:53:53.112Z",
+        "id": 1660,
+        "items": [
+          "Мороженое рожок x2",
+          "Мороженое манго x1",
+          "Виноградный тропический big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 2,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-06",
+        "shiftLabel": "Смена 06.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 66
+      },
       {
         "createdAt": "2026-06-06T04:51:32.617Z",
         "id": 1659,
@@ -38673,14 +38720,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 20,
-        "expectedOrders": 20,
+        "databaseOrders": 21,
+        "expectedOrders": 21,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-06",
         "label": "Смена 06.06",
         "missingOrders": 0,
-        "revenue": 769,
+        "revenue": 835,
         "status": "ok"
       },
       {
@@ -38879,12 +38926,12 @@
         "status": "ok"
       }
     ],
-    "total": 614
+    "total": 615
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 450
+      "total": 516
     },
     {
       "method": "Карта",
@@ -38904,6 +38951,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1660,
+      "items": [
+        "Мороженое рожок x2",
+        "Мороженое манго x1",
+        "Виноградный тропический big x1"
+      ],
+      "status": "Оплачен",
+      "total": 66
+    },
     {
       "id": 1659,
       "items": [
@@ -38963,14 +39020,6 @@
       ],
       "status": "Оплачен",
       "total": 52
-    },
-    {
-      "id": 1652,
-      "items": [
-        "Черника big x2"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -39117,18 +39166,23 @@
     },
     {
       "name": "Мороженое манго",
+      "qty": 4,
+      "total": 80
+    },
+    {
+      "name": "Виноградный тропический big",
       "qty": 3,
+      "total": 78
+    },
+    {
+      "name": "Мороженое рожок",
+      "qty": 6,
       "total": 60
     },
     {
       "name": "Matcha mini",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Виноградный тропический big",
-      "qty": 2,
-      "total": 52
     },
     {
       "name": "Клубничный жасмин big",
@@ -39139,13 +39193,8 @@
       "name": "Babl tea mini",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Мороженое с тапиокой",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-06T11:53:33.861Z"
+  "updatedAt": "2026-06-06T11:55:53.278Z"
 }

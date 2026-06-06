@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.78260869565217,
-    "checks": 23,
+    "average": 41.25,
+    "checks": 24,
     "expenseTotal": 205,
-    "net": 710,
-    "revenue": 915
+    "net": 785,
+    "revenue": 990
   },
   "data": {
-    "actions": 1590,
+    "actions": 1592,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 617,
+    "orders": 618,
     "products": 39,
     "shifts": 15
   },
   "activity": [
     {
+      "id": 1780724470495,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:41",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780724470495,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:41",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780722899535,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:27",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780719655347,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:20",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780719655347,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:20",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 617,
+    "current": 618,
     "old": [
       {
         "createdAt": "2026-06-05T10:45:42.311Z",
@@ -19101,6 +19101,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-06T05:42:22.794Z",
+        "id": 1663,
+        "items": [
+          "Черника mini x2",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          },
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 75,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-06",
+        "shiftLabel": "Смена 06.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 75
+      },
       {
         "createdAt": "2026-06-06T05:41:10.453Z",
         "id": 1662,
@@ -38796,14 +38834,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 23,
-        "expectedOrders": 23,
+        "databaseOrders": 24,
+        "expectedOrders": 24,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-06",
         "label": "Смена 06.06",
         "missingOrders": 0,
-        "revenue": 915,
+        "revenue": 990,
         "status": "ok"
       },
       {
@@ -39002,7 +39040,7 @@
         "status": "ok"
       }
     ],
-    "total": 617
+    "total": 618
   },
   "payments": [
     {
@@ -39015,7 +39053,7 @@
     },
     {
       "method": "Alif",
-      "total": 179
+      "total": 254
     },
     {
       "method": "Dushanbe City",
@@ -39027,6 +39065,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1663,
+      "items": [
+        "Черника mini x2",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 75
+    },
     {
       "id": 1662,
       "items": [
@@ -39088,14 +39135,6 @@
       ],
       "status": "Оплачен",
       "total": 46
-    },
-    {
-      "id": 1655,
-      "items": [
-        "Мороженое с тапиокой x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -39272,5 +39311,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-06T12:43:11.424Z"
+  "updatedAt": "2026-06-06T12:44:22.881Z"
 }

@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 40.232142857142854,
-    "checks": 56,
+    "average": 41.01754385964912,
+    "checks": 57,
     "expenseTotal": 205,
-    "net": 2048,
-    "revenue": 2253
+    "net": 2133,
+    "revenue": 2338
   },
   "data": {
-    "actions": 1659,
+    "actions": 1661,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 650,
+    "orders": 651,
     "products": 39,
     "shifts": 15
   },
   "activity": [
+    {
+      "id": 1780741868734,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:31",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780741868734,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:31",
+      "type": "Создание заказа"
+    },
     {
       "id": 1780741410970,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780740004117,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:00",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780739680183,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:54",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 650,
+    "current": 651,
     "old": [
       {
         "createdAt": "2026-06-05T10:45:42.311Z",
@@ -19101,6 +19101,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-06T10:34:42.384Z",
+        "id": 1696,
+        "items": [
+          "Мороженое клубничное x2",
+          "Клубничный mini x1",
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 85,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-06",
+        "shiftLabel": "Смена 06.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 85
+      },
       {
         "createdAt": "2026-06-06T10:31:08.675Z",
         "id": 1695,
@@ -39870,14 +39917,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 56,
-        "expectedOrders": 56,
+        "databaseOrders": 57,
+        "expectedOrders": 57,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-06",
         "label": "Смена 06.06",
         "missingOrders": 0,
-        "revenue": 2253,
+        "revenue": 2338,
         "status": "ok"
       },
       {
@@ -40076,7 +40123,7 @@
         "status": "ok"
       }
     ],
-    "total": 650
+    "total": 651
   },
   "payments": [
     {
@@ -40089,7 +40136,7 @@
     },
     {
       "method": "Alif",
-      "total": 389
+      "total": 474
     },
     {
       "method": "Dushanbe City",
@@ -40101,6 +40148,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1696,
+      "items": [
+        "Мороженое клубничное x2",
+        "Клубничный mini x1",
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 85
+    },
     {
       "id": 1695,
       "items": [
@@ -40160,14 +40217,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 1688,
-      "items": [
-        "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -40313,6 +40362,21 @@
       "total": 160
     },
     {
+      "name": "Клубничный mini",
+      "qty": 6,
+      "total": 150
+    },
+    {
+      "name": "Мороженое клубничное",
+      "qty": 7,
+      "total": 140
+    },
+    {
+      "name": "Мороженое классическое",
+      "qty": 7,
+      "total": 140
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 14,
       "total": 140
@@ -40323,26 +40387,11 @@
       "total": 140
     },
     {
-      "name": "Клубничный mini",
-      "qty": 5,
-      "total": 125
-    },
-    {
-      "name": "Мороженое классическое",
-      "qty": 6,
-      "total": 120
-    },
-    {
-      "name": "Мороженое клубничное",
-      "qty": 5,
-      "total": 100
-    },
-    {
       "name": "Мороженое с тапиокой",
       "qty": 5,
       "total": 100
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-06T17:33:08.914Z"
+  "updatedAt": "2026-06-06T17:36:42.446Z"
 }

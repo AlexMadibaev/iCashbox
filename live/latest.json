@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.13333333333333,
-    "checks": 15,
+    "average": 39.1875,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 382,
-    "revenue": 587
+    "net": 422,
+    "revenue": 627
   },
   "data": {
-    "actions": 1574,
+    "actions": 1576,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 609,
+    "orders": 610,
     "products": 39,
     "shifts": 15
   },
   "activity": [
     {
+      "id": 1780719465453,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:17",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780719465453,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:17",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780718738710,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:16",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780714492395,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:54",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780714492395,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:54",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 609,
+    "current": 610,
     "old": [
       {
         "createdAt": "2026-06-05T10:45:42.311Z",
@@ -19101,6 +19101,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-06T04:20:25.455Z",
+        "id": 1655,
+        "items": [
+          "Мороженое с тапиокой x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-06",
+        "shiftLabel": "Смена 06.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-06T04:17:45.408Z",
         "id": 1654,
@@ -38510,14 +38539,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-06",
         "label": "Смена 06.06",
         "missingOrders": 0,
-        "revenue": 587,
+        "revenue": 627,
         "status": "ok"
       },
       {
@@ -38716,12 +38745,12 @@
         "status": "ok"
       }
     ],
-    "total": 609
+    "total": 610
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 268
+      "total": 308
     },
     {
       "method": "Карта",
@@ -38741,6 +38770,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1655,
+      "items": [
+        "Мороженое с тапиокой x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 1654,
       "items": [
@@ -38801,14 +38838,6 @@
       ],
       "status": "Оплачен",
       "total": 10
-    },
-    {
-      "id": 1647,
-      "items": [
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -38959,6 +38988,11 @@
       "total": 52
     },
     {
+      "name": "Мороженое с тапиокой",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Мороженое манго",
       "qty": 2,
       "total": 40
@@ -38977,13 +39011,8 @@
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-06T11:19:46.557Z"
+  "updatedAt": "2026-06-06T11:22:25.621Z"
 }

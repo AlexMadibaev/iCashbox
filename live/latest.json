@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.86206896551724,
-    "checks": 29,
+    "average": 41.833333333333336,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 980,
-    "revenue": 1185
+    "net": 1050,
+    "revenue": 1255
   },
   "data": {
-    "actions": 1602,
+    "actions": 1604,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 623,
+    "orders": 624,
     "products": 39,
     "shifts": 15
   },
   "activity": [
     {
+      "id": 1780729359259,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:02",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780729359259,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:02",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780728575744,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780724470495,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780724470495,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:41",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 623,
+    "current": 624,
     "old": [
       {
         "createdAt": "2026-06-05T10:45:42.311Z",
@@ -19101,6 +19101,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-06T07:09:27.891Z",
+        "id": 1669,
+        "items": [
+          "Matcha big x1",
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 70,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-06",
+        "shiftLabel": "Смена 06.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-06-06T07:02:39.198Z",
         "id": 1668,
@@ -38988,14 +39026,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-06",
         "label": "Смена 06.06",
         "missingOrders": 0,
-        "revenue": 1185,
+        "revenue": 1255,
         "status": "ok"
       },
       {
@@ -39194,12 +39232,12 @@
         "status": "ok"
       }
     ],
-    "total": 623
+    "total": 624
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 711
+      "total": 781
     },
     {
       "method": "Карта",
@@ -39219,6 +39257,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1669,
+      "items": [
+        "Matcha big x1",
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 1668,
       "items": [
@@ -39278,14 +39325,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 1661,
-      "items": [
-        "Мороженое клубничное x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -39436,6 +39475,11 @@
       "total": 90
     },
     {
+      "name": "Matcha big",
+      "qty": 2,
+      "total": 80
+    },
+    {
       "name": "Виноградный тропический big",
       "qty": 3,
       "total": 78
@@ -39446,21 +39490,16 @@
       "total": 75
     },
     {
+      "name": "Айс Латте",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Мороженое с тапиокой",
       "qty": 3,
-      "total": 60
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 6,
-      "total": 60
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 2,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-06T14:04:40.321Z"
+  "updatedAt": "2026-06-06T14:11:29.030Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.30769230769231,
-    "checks": 13,
+    "average": 38.357142857142854,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 280,
-    "revenue": 485
+    "net": 332,
+    "revenue": 537
   },
   "data": {
-    "actions": 1570,
+    "actions": 1572,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 607,
+    "orders": 608,
     "products": 39,
     "shifts": 15
   },
   "activity": [
     {
+      "id": 1780717623545,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780717623545,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:47",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780716394750,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:53",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780713899516,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:44",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780713899516,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:44",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 607,
+    "current": 608,
     "old": [
       {
         "createdAt": "2026-06-05T10:45:42.311Z",
@@ -19101,6 +19101,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-06T04:05:38.667Z",
+        "id": 1653,
+        "items": [
+          "Манго Маракуя big x1",
+          "Клубничный жасмин big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-клубничный-жасмин-big",
+            "name": "Клубничный жасмин big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 53,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-06",
+        "shiftLabel": "Смена 06.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-06-06T03:47:03.502Z",
         "id": 1652,
@@ -38434,14 +38472,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-06",
         "label": "Смена 06.06",
         "missingOrders": 0,
-        "revenue": 485,
+        "revenue": 537,
         "status": "ok"
       },
       {
@@ -38640,12 +38678,12 @@
         "status": "ok"
       }
     ],
-    "total": 607
+    "total": 608
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 216
+      "total": 268
     },
     {
       "method": "Карта",
@@ -38665,6 +38703,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1653,
+      "items": [
+        "Манго Маракуя big x1",
+        "Клубничный жасмин big x1"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 1652,
       "items": [
@@ -38723,14 +38770,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1645,
-      "items": [
-        "Клубничный big x2"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -38876,6 +38915,11 @@
       "total": 90
     },
     {
+      "name": "Клубничный жасмин big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 3,
       "total": 30
@@ -38891,7 +38935,7 @@
       "total": 30
     },
     {
-      "name": "Клубничный жасмин big",
+      "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
     },
@@ -38899,13 +38943,8 @@
       "name": "Виноградный тропический big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Клубничный mini",
-      "qty": 1,
-      "total": 25
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-06T10:49:04.571Z"
+  "updatedAt": "2026-06-06T11:07:39.819Z"
 }

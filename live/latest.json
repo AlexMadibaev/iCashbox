@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 37.8421052631579,
-    "checks": 19,
+    "average": 38.45,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 514,
-    "revenue": 719
+    "net": 564,
+    "revenue": 769
   },
   "data": {
-    "actions": 1582,
+    "actions": 1586,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 613,
+    "orders": 614,
     "products": 39,
     "shifts": 15
   },
   "activity": [
     {
+      "id": 1780721492658,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:51",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780721492658,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:51",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1780720572122,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:36",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780720572122,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:36",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780720065814,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:17",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780718738710,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:05",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780718738710,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:05",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780717623545,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:47",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780717623545,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:47",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 613,
+    "current": 614,
     "old": [
       {
         "createdAt": "2026-06-05T10:45:42.311Z",
@@ -19101,6 +19101,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-06T04:51:32.617Z",
+        "id": 1659,
+        "items": [
+          "Мороженое манго x1",
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-06",
+        "shiftLabel": "Смена 06.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-06T04:36:12.063Z",
         "id": 1658,
@@ -38635,14 +38673,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-06",
         "label": "Смена 06.06",
         "missingOrders": 0,
-        "revenue": 719,
+        "revenue": 769,
         "status": "ok"
       },
       {
@@ -38841,12 +38879,12 @@
         "status": "ok"
       }
     ],
-    "total": 613
+    "total": 614
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 400
+      "total": 450
     },
     {
       "method": "Карта",
@@ -38866,6 +38904,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1659,
+      "items": [
+        "Мороженое манго x1",
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 1658,
       "items": [
@@ -38924,15 +38971,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 1651,
-      "items": [
-        "Клубничный жасмин big x1",
-        "Кокос добавка x1"
-      ],
-      "status": "Оплачен",
-      "total": 29
     }
   ],
   "shifts": {
@@ -39078,6 +39116,16 @@
       "total": 90
     },
     {
+      "name": "Мороженое манго",
+      "qty": 3,
+      "total": 60
+    },
+    {
+      "name": "Matcha mini",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Виноградный тропический big",
       "qty": 2,
       "total": 52
@@ -39096,18 +39144,8 @@
       "name": "Мороженое с тапиокой",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 2,
-      "total": 40
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 4,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-06T11:38:13.299Z"
+  "updatedAt": "2026-06-06T11:53:33.861Z"
 }

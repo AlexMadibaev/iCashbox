@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.36666666666667,
-    "checks": 30,
+    "average": 43.25806451612903,
+    "checks": 31,
     "expenseTotal": 205,
-    "net": 1096,
-    "revenue": 1301
+    "net": 1136,
+    "revenue": 1341
   },
   "data": {
-    "actions": 1724,
+    "actions": 1726,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 682,
+    "orders": 683,
     "products": 39,
     "shifts": 16
   },
   "activity": [
     {
+      "id": 1780815962670,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780815962670,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:06",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780815325408,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:38",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780810408471,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:33",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780810408471,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:33",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 682,
+    "current": 683,
     "old": [
       {
         "createdAt": "2026-06-06T10:35:09.433Z",
@@ -21026,6 +21026,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-07T07:17:37.563Z",
+        "id": 1728,
+        "items": [
+          "Мороженое классическое x1",
+          "Мороженое клубничное x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-07",
+        "shiftLabel": "Смена 07.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-07T07:06:02.600Z",
         "id": 1727,
@@ -42867,14 +42905,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 30,
-        "expectedOrders": 30,
+        "databaseOrders": 31,
+        "expectedOrders": 31,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-07",
         "label": "Смена 07.06",
         "missingOrders": 0,
-        "revenue": 1301,
+        "revenue": 1341,
         "status": "ok"
       },
       {
@@ -43086,7 +43124,7 @@
         "status": "ok"
       }
     ],
-    "total": 682
+    "total": 683
   },
   "payments": [
     {
@@ -43099,7 +43137,7 @@
     },
     {
       "method": "Alif",
-      "total": 205
+      "total": 245
     },
     {
       "method": "Dushanbe City",
@@ -43111,6 +43149,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1728,
+      "items": [
+        "Мороженое классическое x1",
+        "Мороженое клубничное x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 1727,
       "items": [
@@ -43167,14 +43214,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 1720,
-      "items": [
-        "Мороженое клубничное x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -43351,5 +43390,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-07T14:08:05.347Z"
+  "updatedAt": "2026-06-07T14:19:40.080Z"
 }

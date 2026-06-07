@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.56410256410256,
-    "checks": 39,
+    "average": 44.875,
+    "checks": 40,
     "expenseTotal": 205,
-    "net": 1494,
-    "revenue": 1699
+    "net": 1590,
+    "revenue": 1795
   },
   "data": {
-    "actions": 1742,
+    "actions": 1744,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 691,
+    "orders": 692,
     "products": 39,
     "shifts": 16
   },
   "activity": [
     {
+      "id": 1780824188385,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:23",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780824188385,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:23",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780823629986,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780817670650,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:34",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780817670650,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:34",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 691,
+    "current": 692,
     "old": [
       {
         "createdAt": "2026-06-06T10:35:09.433Z",
@@ -21026,6 +21026,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-07T10:49:14.079Z",
+        "id": 1737,
+        "items": [
+          "Мороженое с тапиокой x2",
+          "Babl tea big x1",
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-07",
+        "shiftLabel": "Смена 07.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 96
+      },
       {
         "createdAt": "2026-06-07T09:23:08.336Z",
         "id": 1736,
@@ -43164,14 +43211,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 39,
-        "expectedOrders": 39,
+        "databaseOrders": 40,
+        "expectedOrders": 40,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-07",
         "label": "Смена 07.06",
         "missingOrders": 0,
-        "revenue": 1699,
+        "revenue": 1795,
         "status": "ok"
       },
       {
@@ -43383,12 +43430,12 @@
         "status": "ok"
       }
     ],
-    "total": 691
+    "total": 692
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1045
+      "total": 1141
     },
     {
       "method": "Карта",
@@ -43408,6 +43455,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1737,
+      "items": [
+        "Мороженое с тапиокой x2",
+        "Babl tea big x1",
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 96
+    },
     {
       "id": 1736,
       "items": [
@@ -43466,14 +43523,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1729,
-      "items": [
-        "Черника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -43609,6 +43658,16 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea big",
+      "qty": 6,
+      "total": 156
+    },
+    {
+      "name": "Matcha mini",
+      "qty": 5,
+      "total": 150
+    },
+    {
       "name": "Айс Латте",
       "qty": 5,
       "total": 150
@@ -43622,16 +43681,6 @@
       "name": "Babl tea mini",
       "qty": 7,
       "total": 140
-    },
-    {
-      "name": "Babl tea big",
-      "qty": 5,
-      "total": 130
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 4,
-      "total": 120
     },
     {
       "name": "Клубничный big",
@@ -43650,5 +43699,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-07T16:25:10.863Z"
+  "updatedAt": "2026-06-07T17:51:16.690Z"
 }

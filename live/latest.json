@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.52,
-    "checks": 25,
+    "average": 43.76923076923077,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 883,
-    "revenue": 1088
+    "net": 933,
+    "revenue": 1138
   },
   "data": {
-    "actions": 1714,
+    "actions": 1716,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 677,
+    "orders": 678,
     "products": 39,
     "shifts": 16
   },
   "activity": [
     {
+      "id": 1780810728314,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:38",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780810728314,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:38",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780810408471,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:47",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780807519956,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:45",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780807519956,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:45",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 677,
+    "current": 678,
     "old": [
       {
         "createdAt": "2026-06-06T10:35:09.433Z",
@@ -21026,6 +21026,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-07T05:52:36.053Z",
+        "id": 1723,
+        "items": [
+          "Клубничный mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 50,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-07",
+        "shiftLabel": "Смена 07.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-07T05:38:48.267Z",
         "id": 1722,
@@ -42722,14 +42751,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-07",
         "label": "Смена 07.06",
         "missingOrders": 0,
-        "revenue": 1088,
+        "revenue": 1138,
         "status": "ok"
       },
       {
@@ -42941,7 +42970,7 @@
         "status": "ok"
       }
     ],
-    "total": 677
+    "total": 678
   },
   "payments": [
     {
@@ -42954,7 +42983,7 @@
     },
     {
       "method": "Alif",
-      "total": 130
+      "total": 180
     },
     {
       "method": "Dushanbe City",
@@ -42966,6 +42995,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1723,
+      "items": [
+        "Клубничный mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 1722,
       "items": [
@@ -43027,14 +43064,6 @@
       ],
       "status": "Оплачен",
       "total": 137
-    },
-    {
-      "id": 1715,
-      "items": [
-        "Matcha big x2"
-      ],
-      "status": "Оплачен",
-      "total": 80
     }
   ],
   "shifts": {
@@ -43195,6 +43224,11 @@
       "total": 80
     },
     {
+      "name": "Клубничный mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "Matcha mini",
       "qty": 2,
       "total": 60
@@ -43203,13 +43237,8 @@
       "name": "Черника big",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 2,
-      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-07T12:40:50.004Z"
+  "updatedAt": "2026-06-07T12:54:38.929Z"
 }

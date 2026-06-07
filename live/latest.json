@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.088235294117645,
-    "checks": 34,
+    "average": 41.74285714285714,
+    "checks": 35,
     "expenseTotal": 205,
-    "net": 1226,
-    "revenue": 1431
+    "net": 1256,
+    "revenue": 1461
   },
   "data": {
-    "actions": 1732,
+    "actions": 1734,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 686,
+    "orders": 687,
     "products": 39,
     "shifts": 16
   },
   "activity": [
     {
+      "id": 1780819871595,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:11",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780819871595,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:11",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780817670650,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:55",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780812238996,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:03",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780812238996,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:03",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 686,
+    "current": 687,
     "old": [
       {
         "createdAt": "2026-06-06T10:35:09.433Z",
@@ -21026,6 +21026,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-07T08:17:32.492Z",
+        "id": 1732,
+        "items": [
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 30,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-07",
+        "shiftLabel": "Смена 07.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-07T08:11:11.545Z",
         "id": 1731,
@@ -42992,14 +43021,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-07",
         "label": "Смена 07.06",
         "missingOrders": 0,
-        "revenue": 1431,
+        "revenue": 1461,
         "status": "ok"
       },
       {
@@ -43211,7 +43240,7 @@
         "status": "ok"
       }
     ],
-    "total": 686
+    "total": 687
   },
   "payments": [
     {
@@ -43224,7 +43253,7 @@
     },
     {
       "method": "Alif",
-      "total": 245
+      "total": 275
     },
     {
       "method": "Dushanbe City",
@@ -43236,6 +43265,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1732,
+      "items": [
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 1731,
       "items": [
@@ -43292,14 +43329,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 1724,
-      "items": [
-        "Жасмин лимон big x2"
-      ],
-      "status": "Оплачен",
-      "total": 52
     }
   ],
   "shifts": {
@@ -43435,6 +43464,11 @@
   },
   "topProducts": [
     {
+      "name": "Черника big",
+      "qty": 4,
+      "total": 120
+    },
+    {
       "name": "Babl tea mini",
       "qty": 6,
       "total": 120
@@ -43460,11 +43494,6 @@
       "total": 120
     },
     {
-      "name": "Черника big",
-      "qty": 3,
-      "total": 90
-    },
-    {
       "name": "Жасмин лимон mini",
       "qty": 4,
       "total": 80
@@ -43476,5 +43505,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-07T15:13:13.986Z"
+  "updatedAt": "2026-06-07T15:19:34.902Z"
 }

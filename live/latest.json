@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.111111111111114,
-    "checks": 9,
+    "average": 44,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 165,
-    "revenue": 370
+    "net": 235,
+    "revenue": 440
   },
   "data": {
-    "actions": 1682,
+    "actions": 1684,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 661,
+    "orders": 662,
     "products": 39,
     "shifts": 16
   },
   "activity": [
     {
+      "id": 1780800270764,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:44",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780800270764,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:44",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780800186204,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780788567619,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:29",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780788567619,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:29",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 661,
+    "current": 662,
     "old": [
       {
         "createdAt": "2026-06-06T10:35:09.433Z",
@@ -21026,6 +21026,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-07T03:02:12.073Z",
+        "id": 1707,
+        "items": [
+          "Айс Латте x1",
+          "Клубничный жасмин mini x1",
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 70,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-07",
+        "shiftLabel": "Смена 07.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-06-07T02:44:30.720Z",
         "id": 1706,
@@ -42168,14 +42215,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-07",
         "label": "Смена 07.06",
         "missingOrders": 0,
-        "revenue": 370,
+        "revenue": 440,
         "status": "ok"
       },
       {
@@ -42387,7 +42434,7 @@
         "status": "ok"
       }
     ],
-    "total": 661
+    "total": 662
   },
   "payments": [
     {
@@ -42396,7 +42443,7 @@
     },
     {
       "method": "Карта",
-      "total": 30
+      "total": 100
     },
     {
       "method": "Alif",
@@ -42412,6 +42459,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1707,
+      "items": [
+        "Айс Латте x1",
+        "Клубничный жасмин mini x1",
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 1706,
       "items": [
@@ -42471,14 +42528,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1699,
-      "items": [
-        "Клубничный big x2"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -42614,6 +42663,16 @@
   },
   "topProducts": [
     {
+      "name": "Айс Латте",
+      "qty": 2,
+      "total": 60
+    },
+    {
+      "name": "Babl tea mini",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Клубничный big",
       "qty": 2,
       "total": 60
@@ -42624,19 +42683,9 @@
       "total": 40
     },
     {
-      "name": "Babl tea mini",
-      "qty": 2,
-      "total": 40
-    },
-    {
       "name": "Matcha big",
       "qty": 1,
       "total": 40
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 1,
-      "total": 30
     },
     {
       "name": "Черника big",
@@ -42649,11 +42698,11 @@
       "total": 30
     },
     {
-      "name": "Мороженое манго",
+      "name": "Клубничный жасмин mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-07T09:46:32.657Z"
+  "updatedAt": "2026-06-07T10:04:14.812Z"
 }

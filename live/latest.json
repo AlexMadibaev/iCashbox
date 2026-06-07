@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.25806451612903,
-    "checks": 31,
+    "average": 42.84375,
+    "checks": 32,
     "expenseTotal": 205,
-    "net": 1136,
-    "revenue": 1341
+    "net": 1166,
+    "revenue": 1371
   },
   "data": {
-    "actions": 1726,
+    "actions": 1728,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 683,
+    "orders": 684,
     "products": 39,
     "shifts": 16
   },
   "activity": [
     {
+      "id": 1780816657607,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:17",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780816657607,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:17",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780815962670,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780810728314,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:38",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780810728314,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:38",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 683,
+    "current": 684,
     "old": [
       {
         "createdAt": "2026-06-06T10:35:09.433Z",
@@ -21026,6 +21026,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-07T07:33:47.930Z",
+        "id": 1729,
+        "items": [
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 30,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-07",
+        "shiftLabel": "Смена 07.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-07T07:17:37.563Z",
         "id": 1728,
@@ -42905,14 +42934,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 31,
-        "expectedOrders": 31,
+        "databaseOrders": 32,
+        "expectedOrders": 32,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-07",
         "label": "Смена 07.06",
         "missingOrders": 0,
-        "revenue": 1341,
+        "revenue": 1371,
         "status": "ok"
       },
       {
@@ -43124,7 +43153,7 @@
         "status": "ok"
       }
     ],
-    "total": 683
+    "total": 684
   },
   "payments": [
     {
@@ -43141,7 +43170,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 151
+      "total": 181
     },
     {
       "method": "Семья",
@@ -43149,6 +43178,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1729,
+      "items": [
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 1728,
       "items": [
@@ -43206,14 +43243,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 1721,
-      "items": [
-        "Черника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -43369,6 +43398,11 @@
       "total": 120
     },
     {
+      "name": "Черника big",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Жасмин лимон mini",
       "qty": 4,
       "total": 80
@@ -43382,13 +43416,8 @@
       "name": "Манго Маракуя big",
       "qty": 3,
       "total": 78
-    },
-    {
-      "name": "Клубничный mini",
-      "qty": 3,
-      "total": 75
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-07T14:19:40.080Z"
+  "updatedAt": "2026-06-07T14:35:50.486Z"
 }

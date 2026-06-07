@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.25,
-    "checks": 8,
+    "average": 41.111111111111114,
+    "checks": 9,
     "expenseTotal": 205,
-    "net": 125,
-    "revenue": 330
+    "net": 165,
+    "revenue": 370
   },
   "data": {
-    "actions": 1680,
+    "actions": 1682,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 660,
+    "orders": 661,
     "products": 39,
     "shifts": 16
   },
   "activity": [
     {
+      "id": 1780800186204,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:43",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780800186204,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:43",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780799535180,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:29",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780787242551,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:07",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780787242551,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:07",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 660,
+    "current": 661,
     "old": [
       {
         "createdAt": "2026-06-06T10:35:09.433Z",
@@ -21026,6 +21026,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-07T02:44:30.720Z",
+        "id": 1706,
+        "items": [
+          "Жасмин лимон mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-tea-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-07",
+        "shiftLabel": "Смена 07.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-07T02:43:06.143Z",
         "id": 1705,
@@ -42139,14 +42168,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 8,
-        "expectedOrders": 8,
+        "databaseOrders": 9,
+        "expectedOrders": 9,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-07",
         "label": "Смена 07.06",
         "missingOrders": 0,
-        "revenue": 330,
+        "revenue": 370,
         "status": "ok"
       },
       {
@@ -42358,12 +42387,12 @@
         "status": "ok"
       }
     ],
-    "total": 660
+    "total": 661
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 220
+      "total": 260
     },
     {
       "method": "Карта",
@@ -42383,6 +42412,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1706,
+      "items": [
+        "Жасмин лимон mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 1705,
       "items": [
@@ -42442,14 +42479,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 1698,
-      "items": [
-        "Matcha big x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -42590,6 +42619,11 @@
       "total": 60
     },
     {
+      "name": "Жасмин лимон mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Babl tea mini",
       "qty": 2,
       "total": 40
@@ -42618,13 +42652,8 @@
       "name": "Мороженое манго",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-07T09:45:08.936Z"
+  "updatedAt": "2026-06-07T09:46:32.657Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 46.473684210526315,
-    "checks": 19,
+    "average": 46.15,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 678,
-    "revenue": 883
+    "net": 718,
+    "revenue": 923
   },
   "data": {
-    "actions": 1702,
+    "actions": 1704,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 671,
+    "orders": 672,
     "products": 39,
     "shifts": 16
   },
   "activity": [
     {
+      "id": 1780807519956,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:45",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780807519956,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:45",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780806141531,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:50",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780803415571,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780803415571,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:36",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 671,
+    "current": 672,
     "old": [
       {
         "createdAt": "2026-06-06T10:35:09.433Z",
@@ -21026,6 +21026,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-07T04:47:27.817Z",
+        "id": 1717,
+        "items": [
+          "Matcha mini x1",
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-07",
+        "shiftLabel": "Смена 07.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-07T04:45:19.897Z",
         "id": 1716,
@@ -42521,14 +42559,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-07",
         "label": "Смена 07.06",
         "missingOrders": 0,
-        "revenue": 883,
+        "revenue": 923,
         "status": "ok"
       },
       {
@@ -42740,12 +42778,12 @@
         "status": "ok"
       }
     ],
-    "total": 671
+    "total": 672
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 577
+      "total": 617
     },
     {
       "method": "Карта",
@@ -42765,6 +42803,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1717,
+      "items": [
+        "Matcha mini x1",
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 1716,
       "items": [
@@ -42825,14 +42872,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1709,
-      "items": [
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -43003,11 +43042,11 @@
       "total": 52
     },
     {
-      "name": "Черника big",
+      "name": "Matcha mini",
       "qty": 1,
       "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-07T11:47:22.490Z"
+  "updatedAt": "2026-06-07T11:49:29.616Z"
 }

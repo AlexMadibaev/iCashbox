@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 42.857142857142854,
-    "checks": 7,
+    "average": 41.25,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": 95,
-    "revenue": 300
+    "net": 125,
+    "revenue": 330
   },
   "data": {
     "actions": 1680,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 659,
+    "orders": 660,
     "products": 39,
     "shifts": 16
   },
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 659,
+    "current": 660,
     "old": [
       {
         "createdAt": "2026-06-06T10:35:09.433Z",
@@ -21026,6 +21026,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-07T02:43:06.143Z",
+        "id": 1705,
+        "items": [
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 30,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-07",
+        "shiftLabel": "Смена 07.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-07T02:32:15.117Z",
         "id": 1704,
@@ -42110,14 +42139,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-07",
         "label": "Смена 07.06",
         "missingOrders": 0,
-        "revenue": 300,
+        "revenue": 330,
         "status": "ok"
       },
       {
@@ -42329,7 +42358,7 @@
         "status": "ok"
       }
     ],
-    "total": 659
+    "total": 660
   },
   "payments": [
     {
@@ -42338,7 +42367,7 @@
     },
     {
       "method": "Карта",
-      "total": 0
+      "total": 30
     },
     {
       "method": "Alif",
@@ -42354,6 +42383,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1705,
+      "items": [
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 1704,
       "items": [
@@ -42563,6 +42600,11 @@
       "total": 40
     },
     {
+      "name": "Айс Латте",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Черника big",
       "qty": 1,
       "total": 30
@@ -42581,13 +42623,8 @@
       "name": "Манго Маракуя mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Мороженое клубничное",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-07T09:34:18.114Z"
+  "updatedAt": "2026-06-07T09:45:08.936Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.85294117647059,
-    "checks": 34,
+    "average": 37.628571428571426,
+    "checks": 35,
     "expenseTotal": 205,
-    "net": 1082,
-    "revenue": 1287
+    "net": 1112,
+    "revenue": 1317
   },
   "data": {
-    "actions": 1813,
+    "actions": 1815,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 726,
+    "orders": 727,
     "products": 39,
     "shifts": 17
   },
   "activity": [
     {
+      "id": 1780892400690,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:20",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780892400690,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:20",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780892142936,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:33",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780887659210,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780887659210,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:00",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 726,
+    "current": 727,
     "old": [
       {
         "createdAt": "2026-06-07T10:49:14.079Z",
@@ -22366,6 +22366,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-08T04:20:32.824Z",
+        "id": 1772,
+        "items": [
+          "МангоБанан big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 1,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 29,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-08",
+        "shiftLabel": "Смена 08.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-08T04:20:00.611Z",
         "id": 1771,
@@ -45645,14 +45674,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-08",
         "label": "Смена 08.06",
         "missingOrders": 0,
-        "revenue": 1287,
+        "revenue": 1317,
         "status": "ok"
       },
       {
@@ -45877,12 +45906,12 @@
         "status": "ok"
       }
     ],
-    "total": 726
+    "total": 727
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 771
+      "total": 772
     },
     {
       "method": "Карта",
@@ -45894,7 +45923,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 45
+      "total": 74
     },
     {
       "method": "Семья",
@@ -45902,6 +45931,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1772,
+      "items": [
+        "МангоБанан big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 1771,
       "items": [
@@ -45960,14 +45997,6 @@
       ],
       "status": "Оплачен",
       "total": 120
-    },
-    {
-      "id": 1764,
-      "items": [
-        "Мороженое клубничное x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -46128,6 +46157,11 @@
       "total": 100
     },
     {
+      "name": "МангоБанан big",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Мороженое манго",
       "qty": 4,
       "total": 80
@@ -46136,13 +46170,8 @@
       "name": "Черника mini",
       "qty": 3,
       "total": 75
-    },
-    {
-      "name": "Мороженое с тапиокой",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-08T11:22:03.038Z"
+  "updatedAt": "2026-06-08T11:22:35.461Z"
 }

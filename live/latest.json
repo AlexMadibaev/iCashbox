@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.96875,
-    "checks": 64,
+    "average": 38.38461538461539,
+    "checks": 65,
     "expenseTotal": 205,
-    "net": 2225,
-    "revenue": 2430
+    "net": 2290,
+    "revenue": 2495
   },
   "data": {
-    "actions": 1873,
+    "actions": 1875,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 756,
+    "orders": 757,
     "products": 39,
     "shifts": 17
   },
   "activity": [
     {
+      "id": 1780913816270,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:16",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780913816270,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:16",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780913357359,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:05",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780909063016,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:57",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780909063016,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:57",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 756,
+    "current": 757,
     "old": [
       {
         "createdAt": "2026-06-07T10:49:14.079Z",
@@ -22366,6 +22366,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-08T10:18:09.597Z",
+        "id": 1802,
+        "items": [
+          "Капучино x1",
+          "Мороженое манго x1",
+          "Мороженое клубничное x1"
+        ],
+        "lines": [
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-08",
+        "shiftLabel": "Смена 08.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 65
+      },
       {
         "createdAt": "2026-06-08T10:16:56.208Z",
         "id": 1801,
@@ -46605,14 +46652,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 64,
-        "expectedOrders": 64,
+        "databaseOrders": 65,
+        "expectedOrders": 65,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-08",
         "label": "Смена 08.06",
         "missingOrders": 0,
-        "revenue": 2430,
+        "revenue": 2495,
         "status": "ok"
       },
       {
@@ -46837,12 +46884,12 @@
         "status": "ok"
       }
     ],
-    "total": 756
+    "total": 757
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1525
+      "total": 1590
     },
     {
       "method": "Карта",
@@ -46862,6 +46909,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1802,
+      "items": [
+        "Капучино x1",
+        "Мороженое манго x1",
+        "Мороженое клубничное x1"
+      ],
+      "status": "Оплачен",
+      "total": 65
+    },
     {
       "id": 1801,
       "items": [
@@ -46920,14 +46977,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 1794,
-      "items": [
-        "Мороженое классическое x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -47064,8 +47113,8 @@
   "topProducts": [
     {
       "name": "Мороженое клубничное",
-      "qty": 12,
-      "total": 240
+      "qty": 13,
+      "total": 260
     },
     {
       "name": "Мороженое классическое",
@@ -47083,14 +47132,14 @@
       "total": 200
     },
     {
+      "name": "Мороженое манго",
+      "qty": 9,
+      "total": 180
+    },
+    {
       "name": "Клубничный mini",
       "qty": 7,
       "total": 175
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 8,
-      "total": 160
     },
     {
       "name": "Айс Латте",
@@ -47104,5 +47153,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-08T17:18:59.650Z"
+  "updatedAt": "2026-06-08T17:20:11.817Z"
 }

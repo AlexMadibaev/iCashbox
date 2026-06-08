@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.52173913043478,
-    "checks": 23,
+    "average": 35.708333333333336,
+    "checks": 24,
     "expenseTotal": 205,
-    "net": 612,
-    "revenue": 817
+    "net": 652,
+    "revenue": 857
   },
   "data": {
-    "actions": 1791,
+    "actions": 1793,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 715,
+    "orders": 716,
     "products": 39,
     "shifts": 17
   },
   "activity": [
     {
+      "id": 1780883655582,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:54",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780883655582,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:54",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780883116057,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:45",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780878658962,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:30",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780878658962,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:30",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 715,
+    "current": 716,
     "old": [
       {
         "createdAt": "2026-06-07T10:49:14.079Z",
@@ -22366,6 +22366,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-08T02:22:50.027Z",
+        "id": 1761,
+        "items": [
+          "Мороженое классическое x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-08",
+        "shiftLabel": "Смена 08.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-08T01:54:15.517Z",
         "id": 1760,
@@ -45299,14 +45328,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 23,
-        "expectedOrders": 23,
+        "databaseOrders": 24,
+        "expectedOrders": 24,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-08",
         "label": "Смена 08.06",
         "missingOrders": 0,
-        "revenue": 817,
+        "revenue": 857,
         "status": "ok"
       },
       {
@@ -45531,12 +45560,12 @@
         "status": "ok"
       }
     ],
-    "total": 715
+    "total": 716
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 521
+      "total": 561
     },
     {
       "method": "Карта",
@@ -45556,6 +45585,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1761,
+      "items": [
+        "Мороженое классическое x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 1760,
       "items": [
@@ -45615,14 +45652,6 @@
       ],
       "status": "Оплачен",
       "total": 80
-    },
-    {
-      "id": 1753,
-      "items": [
-        "Matcha big x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -45763,6 +45792,11 @@
       "total": 125
     },
     {
+      "name": "Мороженое классическое",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "Клубничный big",
       "qty": 3,
       "total": 90
@@ -45774,11 +45808,6 @@
     },
     {
       "name": "Мороженое манго",
-      "qty": 3,
-      "total": 60
-    },
-    {
-      "name": "Мороженое классическое",
       "qty": 3,
       "total": 60
     },
@@ -45799,5 +45828,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-08T08:56:19.095Z"
+  "updatedAt": "2026-06-08T09:24:53.900Z"
 }

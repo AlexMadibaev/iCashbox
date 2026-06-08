@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.733333333333334,
-    "checks": 15,
+    "average": 34.125,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 301,
-    "revenue": 506
+    "net": 341,
+    "revenue": 546
   },
   "data": {
-    "actions": 1775,
+    "actions": 1777,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 707,
+    "orders": 708,
     "products": 39,
     "shifts": 17
   },
   "activity": [
     {
+      "id": 1780877197941,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780877197941,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:06",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780876445411,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1780874274013,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:17",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780874256282,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:17",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780874256282,
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:17",
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 707,
+    "current": 708,
     "old": [
       {
         "createdAt": "2026-06-07T10:49:14.079Z",
@@ -22366,6 +22366,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-08T00:24:56.953Z",
+        "id": 1753,
+        "items": [
+          "Matcha big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-08",
+        "shiftLabel": "Смена 08.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-08T00:06:37.886Z",
         "id": 1752,
@@ -45031,14 +45060,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-08",
         "label": "Смена 08.06",
         "missingOrders": 0,
-        "revenue": 506,
+        "revenue": 546,
         "status": "ok"
       },
       {
@@ -45263,7 +45292,7 @@
         "status": "ok"
       }
     ],
-    "total": 707
+    "total": 708
   },
   "payments": [
     {
@@ -45276,7 +45305,7 @@
     },
     {
       "method": "Alif",
-      "total": 65
+      "total": 105
     },
     {
       "method": "Dushanbe City",
@@ -45288,6 +45317,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1753,
+      "items": [
+        "Matcha big x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 1752,
       "items": [
@@ -45343,14 +45380,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1745,
-      "items": [
-        "ПиноКолада big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -45496,6 +45525,11 @@
       "total": 90
     },
     {
+      "name": "Matcha big",
+      "qty": 1,
+      "total": 40
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 2,
       "total": 40
@@ -45519,13 +45553,8 @@
       "name": "Черника big",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-08T07:08:41.588Z"
+  "updatedAt": "2026-06-08T07:27:00.737Z"
 }

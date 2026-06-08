@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 40,
-    "checks": 1,
+    "average": 45,
+    "checks": 2,
     "expenseTotal": 205,
-    "net": -165,
-    "revenue": 40
+    "net": -115,
+    "revenue": 90
   },
   "data": {
-    "actions": 1747,
+    "actions": 1749,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 693,
+    "orders": 694,
     "products": 39,
     "shifts": 17
   },
   "activity": [
+    {
+      "id": 1780866673506,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "09:11",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780866673506,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "09:11",
+      "type": "Создание заказа"
+    },
     {
       "id": 1780863144839,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:25",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780820719871,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:25",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780820252541,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:17",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 693,
+    "current": 694,
     "old": [
       {
         "createdAt": "2026-06-07T10:49:14.079Z",
@@ -22366,6 +22366,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-07T21:20:46.743Z",
+        "id": 1739,
+        "items": [
+          "Клубничный big x1",
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 200,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-08",
+        "shiftLabel": "Смена 08.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-07T21:11:13.451Z",
         "id": 1738,
@@ -44589,14 +44627,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 1,
-        "expectedOrders": 1,
+        "databaseOrders": 2,
+        "expectedOrders": 2,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-08",
         "label": "Смена 08.06",
         "missingOrders": 0,
-        "revenue": 40,
+        "revenue": 90,
         "status": "ok"
       },
       {
@@ -44821,12 +44859,12 @@
         "status": "ok"
       }
     ],
-    "total": 693
+    "total": 694
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 50
     },
     {
       "method": "Карта",
@@ -44846,6 +44884,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1739,
+      "items": [
+        "Клубничный big x1",
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 1738,
       "items": [
@@ -44990,8 +45037,13 @@
   "topProducts": [
     {
       "name": "Мороженое классическое",
+      "qty": 2,
+      "total": 40
+    },
+    {
+      "name": "Клубничный big",
       "qty": 1,
-      "total": 20
+      "total": 30
     },
     {
       "name": "Мороженое клубничное",
@@ -45000,5 +45052,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-08T04:13:17.332Z"
+  "updatedAt": "2026-06-08T04:22:50.784Z"
 }

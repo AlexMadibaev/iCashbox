@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 40,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -165,
+    "revenue": 40
   },
   "data": {
     "actions": 1747,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 692,
+    "orders": 693,
     "products": 39,
     "shifts": 17
   },
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 692,
+    "current": 693,
     "old": [
       {
         "createdAt": "2026-06-07T10:49:14.079Z",
@@ -22366,6 +22366,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-07T21:11:13.451Z",
+        "id": 1738,
+        "items": [
+          "Мороженое классическое x1",
+          "Мороженое клубничное x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-08",
+        "shiftLabel": "Смена 08.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-07T10:49:14.079Z",
         "id": 1737,
@@ -44551,15 +44589,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-06-08",
         "label": "Смена 08.06",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 40,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -44783,7 +44821,7 @@
         "status": "ok"
       }
     ],
-    "total": 692
+    "total": 693
   },
   "payments": [
     {
@@ -44796,7 +44834,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 40
     },
     {
       "method": "Dushanbe City",
@@ -44807,7 +44845,17 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 1738,
+      "items": [
+        "Мороженое классическое x1",
+        "Мороженое клубничное x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -44939,7 +44987,18 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Мороженое классическое",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Мороженое клубничное",
+      "qty": 1,
+      "total": 20
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-06-08T03:14:28.901Z"
+  "updatedAt": "2026-06-08T04:13:17.332Z"
 }

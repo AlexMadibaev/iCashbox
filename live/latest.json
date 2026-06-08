@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.71875,
-    "checks": 32,
+    "average": 37.78787878787879,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 1002,
-    "revenue": 1207
+    "net": 1042,
+    "revenue": 1247
   },
   "data": {
-    "actions": 1809,
+    "actions": 1811,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 724,
+    "orders": 725,
     "products": 39,
     "shifts": 17
   },
   "activity": [
     {
+      "id": 1780892042924,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:14",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780892042924,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:14",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780891024037,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:57",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780887128392,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:52",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780887128392,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:52",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 724,
+    "current": 725,
     "old": [
       {
         "createdAt": "2026-06-07T10:49:14.079Z",
@@ -22366,6 +22366,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-08T04:15:42.889Z",
+        "id": 1770,
+        "items": [
+          "Мороженое с тапиокой x1",
+          "Мороженое манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-08",
+        "shiftLabel": "Смена 08.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-08T04:14:02.871Z",
         "id": 1769,
@@ -45578,14 +45616,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 32,
-        "expectedOrders": 32,
+        "databaseOrders": 33,
+        "expectedOrders": 33,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-08",
         "label": "Смена 08.06",
         "missingOrders": 0,
-        "revenue": 1207,
+        "revenue": 1247,
         "status": "ok"
       },
       {
@@ -45810,12 +45848,12 @@
         "status": "ok"
       }
     ],
-    "total": 724
+    "total": 725
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 731
+      "total": 771
     },
     {
       "method": "Карта",
@@ -45835,6 +45873,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1770,
+      "items": [
+        "Мороженое с тапиокой x1",
+        "Мороженое манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 1769,
       "items": [
@@ -45892,14 +45939,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 1762,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -46060,21 +46099,21 @@
       "total": 100
     },
     {
+      "name": "Мороженое манго",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Черника mini",
       "qty": 3,
       "total": 75
     },
     {
-      "name": "Черника big",
-      "qty": 2,
-      "total": 60
-    },
-    {
-      "name": "МангоБанан big",
-      "qty": 2,
+      "name": "Мороженое с тапиокой",
+      "qty": 3,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-08T11:16:06.626Z"
+  "updatedAt": "2026-06-08T11:17:45.583Z"
 }

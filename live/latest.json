@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.470588235294116,
-    "checks": 17,
+    "average": 33.94444444444444,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 381,
-    "revenue": 586
+    "net": 406,
+    "revenue": 611
   },
   "data": {
-    "actions": 1912,
+    "actions": 1914,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 775,
+    "orders": 776,
     "products": 39,
     "shifts": 18
   },
   "activity": [
     {
+      "id": 1780991125824,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:45",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780991125824,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:45",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780990842961,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:07",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780973649030,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:54",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780973649030,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:54",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 775,
+    "current": 776,
     "old": [
       {
         "createdAt": "2026-06-08T10:26:51.242Z",
@@ -24505,6 +24505,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-09T08:45:42.428Z",
+        "id": 1821,
+        "items": [
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-09",
+        "shiftLabel": "Смена 09.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-06-09T07:45:25.756Z",
         "id": 1820,
@@ -49385,14 +49414,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-09",
         "label": "Смена 09.06",
         "missingOrders": 0,
-        "revenue": 586,
+        "revenue": 611,
         "status": "ok"
       },
       {
@@ -49630,12 +49659,12 @@
         "status": "ok"
       }
     ],
-    "total": 775
+    "total": 776
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 411
+      "total": 436
     },
     {
       "method": "Карта",
@@ -49655,6 +49684,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1821,
+      "items": [
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 1820,
       "items": [
@@ -49712,17 +49749,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 1813,
-      "items": [
-        "Мороженое клубничное x1",
-        "Клубничный mini x1",
-        "Манго Маракуя mini x1",
-        "Фреш лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 80
     }
   ],
   "shifts": {
@@ -49859,8 +49885,8 @@
   "topProducts": [
     {
       "name": "Клубничный mini",
-      "qty": 3,
-      "total": 75
+      "qty": 4,
+      "total": 100
     },
     {
       "name": "Мороженое клубничное",
@@ -49899,5 +49925,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-09T14:47:30.094Z"
+  "updatedAt": "2026-06-09T15:47:47.714Z"
 }

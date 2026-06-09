@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.083333333333336,
-    "checks": 24,
+    "average": 40.48,
+    "checks": 25,
     "expenseTotal": 205,
-    "net": 757,
-    "revenue": 962
+    "net": 807,
+    "revenue": 1012
   },
   "data": {
-    "actions": 1926,
+    "actions": 1928,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 782,
+    "orders": 783,
     "products": 39,
     "shifts": 18
   },
   "activity": [
     {
+      "id": 1781001094461,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:31",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781001094461,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:31",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781000864897,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:48",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780994742480,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:45",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780994742480,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:45",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 782,
+    "current": 783,
     "old": [
       {
         "createdAt": "2026-06-08T10:26:51.242Z",
@@ -24505,6 +24505,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-09T10:44:28.932Z",
+        "id": 1828,
+        "items": [
+          "Клубничный mini x1",
+          "ПиноКолада mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-милкшейк-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-09",
+        "shiftLabel": "Смена 09.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-09T10:31:34.403Z",
         "id": 1827,
@@ -49651,14 +49689,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 24,
-        "expectedOrders": 24,
+        "databaseOrders": 25,
+        "expectedOrders": 25,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-09",
         "label": "Смена 09.06",
         "missingOrders": 0,
-        "revenue": 962,
+        "revenue": 1012,
         "status": "ok"
       },
       {
@@ -49896,12 +49934,12 @@
         "status": "ok"
       }
     ],
-    "total": 782
+    "total": 783
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 541
+      "total": 591
     },
     {
       "method": "Карта",
@@ -49921,6 +49959,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1828,
+      "items": [
+        "Клубничный mini x1",
+        "ПиноКолада mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 1827,
       "items": [
@@ -49983,14 +50030,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 1820,
-      "items": [
-        "Мороженое с тапиокой x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -50127,8 +50166,8 @@
   "topProducts": [
     {
       "name": "Клубничный mini",
-      "qty": 6,
-      "total": 150
+      "qty": 7,
+      "total": 175
     },
     {
       "name": "Babl tea mini",
@@ -50167,5 +50206,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-09T17:33:38.950Z"
+  "updatedAt": "2026-06-09T17:46:33.571Z"
 }

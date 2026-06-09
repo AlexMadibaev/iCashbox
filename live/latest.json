@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.333333333333336,
-    "checks": 9,
+    "average": 38,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 95,
-    "revenue": 300
+    "net": 175,
+    "revenue": 380
   },
   "data": {
-    "actions": 1896,
+    "actions": 1898,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 767,
+    "orders": 768,
     "products": 39,
     "shifts": 18
   },
   "activity": [
     {
+      "id": 1780964109239,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:15",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780964109239,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:15",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780963763049,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "10:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780956497617,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:08",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780956497617,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:08",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 767,
+    "current": 768,
     "old": [
       {
         "createdAt": "2026-06-08T10:26:51.242Z",
@@ -24505,6 +24505,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-09T01:14:30.862Z",
+        "id": 1813,
+        "items": [
+          "Мороженое клубничное x1",
+          "Клубничный mini x1",
+          "Манго Маракуя mini x1",
+          "Фреш лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-фреш-лимон-mini",
+            "name": "Фреш лимон mini",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 200,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-09",
+        "shiftLabel": "Смена 09.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 80
+      },
       {
         "createdAt": "2026-06-09T00:15:09.162Z",
         "id": 1812,
@@ -49108,14 +49164,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-09",
         "label": "Смена 09.06",
         "missingOrders": 0,
-        "revenue": 300,
+        "revenue": 380,
         "status": "ok"
       },
       {
@@ -49353,12 +49409,12 @@
         "status": "ok"
       }
     ],
-    "total": 767
+    "total": 768
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 145
+      "total": 225
     },
     {
       "method": "Карта",
@@ -49378,6 +49434,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1813,
+      "items": [
+        "Мороженое клубничное x1",
+        "Клубничный mini x1",
+        "Манго Маракуя mini x1",
+        "Фреш лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 80
+    },
     {
       "id": 1812,
       "items": [
@@ -49435,14 +49502,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 1805,
-      "items": [
-        "Клубничный mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -49578,19 +49637,24 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое клубничное",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Айс Латте",
       "qty": 2,
       "total": 60
     },
     {
-      "name": "МангоБанан mini",
+      "name": "Клубничный mini",
       "qty": 2,
       "total": 50
     },
     {
-      "name": "Мороженое клубничное",
+      "name": "МангоБанан mini",
       "qty": 2,
-      "total": 40
+      "total": 50
     },
     {
       "name": "Babl tea mini",
@@ -49603,21 +49667,16 @@
       "total": 25
     },
     {
-      "name": "Клубничный mini",
+      "name": "Манго Маракуя mini",
       "qty": 1,
-      "total": 25
+      "total": 20
     },
     {
       "name": "Мороженое классическое",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Виноградный тропический mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-09T07:17:13.172Z"
+  "updatedAt": "2026-06-09T08:16:35.682Z"
 }

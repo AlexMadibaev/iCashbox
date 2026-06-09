@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.5,
-    "checks": 12,
+    "average": 36.61538461538461,
+    "checks": 13,
     "expenseTotal": 205,
-    "net": 221,
-    "revenue": 426
+    "net": 271,
+    "revenue": 476
   },
   "data": {
-    "actions": 1902,
+    "actions": 1904,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 770,
+    "orders": 771,
     "products": 39,
     "shifts": 18
   },
   "activity": [
     {
+      "id": 1780974446937,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:07",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1780974446937,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:07",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1780973649030,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780961828761,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780961828761,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:37",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 770,
+    "current": 771,
     "old": [
       {
         "createdAt": "2026-06-08T10:26:51.242Z",
@@ -24505,6 +24505,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-09T03:56:19.102Z",
+        "id": 1816,
+        "items": [
+          "Виноградный тропический mini x1",
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-09",
+        "shiftLabel": "Смена 09.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-09T03:07:26.879Z",
         "id": 1815,
@@ -49222,14 +49260,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 12,
-        "expectedOrders": 12,
+        "databaseOrders": 13,
+        "expectedOrders": 13,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-09",
         "label": "Смена 09.06",
         "missingOrders": 0,
-        "revenue": 426,
+        "revenue": 476,
         "status": "ok"
       },
       {
@@ -49467,12 +49505,12 @@
         "status": "ok"
       }
     ],
-    "total": 770
+    "total": 771
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 271
+      "total": 321
     },
     {
       "method": "Карта",
@@ -49492,6 +49530,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1816,
+      "items": [
+        "Виноградный тропический mini x1",
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 1815,
       "items": [
@@ -49551,15 +49598,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 1808,
-      "items": [
-        "Черника mini x1",
-        "Виноградный тропический mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 45
     }
   ],
   "shifts": {
@@ -49715,26 +49753,26 @@
       "total": 50
     },
     {
+      "name": "Виноградный тропический mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Babl tea mini",
       "qty": 2,
       "total": 40
     },
     {
+      "name": "Черника big",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Черника mini",
-      "qty": 1,
-      "total": 25
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 2,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-09T10:09:31.717Z"
+  "updatedAt": "2026-06-09T10:58:23.762Z"
 }

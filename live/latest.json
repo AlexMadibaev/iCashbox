@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.43478260869565,
-    "checks": 23,
+    "average": 41.916666666666664,
+    "checks": 24,
     "expenseTotal": 205,
-    "net": 725,
-    "revenue": 930
+    "net": 801,
+    "revenue": 1006
   },
   "data": {
-    "actions": 1975,
+    "actions": 1977,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 806,
+    "orders": 807,
     "products": 39,
     "shifts": 19
   },
   "activity": [
     {
+      "id": 1781063881693,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:58",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781063881693,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:58",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781063713102,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:54",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781059112193,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:38",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781059112193,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:38",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 806,
+    "current": 807,
     "old": [
       {
         "createdAt": "2026-06-09T10:44:28.932Z",
@@ -25365,6 +25365,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-10T04:43:43.267Z",
+        "id": 1852,
+        "items": [
+          "Фреш лимон big x1",
+          "Жасмин лимон big x1",
+          "МангоБанан big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-фреш-лимон-big",
+            "name": "Фреш лимон big",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-tea-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-милкшейк-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 76,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-10",
+        "shiftLabel": "Смена 10.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 76
+      },
       {
         "createdAt": "2026-06-10T03:58:01.634Z",
         "id": 1851,
@@ -51288,14 +51335,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 23,
-        "expectedOrders": 23,
+        "databaseOrders": 24,
+        "expectedOrders": 24,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-10",
         "label": "Смена 10.06",
         "missingOrders": 0,
-        "revenue": 930,
+        "revenue": 1006,
         "status": "ok"
       },
       {
@@ -51546,12 +51593,12 @@
         "status": "ok"
       }
     ],
-    "total": 806
+    "total": 807
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 423
+      "total": 499
     },
     {
       "method": "Карта",
@@ -51571,6 +51618,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1852,
+      "items": [
+        "Фреш лимон big x1",
+        "Жасмин лимон big x1",
+        "МангоБанан big x1"
+      ],
+      "status": "Оплачен",
+      "total": 76
+    },
     {
       "id": 1851,
       "items": [
@@ -51630,14 +51687,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 1844,
-      "items": [
-        "ПиноКолада mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -51788,6 +51837,11 @@
       "total": 75
     },
     {
+      "name": "МангоБанан big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Мороженое манго",
       "qty": 3,
       "total": 60
@@ -51806,13 +51860,8 @@
       "name": "ПиноКолада big",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 2,
-      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-10T11:00:06.543Z"
+  "updatedAt": "2026-06-10T11:45:48.922Z"
 }

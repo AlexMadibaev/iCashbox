@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33,
-    "checks": 16,
+    "average": 32.8235294117647,
+    "checks": 17,
     "expenseTotal": 205,
-    "net": 323,
-    "revenue": 528
+    "net": 353,
+    "revenue": 558
   },
   "data": {
-    "actions": 1961,
+    "actions": 1963,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 799,
+    "orders": 800,
     "products": 39,
     "shifts": 19
   },
   "activity": [
     {
+      "id": 1781059036501,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:37",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781059036501,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:37",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781058803806,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781054697721,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:24",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781054697721,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:24",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 799,
+    "current": 800,
     "old": [
       {
         "createdAt": "2026-06-09T10:44:28.932Z",
@@ -25365,6 +25365,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-10T02:38:32.128Z",
+        "id": 1845,
+        "items": [
+          "ПиноКолада big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 30,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-10",
+        "shiftLabel": "Смена 10.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-10T02:37:16.452Z",
         "id": 1844,
@@ -51049,14 +51078,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 16,
-        "expectedOrders": 16,
+        "databaseOrders": 17,
+        "expectedOrders": 17,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-10",
         "label": "Смена 10.06",
         "missingOrders": 0,
-        "revenue": 528,
+        "revenue": 558,
         "status": "ok"
       },
       {
@@ -51307,7 +51336,7 @@
         "status": "ok"
       }
     ],
-    "total": 799
+    "total": 800
   },
   "payments": [
     {
@@ -51320,7 +51349,7 @@
     },
     {
       "method": "Alif",
-      "total": 101
+      "total": 131
     },
     {
       "method": "Dushanbe City",
@@ -51332,6 +51361,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1845,
+      "items": [
+        "ПиноКолада big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 1844,
       "items": [
@@ -51391,14 +51428,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 1837,
-      "items": [
-        "МангоБанан mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -51539,6 +51568,11 @@
       "total": 120
     },
     {
+      "name": "ПиноКолада big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Клубничный mini",
       "qty": 2,
       "total": 50
@@ -51552,11 +51586,6 @@
       "name": "Matcha big",
       "qty": 1,
       "total": 40
-    },
-    {
-      "name": "ПиноКолада big",
-      "qty": 1,
-      "total": 30
     },
     {
       "name": "МангоБанан big",
@@ -51575,5 +51604,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-10T09:39:21.101Z"
+  "updatedAt": "2026-06-10T09:40:36.855Z"
 }

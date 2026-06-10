@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 31.928571428571427,
-    "checks": 14,
+    "average": 33.53333333333333,
+    "checks": 15,
     "expenseTotal": 205,
-    "net": 242,
-    "revenue": 447
+    "net": 298,
+    "revenue": 503
   },
   "data": {
-    "actions": 1957,
+    "actions": 1959,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 797,
+    "orders": 798,
     "products": 39,
     "shifts": 19
   },
   "activity": [
     {
+      "id": 1781056895502,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:01",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781056895502,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:01",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781056678343,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:10",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781053079841,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:57",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781053079841,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:57",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 797,
+    "current": 798,
     "old": [
       {
         "createdAt": "2026-06-09T10:44:28.932Z",
@@ -25365,6 +25365,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-10T02:33:23.754Z",
+        "id": 1843,
+        "items": [
+          "ПиноКолада big x1",
+          "Манго Маракуя big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-mango-maracuya-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 36,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-10",
+        "shiftLabel": "Смена 10.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 56
+      },
       {
         "createdAt": "2026-06-10T02:01:35.442Z",
         "id": 1842,
@@ -50982,14 +51020,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 14,
-        "expectedOrders": 14,
+        "databaseOrders": 15,
+        "expectedOrders": 15,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-10",
         "label": "Смена 10.06",
         "missingOrders": 0,
-        "revenue": 447,
+        "revenue": 503,
         "status": "ok"
       },
       {
@@ -51240,12 +51278,12 @@
         "status": "ok"
       }
     ],
-    "total": 797
+    "total": 798
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 282
+      "total": 302
     },
     {
       "method": "Карта",
@@ -51253,7 +51291,7 @@
     },
     {
       "method": "Alif",
-      "total": 40
+      "total": 76
     },
     {
       "method": "Dushanbe City",
@@ -51265,6 +51303,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1843,
+      "items": [
+        "ПиноКолада big x1",
+        "Манго Маракуя big x1"
+      ],
+      "status": "Оплачен",
+      "total": 56
+    },
     {
       "id": 1842,
       "items": [
@@ -51320,14 +51367,6 @@
       "id": 1836,
       "items": [
         "МангоБанан big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
-    },
-    {
-      "id": 1835,
-      "items": [
-        "Айс Латте x1"
       ],
       "status": "Оплачен",
       "total": 30
@@ -51486,26 +51525,26 @@
       "total": 40
     },
     {
+      "name": "ПиноКолада big",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "МангоБанан big",
       "qty": 1,
       "total": 30
     },
     {
+      "name": "Манго Маракуя big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Виноградный тропический big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Babl tea big",
-      "qty": 1,
-      "total": 26
-    },
-    {
-      "name": "Черника mini",
-      "qty": 1,
-      "total": 25
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-10T09:03:40.364Z"
+  "updatedAt": "2026-06-10T09:35:29.503Z"
 }

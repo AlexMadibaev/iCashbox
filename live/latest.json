@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 25,
-    "checks": 2,
+    "average": 25.333333333333332,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -155,
-    "revenue": 50
+    "net": -129,
+    "revenue": 76
   },
   "data": {
-    "actions": 1933,
+    "actions": 1935,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 785,
+    "orders": 786,
     "products": 39,
     "shifts": 19
   },
   "activity": [
+    {
+      "id": 1781045242266,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781045242266,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:47",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781040930336,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:51",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1780998674335,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:51",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1780996847803,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:20",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 785,
+    "current": 786,
     "old": [
       {
         "createdAt": "2026-06-09T10:44:28.932Z",
@@ -25365,6 +25365,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-09T23:41:47.040Z",
+        "id": 1831,
+        "items": [
+          "Babl tea big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 26,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-10",
+        "shiftLabel": "Смена 10.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-06-09T22:47:22.220Z",
         "id": 1830,
@@ -50607,14 +50636,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-10",
         "label": "Смена 10.06",
         "missingOrders": 0,
-        "revenue": 50,
+        "revenue": 76,
         "status": "ok"
       },
       {
@@ -50865,12 +50894,12 @@
         "status": "ok"
       }
     ],
-    "total": 785
+    "total": 786
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 20
+      "total": 46
     },
     {
       "method": "Карта",
@@ -50890,6 +50919,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1831,
+      "items": [
+        "Babl tea big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 1830,
       "items": [
@@ -51045,11 +51082,16 @@
       "total": 30
     },
     {
+      "name": "Babl tea big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Мороженое классическое",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-10T05:49:28.241Z"
+  "updatedAt": "2026-06-10T06:43:52.873Z"
 }

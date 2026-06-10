@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.22222222222222,
-    "checks": 18,
+    "average": 32.78947368421053,
+    "checks": 19,
     "expenseTotal": 205,
-    "net": 393,
-    "revenue": 598
+    "net": 418,
+    "revenue": 623
   },
   "data": {
-    "actions": 1965,
+    "actions": 1967,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 801,
+    "orders": 802,
     "products": 39,
     "shifts": 19
   },
   "activity": [
     {
+      "id": 1781060067489,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:54",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781060067489,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:54",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781059112193,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:57",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781056426460,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:53",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781056426460,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:53",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 801,
+    "current": 802,
     "old": [
       {
         "createdAt": "2026-06-09T10:44:28.932Z",
@@ -25365,6 +25365,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-10T03:21:07.896Z",
+        "id": 1847,
+        "items": [
+          "ПиноКолада mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-10",
+        "shiftLabel": "Смена 10.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-06-10T02:54:27.433Z",
         "id": 1846,
@@ -51107,14 +51136,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 18,
-        "expectedOrders": 18,
+        "databaseOrders": 19,
+        "expectedOrders": 19,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-10",
         "label": "Смена 10.06",
         "missingOrders": 0,
-        "revenue": 598,
+        "revenue": 623,
         "status": "ok"
       },
       {
@@ -51365,12 +51394,12 @@
         "status": "ok"
       }
     ],
-    "total": 801
+    "total": 802
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 342
+      "total": 367
     },
     {
       "method": "Карта",
@@ -51390,6 +51419,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1847,
+      "items": [
+        "ПиноКолада mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 1846,
       "items": [
@@ -51449,14 +51486,6 @@
       ],
       "status": "Оплачен",
       "total": 45
-    },
-    {
-      "id": 1839,
-      "items": [
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -51607,6 +51636,11 @@
       "total": 60
     },
     {
+      "name": "ПиноКолада mini",
+      "qty": 2,
+      "total": 50
+    },
+    {
       "name": "Клубничный mini",
       "qty": 2,
       "total": 50
@@ -51625,13 +51659,8 @@
       "name": "МангоБанан big",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-10T09:56:33.107Z"
+  "updatedAt": "2026-06-10T10:23:13.946Z"
 }

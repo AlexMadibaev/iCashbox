@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.96666666666667,
-    "checks": 30,
+    "average": 39.483870967741936,
+    "checks": 31,
     "expenseTotal": 205,
-    "net": 964,
-    "revenue": 1169
+    "net": 1019,
+    "revenue": 1224
   },
   "data": {
-    "actions": 1989,
+    "actions": 1991,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 813,
+    "orders": 814,
     "products": 39,
     "shifts": 19
   },
   "activity": [
     {
+      "id": 1781069886061,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:38",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781069886061,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:38",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781069687451,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781066623326,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:43",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781066623326,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:43",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 813,
+    "current": 814,
     "old": [
       {
         "createdAt": "2026-06-09T10:44:28.932Z",
@@ -25365,6 +25365,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-10T05:51:08.414Z",
+        "id": 1859,
+        "items": [
+          "Клубничный big x1",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-10",
+        "shiftLabel": "Смена 10.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 55
+      },
       {
         "createdAt": "2026-06-10T05:38:06.000Z",
         "id": 1858,
@@ -51509,14 +51547,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 30,
-        "expectedOrders": 30,
+        "databaseOrders": 31,
+        "expectedOrders": 31,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-10",
         "label": "Смена 10.06",
         "missingOrders": 0,
-        "revenue": 1169,
+        "revenue": 1224,
         "status": "ok"
       },
       {
@@ -51767,12 +51805,12 @@
         "status": "ok"
       }
     ],
-    "total": 813
+    "total": 814
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 567
+      "total": 622
     },
     {
       "method": "Карта",
@@ -51792,6 +51830,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1859,
+      "items": [
+        "Клубничный big x1",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 55
+    },
     {
       "id": 1858,
       "items": [
@@ -51849,15 +51896,6 @@
       ],
       "status": "Оплачен",
       "total": 76
-    },
-    {
-      "id": 1851,
-      "items": [
-        "Айс Латте x1",
-        "Манго Маракуя big x1"
-      ],
-      "status": "Оплачен",
-      "total": 56
     }
   ],
   "shifts": {
@@ -52008,6 +52046,11 @@
       "total": 80
     },
     {
+      "name": "Клубничный mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "МангоБанан mini",
       "qty": 3,
       "total": 75
@@ -52026,13 +52069,8 @@
       "name": "Мороженое Орео",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-10T12:40:10.762Z"
+  "updatedAt": "2026-06-10T12:53:14.086Z"
 }

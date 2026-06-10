@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 38.91304347826087,
-    "checks": 46,
+    "average": 40.851063829787236,
+    "checks": 47,
     "expenseTotal": 205,
-    "net": 1585,
-    "revenue": 1790
+    "net": 1715,
+    "revenue": 1920
   },
   "data": {
-    "actions": 2021,
+    "actions": 2025,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 829,
+    "orders": 830,
     "products": 39,
     "shifts": 19
   },
   "activity": [
     {
+      "id": 1781084848380,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781084848380,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:47",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1781084367326,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:39",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781084367326,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:39",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781082831008,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:48",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781081184462,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:46",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781081184462,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:46",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781079359844,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:15",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781079359844,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:15",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 829,
+    "current": 830,
     "old": [
       {
         "createdAt": "2026-06-09T10:44:28.932Z",
@@ -25365,6 +25365,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-10T09:47:28.321Z",
+        "id": 1875,
+        "items": [
+          "Мороженое рожок x3",
+          "Жасмин лимон mini x5"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 3,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-жасмин-tea-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 5,
+            "size": "",
+            "total": 100
+          }
+        ],
+        "payments": {
+          "Наличные": 130,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-10",
+        "shiftLabel": "Смена 10.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 130
+      },
       {
         "createdAt": "2026-06-10T09:39:27.254Z",
         "id": 1874,
@@ -52027,14 +52065,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 46,
-        "expectedOrders": 46,
+        "databaseOrders": 47,
+        "expectedOrders": 47,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-10",
         "label": "Смена 10.06",
         "missingOrders": 0,
-        "revenue": 1790,
+        "revenue": 1920,
         "status": "ok"
       },
       {
@@ -52285,12 +52323,12 @@
         "status": "ok"
       }
     ],
-    "total": 829
+    "total": 830
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1013
+      "total": 1143
     },
     {
       "method": "Карта",
@@ -52310,6 +52348,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1875,
+      "items": [
+        "Мороженое рожок x3",
+        "Жасмин лимон mini x5"
+      ],
+      "status": "Оплачен",
+      "total": 130
+    },
     {
       "id": 1874,
       "items": [
@@ -52366,16 +52413,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 1867,
-      "items": [
-        "Matcha big x1",
-        "Мороженое Орео x1",
-        "Черника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 85
     }
   ],
   "shifts": {
@@ -52536,6 +52573,11 @@
       "total": 120
     },
     {
+      "name": "Жасмин лимон mini",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "Babl tea mini",
       "qty": 5,
       "total": 100
@@ -52544,13 +52586,8 @@
       "name": "Черника mini",
       "qty": 4,
       "total": 100
-    },
-    {
-      "name": "Клубничный big",
-      "qty": 3,
-      "total": 90
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-10T16:41:32.073Z"
+  "updatedAt": "2026-06-10T16:49:33.791Z"
 }

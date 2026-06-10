@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.62068965517241,
-    "checks": 29,
+    "average": 38.96666666666667,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 944,
-    "revenue": 1149
+    "net": 964,
+    "revenue": 1169
   },
   "data": {
-    "actions": 1987,
+    "actions": 1989,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 812,
+    "orders": 813,
     "products": 39,
     "shifts": 19
   },
   "activity": [
     {
+      "id": 1781069687451,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:34",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781069687451,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:34",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781069566139,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781063881693,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:58",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781063881693,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:58",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 812,
+    "current": 813,
     "old": [
       {
         "createdAt": "2026-06-09T10:44:28.932Z",
@@ -25365,6 +25365,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-10T05:38:06.000Z",
+        "id": 1858,
+        "items": [
+          "Мороженое манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 20,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-10",
+        "shiftLabel": "Смена 10.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-10T05:34:47.391Z",
         "id": 1857,
@@ -51480,14 +51509,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-10",
         "label": "Смена 10.06",
         "missingOrders": 0,
-        "revenue": 1149,
+        "revenue": 1169,
         "status": "ok"
       },
       {
@@ -51738,7 +51767,7 @@
         "status": "ok"
       }
     ],
-    "total": 812
+    "total": 813
   },
   "payments": [
     {
@@ -51755,7 +51784,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 386
+      "total": 406
     },
     {
       "method": "Семья",
@@ -51763,6 +51792,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1858,
+      "items": [
+        "Мороженое манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 1857,
       "items": [
@@ -51821,14 +51858,6 @@
       ],
       "status": "Оплачен",
       "total": 56
-    },
-    {
-      "id": 1850,
-      "items": [
-        "Виноградный тропический big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -51974,6 +52003,11 @@
       "total": 120
     },
     {
+      "name": "Мороженое манго",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "МангоБанан mini",
       "qty": 3,
       "total": 75
@@ -51989,11 +52023,6 @@
       "total": 60
     },
     {
-      "name": "Мороженое манго",
-      "qty": 3,
-      "total": 60
-    },
-    {
       "name": "Мороженое Орео",
       "qty": 3,
       "total": 60
@@ -52005,5 +52034,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-10T12:36:52.306Z"
+  "updatedAt": "2026-06-10T12:40:10.762Z"
 }

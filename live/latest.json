@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.7037037037037,
-    "checks": 27,
+    "average": 40.32142857142857,
+    "checks": 28,
     "expenseTotal": 205,
-    "net": 894,
-    "revenue": 1099
+    "net": 924,
+    "revenue": 1129
   },
   "data": {
-    "actions": 1983,
+    "actions": 1985,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 810,
+    "orders": 811,
     "products": 39,
     "shifts": 19
   },
   "activity": [
     {
+      "id": 1781069343716,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781069343716,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:29",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781069274611,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:55",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781063038263,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:43",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781063038263,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:43",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 810,
+    "current": 811,
     "old": [
       {
         "createdAt": "2026-06-09T10:44:28.932Z",
@@ -25365,6 +25365,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-10T05:32:46.071Z",
+        "id": 1856,
+        "items": [
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 30,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-10",
+        "shiftLabel": "Смена 10.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-10T05:29:03.667Z",
         "id": 1855,
@@ -51422,14 +51451,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 27,
-        "expectedOrders": 27,
+        "databaseOrders": 28,
+        "expectedOrders": 28,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-10",
         "label": "Смена 10.06",
         "missingOrders": 0,
-        "revenue": 1099,
+        "revenue": 1129,
         "status": "ok"
       },
       {
@@ -51680,7 +51709,7 @@
         "status": "ok"
       }
     ],
-    "total": 810
+    "total": 811
   },
   "payments": [
     {
@@ -51697,7 +51726,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 356
+      "total": 386
     },
     {
       "method": "Семья",
@@ -51705,6 +51734,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1856,
+      "items": [
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 1855,
       "items": [
@@ -51763,17 +51800,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 1848,
-      "items": [
-        "Мороженое клубничное x3",
-        "Мороженое манго x3",
-        "Мороженое классическое x1",
-        "Мороженое Орео x3"
-      ],
-      "status": "Оплачен",
-      "total": 200
     }
   ],
   "shifts": {
@@ -51910,8 +51936,8 @@
   "topProducts": [
     {
       "name": "Айс Латте",
-      "qty": 5,
-      "total": 150
+      "qty": 6,
+      "total": 180
     },
     {
       "name": "Мороженое клубничное",
@@ -51950,5 +51976,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-10T12:31:08.432Z"
+  "updatedAt": "2026-06-10T12:34:50.899Z"
 }

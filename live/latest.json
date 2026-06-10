@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.72727272727273,
-    "checks": 22,
+    "average": 40.43478260869565,
+    "checks": 23,
     "expenseTotal": 205,
-    "net": 669,
-    "revenue": 874
+    "net": 725,
+    "revenue": 930
   },
   "data": {
-    "actions": 1973,
+    "actions": 1975,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 805,
+    "orders": 806,
     "products": 39,
     "shifts": 19
   },
   "activity": [
     {
+      "id": 1781063713102,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:55",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781063713102,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:55",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781063038263,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:38",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781059036501,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781059036501,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:37",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 805,
+    "current": 806,
     "old": [
       {
         "createdAt": "2026-06-09T10:44:28.932Z",
@@ -25365,6 +25365,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-10T03:58:01.634Z",
+        "id": 1851,
+        "items": [
+          "Айс Латте x1",
+          "Манго Маракуя big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-mango-maracuya-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-10",
+        "shiftLabel": "Смена 10.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 56
+      },
       {
         "createdAt": "2026-06-10T03:55:13.041Z",
         "id": 1850,
@@ -51250,14 +51288,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 22,
-        "expectedOrders": 22,
+        "databaseOrders": 23,
+        "expectedOrders": 23,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-10",
         "label": "Смена 10.06",
         "missingOrders": 0,
-        "revenue": 874,
+        "revenue": 930,
         "status": "ok"
       },
       {
@@ -51508,12 +51546,12 @@
         "status": "ok"
       }
     ],
-    "total": 805
+    "total": 806
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 367
+      "total": 423
     },
     {
       "method": "Карта",
@@ -51533,6 +51571,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1851,
+      "items": [
+        "Айс Латте x1",
+        "Манго Маракуя big x1"
+      ],
+      "status": "Оплачен",
+      "total": 56
+    },
     {
       "id": 1850,
       "items": [
@@ -51591,15 +51638,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 1843,
-      "items": [
-        "ПиноКолада big x1",
-        "Манго Маракуя big x1"
-      ],
-      "status": "Оплачен",
-      "total": 56
     }
   ],
   "shifts": {
@@ -51736,8 +51774,8 @@
   "topProducts": [
     {
       "name": "Айс Латте",
-      "qty": 4,
-      "total": 120
+      "qty": 5,
+      "total": 150
     },
     {
       "name": "Мороженое клубничное",
@@ -51770,11 +51808,11 @@
       "total": 60
     },
     {
-      "name": "Виноградный тропический big",
+      "name": "Манго Маракуя big",
       "qty": 2,
       "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-10T10:57:18.906Z"
+  "updatedAt": "2026-06-10T11:00:06.543Z"
 }

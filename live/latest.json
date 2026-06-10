@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 20,
-    "checks": 1,
+    "average": 25,
+    "checks": 2,
     "expenseTotal": 205,
-    "net": -185,
-    "revenue": 20
+    "net": -155,
+    "revenue": 50
   },
   "data": {
     "actions": 1933,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 784,
+    "orders": 785,
     "products": 39,
     "shifts": 19
   },
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 784,
+    "current": 785,
     "old": [
       {
         "createdAt": "2026-06-09T10:44:28.932Z",
@@ -25365,6 +25365,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-09T22:47:22.220Z",
+        "id": 1830,
+        "items": [
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 30,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-10",
+        "shiftLabel": "Смена 10.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-09T21:35:30.282Z",
         "id": 1829,
@@ -50578,14 +50607,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 1,
-        "expectedOrders": 1,
+        "databaseOrders": 2,
+        "expectedOrders": 2,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-10",
         "label": "Смена 10.06",
         "missingOrders": 0,
-        "revenue": 20,
+        "revenue": 50,
         "status": "ok"
       },
       {
@@ -50836,7 +50865,7 @@
         "status": "ok"
       }
     ],
-    "total": 784
+    "total": 785
   },
   "payments": [
     {
@@ -50853,7 +50882,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 0
+      "total": 30
     },
     {
       "method": "Семья",
@@ -50861,6 +50890,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1830,
+      "items": [
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 1829,
       "items": [
@@ -51003,11 +51040,16 @@
   },
   "topProducts": [
     {
+      "name": "Айс Латте",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Мороженое классическое",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-10T04:37:36.621Z"
+  "updatedAt": "2026-06-10T05:49:28.241Z"
 }

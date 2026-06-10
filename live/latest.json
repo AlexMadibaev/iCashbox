@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.73076923076923,
-    "checks": 26,
+    "average": 40.7037037037037,
+    "checks": 27,
     "expenseTotal": 205,
-    "net": 854,
-    "revenue": 1059
+    "net": 894,
+    "revenue": 1099
   },
   "data": {
-    "actions": 1981,
+    "actions": 1983,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 809,
+    "orders": 810,
     "products": 39,
     "shifts": 19
   },
   "activity": [
     {
+      "id": 1781069274611,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781069274611,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:27",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781068112153,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781061838833,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781061838833,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:23",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 809,
+    "current": 810,
     "old": [
       {
         "createdAt": "2026-06-09T10:44:28.932Z",
@@ -25365,6 +25365,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-10T05:29:03.667Z",
+        "id": 1855,
+        "items": [
+          "Мороженое клубничное x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-10",
+        "shiftLabel": "Смена 10.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-10T05:27:54.562Z",
         "id": 1854,
@@ -51393,14 +51422,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 26,
-        "expectedOrders": 26,
+        "databaseOrders": 27,
+        "expectedOrders": 27,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-10",
         "label": "Смена 10.06",
         "missingOrders": 0,
-        "revenue": 1059,
+        "revenue": 1099,
         "status": "ok"
       },
       {
@@ -51651,12 +51680,12 @@
         "status": "ok"
       }
     ],
-    "total": 809
+    "total": 810
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 527
+      "total": 567
     },
     {
       "method": "Карта",
@@ -51676,6 +51705,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1855,
+      "items": [
+        "Мороженое клубничное x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 1854,
       "items": [
@@ -51737,14 +51774,6 @@
       ],
       "status": "Оплачен",
       "total": 200
-    },
-    {
-      "id": 1847,
-      "items": [
-        "ПиноКолада mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -51886,8 +51915,8 @@
     },
     {
       "name": "Мороженое клубничное",
-      "qty": 4,
-      "total": 80
+      "qty": 6,
+      "total": 120
     },
     {
       "name": "МангоБанан mini",
@@ -51921,5 +51950,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-10T12:30:00.321Z"
+  "updatedAt": "2026-06-10T12:31:08.432Z"
 }

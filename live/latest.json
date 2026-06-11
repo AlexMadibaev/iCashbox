@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 40.142857142857146,
-    "checks": 28,
+    "average": 39.793103448275865,
+    "checks": 29,
     "expenseTotal": 205,
-    "net": 919,
-    "revenue": 1124
+    "net": 949,
+    "revenue": 1154
   },
   "data": {
-    "actions": 2090,
+    "actions": 2094,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 863,
+    "orders": 864,
     "products": 39,
     "shifts": 20
   },
   "activity": [
     {
+      "id": 1781157370811,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:56",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781157370811,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:56",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1781156632294,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:43",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781156632294,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:43",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781156080724,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781147969087,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781147969087,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:19",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781147419193,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:10",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781147419193,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:10",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 863,
+    "current": 864,
     "old": [
       {
         "createdAt": "2026-06-10T10:27:19.595Z",
@@ -27026,6 +27026,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-11T05:56:10.734Z",
+        "id": 1909,
+        "items": [
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 30,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-11",
+        "shiftLabel": "Смена 11.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-11T05:43:52.194Z",
         "id": 1908,
@@ -54809,14 +54838,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 28,
-        "expectedOrders": 28,
+        "databaseOrders": 29,
+        "expectedOrders": 29,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-11",
         "label": "Смена 11.06",
         "missingOrders": 0,
-        "revenue": 1124,
+        "revenue": 1154,
         "status": "ok"
       },
       {
@@ -55080,7 +55109,7 @@
         "status": "ok"
       }
     ],
-    "total": 863
+    "total": 864
   },
   "payments": [
     {
@@ -55097,7 +55126,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 275
+      "total": 305
     },
     {
       "method": "Семья",
@@ -55105,6 +55134,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1909,
+      "items": [
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 1908,
       "items": [
@@ -55164,14 +55201,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 1901,
-      "items": [
-        "Мороженое рожок x2"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -55312,6 +55341,11 @@
       "total": 182
     },
     {
+      "name": "Айс Латте",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 9,
       "total": 90
@@ -55340,13 +55374,8 @@
       "name": "Черника big",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 2,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-11T12:46:00.057Z"
+  "updatedAt": "2026-06-11T12:58:18.770Z"
 }

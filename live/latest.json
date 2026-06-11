@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.63333333333333,
-    "checks": 30,
+    "average": 39.96774193548387,
+    "checks": 31,
     "expenseTotal": 205,
-    "net": 1014,
-    "revenue": 1219
+    "net": 1034,
+    "revenue": 1239
   },
   "data": {
-    "actions": 2094,
+    "actions": 2096,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 865,
+    "orders": 866,
     "products": 39,
     "shifts": 20
   },
   "activity": [
     {
+      "id": 1781157926308,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:05",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781157926308,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:05",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781157370811,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:29",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781148299889,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:24",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781148299889,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:24",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 865,
+    "current": 866,
     "old": [
       {
         "createdAt": "2026-06-10T10:27:19.595Z",
@@ -27026,6 +27026,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-11T06:22:39.446Z",
+        "id": 1911,
+        "items": [
+          "Мороженое клубничное x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-11",
+        "shiftLabel": "Смена 11.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-11T06:05:26.231Z",
         "id": 1910,
@@ -54885,14 +54914,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 30,
-        "expectedOrders": 30,
+        "databaseOrders": 31,
+        "expectedOrders": 31,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-11",
         "label": "Смена 11.06",
         "missingOrders": 0,
-        "revenue": 1219,
+        "revenue": 1239,
         "status": "ok"
       },
       {
@@ -55156,12 +55185,12 @@
         "status": "ok"
       }
     ],
-    "total": 865
+    "total": 866
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 628
+      "total": 648
     },
     {
       "method": "Карта",
@@ -55181,6 +55210,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1911,
+      "items": [
+        "Мороженое клубничное x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 1910,
       "items": [
@@ -55241,15 +55278,6 @@
       ],
       "status": "Оплачен",
       "total": 92
-    },
-    {
-      "id": 1903,
-      "items": [
-        "ПиноКолада big x1",
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -55390,6 +55418,11 @@
       "total": 182
     },
     {
+      "name": "Мороженое клубничное",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "Айс Латте",
       "qty": 3,
       "total": 90
@@ -55398,11 +55431,6 @@
       "name": "Мороженое рожок",
       "qty": 9,
       "total": 90
-    },
-    {
-      "name": "Мороженое клубничное",
-      "qty": 4,
-      "total": 80
     },
     {
       "name": "Matcha big",
@@ -55426,5 +55454,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-11T13:07:34.331Z"
+  "updatedAt": "2026-06-11T13:24:47.040Z"
 }

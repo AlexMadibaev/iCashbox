@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.68181818181818,
-    "checks": 22,
+    "average": 39.69565217391305,
+    "checks": 23,
     "expenseTotal": 205,
-    "net": 668,
-    "revenue": 873
+    "net": 708,
+    "revenue": 913
   },
   "data": {
-    "actions": 2078,
+    "actions": 2080,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 857,
+    "orders": 858,
     "products": 39,
     "shifts": 20
   },
   "activity": [
     {
+      "id": 1781147419193,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:10",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781147419193,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:10",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781146498834,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:31",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781137528471,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:25",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781137528471,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:25",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 857,
+    "current": 858,
     "old": [
       {
         "createdAt": "2026-06-10T10:27:19.595Z",
@@ -27026,6 +27026,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-11T03:19:29.038Z",
+        "id": 1903,
+        "items": [
+          "ПиноКолада big x1",
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 40,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-11",
+        "shiftLabel": "Смена 11.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-11T03:10:19.142Z",
         "id": 1902,
@@ -54599,14 +54637,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 22,
-        "expectedOrders": 22,
+        "databaseOrders": 23,
+        "expectedOrders": 23,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-11",
         "label": "Смена 11.06",
         "missingOrders": 0,
-        "revenue": 873,
+        "revenue": 913,
         "status": "ok"
       },
       {
@@ -54870,7 +54908,7 @@
         "status": "ok"
       }
     ],
-    "total": 857
+    "total": 858
   },
   "payments": [
     {
@@ -54887,7 +54925,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 175
+      "total": 215
     },
     {
       "method": "Семья",
@@ -54895,6 +54933,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1903,
+      "items": [
+        "ПиноКолада big x1",
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 1902,
       "items": [
@@ -54955,14 +55002,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 1895,
-      "items": [
-        "Мороженое рожок x2"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -55104,8 +55143,8 @@
     },
     {
       "name": "Мороженое рожок",
-      "qty": 8,
-      "total": 80
+      "qty": 9,
+      "total": 90
     },
     {
       "name": "Мороженое клубничное",
@@ -55139,5 +55178,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-11T10:12:25.973Z"
+  "updatedAt": "2026-06-11T10:21:35.859Z"
 }

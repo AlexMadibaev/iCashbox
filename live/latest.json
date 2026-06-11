@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.4,
-    "checks": 20,
+    "average": 40.38095238095238,
+    "checks": 21,
     "expenseTotal": 205,
-    "net": 623,
-    "revenue": 828
+    "net": 643,
+    "revenue": 848
   },
   "data": {
-    "actions": 2074,
+    "actions": 2076,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 855,
+    "orders": 856,
     "products": 39,
     "shifts": 20
   },
   "activity": [
     {
+      "id": 1781142315554,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:45",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781142315554,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:45",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781141480073,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1781137221365,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:20",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781137211861,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:20",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781137211861,
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:20",
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 855,
+    "current": 856,
     "old": [
       {
         "createdAt": "2026-06-10T10:27:19.595Z",
@@ -27026,6 +27026,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-11T02:54:58.781Z",
+        "id": 1901,
+        "items": [
+          "Мороженое рожок x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 2,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-11",
+        "shiftLabel": "Смена 11.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-11T01:45:15.499Z",
         "id": 1900,
@@ -54541,14 +54570,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 20,
-        "expectedOrders": 20,
+        "databaseOrders": 21,
+        "expectedOrders": 21,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-11",
         "label": "Смена 11.06",
         "missingOrders": 0,
-        "revenue": 828,
+        "revenue": 848,
         "status": "ok"
       },
       {
@@ -54812,12 +54841,12 @@
         "status": "ok"
       }
     ],
-    "total": 855
+    "total": 856
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 493
+      "total": 513
     },
     {
       "method": "Карта",
@@ -54837,6 +54866,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1901,
+      "items": [
+        "Мороженое рожок x2"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 1900,
       "items": [
@@ -54897,15 +54934,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1893,
-      "items": [
-        "Babl tea mini x1",
-        "Мороженое рожок x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -55046,6 +55074,11 @@
       "total": 130
     },
     {
+      "name": "Мороженое рожок",
+      "qty": 8,
+      "total": 80
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 3,
       "total": 60
@@ -55066,11 +55099,6 @@
       "total": 60
     },
     {
-      "name": "Мороженое рожок",
-      "qty": 6,
-      "total": 60
-    },
-    {
       "name": "Айс Латте",
       "qty": 2,
       "total": 60
@@ -55082,5 +55110,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-11T08:47:22.563Z"
+  "updatedAt": "2026-06-11T09:57:05.786Z"
 }

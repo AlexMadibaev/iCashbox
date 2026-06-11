@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38,
-    "checks": 15,
+    "average": 37.5,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 365,
-    "revenue": 570
+    "net": 395,
+    "revenue": 600
   },
   "data": {
-    "actions": 2064,
+    "actions": 2066,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 850,
+    "orders": 851,
     "products": 39,
     "shifts": 20
   },
   "activity": [
     {
+      "id": 1781137221365,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:20",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781137221365,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:20",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781137211861,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1781135215433,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:46",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781135194005,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:46",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781135194005,
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:46",
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 850,
+    "current": 851,
     "old": [
       {
         "createdAt": "2026-06-10T10:27:19.595Z",
@@ -27026,6 +27026,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-11T00:25:28.397Z",
+        "id": 1896,
+        "items": [
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-11",
+        "shiftLabel": "Смена 11.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-11T00:20:21.290Z",
         "id": 1895,
@@ -54351,14 +54380,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-11",
         "label": "Смена 11.06",
         "missingOrders": 0,
-        "revenue": 570,
+        "revenue": 600,
         "status": "ok"
       },
       {
@@ -54622,12 +54651,12 @@
         "status": "ok"
       }
     ],
-    "total": 850
+    "total": 851
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 345
+      "total": 375
     },
     {
       "method": "Карта",
@@ -54647,6 +54676,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1896,
+      "items": [
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 1895,
       "items": [
@@ -54700,14 +54737,6 @@
       "id": 1889,
       "items": [
         "Виноградный тропический mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 1888,
-      "items": [
-        "Мороженое с тапиокой x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -54851,6 +54880,11 @@
       "total": 104
     },
     {
+      "name": "Айс Латте",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 4,
       "total": 40
@@ -54879,13 +54913,8 @@
       "name": "Черника big",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-11T07:22:26.981Z"
+  "updatedAt": "2026-06-11T07:27:34.565Z"
 }

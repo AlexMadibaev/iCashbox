@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 30,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -175,
+    "revenue": 30
   },
   "data": {
-    "actions": 2036,
+    "actions": 2038,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 835,
+    "orders": 836,
     "products": 39,
     "shifts": 20
   },
   "activity": [
+    {
+      "id": 1781129923358,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781129923358,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:18",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781126830886,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:51",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781085114106,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:51",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781084848380,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:47",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 835,
+    "current": 836,
     "old": [
       {
         "createdAt": "2026-06-10T10:27:19.595Z",
@@ -27026,6 +27026,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-10T22:18:43.294Z",
+        "id": 1881,
+        "items": [
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 30,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-11",
+        "shiftLabel": "Смена 11.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-10T10:27:19.595Z",
         "id": 1880,
@@ -53871,15 +53900,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-06-11",
         "label": "Смена 11.06",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 30,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -54142,7 +54171,7 @@
         "status": "ok"
       }
     ],
-    "total": 835
+    "total": 836
   },
   "payments": [
     {
@@ -54155,7 +54184,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 30
     },
     {
       "method": "Dushanbe City",
@@ -54166,7 +54195,16 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 1881,
+      "items": [
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -54298,7 +54336,13 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Клубничный big",
+      "qty": 1,
+      "total": 30
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-06-11T04:29:18.290Z"
+  "updatedAt": "2026-06-11T05:20:50.730Z"
 }

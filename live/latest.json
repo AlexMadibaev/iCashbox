@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.57575757575758,
-    "checks": 33,
+    "average": 40.55882352941177,
+    "checks": 34,
     "expenseTotal": 205,
-    "net": 1134,
-    "revenue": 1339
+    "net": 1174,
+    "revenue": 1379
   },
   "data": {
-    "actions": 2100,
+    "actions": 2102,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 868,
+    "orders": 869,
     "products": 39,
     "shifts": 20
   },
   "activity": [
     {
+      "id": 1781160284918,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:44",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781160284918,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:44",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781159678134,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781156080724,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:34",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781156080724,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:34",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 868,
+    "current": 869,
     "old": [
       {
         "createdAt": "2026-06-10T10:27:19.595Z",
@@ -27026,6 +27026,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-11T06:56:12.193Z",
+        "id": 1914,
+        "items": [
+          "Matcha mini x1",
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-11",
+        "shiftLabel": "Смена 11.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-11T06:44:44.864Z",
         "id": 1913,
@@ -54999,14 +55037,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 33,
-        "expectedOrders": 33,
+        "databaseOrders": 34,
+        "expectedOrders": 34,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-11",
         "label": "Смена 11.06",
         "missingOrders": 0,
-        "revenue": 1339,
+        "revenue": 1379,
         "status": "ok"
       },
       {
@@ -55270,12 +55308,12 @@
         "status": "ok"
       }
     ],
-    "total": 868
+    "total": 869
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 748
+      "total": 788
     },
     {
       "method": "Карта",
@@ -55295,6 +55333,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1914,
+      "items": [
+        "Matcha mini x1",
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 1913,
       "items": [
@@ -55357,14 +55404,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 1906,
-      "items": [
-        "Мороженое Орео x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -55505,6 +55544,11 @@
       "total": 182
     },
     {
+      "name": "Мороженое рожок",
+      "qty": 10,
+      "total": 100
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 5,
       "total": 100
@@ -55512,11 +55556,6 @@
     {
       "name": "Айс Латте",
       "qty": 3,
-      "total": 90
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 9,
       "total": 90
     },
     {
@@ -55541,5 +55580,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-11T13:46:52.044Z"
+  "updatedAt": "2026-06-11T13:58:19.816Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.333333333333336,
-    "checks": 45,
+    "average": 40.108695652173914,
+    "checks": 46,
     "expenseTotal": 205,
-    "net": 1565,
-    "revenue": 1770
+    "net": 1640,
+    "revenue": 1845
   },
   "data": {
-    "actions": 2124,
+    "actions": 2126,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 880,
+    "orders": 881,
     "products": 39,
     "shifts": 20
   },
   "activity": [
     {
+      "id": 1781170908330,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:41",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781170908330,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:41",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781168989890,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:14",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781165189566,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:06",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781165189566,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:06",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 880,
+    "current": 881,
     "old": [
       {
         "createdAt": "2026-06-10T10:27:19.595Z",
@@ -27026,6 +27026,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-11T09:53:52.978Z",
+        "id": 1926,
+        "items": [
+          "Черника mini x2",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          },
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 75,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-11",
+        "shiftLabel": "Смена 11.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 75
+      },
       {
         "createdAt": "2026-06-11T09:41:48.252Z",
         "id": 1925,
@@ -55392,14 +55430,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 45,
-        "expectedOrders": 45,
+        "databaseOrders": 46,
+        "expectedOrders": 46,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-11",
         "label": "Смена 11.06",
         "missingOrders": 0,
-        "revenue": 1770,
+        "revenue": 1845,
         "status": "ok"
       },
       {
@@ -55663,7 +55701,7 @@
         "status": "ok"
       }
     ],
-    "total": 880
+    "total": 881
   },
   "payments": [
     {
@@ -55680,7 +55718,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 405
+      "total": 480
     },
     {
       "method": "Семья",
@@ -55688,6 +55726,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1926,
+      "items": [
+        "Черника mini x2",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 75
+    },
     {
       "id": 1925,
       "items": [
@@ -55747,14 +55794,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 1918,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -55895,6 +55934,11 @@
       "total": 182
     },
     {
+      "name": "Клубничный mini",
+      "qty": 5,
+      "total": 125
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 12,
       "total": 120
@@ -55915,11 +55959,6 @@
       "total": 100
     },
     {
-      "name": "Клубничный mini",
-      "qty": 4,
-      "total": 100
-    },
-    {
       "name": "Babl tea mini",
       "qty": 5,
       "total": 100
@@ -55931,5 +55970,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-11T16:43:55.561Z"
+  "updatedAt": "2026-06-11T16:56:00.845Z"
 }

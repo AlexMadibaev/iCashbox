@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.5,
-    "checks": 16,
+    "average": 41.76470588235294,
+    "checks": 17,
     "expenseTotal": 205,
-    "net": 395,
-    "revenue": 600
+    "net": 505,
+    "revenue": 710
   },
   "data": {
-    "actions": 2066,
+    "actions": 2068,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 851,
+    "orders": 852,
     "products": 39,
     "shifts": 20
   },
   "activity": [
     {
+      "id": 1781137528471,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:25",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781137528471,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:25",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781137221365,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781135215433,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:46",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781135215433,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:46",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 851,
+    "current": 852,
     "old": [
       {
         "createdAt": "2026-06-10T10:27:19.595Z",
@@ -27026,6 +27026,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-11T00:31:36.591Z",
+        "id": 1897,
+        "items": [
+          "Клубничный big x1",
+          "Черника big x1",
+          "МангоБанан big x1",
+          "Мороженое рожок x2"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 2,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 110,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-11",
+        "shiftLabel": "Смена 11.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 110
+      },
       {
         "createdAt": "2026-06-11T00:25:28.397Z",
         "id": 1896,
@@ -54380,14 +54436,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 16,
-        "expectedOrders": 16,
+        "databaseOrders": 17,
+        "expectedOrders": 17,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-11",
         "label": "Смена 11.06",
         "missingOrders": 0,
-        "revenue": 600,
+        "revenue": 710,
         "status": "ok"
       },
       {
@@ -54651,7 +54707,7 @@
         "status": "ok"
       }
     ],
-    "total": 851
+    "total": 852
   },
   "payments": [
     {
@@ -54668,7 +54724,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 65
+      "total": 175
     },
     {
       "method": "Семья",
@@ -54676,6 +54732,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1897,
+      "items": [
+        "Клубничный big x1",
+        "Черника big x1",
+        "МангоБанан big x1",
+        "Мороженое рожок x2"
+      ],
+      "status": "Оплачен",
+      "total": 110
+    },
     {
       "id": 1896,
       "items": [
@@ -54732,14 +54799,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 1889,
-      "items": [
-        "Виноградный тропический mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -54880,14 +54939,24 @@
       "total": 104
     },
     {
-      "name": "Айс Латте",
+      "name": "Клубничный big",
+      "qty": 2,
+      "total": 60
+    },
+    {
+      "name": "Черника big",
       "qty": 2,
       "total": 60
     },
     {
       "name": "Мороженое рожок",
-      "qty": 4,
-      "total": 40
+      "qty": 6,
+      "total": 60
+    },
+    {
+      "name": "Айс Латте",
+      "qty": 2,
+      "total": 60
     },
     {
       "name": "Манго Маракуя mini",
@@ -54903,18 +54972,8 @@
       "name": "Мороженое клубничное",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Matcha big",
-      "qty": 1,
-      "total": 40
-    },
-    {
-      "name": "Черника big",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-11T07:27:34.565Z"
+  "updatedAt": "2026-06-11T07:33:43.080Z"
 }

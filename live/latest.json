@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.696969696969695,
-    "checks": 33,
+    "average": 42.14705882352941,
+    "checks": 34,
     "expenseTotal": 205,
-    "net": 1138,
-    "revenue": 1343
+    "net": 1228,
+    "revenue": 1433
   },
   "data": {
-    "actions": 2199,
+    "actions": 2201,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 917,
+    "orders": 918,
     "products": 39,
     "shifts": 21
   },
   "activity": [
     {
+      "id": 1781255793943,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:16",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781255793943,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:16",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781255757510,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:32",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781252954474,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:29",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781252954474,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:29",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 917,
+    "current": 918,
     "old": [
       {
         "createdAt": "2026-06-11T10:34:04.547Z",
@@ -28735,6 +28735,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-12T09:18:19.014Z",
+        "id": 1963,
+        "items": [
+          "Matcha big x1",
+          "ПиноКолада mini x1",
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-милкшейк-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-12",
+        "shiftLabel": "Смена 12.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 90
+      },
       {
         "createdAt": "2026-06-12T09:16:33.888Z",
         "id": 1962,
@@ -58390,14 +58437,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 33,
-        "expectedOrders": 33,
+        "databaseOrders": 34,
+        "expectedOrders": 34,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-12",
         "label": "Смена 12.06",
         "missingOrders": 0,
-        "revenue": 1343,
+        "revenue": 1433,
         "status": "ok"
       },
       {
@@ -58674,12 +58721,12 @@
         "status": "ok"
       }
     ],
-    "total": 917
+    "total": 918
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 926
+      "total": 1016
     },
     {
       "method": "Карта",
@@ -58699,6 +58746,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1963,
+      "items": [
+        "Matcha big x1",
+        "ПиноКолада mini x1",
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 90
+    },
     {
       "id": 1962,
       "items": [
@@ -58756,14 +58813,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 1955,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -58909,6 +58958,11 @@
       "total": 140
     },
     {
+      "name": "Matcha big",
+      "qty": 3,
+      "total": 120
+    },
+    {
       "name": "Matcha mini",
       "qty": 4,
       "total": 120
@@ -58917,11 +58971,6 @@
       "name": "Babl tea mini",
       "qty": 5,
       "total": 100
-    },
-    {
-      "name": "Matcha big",
-      "qty": 2,
-      "total": 80
     },
     {
       "name": "Мороженое Орео",
@@ -58934,11 +58983,11 @@
       "total": 80
     },
     {
-      "name": "Клубничный mini",
+      "name": "Черника mini",
       "qty": 3,
       "total": 75
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-12T16:18:41.037Z"
+  "updatedAt": "2026-06-12T16:20:26.477Z"
 }

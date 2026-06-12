@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.14705882352941,
-    "checks": 34,
+    "average": 42.65714285714286,
+    "checks": 35,
     "expenseTotal": 205,
-    "net": 1228,
-    "revenue": 1433
+    "net": 1288,
+    "revenue": 1493
   },
   "data": {
-    "actions": 2201,
+    "actions": 2203,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 918,
+    "orders": 919,
     "products": 39,
     "shifts": 21
   },
   "activity": [
     {
+      "id": 1781255899085,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781255899085,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:18",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781255793943,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:45",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781253125926,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:32",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781253125926,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:32",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 918,
+    "current": 919,
     "old": [
       {
         "createdAt": "2026-06-11T10:34:04.547Z",
@@ -28735,6 +28735,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-12T09:23:26.676Z",
+        "id": 1964,
+        "items": [
+          "ПиноКолада big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 60,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-12",
+        "shiftLabel": "Смена 12.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-12T09:18:19.014Z",
         "id": 1963,
@@ -58437,14 +58466,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-12",
         "label": "Смена 12.06",
         "missingOrders": 0,
-        "revenue": 1433,
+        "revenue": 1493,
         "status": "ok"
       },
       {
@@ -58721,7 +58750,7 @@
         "status": "ok"
       }
     ],
-    "total": 918
+    "total": 919
   },
   "payments": [
     {
@@ -58734,7 +58763,7 @@
     },
     {
       "method": "Alif",
-      "total": 105
+      "total": 165
     },
     {
       "method": "Dushanbe City",
@@ -58746,6 +58775,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1964,
+      "items": [
+        "ПиноКолада big x2"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 1963,
       "items": [
@@ -58805,14 +58842,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 1956,
-      "items": [
-        "Matcha big x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -58958,6 +58987,11 @@
       "total": 140
     },
     {
+      "name": "ПиноКолада big",
+      "qty": 4,
+      "total": 120
+    },
+    {
       "name": "Matcha big",
       "qty": 3,
       "total": 120
@@ -58981,13 +59015,8 @@
       "name": "Манго Маракуя mini",
       "qty": 4,
       "total": 80
-    },
-    {
-      "name": "Черника mini",
-      "qty": 3,
-      "total": 75
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-12T16:20:26.477Z"
+  "updatedAt": "2026-06-12T16:25:33.934Z"
 }

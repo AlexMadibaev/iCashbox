@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 37.95652173913044,
-    "checks": 23,
+    "average": 41.375,
+    "checks": 24,
     "expenseTotal": 205,
-    "net": 668,
-    "revenue": 873
+    "net": 788,
+    "revenue": 993
   },
   "data": {
     "actions": 2181,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 907,
+    "orders": 908,
     "products": 39,
     "shifts": 21
   },
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 907,
+    "current": 908,
     "old": [
       {
         "createdAt": "2026-06-11T10:34:04.547Z",
@@ -28735,6 +28735,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-12T06:45:53.962Z",
+        "id": 1953,
+        "items": [
+          "Matcha mini x3",
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 3,
+            "size": "",
+            "total": 90
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 120,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-12",
+        "shiftLabel": "Смена 12.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 120
+      },
       {
         "createdAt": "2026-06-12T06:45:06.213Z",
         "id": 1952,
@@ -58064,14 +58102,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 23,
-        "expectedOrders": 23,
+        "databaseOrders": 24,
+        "expectedOrders": 24,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-12",
         "label": "Смена 12.06",
         "missingOrders": 0,
-        "revenue": 873,
+        "revenue": 993,
         "status": "ok"
       },
       {
@@ -58348,7 +58386,7 @@
         "status": "ok"
       }
     ],
-    "total": 907
+    "total": 908
   },
   "payments": [
     {
@@ -58365,7 +58403,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 192
+      "total": 312
     },
     {
       "method": "Семья",
@@ -58373,6 +58411,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1953,
+      "items": [
+        "Matcha mini x3",
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 120
+    },
     {
       "id": 1952,
       "items": [
@@ -58432,15 +58479,6 @@
       ],
       "status": "Оплачен",
       "total": 56
-    },
-    {
-      "id": 1945,
-      "items": [
-        "ПиноКолада big x2",
-        "Манго Маракуя big x1"
-      ],
-      "status": "Оплачен",
-      "total": 86
     }
   ],
   "shifts": {
@@ -58576,9 +58614,19 @@
   },
   "topProducts": [
     {
+      "name": "Matcha mini",
+      "qty": 4,
+      "total": 120
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 6,
       "total": 120
+    },
+    {
+      "name": "Айс Латте",
+      "qty": 3,
+      "total": 90
     },
     {
       "name": "Мороженое Орео",
@@ -58601,21 +58649,11 @@
       "total": 60
     },
     {
-      "name": "Айс Латте",
-      "qty": 2,
-      "total": 60
-    },
-    {
       "name": "Манго Маракуя big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "Виноградный тропический mini",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-12T13:47:15.045Z"
+  "updatedAt": "2026-06-12T13:48:01.264Z"
 }

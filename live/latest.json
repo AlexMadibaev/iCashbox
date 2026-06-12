@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.642857142857146,
-    "checks": 28,
+    "average": 42.689655172413794,
+    "checks": 29,
     "expenseTotal": 205,
-    "net": 933,
-    "revenue": 1138
+    "net": 1033,
+    "revenue": 1238
   },
   "data": {
-    "actions": 2189,
+    "actions": 2191,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 912,
+    "orders": 913,
     "products": 39,
     "shifts": 21
   },
   "activity": [
     {
+      "id": 1781253125926,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:32",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781253125926,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:32",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781252954474,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:45",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781244328598,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:05",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781244328598,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:05",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 912,
+    "current": 913,
     "old": [
       {
         "createdAt": "2026-06-11T10:34:04.547Z",
@@ -28735,6 +28735,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-12T08:45:44.941Z",
+        "id": 1958,
+        "items": [
+          "Matcha big x1",
+          "Айс Латте x1",
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 200,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-12",
+        "shiftLabel": "Смена 12.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 100
+      },
       {
         "createdAt": "2026-06-12T08:32:05.876Z",
         "id": 1957,
@@ -58227,14 +58274,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 28,
-        "expectedOrders": 28,
+        "databaseOrders": 29,
+        "expectedOrders": 29,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-12",
         "label": "Смена 12.06",
         "missingOrders": 0,
-        "revenue": 1138,
+        "revenue": 1238,
         "status": "ok"
       },
       {
@@ -58511,12 +58558,12 @@
         "status": "ok"
       }
     ],
-    "total": 912
+    "total": 913
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 746
+      "total": 846
     },
     {
       "method": "Карта",
@@ -58536,6 +58583,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1958,
+      "items": [
+        "Matcha big x1",
+        "Айс Латте x1",
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 100
+    },
     {
       "id": 1957,
       "items": [
@@ -58593,14 +58650,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 1950,
-      "items": [
-        "Виноградный тропический mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -58741,6 +58790,11 @@
       "total": 140
     },
     {
+      "name": "Айс Латте",
+      "qty": 4,
+      "total": 120
+    },
+    {
       "name": "Matcha mini",
       "qty": 4,
       "total": 120
@@ -58751,9 +58805,9 @@
       "total": 100
     },
     {
-      "name": "Айс Латте",
-      "qty": 3,
-      "total": 90
+      "name": "Matcha big",
+      "qty": 2,
+      "total": 80
     },
     {
       "name": "Мороженое Орео",
@@ -58766,16 +58820,11 @@
       "total": 80
     },
     {
-      "name": "Мороженое манго",
-      "qty": 3,
-      "total": 60
-    },
-    {
-      "name": "ПиноКолада big",
+      "name": "Клубничный big",
       "qty": 2,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-12T15:34:13.209Z"
+  "updatedAt": "2026-06-12T15:47:53.141Z"
 }

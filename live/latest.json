@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 22.75,
-    "checks": 4,
+    "average": 28.2,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": -114,
-    "revenue": 91
+    "net": -64,
+    "revenue": 141
   },
   "data": {
-    "actions": 2141,
+    "actions": 2143,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 888,
+    "orders": 889,
     "products": 39,
     "shifts": 21
   },
   "activity": [
+    {
+      "id": 1781223775203,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781223775203,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:22",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781218723763,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:29",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781173799966,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:29",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781172190255,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:03",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 888,
+    "current": 889,
     "old": [
       {
         "createdAt": "2026-06-11T10:34:04.547Z",
@@ -28735,6 +28735,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-12T00:38:21.701Z",
+        "id": 1934,
+        "items": [
+          "Манго Маракуя mini x1",
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-12",
+        "shiftLabel": "Смена 12.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-12T00:22:55.129Z",
         "id": 1933,
@@ -57405,14 +57443,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-12",
         "label": "Смена 12.06",
         "missingOrders": 0,
-        "revenue": 91,
+        "revenue": 141,
         "status": "ok"
       },
       {
@@ -57689,12 +57727,12 @@
         "status": "ok"
       }
     ],
-    "total": 888
+    "total": 889
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 65
+      "total": 115
     },
     {
       "method": "Карта",
@@ -57714,6 +57752,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1934,
+      "items": [
+        "Манго Маракуя mini x1",
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 1933,
       "items": [
@@ -57881,13 +57928,18 @@
   "topProducts": [
     {
       "name": "Айс Латте",
-      "qty": 1,
-      "total": 30
+      "qty": 2,
+      "total": 60
     },
     {
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
+    },
+    {
+      "name": "Манго Маракуя mini",
+      "qty": 1,
+      "total": 20
     },
     {
       "name": "Babl tea mini",
@@ -57901,5 +57953,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-12T07:25:03.618Z"
+  "updatedAt": "2026-06-12T07:40:30.379Z"
 }

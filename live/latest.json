@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.44,
-    "checks": 25,
+    "average": 41.5,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 856,
-    "revenue": 1061
+    "net": 874,
+    "revenue": 1079
   },
   "data": {
-    "actions": 2268,
+    "actions": 2270,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 951,
+    "orders": 952,
     "products": 39,
     "shifts": 22
   },
   "activity": [
     {
+      "id": 1781332020577,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781332020577,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:27",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781330531479,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:27",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781324585837,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781324585837,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:23",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 951,
+    "current": 952,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T06:35:23.810Z",
+        "id": 1997,
+        "items": [
+          "Дабл Эспрессо x1"
+        ],
+        "lines": [
+          {
+            "id": "product-дабл-эспрессо",
+            "name": "Дабл Эспрессо",
+            "price": 18,
+            "qty": 1,
+            "size": "",
+            "total": 18
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 18,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 18
+      },
       {
         "createdAt": "2026-06-13T06:27:00.525Z",
         "id": 1996,
@@ -60909,14 +60938,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 1061,
+        "revenue": 1079,
         "status": "ok"
       },
       {
@@ -61206,7 +61235,7 @@
         "status": "ok"
       }
     ],
-    "total": 951
+    "total": 952
   },
   "payments": [
     {
@@ -61219,7 +61248,7 @@
     },
     {
       "method": "Alif",
-      "total": 186
+      "total": 204
     },
     {
       "method": "Dushanbe City",
@@ -61231,6 +61260,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1997,
+      "items": [
+        "Дабл Эспрессо x1"
+      ],
+      "status": "Оплачен",
+      "total": 18
+    },
     {
       "id": 1996,
       "items": [
@@ -61290,14 +61327,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 1989,
-      "items": [
-        "Мороженое клубничное x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -61474,5 +61503,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T13:29:09.924Z"
+  "updatedAt": "2026-06-13T13:37:33.148Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.77272727272727,
-    "checks": 22,
+    "average": 44.130434782608695,
+    "checks": 23,
     "expenseTotal": 205,
-    "net": 758,
-    "revenue": 963
+    "net": 810,
+    "revenue": 1015
   },
   "data": {
-    "actions": 2262,
+    "actions": 2264,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 948,
+    "orders": 949,
     "products": 39,
     "shifts": 22
   },
   "activity": [
     {
+      "id": 1781326822486,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781326822486,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:00",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781326575498,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:19",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781324315493,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:18",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781324315493,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:18",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 948,
+    "current": 949,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T05:57:29.954Z",
+        "id": 1994,
+        "items": [
+          "Жасмин лимон big x1",
+          "Виноградный тропический big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-tea-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-06-13T05:00:22.405Z",
         "id": 1993,
@@ -60813,14 +60851,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 22,
-        "expectedOrders": 22,
+        "databaseOrders": 23,
+        "expectedOrders": 23,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 963,
+        "revenue": 1015,
         "status": "ok"
       },
       {
@@ -61110,12 +61148,12 @@
         "status": "ok"
       }
     ],
-    "total": 948
+    "total": 949
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 612
+      "total": 664
     },
     {
       "method": "Карта",
@@ -61135,6 +61173,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1994,
+      "items": [
+        "Жасмин лимон big x1",
+        "Виноградный тропический big x1"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 1993,
       "items": [
@@ -61194,14 +61241,6 @@
       ],
       "status": "Оплачен",
       "total": 135
-    },
-    {
-      "id": 1986,
-      "items": [
-        "Черника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -61378,5 +61417,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T12:02:31.067Z"
+  "updatedAt": "2026-06-13T12:59:39.504Z"
 }

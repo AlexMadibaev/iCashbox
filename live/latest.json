@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 25,
-    "checks": 3,
+    "average": 21.25,
+    "checks": 4,
     "expenseTotal": 205,
-    "net": -130,
-    "revenue": 75
+    "net": -120,
+    "revenue": 85
   },
   "data": {
-    "actions": 2224,
+    "actions": 2226,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 929,
+    "orders": 930,
     "products": 39,
     "shifts": 22
   },
   "activity": [
+    {
+      "id": 1781305476419,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:04",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781305476419,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:04",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781305058415,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:24",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781259858339,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781259140065,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:12",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 929,
+    "current": 930,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T00:00:19.549Z",
+        "id": 1975,
+        "items": [
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 10,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 10
+      },
       {
         "createdAt": "2026-06-12T23:04:36.363Z",
         "id": 1974,
@@ -60172,14 +60201,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 3,
-        "expectedOrders": 3,
+        "databaseOrders": 4,
+        "expectedOrders": 4,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 75,
+        "revenue": 85,
         "status": "ok"
       },
       {
@@ -60469,12 +60498,12 @@
         "status": "ok"
       }
     ],
-    "total": 929
+    "total": 930
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 30
+      "total": 40
     },
     {
       "method": "Карта",
@@ -60494,6 +60523,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1975,
+      "items": [
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 10
+    },
     {
       "id": 1974,
       "items": [
@@ -60665,8 +60702,13 @@
       "name": "Фреш лимон big",
       "qty": 1,
       "total": 20
+    },
+    {
+      "name": "Мороженое рожок",
+      "qty": 1,
+      "total": 10
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T06:06:46.221Z"
+  "updatedAt": "2026-06-13T07:02:29.514Z"
 }

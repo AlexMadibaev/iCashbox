@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.41025641025641,
-    "checks": 39,
+    "average": 36,
+    "checks": 40,
     "expenseTotal": 205,
-    "net": 1215,
-    "revenue": 1420
+    "net": 1235,
+    "revenue": 1440
   },
   "data": {
-    "actions": 2296,
+    "actions": 2298,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 965,
+    "orders": 966,
     "products": 39,
     "shifts": 22
   },
   "activity": [
     {
+      "id": 1781340292546,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:44",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781340292546,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:44",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781340060072,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:04",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781337242001,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:54",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781337242001,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:54",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 965,
+    "current": 966,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T09:03:14.792Z",
+        "id": 2011,
+        "items": [
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 20,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-13T08:44:52.464Z",
         "id": 2010,
@@ -61333,14 +61362,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 39,
-        "expectedOrders": 39,
+        "databaseOrders": 40,
+        "expectedOrders": 40,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 1420,
+        "revenue": 1440,
         "status": "ok"
       },
       {
@@ -61630,7 +61659,7 @@
         "status": "ok"
       }
     ],
-    "total": 965
+    "total": 966
   },
   "payments": [
     {
@@ -61647,7 +61676,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 205
+      "total": 225
     },
     {
       "method": "Семья",
@@ -61655,6 +61684,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2011,
+      "items": [
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2010,
       "items": [
@@ -61710,15 +61747,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2003,
-      "items": [
-        "Манго Маракуя mini x1",
-        "Жасмин лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -61895,5 +61923,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T15:47:01.026Z"
+  "updatedAt": "2026-06-13T16:05:23.858Z"
 }

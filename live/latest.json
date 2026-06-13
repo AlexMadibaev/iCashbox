@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.46666666666667,
-    "checks": 15,
+    "average": 46.375,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 402,
-    "revenue": 607
+    "net": 537,
+    "revenue": 742
   },
   "data": {
-    "actions": 2248,
+    "actions": 2250,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 941,
+    "orders": 942,
     "products": 39,
     "shifts": 22
   },
   "activity": [
     {
+      "id": 1781324169333,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:16",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781324169333,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:16",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781321431407,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:20",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781315421640,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:50",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781315421640,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:50",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 941,
+    "current": 942,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T04:18:35.420Z",
+        "id": 1987,
+        "items": [
+          "Мороженое классическое x3",
+          "Капучино x3"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 3,
+            "size": "",
+            "total": 60
+          },
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 3,
+            "size": "",
+            "total": 75
+          }
+        ],
+        "payments": {
+          "Наличные": 140,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 135
+      },
       {
         "createdAt": "2026-06-13T04:16:09.257Z",
         "id": 1986,
@@ -60574,14 +60612,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 607,
+        "revenue": 742,
         "status": "ok"
       },
       {
@@ -60871,12 +60909,12 @@
         "status": "ok"
       }
     ],
-    "total": 941
+    "total": 942
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 276
+      "total": 411
     },
     {
       "method": "Карта",
@@ -60896,6 +60934,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1987,
+      "items": [
+        "Мороженое классическое x3",
+        "Капучино x3"
+      ],
+      "status": "Оплачен",
+      "total": 135
+    },
     {
       "id": 1986,
       "items": [
@@ -60953,15 +61000,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 1979,
-      "items": [
-        "Черника mini x1",
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 55
     }
   ],
   "shifts": {
@@ -61102,9 +61140,19 @@
       "total": 120
     },
     {
+      "name": "Капучино",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "Черника mini",
       "qty": 3,
       "total": 75
+    },
+    {
+      "name": "Мороженое классическое",
+      "qty": 3,
+      "total": 60
     },
     {
       "name": "Babl tea mini",
@@ -61125,18 +61173,8 @@
       "name": "Babl tea big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "ПиноКолада mini",
-      "qty": 2,
-      "total": 50
-    },
-    {
-      "name": "ПиноКолада big",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T11:18:18.972Z"
+  "updatedAt": "2026-06-13T11:20:44.193Z"
 }

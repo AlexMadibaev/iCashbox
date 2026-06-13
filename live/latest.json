@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 21.25,
-    "checks": 4,
+    "average": 31,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": -120,
-    "revenue": 85
+    "net": -50,
+    "revenue": 155
   },
   "data": {
-    "actions": 2226,
+    "actions": 2228,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 930,
+    "orders": 931,
     "products": 39,
     "shifts": 22
   },
   "activity": [
+    {
+      "id": 1781308819624,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781308819624,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:00",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781305476419,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:27",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781260055617,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:27",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781259858339,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:24",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 930,
+    "current": 931,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T00:17:05.621Z",
+        "id": 1976,
+        "items": [
+          "ПиноКолада mini x2",
+          "Клубничный жасмин mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          },
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 70,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-06-13T00:00:19.549Z",
         "id": 1975,
@@ -60201,14 +60239,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 85,
+        "revenue": 155,
         "status": "ok"
       },
       {
@@ -60498,7 +60536,7 @@
         "status": "ok"
       }
     ],
-    "total": 930
+    "total": 931
   },
   "payments": [
     {
@@ -60515,7 +60553,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 20
+      "total": 90
     },
     {
       "method": "Семья",
@@ -60523,6 +60561,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1976,
+      "items": [
+        "ПиноКолада mini x2",
+        "Клубничный жасмин mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 1975,
       "items": [
@@ -60689,6 +60736,11 @@
   },
   "topProducts": [
     {
+      "name": "ПиноКолада mini",
+      "qty": 2,
+      "total": 50
+    },
+    {
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
@@ -60697,6 +60749,11 @@
       "name": "Черника mini",
       "qty": 1,
       "total": 25
+    },
+    {
+      "name": "Клубничный жасмин mini",
+      "qty": 1,
+      "total": 20
     },
     {
       "name": "Фреш лимон big",
@@ -60710,5 +60767,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T07:02:29.514Z"
+  "updatedAt": "2026-06-13T07:19:15.746Z"
 }

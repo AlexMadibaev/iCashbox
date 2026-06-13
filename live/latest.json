@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41,
-    "checks": 29,
+    "average": 40.5,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 984,
-    "revenue": 1189
+    "net": 1010,
+    "revenue": 1215
   },
   "data": {
-    "actions": 2276,
+    "actions": 2278,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 955,
+    "orders": 956,
     "products": 39,
     "shifts": 22
   },
   "activity": [
     {
+      "id": 1781335272567,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:21",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781335272567,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:21",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781333817073,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781330250006,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:57",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781330250006,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:57",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 955,
+    "current": 956,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T07:21:42.697Z",
+        "id": 2001,
+        "items": [
+          "Виноградный тропический big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-06-13T07:21:12.505Z",
         "id": 2000,
@@ -61034,14 +61063,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 1189,
+        "revenue": 1215,
         "status": "ok"
       },
       {
@@ -61331,12 +61360,12 @@
         "status": "ok"
       }
     ],
-    "total": 955
+    "total": 956
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 800
+      "total": 826
     },
     {
       "method": "Карта",
@@ -61356,6 +61385,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2001,
+      "items": [
+        "Виноградный тропический big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 2000,
       "items": [
@@ -61413,14 +61450,6 @@
       ],
       "status": "Оплачен",
       "total": 52
-    },
-    {
-      "id": 1993,
-      "items": [
-        "Мороженое классическое x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -61597,5 +61626,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T14:23:21.996Z"
+  "updatedAt": "2026-06-13T14:23:51.384Z"
 }

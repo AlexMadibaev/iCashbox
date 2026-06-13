@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.857142857142854,
-    "checks": 35,
+    "average": 38.05555555555556,
+    "checks": 36,
     "expenseTotal": 205,
-    "net": 1155,
-    "revenue": 1360
+    "net": 1165,
+    "revenue": 1370
   },
   "data": {
-    "actions": 2288,
+    "actions": 2290,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 961,
+    "orders": 962,
     "products": 39,
     "shifts": 22
   },
   "activity": [
     {
+      "id": 1781338042794,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:07",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781338042794,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:07",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781337846797,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1781335302766,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:21",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781335272567,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:21",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781335272567,
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:21",
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 961,
+    "current": 962,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T08:38:06.132Z",
+        "id": 2007,
+        "items": [
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 10,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 10
+      },
       {
         "createdAt": "2026-06-13T08:07:22.731Z",
         "id": 2006,
@@ -61217,14 +61246,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 35,
-        "expectedOrders": 35,
+        "databaseOrders": 36,
+        "expectedOrders": 36,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 1360,
+        "revenue": 1370,
         "status": "ok"
       },
       {
@@ -61514,7 +61543,7 @@
         "status": "ok"
       }
     ],
-    "total": 961
+    "total": 962
   },
   "payments": [
     {
@@ -61527,7 +61556,7 @@
     },
     {
       "method": "Alif",
-      "total": 224
+      "total": 234
     },
     {
       "method": "Dushanbe City",
@@ -61539,6 +61568,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2007,
+      "items": [
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 10
+    },
     {
       "id": 2006,
       "items": [
@@ -61595,14 +61632,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1999,
-      "items": [
-        "Черника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -61779,5 +61808,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T15:09:31.097Z"
+  "updatedAt": "2026-06-13T15:40:16.479Z"
 }

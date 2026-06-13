@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.22222222222222,
-    "checks": 45,
+    "average": 35.97826086956522,
+    "checks": 46,
     "expenseTotal": 205,
-    "net": 1380,
-    "revenue": 1585
+    "net": 1450,
+    "revenue": 1655
   },
   "data": {
-    "actions": 2308,
+    "actions": 2310,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 971,
+    "orders": 972,
     "products": 39,
     "shifts": 22
   },
   "activity": [
     {
+      "id": 1781344876234,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:01",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781344876234,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:01",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781343370844,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:03",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781340292546,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:44",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781340292546,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:44",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 971,
+    "current": 972,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T10:07:21.732Z",
+        "id": 2017,
+        "items": [
+          "Айс Латте x1",
+          "Мороженое классическое x1",
+          "Мороженое клубничное x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 70,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-06-13T10:01:16.181Z",
         "id": 2016,
@@ -61516,14 +61563,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 45,
-        "expectedOrders": 45,
+        "databaseOrders": 46,
+        "expectedOrders": 46,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 1585,
+        "revenue": 1655,
         "status": "ok"
       },
       {
@@ -61813,7 +61860,7 @@
         "status": "ok"
       }
     ],
-    "total": 971
+    "total": 972
   },
   "payments": [
     {
@@ -61830,7 +61877,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 225
+      "total": 295
     },
     {
       "method": "Семья",
@@ -61838,6 +61885,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2017,
+      "items": [
+        "Айс Латте x1",
+        "Мороженое классическое x1",
+        "Мороженое клубничное x1"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 2016,
       "items": [
@@ -61894,14 +61951,6 @@
       ],
       "status": "Оплачен",
       "total": 10
-    },
-    {
-      "id": 2009,
-      "items": [
-        "Черника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -62038,16 +62087,16 @@
   "topProducts": [
     {
       "name": "Мороженое классическое",
-      "qty": 9,
-      "total": 180
-    },
-    {
-      "name": "Черника big",
-      "qty": 4,
-      "total": 120
+      "qty": 10,
+      "total": 200
     },
     {
       "name": "Айс Латте",
+      "qty": 5,
+      "total": 150
+    },
+    {
+      "name": "Черника big",
       "qty": 4,
       "total": 120
     },
@@ -62078,5 +62127,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T17:03:25.711Z"
+  "updatedAt": "2026-06-13T17:09:30.498Z"
 }

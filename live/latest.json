@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.83870967741935,
-    "checks": 31,
+    "average": 39.84375,
+    "checks": 32,
     "expenseTotal": 205,
-    "net": 1030,
-    "revenue": 1235
+    "net": 1070,
+    "revenue": 1275
   },
   "data": {
-    "actions": 2280,
+    "actions": 2282,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 957,
+    "orders": 958,
     "products": 39,
     "shifts": 22
   },
   "activity": [
     {
+      "id": 1781336112692,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:35",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781336112692,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:35",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781335302766,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:35",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781332020577,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:27",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781332020577,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:27",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 957,
+    "current": 958,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T07:50:12.609Z",
+        "id": 2003,
+        "items": [
+          "Манго Маракуя mini x1",
+          "Жасмин лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-tea-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 40,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-13T07:35:12.621Z",
         "id": 2002,
@@ -61092,14 +61130,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 31,
-        "expectedOrders": 31,
+        "databaseOrders": 32,
+        "expectedOrders": 32,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 1235,
+        "revenue": 1275,
         "status": "ok"
       },
       {
@@ -61389,7 +61427,7 @@
         "status": "ok"
       }
     ],
-    "total": 957
+    "total": 958
   },
   "payments": [
     {
@@ -61406,7 +61444,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 165
+      "total": 205
     },
     {
       "method": "Семья",
@@ -61414,6 +61452,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2003,
+      "items": [
+        "Манго Маракуя mini x1",
+        "Жасмин лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2002,
       "items": [
@@ -61470,14 +61517,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1995,
-      "items": [
-        "Жасмин лимон big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -61654,5 +61693,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T14:37:22.016Z"
+  "updatedAt": "2026-06-13T14:52:22.397Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.95238095238095,
-    "checks": 21,
+    "average": 43.77272727272727,
+    "checks": 22,
     "expenseTotal": 205,
-    "net": 718,
-    "revenue": 923
+    "net": 758,
+    "revenue": 963
   },
   "data": {
-    "actions": 2260,
+    "actions": 2262,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 947,
+    "orders": 948,
     "products": 39,
     "shifts": 22
   },
   "activity": [
     {
+      "id": 1781326575498,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:56",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781326575498,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:56",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781324841261,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:18",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781324169333,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:16",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781324169333,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:16",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 947,
+    "current": 948,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T05:00:22.405Z",
+        "id": 1993,
+        "items": [
+          "Мороженое классическое x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-13T04:56:15.445Z",
         "id": 1992,
@@ -60784,14 +60813,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 21,
-        "expectedOrders": 21,
+        "databaseOrders": 22,
+        "expectedOrders": 22,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 923,
+        "revenue": 963,
         "status": "ok"
       },
       {
@@ -61081,12 +61110,12 @@
         "status": "ok"
       }
     ],
-    "total": 947
+    "total": 948
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 572
+      "total": 612
     },
     {
       "method": "Карта",
@@ -61106,6 +61135,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1993,
+      "items": [
+        "Мороженое классическое x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 1992,
       "items": [
@@ -61165,14 +61202,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 1985,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -61313,6 +61342,11 @@
       "total": 120
     },
     {
+      "name": "Мороженое классическое",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "ПиноКолада mini",
       "qty": 3,
       "total": 75
@@ -61326,11 +61360,6 @@
       "name": "Черника mini",
       "qty": 3,
       "total": 75
-    },
-    {
-      "name": "Мороженое классическое",
-      "qty": 3,
-      "total": 60
     },
     {
       "name": "Babl tea mini",
@@ -61349,5 +61378,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T11:58:24.948Z"
+  "updatedAt": "2026-06-13T12:02:31.067Z"
 }

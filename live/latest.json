@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 43,
-    "checks": 7,
+    "average": 44,
+    "checks": 9,
     "expenseTotal": 205,
-    "net": 96,
-    "revenue": 301
+    "net": 191,
+    "revenue": 396
   },
   "data": {
-    "actions": 2232,
+    "actions": 2236,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 933,
+    "orders": 935,
     "products": 39,
     "shifts": 22
   },
   "activity": [
     {
+      "id": 1781314176160,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781314176160,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:29",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1781311462151,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:44",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781311462151,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:44",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781311380594,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:04",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781305058415,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:57",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781305058415,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:57",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781302778530,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781302778530,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:19",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 933,
+    "current": 935,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,82 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T01:50:21.573Z",
+        "id": 1980,
+        "items": [
+          "Мороженое Орео x1",
+          "Мороженое манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
+      {
+        "createdAt": "2026-06-13T01:29:36.087Z",
+        "id": 1979,
+        "items": [
+          "Черника mini x1",
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 25,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 55
+      },
       {
         "createdAt": "2026-06-13T00:44:22.097Z",
         "id": 1978,
@@ -60315,14 +60391,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 9,
+        "expectedOrders": 9,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 301,
+        "revenue": 396,
         "status": "ok"
       },
       {
@@ -60612,12 +60688,12 @@
         "status": "ok"
       }
     ],
-    "total": 933
+    "total": 935
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 70
+      "total": 140
     },
     {
       "method": "Карта",
@@ -60629,7 +60705,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 90
+      "total": 115
     },
     {
       "method": "Семья",
@@ -60637,6 +60713,24 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1980,
+      "items": [
+        "Мороженое Орео x1",
+        "Мороженое манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
+    {
+      "id": 1979,
+      "items": [
+        "Черника mini x1",
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 55
+    },
     {
       "id": 1978,
       "items": [
@@ -60687,14 +60781,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 1972,
-      "items": [
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -60831,8 +60917,13 @@
   "topProducts": [
     {
       "name": "Айс Латте",
-      "qty": 3,
-      "total": 90
+      "qty": 4,
+      "total": 120
+    },
+    {
+      "name": "Черника mini",
+      "qty": 2,
+      "total": 50
     },
     {
       "name": "ПиноКолада mini",
@@ -60855,21 +60946,16 @@
       "total": 26
     },
     {
-      "name": "Черника mini",
-      "qty": 1,
-      "total": 25
-    },
-    {
-      "name": "Клубничный жасмин mini",
+      "name": "Мороженое Орео",
       "qty": 1,
       "total": 20
     },
     {
-      "name": "Фреш лимон big",
+      "name": "Мороженое манго",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T07:46:31.017Z"
+  "updatedAt": "2026-06-13T08:52:31.299Z"
 }

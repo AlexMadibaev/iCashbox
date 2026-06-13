@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 44.130434782608695,
-    "checks": 23,
+    "average": 43.375,
+    "checks": 24,
     "expenseTotal": 205,
-    "net": 810,
-    "revenue": 1015
+    "net": 836,
+    "revenue": 1041
   },
   "data": {
-    "actions": 2264,
+    "actions": 2266,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 949,
+    "orders": 950,
     "products": 39,
     "shifts": 22
   },
   "activity": [
     {
+      "id": 1781330250006,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:57",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781330250006,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:57",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781326822486,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:21",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781324356639,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781324356639,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:19",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 949,
+    "current": 950,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T06:02:11.424Z",
+        "id": 1995,
+        "items": [
+          "Жасмин лимон big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-tea-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-06-13T05:57:29.954Z",
         "id": 1994,
@@ -60851,14 +60880,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 23,
-        "expectedOrders": 23,
+        "databaseOrders": 24,
+        "expectedOrders": 24,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 1015,
+        "revenue": 1041,
         "status": "ok"
       },
       {
@@ -61148,12 +61177,12 @@
         "status": "ok"
       }
     ],
-    "total": 949
+    "total": 950
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 664
+      "total": 690
     },
     {
       "method": "Карта",
@@ -61173,6 +61202,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1995,
+      "items": [
+        "Жасмин лимон big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 1994,
       "items": [
@@ -61232,15 +61269,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 1987,
-      "items": [
-        "Мороженое классическое x3",
-        "Капучино x3"
-      ],
-      "status": "Оплачен",
-      "total": 135
     }
   ],
   "shifts": {
@@ -61417,5 +61445,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T12:59:39.504Z"
+  "updatedAt": "2026-06-13T13:04:20.141Z"
 }

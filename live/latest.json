@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.23076923076923,
-    "checks": 13,
+    "average": 41.57142857142857,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 357,
-    "revenue": 562
+    "net": 377,
+    "revenue": 582
   },
   "data": {
-    "actions": 2244,
+    "actions": 2246,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 939,
+    "orders": 940,
     "products": 39,
     "shifts": 22
   },
   "activity": [
     {
+      "id": 1781319637067,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781319637067,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:00",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781318179497,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:29",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781311462151,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:44",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781311462151,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:44",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 939,
+    "current": 940,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-13T03:30:31.333Z",
+        "id": 1985,
+        "items": [
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-13T03:00:37.002Z",
         "id": 1984,
@@ -60516,14 +60545,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 562,
+        "revenue": 582,
         "status": "ok"
       },
       {
@@ -60813,12 +60842,12 @@
         "status": "ok"
       }
     ],
-    "total": 939
+    "total": 940
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 236
+      "total": 256
     },
     {
       "method": "Карта",
@@ -60838,6 +60867,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1985,
+      "items": [
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 1984,
       "items": [
@@ -60896,16 +60933,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 1977,
-      "items": [
-        "Babl tea big x1",
-        "Клубничный big x1",
-        "Айс Латте x2"
-      ],
-      "status": "Оплачен",
-      "total": 116
     }
   ],
   "shifts": {
@@ -61046,6 +61073,11 @@
       "total": 120
     },
     {
+      "name": "Babl tea mini",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Черника big",
       "qty": 2,
       "total": 60
@@ -61071,16 +61103,11 @@
       "total": 50
     },
     {
-      "name": "Babl tea mini",
-      "qty": 2,
-      "total": 40
-    },
-    {
       "name": "ПиноКолада big",
       "qty": 1,
       "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T10:02:46.687Z"
+  "updatedAt": "2026-06-13T10:32:40.973Z"
 }

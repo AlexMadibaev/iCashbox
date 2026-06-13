@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 30,
-    "checks": 1,
+    "average": 25,
+    "checks": 2,
     "expenseTotal": 205,
-    "net": -175,
-    "revenue": 30
+    "net": -155,
+    "revenue": 50
   },
   "data": {
-    "actions": 2220,
+    "actions": 2222,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 927,
+    "orders": 928,
     "products": 39,
     "shifts": 22
   },
   "activity": [
+    {
+      "id": 1781302778530,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:19",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781302778530,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:19",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781299466060,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781258408888,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:00",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781257756886,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:49",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 927,
+    "current": 928,
     "old": [
       {
         "createdAt": "2026-06-12T10:29:44.783Z",
@@ -30133,6 +30133,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-12T22:57:38.340Z",
+        "id": 1973,
+        "items": [
+          "Фреш лимон big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-фреш-лимон-big",
+            "name": "Фреш лимон big",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 20,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-13",
+        "shiftLabel": "Смена 13.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-12T22:19:38.456Z",
         "id": 1972,
@@ -60114,14 +60143,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 1,
-        "expectedOrders": 1,
+        "databaseOrders": 2,
+        "expectedOrders": 2,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-13",
         "label": "Смена 13.06",
         "missingOrders": 0,
-        "revenue": 30,
+        "revenue": 50,
         "status": "ok"
       },
       {
@@ -60411,7 +60440,7 @@
         "status": "ok"
       }
     ],
-    "total": 927
+    "total": 928
   },
   "payments": [
     {
@@ -60428,7 +60457,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 0
+      "total": 20
     },
     {
       "method": "Семья",
@@ -60436,6 +60465,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 1973,
+      "items": [
+        "Фреш лимон big x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 1972,
       "items": [
@@ -60581,8 +60618,13 @@
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
+    },
+    {
+      "name": "Фреш лимон big",
+      "qty": 1,
+      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-13T05:21:48.449Z"
+  "updatedAt": "2026-06-13T05:59:48.242Z"
 }

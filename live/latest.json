@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.357142857142854,
-    "checks": 14,
+    "average": 42.8,
+    "checks": 15,
     "expenseTotal": 205,
-    "net": 332,
-    "revenue": 537
+    "net": 437,
+    "revenue": 642
   },
   "data": {
-    "actions": 2339,
+    "actions": 2341,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 986,
+    "orders": 987,
     "products": 39,
     "shifts": 23
   },
   "activity": [
     {
+      "id": 1781411782110,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:36",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781411782110,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:36",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781410129100,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:01",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781400738897,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:32",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781400738897,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:32",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 986,
+    "current": 987,
     "old": [
       {
         "createdAt": "2026-06-13T10:07:21.732Z",
@@ -31611,6 +31611,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-14T05:40:37.892Z",
+        "id": 2032,
+        "items": [
+          "Капучино x1",
+          "Мороженое классическое x1",
+          "Жасмин лимон mini x2",
+          "Манго Маракуя mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-tea-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 105,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-14",
+        "shiftLabel": "Смена 14.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 105
+      },
       {
         "createdAt": "2026-06-14T04:36:22.058Z",
         "id": 2031,
@@ -63501,14 +63557,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 14,
-        "expectedOrders": 14,
+        "databaseOrders": 15,
+        "expectedOrders": 15,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-14",
         "label": "Смена 14.06",
         "missingOrders": 0,
-        "revenue": 537,
+        "revenue": 642,
         "status": "ok"
       },
       {
@@ -63811,7 +63867,7 @@
         "status": "ok"
       }
     ],
-    "total": 986
+    "total": 987
   },
   "payments": [
     {
@@ -63828,7 +63884,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 50
+      "total": 155
     },
     {
       "method": "Семья",
@@ -63836,6 +63892,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2032,
+      "items": [
+        "Капучино x1",
+        "Мороженое классическое x1",
+        "Жасмин лимон mini x2",
+        "Манго Маракуя mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 105
+    },
     {
       "id": 2031,
       "items": [
@@ -63894,14 +63961,6 @@
       ],
       "status": "Оплачен",
       "total": 66
-    },
-    {
-      "id": 2024,
-      "items": [
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -64038,8 +64097,8 @@
   "topProducts": [
     {
       "name": "Манго Маракуя mini",
-      "qty": 9,
-      "total": 180
+      "qty": 10,
+      "total": 200
     },
     {
       "name": "Babl tea mini",
@@ -64050,6 +64109,11 @@
       "name": "Мороженое клубничное",
       "qty": 3,
       "total": 60
+    },
+    {
+      "name": "Жасмин лимон mini",
+      "qty": 2,
+      "total": 40
     },
     {
       "name": "Мороженое рожок",
@@ -64070,13 +64134,8 @@
       "name": "Виноградный тропический big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-14T11:38:32.413Z"
+  "updatedAt": "2026-06-14T12:42:48.316Z"
 }

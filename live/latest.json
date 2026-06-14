@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 45.96,
-    "checks": 25,
+    "average": 46.11538461538461,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 944,
-    "revenue": 1149
+    "net": 994,
+    "revenue": 1199
   },
   "data": {
-    "actions": 2361,
+    "actions": 2363,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 997,
+    "orders": 998,
     "products": 39,
     "shifts": 23
   },
   "activity": [
     {
+      "id": 1781421339000,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:15",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781421339000,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:15",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781420845217,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:17",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781417487392,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:11",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781417487392,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:11",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 997,
+    "current": 998,
     "old": [
       {
         "createdAt": "2026-06-13T10:07:21.732Z",
@@ -31611,6 +31611,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-14T07:17:27.870Z",
+        "id": 2043,
+        "items": [
+          "Айс Латте x1",
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-14",
+        "shiftLabel": "Смена 14.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-14T07:15:38.931Z",
         "id": 2042,
@@ -63865,14 +63903,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-14",
         "label": "Смена 14.06",
         "missingOrders": 0,
-        "revenue": 1149,
+        "revenue": 1199,
         "status": "ok"
       },
       {
@@ -64175,12 +64213,12 @@
         "status": "ok"
       }
     ],
-    "total": 997
+    "total": 998
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 682
+      "total": 732
     },
     {
       "method": "Карта",
@@ -64200,6 +64238,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2043,
+      "items": [
+        "Айс Латте x1",
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 2042,
       "items": [
@@ -64255,15 +64302,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2035,
-      "items": [
-        "Клубничный big x1",
-        "МангоБанан big x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -64410,8 +64448,13 @@
     },
     {
       "name": "Мороженое классическое",
-      "qty": 4,
-      "total": 80
+      "qty": 5,
+      "total": 100
+    },
+    {
+      "name": "Айс Латте",
+      "qty": 3,
+      "total": 90
     },
     {
       "name": "Babl tea mini",
@@ -64422,11 +64465,6 @@
       "name": "Манго Маракуя big",
       "qty": 3,
       "total": 78
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 2,
-      "total": 60
     },
     {
       "name": "Мороженое клубничное",
@@ -64440,5 +64478,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-14T14:17:49.087Z"
+  "updatedAt": "2026-06-14T14:19:37.289Z"
 }

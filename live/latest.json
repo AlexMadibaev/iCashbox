@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 33.333333333333336,
-    "checks": 3,
+    "average": 51.25,
+    "checks": 4,
     "expenseTotal": 205,
-    "net": -105,
-    "revenue": 100
+    "net": 0,
+    "revenue": 205
   },
   "data": {
-    "actions": 2317,
+    "actions": 2319,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 975,
+    "orders": 976,
     "products": 39,
     "shifts": 23
   },
   "activity": [
+    {
+      "id": 1781392499073,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:14",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781392499073,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:14",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781390549199,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781343370844,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:36",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781342607964,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:23",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 975,
+    "current": 976,
     "old": [
       {
         "createdAt": "2026-06-13T10:07:21.732Z",
@@ -31611,6 +31611,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-14T00:11:48.780Z",
+        "id": 2021,
+        "items": [
+          "Мороженое клубничное x3",
+          "Манго Маракуя mini x1",
+          "ПиноКолада mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 3,
+            "size": "",
+            "total": 60
+          },
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-милкшейк-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 105,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-14",
+        "shiftLabel": "Смена 14.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 105
+      },
       {
         "createdAt": "2026-06-13T23:14:59.002Z",
         "id": 2020,
@@ -63128,14 +63175,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 3,
-        "expectedOrders": 3,
+        "databaseOrders": 4,
+        "expectedOrders": 4,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-14",
         "label": "Смена 14.06",
         "missingOrders": 0,
-        "revenue": 100,
+        "revenue": 205,
         "status": "ok"
       },
       {
@@ -63438,12 +63485,12 @@
         "status": "ok"
       }
     ],
-    "total": 975
+    "total": 976
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 80
+      "total": 185
     },
     {
       "method": "Карта",
@@ -63463,6 +63510,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2021,
+      "items": [
+        "Мороженое клубничное x3",
+        "Манго Маракуя mini x1",
+        "ПиноКолада mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 105
+    },
     {
       "id": 2020,
       "items": [
@@ -63621,14 +63678,24 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое клубничное",
+      "qty": 3,
+      "total": 60
+    },
+    {
+      "name": "Манго Маракуя mini",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 4,
       "total": 40
     },
     {
-      "name": "Манго Маракуя mini",
-      "qty": 2,
-      "total": 40
+      "name": "ПиноКолада mini",
+      "qty": 1,
+      "total": 25
     },
     {
       "name": "Американо",
@@ -63637,5 +63704,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-14T06:17:09.941Z"
+  "updatedAt": "2026-06-14T07:13:59.509Z"
 }

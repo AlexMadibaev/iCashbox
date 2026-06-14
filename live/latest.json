@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 47.93103448275862,
-    "checks": 29,
+    "average": 47,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 1185,
-    "revenue": 1390
+    "net": 1205,
+    "revenue": 1410
   },
   "data": {
-    "actions": 2369,
+    "actions": 2371,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1001,
+    "orders": 1002,
     "products": 39,
     "shifts": 23
   },
   "activity": [
     {
+      "id": 1781422445265,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:34",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781422445265,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:34",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781422251088,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:07",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781420576527,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:02",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781420576527,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:02",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1001,
+    "current": 1002,
     "old": [
       {
         "createdAt": "2026-06-13T10:07:21.732Z",
@@ -31611,6 +31611,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-14T07:36:45.827Z",
+        "id": 2047,
+        "items": [
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 20,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-14",
+        "shiftLabel": "Смена 14.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-14T07:34:05.210Z",
         "id": 2046,
@@ -64026,14 +64055,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-14",
         "label": "Смена 14.06",
         "missingOrders": 0,
-        "revenue": 1390,
+        "revenue": 1410,
         "status": "ok"
       },
       {
@@ -64336,7 +64365,7 @@
         "status": "ok"
       }
     ],
-    "total": 1001
+    "total": 1002
   },
   "payments": [
     {
@@ -64349,7 +64378,7 @@
     },
     {
       "method": "Alif",
-      "total": 271
+      "total": 291
     },
     {
       "method": "Dushanbe City",
@@ -64361,6 +64390,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2047,
+      "items": [
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2046,
       "items": [
@@ -64421,14 +64458,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 2039,
-      "items": [
-        "Капучино x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -64580,8 +64609,8 @@
     },
     {
       "name": "Мороженое классическое",
-      "qty": 5,
-      "total": 100
+      "qty": 6,
+      "total": 120
     },
     {
       "name": "Айс Латте",
@@ -64605,5 +64634,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-14T14:36:14.471Z"
+  "updatedAt": "2026-06-14T14:38:55.240Z"
 }

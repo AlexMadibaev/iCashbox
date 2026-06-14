@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 45,
-    "checks": 36,
+    "average": 47.108108108108105,
+    "checks": 37,
     "expenseTotal": 205,
-    "net": 1415,
-    "revenue": 1620
+    "net": 1538,
+    "revenue": 1743
   },
   "data": {
-    "actions": 2383,
+    "actions": 2385,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1008,
+    "orders": 1009,
     "products": 39,
     "shifts": 23
   },
   "activity": [
     {
+      "id": 1781428897403,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:21",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781428897403,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:21",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781427565906,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781422605893,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781422605893,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:36",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1008,
+    "current": 1009,
     "old": [
       {
         "createdAt": "2026-06-13T10:07:21.732Z",
@@ -31611,6 +31611,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-14T09:39:53.311Z",
+        "id": 2054,
+        "items": [
+          "Babl tea big x3",
+          "Капучино x1",
+          "Мороженое манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 3,
+            "size": "",
+            "total": 78
+          },
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 200,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-14",
+        "shiftLabel": "Смена 14.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 123
+      },
       {
         "createdAt": "2026-06-14T09:21:37.348Z",
         "id": 2053,
@@ -64256,14 +64303,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 36,
-        "expectedOrders": 36,
+        "databaseOrders": 37,
+        "expectedOrders": 37,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-14",
         "label": "Смена 14.06",
         "missingOrders": 0,
-        "revenue": 1620,
+        "revenue": 1743,
         "status": "ok"
       },
       {
@@ -64566,12 +64613,12 @@
         "status": "ok"
       }
     ],
-    "total": 1008
+    "total": 1009
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1042
+      "total": 1165
     },
     {
       "method": "Карта",
@@ -64591,6 +64638,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2054,
+      "items": [
+        "Babl tea big x3",
+        "Капучино x1",
+        "Мороженое манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 123
+    },
     {
       "id": 2053,
       "items": [
@@ -64649,16 +64706,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2046,
-      "items": [
-        "Мороженое Орео x1",
-        "Babl tea big x1",
-        "Клубничный mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 71
     }
   ],
   "shifts": {
@@ -64819,6 +64866,11 @@
       "total": 120
     },
     {
+      "name": "Babl tea big",
+      "qty": 4,
+      "total": 104
+    },
+    {
       "name": "Клубничный mini",
       "qty": 4,
       "total": 100
@@ -64827,13 +64879,8 @@
       "name": "Айс Латте",
       "qty": 3,
       "total": 90
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 3,
-      "total": 78
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-14T16:23:48.044Z"
+  "updatedAt": "2026-06-14T16:42:03.617Z"
 }

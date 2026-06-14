@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 47,
-    "checks": 5,
+    "average": 45.833333333333336,
+    "checks": 6,
     "expenseTotal": 205,
-    "net": 30,
-    "revenue": 235
+    "net": 70,
+    "revenue": 275
   },
   "data": {
-    "actions": 2321,
+    "actions": 2323,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 977,
+    "orders": 978,
     "products": 39,
     "shifts": 23
   },
   "activity": [
+    {
+      "id": 1781396462637,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:21",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781396462637,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:21",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781395908839,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:07",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781345241799,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:07",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781344876234,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:01",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 977,
+    "current": 978,
     "old": [
       {
         "createdAt": "2026-06-13T10:07:21.732Z",
@@ -31611,6 +31611,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-14T00:52:54.220Z",
+        "id": 2023,
+        "items": [
+          "Babl tea mini x1",
+          "Манго Маракуя mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-14",
+        "shiftLabel": "Смена 14.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-14T00:21:02.583Z",
         "id": 2022,
@@ -63204,14 +63242,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 5,
-        "expectedOrders": 5,
+        "databaseOrders": 6,
+        "expectedOrders": 6,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-14",
         "label": "Смена 14.06",
         "missingOrders": 0,
-        "revenue": 235,
+        "revenue": 275,
         "status": "ok"
       },
       {
@@ -63514,12 +63552,12 @@
         "status": "ok"
       }
     ],
-    "total": 977
+    "total": 978
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 215
+      "total": 255
     },
     {
       "method": "Карта",
@@ -63539,6 +63577,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2023,
+      "items": [
+        "Babl tea mini x1",
+        "Манго Маракуя mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2022,
       "items": [
@@ -63715,12 +63762,12 @@
   },
   "topProducts": [
     {
-      "name": "Мороженое клубничное",
-      "qty": 3,
-      "total": 60
+      "name": "Манго Маракуя mini",
+      "qty": 4,
+      "total": 80
     },
     {
-      "name": "Манго Маракуя mini",
+      "name": "Мороженое клубничное",
       "qty": 3,
       "total": 60
     },
@@ -63740,11 +63787,16 @@
       "total": 25
     },
     {
+      "name": "Babl tea mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Американо",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-14T07:23:12.994Z"
+  "updatedAt": "2026-06-14T07:55:04.608Z"
 }

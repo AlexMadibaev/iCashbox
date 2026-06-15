@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.26470588235294,
-    "checks": 34,
+    "average": 38.02857142857143,
+    "checks": 35,
     "expenseTotal": 205,
-    "net": 1096,
-    "revenue": 1301
+    "net": 1126,
+    "revenue": 1331
   },
   "data": {
-    "actions": 2464,
+    "actions": 2466,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1048,
+    "orders": 1049,
     "products": 39,
     "shifts": 24
   },
   "activity": [
     {
+      "id": 1781508331805,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:25",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781508331805,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:25",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781508292655,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:03",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781506481123,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:54",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781506481123,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:54",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1048,
+    "current": 1049,
     "old": [
       {
         "createdAt": "2026-06-14T10:20:06.685Z",
@@ -33072,6 +33072,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T07:38:02.993Z",
+        "id": 2094,
+        "items": [
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-15",
+        "shiftLabel": "Смена 15.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-15T07:25:31.740Z",
         "id": 2093,
@@ -67012,14 +67041,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-15",
         "label": "Смена 15.06",
         "missingOrders": 0,
-        "revenue": 1301,
+        "revenue": 1331,
         "status": "ok"
       },
       {
@@ -67335,12 +67364,12 @@
         "status": "ok"
       }
     ],
-    "total": 1048
+    "total": 1049
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 958
+      "total": 988
     },
     {
       "method": "Карта",
@@ -67360,6 +67389,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2094,
+      "items": [
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2093,
       "items": [
@@ -67416,15 +67453,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2086,
-      "items": [
-        "Манго Маракуя mini x1",
-        "Клубничный жасмин mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -67570,6 +67598,11 @@
       "total": 150
     },
     {
+      "name": "Черника big",
+      "qty": 4,
+      "total": 120
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 6,
       "total": 120
@@ -67585,11 +67618,6 @@
       "total": 104
     },
     {
-      "name": "Черника big",
-      "qty": 3,
-      "total": 90
-    },
-    {
       "name": "Клубничный жасмин mini",
       "qty": 4,
       "total": 80
@@ -67601,5 +67629,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-15T14:27:43.072Z"
+  "updatedAt": "2026-06-15T14:40:15.171Z"
 }

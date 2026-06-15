@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.18421052631579,
-    "checks": 38,
+    "average": 38.53846153846154,
+    "checks": 39,
     "expenseTotal": 205,
-    "net": 1246,
-    "revenue": 1451
+    "net": 1298,
+    "revenue": 1503
   },
   "data": {
-    "actions": 2472,
+    "actions": 2474,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1052,
+    "orders": 1053,
     "products": 39,
     "shifts": 24
   },
   "activity": [
     {
+      "id": 1781510793247,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781510793247,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:06",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781510229409,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781508206507,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781508206507,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:23",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1052,
+    "current": 1053,
     "old": [
       {
         "createdAt": "2026-06-14T10:20:06.685Z",
@@ -33072,6 +33072,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T08:10:44.714Z",
+        "id": 2098,
+        "items": [
+          "Виноградный тропический big x1",
+          "Жасмин лимон big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-жасмин-tea-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-15",
+        "shiftLabel": "Смена 15.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-06-15T08:06:33.192Z",
         "id": 2097,
@@ -67137,14 +67175,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 38,
-        "expectedOrders": 38,
+        "databaseOrders": 39,
+        "expectedOrders": 39,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-15",
         "label": "Смена 15.06",
         "missingOrders": 0,
-        "revenue": 1451,
+        "revenue": 1503,
         "status": "ok"
       },
       {
@@ -67460,12 +67498,12 @@
         "status": "ok"
       }
     ],
-    "total": 1052
+    "total": 1053
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1108
+      "total": 1160
     },
     {
       "method": "Карта",
@@ -67485,6 +67523,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2098,
+      "items": [
+        "Виноградный тропический big x1",
+        "Жасмин лимон big x1"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 2097,
       "items": [
@@ -67542,14 +67589,6 @@
       ],
       "status": "Оплачен",
       "total": 110
-    },
-    {
-      "id": 2090,
-      "items": [
-        "Фреш лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 15
     }
   ],
   "shifts": {
@@ -67695,6 +67734,11 @@
       "total": 150
     },
     {
+      "name": "Виноградный тропический big",
+      "qty": 5,
+      "total": 130
+    },
+    {
       "name": "Черника big",
       "qty": 4,
       "total": 120
@@ -67703,11 +67747,6 @@
       "name": "Мороженое клубничное",
       "qty": 6,
       "total": 120
-    },
-    {
-      "name": "Виноградный тропический big",
-      "qty": 4,
-      "total": 104
     },
     {
       "name": "Манго Маракуя big",
@@ -67720,11 +67759,11 @@
       "total": 80
     },
     {
-      "name": "Мороженое с тапиокой",
+      "name": "Жасмин лимон big",
       "qty": 3,
-      "total": 60
+      "total": 78
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-15T15:08:45.932Z"
+  "updatedAt": "2026-06-15T15:12:55.838Z"
 }

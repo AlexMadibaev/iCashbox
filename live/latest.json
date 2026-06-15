@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.25,
-    "checks": 8,
+    "average": 38.22222222222222,
+    "checks": 9,
     "expenseTotal": 205,
-    "net": 93,
-    "revenue": 298
+    "net": 139,
+    "revenue": 344
   },
   "data": {
-    "actions": 2412,
+    "actions": 2414,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1022,
+    "orders": 1023,
     "products": 39,
     "shifts": 24
   },
   "activity": [
     {
+      "id": 1781480401973,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:40",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781480401973,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:40",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781480035850,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1781477310571,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:48",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781477301067,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:48",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781477301067,
       "source": "Локально",
       "status": "Сохранено",
       "time": "10:48",
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1022,
+    "current": 1023,
     "old": [
       {
         "createdAt": "2026-06-14T10:20:06.685Z",
@@ -33072,6 +33072,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T01:12:36.805Z",
+        "id": 2068,
+        "items": [
+          "Клубничный жасмин big x1",
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-big",
+            "name": "Клубничный жасмин big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-15",
+        "shiftLabel": "Смена 15.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-06-14T23:40:01.913Z",
         "id": 2067,
@@ -66204,14 +66242,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 8,
-        "expectedOrders": 8,
+        "databaseOrders": 9,
+        "expectedOrders": 9,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-15",
         "label": "Смена 15.06",
         "missingOrders": 0,
-        "revenue": 298,
+        "revenue": 344,
         "status": "ok"
       },
       {
@@ -66527,12 +66565,12 @@
         "status": "ok"
       }
     ],
-    "total": 1022
+    "total": 1023
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 136
+      "total": 182
     },
     {
       "method": "Карта",
@@ -66552,6 +66590,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2068,
+      "items": [
+        "Клубничный жасмин big x1",
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 2067,
       "items": [
@@ -66607,15 +66654,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2060,
-      "items": [
-        "Клубничный жасмин mini x2",
-        "Мороженое клубничное x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -66776,16 +66814,21 @@
       "total": 30
     },
     {
+      "name": "Клубничный жасмин big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Жасмин лимон big",
       "qty": 1,
       "total": 26
     },
     {
-      "name": "Манго Маракуя mini",
+      "name": "Мороженое Орео",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-15T06:42:13.917Z"
+  "updatedAt": "2026-06-15T08:14:49.479Z"
 }

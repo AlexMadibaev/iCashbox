@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 60,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -145,
+    "revenue": 60
   },
   "data": {
     "actions": 2398,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1014,
+    "orders": 1015,
     "products": 39,
     "shifts": 24
   },
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1014,
+    "current": 1015,
     "old": [
       {
         "createdAt": "2026-06-14T10:20:06.685Z",
@@ -33072,6 +33072,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-14T22:48:04.474Z",
+        "id": 2060,
+        "items": [
+          "Клубничный жасмин mini x2",
+          "Мороженое клубничное x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 60,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-15",
+        "shiftLabel": "Смена 15.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-14T10:20:06.685Z",
         "id": 2059,
@@ -65963,15 +66001,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-06-15",
         "label": "Смена 15.06",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 60,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -66286,7 +66324,7 @@
         "status": "ok"
       }
     ],
-    "total": 1014
+    "total": 1015
   },
   "payments": [
     {
@@ -66299,7 +66337,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 60
     },
     {
       "method": "Dushanbe City",
@@ -66310,7 +66348,17 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 2060,
+      "items": [
+        "Клубничный жасмин mini x2",
+        "Мороженое клубничное x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -66442,7 +66490,18 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Клубничный жасмин mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
+      "name": "Мороженое клубничное",
+      "qty": 1,
+      "total": 20
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-06-15T05:48:41.736Z"
+  "updatedAt": "2026-06-15T05:50:15.953Z"
 }

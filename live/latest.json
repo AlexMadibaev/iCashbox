@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.02040816326531,
-    "checks": 49,
+    "average": 38.84,
+    "checks": 50,
     "expenseTotal": 205,
-    "net": 1707,
-    "revenue": 1912
+    "net": 1737,
+    "revenue": 1942
   },
   "data": {
-    "actions": 2494,
+    "actions": 2496,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1063,
+    "orders": 1064,
     "products": 39,
     "shifts": 24
   },
   "activity": [
     {
+      "id": 1781517884260,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:04",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781517884260,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:04",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781516966422,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:14",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781513837585,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:57",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781513837585,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:57",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1063,
+    "current": 1064,
     "old": [
       {
         "createdAt": "2026-06-14T10:20:06.685Z",
@@ -33072,6 +33072,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T10:26:47.581Z",
+        "id": 2109,
+        "items": [
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-15",
+        "shiftLabel": "Смена 15.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-15T10:04:44.202Z",
         "id": 2108,
@@ -67501,14 +67530,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 49,
-        "expectedOrders": 49,
+        "databaseOrders": 50,
+        "expectedOrders": 50,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-15",
         "label": "Смена 15.06",
         "missingOrders": 0,
-        "revenue": 1912,
+        "revenue": 1942,
         "status": "ok"
       },
       {
@@ -67824,12 +67853,12 @@
         "status": "ok"
       }
     ],
-    "total": 1063
+    "total": 1064
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1379
+      "total": 1409
     },
     {
       "method": "Карта",
@@ -67849,6 +67878,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2109,
+      "items": [
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2108,
       "items": [
@@ -67906,14 +67943,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2101,
-      "items": [
-        "Babl tea mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -68054,6 +68083,11 @@
       "total": 200
     },
     {
+      "name": "Клубничный big",
+      "qty": 6,
+      "total": 180
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 8,
       "total": 160
@@ -68062,11 +68096,6 @@
       "name": "Виноградный тропический big",
       "qty": 6,
       "total": 156
-    },
-    {
-      "name": "Клубничный big",
-      "qty": 5,
-      "total": 150
     },
     {
       "name": "Мороженое Орео",
@@ -68090,5 +68119,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-15T17:06:56.196Z"
+  "updatedAt": "2026-06-15T17:28:59.976Z"
 }

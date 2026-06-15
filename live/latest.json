@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.083333333333336,
-    "checks": 36,
+    "average": 38.67567567567568,
+    "checks": 37,
     "expenseTotal": 205,
-    "net": 1166,
-    "revenue": 1371
+    "net": 1226,
+    "revenue": 1431
   },
   "data": {
-    "actions": 2468,
+    "actions": 2470,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1050,
+    "orders": 1051,
     "products": 39,
     "shifts": 24
   },
   "activity": [
     {
+      "id": 1781509337901,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:42",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781509337901,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:42",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781509083077,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:16",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781507433857,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:10",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781507433857,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:10",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1050,
+    "current": 1051,
     "old": [
       {
         "createdAt": "2026-06-14T10:20:06.685Z",
@@ -33072,6 +33072,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T07:57:09.347Z",
+        "id": 2096,
+        "items": [
+          "Мороженое Орео x2",
+          "Мороженое с тапиокой x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 70,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-15",
+        "shiftLabel": "Смена 15.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-15T07:42:17.846Z",
         "id": 2095,
@@ -67070,14 +67108,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 36,
-        "expectedOrders": 36,
+        "databaseOrders": 37,
+        "expectedOrders": 37,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-15",
         "label": "Смена 15.06",
         "missingOrders": 0,
-        "revenue": 1371,
+        "revenue": 1431,
         "status": "ok"
       },
       {
@@ -67393,12 +67431,12 @@
         "status": "ok"
       }
     ],
-    "total": 1050
+    "total": 1051
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1028
+      "total": 1088
     },
     {
       "method": "Карта",
@@ -67418,6 +67456,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2096,
+      "items": [
+        "Мороженое Орео x2",
+        "Мороженое с тапиокой x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2095,
       "items": [
@@ -67474,14 +67521,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2088,
-      "items": [
-        "ПиноКолада big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -67652,11 +67691,11 @@
       "total": 80
     },
     {
-      "name": "Айс Латте",
-      "qty": 2,
+      "name": "Мороженое Орео",
+      "qty": 3,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-15T14:44:29.207Z"
+  "updatedAt": "2026-06-15T14:59:21.730Z"
 }

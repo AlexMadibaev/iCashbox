@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.758620689655174,
-    "checks": 29,
+    "average": 36.2,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 861,
-    "revenue": 1066
+    "net": 881,
+    "revenue": 1086
   },
   "data": {
-    "actions": 2454,
+    "actions": 2456,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1043,
+    "orders": 1044,
     "products": 39,
     "shifts": 24
   },
   "activity": [
     {
+      "id": 1781507030600,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:03",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781507030600,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:03",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781506481123,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781504303405,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:18",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781504303405,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:18",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1043,
+    "current": 1044,
     "old": [
       {
         "createdAt": "2026-06-14T10:20:06.685Z",
@@ -33072,6 +33072,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T07:10:33.800Z",
+        "id": 2089,
+        "items": [
+          "Мороженое клубничное x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-15",
+        "shiftLabel": "Смена 15.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-15T07:03:50.522Z",
         "id": 2088,
@@ -66858,14 +66887,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-15",
         "label": "Смена 15.06",
         "missingOrders": 0,
-        "revenue": 1066,
+        "revenue": 1086,
         "status": "ok"
       },
       {
@@ -67181,12 +67210,12 @@
         "status": "ok"
       }
     ],
-    "total": 1043
+    "total": 1044
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 723
+      "total": 743
     },
     {
       "method": "Карта",
@@ -67206,6 +67235,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2089,
+      "items": [
+        "Мороженое клубничное x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2088,
       "items": [
@@ -67263,15 +67300,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2081,
-      "items": [
-        "Клубничный big x1",
-        "Черника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -67412,6 +67440,11 @@
       "total": 180
     },
     {
+      "name": "Мороженое клубничное",
+      "qty": 6,
+      "total": 120
+    },
+    {
       "name": "Виноградный тропический big",
       "qty": 4,
       "total": 104
@@ -67420,11 +67453,6 @@
       "name": "Манго Маракуя big",
       "qty": 4,
       "total": 104
-    },
-    {
-      "name": "Мороженое клубничное",
-      "qty": 5,
-      "total": 100
     },
     {
       "name": "Клубничный жасмин mini",
@@ -67448,5 +67476,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-15T14:06:03.011Z"
+  "updatedAt": "2026-06-15T14:12:45.471Z"
 }

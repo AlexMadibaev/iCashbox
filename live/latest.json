@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.1578947368421,
-    "checks": 19,
+    "average": 39.25,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 520,
-    "revenue": 725
+    "net": 580,
+    "revenue": 785
   },
   "data": {
-    "actions": 2434,
+    "actions": 2436,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1033,
+    "orders": 1034,
     "products": 39,
     "shifts": 24
   },
   "activity": [
     {
+      "id": 1781501200053,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:26",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781501200053,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:26",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781500194484,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:51",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781493788865,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781493788865,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:23",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1033,
+    "current": 1034,
     "old": [
       {
         "createdAt": "2026-06-14T10:20:06.685Z",
@@ -33072,6 +33072,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T05:39:03.905Z",
+        "id": 2079,
+        "items": [
+          "Манго Маракуя mini x3"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 3,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-15",
+        "shiftLabel": "Смена 15.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-15T05:26:39.997Z",
         "id": 2078,
@@ -66541,14 +66570,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-15",
         "label": "Смена 15.06",
         "missingOrders": 0,
-        "revenue": 725,
+        "revenue": 785,
         "status": "ok"
       },
       {
@@ -66864,12 +66893,12 @@
         "status": "ok"
       }
     ],
-    "total": 1033
+    "total": 1034
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 458
+      "total": 518
     },
     {
       "method": "Карта",
@@ -66889,6 +66918,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2079,
+      "items": [
+        "Манго Маракуя mini x3"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2078,
       "items": [
@@ -66942,14 +66979,6 @@
       "id": 2072,
       "items": [
         "Мороженое с тапиокой x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 2071,
-      "items": [
-        "Мороженое рожок x2"
       ],
       "status": "Оплачен",
       "total": 20
@@ -67088,6 +67117,11 @@
   },
   "topProducts": [
     {
+      "name": "Манго Маракуя mini",
+      "qty": 8,
+      "total": 160
+    },
+    {
       "name": "Виноградный тропический big",
       "qty": 4,
       "total": 104
@@ -67096,11 +67130,6 @@
       "name": "Манго Маракуя big",
       "qty": 4,
       "total": 104
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 5,
-      "total": 100
     },
     {
       "name": "Мороженое клубничное",
@@ -67129,5 +67158,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-15T12:28:52.428Z"
+  "updatedAt": "2026-06-15T12:41:16.259Z"
 }

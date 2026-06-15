@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.53846153846154,
-    "checks": 26,
+    "average": 37.629629629629626,
+    "checks": 27,
     "expenseTotal": 205,
-    "net": 771,
-    "revenue": 976
+    "net": 811,
+    "revenue": 1016
   },
   "data": {
-    "actions": 2448,
+    "actions": 2450,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1040,
+    "orders": 1041,
     "products": 39,
     "shifts": 24
   },
   "activity": [
     {
+      "id": 1781506271452,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:51",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781506271452,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:51",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781505555986,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:12",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781501943962,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:39",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781501943962,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:39",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1040,
+    "current": 1041,
     "old": [
       {
         "createdAt": "2026-06-14T10:20:06.685Z",
@@ -33072,6 +33072,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T06:53:20.325Z",
+        "id": 2086,
+        "items": [
+          "Манго Маракуя mini x1",
+          "Клубничный жасмин mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-15",
+        "shiftLabel": "Смена 15.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-15T06:51:11.397Z",
         "id": 2085,
@@ -66762,14 +66800,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 26,
-        "expectedOrders": 26,
+        "databaseOrders": 27,
+        "expectedOrders": 27,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-15",
         "label": "Смена 15.06",
         "missingOrders": 0,
-        "revenue": 976,
+        "revenue": 1016,
         "status": "ok"
       },
       {
@@ -67085,12 +67123,12 @@
         "status": "ok"
       }
     ],
-    "total": 1040
+    "total": 1041
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 683
+      "total": 723
     },
     {
       "method": "Карта",
@@ -67110,6 +67148,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2086,
+      "items": [
+        "Манго Маракуя mini x1",
+        "Клубничный жасмин mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2085,
       "items": [
@@ -67167,15 +67214,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 2078,
-      "items": [
-        "Манго Маракуя mini x2",
-        "ПиноКолада mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 65
     }
   ],
   "shifts": {
@@ -67312,8 +67350,8 @@
   "topProducts": [
     {
       "name": "Манго Маракуя mini",
-      "qty": 8,
-      "total": 160
+      "qty": 9,
+      "total": 180
     },
     {
       "name": "Виноградный тропический big",
@@ -67331,13 +67369,13 @@
       "total": 100
     },
     {
-      "name": "Клубничный big",
-      "qty": 2,
-      "total": 60
+      "name": "Клубничный жасмин mini",
+      "qty": 4,
+      "total": 80
     },
     {
-      "name": "Клубничный жасмин mini",
-      "qty": 3,
+      "name": "Клубничный big",
+      "qty": 2,
       "total": 60
     },
     {
@@ -67352,5 +67390,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-15T13:53:24.024Z"
+  "updatedAt": "2026-06-15T13:55:31.708Z"
 }

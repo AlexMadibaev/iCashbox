@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.4,
-    "checks": 10,
+    "average": 37.81818181818182,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 159,
-    "revenue": 364
+    "net": 211,
+    "revenue": 416
   },
   "data": {
-    "actions": 2416,
+    "actions": 2418,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1024,
+    "orders": 1025,
     "products": 39,
     "shifts": 24
   },
   "activity": [
     {
+      "id": 1781486844838,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781486844838,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:27",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781485956865,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781477909950,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:58",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781477909950,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:58",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1024,
+    "current": 1025,
     "old": [
       {
         "createdAt": "2026-06-14T10:20:06.685Z",
@@ -33072,6 +33072,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T01:30:46.902Z",
+        "id": 2070,
+        "items": [
+          "Манго Маракуя big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          }
+        ],
+        "payments": {
+          "Наличные": 52,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-15",
+        "shiftLabel": "Смена 15.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-06-15T01:27:24.784Z",
         "id": 2069,
@@ -66271,14 +66300,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-15",
         "label": "Смена 15.06",
         "missingOrders": 0,
-        "revenue": 364,
+        "revenue": 416,
         "status": "ok"
       },
       {
@@ -66594,12 +66623,12 @@
         "status": "ok"
       }
     ],
-    "total": 1024
+    "total": 1025
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 202
+      "total": 254
     },
     {
       "method": "Карта",
@@ -66619,6 +66648,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2070,
+      "items": [
+        "Манго Маракуя big x2"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 2069,
       "items": [
@@ -66675,14 +66712,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2062,
-      "items": [
-        "Мороженое клубничное x3"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -66818,6 +66847,11 @@
   },
   "topProducts": [
     {
+      "name": "Манго Маракуя big",
+      "qty": 4,
+      "total": 104
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 4,
       "total": 80
@@ -66826,11 +66860,6 @@
       "name": "Клубничный жасмин mini",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 2,
-      "total": 52
     },
     {
       "name": "Клубничный big",
@@ -66859,5 +66888,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-15T08:29:37.175Z"
+  "updatedAt": "2026-06-15T08:32:58.386Z"
 }

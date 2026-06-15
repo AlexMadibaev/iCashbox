@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.93333333333333,
-    "checks": 15,
+    "average": 37.125,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 349,
-    "revenue": 554
+    "net": 389,
+    "revenue": 594
   },
   "data": {
-    "actions": 2426,
+    "actions": 2428,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1029,
+    "orders": 1030,
     "products": 39,
     "shifts": 24
   },
   "activity": [
     {
+      "id": 1781495997381,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781495997381,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:59",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781495506055,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:27",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781485956865,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:12",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781485956865,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:12",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1029,
+    "current": 1030,
     "old": [
       {
         "createdAt": "2026-06-14T10:20:06.685Z",
@@ -33072,6 +33072,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T04:03:44.780Z",
+        "id": 2075,
+        "items": [
+          "Matcha big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-15",
+        "shiftLabel": "Смена 15.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-15T03:59:57.324Z",
         "id": 2074,
@@ -66416,14 +66445,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-15",
         "label": "Смена 15.06",
         "missingOrders": 0,
-        "revenue": 554,
+        "revenue": 594,
         "status": "ok"
       },
       {
@@ -66739,12 +66768,12 @@
         "status": "ok"
       }
     ],
-    "total": 1029
+    "total": 1030
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 372
+      "total": 412
     },
     {
       "method": "Карта",
@@ -66764,6 +66793,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2075,
+      "items": [
+        "Matcha big x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2074,
       "items": [
@@ -66820,14 +66857,6 @@
       ],
       "status": "Оплачен",
       "total": 46
-    },
-    {
-      "id": 2067,
-      "items": [
-        "Клубничный big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -66983,6 +67012,11 @@
       "total": 60
     },
     {
+      "name": "Matcha big",
+      "qty": 1,
+      "total": 40
+    },
+    {
       "name": "Babl tea mini",
       "qty": 2,
       "total": 40
@@ -66996,13 +67030,8 @@
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Клубничный жасмин big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-15T11:02:09.726Z"
+  "updatedAt": "2026-06-15T11:05:56.187Z"
 }

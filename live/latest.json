@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.391304347826086,
-    "checks": 46,
+    "average": 38.42553191489362,
+    "checks": 47,
     "expenseTotal": 205,
-    "net": 1561,
-    "revenue": 1766
+    "net": 1601,
+    "revenue": 1806
   },
   "data": {
-    "actions": 2488,
+    "actions": 2490,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1060,
+    "orders": 1061,
     "products": 39,
     "shifts": 24
   },
   "activity": [
     {
+      "id": 1781516249456,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:37",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781516249456,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:37",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781515700493,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781511931194,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:25",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781511931194,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:25",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1060,
+    "current": 1061,
     "old": [
       {
         "createdAt": "2026-06-14T10:20:06.685Z",
@@ -33072,6 +33072,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T09:38:34.850Z",
+        "id": 2106,
+        "items": [
+          "Мороженое Орео x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-15",
+        "shiftLabel": "Смена 15.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-15T09:37:29.377Z",
         "id": 2105,
@@ -67405,14 +67434,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 46,
-        "expectedOrders": 46,
+        "databaseOrders": 47,
+        "expectedOrders": 47,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-15",
         "label": "Смена 15.06",
         "missingOrders": 0,
-        "revenue": 1766,
+        "revenue": 1806,
         "status": "ok"
       },
       {
@@ -67728,12 +67757,12 @@
         "status": "ok"
       }
     ],
-    "total": 1060
+    "total": 1061
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1259
+      "total": 1299
     },
     {
       "method": "Карта",
@@ -67753,6 +67782,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2106,
+      "items": [
+        "Мороженое Орео x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2105,
       "items": [
@@ -67811,15 +67848,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 2098,
-      "items": [
-        "Виноградный тропический big x1",
-        "Жасмин лимон big x1"
-      ],
-      "status": "Оплачен",
-      "total": 52
     }
   ],
   "shifts": {
@@ -67970,6 +67998,11 @@
       "total": 150
     },
     {
+      "name": "Мороженое Орео",
+      "qty": 7,
+      "total": 140
+    },
+    {
       "name": "Черника big",
       "qty": 4,
       "total": 120
@@ -67988,13 +68021,8 @@
       "name": "Манго Маракуя big",
       "qty": 4,
       "total": 104
-    },
-    {
-      "name": "Мороженое Орео",
-      "qty": 5,
-      "total": 100
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-15T16:39:41.048Z"
+  "updatedAt": "2026-06-15T16:40:46.389Z"
 }

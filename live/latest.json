@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 41.666666666666664,
-    "checks": 3,
+    "average": 36.25,
+    "checks": 4,
     "expenseTotal": 205,
-    "net": -80,
-    "revenue": 125
+    "net": -60,
+    "revenue": 145
   },
   "data": {
-    "actions": 2511,
+    "actions": 2513,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1071,
+    "orders": 1072,
     "products": 39,
     "shifts": 25
   },
   "activity": [
+    {
+      "id": 1781564907796,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:08",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781564907796,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:08",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781563753831,
       "source": "Локально",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1781519335207,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:28",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781519335207,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:28",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781519291602,
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:28",
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1071,
+    "current": 1072,
     "old": [
       {
         "createdAt": "2026-06-15T10:39:51.507Z",
@@ -34791,6 +34791,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T23:09:42.611Z",
+        "id": 2117,
+        "items": [
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-16",
+        "shiftLabel": "Смена 16.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-15T23:08:27.723Z",
         "id": 2116,
@@ -69497,14 +69526,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 3,
-        "expectedOrders": 3,
+        "databaseOrders": 4,
+        "expectedOrders": 4,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-16",
         "label": "Смена 16.06",
         "missingOrders": 0,
-        "revenue": 125,
+        "revenue": 145,
         "status": "ok"
       },
       {
@@ -69833,12 +69862,12 @@
         "status": "ok"
       }
     ],
-    "total": 1071
+    "total": 1072
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 65
+      "total": 85
     },
     {
       "method": "Карта",
@@ -69858,6 +69887,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2117,
+      "items": [
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2116,
       "items": [
@@ -70017,6 +70054,11 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое классическое",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Жасмин лимон mini",
       "qty": 2,
       "total": 40
@@ -70030,13 +70072,8 @@
       "name": "ПиноКолада mini",
       "qty": 1,
       "total": 25
-    },
-    {
-      "name": "Мороженое классическое",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-16T06:10:40.767Z"
+  "updatedAt": "2026-06-16T06:11:54.698Z"
 }

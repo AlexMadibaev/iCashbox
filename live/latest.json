@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43,
-    "checks": 18,
+    "average": 43.89473684210526,
+    "checks": 19,
     "expenseTotal": 205,
-    "net": 569,
-    "revenue": 774
+    "net": 629,
+    "revenue": 834
   },
   "data": {
-    "actions": 2541,
+    "actions": 2543,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1086,
+    "orders": 1087,
     "products": 39,
     "shifts": 25
   },
   "activity": [
     {
+      "id": 1781590011204,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781590011204,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:06",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781589736938,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:21",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781581708835,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:48",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781581708835,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:48",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1086,
+    "current": 1087,
     "old": [
       {
         "createdAt": "2026-06-15T10:39:51.507Z",
@@ -34791,6 +34791,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-16T06:42:10.544Z",
+        "id": 2132,
+        "items": [
+          "Мороженое клубничное x2",
+          "Виноградный тропический mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-16",
+        "shiftLabel": "Смена 16.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-16T06:06:51.137Z",
         "id": 2131,
@@ -70013,14 +70051,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 18,
-        "expectedOrders": 18,
+        "databaseOrders": 19,
+        "expectedOrders": 19,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-16",
         "label": "Смена 16.06",
         "missingOrders": 0,
-        "revenue": 774,
+        "revenue": 834,
         "status": "ok"
       },
       {
@@ -70349,12 +70387,12 @@
         "status": "ok"
       }
     ],
-    "total": 1086
+    "total": 1087
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 315
+      "total": 375
     },
     {
       "method": "Карта",
@@ -70374,6 +70412,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2132,
+      "items": [
+        "Мороженое клубничное x2",
+        "Виноградный тропический mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2131,
       "items": [
@@ -70432,15 +70479,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 2124,
-      "items": [
-        "Мороженое с тапиокой x1",
-        "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -70577,8 +70615,8 @@
   "topProducts": [
     {
       "name": "Виноградный тропический mini",
-      "qty": 5,
-      "total": 100
+      "qty": 6,
+      "total": 120
     },
     {
       "name": "Мороженое манго",
@@ -70606,16 +70644,16 @@
       "total": 50
     },
     {
-      "name": "Babl tea mini",
+      "name": "Мороженое клубничное",
       "qty": 2,
       "total": 40
     },
     {
-      "name": "Мороженое с тапиокой",
+      "name": "Babl tea mini",
       "qty": 2,
       "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-16T13:09:03.063Z"
+  "updatedAt": "2026-06-16T13:44:23.538Z"
 }

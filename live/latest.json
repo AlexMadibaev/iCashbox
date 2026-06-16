@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 37,
-    "checks": 5,
+    "average": 38.5,
+    "checks": 6,
     "expenseTotal": 205,
-    "net": -20,
-    "revenue": 185
+    "net": 26,
+    "revenue": 231
   },
   "data": {
-    "actions": 2515,
+    "actions": 2517,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1073,
+    "orders": 1074,
     "products": 39,
     "shifts": 25
   },
   "activity": [
+    {
+      "id": 1781565882226,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:24",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781565882225,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:24",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781564982668,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:39",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781519991576,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:39",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781519882075,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:38",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1073,
+    "current": 1074,
     "old": [
       {
         "createdAt": "2026-06-15T10:39:51.507Z",
@@ -34791,6 +34791,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-16T00:38:18.088Z",
+        "id": 2119,
+        "items": [
+          "Манго Маракуя mini x1",
+          "Манго Маракуя big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-mango-maracuya-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 46,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-16",
+        "shiftLabel": "Смена 16.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-06-15T23:24:42.142Z",
         "id": 2118,
@@ -69564,14 +69602,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 5,
-        "expectedOrders": 5,
+        "databaseOrders": 6,
+        "expectedOrders": 6,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-16",
         "label": "Смена 16.06",
         "missingOrders": 0,
-        "revenue": 185,
+        "revenue": 231,
         "status": "ok"
       },
       {
@@ -69900,7 +69938,7 @@
         "status": "ok"
       }
     ],
-    "total": 1073
+    "total": 1074
   },
   "payments": [
     {
@@ -69913,7 +69951,7 @@
     },
     {
       "method": "Alif",
-      "total": 60
+      "total": 106
     },
     {
       "method": "Dushanbe City",
@@ -69925,6 +69963,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2119,
+      "items": [
+        "Манго Маракуя mini x1",
+        "Манго Маракуя big x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 2118,
       "items": [
@@ -70116,9 +70163,19 @@
       "total": 40
     },
     {
+      "name": "Манго Маракуя big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "ПиноКолада mini",
       "qty": 1,
       "total": 25
+    },
+    {
+      "name": "Манго Маракуя mini",
+      "qty": 1,
+      "total": 20
     },
     {
       "name": "Мороженое манго",
@@ -70132,5 +70189,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-16T06:26:55.277Z"
+  "updatedAt": "2026-06-16T07:40:30.924Z"
 }

@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 36.25,
-    "checks": 4,
+    "average": 37,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": -60,
-    "revenue": 145
+    "net": -20,
+    "revenue": 185
   },
   "data": {
-    "actions": 2513,
+    "actions": 2515,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1072,
+    "orders": 1073,
     "products": 39,
     "shifts": 25
   },
   "activity": [
+    {
+      "id": 1781564982668,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:09",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781564982668,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:09",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781564907796,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:38",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781519882075,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:38",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781519335207,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:28",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1072,
+    "current": 1073,
     "old": [
       {
         "createdAt": "2026-06-15T10:39:51.507Z",
@@ -34791,6 +34791,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T23:24:42.142Z",
+        "id": 2118,
+        "items": [
+          "Мороженое манго x1",
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-16",
+        "shiftLabel": "Смена 16.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-15T23:09:42.611Z",
         "id": 2117,
@@ -69526,14 +69564,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-16",
         "label": "Смена 16.06",
         "missingOrders": 0,
-        "revenue": 145,
+        "revenue": 185,
         "status": "ok"
       },
       {
@@ -69862,12 +69900,12 @@
         "status": "ok"
       }
     ],
-    "total": 1072
+    "total": 1073
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 85
+      "total": 125
     },
     {
       "method": "Карта",
@@ -69887,6 +69925,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2118,
+      "items": [
+        "Мороженое манго x1",
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2117,
       "items": [
@@ -70072,8 +70119,18 @@
       "name": "ПиноКолада mini",
       "qty": 1,
       "total": 25
+    },
+    {
+      "name": "Мороженое манго",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Мороженое Орео",
+      "qty": 1,
+      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-16T06:11:54.698Z"
+  "updatedAt": "2026-06-16T06:26:55.277Z"
 }

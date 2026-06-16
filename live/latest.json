@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 44.8,
-    "checks": 10,
+    "average": 44.36363636363637,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 243,
-    "revenue": 448
+    "net": 283,
+    "revenue": 488
   },
   "data": {
-    "actions": 2525,
+    "actions": 2527,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1078,
+    "orders": 1079,
     "products": 39,
     "shifts": 25
   },
   "activity": [
+    {
+      "id": 1781577587191,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:39",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781577587191,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:39",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781574753965,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781564982668,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:09",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781564982668,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:09",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1078,
+    "current": 1079,
     "old": [
       {
         "createdAt": "2026-06-15T10:39:51.507Z",
@@ -34791,6 +34791,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-16T03:12:03.948Z",
+        "id": 2124,
+        "items": [
+          "Мороженое с тапиокой x1",
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-16",
+        "shiftLabel": "Смена 16.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-16T02:39:47.128Z",
         "id": 2123,
@@ -69745,14 +69783,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-16",
         "label": "Смена 16.06",
         "missingOrders": 0,
-        "revenue": 448,
+        "revenue": 488,
         "status": "ok"
       },
       {
@@ -70081,12 +70119,12 @@
         "status": "ok"
       }
     ],
-    "total": 1078
+    "total": 1079
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 145
+      "total": 185
     },
     {
       "method": "Карта",
@@ -70106,6 +70144,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2124,
+      "items": [
+        "Мороженое с тапиокой x1",
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2123,
       "items": [
@@ -70166,15 +70213,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2116,
-      "items": [
-        "ПиноКолада mini x1",
-        "Жасмин лимон mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 65
     }
   ],
   "shifts": {
@@ -70310,6 +70348,11 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое классическое",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Манго Маракуя mini",
       "qty": 3,
       "total": 60
@@ -70330,11 +70373,6 @@
       "total": 40
     },
     {
-      "name": "Мороженое классическое",
-      "qty": 2,
-      "total": 40
-    },
-    {
       "name": "Жасмин лимон mini",
       "qty": 2,
       "total": 40
@@ -70351,5 +70389,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-16T09:41:59.723Z"
+  "updatedAt": "2026-06-16T10:14:16.885Z"
 }

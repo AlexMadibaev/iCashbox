@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.81818181818182,
-    "checks": 22,
+    "average": 42.78260869565217,
+    "checks": 23,
     "expenseTotal": 205,
-    "net": 759,
-    "revenue": 964
+    "net": 779,
+    "revenue": 984
   },
   "data": {
-    "actions": 2549,
+    "actions": 2551,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1090,
+    "orders": 1091,
     "products": 39,
     "shifts": 25
   },
   "activity": [
     {
+      "id": 1781595114308,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:31",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781595114308,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:31",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781594013001,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781586028372,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781586028372,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:00",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1090,
+    "current": 1091,
     "old": [
       {
         "createdAt": "2026-06-15T10:39:51.507Z",
@@ -34791,6 +34791,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-16T07:35:18.200Z",
+        "id": 2136,
+        "items": [
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 20,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-16",
+        "shiftLabel": "Смена 16.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-16T07:31:54.255Z",
         "id": 2135,
@@ -70156,14 +70185,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 22,
-        "expectedOrders": 22,
+        "databaseOrders": 23,
+        "expectedOrders": 23,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-16",
         "label": "Смена 16.06",
         "missingOrders": 0,
-        "revenue": 964,
+        "revenue": 984,
         "status": "ok"
       },
       {
@@ -70492,7 +70521,7 @@
         "status": "ok"
       }
     ],
-    "total": 1090
+    "total": 1091
   },
   "payments": [
     {
@@ -70505,7 +70534,7 @@
     },
     {
       "method": "Alif",
-      "total": 241
+      "total": 261
     },
     {
       "method": "Dushanbe City",
@@ -70517,6 +70546,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2136,
+      "items": [
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2135,
       "items": [
@@ -70572,17 +70609,6 @@
       "id": 2129,
       "items": [
         "Виноградный тропический mini x4"
-      ],
-      "status": "Оплачен",
-      "total": 80
-    },
-    {
-      "id": 2128,
-      "items": [
-        "Мороженое манго x1",
-        "Мороженое с тапиокой x1",
-        "Мороженое Орео x1",
-        "Виноградный тропический mini x1"
       ],
       "status": "Оплачен",
       "total": 80
@@ -70726,6 +70752,11 @@
       "total": 120
     },
     {
+      "name": "Мороженое классическое",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Клубничный mini",
       "qty": 3,
       "total": 75
@@ -70737,11 +70768,6 @@
     },
     {
       "name": "Мороженое манго",
-      "qty": 3,
-      "total": 60
-    },
-    {
-      "name": "Мороженое классическое",
       "qty": 3,
       "total": 60
     },
@@ -70762,5 +70788,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-16T14:34:07.037Z"
+  "updatedAt": "2026-06-16T14:37:29.944Z"
 }

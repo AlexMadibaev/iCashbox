@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 45.83870967741935,
-    "checks": 31,
+    "average": 45.84375,
+    "checks": 32,
     "expenseTotal": 205,
-    "net": 1216,
-    "revenue": 1421
+    "net": 1262,
+    "revenue": 1467
   },
   "data": {
-    "actions": 2567,
+    "actions": 2569,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1099,
+    "orders": 1100,
     "products": 39,
     "shifts": 25
   },
   "activity": [
     {
+      "id": 1781601762508,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781601762508,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781601262362,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:48",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781595736190,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:42",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781595736190,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:42",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1099,
+    "current": 1100,
     "old": [
       {
         "createdAt": "2026-06-15T10:39:51.507Z",
@@ -34791,6 +34791,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-16T09:24:45.731Z",
+        "id": 2145,
+        "items": [
+          "Виноградный тропический big x1",
+          "Мороженое с тапиокой x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 46,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-16",
+        "shiftLabel": "Смена 16.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-06-16T09:22:42.406Z",
         "id": 2144,
@@ -70498,14 +70536,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 31,
-        "expectedOrders": 31,
+        "databaseOrders": 32,
+        "expectedOrders": 32,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-16",
         "label": "Смена 16.06",
         "missingOrders": 0,
-        "revenue": 1421,
+        "revenue": 1467,
         "status": "ok"
       },
       {
@@ -70834,7 +70872,7 @@
         "status": "ok"
       }
     ],
-    "total": 1099
+    "total": 1100
   },
   "payments": [
     {
@@ -70847,7 +70885,7 @@
     },
     {
       "method": "Alif",
-      "total": 492
+      "total": 538
     },
     {
       "method": "Dushanbe City",
@@ -70859,6 +70897,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2145,
+      "items": [
+        "Виноградный тропический big x1",
+        "Мороженое с тапиокой x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 2144,
       "items": [
@@ -70923,14 +70970,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 2137,
-      "items": [
-        "Мороженое рожок x2"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -71081,6 +71120,11 @@
       "total": 120
     },
     {
+      "name": "Мороженое с тапиокой",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Matcha big",
       "qty": 2,
       "total": 80
@@ -71099,13 +71143,8 @@
       "name": "Мороженое манго",
       "qty": 4,
       "total": 80
-    },
-    {
-      "name": "МангоБанан mini",
-      "qty": 3,
-      "total": 75
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-16T16:24:55.096Z"
+  "updatedAt": "2026-06-16T16:26:57.523Z"
 }

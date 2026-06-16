@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 45.84375,
-    "checks": 32,
+    "average": 45.36363636363637,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 1262,
-    "revenue": 1467
+    "net": 1292,
+    "revenue": 1497
   },
   "data": {
-    "actions": 2569,
+    "actions": 2573,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1100,
+    "orders": 1101,
     "products": 39,
     "shifts": 25
   },
   "activity": [
     {
+      "id": 1781601933315,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:25",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781601933315,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:25",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1781601885804,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:24",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781601885804,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:24",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781601762508,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:34",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781596290174,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:51",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781596290174,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:51",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781596112309,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:48",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781596112309,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:48",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1100,
+    "current": 1101,
     "old": [
       {
         "createdAt": "2026-06-15T10:39:51.507Z",
@@ -34791,6 +34791,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-16T09:25:33.247Z",
+        "id": 2146,
+        "items": [
+          "Мороженое рожок x3"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 3,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 30,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-16",
+        "shiftLabel": "Смена 16.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-16T09:24:45.731Z",
         "id": 2145,
@@ -70536,14 +70565,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 32,
-        "expectedOrders": 32,
+        "databaseOrders": 33,
+        "expectedOrders": 33,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-16",
         "label": "Смена 16.06",
         "missingOrders": 0,
-        "revenue": 1467,
+        "revenue": 1497,
         "status": "ok"
       },
       {
@@ -70872,7 +70901,7 @@
         "status": "ok"
       }
     ],
-    "total": 1100
+    "total": 1101
   },
   "payments": [
     {
@@ -70889,7 +70918,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 303
+      "total": 333
     },
     {
       "method": "Семья",
@@ -70897,6 +70926,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2146,
+      "items": [
+        "Мороженое рожок x3"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2145,
       "items": [
@@ -70961,15 +70998,6 @@
       ],
       "status": "Оплачен",
       "total": 56
-    },
-    {
-      "id": 2138,
-      "items": [
-        "Мороженое манго x1",
-        "Мороженое Орео x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -71146,5 +71174,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-16T16:26:57.523Z"
+  "updatedAt": "2026-06-16T16:27:45.626Z"
 }

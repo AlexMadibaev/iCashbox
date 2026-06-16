@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.93333333333333,
-    "checks": 15,
+    "average": 45.25,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 439,
-    "revenue": 644
+    "net": 519,
+    "revenue": 724
   },
   "data": {
-    "actions": 2535,
+    "actions": 2537,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1083,
+    "orders": 1084,
     "products": 39,
     "shifts": 25
   },
   "activity": [
     {
+      "id": 1781585717063,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:55",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781585717063,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:55",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781585048673,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:39",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781574753965,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:52",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781574753965,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:52",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1083,
+    "current": 1084,
     "old": [
       {
         "createdAt": "2026-06-15T10:39:51.507Z",
@@ -34791,6 +34791,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-16T05:00:28.288Z",
+        "id": 2129,
+        "items": [
+          "Виноградный тропический mini x4"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 4,
+            "size": "",
+            "total": 80
+          }
+        ],
+        "payments": {
+          "Наличные": 200,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-16",
+        "shiftLabel": "Смена 16.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 80
+      },
       {
         "createdAt": "2026-06-16T04:55:16.986Z",
         "id": 2128,
@@ -69926,14 +69955,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-16",
         "label": "Смена 16.06",
         "missingOrders": 0,
-        "revenue": 644,
+        "revenue": 724,
         "status": "ok"
       },
       {
@@ -70262,12 +70291,12 @@
         "status": "ok"
       }
     ],
-    "total": 1083
+    "total": 1084
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 185
+      "total": 265
     },
     {
       "method": "Карта",
@@ -70287,6 +70316,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2129,
+      "items": [
+        "Виноградный тропический mini x4"
+      ],
+      "status": "Оплачен",
+      "total": 80
+    },
     {
       "id": 2128,
       "items": [
@@ -70346,15 +70383,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 2121,
-      "items": [
-        "Черника big x1",
-        "Клубничный mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 55
     }
   ],
   "shifts": {
@@ -70490,6 +70518,11 @@
   },
   "topProducts": [
     {
+      "name": "Виноградный тропический mini",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "Мороженое манго",
       "qty": 3,
       "total": 60
@@ -70523,13 +70556,8 @@
       "name": "Мороженое Орео",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Жасмин лимон mini",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-16T11:57:29.993Z"
+  "updatedAt": "2026-06-16T12:02:40.182Z"
 }

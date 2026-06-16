@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 40,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -165,
+    "revenue": 40
   },
   "data": {
     "actions": 2507,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1068,
+    "orders": 1069,
     "products": 39,
     "shifts": 25
   },
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1068,
+    "current": 1069,
     "old": [
       {
         "createdAt": "2026-06-15T10:39:51.507Z",
@@ -34791,6 +34791,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-15T22:12:15.902Z",
+        "id": 2114,
+        "items": [
+          "Matcha big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-16",
+        "shiftLabel": "Смена 16.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-15T10:39:51.507Z",
         "id": 2113,
@@ -69401,15 +69430,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-06-16",
         "label": "Смена 16.06",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 40,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -69737,7 +69766,7 @@
         "status": "ok"
       }
     ],
-    "total": 1068
+    "total": 1069
   },
   "payments": [
     {
@@ -69750,7 +69779,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 40
     },
     {
       "method": "Dushanbe City",
@@ -69761,7 +69790,16 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 2114,
+      "items": [
+        "Matcha big x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -69893,7 +69931,13 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Matcha big",
+      "qty": 1,
+      "total": 40
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-06-16T03:54:18.467Z"
+  "updatedAt": "2026-06-16T05:14:29.057Z"
 }

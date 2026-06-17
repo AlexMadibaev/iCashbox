@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.611111111111114,
-    "checks": 18,
+    "average": 42.8421052631579,
+    "checks": 19,
     "expenseTotal": 205,
-    "net": 544,
-    "revenue": 749
+    "net": 609,
+    "revenue": 814
   },
   "data": {
-    "actions": 2616,
+    "actions": 2618,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1123,
+    "orders": 1124,
     "products": 39,
     "shifts": 26
   },
   "activity": [
     {
+      "id": 1781672332171,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:58",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781672332171,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:58",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781671318230,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:32",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781666254269,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:17",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781666254269,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:17",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1123,
+    "current": 1124,
     "old": [
       {
         "createdAt": "2026-06-16T10:13:52.911Z",
@@ -36089,6 +36089,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-17T05:09:34.717Z",
+        "id": 2169,
+        "items": [
+          "Мороженое классическое x1",
+          "Черника mini x1",
+          "Виноградный тропический mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 65,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-17",
+        "shiftLabel": "Смена 17.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 65
+      },
       {
         "createdAt": "2026-06-17T04:58:52.101Z",
         "id": 2168,
@@ -72582,14 +72629,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 18,
-        "expectedOrders": 18,
+        "databaseOrders": 19,
+        "expectedOrders": 19,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-17",
         "label": "Смена 17.06",
         "missingOrders": 0,
-        "revenue": 749,
+        "revenue": 814,
         "status": "ok"
       },
       {
@@ -72931,12 +72978,12 @@
         "status": "ok"
       }
     ],
-    "total": 1123
+    "total": 1124
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 537
+      "total": 602
     },
     {
       "method": "Карта",
@@ -72956,6 +73003,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2169,
+      "items": [
+        "Мороженое классическое x1",
+        "Черника mini x1",
+        "Виноградный тропический mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 65
+    },
     {
       "id": 2168,
       "items": [
@@ -73015,14 +73072,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2161,
-      "items": [
-        "МангоБанан big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -73193,11 +73242,11 @@
       "total": 52
     },
     {
-      "name": "Черника big",
-      "qty": 1,
-      "total": 30
+      "name": "Мороженое классическое",
+      "qty": 2,
+      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-17T12:01:05.981Z"
+  "updatedAt": "2026-06-17T12:11:48.792Z"
 }

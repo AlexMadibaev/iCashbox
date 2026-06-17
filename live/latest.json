@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.473684210526315,
-    "checks": 38,
+    "average": 42.58974358974359,
+    "checks": 39,
     "expenseTotal": 205,
-    "net": 1371,
-    "revenue": 1576
+    "net": 1456,
+    "revenue": 1661
   },
   "data": {
-    "actions": 2656,
+    "actions": 2658,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1143,
+    "orders": 1144,
     "products": 39,
     "shifts": 26
   },
   "activity": [
     {
+      "id": 1781686177128,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:49",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781686177128,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:49",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781685849404,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:28",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781684757669,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:25",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781684757669,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:25",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1143,
+    "current": 1144,
     "old": [
       {
         "createdAt": "2026-06-16T10:13:52.911Z",
@@ -36089,6 +36089,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-17T08:52:27.715Z",
+        "id": 2189,
+        "items": [
+          "Латте x1",
+          "Айс Латте x2"
+        ],
+        "lines": [
+          {
+            "id": "product-латте",
+            "name": "Латте",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 85,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-17",
+        "shiftLabel": "Смена 17.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 85
+      },
       {
         "createdAt": "2026-06-17T08:49:37.072Z",
         "id": 2188,
@@ -73243,14 +73281,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 38,
-        "expectedOrders": 38,
+        "databaseOrders": 39,
+        "expectedOrders": 39,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-17",
         "label": "Смена 17.06",
         "missingOrders": 0,
-        "revenue": 1576,
+        "revenue": 1661,
         "status": "ok"
       },
       {
@@ -73592,12 +73630,12 @@
         "status": "ok"
       }
     ],
-    "total": 1143
+    "total": 1144
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1258
+      "total": 1343
     },
     {
       "method": "Карта",
@@ -73617,6 +73655,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2189,
+      "items": [
+        "Латте x1",
+        "Айс Латте x2"
+      ],
+      "status": "Оплачен",
+      "total": 85
+    },
     {
       "id": 2188,
       "items": [
@@ -73673,14 +73720,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 2181,
-      "items": [
-        "Мороженое рожок x2"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -73821,6 +73860,11 @@
       "total": 200
     },
     {
+      "name": "Айс Латте",
+      "qty": 4,
+      "total": 120
+    },
+    {
       "name": "Мороженое Орео",
       "qty": 6,
       "total": 120
@@ -73849,13 +73893,8 @@
       "name": "МангоБанан big",
       "qty": 3,
       "total": 90
-    },
-    {
-      "name": "Клубничный big",
-      "qty": 3,
-      "total": 90
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-17T15:51:50.123Z"
+  "updatedAt": "2026-06-17T15:54:40.607Z"
 }

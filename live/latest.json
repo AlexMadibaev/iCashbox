@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.58974358974359,
-    "checks": 39,
+    "average": 42.525,
+    "checks": 40,
     "expenseTotal": 205,
-    "net": 1456,
-    "revenue": 1661
+    "net": 1496,
+    "revenue": 1701
   },
   "data": {
-    "actions": 2658,
+    "actions": 2660,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1144,
+    "orders": 1145,
     "products": 39,
     "shifts": 26
   },
   "activity": [
     {
+      "id": 1781686347779,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:52",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781686347779,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:52",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781686177128,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1781684923936,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:28",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781684900906,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:28",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781684900906,
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:28",
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1144,
+    "current": 1145,
     "old": [
       {
         "createdAt": "2026-06-16T10:13:52.911Z",
@@ -36089,6 +36089,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-17T08:55:41.229Z",
+        "id": 2190,
+        "items": [
+          "Мороженое Орео x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-17",
+        "shiftLabel": "Смена 17.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-17T08:52:27.715Z",
         "id": 2189,
@@ -73281,14 +73310,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 39,
-        "expectedOrders": 39,
+        "databaseOrders": 40,
+        "expectedOrders": 40,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-17",
         "label": "Смена 17.06",
         "missingOrders": 0,
-        "revenue": 1661,
+        "revenue": 1701,
         "status": "ok"
       },
       {
@@ -73630,12 +73659,12 @@
         "status": "ok"
       }
     ],
-    "total": 1144
+    "total": 1145
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1343
+      "total": 1383
     },
     {
       "method": "Карта",
@@ -73655,6 +73684,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2190,
+      "items": [
+        "Мороженое Орео x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2189,
       "items": [
@@ -73712,14 +73749,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2182,
-      "items": [
-        "Babl tea mini x3"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -73860,13 +73889,13 @@
       "total": 200
     },
     {
-      "name": "Айс Латте",
-      "qty": 4,
-      "total": 120
+      "name": "Мороженое Орео",
+      "qty": 8,
+      "total": 160
     },
     {
-      "name": "Мороженое Орео",
-      "qty": 6,
+      "name": "Айс Латте",
+      "qty": 4,
       "total": 120
     },
     {
@@ -73896,5 +73925,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-17T15:54:40.607Z"
+  "updatedAt": "2026-06-17T15:57:54.113Z"
 }

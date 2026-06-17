@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.84615384615385,
-    "checks": 26,
+    "average": 39.25925925925926,
+    "checks": 27,
     "expenseTotal": 205,
-    "net": 805,
-    "revenue": 1010
+    "net": 855,
+    "revenue": 1060
   },
   "data": {
-    "actions": 2632,
+    "actions": 2634,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1131,
+    "orders": 1132,
     "products": 39,
     "shifts": 26
   },
   "activity": [
     {
+      "id": 1781680813633,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:20",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781680813633,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:20",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781680776269,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:35",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781673034005,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:10",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781673034005,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:10",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1131,
+    "current": 1132,
     "old": [
       {
         "createdAt": "2026-06-16T10:13:52.911Z",
@@ -36089,6 +36089,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-17T07:48:50.798Z",
+        "id": 2177,
+        "items": [
+          "МангоБанан mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-17",
+        "shiftLabel": "Смена 17.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-17T07:20:13.574Z",
         "id": 2176,
@@ -72859,14 +72888,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 26,
-        "expectedOrders": 26,
+        "databaseOrders": 27,
+        "expectedOrders": 27,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-17",
         "label": "Смена 17.06",
         "missingOrders": 0,
-        "revenue": 1010,
+        "revenue": 1060,
         "status": "ok"
       },
       {
@@ -73208,12 +73237,12 @@
         "status": "ok"
       }
     ],
-    "total": 1131
+    "total": 1132
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 778
+      "total": 828
     },
     {
       "method": "Карта",
@@ -73233,6 +73262,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2177,
+      "items": [
+        "МангоБанан mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 2176,
       "items": [
@@ -73291,16 +73328,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2169,
-      "items": [
-        "Мороженое классическое x1",
-        "Черника mini x1",
-        "Виноградный тропический mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 65
     }
   ],
   "shifts": {
@@ -73461,6 +73488,11 @@
       "total": 80
     },
     {
+      "name": "МангоБанан mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "Мороженое с тапиокой",
       "qty": 3,
       "total": 60
@@ -73469,13 +73501,8 @@
       "name": "Мороженое клубничное",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 2,
-      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-17T14:22:26.850Z"
+  "updatedAt": "2026-06-17T14:51:04.770Z"
 }

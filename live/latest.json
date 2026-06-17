@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 29.333333333333332,
-    "checks": 6,
+    "average": 33.714285714285715,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": -29,
-    "revenue": 176
+    "net": 31,
+    "revenue": 236
   },
   "data": {
-    "actions": 2592,
+    "actions": 2594,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1111,
+    "orders": 1112,
     "products": 39,
     "shifts": 26
   },
   "activity": [
     {
+      "id": 1781655764594,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781655764594,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781655494379,
       "source": "Локально",
       "status": "Сохранено",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "09:24",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1781644278080,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:11",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1781604832983,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:13",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1111,
+    "current": 1112,
     "old": [
       {
         "createdAt": "2026-06-16T10:13:52.911Z",
@@ -36089,6 +36089,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-17T01:12:34.974Z",
+        "id": 2157,
+        "items": [
+          "Клубничный big x1",
+          "МангоБанан big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 60,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-17",
+        "shiftLabel": "Смена 17.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-17T00:22:44.535Z",
         "id": 2156,
@@ -72180,14 +72218,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-17",
         "label": "Смена 17.06",
         "missingOrders": 0,
-        "revenue": 176,
+        "revenue": 236,
         "status": "ok"
       },
       {
@@ -72529,7 +72567,7 @@
         "status": "ok"
       }
     ],
-    "total": 1111
+    "total": 1112
   },
   "payments": [
     {
@@ -72542,7 +72580,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 60
     },
     {
       "method": "Dushanbe City",
@@ -72554,6 +72592,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2157,
+      "items": [
+        "Клубничный big x1",
+        "МангоБанан big x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2156,
       "items": [
@@ -72738,13 +72785,18 @@
   "topProducts": [
     {
       "name": "Клубничный big",
-      "qty": 2,
-      "total": 60
+      "qty": 3,
+      "total": 90
     },
     {
       "name": "Мороженое клубничное",
       "qty": 2,
       "total": 40
+    },
+    {
+      "name": "МангоБанан big",
+      "qty": 1,
+      "total": 30
     },
     {
       "name": "Айс Латте",
@@ -72763,5 +72815,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-17T07:24:57.897Z"
+  "updatedAt": "2026-06-17T08:14:49.124Z"
 }

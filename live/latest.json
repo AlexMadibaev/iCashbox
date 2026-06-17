@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.11904761904762,
-    "checks": 42,
+    "average": 43.04651162790697,
+    "checks": 43,
     "expenseTotal": 205,
-    "net": 1606,
-    "revenue": 1811
+    "net": 1646,
+    "revenue": 1851
   },
   "data": {
-    "actions": 2664,
+    "actions": 2666,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1147,
+    "orders": 1148,
     "products": 39,
     "shifts": 26
   },
   "activity": [
     {
+      "id": 1781688155226,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781688155226,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781687666058,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:44",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781685545140,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:39",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781685545140,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:39",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1147,
+    "current": 1148,
     "old": [
       {
         "createdAt": "2026-06-16T10:13:52.911Z",
@@ -36089,6 +36089,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-17T09:23:43.273Z",
+        "id": 2193,
+        "items": [
+          "Мороженое с тапиокой x1",
+          "Мороженое клубничное x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-17",
+        "shiftLabel": "Смена 17.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-17T09:22:35.141Z",
         "id": 2192,
@@ -73395,14 +73433,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 42,
-        "expectedOrders": 42,
+        "databaseOrders": 43,
+        "expectedOrders": 43,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-17",
         "label": "Смена 17.06",
         "missingOrders": 0,
-        "revenue": 1811,
+        "revenue": 1851,
         "status": "ok"
       },
       {
@@ -73744,12 +73782,12 @@
         "status": "ok"
       }
     ],
-    "total": 1147
+    "total": 1148
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1473
+      "total": 1513
     },
     {
       "method": "Карта",
@@ -73769,6 +73807,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2193,
+      "items": [
+        "Мороженое с тапиокой x1",
+        "Мороженое клубничное x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2192,
       "items": [
@@ -73829,14 +73876,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 2185,
-      "items": [
-        "Babl tea big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -73982,6 +74021,16 @@
       "total": 200
     },
     {
+      "name": "Мороженое с тапиокой",
+      "qty": 7,
+      "total": 140
+    },
+    {
+      "name": "Мороженое клубничное",
+      "qty": 6,
+      "total": 120
+    },
+    {
       "name": "Айс Латте",
       "qty": 4,
       "total": 120
@@ -73992,18 +74041,8 @@
       "total": 120
     },
     {
-      "name": "Мороженое с тапиокой",
-      "qty": 6,
-      "total": 120
-    },
-    {
       "name": "МангоБанан mini",
       "qty": 4,
-      "total": 100
-    },
-    {
-      "name": "Мороженое клубничное",
-      "qty": 5,
       "total": 100
     },
     {
@@ -74013,5 +74052,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-17T16:24:48.713Z"
+  "updatedAt": "2026-06-17T16:25:56.177Z"
 }

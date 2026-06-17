@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.457142857142856,
-    "checks": 35,
+    "average": 40.44444444444444,
+    "checks": 36,
     "expenseTotal": 205,
-    "net": 1211,
-    "revenue": 1416
+    "net": 1251,
+    "revenue": 1456
   },
   "data": {
-    "actions": 2650,
+    "actions": 2652,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1140,
+    "orders": 1141,
     "products": 39,
     "shifts": 26
   },
   "activity": [
     {
+      "id": 1781685068413,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:31",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781685068413,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:31",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781684923936,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:13",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781683879899,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:11",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781683879899,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:11",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1140,
+    "current": 1141,
     "old": [
       {
         "createdAt": "2026-06-16T10:13:52.911Z",
@@ -36089,6 +36089,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-17T08:39:05.073Z",
+        "id": 2186,
+        "items": [
+          "Мороженое клубничное x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-17",
+        "shiftLabel": "Смена 17.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-17T08:31:08.346Z",
         "id": 2185,
@@ -73147,14 +73176,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 35,
-        "expectedOrders": 35,
+        "databaseOrders": 36,
+        "expectedOrders": 36,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-17",
         "label": "Смена 17.06",
         "missingOrders": 0,
-        "revenue": 1416,
+        "revenue": 1456,
         "status": "ok"
       },
       {
@@ -73496,12 +73525,12 @@
         "status": "ok"
       }
     ],
-    "total": 1140
+    "total": 1141
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1158
+      "total": 1198
     },
     {
       "method": "Карта",
@@ -73521,6 +73550,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2186,
+      "items": [
+        "Мороженое клубничное x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2185,
       "items": [
@@ -73577,16 +73614,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 2178,
-      "items": [
-        "Клубничный mini x2",
-        "Мороженое классическое x1",
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 100
     }
   ],
   "shifts": {
@@ -73732,6 +73759,11 @@
       "total": 120
     },
     {
+      "name": "Мороженое клубничное",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "Babl tea mini",
       "qty": 5,
       "total": 100
@@ -73755,13 +73787,8 @@
       "name": "Манго Маракуя mini",
       "qty": 4,
       "total": 80
-    },
-    {
-      "name": "МангоБанан mini",
-      "qty": 3,
-      "total": 75
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-17T15:33:21.935Z"
+  "updatedAt": "2026-06-17T15:41:19.111Z"
 }

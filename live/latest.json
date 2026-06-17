@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.73913043478261,
-    "checks": 23,
+    "average": 39.75,
+    "checks": 24,
     "expenseTotal": 205,
-    "net": 709,
-    "revenue": 914
+    "net": 749,
+    "revenue": 954
   },
   "data": {
-    "actions": 2626,
+    "actions": 2628,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1128,
+    "orders": 1129,
     "products": 39,
     "shifts": 26
   },
   "activity": [
     {
+      "id": 1781677995705,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:33",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781677995705,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:33",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781677101358,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:58",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781671318230,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781671318230,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:41",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1128,
+    "current": 1129,
     "old": [
       {
         "createdAt": "2026-06-16T10:13:52.911Z",
@@ -36089,6 +36089,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-17T07:07:52.248Z",
+        "id": 2174,
+        "items": [
+          "Мороженое с тапиокой x1",
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-17",
+        "shiftLabel": "Смена 17.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-17T06:33:15.637Z",
         "id": 2173,
@@ -72754,14 +72792,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 23,
-        "expectedOrders": 23,
+        "databaseOrders": 24,
+        "expectedOrders": 24,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-17",
         "label": "Смена 17.06",
         "missingOrders": 0,
-        "revenue": 914,
+        "revenue": 954,
         "status": "ok"
       },
       {
@@ -73103,12 +73141,12 @@
         "status": "ok"
       }
     ],
-    "total": 1128
+    "total": 1129
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 682
+      "total": 722
     },
     {
       "method": "Карта",
@@ -73128,6 +73166,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2174,
+      "items": [
+        "Мороженое с тапиокой x1",
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2173,
       "items": [
@@ -73187,15 +73234,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 2166,
-      "items": [
-        "Babl tea big x1",
-        "Черника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 56
     }
   ],
   "shifts": {
@@ -73336,6 +73374,11 @@
       "total": 140
     },
     {
+      "name": "Мороженое Орео",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "МангоБанан big",
       "qty": 3,
       "total": 90
@@ -73346,14 +73389,14 @@
       "total": 90
     },
     {
-      "name": "Мороженое Орео",
+      "name": "Манго Маракуя mini",
       "qty": 4,
       "total": 80
     },
     {
-      "name": "Манго Маракуя mini",
-      "qty": 4,
-      "total": 80
+      "name": "Мороженое с тапиокой",
+      "qty": 3,
+      "total": 60
     },
     {
       "name": "Мороженое клубничное",
@@ -73364,13 +73407,8 @@
       "name": "Манго Маракуя big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 4,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-17T13:35:30.078Z"
+  "updatedAt": "2026-06-17T14:10:06.294Z"
 }

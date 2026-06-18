@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.35294117647059,
-    "checks": 17,
+    "average": 40.888888888888886,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 481,
-    "revenue": 686
+    "net": 531,
+    "revenue": 736
   },
   "data": {
-    "actions": 2711,
+    "actions": 2713,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1170,
+    "orders": 1171,
     "products": 39,
     "shifts": 27
   },
   "activity": [
     {
+      "id": 1781756408044,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:20",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781756408044,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:20",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781756047504,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:32",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781752785664,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781752785664,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:19",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1170,
+    "current": 1171,
     "old": [
       {
         "createdAt": "2026-06-17T10:20:16.776Z",
@@ -37688,6 +37688,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-18T04:39:06.305Z",
+        "id": 2216,
+        "items": [
+          "Клубничный mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-18",
+        "shiftLabel": "Смена 18.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-18T04:20:07.975Z",
         "id": 2215,
@@ -75751,14 +75780,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-18",
         "label": "Смена 18.06",
         "missingOrders": 0,
-        "revenue": 686,
+        "revenue": 736,
         "status": "ok"
       },
       {
@@ -76113,12 +76142,12 @@
         "status": "ok"
       }
     ],
-    "total": 1170
+    "total": 1171
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 370
+      "total": 420
     },
     {
       "method": "Карта",
@@ -76138,6 +76167,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2216,
+      "items": [
+        "Клубничный mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 2215,
       "items": [
@@ -76196,14 +76233,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2208,
-      "items": [
-        "Matcha big x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -76349,6 +76378,11 @@
       "total": 80
     },
     {
+      "name": "Клубничный mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "МангоБанан mini",
       "qty": 3,
       "total": 75
@@ -76372,13 +76406,8 @@
       "name": "ПиноКолада mini",
       "qty": 2,
       "total": 50
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-18T11:22:23.552Z"
+  "updatedAt": "2026-06-18T11:41:22.117Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32,
-    "checks": 8,
+    "average": 44,
+    "checks": 9,
     "expenseTotal": 205,
-    "net": 51,
-    "revenue": 256
+    "net": 191,
+    "revenue": 396
   },
   "data": {
-    "actions": 2693,
+    "actions": 2695,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1161,
+    "orders": 1162,
     "products": 39,
     "shifts": 27
   },
   "activity": [
     {
+      "id": 1781749635311,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781749635311,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:27",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781745921348,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "10:40",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781734600777,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:16",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781734600777,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:16",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1161,
+    "current": 1162,
     "old": [
       {
         "createdAt": "2026-06-17T10:20:16.776Z",
@@ -37688,6 +37688,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-18T03:13:34.236Z",
+        "id": 2207,
+        "items": [
+          "Мороженое манго x4",
+          "Matcha mini x1",
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 4,
+            "size": "",
+            "total": 80
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 140,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-18",
+        "shiftLabel": "Смена 18.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 140
+      },
       {
         "createdAt": "2026-06-18T02:27:15.247Z",
         "id": 2206,
@@ -75445,14 +75492,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 8,
-        "expectedOrders": 8,
+        "databaseOrders": 9,
+        "expectedOrders": 9,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-18",
         "label": "Смена 18.06",
         "missingOrders": 0,
-        "revenue": 256,
+        "revenue": 396,
         "status": "ok"
       },
       {
@@ -75807,7 +75854,7 @@
         "status": "ok"
       }
     ],
-    "total": 1161
+    "total": 1162
   },
   "payments": [
     {
@@ -75824,7 +75871,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 30
+      "total": 170
     },
     {
       "method": "Семья",
@@ -75832,6 +75879,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2207,
+      "items": [
+        "Мороженое манго x4",
+        "Matcha mini x1",
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 140
+    },
     {
       "id": 2206,
       "items": [
@@ -75889,14 +75946,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2199,
-      "items": [
-        "Американо x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -76032,6 +76081,11 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое манго",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Манго Маракуя mini",
       "qty": 4,
       "total": 80
@@ -76040,6 +76094,16 @@
       "name": "МангоБанан mini",
       "qty": 2,
       "total": 50
+    },
+    {
+      "name": "Matcha mini",
+      "qty": 1,
+      "total": 30
+    },
+    {
+      "name": "Айс Латте",
+      "qty": 1,
+      "total": 30
     },
     {
       "name": "Клубничный big",
@@ -76055,23 +76119,8 @@
       "name": "Мороженое Орео",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Американо",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 1,
-      "total": 10
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-18T09:29:31.232Z"
+  "updatedAt": "2026-06-18T10:15:50.537Z"
 }

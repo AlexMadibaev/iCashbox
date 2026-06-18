@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.111111111111114,
-    "checks": 27,
+    "average": 39.67857142857143,
+    "checks": 28,
     "expenseTotal": 205,
-    "net": 851,
-    "revenue": 1056
+    "net": 906,
+    "revenue": 1111
   },
   "data": {
-    "actions": 2731,
+    "actions": 2733,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1180,
+    "orders": 1181,
     "products": 39,
     "shifts": 27
   },
   "activity": [
     {
+      "id": 1781763395696,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:16",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781763395696,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:16",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781762090038,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:12",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781759365425,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:09",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781759365425,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:09",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1180,
+    "current": 1181,
     "old": [
       {
         "createdAt": "2026-06-17T10:20:16.776Z",
@@ -37688,6 +37688,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-18T06:29:52.163Z",
+        "id": 2226,
+        "items": [
+          "МангоБанан big x1",
+          "ПиноКолада mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-18",
+        "shiftLabel": "Смена 18.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 55
+      },
       {
         "createdAt": "2026-06-18T06:16:35.623Z",
         "id": 2225,
@@ -76068,14 +76106,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 27,
-        "expectedOrders": 27,
+        "databaseOrders": 28,
+        "expectedOrders": 28,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-18",
         "label": "Смена 18.06",
         "missingOrders": 0,
-        "revenue": 1056,
+        "revenue": 1111,
         "status": "ok"
       },
       {
@@ -76430,12 +76468,12 @@
         "status": "ok"
       }
     ],
-    "total": 1180
+    "total": 1181
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 613
+      "total": 668
     },
     {
       "method": "Карта",
@@ -76455,6 +76493,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2226,
+      "items": [
+        "МангоБанан big x1",
+        "ПиноКолада mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 55
+    },
     {
       "id": 2225,
       "items": [
@@ -76512,15 +76559,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2218,
-      "items": [
-        "Babl tea big x2",
-        "Черника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 82
     }
   ],
   "shifts": {
@@ -76656,6 +76694,11 @@
   },
   "topProducts": [
     {
+      "name": "ПиноКолада mini",
+      "qty": 4,
+      "total": 100
+    },
+    {
       "name": "Клубничный mini",
       "qty": 4,
       "total": 100
@@ -76676,11 +76719,6 @@
       "total": 80
     },
     {
-      "name": "ПиноКолада mini",
-      "qty": 3,
-      "total": 75
-    },
-    {
       "name": "МангоБанан mini",
       "qty": 3,
       "total": 75
@@ -76697,5 +76735,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-18T13:18:51.299Z"
+  "updatedAt": "2026-06-18T13:32:08.067Z"
 }

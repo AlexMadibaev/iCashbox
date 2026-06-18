@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.857142857142854,
-    "checks": 21,
+    "average": 41.04545454545455,
+    "checks": 22,
     "expenseTotal": 205,
-    "net": 653,
-    "revenue": 858
+    "net": 698,
+    "revenue": 903
   },
   "data": {
-    "actions": 2719,
+    "actions": 2721,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1174,
+    "orders": 1175,
     "products": 39,
     "shifts": 27
   },
   "activity": [
     {
+      "id": 1781759365425,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:09",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781759365425,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:09",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781758558760,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:14",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781754755799,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:52",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781754755799,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:52",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1174,
+    "current": 1175,
     "old": [
       {
         "createdAt": "2026-06-17T10:20:16.776Z",
@@ -37688,6 +37688,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-18T05:12:41.614Z",
+        "id": 2220,
+        "items": [
+          "Matcha mini x1",
+          "Фреш лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-фреш-лимон-mini",
+            "name": "Фреш лимон mini",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 45,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-18",
+        "shiftLabel": "Смена 18.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-06-18T05:09:25.358Z",
         "id": 2219,
@@ -75876,14 +75914,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 21,
-        "expectedOrders": 21,
+        "databaseOrders": 22,
+        "expectedOrders": 22,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-18",
         "label": "Смена 18.06",
         "missingOrders": 0,
-        "revenue": 858,
+        "revenue": 903,
         "status": "ok"
       },
       {
@@ -76238,7 +76276,7 @@
         "status": "ok"
       }
     ],
-    "total": 1174
+    "total": 1175
   },
   "payments": [
     {
@@ -76251,7 +76289,7 @@
     },
     {
       "method": "Alif",
-      "total": 76
+      "total": 121
     },
     {
       "method": "Dushanbe City",
@@ -76263,6 +76301,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2220,
+      "items": [
+        "Matcha mini x1",
+        "Фреш лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 2219,
       "items": [
@@ -76317,14 +76364,6 @@
       "id": 2213,
       "items": [
         "Мороженое Орео x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 2212,
-      "items": [
-        "Babl tea mini x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -76463,6 +76502,11 @@
   },
   "topProducts": [
     {
+      "name": "Matcha mini",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Мороженое манго",
       "qty": 4,
       "total": 80
@@ -76496,13 +76540,8 @@
       "name": "Айс Латте",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Мороженое Орео",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-18T12:11:41.348Z"
+  "updatedAt": "2026-06-18T12:14:56.619Z"
 }

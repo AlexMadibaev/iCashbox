@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 40.34782608695652,
-    "checks": 23,
+    "average": 40.875,
+    "checks": 24,
     "expenseTotal": 205,
-    "net": 723,
-    "revenue": 928
+    "net": 776,
+    "revenue": 981
   },
   "data": {
-    "actions": 2723,
+    "actions": 2727,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1176,
+    "orders": 1177,
     "products": 39,
     "shifts": 27
   },
   "activity": [
     {
+      "id": 1781761253180,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:40",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781761253180,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:40",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1781760530732,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:28",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781760530732,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:28",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781759561678,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:54",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781757546381,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:39",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781757546381,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:39",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781756408044,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:20",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781756408044,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:20",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1176,
+    "current": 1177,
     "old": [
       {
         "createdAt": "2026-06-17T10:20:16.776Z",
@@ -37688,6 +37688,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-18T05:40:53.117Z",
+        "id": 2222,
+        "items": [
+          "Айс Американо x1",
+          "ПиноКолада mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-американо",
+            "name": "Айс Американо",
+            "price": 28,
+            "qty": 1,
+            "size": "",
+            "total": 28
+          },
+          {
+            "id": "product-милкшейк-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 70,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-18",
+        "shiftLabel": "Смена 18.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 53
+      },
       {
         "createdAt": "2026-06-18T05:28:50.674Z",
         "id": 2221,
@@ -75943,14 +75981,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 23,
-        "expectedOrders": 23,
+        "databaseOrders": 24,
+        "expectedOrders": 24,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-18",
         "label": "Смена 18.06",
         "missingOrders": 0,
-        "revenue": 928,
+        "revenue": 981,
         "status": "ok"
       },
       {
@@ -76305,12 +76343,12 @@
         "status": "ok"
       }
     ],
-    "total": 1176
+    "total": 1177
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 485
+      "total": 538
     },
     {
       "method": "Карта",
@@ -76330,6 +76368,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2222,
+      "items": [
+        "Айс Американо x1",
+        "ПиноКолада mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 53
+    },
     {
       "id": 2221,
       "items": [
@@ -76387,15 +76434,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2214,
-      "items": [
-        "Айс Латте x1",
-        "Клубничный mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 55
     }
   ],
   "shifts": {
@@ -76546,6 +76584,11 @@
       "total": 80
     },
     {
+      "name": "ПиноКолада mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "Клубничный mini",
       "qty": 3,
       "total": 75
@@ -76564,13 +76607,8 @@
       "name": "Черника big",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 2,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-18T12:31:06.586Z"
+  "updatedAt": "2026-06-18T12:43:09.399Z"
 }

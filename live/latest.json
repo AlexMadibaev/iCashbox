@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.6551724137931,
-    "checks": 29,
+    "average": 39.36666666666667,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 916,
-    "revenue": 1121
+    "net": 976,
+    "revenue": 1181
   },
   "data": {
-    "actions": 2735,
+    "actions": 2737,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1182,
+    "orders": 1183,
     "products": 39,
     "shifts": 27
   },
   "activity": [
     {
+      "id": 1781764257381,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:30",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781764257381,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:30",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781764192248,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:40",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781760530732,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:28",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781760530732,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:28",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1182,
+    "current": 1183,
     "old": [
       {
         "createdAt": "2026-06-17T10:20:16.776Z",
@@ -37688,6 +37688,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-18T06:50:03.692Z",
+        "id": 2228,
+        "items": [
+          "Мороженое классическое x1",
+          "Фреш лимон big x1",
+          "Мороженое манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-фреш-лимон-big",
+            "name": "Фреш лимон big",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 60,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-18",
+        "shiftLabel": "Смена 18.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-18T06:30:57.325Z",
         "id": 2227,
@@ -76135,14 +76182,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-18",
         "label": "Смена 18.06",
         "missingOrders": 0,
-        "revenue": 1121,
+        "revenue": 1181,
         "status": "ok"
       },
       {
@@ -76497,7 +76544,7 @@
         "status": "ok"
       }
     ],
-    "total": 1182
+    "total": 1183
   },
   "payments": [
     {
@@ -76514,7 +76561,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 322
+      "total": 382
     },
     {
       "method": "Семья",
@@ -76522,6 +76569,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2228,
+      "items": [
+        "Мороженое классическое x1",
+        "Фреш лимон big x1",
+        "Мороженое манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2227,
       "items": [
@@ -76579,15 +76636,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 2220,
-      "items": [
-        "Matcha mini x1",
-        "Фреш лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 45
     }
   ],
   "shifts": {
@@ -76723,6 +76771,11 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое манго",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "ПиноКолада mini",
       "qty": 4,
       "total": 100
@@ -76736,11 +76789,6 @@
       "name": "Matcha mini",
       "qty": 3,
       "total": 90
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 4,
-      "total": 80
     },
     {
       "name": "Манго Маракуя mini",
@@ -76764,5 +76812,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-18T13:33:11.907Z"
+  "updatedAt": "2026-06-18T13:52:19.420Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.78947368421053,
-    "checks": 19,
+    "average": 41.9,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 551,
-    "revenue": 756
+    "net": 633,
+    "revenue": 838
   },
   "data": {
-    "actions": 2715,
+    "actions": 2717,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1172,
+    "orders": 1173,
     "products": 39,
     "shifts": 27
   },
   "activity": [
     {
+      "id": 1781758454711,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:54",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781758454711,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:54",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781757546381,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1781754705943,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:51",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781754686814,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:51",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781754686814,
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:51",
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1172,
+    "current": 1173,
     "old": [
       {
         "createdAt": "2026-06-17T10:20:16.776Z",
@@ -37688,6 +37688,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-18T04:55:58.703Z",
+        "id": 2218,
+        "items": [
+          "Babl tea big x2",
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          },
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 82,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-18",
+        "shiftLabel": "Смена 18.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 82
+      },
       {
         "createdAt": "2026-06-18T04:54:14.645Z",
         "id": 2217,
@@ -75809,14 +75847,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-18",
         "label": "Смена 18.06",
         "missingOrders": 0,
-        "revenue": 756,
+        "revenue": 838,
         "status": "ok"
       },
       {
@@ -76171,7 +76209,7 @@
         "status": "ok"
       }
     ],
-    "total": 1172
+    "total": 1173
   },
   "payments": [
     {
@@ -76188,7 +76226,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 240
+      "total": 322
     },
     {
       "method": "Семья",
@@ -76196,6 +76234,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2218,
+      "items": [
+        "Babl tea big x2",
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 82
+    },
     {
       "id": 2217,
       "items": [
@@ -76253,15 +76300,6 @@
       ],
       "status": "Оплачен",
       "total": 55
-    },
-    {
-      "id": 2210,
-      "items": [
-        "МангоБанан mini x1",
-        "ПиноКолада mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -76417,6 +76455,11 @@
       "total": 75
     },
     {
+      "name": "Черника big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Айс Латте",
       "qty": 2,
       "total": 60
@@ -76430,13 +76473,8 @@
       "name": "Matcha mini",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "ПиноКолада mini",
-      "qty": 2,
-      "total": 50
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-18T11:56:30.520Z"
+  "updatedAt": "2026-06-18T11:58:13.703Z"
 }

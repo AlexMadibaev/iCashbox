@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.65714285714286,
-    "checks": 35,
+    "average": 40.083333333333336,
+    "checks": 36,
     "expenseTotal": 205,
-    "net": 1218,
-    "revenue": 1423
+    "net": 1238,
+    "revenue": 1443
   },
   "data": {
-    "actions": 2747,
+    "actions": 2749,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1188,
+    "orders": 1189,
     "products": 39,
     "shifts": 27
   },
   "activity": [
     {
+      "id": 1781768666733,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:44",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781768666733,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:44",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781767612440,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:50",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781764257381,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:30",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781764257381,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:30",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1188,
+    "current": 1189,
     "old": [
       {
         "createdAt": "2026-06-17T10:20:16.776Z",
@@ -37688,6 +37688,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-18T07:52:28.083Z",
+        "id": 2234,
+        "items": [
+          "Мороженое манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-18",
+        "shiftLabel": "Смена 18.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-18T07:44:26.654Z",
         "id": 2233,
@@ -76372,14 +76401,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 35,
-        "expectedOrders": 35,
+        "databaseOrders": 36,
+        "expectedOrders": 36,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-18",
         "label": "Смена 18.06",
         "missingOrders": 0,
-        "revenue": 1423,
+        "revenue": 1443,
         "status": "ok"
       },
       {
@@ -76734,12 +76763,12 @@
         "status": "ok"
       }
     ],
-    "total": 1188
+    "total": 1189
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 920
+      "total": 940
     },
     {
       "method": "Карта",
@@ -76759,6 +76788,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2234,
+      "items": [
+        "Мороженое манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2233,
       "items": [
@@ -76821,15 +76858,6 @@
       ],
       "status": "Оплачен",
       "total": 10
-    },
-    {
-      "id": 2226,
-      "items": [
-        "МангоБанан big x1",
-        "ПиноКолада mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 55
     }
   ],
   "shifts": {
@@ -76970,14 +76998,14 @@
       "total": 125
     },
     {
-      "name": "Манго Маракуя mini",
+      "name": "Мороженое манго",
       "qty": 6,
       "total": 120
     },
     {
-      "name": "Мороженое манго",
-      "qty": 5,
-      "total": 100
+      "name": "Манго Маракуя mini",
+      "qty": 6,
+      "total": 120
     },
     {
       "name": "Клубничный mini",
@@ -77006,5 +77034,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-18T14:46:42.088Z"
+  "updatedAt": "2026-06-18T14:54:43.526Z"
 }

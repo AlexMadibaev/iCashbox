@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.45454545454545,
-    "checks": 11,
+    "average": 42.166666666666664,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 251,
-    "revenue": 456
+    "net": 301,
+    "revenue": 506
   },
   "data": {
-    "actions": 2699,
+    "actions": 2701,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1164,
+    "orders": 1165,
     "products": 39,
     "shifts": 27
   },
   "activity": [
     {
+      "id": 1781752785664,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:19",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781752785664,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:19",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781752699261,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781738822890,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:27",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781738822890,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:27",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1164,
+    "current": 1165,
     "old": [
       {
         "createdAt": "2026-06-17T10:20:16.776Z",
@@ -37688,6 +37688,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-18T03:32:14.161Z",
+        "id": 2210,
+        "items": [
+          "МангоБанан mini x1",
+          "ПиноКолада mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-милкшейк-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 50,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-18",
+        "shiftLabel": "Смена 18.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-18T03:19:45.578Z",
         "id": 2209,
@@ -75550,14 +75588,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-18",
         "label": "Смена 18.06",
         "missingOrders": 0,
-        "revenue": 456,
+        "revenue": 506,
         "status": "ok"
       },
       {
@@ -75912,7 +75950,7 @@
         "status": "ok"
       }
     ],
-    "total": 1164
+    "total": 1165
   },
   "payments": [
     {
@@ -75925,7 +75963,7 @@
     },
     {
       "method": "Alif",
-      "total": 26
+      "total": 76
     },
     {
       "method": "Dushanbe City",
@@ -75937,6 +75975,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2210,
+      "items": [
+        "МангоБанан mini x1",
+        "ПиноКолада mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 2209,
       "items": [
@@ -75991,14 +76038,6 @@
     },
     {
       "id": 2203,
-      "items": [
-        "МангоБанан mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
-    },
-    {
-      "id": 2202,
       "items": [
         "МангоБанан mini x1"
       ],
@@ -76150,8 +76189,8 @@
     },
     {
       "name": "МангоБанан mini",
-      "qty": 2,
-      "total": 50
+      "qty": 3,
+      "total": 75
     },
     {
       "name": "Мороженое Орео",
@@ -76180,5 +76219,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-18T10:22:00.486Z"
+  "updatedAt": "2026-06-18T10:34:30.244Z"
 }

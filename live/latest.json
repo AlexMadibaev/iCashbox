@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 25.2,
-    "checks": 5,
+    "average": 34.333333333333336,
+    "checks": 6,
     "expenseTotal": 205,
-    "net": -79,
-    "revenue": 126
+    "net": 1,
+    "revenue": 206
   },
   "data": {
-    "actions": 2687,
+    "actions": 2691,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1158,
+    "orders": 1159,
     "products": 39,
     "shifts": 27
   },
   "activity": [
     {
+      "id": 1781743269629,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:41",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781743269629,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:41",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1781738822890,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781738822890,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:27",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781738305806,
       "source": "Локально",
       "status": "Сохранено",
@@ -78,34 +106,6 @@
       "status": "Сохранено",
       "time": "09:11",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1781728496359,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "08:34",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1781691616859,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:20",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781691616859,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:20",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781689622767,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:47",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1158,
+    "current": 1159,
     "old": [
       {
         "createdAt": "2026-06-17T10:20:16.776Z",
@@ -37688,6 +37688,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-18T00:41:09.549Z",
+        "id": 2204,
+        "items": [
+          "Babl tea mini x1",
+          "Манго Маракуя mini x3"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 3,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 30,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-18",
+        "shiftLabel": "Смена 18.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 80
+      },
       {
         "createdAt": "2026-06-17T23:27:02.818Z",
         "id": 2203,
@@ -75340,14 +75378,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 5,
-        "expectedOrders": 5,
+        "databaseOrders": 6,
+        "expectedOrders": 6,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-18",
         "label": "Смена 18.06",
         "missingOrders": 0,
-        "revenue": 126,
+        "revenue": 206,
         "status": "ok"
       },
       {
@@ -75702,12 +75740,12 @@
         "status": "ok"
       }
     ],
-    "total": 1158
+    "total": 1159
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 100
+      "total": 150
     },
     {
       "method": "Карта",
@@ -75719,7 +75757,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 0
+      "total": 30
     },
     {
       "method": "Семья",
@@ -75727,6 +75765,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2204,
+      "items": [
+        "Babl tea mini x1",
+        "Манго Маракуя mini x3"
+      ],
+      "status": "Оплачен",
+      "total": 80
+    },
     {
       "id": 2203,
       "items": [
@@ -75901,6 +75948,11 @@
   },
   "topProducts": [
     {
+      "name": "Манго Маракуя mini",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "МангоБанан mini",
       "qty": 2,
       "total": 50
@@ -75916,11 +75968,16 @@
       "total": 26
     },
     {
+      "name": "Babl tea mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Американо",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-18T06:29:19.106Z"
+  "updatedAt": "2026-06-18T07:43:26.438Z"
 }

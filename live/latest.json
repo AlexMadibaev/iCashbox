@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 20,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -185,
+    "revenue": 20
   },
   "data": {
-    "actions": 2679,
+    "actions": 2681,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1153,
+    "orders": 1154,
     "products": 39,
     "shifts": 27
   },
   "activity": [
+    {
+      "id": 1781730666455,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "09:11",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781730666455,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "09:11",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781728496359,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:30",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781688605661,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:30",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781688223334,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:23",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1153,
+    "current": 1154,
     "old": [
       {
         "createdAt": "2026-06-17T10:20:16.776Z",
@@ -37688,6 +37688,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-17T21:11:06.389Z",
+        "id": 2199,
+        "items": [
+          "Американо x1"
+        ],
+        "lines": [
+          {
+            "id": "product-американо",
+            "name": "Американо",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-18",
+        "shiftLabel": "Смена 18.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-17T10:20:16.776Z",
         "id": 2198,
@@ -75195,15 +75224,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-06-18",
         "label": "Смена 18.06",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 20,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -75557,12 +75586,12 @@
         "status": "ok"
       }
     ],
-    "total": 1153
+    "total": 1154
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 20
     },
     {
       "method": "Карта",
@@ -75581,7 +75610,16 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 2199,
+      "items": [
+        "Американо x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -75713,7 +75751,13 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Американо",
+      "qty": 1,
+      "total": 20
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-06-18T03:37:12.383Z"
+  "updatedAt": "2026-06-18T04:13:23.659Z"
 }

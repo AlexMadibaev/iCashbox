@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.333333333333336,
-    "checks": 6,
+    "average": 33.714285714285715,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": 1,
-    "revenue": 206
+    "net": 31,
+    "revenue": 236
   },
   "data": {
-    "actions": 2689,
+    "actions": 2691,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1159,
+    "orders": 1160,
     "products": 39,
     "shifts": 27
   },
   "activity": [
     {
+      "id": 1781743269629,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:41",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781743269629,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:41",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781738822890,
       "source": "Локально",
       "status": "Сохранено",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "09:11",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1781728496359,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "08:34",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1781691616859,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:20",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1159,
+    "current": 1160,
     "old": [
       {
         "createdAt": "2026-06-17T10:20:16.776Z",
@@ -37688,6 +37688,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-18T01:25:21.290Z",
+        "id": 2205,
+        "items": [
+          "Мороженое Орео x1",
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-18",
+        "shiftLabel": "Смена 18.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-18T00:41:09.549Z",
         "id": 2204,
@@ -75378,14 +75416,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-18",
         "label": "Смена 18.06",
         "missingOrders": 0,
-        "revenue": 206,
+        "revenue": 236,
         "status": "ok"
       },
       {
@@ -75740,12 +75778,12 @@
         "status": "ok"
       }
     ],
-    "total": 1159
+    "total": 1160
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 150
+      "total": 180
     },
     {
       "method": "Карта",
@@ -75765,6 +75803,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2205,
+      "items": [
+        "Мороженое Орео x1",
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2204,
       "items": [
@@ -75968,6 +76015,11 @@
       "total": 26
     },
     {
+      "name": "Мороженое Орео",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Babl tea mini",
       "qty": 1,
       "total": 20
@@ -75976,8 +76028,13 @@
       "name": "Американо",
       "qty": 1,
       "total": 20
+    },
+    {
+      "name": "Мороженое рожок",
+      "qty": 1,
+      "total": 10
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-18T07:43:29.314Z"
+  "updatedAt": "2026-06-18T08:27:37.440Z"
 }

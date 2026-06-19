@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.56,
-    "checks": 25,
+    "average": 32.84615384615385,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 609,
-    "revenue": 814
+    "net": 649,
+    "revenue": 854
   },
   "data": {
-    "actions": 2824,
+    "actions": 2826,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1226,
+    "orders": 1227,
     "products": 39,
     "shifts": 28
   },
   "activity": [
     {
+      "id": 1781846501351,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:21",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781846501351,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:21",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781846072943,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:50",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781840511334,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781840511333,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:41",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1226,
+    "current": 1227,
     "old": [
       {
         "createdAt": "2026-06-18T10:52:28.603Z",
@@ -39287,6 +39287,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-19T06:16:34.243Z",
+        "id": 2272,
+        "items": [
+          "Мороженое классическое x1",
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-19",
+        "shiftLabel": "Смена 19.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-19T05:21:41.282Z",
         "id": 2271,
@@ -79163,14 +79201,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-19",
         "label": "Смена 19.06",
         "missingOrders": 0,
-        "revenue": 814,
+        "revenue": 854,
         "status": "ok"
       },
       {
@@ -79538,7 +79576,7 @@
         "status": "ok"
       }
     ],
-    "total": 1226
+    "total": 1227
   },
   "payments": [
     {
@@ -79551,7 +79589,7 @@
     },
     {
       "method": "Alif",
-      "total": 53
+      "total": 93
     },
     {
       "method": "Dushanbe City",
@@ -79563,6 +79601,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2272,
+      "items": [
+        "Мороженое классическое x1",
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2271,
       "items": [
@@ -79614,14 +79661,6 @@
     },
     {
       "id": 2265,
-      "items": [
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
-    },
-    {
-      "id": 2264,
       "items": [
         "Matcha mini x1"
       ],
@@ -79768,8 +79807,8 @@
     },
     {
       "name": "Мороженое Орео",
-      "qty": 5,
-      "total": 100
+      "qty": 6,
+      "total": 120
     },
     {
       "name": "Айс Латте",
@@ -79803,5 +79842,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-19T12:23:58.546Z"
+  "updatedAt": "2026-06-19T13:18:51.460Z"
 }

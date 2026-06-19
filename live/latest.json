@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 24,
-    "checks": 6,
+    "average": 29.142857142857142,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": -61,
-    "revenue": 144
+    "net": -1,
+    "revenue": 204
   },
   "data": {
-    "actions": 2786,
+    "actions": 2788,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1207,
+    "orders": 1208,
     "products": 39,
     "shifts": 28
   },
   "activity": [
     {
+      "id": 1781822168332,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:36",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781822168332,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:36",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781820633254,
       "source": "Локально",
       "status": "Сохранено",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "09:02",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1781816399227,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "08:59",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1781779948666,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:52",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1207,
+    "current": 1208,
     "old": [
       {
         "createdAt": "2026-06-18T10:52:28.603Z",
@@ -39287,6 +39287,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-18T22:46:53.046Z",
+        "id": 2253,
+        "items": [
+          "МангоБанан big x1",
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-19",
+        "shiftLabel": "Смена 19.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-18T22:36:08.244Z",
         "id": 2252,
@@ -78567,14 +78605,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-19",
         "label": "Смена 19.06",
         "missingOrders": 0,
-        "revenue": 144,
+        "revenue": 204,
         "status": "ok"
       },
       {
@@ -78942,12 +78980,12 @@
         "status": "ok"
       }
     ],
-    "total": 1207
+    "total": 1208
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 136
+      "total": 196
     },
     {
       "method": "Карта",
@@ -78967,6 +79005,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2253,
+      "items": [
+        "МангоБанан big x1",
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2252,
       "items": [
@@ -79149,12 +79196,17 @@
   },
   "topProducts": [
     {
+      "name": "Клубничный big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Айс Латте",
       "qty": 2,
       "total": 60
     },
     {
-      "name": "Клубничный big",
+      "name": "МангоБанан big",
       "qty": 1,
       "total": 30
     },
@@ -79175,5 +79227,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-19T05:38:25.518Z"
+  "updatedAt": "2026-06-19T05:49:10.411Z"
 }

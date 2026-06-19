@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.785714285714285,
-    "checks": 28,
+    "average": 34.689655172413794,
+    "checks": 29,
     "expenseTotal": 205,
-    "net": 741,
-    "revenue": 946
+    "net": 801,
+    "revenue": 1006
   },
   "data": {
-    "actions": 2830,
+    "actions": 2832,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1229,
+    "orders": 1230,
     "products": 39,
     "shifts": 28
   },
   "activity": [
     {
+      "id": 1781850663878,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:31",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781850663878,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:31",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781850434749,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781843404735,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:30",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781843404735,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:30",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1229,
+    "current": 1230,
     "old": [
       {
         "createdAt": "2026-06-18T10:52:28.603Z",
@@ -39287,6 +39287,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-19T06:45:28.825Z",
+        "id": 2275,
+        "items": [
+          "Виноградный тропический mini x3"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 3,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-19",
+        "shiftLabel": "Смена 19.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-19T06:31:03.794Z",
         "id": 2274,
@@ -79259,14 +79288,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 28,
-        "expectedOrders": 28,
+        "databaseOrders": 29,
+        "expectedOrders": 29,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-19",
         "label": "Смена 19.06",
         "missingOrders": 0,
-        "revenue": 946,
+        "revenue": 1006,
         "status": "ok"
       },
       {
@@ -79634,12 +79663,12 @@
         "status": "ok"
       }
     ],
-    "total": 1229
+    "total": 1230
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 776
+      "total": 836
     },
     {
       "method": "Карта",
@@ -79659,6 +79688,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2275,
+      "items": [
+        "Виноградный тропический mini x3"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2274,
       "items": [
@@ -79715,15 +79752,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2267,
-      "items": [
-        "Клубничный mini x1",
-        "Черника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -79874,6 +79902,11 @@
       "total": 90
     },
     {
+      "name": "Виноградный тропический mini",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 3,
       "total": 60
@@ -79892,13 +79925,8 @@
       "name": "Мороженое манго",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "МангоБанан big",
-      "qty": 2,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-19T13:33:19.733Z"
+  "updatedAt": "2026-06-19T13:47:45.714Z"
 }

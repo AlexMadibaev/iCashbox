@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 31.555555555555557,
-    "checks": 9,
+    "average": 32.4,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 79,
-    "revenue": 284
+    "net": 119,
+    "revenue": 324
   },
   "data": {
     "actions": 2794,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1210,
+    "orders": 1211,
     "products": 39,
     "shifts": 28
   },
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1210,
+    "current": 1211,
     "old": [
       {
         "createdAt": "2026-06-18T10:52:28.603Z",
@@ -39287,6 +39287,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-19T00:20:19.434Z",
+        "id": 2256,
+        "items": [
+          "Мороженое Орео x1",
+          "Мороженое манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 20,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-19",
+        "shiftLabel": "Смена 19.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-18T23:51:51.580Z",
         "id": 2255,
@@ -78672,14 +78710,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-19",
         "label": "Смена 19.06",
         "missingOrders": 0,
-        "revenue": 284,
+        "revenue": 324,
         "status": "ok"
       },
       {
@@ -79047,12 +79085,12 @@
         "status": "ok"
       }
     ],
-    "total": 1210
+    "total": 1211
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 276
+      "total": 296
     },
     {
       "method": "Карта",
@@ -79060,7 +79098,7 @@
     },
     {
       "method": "Alif",
-      "total": 3
+      "total": 23
     },
     {
       "method": "Dushanbe City",
@@ -79072,6 +79110,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2256,
+      "items": [
+        "Мороженое Орео x1",
+        "Мороженое манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2255,
       "items": [
@@ -79129,14 +79176,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 2248,
-      "items": [
-        "Тапиока доп x1"
-      ],
-      "status": "Оплачен",
-      "total": 3
     }
   ],
   "shifts": {
@@ -79282,6 +79321,11 @@
       "total": 60
     },
     {
+      "name": "Мороженое манго",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "ПиноКолада big",
       "qty": 1,
       "total": 30
@@ -79302,16 +79346,11 @@
       "total": 25
     },
     {
-      "name": "Мороженое манго",
+      "name": "Мороженое Орео",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Тапиока доп",
-      "qty": 1,
-      "total": 3
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-19T06:54:09.380Z"
+  "updatedAt": "2026-06-19T07:22:36.700Z"
 }

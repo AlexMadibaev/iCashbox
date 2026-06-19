@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 30,
-    "checks": 1,
+    "average": 16.5,
+    "checks": 2,
     "expenseTotal": 205,
-    "net": -175,
-    "revenue": 30
+    "net": -172,
+    "revenue": 33
   },
   "data": {
-    "actions": 2776,
+    "actions": 2778,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1202,
+    "orders": 1203,
     "products": 39,
     "shifts": 28
   },
   "activity": [
+    {
+      "id": 1781816561369,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "09:02",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781816561369,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "09:02",
+      "type": "Создание заказа"
+    },
     {
       "id": 1781816399227,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:28",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781778539530,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:28",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781777733215,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:15",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1202,
+    "current": 1203,
     "old": [
       {
         "createdAt": "2026-06-18T10:52:28.603Z",
@@ -39287,6 +39287,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-18T21:31:27.903Z",
+        "id": 2248,
+        "items": [
+          "Тапиока доп x1"
+        ],
+        "lines": [
+          {
+            "id": "product-тапиока-доп",
+            "name": "Тапиока доп",
+            "price": 3,
+            "qty": 1,
+            "size": "",
+            "total": 3
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 3,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-19",
+        "shiftLabel": "Смена 19.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 3
+      },
       {
         "createdAt": "2026-06-18T21:02:41.317Z",
         "id": 2247,
@@ -78422,14 +78451,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 1,
-        "expectedOrders": 1,
+        "databaseOrders": 2,
+        "expectedOrders": 2,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-19",
         "label": "Смена 19.06",
         "missingOrders": 0,
-        "revenue": 30,
+        "revenue": 33,
         "status": "ok"
       },
       {
@@ -78797,7 +78826,7 @@
         "status": "ok"
       }
     ],
-    "total": 1202
+    "total": 1203
   },
   "payments": [
     {
@@ -78810,7 +78839,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 3
     },
     {
       "method": "Dushanbe City",
@@ -78822,6 +78851,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2248,
+      "items": [
+        "Тапиока доп x1"
+      ],
+      "status": "Оплачен",
+      "total": 3
+    },
     {
       "id": 2247,
       "items": [
@@ -78967,8 +79004,13 @@
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
+    },
+    {
+      "name": "Тапиока доп",
+      "qty": 1,
+      "total": 3
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-19T04:04:57.521Z"
+  "updatedAt": "2026-06-19T04:33:45.407Z"
 }

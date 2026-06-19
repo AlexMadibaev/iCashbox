@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.689655172413794,
-    "checks": 29,
+    "average": 35.2,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 801,
-    "revenue": 1006
+    "net": 851,
+    "revenue": 1056
   },
   "data": {
-    "actions": 2832,
+    "actions": 2834,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1230,
+    "orders": 1231,
     "products": 39,
     "shifts": 28
   },
   "activity": [
     {
+      "id": 1781851528928,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:45",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781851528928,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:45",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781850663878,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:14",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781844106479,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781844106479,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:41",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1230,
+    "current": 1231,
     "old": [
       {
         "createdAt": "2026-06-18T10:52:28.603Z",
@@ -39287,6 +39287,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-19T07:14:49.068Z",
+        "id": 2276,
+        "items": [
+          "Латте x2"
+        ],
+        "lines": [
+          {
+            "id": "product-латте",
+            "name": "Латте",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-19",
+        "shiftLabel": "Смена 19.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-19T06:45:28.825Z",
         "id": 2275,
@@ -79288,14 +79317,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-19",
         "label": "Смена 19.06",
         "missingOrders": 0,
-        "revenue": 1006,
+        "revenue": 1056,
         "status": "ok"
       },
       {
@@ -79663,12 +79692,12 @@
         "status": "ok"
       }
     ],
-    "total": 1230
+    "total": 1231
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 836
+      "total": 886
     },
     {
       "method": "Карта",
@@ -79688,6 +79717,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2276,
+      "items": [
+        "Латте x2"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 2275,
       "items": [
@@ -79744,14 +79781,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2268,
-      "items": [
-        "ПиноКолада big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -79928,5 +79957,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-19T13:47:45.714Z"
+  "updatedAt": "2026-06-19T14:17:06.596Z"
 }

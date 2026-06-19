@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.76470588235294,
-    "checks": 17,
+    "average": 33.55555555555556,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 369,
-    "revenue": 574
+    "net": 399,
+    "revenue": 604
   },
   "data": {
-    "actions": 2808,
+    "actions": 2810,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1218,
+    "orders": 1219,
     "products": 39,
     "shifts": 28
   },
   "activity": [
     {
+      "id": 1781839373007,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781839373007,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781838457139,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:28",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781832376499,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:26",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781832376499,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:26",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1218,
+    "current": 1219,
     "old": [
       {
         "createdAt": "2026-06-18T10:52:28.603Z",
@@ -39287,6 +39287,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-19T03:23:57.607Z",
+        "id": 2264,
+        "items": [
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-19",
+        "shiftLabel": "Смена 19.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-19T03:22:52.946Z",
         "id": 2263,
@@ -78922,14 +78951,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-19",
         "label": "Смена 19.06",
         "missingOrders": 0,
-        "revenue": 574,
+        "revenue": 604,
         "status": "ok"
       },
       {
@@ -79297,12 +79326,12 @@
         "status": "ok"
       }
     ],
-    "total": 1218
+    "total": 1219
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 526
+      "total": 556
     },
     {
       "method": "Карта",
@@ -79322,6 +79351,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2264,
+      "items": [
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2263,
       "items": [
@@ -79378,15 +79415,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2256,
-      "items": [
-        "Мороженое Орео x1",
-        "Мороженое манго x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -79552,16 +79580,16 @@
       "total": 60
     },
     {
-      "name": "ПиноКолада big",
+      "name": "Matcha mini",
       "qty": 1,
       "total": 30
     },
     {
-      "name": "Babl tea big",
+      "name": "ПиноКолада big",
       "qty": 1,
-      "total": 26
+      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-19T10:25:10.030Z"
+  "updatedAt": "2026-06-19T10:26:13.875Z"
 }

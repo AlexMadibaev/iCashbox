@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 30.333333333333332,
-    "checks": 12,
+    "average": 30.307692307692307,
+    "checks": 13,
     "expenseTotal": 205,
-    "net": 159,
-    "revenue": 364
+    "net": 189,
+    "revenue": 394
   },
   "data": {
-    "actions": 2798,
+    "actions": 2802,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1213,
+    "orders": 1214,
     "products": 39,
     "shifts": 28
   },
   "activity": [
     {
+      "id": 1781835468728,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:17",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781835468728,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:17",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1781832505742,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:28",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781832505742,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:28",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781832376499,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "10:57",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781822813119,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:46",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781822813119,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:46",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781822168332,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781822168332,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:36",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1213,
+    "current": 1214,
     "old": [
       {
         "createdAt": "2026-06-18T10:52:28.603Z",
@@ -39287,6 +39287,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-19T02:17:48.665Z",
+        "id": 2259,
+        "items": [
+          "МангоБанан big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-19",
+        "shiftLabel": "Смена 19.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-19T01:28:25.664Z",
         "id": 2258,
@@ -78768,14 +78797,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 12,
-        "expectedOrders": 12,
+        "databaseOrders": 13,
+        "expectedOrders": 13,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-19",
         "label": "Смена 19.06",
         "missingOrders": 0,
-        "revenue": 364,
+        "revenue": 394,
         "status": "ok"
       },
       {
@@ -79143,12 +79172,12 @@
         "status": "ok"
       }
     ],
-    "total": 1213
+    "total": 1214
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 336
+      "total": 366
     },
     {
       "method": "Карта",
@@ -79168,6 +79197,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2259,
+      "items": [
+        "МангоБанан big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2258,
       "items": [
@@ -79226,14 +79263,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2251,
-      "items": [
-        "Babl tea big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -79374,6 +79403,11 @@
       "total": 90
     },
     {
+      "name": "МангоБанан big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Клубничный big",
       "qty": 2,
       "total": 60
@@ -79385,11 +79419,6 @@
     },
     {
       "name": "ПиноКолада big",
-      "qty": 1,
-      "total": 30
-    },
-    {
-      "name": "МангоБанан big",
       "qty": 1,
       "total": 30
     },
@@ -79410,5 +79439,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-19T08:30:41.812Z"
+  "updatedAt": "2026-06-19T09:20:06.177Z"
 }

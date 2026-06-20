@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 45,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -160,
+    "revenue": 45
   },
   "data": {
     "actions": 2857,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1241,
+    "orders": 1242,
     "products": 39,
     "shifts": 29
   },
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1241,
+    "current": 1242,
     "old": [
       {
         "createdAt": "2026-06-19T10:20:38.914Z",
@@ -40528,6 +40528,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-19T22:15:27.970Z",
+        "id": 2287,
+        "items": [
+          "Babl tea mini x1",
+          "МангоБанан mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-милкшейк-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-20",
+        "shiftLabel": "Смена 20.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-06-19T10:20:38.914Z",
         "id": 2286,
@@ -80875,15 +80913,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-06-20",
         "label": "Смена 20.06",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 45,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -81263,12 +81301,12 @@
         "status": "ok"
       }
     ],
-    "total": 1241
+    "total": 1242
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 45
     },
     {
       "method": "Карта",
@@ -81287,7 +81325,17 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 2287,
+      "items": [
+        "Babl tea mini x1",
+        "МангоБанан mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -81419,7 +81467,18 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "МангоБанан mini",
+      "qty": 1,
+      "total": 25
+    },
+    {
+      "name": "Babl tea mini",
+      "qty": 1,
+      "total": 20
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-06-20T03:41:46.842Z"
+  "updatedAt": "2026-06-20T05:17:46.770Z"
 }

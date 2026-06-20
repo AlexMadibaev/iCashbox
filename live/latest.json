@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.89473684210526,
-    "checks": 38,
+    "average": 39.23076923076923,
+    "checks": 39,
     "expenseTotal": 205,
-    "net": 1235,
-    "revenue": 1440
+    "net": 1325,
+    "revenue": 1530
   },
   "data": {
-    "actions": 2931,
+    "actions": 2933,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1279,
+    "orders": 1280,
     "products": 39,
     "shifts": 29
   },
   "activity": [
     {
+      "id": 1781953246426,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "23:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781953246426,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "23:00",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781952578539,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:13",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781950309873,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:11",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781950309873,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:11",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1279,
+    "current": 1280,
     "old": [
       {
         "createdAt": "2026-06-19T10:20:38.914Z",
@@ -40528,6 +40528,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-20T11:02:08.334Z",
+        "id": 2325,
+        "items": [
+          "МангоБанан big x3"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 3,
+            "size": "",
+            "total": 90
+          }
+        ],
+        "payments": {
+          "Наличные": 90,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-20",
+        "shiftLabel": "Смена 20.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 90
+      },
       {
         "createdAt": "2026-06-20T11:00:46.341Z",
         "id": 2324,
@@ -82112,14 +82141,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 38,
-        "expectedOrders": 38,
+        "databaseOrders": 39,
+        "expectedOrders": 39,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-20",
         "label": "Смена 20.06",
         "missingOrders": 0,
-        "revenue": 1440,
+        "revenue": 1530,
         "status": "ok"
       },
       {
@@ -82500,12 +82529,12 @@
         "status": "ok"
       }
     ],
-    "total": 1279
+    "total": 1280
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1067
+      "total": 1157
     },
     {
       "method": "Карта",
@@ -82525,6 +82554,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2325,
+      "items": [
+        "МангоБанан big x3"
+      ],
+      "status": "Оплачен",
+      "total": 90
+    },
     {
       "id": 2324,
       "items": [
@@ -82583,16 +82620,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 2317,
-      "items": [
-        "Фреш лимон big x1",
-        "Жасмин лимон mini x1",
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -82728,6 +82755,11 @@
   },
   "topProducts": [
     {
+      "name": "МангоБанан big",
+      "qty": 6,
+      "total": 180
+    },
+    {
       "name": "Мороженое манго",
       "qty": 8,
       "total": 160
@@ -82753,11 +82785,6 @@
       "total": 104
     },
     {
-      "name": "МангоБанан big",
-      "qty": 3,
-      "total": 90
-    },
-    {
       "name": "Мороженое рожок",
       "qty": 8,
       "total": 80
@@ -82769,5 +82796,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-20T18:03:04.760Z"
+  "updatedAt": "2026-06-20T18:04:25.340Z"
 }

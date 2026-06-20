@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.285714285714285,
-    "checks": 21,
+    "average": 37,
+    "checks": 22,
     "expenseTotal": 205,
-    "net": 557,
-    "revenue": 762
+    "net": 609,
+    "revenue": 814
   },
   "data": {
-    "actions": 2897,
+    "actions": 2899,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1262,
+    "orders": 1263,
     "products": 39,
     "shifts": 29
   },
   "activity": [
     {
+      "id": 1781942005448,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:53",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781942005448,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:53",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781941971168,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:07",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781938858499,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781938858499,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:00",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1262,
+    "current": 1263,
     "old": [
       {
         "createdAt": "2026-06-19T10:20:38.914Z",
@@ -40528,6 +40528,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-20T08:33:26.460Z",
+        "id": 2308,
+        "items": [
+          "Манго Маракуя big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          }
+        ],
+        "payments": {
+          "Наличные": 52,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-20",
+        "shiftLabel": "Смена 20.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-06-20T07:53:25.383Z",
         "id": 2307,
@@ -81556,14 +81585,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 21,
-        "expectedOrders": 21,
+        "databaseOrders": 22,
+        "expectedOrders": 22,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-20",
         "label": "Смена 20.06",
         "missingOrders": 0,
-        "revenue": 762,
+        "revenue": 814,
         "status": "ok"
       },
       {
@@ -81944,12 +81973,12 @@
         "status": "ok"
       }
     ],
-    "total": 1262
+    "total": 1263
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 580
+      "total": 632
     },
     {
       "method": "Карта",
@@ -81969,6 +81998,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2308,
+      "items": [
+        "Манго Маракуя big x2"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 2307,
       "items": [
@@ -82026,14 +82063,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 2300,
-      "items": [
-        "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -82174,6 +82203,11 @@
       "total": 120
     },
     {
+      "name": "Манго Маракуя big",
+      "qty": 4,
+      "total": 104
+    },
+    {
       "name": "Babl tea mini",
       "qty": 4,
       "total": 80
@@ -82194,11 +82228,6 @@
       "total": 60
     },
     {
-      "name": "Манго Маракуя big",
-      "qty": 2,
-      "total": 52
-    },
-    {
       "name": "МангоБанан mini",
       "qty": 2,
       "total": 50
@@ -82210,5 +82239,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-20T14:55:42.540Z"
+  "updatedAt": "2026-06-20T15:35:45.073Z"
 }

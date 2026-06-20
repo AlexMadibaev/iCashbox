@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36,
-    "checks": 24,
+    "average": 36.96,
+    "checks": 25,
     "expenseTotal": 205,
-    "net": 659,
-    "revenue": 864
+    "net": 719,
+    "revenue": 924
   },
   "data": {
-    "actions": 2903,
+    "actions": 2905,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1265,
+    "orders": 1266,
     "products": 39,
     "shifts": 29
   },
   "activity": [
     {
+      "id": 1781944514816,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:35",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781944514816,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:35",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781944414008,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781940438426,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:27",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781940438426,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:27",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1265,
+    "current": 1266,
     "old": [
       {
         "createdAt": "2026-06-19T10:20:38.914Z",
@@ -40528,6 +40528,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-20T08:42:23.146Z",
+        "id": 2311,
+        "items": [
+          "Манго Маракуя mini x1",
+          "Babl tea mini x1",
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-20",
+        "shiftLabel": "Смена 20.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-20T08:35:14.744Z",
         "id": 2310,
@@ -81643,14 +81690,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 24,
-        "expectedOrders": 24,
+        "databaseOrders": 25,
+        "expectedOrders": 25,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-20",
         "label": "Смена 20.06",
         "missingOrders": 0,
-        "revenue": 864,
+        "revenue": 924,
         "status": "ok"
       },
       {
@@ -82031,12 +82078,12 @@
         "status": "ok"
       }
     ],
-    "total": 1265
+    "total": 1266
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 682
+      "total": 742
     },
     {
       "method": "Карта",
@@ -82056,6 +82103,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2311,
+      "items": [
+        "Манго Маракуя mini x1",
+        "Babl tea mini x1",
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2310,
       "items": [
@@ -82113,14 +82170,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 2303,
-      "items": [
-        "Клубничный big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -82266,12 +82315,17 @@
       "total": 104
     },
     {
-      "name": "Мороженое манго",
+      "name": "Babl tea mini",
+      "qty": 5,
+      "total": 100
+    },
+    {
+      "name": "Манго Маракуя mini",
       "qty": 4,
       "total": 80
     },
     {
-      "name": "Babl tea mini",
+      "name": "Мороженое манго",
       "qty": 4,
       "total": 80
     },
@@ -82279,11 +82333,6 @@
       "name": "Мороженое рожок",
       "qty": 7,
       "total": 70
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 3,
-      "total": 60
     },
     {
       "name": "МангоБанан big",
@@ -82297,5 +82346,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-20T15:37:32.082Z"
+  "updatedAt": "2026-06-20T15:44:41.322Z"
 }

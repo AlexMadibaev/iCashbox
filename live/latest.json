@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.241379310344826,
-    "checks": 29,
+    "average": 38.3,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 904,
-    "revenue": 1109
+    "net": 944,
+    "revenue": 1149
   },
   "data": {
-    "actions": 2913,
+    "actions": 2915,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1270,
+    "orders": 1271,
     "products": 39,
     "shifts": 29
   },
   "activity": [
     {
+      "id": 1781948266623,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:37",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1781948266623,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:37",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1781946487159,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:35",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781944414008,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:33",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781944414008,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:33",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1270,
+    "current": 1271,
     "old": [
       {
         "createdAt": "2026-06-19T10:20:38.914Z",
@@ -40528,6 +40528,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-20T09:55:07.946Z",
+        "id": 2316,
+        "items": [
+          "Мороженое манго x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 40,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-20",
+        "shiftLabel": "Смена 20.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-20T09:37:46.561Z",
         "id": 2315,
@@ -81806,14 +81835,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-20",
         "label": "Смена 20.06",
         "missingOrders": 0,
-        "revenue": 1109,
+        "revenue": 1149,
         "status": "ok"
       },
       {
@@ -82194,7 +82223,7 @@
         "status": "ok"
       }
     ],
-    "total": 1270
+    "total": 1271
   },
   "payments": [
     {
@@ -82211,7 +82240,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 96
+      "total": 136
     },
     {
       "method": "Семья",
@@ -82219,6 +82248,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2316,
+      "items": [
+        "Мороженое манго x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2315,
       "items": [
@@ -82276,14 +82313,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2308,
-      "items": [
-        "Манго Маракуя big x2"
-      ],
-      "status": "Оплачен",
-      "total": 52
     }
   ],
   "shifts": {
@@ -82424,6 +82453,11 @@
       "total": 140
     },
     {
+      "name": "Мороженое манго",
+      "qty": 6,
+      "total": 120
+    },
+    {
       "name": "Мороженое классическое",
       "qty": 6,
       "total": 120
@@ -82437,11 +82471,6 @@
       "name": "Babl tea mini",
       "qty": 5,
       "total": 100
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 4,
-      "total": 80
     },
     {
       "name": "Мороженое рожок",
@@ -82460,5 +82489,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-20T16:40:05.266Z"
+  "updatedAt": "2026-06-20T16:57:26.476Z"
 }

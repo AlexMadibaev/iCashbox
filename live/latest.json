@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.05882352941177,
-    "checks": 17,
+    "average": 44.5,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 459,
-    "revenue": 664
+    "net": 596,
+    "revenue": 801
   },
   "data": {
-    "actions": 2971,
+    "actions": 2973,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1297,
+    "orders": 1298,
     "products": 39,
     "shifts": 30
   },
   "activity": [
     {
+      "id": 1782021046939,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:50",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782021046939,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:50",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782020504652,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:21",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782019127923,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:18",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782019127923,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:18",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1297,
+    "current": 1298,
     "old": [
       {
         "createdAt": "2026-06-20T11:02:08.334Z",
@@ -41794,6 +41794,71 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-21T06:06:04.059Z",
+        "id": 2343,
+        "items": [
+          "Жасмин лимон big x1",
+          "Babl tea mini x2",
+          "Виноградный тропический big x1",
+          "Черника mini x1",
+          "Виноградный тропический mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-tea-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 500,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-21",
+        "shiftLabel": "Смена 21.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 137
+      },
       {
         "createdAt": "2026-06-21T05:50:46.840Z",
         "id": 2342,
@@ -83999,14 +84064,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-21",
         "label": "Смена 21.06",
         "missingOrders": 0,
-        "revenue": 664,
+        "revenue": 801,
         "status": "ok"
       },
       {
@@ -84400,12 +84465,12 @@
         "status": "ok"
       }
     ],
-    "total": 1297
+    "total": 1298
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 468
+      "total": 605
     },
     {
       "method": "Карта",
@@ -84425,6 +84490,18 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2343,
+      "items": [
+        "Жасмин лимон big x1",
+        "Babl tea mini x2",
+        "Виноградный тропический big x1",
+        "Черника mini x1",
+        "Виноградный тропический mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 137
+    },
     {
       "id": 2342,
       "items": [
@@ -84482,14 +84559,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 2335,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -84630,9 +84699,19 @@
       "total": 104
     },
     {
+      "name": "Babl tea mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Клубничный жасмин mini",
       "qty": 4,
       "total": 80
+    },
+    {
+      "name": "Черника mini",
+      "qty": 3,
+      "total": 75
     },
     {
       "name": "Мороженое манго",
@@ -84650,21 +84729,11 @@
       "total": 60
     },
     {
-      "name": "Черника mini",
-      "qty": 2,
-      "total": 50
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 2,
-      "total": 40
-    },
-    {
-      "name": "Манго Маракуя mini",
+      "name": "Виноградный тропический mini",
       "qty": 2,
       "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-21T12:53:06.423Z"
+  "updatedAt": "2026-06-21T13:08:23.707Z"
 }

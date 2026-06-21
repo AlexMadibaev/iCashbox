@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.73684210526316,
-    "checks": 19,
+    "average": 42.55,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 626,
-    "revenue": 831
+    "net": 646,
+    "revenue": 851
   },
   "data": {
-    "actions": 2975,
+    "actions": 2977,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1299,
+    "orders": 1300,
     "products": 39,
     "shifts": 30
   },
   "activity": [
     {
+      "id": 1782022010436,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782022010436,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:06",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782021964156,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:31",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782019582031,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:26",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782019582031,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:26",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1299,
+    "current": 1300,
     "old": [
       {
         "createdAt": "2026-06-20T11:02:08.334Z",
@@ -41794,6 +41794,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-21T06:12:43.588Z",
+        "id": 2345,
+        "items": [
+          "Мороженое манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-21",
+        "shiftLabel": "Смена 21.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-21T06:06:50.349Z",
         "id": 2344,
@@ -84093,14 +84122,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-21",
         "label": "Смена 21.06",
         "missingOrders": 0,
-        "revenue": 831,
+        "revenue": 851,
         "status": "ok"
       },
       {
@@ -84494,12 +84523,12 @@
         "status": "ok"
       }
     ],
-    "total": 1299
+    "total": 1300
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 635
+      "total": 655
     },
     {
       "method": "Карта",
@@ -84519,6 +84548,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2345,
+      "items": [
+        "Мороженое манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2344,
       "items": [
@@ -84580,14 +84617,6 @@
       ],
       "status": "Оплачен",
       "total": 80
-    },
-    {
-      "id": 2337,
-      "items": [
-        "Виноградный тропический mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -84728,6 +84757,11 @@
       "total": 104
     },
     {
+      "name": "Мороженое манго",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Babl tea mini",
       "qty": 4,
       "total": 80
@@ -84741,11 +84775,6 @@
       "name": "Черника mini",
       "qty": 3,
       "total": 75
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 3,
-      "total": 60
     },
     {
       "name": "Мороженое клубничное",
@@ -84764,5 +84793,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-21T13:09:08.643Z"
+  "updatedAt": "2026-06-21T13:15:02.356Z"
 }

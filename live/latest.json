@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 26.666666666666668,
-    "checks": 3,
+    "average": 30,
+    "checks": 4,
     "expenseTotal": 205,
-    "net": -125,
-    "revenue": 80
+    "net": -85,
+    "revenue": 120
   },
   "data": {
-    "actions": 2940,
+    "actions": 2942,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1283,
+    "orders": 1284,
     "products": 39,
     "shifts": 30
   },
   "activity": [
+    {
+      "id": 1782005035933,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:23",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782005035933,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:23",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782004283550,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:49",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781952578539,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:49",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781952328343,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:45",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1283,
+    "current": 1284,
     "old": [
       {
         "createdAt": "2026-06-20T11:02:08.334Z",
@@ -41794,6 +41794,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-21T01:32:47.884Z",
+        "id": 2329,
+        "items": [
+          "Мороженое клубничное x1",
+          "Мороженое манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-21",
+        "shiftLabel": "Смена 21.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-21T01:23:55.850Z",
         "id": 2328,
@@ -83503,14 +83541,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 3,
-        "expectedOrders": 3,
+        "databaseOrders": 4,
+        "expectedOrders": 4,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-21",
         "label": "Смена 21.06",
         "missingOrders": 0,
-        "revenue": 80,
+        "revenue": 120,
         "status": "ok"
       },
       {
@@ -83904,7 +83942,7 @@
         "status": "ok"
       }
     ],
-    "total": 1283
+    "total": 1284
   },
   "payments": [
     {
@@ -83917,7 +83955,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 40
     },
     {
       "method": "Dushanbe City",
@@ -83929,6 +83967,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2329,
+      "items": [
+        "Мороженое клубничное x1",
+        "Мороженое манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2328,
       "items": [
@@ -84093,11 +84140,21 @@
       "total": 60
     },
     {
+      "name": "Мороженое клубничное",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Мороженое манго",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 2,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-21T08:26:15.755Z"
+  "updatedAt": "2026-06-21T08:35:07.334Z"
 }

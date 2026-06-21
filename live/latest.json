@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 43.36666666666667,
-    "checks": 30,
+    "average": 42.61290322580645,
+    "checks": 31,
     "expenseTotal": 205,
-    "net": 1096,
-    "revenue": 1301
+    "net": 1116,
+    "revenue": 1321
   },
   "data": {
-    "actions": 2997,
+    "actions": 2999,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1310,
+    "orders": 1311,
     "products": 39,
     "shifts": 30
   },
   "activity": [
+    {
+      "id": 1782034142395,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782034142395,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:29",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782034021997,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782026368705,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782026368705,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:19",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1310,
+    "current": 1311,
     "old": [
       {
         "createdAt": "2026-06-20T11:02:08.334Z",
@@ -41794,6 +41794,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-21T09:29:10.605Z",
+        "id": 2356,
+        "items": [
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-21",
+        "shiftLabel": "Смена 21.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-21T09:29:02.318Z",
         "id": 2355,
@@ -84421,14 +84450,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 30,
-        "expectedOrders": 30,
+        "databaseOrders": 31,
+        "expectedOrders": 31,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-21",
         "label": "Смена 21.06",
         "missingOrders": 0,
-        "revenue": 1301,
+        "revenue": 1321,
         "status": "ok"
       },
       {
@@ -84822,12 +84851,12 @@
         "status": "ok"
       }
     ],
-    "total": 1310
+    "total": 1311
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 945
+      "total": 965
     },
     {
       "method": "Карта",
@@ -84847,6 +84876,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2356,
+      "items": [
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2355,
       "items": [
@@ -84903,14 +84940,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 2348,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -85051,14 +85080,14 @@
       "total": 180
     },
     {
+      "name": "Мороженое классическое",
+      "qty": 6,
+      "total": 120
+    },
+    {
       "name": "Babl tea big",
       "qty": 4,
       "total": 104
-    },
-    {
-      "name": "Мороженое классическое",
-      "qty": 5,
-      "total": 100
     },
     {
       "name": "Мороженое Орео",
@@ -85087,5 +85116,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-21T16:31:20.548Z"
+  "updatedAt": "2026-06-21T16:31:28.212Z"
 }

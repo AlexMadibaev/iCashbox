@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.833333333333336,
-    "checks": 6,
+    "average": 43.57142857142857,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": 10,
-    "revenue": 215
+    "net": 100,
+    "revenue": 305
   },
   "data": {
-    "actions": 2946,
+    "actions": 2948,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1286,
+    "orders": 1287,
     "products": 39,
     "shifts": 30
   },
   "activity": [
     {
+      "id": 1782006512122,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:48",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782006512122,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:48",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782006216045,
       "source": "Локально",
       "status": "Сохранено",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "11:22",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1781990800601,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:26",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1781953328409,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "23:02",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1286,
+    "current": 1287,
     "old": [
       {
         "createdAt": "2026-06-20T11:02:08.334Z",
@@ -41794,6 +41794,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-21T02:04:11.851Z",
+        "id": 2332,
+        "items": [
+          "Черника mini x1",
+          "Matcha mini x1",
+          "Фреш лимон mini x1",
+          "Манго Маракуя mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-фреш-лимон-mini",
+            "name": "Фреш лимон mini",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          },
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 200,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-21",
+        "shiftLabel": "Смена 21.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 90
+      },
       {
         "createdAt": "2026-06-21T01:48:32.036Z",
         "id": 2331,
@@ -83617,14 +83673,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-21",
         "label": "Смена 21.06",
         "missingOrders": 0,
-        "revenue": 215,
+        "revenue": 305,
         "status": "ok"
       },
       {
@@ -84018,12 +84074,12 @@
         "status": "ok"
       }
     ],
-    "total": 1286
+    "total": 1287
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 150
+      "total": 240
     },
     {
       "method": "Карта",
@@ -84043,6 +84099,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2332,
+      "items": [
+        "Черника mini x1",
+        "Matcha mini x1",
+        "Фреш лимон mini x1",
+        "Манго Маракуя mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 90
+    },
     {
       "id": 2331,
       "items": [
@@ -84239,9 +84306,19 @@
       "total": 40
     },
     {
+      "name": "Matcha mini",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 3,
       "total": 30
+    },
+    {
+      "name": "Черника mini",
+      "qty": 1,
+      "total": 25
     },
     {
       "name": "МангоБанан mini",
@@ -84249,21 +84326,16 @@
       "total": 25
     },
     {
+      "name": "Манго Маракуя mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Жасмин лимон mini",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Мороженое клубничное",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Мороженое манго",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-21T08:50:50.371Z"
+  "updatedAt": "2026-06-21T09:06:31.290Z"
 }

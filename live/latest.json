@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 42.61290322580645,
-    "checks": 31,
+    "average": 42.6875,
+    "checks": 32,
     "expenseTotal": 205,
-    "net": 1116,
-    "revenue": 1321
+    "net": 1161,
+    "revenue": 1366
   },
   "data": {
-    "actions": 2999,
+    "actions": 3001,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1311,
+    "orders": 1312,
     "products": 39,
     "shifts": 30
   },
   "activity": [
+    {
+      "id": 1782034150699,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782034150699,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:29",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782034142395,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:46",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782026547145,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:22",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782026547145,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:22",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1311,
+    "current": 1312,
     "old": [
       {
         "createdAt": "2026-06-20T11:02:08.334Z",
@@ -41794,6 +41794,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-21T09:41:10.295Z",
+        "id": 2357,
+        "items": [
+          "Виноградный тропический mini x1",
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 55,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-21",
+        "shiftLabel": "Смена 21.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-06-21T09:29:10.605Z",
         "id": 2356,
@@ -84450,14 +84488,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 31,
-        "expectedOrders": 31,
+        "databaseOrders": 32,
+        "expectedOrders": 32,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-21",
         "label": "Смена 21.06",
         "missingOrders": 0,
-        "revenue": 1321,
+        "revenue": 1366,
         "status": "ok"
       },
       {
@@ -84851,12 +84889,12 @@
         "status": "ok"
       }
     ],
-    "total": 1311
+    "total": 1312
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 965
+      "total": 1010
     },
     {
       "method": "Карта",
@@ -84876,6 +84914,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2357,
+      "items": [
+        "Виноградный тропический mini x1",
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 2356,
       "items": [
@@ -84932,14 +84979,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2349,
-      "items": [
-        "Капучино x2"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -85090,6 +85129,11 @@
       "total": 104
     },
     {
+      "name": "Черника mini",
+      "qty": 4,
+      "total": 100
+    },
+    {
       "name": "Мороженое Орео",
       "qty": 5,
       "total": 100
@@ -85105,16 +85149,11 @@
       "total": 80
     },
     {
-      "name": "Черника mini",
-      "qty": 3,
-      "total": 75
-    },
-    {
       "name": "Мороженое рожок",
       "qty": 7,
       "total": 70
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-21T16:31:28.212Z"
+  "updatedAt": "2026-06-21T16:43:29.382Z"
 }

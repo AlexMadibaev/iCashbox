@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 26,
-    "checks": 5,
+    "average": 35.833333333333336,
+    "checks": 6,
     "expenseTotal": 205,
-    "net": -75,
-    "revenue": 130
+    "net": 10,
+    "revenue": 215
   },
   "data": {
-    "actions": 2944,
+    "actions": 2946,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1285,
+    "orders": 1286,
     "products": 39,
     "shifts": 30
   },
   "activity": [
+    {
+      "id": 1782006216045,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:43",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782006216045,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:43",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782005567969,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "23:02",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781953328409,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "23:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781953246426,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "23:00",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1285,
+    "current": 1286,
     "old": [
       {
         "createdAt": "2026-06-20T11:02:08.334Z",
@@ -41794,6 +41794,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-21T01:48:32.036Z",
+        "id": 2331,
+        "items": [
+          "Клубничный жасмин mini x2",
+          "Жасмин лимон mini x1",
+          "МангоБанан mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-жасмин-tea-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-милкшейк-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 25,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-21",
+        "shiftLabel": "Смена 21.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 85
+      },
       {
         "createdAt": "2026-06-21T01:43:35.978Z",
         "id": 2330,
@@ -83570,14 +83617,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 5,
-        "expectedOrders": 5,
+        "databaseOrders": 6,
+        "expectedOrders": 6,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-21",
         "label": "Смена 21.06",
         "missingOrders": 0,
-        "revenue": 130,
+        "revenue": 215,
         "status": "ok"
       },
       {
@@ -83971,12 +84018,12 @@
         "status": "ok"
       }
     ],
-    "total": 1285
+    "total": 1286
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 90
+      "total": 150
     },
     {
       "method": "Карта",
@@ -83984,7 +84031,7 @@
     },
     {
       "method": "Alif",
-      "total": 40
+      "total": 65
     },
     {
       "method": "Dushanbe City",
@@ -83996,6 +84043,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2331,
+      "items": [
+        "Клубничный жасмин mini x2",
+        "Жасмин лимон mini x1",
+        "МангоБанан mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 85
+    },
     {
       "id": 2330,
       "items": [
@@ -84177,9 +84234,24 @@
       "total": 60
     },
     {
+      "name": "Клубничный жасмин mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 3,
       "total": 30
+    },
+    {
+      "name": "МангоБанан mini",
+      "qty": 1,
+      "total": 25
+    },
+    {
+      "name": "Жасмин лимон mini",
+      "qty": 1,
+      "total": 20
     },
     {
       "name": "Мороженое клубничное",
@@ -84193,5 +84265,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-21T08:45:55.343Z"
+  "updatedAt": "2026-06-21T08:50:50.371Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.57142857142857,
-    "checks": 7,
+    "average": 45.625,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": 100,
-    "revenue": 305
+    "net": 160,
+    "revenue": 365
   },
   "data": {
-    "actions": 2948,
+    "actions": 2950,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1287,
+    "orders": 1288,
     "products": 39,
     "shifts": 30
   },
   "activity": [
     {
+      "id": 1782007451936,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:04",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782007451936,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:04",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782006512122,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1781997754069,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:22",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1781997754069,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:22",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1287,
+    "current": 1288,
     "old": [
       {
         "createdAt": "2026-06-20T11:02:08.334Z",
@@ -41794,6 +41794,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-21T02:30:27.539Z",
+        "id": 2333,
+        "items": [
+          "Мороженое клубничное x1",
+          "Клубничный жасмин mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-21",
+        "shiftLabel": "Смена 21.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-21T02:04:11.851Z",
         "id": 2332,
@@ -83673,14 +83711,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-21",
         "label": "Смена 21.06",
         "missingOrders": 0,
-        "revenue": 305,
+        "revenue": 365,
         "status": "ok"
       },
       {
@@ -84074,12 +84112,12 @@
         "status": "ok"
       }
     ],
-    "total": 1287
+    "total": 1288
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 240
+      "total": 300
     },
     {
       "method": "Карта",
@@ -84099,6 +84137,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2333,
+      "items": [
+        "Мороженое клубничное x1",
+        "Клубничный жасмин mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2332,
       "items": [
@@ -84296,12 +84343,17 @@
   },
   "topProducts": [
     {
+      "name": "Клубничный жасмин mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Айс Латте",
       "qty": 2,
       "total": 60
     },
     {
-      "name": "Клубничный жасмин mini",
+      "name": "Мороженое клубничное",
       "qty": 2,
       "total": 40
     },
@@ -84329,13 +84381,8 @@
       "name": "Манго Маракуя mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Жасмин лимон mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-21T09:06:31.290Z"
+  "updatedAt": "2026-06-21T09:32:46.950Z"
 }

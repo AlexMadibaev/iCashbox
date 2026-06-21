@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.138888888888886,
-    "checks": 36,
+    "average": 42.08108108108108,
+    "checks": 37,
     "expenseTotal": 205,
-    "net": 1312,
-    "revenue": 1517
+    "net": 1352,
+    "revenue": 1557
   },
   "data": {
-    "actions": 3009,
+    "actions": 3011,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1316,
+    "orders": 1317,
     "products": 39,
     "shifts": 30
   },
   "activity": [
     {
+      "id": 1782037409101,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:23",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782037409101,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:23",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782036987687,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1782034150699,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:29",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782034142395,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:29",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782034142395,
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:29",
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1316,
+    "current": 1317,
     "old": [
       {
         "createdAt": "2026-06-20T11:02:08.334Z",
@@ -41794,6 +41794,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-21T10:41:59.442Z",
+        "id": 2362,
+        "items": [
+          "Мороженое манго x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-21",
+        "shiftLabel": "Смена 21.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-21T10:23:29.039Z",
         "id": 2361,
@@ -84622,14 +84651,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 36,
-        "expectedOrders": 36,
+        "databaseOrders": 37,
+        "expectedOrders": 37,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-21",
         "label": "Смена 21.06",
         "missingOrders": 0,
-        "revenue": 1517,
+        "revenue": 1557,
         "status": "ok"
       },
       {
@@ -85023,12 +85052,12 @@
         "status": "ok"
       }
     ],
-    "total": 1316
+    "total": 1317
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1135
+      "total": 1175
     },
     {
       "method": "Карта",
@@ -85048,6 +85077,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2362,
+      "items": [
+        "Мороженое манго x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2361,
       "items": [
@@ -85107,14 +85144,6 @@
       ],
       "status": "Оплачен",
       "total": 140
-    },
-    {
-      "id": 2354,
-      "items": [
-        "МангоБанан big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -85255,6 +85284,11 @@
       "total": 180
     },
     {
+      "name": "Мороженое манго",
+      "qty": 8,
+      "total": 160
+    },
+    {
       "name": "Мороженое классическое",
       "qty": 7,
       "total": 140
@@ -85263,11 +85297,6 @@
       "name": "Черника mini",
       "qty": 5,
       "total": 125
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 6,
-      "total": 120
     },
     {
       "name": "Babl tea big",
@@ -85291,5 +85320,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-21T17:25:48.144Z"
+  "updatedAt": "2026-06-21T17:44:18.285Z"
 }

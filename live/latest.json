@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 41.53846153846154,
-    "checks": 13,
+    "average": 42.285714285714285,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 335,
-    "revenue": 540
+    "net": 387,
+    "revenue": 592
   },
   "data": {
-    "actions": 2963,
+    "actions": 2965,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1293,
+    "orders": 1294,
     "products": 39,
     "shifts": 30
   },
   "activity": [
+    {
+      "id": 1782019582031,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:26",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782019582031,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:26",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782019290868,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:48",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782010120241,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:48",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782009027622,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:30",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1293,
+    "current": 1294,
     "old": [
       {
         "createdAt": "2026-06-20T11:02:08.334Z",
@@ -41794,6 +41794,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-21T05:31:47.968Z",
+        "id": 2339,
+        "items": [
+          "Babl tea big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          }
+        ],
+        "payments": {
+          "Наличные": 52,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-21",
+        "shiftLabel": "Смена 21.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-06-21T05:26:21.956Z",
         "id": 2338,
@@ -83883,14 +83912,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-21",
         "label": "Смена 21.06",
         "missingOrders": 0,
-        "revenue": 540,
+        "revenue": 592,
         "status": "ok"
       },
       {
@@ -84284,12 +84313,12 @@
         "status": "ok"
       }
     ],
-    "total": 1293
+    "total": 1294
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 370
+      "total": 422
     },
     {
       "method": "Карта",
@@ -84309,6 +84338,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2339,
+      "items": [
+        "Babl tea big x2"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 2338,
       "items": [
@@ -84371,16 +84408,6 @@
       ],
       "status": "Оплачен",
       "total": 90
-    },
-    {
-      "id": 2331,
-      "items": [
-        "Клубничный жасмин mini x2",
-        "Жасмин лимон mini x1",
-        "МангоБанан mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 85
     }
   ],
   "shifts": {
@@ -84536,6 +84563,11 @@
       "total": 60
     },
     {
+      "name": "Babl tea big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Черника mini",
       "qty": 2,
       "total": 50
@@ -84549,13 +84581,8 @@
       "name": "Мороженое рожок",
       "qty": 4,
       "total": 40
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-21T12:28:40.310Z"
+  "updatedAt": "2026-06-21T12:34:06.375Z"
 }

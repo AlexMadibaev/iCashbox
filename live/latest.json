@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.390243902439025,
-    "checks": 41,
+    "average": 35.26190476190476,
+    "checks": 42,
     "expenseTotal": 205,
-    "net": 1246,
-    "revenue": 1451
+    "net": 1276,
+    "revenue": 1481
   },
   "data": {
-    "actions": 3094,
+    "actions": 3096,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1358,
+    "orders": 1359,
     "products": 39,
     "shifts": 31
   },
   "activity": [
     {
+      "id": 1782124973425,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:42",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782124973425,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:42",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782124953650,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:09",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782122330348,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:58",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782122330348,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:58",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1358,
+    "current": 1359,
     "old": [
       {
         "createdAt": "2026-06-21T10:41:59.442Z",
@@ -43038,6 +43038,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-22T10:43:05.717Z",
+        "id": 2404,
+        "items": [
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 30,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-22",
+        "shiftLabel": "Смена 22.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-22T10:42:53.347Z",
         "id": 2403,
@@ -87228,14 +87257,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 41,
-        "expectedOrders": 41,
+        "databaseOrders": 42,
+        "expectedOrders": 42,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-22",
         "label": "Смена 22.06",
         "missingOrders": 0,
-        "revenue": 1451,
+        "revenue": 1481,
         "status": "ok"
       },
       {
@@ -87642,7 +87671,7 @@
         "status": "ok"
       }
     ],
-    "total": 1358
+    "total": 1359
   },
   "payments": [
     {
@@ -87659,7 +87688,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 258
+      "total": 288
     },
     {
       "method": "Семья",
@@ -87667,6 +87696,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2404,
+      "items": [
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2403,
       "items": [
@@ -87726,14 +87763,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 2396,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -87874,6 +87903,11 @@
       "total": 140
     },
     {
+      "name": "Айс Латте",
+      "qty": 4,
+      "total": 120
+    },
+    {
       "name": "Мороженое манго",
       "qty": 6,
       "total": 120
@@ -87882,11 +87916,6 @@
       "name": "ПиноКолада mini",
       "qty": 4,
       "total": 100
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 3,
-      "total": 90
     },
     {
       "name": "Matcha mini",
@@ -87910,5 +87939,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-22T17:45:12.272Z"
+  "updatedAt": "2026-06-22T17:45:24.474Z"
 }

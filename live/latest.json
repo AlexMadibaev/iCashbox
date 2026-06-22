@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 32,
-    "checks": 7,
+    "average": 31.125,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": 19,
-    "revenue": 224
+    "net": 44,
+    "revenue": 249
   },
   "data": {
     "actions": 3028,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1324,
+    "orders": 1325,
     "products": 39,
     "shifts": 31
   },
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1324,
+    "current": 1325,
     "old": [
       {
         "createdAt": "2026-06-21T10:41:59.442Z",
@@ -43038,6 +43038,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-22T02:49:42.712Z",
+        "id": 2370,
+        "items": [
+          "Капучино x1"
+        ],
+        "lines": [
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 25,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-22",
+        "shiftLabel": "Смена 22.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-06-22T02:40:13.128Z",
         "id": 2369,
@@ -86134,14 +86163,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-22",
         "label": "Смена 22.06",
         "missingOrders": 0,
-        "revenue": 224,
+        "revenue": 249,
         "status": "ok"
       },
       {
@@ -86548,7 +86577,7 @@
         "status": "ok"
       }
     ],
-    "total": 1324
+    "total": 1325
   },
   "payments": [
     {
@@ -86561,7 +86590,7 @@
     },
     {
       "method": "Alif",
-      "total": 71
+      "total": 96
     },
     {
       "method": "Dushanbe City",
@@ -86573,6 +86602,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2370,
+      "items": [
+        "Капучино x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 2369,
       "items": [
@@ -86787,6 +86824,11 @@
       "total": 26
     },
     {
+      "name": "Капучино",
+      "qty": 1,
+      "total": 25
+    },
+    {
       "name": "Черника mini",
       "qty": 1,
       "total": 25
@@ -86800,13 +86842,8 @@
       "name": "Babl tea mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Жасмин лимон mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-22T09:42:33.749Z"
+  "updatedAt": "2026-06-22T09:52:03.047Z"
 }

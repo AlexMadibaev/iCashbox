@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 31,
-    "checks": 9,
+    "average": 30.5,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 74,
-    "revenue": 279
+    "net": 100,
+    "revenue": 305
   },
   "data": {
-    "actions": 3030,
+    "actions": 3032,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1326,
+    "orders": 1327,
     "products": 39,
     "shifts": 31
   },
   "activity": [
     {
+      "id": 1782099887469,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:44",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782099887469,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:44",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782096582795,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:18",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782089767174,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:56",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782089767174,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:56",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1326,
+    "current": 1327,
     "old": [
       {
         "createdAt": "2026-06-21T10:41:59.442Z",
@@ -43038,6 +43038,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-22T03:47:01.122Z",
+        "id": 2372,
+        "items": [
+          "Виноградный тропический big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 26,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-22",
+        "shiftLabel": "Смена 22.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-06-22T03:44:47.383Z",
         "id": 2371,
@@ -86192,14 +86221,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-22",
         "label": "Смена 22.06",
         "missingOrders": 0,
-        "revenue": 279,
+        "revenue": 305,
         "status": "ok"
       },
       {
@@ -86606,7 +86635,7 @@
         "status": "ok"
       }
     ],
-    "total": 1326
+    "total": 1327
   },
   "payments": [
     {
@@ -86619,7 +86648,7 @@
     },
     {
       "method": "Alif",
-      "total": 96
+      "total": 122
     },
     {
       "method": "Dushanbe City",
@@ -86631,6 +86660,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2372,
+      "items": [
+        "Виноградный тропический big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 2371,
       "items": [
@@ -86689,15 +86726,6 @@
       ],
       "status": "Оплачен",
       "total": 71
-    },
-    {
-      "id": 2364,
-      "items": [
-        "Айс Латте x1",
-        "Черника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -86853,6 +86881,11 @@
       "total": 30
     },
     {
+      "name": "Виноградный тропический big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
@@ -86866,13 +86899,8 @@
       "name": "Черника mini",
       "qty": 1,
       "total": 25
-    },
-    {
-      "name": "Виноградный тропический mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-22T10:47:08.046Z"
+  "updatedAt": "2026-06-22T10:49:20.476Z"
 }

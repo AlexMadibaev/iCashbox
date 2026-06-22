@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.275,
-    "checks": 40,
+    "average": 35.390243902439025,
+    "checks": 41,
     "expenseTotal": 205,
-    "net": 1206,
-    "revenue": 1411
+    "net": 1246,
+    "revenue": 1451
   },
   "data": {
-    "actions": 3092,
+    "actions": 3094,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1357,
+    "orders": 1358,
     "products": 39,
     "shifts": 31
   },
   "activity": [
     {
+      "id": 1782124953650,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:42",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782124953650,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:42",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782123687111,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:58",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782122223238,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:57",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782122223238,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:57",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1357,
+    "current": 1358,
     "old": [
       {
         "createdAt": "2026-06-21T10:41:59.442Z",
@@ -43038,6 +43038,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-22T10:42:53.347Z",
+        "id": 2403,
+        "items": [
+          "Мороженое манго x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-22",
+        "shiftLabel": "Смена 22.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-22T10:42:33.570Z",
         "id": 2402,
@@ -87199,14 +87228,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 40,
-        "expectedOrders": 40,
+        "databaseOrders": 41,
+        "expectedOrders": 41,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-22",
         "label": "Смена 22.06",
         "missingOrders": 0,
-        "revenue": 1411,
+        "revenue": 1451,
         "status": "ok"
       },
       {
@@ -87613,12 +87642,12 @@
         "status": "ok"
       }
     ],
-    "total": 1357
+    "total": 1358
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 756
+      "total": 796
     },
     {
       "method": "Карта",
@@ -87638,6 +87667,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2403,
+      "items": [
+        "Мороженое манго x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2402,
       "items": [
@@ -87697,16 +87734,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2395,
-      "items": [
-        "МангоБанан mini x1",
-        "Жасмин лимон mini x1",
-        "Мороженое с тапиокой x1"
-      ],
-      "status": "Оплачен",
-      "total": 65
     }
   ],
   "shifts": {
@@ -87847,6 +87874,11 @@
       "total": 140
     },
     {
+      "name": "Мороженое манго",
+      "qty": 6,
+      "total": 120
+    },
+    {
       "name": "ПиноКолада mini",
       "qty": 4,
       "total": 100
@@ -87860,11 +87892,6 @@
       "name": "Matcha mini",
       "qty": 3,
       "total": 90
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 4,
-      "total": 80
     },
     {
       "name": "Манго Маракуя mini",
@@ -87883,5 +87910,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-22T17:44:54.008Z"
+  "updatedAt": "2026-06-22T17:45:12.272Z"
 }

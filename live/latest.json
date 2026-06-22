@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 28.076923076923077,
-    "checks": 13,
+    "average": 29.642857142857142,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 160,
-    "revenue": 365
+    "net": 210,
+    "revenue": 415
   },
   "data": {
-    "actions": 3038,
+    "actions": 3040,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1330,
+    "orders": 1331,
     "products": 39,
     "shifts": 31
   },
   "activity": [
     {
+      "id": 1782100823558,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782100823558,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:00",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782100615457,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:49",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782096013196,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:40",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782096013196,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:40",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1330,
+    "current": 1331,
     "old": [
       {
         "createdAt": "2026-06-21T10:41:59.442Z",
@@ -43038,6 +43038,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-22T04:27:44.186Z",
+        "id": 2376,
+        "items": [
+          "Babl tea mini x1",
+          "Фреш лимон mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-фреш-лимон-mini",
+            "name": "Фреш лимон mini",
+            "price": 15,
+            "qty": 2,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-22",
+        "shiftLabel": "Смена 22.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-22T04:00:23.495Z",
         "id": 2375,
@@ -86308,14 +86346,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-22",
         "label": "Смена 22.06",
         "missingOrders": 0,
-        "revenue": 365,
+        "revenue": 415,
         "status": "ok"
       },
       {
@@ -86722,12 +86760,12 @@
         "status": "ok"
       }
     ],
-    "total": 1330
+    "total": 1331
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 180
+      "total": 230
     },
     {
       "method": "Карта",
@@ -86747,6 +86785,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2376,
+      "items": [
+        "Babl tea mini x1",
+        "Фреш лимон mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 2375,
       "items": [
@@ -86803,14 +86850,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 2368,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -86956,6 +86995,16 @@
       "total": 50
     },
     {
+      "name": "Babl tea mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
+      "name": "Фреш лимон mini",
+      "qty": 2,
+      "total": 30
+    },
+    {
       "name": "Matcha mini",
       "qty": 1,
       "total": 30
@@ -86974,18 +87023,8 @@
       "name": "Виноградный тропический big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 1,
-      "total": 26
-    },
-    {
-      "name": "Капучино",
-      "qty": 1,
-      "total": 25
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-22T11:02:42.793Z"
+  "updatedAt": "2026-06-22T11:30:04.291Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.61290322580645,
-    "checks": 31,
+    "average": 33.46875,
+    "checks": 32,
     "expenseTotal": 205,
-    "net": 806,
-    "revenue": 1011
+    "net": 866,
+    "revenue": 1071
   },
   "data": {
-    "actions": 3074,
+    "actions": 3076,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1348,
+    "orders": 1349,
     "products": 39,
     "shifts": 31
   },
   "activity": [
     {
+      "id": 1782119201422,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782119201422,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:06",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782116927181,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:17",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782112130094,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:08",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782112130094,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:08",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1348,
+    "current": 1349,
     "old": [
       {
         "createdAt": "2026-06-21T10:41:59.442Z",
@@ -43038,6 +43038,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-22T09:14:59.171Z",
+        "id": 2394,
+        "items": [
+          "МангоБанан big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 60,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-22",
+        "shiftLabel": "Смена 22.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-22T09:06:41.336Z",
         "id": 2393,
@@ -86884,14 +86913,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 31,
-        "expectedOrders": 31,
+        "databaseOrders": 32,
+        "expectedOrders": 32,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-22",
         "label": "Смена 22.06",
         "missingOrders": 0,
-        "revenue": 1011,
+        "revenue": 1071,
         "status": "ok"
       },
       {
@@ -87298,7 +87327,7 @@
         "status": "ok"
       }
     ],
-    "total": 1348
+    "total": 1349
   },
   "payments": [
     {
@@ -87311,7 +87340,7 @@
     },
     {
       "method": "Alif",
-      "total": 337
+      "total": 397
     },
     {
       "method": "Dushanbe City",
@@ -87323,6 +87352,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2394,
+      "items": [
+        "МангоБанан big x2"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2393,
       "items": [
@@ -87383,14 +87420,6 @@
       ],
       "status": "Оплачен",
       "total": 75
-    },
-    {
-      "id": 2386,
-      "items": [
-        "Matcha mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -87551,6 +87580,11 @@
       "total": 75
     },
     {
+      "name": "МангоБанан big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Айс Латте",
       "qty": 2,
       "total": 60
@@ -87559,13 +87593,8 @@
       "name": "Черника mini",
       "qty": 2,
       "total": 50
-    },
-    {
-      "name": "Капучино",
-      "qty": 2,
-      "total": 50
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-22T16:09:01.605Z"
+  "updatedAt": "2026-06-22T16:17:19.574Z"
 }

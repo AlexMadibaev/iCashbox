@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 29.642857142857142,
-    "checks": 14,
+    "average": 29,
+    "checks": 15,
     "expenseTotal": 205,
-    "net": 210,
-    "revenue": 415
+    "net": 230,
+    "revenue": 435
   },
   "data": {
-    "actions": 3040,
+    "actions": 3042,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1331,
+    "orders": 1332,
     "products": 39,
     "shifts": 31
   },
   "activity": [
     {
+      "id": 1782102464253,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782102464253,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:27",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782100823558,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:44",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782096582795,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:49",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782096582795,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:49",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1331,
+    "current": 1332,
     "old": [
       {
         "createdAt": "2026-06-21T10:41:59.442Z",
@@ -43038,6 +43038,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-22T04:51:54.213Z",
+        "id": 2377,
+        "items": [
+          "Мороженое манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-22",
+        "shiftLabel": "Смена 22.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-22T04:27:44.186Z",
         "id": 2376,
@@ -86346,14 +86375,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 14,
-        "expectedOrders": 14,
+        "databaseOrders": 15,
+        "expectedOrders": 15,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-22",
         "label": "Смена 22.06",
         "missingOrders": 0,
-        "revenue": 415,
+        "revenue": 435,
         "status": "ok"
       },
       {
@@ -86760,12 +86789,12 @@
         "status": "ok"
       }
     ],
-    "total": 1331
+    "total": 1332
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 230
+      "total": 250
     },
     {
       "method": "Карта",
@@ -86785,6 +86814,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2377,
+      "items": [
+        "Мороженое манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2376,
       "items": [
@@ -86841,15 +86878,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 2369,
-      "items": [
-        "Манго Маракуя mini x1",
-        "Виноградный тропический mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -87026,5 +87054,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-22T11:30:04.291Z"
+  "updatedAt": "2026-06-22T11:54:14.539Z"
 }

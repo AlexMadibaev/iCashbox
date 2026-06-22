@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 42.75,
-    "checks": 4,
+    "average": 34.8,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": -34,
-    "revenue": 171
+    "net": -31,
+    "revenue": 174
   },
   "data": {
-    "actions": 3020,
+    "actions": 3022,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1321,
+    "orders": 1322,
     "products": 39,
     "shifts": 31
   },
   "activity": [
+    {
+      "id": 1782091106576,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782091106576,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:18",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782089767174,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782037409101,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:23",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782036987687,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:16",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1321,
+    "current": 1322,
     "old": [
       {
         "createdAt": "2026-06-21T10:41:59.442Z",
@@ -43038,6 +43038,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-22T01:19:05.855Z",
+        "id": 2367,
+        "items": [
+          "Тапиока доп x1"
+        ],
+        "lines": [
+          {
+            "id": "product-тапиока-доп",
+            "name": "Тапиока доп",
+            "price": 3,
+            "qty": 1,
+            "size": "",
+            "total": 3
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 3,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-22",
+        "shiftLabel": "Смена 22.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 3
+      },
       {
         "createdAt": "2026-06-22T01:18:26.494Z",
         "id": 2366,
@@ -86038,14 +86067,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-22",
         "label": "Смена 22.06",
         "missingOrders": 0,
-        "revenue": 171,
+        "revenue": 174,
         "status": "ok"
       },
       {
@@ -86452,7 +86481,7 @@
         "status": "ok"
       }
     ],
-    "total": 1321
+    "total": 1322
   },
   "payments": [
     {
@@ -86469,7 +86498,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 20
+      "total": 23
     },
     {
       "method": "Семья",
@@ -86477,6 +86506,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2367,
+      "items": [
+        "Тапиока доп x1"
+      ],
+      "status": "Оплачен",
+      "total": 3
+    },
     {
       "id": 2366,
       "items": [
@@ -86679,8 +86716,13 @@
       "name": "Жасмин лимон mini",
       "qty": 1,
       "total": 20
+    },
+    {
+      "name": "Тапиока доп",
+      "qty": 1,
+      "total": 3
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-22T08:20:47.323Z"
+  "updatedAt": "2026-06-22T08:21:25.125Z"
 }

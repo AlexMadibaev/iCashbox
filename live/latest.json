@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.26190476190476,
-    "checks": 42,
+    "average": 35.325581395348834,
+    "checks": 43,
     "expenseTotal": 205,
-    "net": 1276,
-    "revenue": 1481
+    "net": 1314,
+    "revenue": 1519
   },
   "data": {
-    "actions": 3096,
+    "actions": 3098,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1359,
+    "orders": 1360,
     "products": 39,
     "shifts": 31
   },
   "activity": [
     {
+      "id": 1782124985789,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:43",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782124985789,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:43",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782124973425,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:12",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782122950348,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:09",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782122950348,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:09",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1359,
+    "current": 1360,
     "old": [
       {
         "createdAt": "2026-06-21T10:41:59.442Z",
@@ -43038,6 +43038,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-22T10:54:50.116Z",
+        "id": 2405,
+        "items": [
+          "Капучино x1",
+          "Эспрессо x1"
+        ],
+        "lines": [
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-эспрессо",
+            "name": "Эспрессо",
+            "price": 13,
+            "qty": 1,
+            "size": "",
+            "total": 13
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 38,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-22",
+        "shiftLabel": "Смена 22.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 38
+      },
       {
         "createdAt": "2026-06-22T10:43:05.717Z",
         "id": 2404,
@@ -87257,14 +87295,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 42,
-        "expectedOrders": 42,
+        "databaseOrders": 43,
+        "expectedOrders": 43,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-22",
         "label": "Смена 22.06",
         "missingOrders": 0,
-        "revenue": 1481,
+        "revenue": 1519,
         "status": "ok"
       },
       {
@@ -87671,7 +87709,7 @@
         "status": "ok"
       }
     ],
-    "total": 1359
+    "total": 1360
   },
   "payments": [
     {
@@ -87688,7 +87726,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 288
+      "total": 326
     },
     {
       "method": "Семья",
@@ -87696,6 +87734,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2405,
+      "items": [
+        "Капучино x1",
+        "Эспрессо x1"
+      ],
+      "status": "Оплачен",
+      "total": 38
+    },
     {
       "id": 2404,
       "items": [
@@ -87755,14 +87802,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2397,
-      "items": [
-        "Matcha big x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -87928,16 +87967,16 @@
       "total": 80
     },
     {
-      "name": "МангоБанан mini",
+      "name": "Капучино",
       "qty": 3,
       "total": 75
     },
     {
-      "name": "Клубничный mini",
+      "name": "МангоБанан mini",
       "qty": 3,
       "total": 75
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-22T17:45:24.474Z"
+  "updatedAt": "2026-06-22T17:57:10.161Z"
 }

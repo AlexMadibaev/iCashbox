@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 29.210526315789473,
-    "checks": 19,
+    "average": 29,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 350,
-    "revenue": 555
+    "net": 375,
+    "revenue": 580
   },
   "data": {
-    "actions": 3050,
+    "actions": 3052,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1336,
+    "orders": 1337,
     "products": 39,
     "shifts": 31
   },
   "activity": [
     {
+      "id": 1782108352561,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:05",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782108352561,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:05",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782107874414,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:27",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782100823558,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782100823558,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:00",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1336,
+    "current": 1337,
     "old": [
       {
         "createdAt": "2026-06-21T10:41:59.442Z",
@@ -43038,6 +43038,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-22T06:06:56.410Z",
+        "id": 2382,
+        "items": [
+          "Капучино x1"
+        ],
+        "lines": [
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-22",
+        "shiftLabel": "Смена 22.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-06-22T06:05:52.473Z",
         "id": 2381,
@@ -86491,14 +86520,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-22",
         "label": "Смена 22.06",
         "missingOrders": 0,
-        "revenue": 555,
+        "revenue": 580,
         "status": "ok"
       },
       {
@@ -86905,12 +86934,12 @@
         "status": "ok"
       }
     ],
-    "total": 1336
+    "total": 1337
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 370
+      "total": 395
     },
     {
       "method": "Карта",
@@ -86930,6 +86959,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2382,
+      "items": [
+        "Капучино x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 2381,
       "items": [
@@ -86986,14 +87023,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2374,
-      "items": [
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -87139,6 +87168,11 @@
       "total": 60
     },
     {
+      "name": "Капучино",
+      "qty": 2,
+      "total": 50
+    },
+    {
       "name": "ПиноКолада mini",
       "qty": 2,
       "total": 50
@@ -87162,13 +87196,8 @@
       "name": "Фреш лимон mini",
       "qty": 2,
       "total": 30
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-22T13:08:13.184Z"
+  "updatedAt": "2026-06-22T13:09:15.771Z"
 }

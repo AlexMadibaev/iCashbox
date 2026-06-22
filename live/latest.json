@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 20,
-    "checks": 1,
+    "average": 40,
+    "checks": 2,
     "expenseTotal": 205,
-    "net": -185,
-    "revenue": 20
+    "net": -125,
+    "revenue": 80
   },
   "data": {
-    "actions": 3014,
+    "actions": 3016,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1318,
+    "orders": 1319,
     "products": 39,
     "shifts": 31
   },
   "activity": [
+    {
+      "id": 1782080690549,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:24",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782080690549,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:24",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782075767868,
       "source": "Локально",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1782034919032,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782034919032,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782034870379,
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:41",
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1318,
+    "current": 1319,
     "old": [
       {
         "createdAt": "2026-06-21T10:41:59.442Z",
@@ -43038,6 +43038,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-22T00:22:55.303Z",
+        "id": 2364,
+        "items": [
+          "Айс Латте x1",
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 70,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-22",
+        "shiftLabel": "Смена 22.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-21T22:24:50.464Z",
         "id": 2363,
@@ -85924,14 +85962,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 1,
-        "expectedOrders": 1,
+        "databaseOrders": 2,
+        "expectedOrders": 2,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-22",
         "label": "Смена 22.06",
         "missingOrders": 0,
-        "revenue": 20,
+        "revenue": 80,
         "status": "ok"
       },
       {
@@ -86338,12 +86376,12 @@
         "status": "ok"
       }
     ],
-    "total": 1318
+    "total": 1319
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 60
     },
     {
       "method": "Карта",
@@ -86363,6 +86401,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2364,
+      "items": [
+        "Айс Латте x1",
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2363,
       "items": [
@@ -86505,11 +86552,21 @@
   },
   "topProducts": [
     {
+      "name": "Айс Латте",
+      "qty": 1,
+      "total": 30
+    },
+    {
+      "name": "Черника big",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Жасмин лимон mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-22T05:27:11.247Z"
+  "updatedAt": "2026-06-22T07:25:16.066Z"
 }

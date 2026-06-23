@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 29.714285714285715,
-    "checks": 7,
+    "average": 31,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": 3,
-    "revenue": 208
+    "net": 43,
+    "revenue": 248
   },
   "data": {
-    "actions": 3113,
+    "actions": 3115,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1367,
+    "orders": 1368,
     "products": 39,
     "shifts": 32
   },
   "activity": [
     {
+      "id": 1782178029271,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782178029271,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:27",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782175611240,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "10:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782167691187,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:34",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782167691187,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:34",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1367,
+    "current": 1368,
     "old": [
       {
         "createdAt": "2026-06-22T10:54:50.116Z",
@@ -44438,6 +44438,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-23T02:24:20.497Z",
+        "id": 2413,
+        "items": [
+          "Matcha big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-23",
+        "shiftLabel": "Смена 23.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-23T01:27:09.175Z",
         "id": 2412,
@@ -88907,14 +88936,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-23",
         "label": "Смена 23.06",
         "missingOrders": 0,
-        "revenue": 208,
+        "revenue": 248,
         "status": "ok"
       },
       {
@@ -89334,7 +89363,7 @@
         "status": "ok"
       }
     ],
-    "total": 1367
+    "total": 1368
   },
   "payments": [
     {
@@ -89347,7 +89376,7 @@
     },
     {
       "method": "Alif",
-      "total": 52
+      "total": 92
     },
     {
       "method": "Dushanbe City",
@@ -89359,6 +89388,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2413,
+      "items": [
+        "Matcha big x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2412,
       "items": [
@@ -89555,6 +89592,11 @@
       "total": 52
     },
     {
+      "name": "Matcha big",
+      "qty": 1,
+      "total": 40
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 4,
       "total": 40
@@ -89586,5 +89628,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-23T08:29:31.311Z"
+  "updatedAt": "2026-06-23T09:26:42.801Z"
 }

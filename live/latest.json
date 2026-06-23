@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 37.18518518518518,
-    "checks": 27,
+    "average": 36.67857142857143,
+    "checks": 28,
     "expenseTotal": 205,
-    "net": 799,
-    "revenue": 1004
+    "net": 822,
+    "revenue": 1027
   },
   "data": {
-    "actions": 3155,
+    "actions": 3157,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1387,
+    "orders": 1388,
     "products": 40,
     "shifts": 32
   },
   "activity": [
+    {
+      "id": 1782202893508,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:21",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782202893508,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:21",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782202788254,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782194987432,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:09",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782194987432,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:09",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1387,
+    "current": 1388,
     "old": [
       {
         "createdAt": "2026-06-22T10:54:50.116Z",
@@ -44443,6 +44443,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-23T08:23:06.142Z",
+        "id": 2433,
+        "items": [
+          "Жасмин лимон mini x1",
+          "Кокос добавка x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-tea-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-кокос-добавка",
+            "name": "Кокос добавка",
+            "price": 3,
+            "qty": 1,
+            "size": "",
+            "total": 3
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 3,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-23",
+        "shiftLabel": "Смена 23.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 23
+      },
       {
         "createdAt": "2026-06-23T08:21:33.432Z",
         "id": 2432,
@@ -89537,14 +89575,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 27,
-        "expectedOrders": 27,
+        "databaseOrders": 28,
+        "expectedOrders": 28,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-23",
         "label": "Смена 23.06",
         "missingOrders": 0,
-        "revenue": 1004,
+        "revenue": 1027,
         "status": "ok"
       },
       {
@@ -89964,12 +90002,12 @@
         "status": "ok"
       }
     ],
-    "total": 1387
+    "total": 1388
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 615
+      "total": 635
     },
     {
       "method": "Карта",
@@ -89981,7 +90019,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 267
+      "total": 270
     },
     {
       "method": "Семья",
@@ -89989,6 +90027,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2433,
+      "items": [
+        "Жасмин лимон mini x1",
+        "Кокос добавка x1"
+      ],
+      "status": "Оплачен",
+      "total": 23
+    },
     {
       "id": 2432,
       "items": [
@@ -90047,14 +90094,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 2425,
-      "items": [
-        "Черника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -90231,5 +90270,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-23T15:23:54.254Z"
+  "updatedAt": "2026-06-23T15:25:26.850Z"
 }

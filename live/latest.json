@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 30.444444444444443,
-    "checks": 9,
+    "average": 30,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 69,
-    "revenue": 274
+    "net": 95,
+    "revenue": 300
   },
   "data": {
-    "actions": 3117,
+    "actions": 3119,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1369,
+    "orders": 1370,
     "products": 39,
     "shifts": 32
   },
   "activity": [
     {
+      "id": 1782181884793,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:31",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782181884793,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:31",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782181460573,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:35",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782173932987,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:18",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782173932987,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:18",
       "type": "Создание заказа"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1369,
+    "current": 1370,
     "old": [
       {
         "createdAt": "2026-06-22T10:54:50.116Z",
@@ -44438,6 +44438,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-23T02:53:11.066Z",
+        "id": 2415,
+        "items": [
+          "Babl tea big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 26,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-23",
+        "shiftLabel": "Смена 23.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-06-23T02:31:24.727Z",
         "id": 2414,
@@ -88965,14 +88994,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-23",
         "label": "Смена 23.06",
         "missingOrders": 0,
-        "revenue": 274,
+        "revenue": 300,
         "status": "ok"
       },
       {
@@ -89392,7 +89421,7 @@
         "status": "ok"
       }
     ],
-    "total": 1369
+    "total": 1370
   },
   "payments": [
     {
@@ -89409,7 +89438,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 0
+      "total": 26
     },
     {
       "method": "Семья",
@@ -89417,6 +89446,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2415,
+      "items": [
+        "Babl tea big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 2414,
       "items": [
@@ -89470,14 +89507,6 @@
       "id": 2408,
       "items": [
         "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 2407,
-      "items": [
-        "Мороженое рожок x2"
       ],
       "status": "Оплачен",
       "total": 20
@@ -89616,6 +89645,11 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 2,
       "total": 52
@@ -89629,11 +89663,6 @@
       "name": "Мороженое рожок",
       "qty": 4,
       "total": 40
-    },
-    {
-      "name": "Babl tea big",
-      "qty": 1,
-      "total": 26
     },
     {
       "name": "Клубничный жасмин big",
@@ -89657,5 +89686,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-23T09:33:47.284Z"
+  "updatedAt": "2026-06-23T09:55:33.233Z"
 }

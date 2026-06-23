@@ -7,22 +7,36 @@
   },
   "summary": {
     "average": 20,
-    "checks": 3,
+    "checks": 4,
     "expenseTotal": 205,
-    "net": -145,
-    "revenue": 60
+    "net": -125,
+    "revenue": 80
   },
   "data": {
-    "actions": 3105,
+    "actions": 3107,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1363,
+    "orders": 1364,
     "products": 39,
     "shifts": 32
   },
   "activity": [
+    {
+      "id": 1782173932987,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782173932987,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:18",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782167861689,
       "source": "Локально",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1782124973425,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:42",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782124973425,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782124953650,
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:42",
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1363,
+    "current": 1364,
     "old": [
       {
         "createdAt": "2026-06-22T10:54:50.116Z",
@@ -44438,6 +44438,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-23T00:35:55.324Z",
+        "id": 2409,
+        "items": [
+          "Мороженое с тапиокой x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-23",
+        "shiftLabel": "Смена 23.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-23T00:18:52.904Z",
         "id": 2408,
@@ -88782,14 +88811,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 3,
-        "expectedOrders": 3,
+        "databaseOrders": 4,
+        "expectedOrders": 4,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-23",
         "label": "Смена 23.06",
         "missingOrders": 0,
-        "revenue": 60,
+        "revenue": 80,
         "status": "ok"
       },
       {
@@ -89209,12 +89238,12 @@
         "status": "ok"
       }
     ],
-    "total": 1363
+    "total": 1364
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 60
+      "total": 80
     },
     {
       "method": "Карта",
@@ -89234,6 +89263,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2409,
+      "items": [
+        "Мороженое с тапиокой x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2408,
       "items": [
@@ -89397,11 +89434,16 @@
       "total": 40
     },
     {
+      "name": "Мороженое с тапиокой",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Манго Маракуя mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-23T07:21:15.610Z"
+  "updatedAt": "2026-06-23T07:38:17.666Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.64705882352941,
-    "checks": 34,
+    "average": 38,
+    "checks": 35,
     "expenseTotal": 205,
-    "net": 1075,
-    "revenue": 1280
+    "net": 1125,
+    "revenue": 1330
   },
   "data": {
-    "actions": 3169,
+    "actions": 3171,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1394,
+    "orders": 1395,
     "products": 40,
     "shifts": 32
   },
   "activity": [
     {
+      "id": 1782207059652,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:30",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782207059652,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:30",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782206942160,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:48",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782202986213,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782202986213,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:23",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1394,
+    "current": 1395,
     "old": [
       {
         "createdAt": "2026-06-22T10:54:50.116Z",
@@ -44443,6 +44443,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-23T09:31:52.128Z",
+        "id": 2440,
+        "items": [
+          "Виноградный тропический mini x1",
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 50,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-23",
+        "shiftLabel": "Смена 23.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-23T09:30:59.574Z",
         "id": 2439,
@@ -89794,14 +89832,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-23",
         "label": "Смена 23.06",
         "missingOrders": 0,
-        "revenue": 1280,
+        "revenue": 1330,
         "status": "ok"
       },
       {
@@ -90221,7 +90259,7 @@
         "status": "ok"
       }
     ],
-    "total": 1394
+    "total": 1395
   },
   "payments": [
     {
@@ -90238,7 +90276,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 270
+      "total": 320
     },
     {
       "method": "Семья",
@@ -90246,6 +90284,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2440,
+      "items": [
+        "Виноградный тропический mini x1",
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 2439,
       "items": [
@@ -90307,14 +90354,6 @@
       ],
       "status": "Оплачен",
       "total": 23
-    },
-    {
-      "id": 2432,
-      "items": [
-        "Манго Маракуя mini x4"
-      ],
-      "status": "Оплачен",
-      "total": 80
     }
   ],
   "shifts": {
@@ -90450,14 +90489,14 @@
   },
   "topProducts": [
     {
+      "name": "Matcha mini",
+      "qty": 6,
+      "total": 180
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 6,
       "total": 156
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 5,
-      "total": 150
     },
     {
       "name": "Манго Маракуя mini",
@@ -90491,5 +90530,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-23T16:33:20.527Z"
+  "updatedAt": "2026-06-23T16:34:12.795Z"
 }

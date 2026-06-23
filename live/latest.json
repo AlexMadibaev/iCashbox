@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 20,
-    "checks": 4,
+    "average": 21,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": -125,
-    "revenue": 80
+    "net": -100,
+    "revenue": 105
   },
   "data": {
-    "actions": 3107,
+    "actions": 3109,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1364,
+    "orders": 1365,
     "products": 39,
     "shifts": 32
   },
   "activity": [
+    {
+      "id": 1782174955414,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:35",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782174955414,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:35",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782173932987,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:43",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782124985789,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782124973425,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:42",
       "type": "Списание ингредиентов"
     }
   ],
@@ -182,7 +182,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1364,
+    "current": 1365,
     "old": [
       {
         "createdAt": "2026-06-22T10:54:50.116Z",
@@ -44438,6 +44438,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-23T00:42:35.841Z",
+        "id": 2410,
+        "items": [
+          "МангоБанан mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-23",
+        "shiftLabel": "Смена 23.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-06-23T00:35:55.324Z",
         "id": 2409,
@@ -88811,14 +88840,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-23",
         "label": "Смена 23.06",
         "missingOrders": 0,
-        "revenue": 80,
+        "revenue": 105,
         "status": "ok"
       },
       {
@@ -89238,12 +89267,12 @@
         "status": "ok"
       }
     ],
-    "total": 1364
+    "total": 1365
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 80
+      "total": 105
     },
     {
       "method": "Карта",
@@ -89263,6 +89292,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2410,
+      "items": [
+        "МангоБанан mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 2409,
       "items": [
@@ -89434,6 +89471,11 @@
       "total": 40
     },
     {
+      "name": "МангоБанан mini",
+      "qty": 1,
+      "total": 25
+    },
+    {
       "name": "Мороженое с тапиокой",
       "qty": 1,
       "total": 20
@@ -89445,5 +89487,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-23T07:38:17.666Z"
+  "updatedAt": "2026-06-23T07:44:58.398Z"
 }

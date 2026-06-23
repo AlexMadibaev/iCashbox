@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 36.793103448275865,
-    "checks": 29,
+    "average": 37.233333333333334,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 862,
-    "revenue": 1067
+    "net": 912,
+    "revenue": 1117
   },
   "data": {
-    "actions": 3159,
+    "actions": 3161,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1389,
+    "orders": 1390,
     "products": 40,
     "shifts": 32
   },
   "activity": [
+    {
+      "id": 1782204503417,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:48",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782204503417,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:48",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782202986213,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:55",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782197594757,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:53",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782197594757,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:53",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1389,
+    "current": 1390,
     "old": [
       {
         "createdAt": "2026-06-22T10:54:50.116Z",
@@ -44443,6 +44443,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-23T09:02:18.673Z",
+        "id": 2435,
+        "items": [
+          "Matcha mini x1",
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-23",
+        "shiftLabel": "Смена 23.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-23T08:48:23.352Z",
         "id": 2434,
@@ -89613,14 +89651,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-23",
         "label": "Смена 23.06",
         "missingOrders": 0,
-        "revenue": 1067,
+        "revenue": 1117,
         "status": "ok"
       },
       {
@@ -90040,12 +90078,12 @@
         "status": "ok"
       }
     ],
-    "total": 1389
+    "total": 1390
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 635
+      "total": 685
     },
     {
       "method": "Карта",
@@ -90065,6 +90103,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2435,
+      "items": [
+        "Matcha mini x1",
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 2434,
       "items": [
@@ -90125,14 +90172,6 @@
       ],
       "status": "Оплачен",
       "total": 92
-    },
-    {
-      "id": 2427,
-      "items": [
-        "ПиноКолада big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -90268,6 +90307,11 @@
   },
   "topProducts": [
     {
+      "name": "Matcha mini",
+      "qty": 5,
+      "total": 150
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 5,
       "total": 130
@@ -90275,11 +90319,6 @@
     {
       "name": "Манго Маракуя mini",
       "qty": 6,
-      "total": 120
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 4,
       "total": 120
     },
     {
@@ -90309,5 +90348,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-23T15:50:45.488Z"
+  "updatedAt": "2026-06-23T16:04:40.329Z"
 }

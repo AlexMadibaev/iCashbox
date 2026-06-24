@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.333333333333336,
-    "checks": 6,
+    "average": 38.57142857142857,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": 19,
-    "revenue": 224
+    "net": 65,
+    "revenue": 270
   },
   "data": {
-    "actions": 3193,
+    "actions": 3195,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1404,
+    "orders": 1405,
     "products": 40,
     "shifts": 33
   },
   "activity": [
     {
+      "id": 1782263134452,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:05",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782263134452,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:05",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782263075082,
       "source": "Локально",
       "status": "Сохранено",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "10:08",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1782249475238,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:17",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1782211317572,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:41",
-      "type": "Удалён заказ"
     }
   ],
   "expenses": {
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1404,
+    "current": 1405,
     "old": [
       {
         "createdAt": "2026-06-23T10:22:33.309Z",
@@ -45680,6 +45680,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-24T01:50:59.770Z",
+        "id": 2451,
+        "items": [
+          "Мороженое классическое x1",
+          "Babl tea big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-24",
+        "shiftLabel": "Смена 24.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-06-24T01:05:34.386Z",
         "id": 2450,
@@ -91366,14 +91404,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-24",
         "label": "Смена 24.06",
         "missingOrders": 0,
-        "revenue": 224,
+        "revenue": 270,
         "status": "ok"
       },
       {
@@ -91806,12 +91844,12 @@
         "status": "ok"
       }
     ],
-    "total": 1404
+    "total": 1405
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 156
+      "total": 202
     },
     {
       "method": "Карта",
@@ -91831,6 +91869,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2451,
+      "items": [
+        "Мороженое классическое x1",
+        "Babl tea big x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 2450,
       "items": [
@@ -92030,6 +92077,11 @@
       "total": 30
     },
     {
+      "name": "Babl tea big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Жасмин лимон big",
       "qty": 1,
       "total": 26
@@ -92040,16 +92092,16 @@
       "total": 25
     },
     {
-      "name": "Жасмин лимон mini",
+      "name": "Мороженое классическое",
       "qty": 1,
       "total": 20
     },
     {
-      "name": "Эспрессо",
+      "name": "Жасмин лимон mini",
       "qty": 1,
-      "total": 13
+      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-24T08:07:56.345Z"
+  "updatedAt": "2026-06-24T08:53:22.848Z"
 }

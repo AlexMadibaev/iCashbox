@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 39.333333333333336,
-    "checks": 27,
+    "average": 40.785714285714285,
+    "checks": 28,
     "expenseTotal": 205,
-    "net": 857,
-    "revenue": 1062
+    "net": 937,
+    "revenue": 1142
   },
   "data": {
-    "actions": 3235,
+    "actions": 3237,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1425,
+    "orders": 1426,
     "products": 40,
     "shifts": 33
   },
   "activity": [
+    {
+      "id": 1782292074888,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:07",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782292074888,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:07",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782291449254,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:54",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782284596442,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:03",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782284596442,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:03",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1425,
+    "current": 1426,
     "old": [
       {
         "createdAt": "2026-06-23T10:22:33.309Z",
@@ -45680,6 +45680,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-24T09:14:26.847Z",
+        "id": 2472,
+        "items": [
+          "Клубничный big x2",
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-24",
+        "shiftLabel": "Смена 24.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 80
+      },
       {
         "createdAt": "2026-06-24T09:07:54.820Z",
         "id": 2471,
@@ -92038,14 +92076,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 27,
-        "expectedOrders": 27,
+        "databaseOrders": 28,
+        "expectedOrders": 28,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-24",
         "label": "Смена 24.06",
         "missingOrders": 0,
-        "revenue": 1062,
+        "revenue": 1142,
         "status": "ok"
       },
       {
@@ -92478,12 +92516,12 @@
         "status": "ok"
       }
     ],
-    "total": 1425
+    "total": 1426
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 634
+      "total": 714
     },
     {
       "method": "Карта",
@@ -92503,6 +92541,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2472,
+      "items": [
+        "Клубничный big x2",
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 80
+    },
     {
       "id": 2471,
       "items": [
@@ -92560,14 +92607,6 @@
       ],
       "status": "Оплачен",
       "total": 80
-    },
-    {
-      "id": 2464,
-      "items": [
-        "Babl tea big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -92713,6 +92752,11 @@
       "total": 140
     },
     {
+      "name": "Клубничный big",
+      "qty": 4,
+      "total": 120
+    },
+    {
       "name": "Babl tea big",
       "qty": 4,
       "total": 104
@@ -92724,13 +92768,8 @@
     },
     {
       "name": "Мороженое классическое",
-      "qty": 3,
-      "total": 60
-    },
-    {
-      "name": "Клубничный big",
-      "qty": 2,
-      "total": 60
+      "qty": 4,
+      "total": 80
     },
     {
       "name": "ПиноКолада big",
@@ -92744,5 +92783,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-24T16:10:17.760Z"
+  "updatedAt": "2026-06-24T16:16:49.230Z"
 }

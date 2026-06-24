@@ -6,23 +6,51 @@
     "open": true
   },
   "summary": {
-    "average": 29.333333333333332,
-    "checks": 3,
+    "average": 38.5,
+    "checks": 4,
     "expenseTotal": 205,
-    "net": -117,
-    "revenue": 88
+    "net": -51,
+    "revenue": 154
   },
   "data": {
-    "actions": 3187,
+    "actions": 3191,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1401,
+    "orders": 1402,
     "products": 40,
     "shifts": 33
   },
   "activity": [
+    {
+      "id": 1782261520995,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:38",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782261520995,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:38",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1782257356079,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782257356079,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:29",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782253643326,
       "source": "Локально",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782209878067,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:17",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782209878067,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:17",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782209689510,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:14",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782209689510,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:14",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1401,
+    "current": 1402,
     "old": [
       {
         "createdAt": "2026-06-23T10:22:33.309Z",
@@ -45680,6 +45680,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-24T00:38:40.907Z",
+        "id": 2448,
+        "items": [
+          "Виноградный тропический mini x1",
+          "Жасмин лимон big x1",
+          "Жасмин лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-tea-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-жасмин-tea-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 66,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-24",
+        "shiftLabel": "Смена 24.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 66
+      },
       {
         "createdAt": "2026-06-23T23:29:15.962Z",
         "id": 2447,
@@ -91261,14 +91308,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 3,
-        "expectedOrders": 3,
+        "databaseOrders": 4,
+        "expectedOrders": 4,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-24",
         "label": "Смена 24.06",
         "missingOrders": 0,
-        "revenue": 88,
+        "revenue": 154,
         "status": "ok"
       },
       {
@@ -91701,12 +91748,12 @@
         "status": "ok"
       }
     ],
-    "total": 1401
+    "total": 1402
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 50
+      "total": 116
     },
     {
       "method": "Карта",
@@ -91726,6 +91773,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2448,
+      "items": [
+        "Виноградный тропический mini x1",
+        "Жасмин лимон big x1",
+        "Жасмин лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 66
+    },
     {
       "id": 2447,
       "items": [
@@ -91889,9 +91946,24 @@
       "total": 50
     },
     {
+      "name": "Жасмин лимон big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "ПиноКолада mini",
       "qty": 1,
       "total": 25
+    },
+    {
+      "name": "Виноградный тропический mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Жасмин лимон mini",
+      "qty": 1,
+      "total": 20
     },
     {
       "name": "Эспрессо",
@@ -91900,5 +91972,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-24T06:31:39.461Z"
+  "updatedAt": "2026-06-24T07:41:04.630Z"
 }

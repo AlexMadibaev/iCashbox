@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.583333333333336,
-    "checks": 24,
+    "average": 35.76,
+    "checks": 25,
     "expenseTotal": 205,
-    "net": 649,
-    "revenue": 854
+    "net": 689,
+    "revenue": 894
   },
   "data": {
-    "actions": 3290,
+    "actions": 3292,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1452,
+    "orders": 1453,
     "products": 40,
     "shifts": 34
   },
   "activity": [
     {
+      "id": 1782365060536,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:24",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782365060536,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:24",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782364797235,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:53",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782359475247,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:51",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782359475247,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:51",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1452,
+    "current": 1453,
     "old": [
       {
         "createdAt": "2026-06-24T10:44:44.888Z",
@@ -46658,6 +46658,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-25T05:40:24.534Z",
+        "id": 2499,
+        "items": [
+          "Мороженое классическое x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 40,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-25",
+        "shiftLabel": "Смена 25.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-25T05:24:20.452Z",
         "id": 2498,
@@ -93898,14 +93927,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 24,
-        "expectedOrders": 24,
+        "databaseOrders": 25,
+        "expectedOrders": 25,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-25",
         "label": "Смена 25.06",
         "missingOrders": 0,
-        "revenue": 854,
+        "revenue": 894,
         "status": "ok"
       },
       {
@@ -94351,7 +94380,7 @@
         "status": "ok"
       }
     ],
-    "total": 1452
+    "total": 1453
   },
   "payments": [
     {
@@ -94368,7 +94397,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 123
+      "total": 163
     },
     {
       "method": "Семья",
@@ -94376,6 +94405,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2499,
+      "items": [
+        "Мороженое классическое x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2498,
       "items": [
@@ -94434,14 +94471,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 2491,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -94592,6 +94621,11 @@
       "total": 100
     },
     {
+      "name": "Мороженое классическое",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "МангоБанан big",
       "qty": 2,
       "total": 60
@@ -94610,13 +94644,8 @@
       "name": "ПиноКолада mini",
       "qty": 2,
       "total": 50
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-25T12:26:43.903Z"
+  "updatedAt": "2026-06-25T12:42:48.846Z"
 }

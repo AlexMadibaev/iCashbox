@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.4054054054054,
-    "checks": 37,
+    "average": 39.23684210526316,
+    "checks": 38,
     "expenseTotal": 205,
-    "net": 1216,
-    "revenue": 1421
+    "net": 1286,
+    "revenue": 1491
   },
   "data": {
-    "actions": 3316,
+    "actions": 3318,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1465,
+    "orders": 1466,
     "products": 40,
     "shifts": 34
   },
   "activity": [
     {
+      "id": 1782374941285,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:09",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782374941285,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:09",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782374516017,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:32",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782368578068,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:22",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782368578068,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:22",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1465,
+    "current": 1466,
     "old": [
       {
         "createdAt": "2026-06-24T10:44:44.888Z",
@@ -46658,6 +46658,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-25T08:40:12.480Z",
+        "id": 2512,
+        "items": [
+          "Мороженое Орео x1",
+          "Манго Маракуя mini x1",
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-25",
+        "shiftLabel": "Смена 25.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-06-25T08:09:01.228Z",
         "id": 2511,
@@ -94329,14 +94376,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 37,
-        "expectedOrders": 37,
+        "databaseOrders": 38,
+        "expectedOrders": 38,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-25",
         "label": "Смена 25.06",
         "missingOrders": 0,
-        "revenue": 1421,
+        "revenue": 1491,
         "status": "ok"
       },
       {
@@ -94782,12 +94829,12 @@
         "status": "ok"
       }
     ],
-    "total": 1465
+    "total": 1466
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1012
+      "total": 1082
     },
     {
       "method": "Карта",
@@ -94807,6 +94854,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2512,
+      "items": [
+        "Мороженое Орео x1",
+        "Манго Маракуя mini x1",
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 2511,
       "items": [
@@ -94864,16 +94921,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 2504,
-      "items": [
-        "Фреш лимон big x1",
-        "Виноградный тропический mini x1",
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 70
     }
   ],
   "shifts": {
@@ -95034,21 +95081,21 @@
       "total": 80
     },
     {
-      "name": "Клубничный big",
-      "qty": 2,
-      "total": 60
-    },
-    {
-      "name": "Жасмин лимон mini",
+      "name": "Манго Маракуя mini",
       "qty": 3,
       "total": 60
     },
     {
-      "name": "МангоБанан big",
+      "name": "Matcha mini",
+      "qty": 2,
+      "total": 60
+    },
+    {
+      "name": "Клубничный big",
       "qty": 2,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-25T15:11:25.178Z"
+  "updatedAt": "2026-06-25T15:42:36.691Z"
 }

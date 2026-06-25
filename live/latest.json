@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 26.666666666666668,
-    "checks": 6,
+    "average": 29.285714285714285,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": -45,
-    "revenue": 160
+    "net": 0,
+    "revenue": 205
   },
   "data": {
-    "actions": 3254,
+    "actions": 3256,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1434,
+    "orders": 1435,
     "products": 40,
     "shifts": 34
   },
   "activity": [
     {
+      "id": 1782352267362,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:51",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782352267362,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:51",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782352185404,
       "source": "Локально",
       "status": "Сохранено",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "10:38",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1782336735591,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:32",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1782297884974,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:44",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1434,
+    "current": 1435,
     "old": [
       {
         "createdAt": "2026-06-24T10:44:44.888Z",
@@ -46658,6 +46658,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-25T01:52:53.299Z",
+        "id": 2481,
+        "items": [
+          "Жасмин лимон mini x1",
+          "ПиноКолада mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-tea-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-милкшейк-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-25",
+        "shiftLabel": "Смена 25.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-06-25T01:51:07.272Z",
         "id": 2480,
@@ -93313,14 +93351,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-25",
         "label": "Смена 25.06",
         "missingOrders": 0,
-        "revenue": 160,
+        "revenue": 205,
         "status": "ok"
       },
       {
@@ -93766,12 +93804,12 @@
         "status": "ok"
       }
     ],
-    "total": 1434
+    "total": 1435
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 40
+      "total": 85
     },
     {
       "method": "Карта",
@@ -93791,6 +93829,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2481,
+      "items": [
+        "Жасмин лимон mini x1",
+        "ПиноКолада mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 2480,
       "items": [
@@ -93979,9 +94026,19 @@
       "total": 60
     },
     {
+      "name": "Жасмин лимон mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "ПиноКолада big",
       "qty": 1,
       "total": 30
+    },
+    {
+      "name": "ПиноКолада mini",
+      "qty": 1,
+      "total": 25
     },
     {
       "name": "Мороженое манго",
@@ -93994,16 +94051,11 @@
       "total": 20
     },
     {
-      "name": "Жасмин лимон mini",
-      "qty": 1,
-      "total": 20
-    },
-    {
       "name": "Мороженое рожок",
       "qty": 1,
       "total": 10
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-25T08:53:30.274Z"
+  "updatedAt": "2026-06-25T08:55:16.506Z"
 }

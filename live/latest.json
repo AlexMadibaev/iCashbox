@@ -7,22 +7,36 @@
   },
   "summary": {
     "average": 30,
-    "checks": 3,
+    "checks": 4,
     "expenseTotal": 205,
-    "net": -115,
-    "revenue": 90
+    "net": -85,
+    "revenue": 120
   },
   "data": {
-    "actions": 3248,
+    "actions": 3250,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1431,
+    "orders": 1432,
     "products": 40,
     "shifts": 34
   },
   "activity": [
+    {
+      "id": 1782347366389,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782347366389,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:29",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782343780609,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:14",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782292466945,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:14",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782292074888,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:07",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1431,
+    "current": 1432,
     "old": [
       {
         "createdAt": "2026-06-24T10:44:44.888Z",
@@ -46658,6 +46658,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-25T01:24:11.854Z",
+        "id": 2478,
+        "items": [
+          "ПиноКолада big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 30,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-25",
+        "shiftLabel": "Смена 25.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-25T00:29:26.298Z",
         "id": 2477,
@@ -93226,14 +93255,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 3,
-        "expectedOrders": 3,
+        "databaseOrders": 4,
+        "expectedOrders": 4,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-25",
         "label": "Смена 25.06",
         "missingOrders": 0,
-        "revenue": 90,
+        "revenue": 120,
         "status": "ok"
       },
       {
@@ -93679,7 +93708,7 @@
         "status": "ok"
       }
     ],
-    "total": 1431
+    "total": 1432
   },
   "payments": [
     {
@@ -93692,7 +93721,7 @@
     },
     {
       "method": "Alif",
-      "total": 40
+      "total": 70
     },
     {
       "method": "Dushanbe City",
@@ -93704,6 +93733,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2478,
+      "items": [
+        "ПиноКолада big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2477,
       "items": [
@@ -93863,6 +93900,11 @@
   },
   "topProducts": [
     {
+      "name": "ПиноКолада big",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
@@ -93884,5 +93926,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-25T07:31:50.737Z"
+  "updatedAt": "2026-06-25T08:26:36.754Z"
 }

@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 25,
-    "checks": 2,
+    "average": 30,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -155,
-    "revenue": 50
+    "net": -115,
+    "revenue": 90
   },
   "data": {
-    "actions": 3246,
+    "actions": 3248,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1430,
+    "orders": 1431,
     "products": 40,
     "shifts": 34
   },
   "activity": [
+    {
+      "id": 1782343780609,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782343780609,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:29",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782340699840,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:07",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782292074888,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:07",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782291449254,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:57",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1430,
+    "current": 1431,
     "old": [
       {
         "createdAt": "2026-06-24T10:44:44.888Z",
@@ -46658,6 +46658,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-25T00:29:26.298Z",
+        "id": 2477,
+        "items": [
+          "Мороженое манго x1",
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-25",
+        "shiftLabel": "Смена 25.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-24T23:29:40.538Z",
         "id": 2476,
@@ -93188,14 +93226,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-25",
         "label": "Смена 25.06",
         "missingOrders": 0,
-        "revenue": 50,
+        "revenue": 90,
         "status": "ok"
       },
       {
@@ -93641,7 +93679,7 @@
         "status": "ok"
       }
     ],
-    "total": 1430
+    "total": 1431
   },
   "payments": [
     {
@@ -93654,7 +93692,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 40
     },
     {
       "method": "Dushanbe City",
@@ -93666,6 +93704,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2477,
+      "items": [
+        "Мороженое манго x1",
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2476,
       "items": [
@@ -93821,11 +93868,21 @@
       "total": 30
     },
     {
+      "name": "Мороженое манго",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Мороженое классическое",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Жасмин лимон mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-25T06:32:05.093Z"
+  "updatedAt": "2026-06-25T07:31:50.737Z"
 }

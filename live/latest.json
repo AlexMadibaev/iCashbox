@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 29.5,
-    "checks": 10,
+    "average": 28.636363636363637,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 90,
-    "revenue": 295
+    "net": 110,
+    "revenue": 315
   },
   "data": {
-    "actions": 3262,
+    "actions": 3264,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1438,
+    "orders": 1439,
     "products": 40,
     "shifts": 34
   },
   "activity": [
     {
+      "id": 1782354337426,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:25",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782354337426,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:25",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782354033023,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:49",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782350651947,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:24",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782350651947,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:24",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1438,
+    "current": 1439,
     "old": [
       {
         "createdAt": "2026-06-24T10:44:44.888Z",
@@ -46658,6 +46658,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-25T02:30:25.716Z",
+        "id": 2485,
+        "items": [
+          "Манго Маракуя mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-25",
+        "shiftLabel": "Смена 25.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-25T02:25:37.350Z",
         "id": 2484,
@@ -93447,14 +93476,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-25",
         "label": "Смена 25.06",
         "missingOrders": 0,
-        "revenue": 295,
+        "revenue": 315,
         "status": "ok"
       },
       {
@@ -93900,12 +93929,12 @@
         "status": "ok"
       }
     ],
-    "total": 1438
+    "total": 1439
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 135
+      "total": 155
     },
     {
       "method": "Карта",
@@ -93925,6 +93954,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2485,
+      "items": [
+        "Манго Маракуя mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2484,
       "items": [
@@ -93982,15 +94019,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2477,
-      "items": [
-        "Мороженое манго x1",
-        "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -94151,6 +94179,11 @@
       "total": 30
     },
     {
+      "name": "Манго Маракуя mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Babl tea mini",
       "qty": 1,
       "total": 20
@@ -94159,13 +94192,8 @@
       "name": "Мороженое манго",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Мороженое классическое",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-25T09:28:00.422Z"
+  "updatedAt": "2026-06-25T09:32:48.910Z"
 }

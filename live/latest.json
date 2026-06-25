@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.55172413793103,
-    "checks": 29,
+    "average": 38.63333333333333,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 884,
-    "revenue": 1089
+    "net": 954,
+    "revenue": 1159
   },
   "data": {
-    "actions": 3300,
+    "actions": 3302,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1457,
+    "orders": 1458,
     "products": 40,
     "shifts": 34
   },
   "activity": [
     {
+      "id": 1782367689043,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:08",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782367689043,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:08",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782367641079,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782364797235,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782364797235,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:19",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1457,
+    "current": 1458,
     "old": [
       {
         "createdAt": "2026-06-24T10:44:44.888Z",
@@ -46658,6 +46658,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-25T06:14:34.139Z",
+        "id": 2504,
+        "items": [
+          "Фреш лимон big x1",
+          "Виноградный тропический mini x1",
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-фреш-лимон-big",
+            "name": "Фреш лимон big",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-25",
+        "shiftLabel": "Смена 25.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-06-25T06:08:08.958Z",
         "id": 2503,
@@ -94061,14 +94108,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-25",
         "label": "Смена 25.06",
         "missingOrders": 0,
-        "revenue": 1089,
+        "revenue": 1159,
         "status": "ok"
       },
       {
@@ -94514,12 +94561,12 @@
         "status": "ok"
       }
     ],
-    "total": 1457
+    "total": 1458
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 746
+      "total": 816
     },
     {
       "method": "Карта",
@@ -94539,6 +94586,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2504,
+      "items": [
+        "Фреш лимон big x1",
+        "Виноградный тропический mini x1",
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 2503,
       "items": [
@@ -94598,14 +94655,6 @@
       ],
       "status": "Оплачен",
       "total": 70
-    },
-    {
-      "id": 2496,
-      "items": [
-        "Babl tea big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -94782,5 +94831,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-25T13:10:31.841Z"
+  "updatedAt": "2026-06-25T13:16:58.079Z"
 }

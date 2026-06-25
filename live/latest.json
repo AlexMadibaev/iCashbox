@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.5,
-    "checks": 14,
+    "average": 34.333333333333336,
+    "checks": 15,
     "expenseTotal": 205,
-    "net": 250,
-    "revenue": 455
+    "net": 310,
+    "revenue": 515
   },
   "data": {
-    "actions": 3270,
+    "actions": 3272,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1442,
+    "orders": 1443,
     "products": 40,
     "shifts": 34
   },
   "activity": [
     {
+      "id": 1782357218022,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:13",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782357218022,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:13",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782355640618,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:20",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782352621668,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:57",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782352621668,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:57",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1442,
+    "current": 1443,
     "old": [
       {
         "createdAt": "2026-06-24T10:44:44.888Z",
@@ -46658,6 +46658,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-25T03:18:10.030Z",
+        "id": 2489,
+        "items": [
+          "Черника big x1",
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 200,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-25",
+        "shiftLabel": "Смена 25.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-25T03:13:37.936Z",
         "id": 2488,
@@ -93572,14 +93610,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 14,
-        "expectedOrders": 14,
+        "databaseOrders": 15,
+        "expectedOrders": 15,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-25",
         "label": "Смена 25.06",
         "missingOrders": 0,
-        "revenue": 455,
+        "revenue": 515,
         "status": "ok"
       },
       {
@@ -94025,12 +94063,12 @@
         "status": "ok"
       }
     ],
-    "total": 1442
+    "total": 1443
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 250
+      "total": 310
     },
     {
       "method": "Карта",
@@ -94050,6 +94088,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2489,
+      "items": [
+        "Черника big x1",
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2488,
       "items": [
@@ -94107,15 +94154,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 2481,
-      "items": [
-        "Жасмин лимон mini x1",
-        "ПиноКолада mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 45
     }
   ],
   "shifts": {
@@ -94256,6 +94294,11 @@
       "total": 75
     },
     {
+      "name": "Черника big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Айс Латте",
       "qty": 2,
       "total": 60
@@ -94281,16 +94324,11 @@
       "total": 40
     },
     {
-      "name": "Черника big",
-      "qty": 1,
-      "total": 30
-    },
-    {
-      "name": "ПиноКолада big",
+      "name": "Клубничный big",
       "qty": 1,
       "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-25T10:16:02.647Z"
+  "updatedAt": "2026-06-25T10:20:33.254Z"
 }

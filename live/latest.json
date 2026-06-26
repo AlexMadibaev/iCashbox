@@ -7,22 +7,36 @@
   },
   "summary": {
     "average": 20,
-    "checks": 2,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -165,
-    "revenue": 40
+    "net": -145,
+    "revenue": 60
   },
   "data": {
-    "actions": 3341,
+    "actions": 3343,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1477,
+    "orders": 1478,
     "products": 40,
     "shifts": 35
   },
   "activity": [
+    {
+      "id": 1782426258097,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:24",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782426258097,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:24",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782424184104,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:21",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782382890827,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:21",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782380864676,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:47",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1477,
+    "current": 1478,
     "old": [
       {
         "createdAt": "2026-06-25T10:49:46.974Z",
@@ -48228,6 +48228,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-25T22:25:29.951Z",
+        "id": 2524,
+        "items": [
+          "Американо x1"
+        ],
+        "lines": [
+          {
+            "id": "product-американо",
+            "name": "Американо",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-26",
+        "shiftLabel": "Смена 26.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-25T22:24:17.997Z",
         "id": 2523,
@@ -96328,14 +96357,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-26",
         "label": "Смена 26.06",
         "missingOrders": 0,
-        "revenue": 40,
+        "revenue": 60,
         "status": "ok"
       },
       {
@@ -96794,12 +96823,12 @@
         "status": "ok"
       }
     ],
-    "total": 1477
+    "total": 1478
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 40
+      "total": 60
     },
     {
       "method": "Карта",
@@ -96819,6 +96848,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2524,
+      "items": [
+        "Американо x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2523,
       "items": [
@@ -96969,6 +97006,11 @@
   },
   "topProducts": [
     {
+      "name": "Американо",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Мороженое манго",
       "qty": 1,
       "total": 20
@@ -96980,5 +97022,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-26T05:26:43.383Z"
+  "updatedAt": "2026-06-26T05:27:54.169Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 25.7,
-    "checks": 10,
+    "average": 25.727272727272727,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 52,
-    "revenue": 257
+    "net": 78,
+    "revenue": 283
   },
   "data": {
-    "actions": 3357,
+    "actions": 3359,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1485,
+    "orders": 1486,
     "products": 40,
     "shifts": 35
   },
   "activity": [
     {
+      "id": 1782437022742,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:23",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782437022742,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:23",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782436742753,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:30",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782431075679,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:44",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782431075679,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:44",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1485,
+    "current": 1486,
     "old": [
       {
         "createdAt": "2026-06-25T10:49:46.974Z",
@@ -48228,6 +48228,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-26T01:23:48.686Z",
+        "id": 2532,
+        "items": [
+          "Виноградный тропический big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 26,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-26",
+        "shiftLabel": "Смена 26.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-06-26T01:23:42.660Z",
         "id": 2531,
@@ -96569,14 +96598,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-26",
         "label": "Смена 26.06",
         "missingOrders": 0,
-        "revenue": 257,
+        "revenue": 283,
         "status": "ok"
       },
       {
@@ -97035,12 +97064,12 @@
         "status": "ok"
       }
     ],
-    "total": 1485
+    "total": 1486
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 187
+      "total": 213
     },
     {
       "method": "Карта",
@@ -97060,6 +97089,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2532,
+      "items": [
+        "Виноградный тропический big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 2531,
       "items": [
@@ -97116,14 +97153,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2524,
-      "items": [
-        "Американо x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -97269,6 +97298,11 @@
       "total": 40
     },
     {
+      "name": "Виноградный тропический big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
@@ -97292,13 +97326,8 @@
       "name": "Американо",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-26T08:26:06.650Z"
+  "updatedAt": "2026-06-26T08:26:12.334Z"
 }

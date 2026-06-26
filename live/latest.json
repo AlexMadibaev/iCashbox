@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.375,
-    "checks": 16,
+    "average": 37.05882352941177,
+    "checks": 17,
     "expenseTotal": 205,
-    "net": 345,
-    "revenue": 550
+    "net": 425,
+    "revenue": 630
   },
   "data": {
-    "actions": 3369,
+    "actions": 3371,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1491,
+    "orders": 1492,
     "products": 40,
     "shifts": 35
   },
   "activity": [
     {
+      "id": 1782447253489,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:14",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782447253489,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:14",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782446847052,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1782437028766,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:23",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782437022742,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782437022742,
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:23",
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1491,
+    "current": 1492,
     "old": [
       {
         "createdAt": "2026-06-25T10:49:46.974Z",
@@ -48228,6 +48228,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-26T04:21:16.391Z",
+        "id": 2538,
+        "items": [
+          "Мороженое с тапиокой x1",
+          "Черника big x1",
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 80,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-26",
+        "shiftLabel": "Смена 26.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 80
+      },
       {
         "createdAt": "2026-06-26T04:14:13.402Z",
         "id": 2537,
@@ -96788,14 +96835,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 16,
-        "expectedOrders": 16,
+        "databaseOrders": 17,
+        "expectedOrders": 17,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-26",
         "label": "Смена 26.06",
         "missingOrders": 0,
-        "revenue": 550,
+        "revenue": 630,
         "status": "ok"
       },
       {
@@ -97254,12 +97301,12 @@
         "status": "ok"
       }
     ],
-    "total": 1491
+    "total": 1492
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 480
+      "total": 560
     },
     {
       "method": "Карта",
@@ -97279,6 +97326,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2538,
+      "items": [
+        "Мороженое с тапиокой x1",
+        "Черника big x1",
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 80
+    },
     {
       "id": 2537,
       "items": [
@@ -97339,15 +97396,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 2530,
-      "items": [
-        "Клубничный mini x1",
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 45
     }
   ],
   "shifts": {
@@ -97488,19 +97536,29 @@
       "total": 100
     },
     {
+      "name": "Клубничный big",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Мороженое Орео",
       "qty": 3,
       "total": 60
     },
     {
-      "name": "Клубничный big",
+      "name": "Мороженое с тапиокой",
       "qty": 2,
-      "total": 60
+      "total": 40
     },
     {
       "name": "Мороженое манго",
       "qty": 2,
       "total": 40
+    },
+    {
+      "name": "Черника big",
+      "qty": 1,
+      "total": 30
     },
     {
       "name": "Фреш лимон mini",
@@ -97511,18 +97569,8 @@
       "name": "Жасмин лимон big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Клубничный жасмин big",
-      "qty": 1,
-      "total": 26
-    },
-    {
-      "name": "Виноградный тропический big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-26T11:16:38.353Z"
+  "updatedAt": "2026-06-26T11:23:41.987Z"
 }

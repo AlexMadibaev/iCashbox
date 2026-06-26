@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.34615384615385,
-    "checks": 26,
+    "average": 37.81481481481482,
+    "checks": 27,
     "expenseTotal": 205,
-    "net": 766,
-    "revenue": 971
+    "net": 816,
+    "revenue": 1021
   },
   "data": {
-    "actions": 3389,
+    "actions": 3391,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1501,
+    "orders": 1502,
     "products": 40,
     "shifts": 35
   },
   "activity": [
     {
+      "id": 1782456193116,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:43",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782456193116,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:43",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782456046134,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782451141597,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782451141597,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:19",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1501,
+    "current": 1502,
     "old": [
       {
         "createdAt": "2026-06-25T10:49:46.974Z",
@@ -48228,6 +48228,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-26T06:45:03.633Z",
+        "id": 2548,
+        "items": [
+          "Мороженое манго x1",
+          "ПиноКолада big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-милкшейк-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 50,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-26",
+        "shiftLabel": "Смена 26.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-26T06:43:13.037Z",
         "id": 2547,
@@ -97141,14 +97179,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 26,
-        "expectedOrders": 26,
+        "databaseOrders": 27,
+        "expectedOrders": 27,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-26",
         "label": "Смена 26.06",
         "missingOrders": 0,
-        "revenue": 971,
+        "revenue": 1021,
         "status": "ok"
       },
       {
@@ -97607,7 +97645,7 @@
         "status": "ok"
       }
     ],
-    "total": 1501
+    "total": 1502
   },
   "payments": [
     {
@@ -97620,7 +97658,7 @@
     },
     {
       "method": "Alif",
-      "total": 40
+      "total": 90
     },
     {
       "method": "Dushanbe City",
@@ -97632,6 +97670,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2548,
+      "items": [
+        "Мороженое манго x1",
+        "ПиноКолада big x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 2547,
       "items": [
@@ -97690,16 +97737,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 2540,
-      "items": [
-        "Айс Латте x1",
-        "Cake-Pops Шт x1",
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 65
     }
   ],
   "shifts": {
@@ -97840,14 +97877,14 @@
       "total": 120
     },
     {
+      "name": "Мороженое манго",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "Клубничный big",
       "qty": 3,
       "total": 90
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 4,
-      "total": 80
     },
     {
       "name": "Мороженое Орео",
@@ -97876,5 +97913,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-26T13:45:36.913Z"
+  "updatedAt": "2026-06-26T13:47:27.610Z"
 }

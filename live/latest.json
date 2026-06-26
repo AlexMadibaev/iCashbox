@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 20,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -185,
+    "revenue": 20
   },
   "data": {
     "actions": 3339,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1475,
+    "orders": 1476,
     "products": 40,
     "shifts": 35
   },
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1475,
+    "current": 1476,
     "old": [
       {
         "createdAt": "2026-06-25T10:49:46.974Z",
@@ -48228,6 +48228,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-25T21:49:44.030Z",
+        "id": 2522,
+        "items": [
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-26",
+        "shiftLabel": "Смена 26.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-25T10:49:46.974Z",
         "id": 2521,
@@ -96270,15 +96299,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-06-26",
         "label": "Смена 26.06",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 20,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -96736,12 +96765,12 @@
         "status": "ok"
       }
     ],
-    "total": 1475
+    "total": 1476
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 20
     },
     {
       "method": "Карта",
@@ -96760,7 +96789,16 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 2522,
+      "items": [
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -96892,7 +96930,13 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Мороженое Орео",
+      "qty": 1,
+      "total": 20
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-06-26T03:36:48.873Z"
+  "updatedAt": "2026-06-26T04:52:09.605Z"
 }

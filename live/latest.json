@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.875,
-    "checks": 8,
+    "average": 39,
+    "checks": 9,
     "expenseTotal": 205,
-    "net": 106,
-    "revenue": 311
+    "net": 146,
+    "revenue": 351
   },
   "data": {
-    "actions": 3434,
+    "actions": 3436,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1523,
+    "orders": 1524,
     "products": 40,
     "shifts": 36
   },
   "activity": [
     {
+      "id": 1782525043473,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:50",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782525043473,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:50",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782522918312,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782516445430,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:27",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782516445430,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:27",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1523,
+    "current": 1524,
     "old": [
       {
         "createdAt": "2026-06-26T09:53:01.560Z",
@@ -49568,6 +49568,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-27T02:26:28.203Z",
+        "id": 2570,
+        "items": [
+          "Фреш лимон big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-фреш-лимон-big",
+            "name": "Фреш лимон big",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-27",
+        "shiftLabel": "Смена 27.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-27T01:50:43.404Z",
         "id": 2569,
@@ -99209,14 +99238,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 8,
-        "expectedOrders": 8,
+        "databaseOrders": 9,
+        "expectedOrders": 9,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-27",
         "label": "Смена 27.06",
         "missingOrders": 0,
-        "revenue": 311,
+        "revenue": 351,
         "status": "ok"
       },
       {
@@ -99688,12 +99717,12 @@
         "status": "ok"
       }
     ],
-    "total": 1523
+    "total": 1524
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 186
+      "total": 226
     },
     {
       "method": "Карта",
@@ -99713,6 +99742,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2570,
+      "items": [
+        "Фреш лимон big x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2569,
       "items": [
@@ -99771,14 +99808,6 @@
       ],
       "status": "Оплачен",
       "total": 76
-    },
-    {
-      "id": 2562,
-      "items": [
-        "Жасмин лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -99919,6 +99948,11 @@
       "total": 120
     },
     {
+      "name": "Фреш лимон big",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Мороженое классическое",
       "qty": 2,
       "total": 40
@@ -99944,16 +99978,11 @@
       "total": 25
     },
     {
-      "name": "Фреш лимон big",
-      "qty": 1,
-      "total": 20
-    },
-    {
       "name": "Жасмин лимон mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-27T08:53:10.473Z"
+  "updatedAt": "2026-06-27T09:28:55.475Z"
 }

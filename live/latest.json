@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 20,
-    "checks": 1,
+    "average": 48,
+    "checks": 2,
     "expenseTotal": 205,
-    "net": -185,
-    "revenue": 20
+    "net": -109,
+    "revenue": 96
   },
   "data": {
-    "actions": 3420,
+    "actions": 3422,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1516,
+    "orders": 1517,
     "products": 40,
     "shifts": 36
   },
   "activity": [
+    {
+      "id": 1782515243629,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:07",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782515243629,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:07",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782507982030,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:31",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782466302211,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:31",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782463437929,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:43",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1516,
+    "current": 1517,
     "old": [
       {
         "createdAt": "2026-06-26T09:53:01.560Z",
@@ -49568,6 +49568,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-26T23:27:25.345Z",
+        "id": 2563,
+        "items": [
+          "Виноградный тропический big x1",
+          "Айс Латте x1",
+          "Фреш лимон big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-фреш-лимон-big",
+            "name": "Фреш лимон big",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 80,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-27",
+        "shiftLabel": "Смена 27.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 76
+      },
       {
         "createdAt": "2026-06-26T23:07:23.534Z",
         "id": 2562,
@@ -98979,14 +99026,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 1,
-        "expectedOrders": 1,
+        "databaseOrders": 2,
+        "expectedOrders": 2,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-27",
         "label": "Смена 27.06",
         "missingOrders": 0,
-        "revenue": 20,
+        "revenue": 96,
         "status": "ok"
       },
       {
@@ -99458,12 +99505,12 @@
         "status": "ok"
       }
     ],
-    "total": 1516
+    "total": 1517
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 20
+      "total": 96
     },
     {
       "method": "Карта",
@@ -99483,6 +99530,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2563,
+      "items": [
+        "Виноградный тропический big x1",
+        "Айс Латте x1",
+        "Фреш лимон big x1"
+      ],
+      "status": "Оплачен",
+      "total": 76
+    },
     {
       "id": 2562,
       "items": [
@@ -99625,11 +99682,26 @@
   },
   "topProducts": [
     {
+      "name": "Айс Латте",
+      "qty": 1,
+      "total": 30
+    },
+    {
+      "name": "Виноградный тропический big",
+      "qty": 1,
+      "total": 26
+    },
+    {
+      "name": "Фреш лимон big",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Жасмин лимон mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-27T06:09:50.735Z"
+  "updatedAt": "2026-06-27T06:29:52.630Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.81818181818182,
-    "checks": 22,
+    "average": 42.04347826086956,
+    "checks": 23,
     "expenseTotal": 205,
-    "net": 737,
-    "revenue": 942
+    "net": 762,
+    "revenue": 967
   },
   "data": {
-    "actions": 3462,
+    "actions": 3464,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1537,
+    "orders": 1538,
     "products": 40,
     "shifts": 36
   },
   "activity": [
     {
+      "id": 1782543376280,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:56",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782543376280,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:56",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782543226268,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:17",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782539340881,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:49",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782539340881,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:49",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1537,
+    "current": 1538,
     "old": [
       {
         "createdAt": "2026-06-26T09:53:01.560Z",
@@ -49568,6 +49568,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-27T07:03:03.431Z",
+        "id": 2584,
+        "items": [
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 25,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-27",
+        "shiftLabel": "Смена 27.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-06-27T06:56:16.212Z",
         "id": 2583,
@@ -99687,14 +99716,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 22,
-        "expectedOrders": 22,
+        "databaseOrders": 23,
+        "expectedOrders": 23,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-27",
         "label": "Смена 27.06",
         "missingOrders": 0,
-        "revenue": 942,
+        "revenue": 967,
         "status": "ok"
       },
       {
@@ -100166,7 +100195,7 @@
         "status": "ok"
       }
     ],
-    "total": 1537
+    "total": 1538
   },
   "payments": [
     {
@@ -100179,7 +100208,7 @@
     },
     {
       "method": "Alif",
-      "total": 286
+      "total": 311
     },
     {
       "method": "Dushanbe City",
@@ -100191,6 +100220,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2584,
+      "items": [
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 2583,
       "items": [
@@ -100251,15 +100288,6 @@
       ],
       "status": "Оплачен",
       "total": 70
-    },
-    {
-      "id": 2576,
-      "items": [
-        "Черника big x1",
-        "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -100410,6 +100438,11 @@
       "total": 100
     },
     {
+      "name": "Клубничный mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "Мороженое классическое",
       "qty": 3,
       "total": 60
@@ -100428,13 +100461,8 @@
       "name": "Манго Маракуя big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "Клубничный mini",
-      "qty": 2,
-      "total": 50
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-27T13:58:41.791Z"
+  "updatedAt": "2026-06-27T14:05:30.449Z"
 }

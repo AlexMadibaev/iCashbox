@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 46.48717948717949,
-    "checks": 39,
+    "average": 46.825,
+    "checks": 40,
     "expenseTotal": 205,
-    "net": 1608,
-    "revenue": 1813
+    "net": 1668,
+    "revenue": 1873
   },
   "data": {
-    "actions": 3496,
+    "actions": 3498,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1554,
+    "orders": 1555,
     "products": 40,
     "shifts": 36
   },
   "activity": [
     {
+      "id": 1782553815972,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:50",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782553815972,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:50",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782553632496,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:34",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782548484018,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:21",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782548484018,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:21",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1554,
+    "current": 1555,
     "old": [
       {
         "createdAt": "2026-06-26T09:53:01.560Z",
@@ -49568,6 +49568,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-27T10:04:45.049Z",
+        "id": 2601,
+        "items": [
+          "Манго Маракуя mini x2",
+          "Клубничный жасмин mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-27",
+        "shiftLabel": "Смена 27.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-27T09:50:15.905Z",
         "id": 2600,
@@ -100297,14 +100335,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 39,
-        "expectedOrders": 39,
+        "databaseOrders": 40,
+        "expectedOrders": 40,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-27",
         "label": "Смена 27.06",
         "missingOrders": 0,
-        "revenue": 1813,
+        "revenue": 1873,
         "status": "ok"
       },
       {
@@ -100776,12 +100814,12 @@
         "status": "ok"
       }
     ],
-    "total": 1554
+    "total": 1555
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1152
+      "total": 1212
     },
     {
       "method": "Карта",
@@ -100801,6 +100839,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2601,
+      "items": [
+        "Манго Маракуя mini x2",
+        "Клубничный жасмин mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2600,
       "items": [
@@ -100865,14 +100912,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 2593,
-      "items": [
-        "Клубничный mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -101019,8 +101058,8 @@
     },
     {
       "name": "Клубничный жасмин mini",
-      "qty": 6,
-      "total": 120
+      "qty": 7,
+      "total": 140
     },
     {
       "name": "Matcha mini",
@@ -101049,5 +101088,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-27T16:52:41.265Z"
+  "updatedAt": "2026-06-27T17:07:11.406Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.411764705882355,
-    "checks": 17,
+    "average": 42.27777777777778,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 516,
-    "revenue": 721
+    "net": 556,
+    "revenue": 761
   },
   "data": {
-    "actions": 3452,
+    "actions": 3454,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1532,
+    "orders": 1533,
     "products": 40,
     "shifts": 36
   },
   "activity": [
     {
+      "id": 1782541035256,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:17",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782541035256,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:17",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782539340881,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:23",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782530093803,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:14",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782530093803,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:14",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1532,
+    "current": 1533,
     "old": [
       {
         "createdAt": "2026-06-26T09:53:01.560Z",
@@ -49568,6 +49568,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-27T06:31:38.811Z",
+        "id": 2579,
+        "items": [
+          "Мороженое манго x1",
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-27",
+        "shiftLabel": "Смена 27.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-27T06:17:15.172Z",
         "id": 2578,
@@ -99506,14 +99544,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-27",
         "label": "Смена 27.06",
         "missingOrders": 0,
-        "revenue": 721,
+        "revenue": 761,
         "status": "ok"
       },
       {
@@ -99985,12 +100023,12 @@
         "status": "ok"
       }
     ],
-    "total": 1532
+    "total": 1533
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 416
+      "total": 456
     },
     {
       "method": "Карта",
@@ -100010,6 +100048,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2579,
+      "items": [
+        "Мороженое манго x1",
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2578,
       "items": [
@@ -100068,15 +100115,6 @@
       ],
       "status": "Оплачен",
       "total": 15
-    },
-    {
-      "id": 2571,
-      "items": [
-        "МангоБанан big x1",
-        "Клубничный big x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -100218,8 +100256,8 @@
     },
     {
       "name": "Мороженое манго",
-      "qty": 4,
-      "total": 80
+      "qty": 5,
+      "total": 100
     },
     {
       "name": "Мороженое классическое",
@@ -100247,11 +100285,11 @@
       "total": 50
     },
     {
-      "name": "Черника big",
-      "qty": 1,
-      "total": 30
+      "name": "Babl tea mini",
+      "qty": 2,
+      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-27T13:19:42.044Z"
+  "updatedAt": "2026-06-27T13:34:05.845Z"
 }

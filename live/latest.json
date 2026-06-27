@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 48,
-    "checks": 2,
+    "average": 40.333333333333336,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -109,
-    "revenue": 96
+    "net": -84,
+    "revenue": 121
   },
   "data": {
-    "actions": 3422,
+    "actions": 3424,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1517,
+    "orders": 1518,
     "products": 40,
     "shifts": 36
   },
   "activity": [
+    {
+      "id": 1782516445430,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782516445430,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:27",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782515243629,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:33",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782466426020,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:33",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782466302211,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:31",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1517,
+    "current": 1518,
     "old": [
       {
         "createdAt": "2026-06-26T09:53:01.560Z",
@@ -49568,6 +49568,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-27T00:02:04.194Z",
+        "id": 2564,
+        "items": [
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 25,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-27",
+        "shiftLabel": "Смена 27.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-06-26T23:27:25.345Z",
         "id": 2563,
@@ -99026,14 +99055,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-27",
         "label": "Смена 27.06",
         "missingOrders": 0,
-        "revenue": 96,
+        "revenue": 121,
         "status": "ok"
       },
       {
@@ -99505,7 +99534,7 @@
         "status": "ok"
       }
     ],
-    "total": 1517
+    "total": 1518
   },
   "payments": [
     {
@@ -99518,7 +99547,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 25
     },
     {
       "method": "Dushanbe City",
@@ -99530,6 +99559,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2564,
+      "items": [
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 2563,
       "items": [
@@ -99692,6 +99729,11 @@
       "total": 26
     },
     {
+      "name": "Черника mini",
+      "qty": 1,
+      "total": 25
+    },
+    {
       "name": "Фреш лимон big",
       "qty": 1,
       "total": 20
@@ -99703,5 +99745,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-27T06:29:52.630Z"
+  "updatedAt": "2026-06-27T07:04:31.445Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.96296296296296,
-    "checks": 27,
+    "average": 44,
+    "checks": 28,
     "expenseTotal": 205,
-    "net": 982,
-    "revenue": 1187
+    "net": 1027,
+    "revenue": 1232
   },
   "data": {
-    "actions": 3472,
+    "actions": 3474,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1542,
+    "orders": 1543,
     "products": 40,
     "shifts": 36
   },
   "activity": [
     {
+      "id": 1782545942292,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:39",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782545942292,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:39",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782545045098,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:56",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782543226268,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:53",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782543226268,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:53",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1542,
+    "current": 1543,
     "old": [
       {
         "createdAt": "2026-06-26T09:53:01.560Z",
@@ -49568,6 +49568,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-27T07:45:27.801Z",
+        "id": 2589,
+        "items": [
+          "Cake-Pops Шт x3"
+        ],
+        "lines": [
+          {
+            "id": "product-1782200595826",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 3,
+            "size": "Шт",
+            "total": 45
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-27",
+        "shiftLabel": "Смена 27.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-06-27T07:39:02.198Z",
         "id": 2588,
@@ -99868,14 +99897,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 27,
-        "expectedOrders": 27,
+        "databaseOrders": 28,
+        "expectedOrders": 28,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-27",
         "label": "Смена 27.06",
         "missingOrders": 0,
-        "revenue": 1187,
+        "revenue": 1232,
         "status": "ok"
       },
       {
@@ -100347,12 +100376,12 @@
         "status": "ok"
       }
     ],
-    "total": 1542
+    "total": 1543
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 742
+      "total": 787
     },
     {
       "method": "Карта",
@@ -100372,6 +100401,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2589,
+      "items": [
+        "Cake-Pops Шт x3"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 2588,
       "items": [
@@ -100434,14 +100471,6 @@
       ],
       "status": "Оплачен",
       "total": 55
-    },
-    {
-      "id": 2581,
-      "items": [
-        "Babl tea mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -100602,6 +100631,11 @@
       "total": 75
     },
     {
+      "name": "Cake-Pops",
+      "qty": 4,
+      "total": 60
+    },
+    {
       "name": "Мороженое Орео",
       "qty": 3,
       "total": 60
@@ -100610,13 +100644,8 @@
       "name": "Черника big",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Мороженое классическое",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-27T14:41:29.100Z"
+  "updatedAt": "2026-06-27T14:47:54.380Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.04347826086956,
-    "checks": 23,
+    "average": 42.791666666666664,
+    "checks": 24,
     "expenseTotal": 205,
-    "net": 762,
-    "revenue": 967
+    "net": 822,
+    "revenue": 1027
   },
   "data": {
-    "actions": 3464,
+    "actions": 3466,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1538,
+    "orders": 1539,
     "products": 40,
     "shifts": 36
   },
   "activity": [
     {
+      "id": 1782543783501,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:03",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782543783501,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:03",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782543376280,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:31",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782541035256,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:17",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782541035256,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:17",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1538,
+    "current": 1539,
     "old": [
       {
         "createdAt": "2026-06-26T09:53:01.560Z",
@@ -49568,6 +49568,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-27T07:19:10.847Z",
+        "id": 2585,
+        "items": [
+          "ПиноКолада big x1",
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-27",
+        "shiftLabel": "Смена 27.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-27T07:03:03.431Z",
         "id": 2584,
@@ -99716,14 +99754,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 23,
-        "expectedOrders": 23,
+        "databaseOrders": 24,
+        "expectedOrders": 24,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-27",
         "label": "Смена 27.06",
         "missingOrders": 0,
-        "revenue": 967,
+        "revenue": 1027,
         "status": "ok"
       },
       {
@@ -100195,12 +100233,12 @@
         "status": "ok"
       }
     ],
-    "total": 1538
+    "total": 1539
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 522
+      "total": 582
     },
     {
       "method": "Карта",
@@ -100220,6 +100258,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2585,
+      "items": [
+        "ПиноКолада big x1",
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2584,
       "items": [
@@ -100279,15 +100326,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 2577,
-      "items": [
-        "Babl tea mini x1",
-        "Клубничный mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 70
     }
   ],
   "shifts": {
@@ -100443,6 +100481,16 @@
       "total": 75
     },
     {
+      "name": "ПиноКолада big",
+      "qty": 2,
+      "total": 60
+    },
+    {
+      "name": "Черника big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Мороженое классическое",
       "qty": 3,
       "total": 60
@@ -100451,18 +100499,8 @@
       "name": "МангоБанан big",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Фреш лимон big",
-      "qty": 3,
-      "total": 60
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 2,
-      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-27T14:05:30.449Z"
+  "updatedAt": "2026-06-27T14:21:37.806Z"
 }

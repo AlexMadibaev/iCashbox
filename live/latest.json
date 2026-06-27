@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.78125,
-    "checks": 32,
+    "average": 41.72727272727273,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 1132,
-    "revenue": 1337
+    "net": 1172,
+    "revenue": 1377
   },
   "data": {
-    "actions": 3482,
+    "actions": 3484,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1547,
+    "orders": 1548,
     "products": 40,
     "shifts": 36
   },
   "activity": [
     {
+      "id": 1782547808399,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:10",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782547808399,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:10",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782547256060,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:39",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782545045098,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:24",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782545045098,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:24",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1547,
+    "current": 1548,
     "old": [
       {
         "createdAt": "2026-06-26T09:53:01.560Z",
@@ -49568,6 +49568,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-27T08:21:23.949Z",
+        "id": 2594,
+        "items": [
+          "Айс Латте x1",
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 40,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-27",
+        "shiftLabel": "Смена 27.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-27T08:10:08.332Z",
         "id": 2593,
@@ -100013,14 +100051,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 32,
-        "expectedOrders": 32,
+        "databaseOrders": 33,
+        "expectedOrders": 33,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-27",
         "label": "Смена 27.06",
         "missingOrders": 0,
-        "revenue": 1337,
+        "revenue": 1377,
         "status": "ok"
       },
       {
@@ -100492,7 +100530,7 @@
         "status": "ok"
       }
     ],
-    "total": 1547
+    "total": 1548
   },
   "payments": [
     {
@@ -100509,7 +100547,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 121
+      "total": 161
     },
     {
       "method": "Семья",
@@ -100517,6 +100555,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2594,
+      "items": [
+        "Айс Латте x1",
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2593,
       "items": [
@@ -100572,14 +100619,6 @@
       "id": 2587,
       "items": [
         "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
-    },
-    {
-      "id": 2586,
-      "items": [
-        "ПиноКолада big x1"
       ],
       "status": "Оплачен",
       "total": 30
@@ -100719,8 +100758,8 @@
   "topProducts": [
     {
       "name": "Айс Латте",
-      "qty": 5,
-      "total": 150
+      "qty": 6,
+      "total": 180
     },
     {
       "name": "Babl tea mini",
@@ -100759,5 +100798,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-27T15:12:35.342Z"
+  "updatedAt": "2026-06-27T15:23:50.824Z"
 }

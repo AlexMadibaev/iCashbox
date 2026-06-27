@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.72727272727273,
-    "checks": 33,
+    "average": 43.44117647058823,
+    "checks": 34,
     "expenseTotal": 205,
-    "net": 1172,
-    "revenue": 1377
+    "net": 1272,
+    "revenue": 1477
   },
   "data": {
-    "actions": 3484,
+    "actions": 3486,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1548,
+    "orders": 1549,
     "products": 40,
     "shifts": 36
   },
   "activity": [
     {
+      "id": 1782548484018,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:21",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782548484018,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:21",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782547808399,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:45",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782545942292,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:39",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782545942292,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:39",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1548,
+    "current": 1549,
     "old": [
       {
         "createdAt": "2026-06-26T09:53:01.560Z",
@@ -49568,6 +49568,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-27T08:34:23.985Z",
+        "id": 2595,
+        "items": [
+          "Matcha mini x1",
+          "МангоБанан big x1",
+          "Matcha big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-27",
+        "shiftLabel": "Смена 27.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 100
+      },
       {
         "createdAt": "2026-06-27T08:21:23.949Z",
         "id": 2594,
@@ -100051,14 +100098,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 33,
-        "expectedOrders": 33,
+        "databaseOrders": 34,
+        "expectedOrders": 34,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-27",
         "label": "Смена 27.06",
         "missingOrders": 0,
-        "revenue": 1377,
+        "revenue": 1477,
         "status": "ok"
       },
       {
@@ -100530,12 +100577,12 @@
         "status": "ok"
       }
     ],
-    "total": 1548
+    "total": 1549
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 812
+      "total": 912
     },
     {
       "method": "Карта",
@@ -100555,6 +100602,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2595,
+      "items": [
+        "Matcha mini x1",
+        "МангоБанан big x1",
+        "Matcha big x1"
+      ],
+      "status": "Оплачен",
+      "total": 100
+    },
     {
       "id": 2594,
       "items": [
@@ -100614,14 +100671,6 @@
       ],
       "status": "Оплачен",
       "total": 100
-    },
-    {
-      "id": 2587,
-      "items": [
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -100767,6 +100816,11 @@
       "total": 140
     },
     {
+      "name": "МангоБанан big",
+      "qty": 4,
+      "total": 120
+    },
+    {
       "name": "Клубничный mini",
       "qty": 4,
       "total": 100
@@ -100775,11 +100829,6 @@
       "name": "Мороженое манго",
       "qty": 5,
       "total": 100
-    },
-    {
-      "name": "МангоБанан big",
-      "qty": 3,
-      "total": 90
     },
     {
       "name": "ПиноКолада big",
@@ -100798,5 +100847,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-27T15:23:50.824Z"
+  "updatedAt": "2026-06-27T15:36:50.892Z"
 }

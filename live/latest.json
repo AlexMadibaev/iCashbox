@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.44117647058823,
-    "checks": 34,
+    "average": 44.2,
+    "checks": 35,
     "expenseTotal": 205,
-    "net": 1272,
-    "revenue": 1477
+    "net": 1342,
+    "revenue": 1547
   },
   "data": {
-    "actions": 3486,
+    "actions": 3488,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1549,
+    "orders": 1550,
     "products": 40,
     "shifts": 36
   },
   "activity": [
     {
+      "id": 1782549264079,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:34",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782549264079,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:34",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782548484018,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:56",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782546327876,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:45",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782546327876,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:45",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1549,
+    "current": 1550,
     "old": [
       {
         "createdAt": "2026-06-26T09:53:01.560Z",
@@ -49568,6 +49568,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-27T08:47:35.590Z",
+        "id": 2596,
+        "items": [
+          "Мороженое с тапиокой x1",
+          "Мороженое классическое x1",
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 70,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-27",
+        "shiftLabel": "Смена 27.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-06-27T08:34:23.985Z",
         "id": 2595,
@@ -100098,14 +100145,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-27",
         "label": "Смена 27.06",
         "missingOrders": 0,
-        "revenue": 1477,
+        "revenue": 1547,
         "status": "ok"
       },
       {
@@ -100577,7 +100624,7 @@
         "status": "ok"
       }
     ],
-    "total": 1549
+    "total": 1550
   },
   "payments": [
     {
@@ -100594,7 +100641,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 161
+      "total": 231
     },
     {
       "method": "Семья",
@@ -100602,6 +100649,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2596,
+      "items": [
+        "Мороженое с тапиокой x1",
+        "Мороженое классическое x1",
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 2595,
       "items": [
@@ -100660,17 +100717,6 @@
       ],
       "status": "Оплачен",
       "total": 45
-    },
-    {
-      "id": 2588,
-      "items": [
-        "Виноградный тропический mini x1",
-        "Мороженое Орео x1",
-        "Клубничный жасмин mini x2",
-        "Мороженое клубничное x1"
-      ],
-      "status": "Оплачен",
-      "total": 100
     }
   ],
   "shifts": {
@@ -100836,16 +100882,16 @@
       "total": 90
     },
     {
-      "name": "Cake-Pops",
+      "name": "Мороженое классическое",
       "qty": 4,
-      "total": 60
+      "total": 80
     },
     {
-      "name": "Мороженое Орео",
-      "qty": 3,
+      "name": "Matcha mini",
+      "qty": 2,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-27T15:36:50.892Z"
+  "updatedAt": "2026-06-27T15:50:02.524Z"
 }

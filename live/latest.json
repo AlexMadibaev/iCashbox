@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.48571428571429,
-    "checks": 35,
+    "average": 36.94444444444444,
+    "checks": 36,
     "expenseTotal": 205,
-    "net": 1037,
-    "revenue": 1242
+    "net": 1125,
+    "revenue": 1330
   },
   "data": {
-    "actions": 3571,
+    "actions": 3573,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1591,
+    "orders": 1592,
     "products": 40,
     "shifts": 37
   },
   "activity": [
     {
+      "id": 1782637001199,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:56",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782637001199,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:56",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782636782421,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:34",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782634979608,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:22",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782634979608,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:22",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1591,
+    "current": 1592,
     "old": [
       {
         "createdAt": "2026-06-27T10:39:14.373Z",
@@ -50991,6 +50991,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-28T09:12:08.443Z",
+        "id": 2638,
+        "items": [
+          "Айс Американо x1",
+          "Айс Латте x2"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-американо",
+            "name": "Айс Американо",
+            "price": 28,
+            "qty": 1,
+            "size": "",
+            "total": 28
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-28",
+        "shiftLabel": "Смена 28.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 88
+      },
       {
         "createdAt": "2026-06-28T08:56:41.130Z",
         "id": 2637,
@@ -102946,14 +102984,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 35,
-        "expectedOrders": 35,
+        "databaseOrders": 36,
+        "expectedOrders": 36,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-28",
         "label": "Смена 28.06",
         "missingOrders": 0,
-        "revenue": 1242,
+        "revenue": 1330,
         "status": "ok"
       },
       {
@@ -103438,12 +103476,12 @@
         "status": "ok"
       }
     ],
-    "total": 1591
+    "total": 1592
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 736
+      "total": 824
     },
     {
       "method": "Карта",
@@ -103463,6 +103501,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2638,
+      "items": [
+        "Айс Американо x1",
+        "Айс Латте x2"
+      ],
+      "status": "Оплачен",
+      "total": 88
+    },
     {
       "id": 2637,
       "items": [
@@ -103525,14 +103572,6 @@
       ],
       "status": "Оплачен",
       "total": 52
-    },
-    {
-      "id": 2630,
-      "items": [
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -103668,6 +103707,11 @@
   },
   "topProducts": [
     {
+      "name": "Айс Латте",
+      "qty": 5,
+      "total": 150
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 4,
       "total": 104
@@ -103693,11 +103737,6 @@
       "total": 90
     },
     {
-      "name": "Айс Латте",
-      "qty": 3,
-      "total": 90
-    },
-    {
       "name": "Мороженое рожок",
       "qty": 7,
       "total": 70
@@ -103709,5 +103748,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-28T15:59:07.610Z"
+  "updatedAt": "2026-06-28T16:14:36.251Z"
 }

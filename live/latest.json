@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33,
-    "checks": 9,
+    "average": 32.7,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 92,
-    "revenue": 297
+    "net": 122,
+    "revenue": 327
   },
   "data": {
-    "actions": 3519,
+    "actions": 3521,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1565,
+    "orders": 1566,
     "products": 40,
     "shifts": 37
   },
   "activity": [
     {
+      "id": 1782610698951,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:38",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782610698951,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:38",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782610124008,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:21",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782605162808,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:06",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782605162808,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:06",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1565,
+    "current": 1566,
     "old": [
       {
         "createdAt": "2026-06-27T10:39:14.373Z",
@@ -50991,6 +50991,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-28T02:21:14.775Z",
+        "id": 2612,
+        "items": [
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-28",
+        "shiftLabel": "Смена 28.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-28T01:38:18.856Z",
         "id": 2611,
@@ -102075,14 +102104,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-28",
         "label": "Смена 28.06",
         "missingOrders": 0,
-        "revenue": 297,
+        "revenue": 327,
         "status": "ok"
       },
       {
@@ -102567,12 +102596,12 @@
         "status": "ok"
       }
     ],
-    "total": 1565
+    "total": 1566
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 195
+      "total": 225
     },
     {
       "method": "Карта",
@@ -102592,6 +102621,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2612,
+      "items": [
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2611,
       "items": [
@@ -102649,14 +102686,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 2604,
-      "items": [
-        "Мороженое рожок x3"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -102802,6 +102831,11 @@
       "total": 40
     },
     {
+      "name": "Черника big",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "МангоБанан big",
       "qty": 1,
       "total": 30
@@ -102825,13 +102859,8 @@
       "name": "Латте",
       "qty": 1,
       "total": 25
-    },
-    {
-      "name": "Мороженое с тапиокой",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-28T08:40:46.654Z"
+  "updatedAt": "2026-06-28T09:23:42.647Z"
 }

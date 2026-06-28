@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.45454545454545,
-    "checks": 11,
+    "average": 32.25,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 152,
-    "revenue": 357
+    "net": 182,
+    "revenue": 387
   },
   "data": {
-    "actions": 3523,
+    "actions": 3525,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1567,
+    "orders": 1568,
     "products": 40,
     "shifts": 37
   },
   "activity": [
     {
+      "id": 1782613505567,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:25",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782613505567,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:25",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782613274867,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782607306935,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782607306935,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:41",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1567,
+    "current": 1568,
     "old": [
       {
         "createdAt": "2026-06-27T10:39:14.373Z",
@@ -50991,6 +50991,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-28T03:06:52.507Z",
+        "id": 2614,
+        "items": [
+          "Мороженое манго x1",
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-28",
+        "shiftLabel": "Смена 28.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-28T02:25:05.497Z",
         "id": 2613,
@@ -102133,14 +102171,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-28",
         "label": "Смена 28.06",
         "missingOrders": 0,
-        "revenue": 357,
+        "revenue": 387,
         "status": "ok"
       },
       {
@@ -102625,12 +102663,12 @@
         "status": "ok"
       }
     ],
-    "total": 1567
+    "total": 1568
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 225
+      "total": 255
     },
     {
       "method": "Карта",
@@ -102650,6 +102688,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2614,
+      "items": [
+        "Мороженое манго x1",
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2613,
       "items": [
@@ -102706,15 +102753,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2606,
-      "items": [
-        "Жасмин лимон big x1",
-        "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 46
     }
   ],
   "shifts": {
@@ -102861,8 +102899,8 @@
     },
     {
       "name": "Мороженое рожок",
-      "qty": 4,
-      "total": 40
+      "qty": 5,
+      "total": 50
     },
     {
       "name": "МангоБанан big",
@@ -102891,5 +102929,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-28T09:27:31.975Z"
+  "updatedAt": "2026-06-28T10:09:20.393Z"
 }

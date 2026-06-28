@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 27.833333333333332,
-    "checks": 6,
+    "average": 26.714285714285715,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": -38,
-    "revenue": 167
+    "net": -18,
+    "revenue": 187
   },
   "data": {
-    "actions": 3513,
+    "actions": 3515,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1562,
+    "orders": 1563,
     "products": 40,
     "shifts": 37
   },
   "activity": [
     {
+      "id": 1782607354046,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:42",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782607354046,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:42",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782607306935,
       "source": "Локально",
       "status": "Сохранено",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "09:43",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1782592004442,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "08:26",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1782556754482,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:39",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1562,
+    "current": 1563,
     "old": [
       {
         "createdAt": "2026-06-27T10:39:14.373Z",
@@ -50991,6 +50991,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-28T01:19:44.719Z",
+        "id": 2609,
+        "items": [
+          "Американо x1"
+        ],
+        "lines": [
+          {
+            "id": "product-американо",
+            "name": "Американо",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-28",
+        "shiftLabel": "Смена 28.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-28T00:42:33.959Z",
         "id": 2608,
@@ -101979,14 +102008,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-28",
         "label": "Смена 28.06",
         "missingOrders": 0,
-        "revenue": 167,
+        "revenue": 187,
         "status": "ok"
       },
       {
@@ -102471,12 +102500,12 @@
         "status": "ok"
       }
     ],
-    "total": 1562
+    "total": 1563
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 65
+      "total": 85
     },
     {
       "method": "Карта",
@@ -102496,6 +102525,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2609,
+      "items": [
+        "Американо x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2608,
       "items": [
@@ -102704,11 +102741,16 @@
       "total": 25
     },
     {
+      "name": "Американо",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Мороженое классическое",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-28T07:45:00.656Z"
+  "updatedAt": "2026-06-28T08:22:12.593Z"
 }

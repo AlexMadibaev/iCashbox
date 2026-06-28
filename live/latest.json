@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 27,
-    "checks": 3,
+    "average": 31.75,
+    "checks": 4,
     "expenseTotal": 205,
-    "net": -124,
-    "revenue": 81
+    "net": -78,
+    "revenue": 127
   },
   "data": {
-    "actions": 3507,
+    "actions": 3509,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1559,
+    "orders": 1560,
     "products": 40,
     "shifts": 37
   },
   "activity": [
+    {
+      "id": 1782605162808,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782605162808,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:06",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782597902104,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:50",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782553815972,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:50",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782553632496,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:47",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1559,
+    "current": 1560,
     "old": [
       {
         "createdAt": "2026-06-27T10:39:14.373Z",
@@ -50991,6 +50991,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-28T00:21:48.362Z",
+        "id": 2606,
+        "items": [
+          "Жасмин лимон big x1",
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-tea-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 46,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-28",
+        "shiftLabel": "Смена 28.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-06-28T00:06:02.731Z",
         "id": 2605,
@@ -101883,14 +101921,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 3,
-        "expectedOrders": 3,
+        "databaseOrders": 4,
+        "expectedOrders": 4,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-28",
         "label": "Смена 28.06",
         "missingOrders": 0,
-        "revenue": 81,
+        "revenue": 127,
         "status": "ok"
       },
       {
@@ -102375,7 +102413,7 @@
         "status": "ok"
       }
     ],
-    "total": 1559
+    "total": 1560
   },
   "payments": [
     {
@@ -102388,7 +102426,7 @@
     },
     {
       "method": "Alif",
-      "total": 30
+      "total": 76
     },
     {
       "method": "Dushanbe City",
@@ -102400,6 +102438,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2606,
+      "items": [
+        "Жасмин лимон big x1",
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 2605,
       "items": [
@@ -102563,6 +102610,11 @@
       "total": 30
     },
     {
+      "name": "Жасмин лимон big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
@@ -102571,8 +102623,13 @@
       "name": "Латте",
       "qty": 1,
       "total": 25
+    },
+    {
+      "name": "Мороженое классическое",
+      "qty": 1,
+      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-28T07:08:31.163Z"
+  "updatedAt": "2026-06-28T07:24:16.349Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.7,
-    "checks": 10,
+    "average": 32.45454545454545,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 122,
-    "revenue": 327
+    "net": 152,
+    "revenue": 357
   },
   "data": {
-    "actions": 3521,
+    "actions": 3523,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1566,
+    "orders": 1567,
     "products": 40,
     "shifts": 37
   },
   "activity": [
     {
+      "id": 1782613274867,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:21",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782613274867,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:21",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782610698951,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782606108432,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:21",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782606108432,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:21",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1566,
+    "current": 1567,
     "old": [
       {
         "createdAt": "2026-06-27T10:39:14.373Z",
@@ -50991,6 +50991,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-28T02:25:05.497Z",
+        "id": 2613,
+        "items": [
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 30,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-28",
+        "shiftLabel": "Смена 28.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-28T02:21:14.775Z",
         "id": 2612,
@@ -102104,14 +102133,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-28",
         "label": "Смена 28.06",
         "missingOrders": 0,
-        "revenue": 327,
+        "revenue": 357,
         "status": "ok"
       },
       {
@@ -102596,7 +102625,7 @@
         "status": "ok"
       }
     ],
-    "total": 1566
+    "total": 1567
   },
   "payments": [
     {
@@ -102609,7 +102638,7 @@
     },
     {
       "method": "Alif",
-      "total": 76
+      "total": 106
     },
     {
       "method": "Dushanbe City",
@@ -102621,6 +102650,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2613,
+      "items": [
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2612,
       "items": [
@@ -102678,14 +102715,6 @@
       ],
       "status": "Оплачен",
       "total": 46
-    },
-    {
-      "id": 2605,
-      "items": [
-        "Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -102826,14 +102855,14 @@
       "total": 80
     },
     {
+      "name": "Черника big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 4,
       "total": 40
-    },
-    {
-      "name": "Черника big",
-      "qty": 1,
-      "total": 30
     },
     {
       "name": "МангоБанан big",
@@ -102862,5 +102891,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-28T09:23:42.647Z"
+  "updatedAt": "2026-06-28T09:27:31.975Z"
 }

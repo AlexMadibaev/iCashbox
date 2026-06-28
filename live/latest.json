@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 31.833333333333332,
-    "checks": 24,
+    "average": 31.96,
+    "checks": 25,
     "expenseTotal": 205,
-    "net": 559,
-    "revenue": 764
+    "net": 594,
+    "revenue": 799
   },
   "data": {
-    "actions": 3549,
+    "actions": 3551,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1580,
+    "orders": 1581,
     "products": 40,
     "shifts": 37
   },
   "activity": [
     {
+      "id": 1782628109319,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:28",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782628109319,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:28",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782626966191,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:31",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782624217481,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782624217481,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:23",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1580,
+    "current": 1581,
     "old": [
       {
         "createdAt": "2026-06-27T10:39:14.373Z",
@@ -50991,6 +50991,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-28T06:41:12.474Z",
+        "id": 2627,
+        "items": [
+          "Мороженое классическое x1",
+          "Фреш лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-фреш-лимон-mini",
+            "name": "Фреш лимон mini",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 35
+        },
+        "shiftKey": "2026-06-28",
+        "shiftLabel": "Смена 28.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-06-28T06:28:29.226Z",
         "id": 2626,
@@ -102555,14 +102593,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 24,
-        "expectedOrders": 24,
+        "databaseOrders": 25,
+        "expectedOrders": 25,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-28",
         "label": "Смена 28.06",
         "missingOrders": 0,
-        "revenue": 764,
+        "revenue": 799,
         "status": "ok"
       },
       {
@@ -103047,7 +103085,7 @@
         "status": "ok"
       }
     ],
-    "total": 1580
+    "total": 1581
   },
   "payments": [
     {
@@ -103068,10 +103106,19 @@
     },
     {
       "method": "Семья",
-      "total": 0
+      "total": 35
     }
   ],
   "recentOrders": [
+    {
+      "id": 2627,
+      "items": [
+        "Мороженое классическое x1",
+        "Фреш лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    },
     {
       "id": 2626,
       "items": [
@@ -103130,14 +103177,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 2619,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -103273,12 +103312,12 @@
   },
   "topProducts": [
     {
-      "name": "Babl tea mini",
-      "qty": 4,
-      "total": 80
+      "name": "Мороженое классическое",
+      "qty": 5,
+      "total": 100
     },
     {
-      "name": "Мороженое классическое",
+      "name": "Babl tea mini",
       "qty": 4,
       "total": 80
     },
@@ -103314,5 +103353,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-28T13:30:57.031Z"
+  "updatedAt": "2026-06-28T13:43:40.385Z"
 }

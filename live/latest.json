@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 30.142857142857142,
-    "checks": 14,
+    "average": 31.2,
+    "checks": 15,
     "expenseTotal": 205,
-    "net": 217,
-    "revenue": 422
+    "net": 263,
+    "revenue": 468
   },
   "data": {
-    "actions": 3529,
+    "actions": 3531,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1570,
+    "orders": 1571,
     "products": 40,
     "shifts": 37
   },
   "activity": [
     {
+      "id": 1782617072635,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:24",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782617072635,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:24",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782617061182,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:38",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782610124008,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:28",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782610124008,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:28",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1570,
+    "current": 1571,
     "old": [
       {
         "createdAt": "2026-06-27T10:39:14.373Z",
@@ -50991,6 +50991,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-28T04:32:19.153Z",
+        "id": 2617,
+        "items": [
+          "Манго Маракуя big x1",
+          "Жасмин лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-жасмин-tea-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-28",
+        "shiftLabel": "Смена 28.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-06-28T03:24:32.538Z",
         "id": 2616,
@@ -102229,14 +102267,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 14,
-        "expectedOrders": 14,
+        "databaseOrders": 15,
+        "expectedOrders": 15,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-28",
         "label": "Смена 28.06",
         "missingOrders": 0,
-        "revenue": 422,
+        "revenue": 468,
         "status": "ok"
       },
       {
@@ -102721,12 +102759,12 @@
         "status": "ok"
       }
     ],
-    "total": 1570
+    "total": 1571
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 290
+      "total": 336
     },
     {
       "method": "Карта",
@@ -102746,6 +102784,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2617,
+      "items": [
+        "Манго Маракуя big x1",
+        "Жасмин лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 2616,
       "items": [
@@ -102803,14 +102850,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2609,
-      "items": [
-        "Американо x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -102956,6 +102995,11 @@
       "total": 60
     },
     {
+      "name": "Манго Маракуя big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 5,
       "total": 50
@@ -102976,16 +103020,11 @@
       "total": 26
     },
     {
-      "name": "Манго Маракуя big",
-      "qty": 1,
-      "total": 26
-    },
-    {
       "name": "Латте",
       "qty": 1,
       "total": 25
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-28T10:26:58.854Z"
+  "updatedAt": "2026-06-28T11:34:47.146Z"
 }

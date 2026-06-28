@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.76923076923077,
-    "checks": 39,
+    "average": 38.075,
+    "checks": 40,
     "expenseTotal": 205,
-    "net": 1268,
-    "revenue": 1473
+    "net": 1318,
+    "revenue": 1523
   },
   "data": {
-    "actions": 3579,
+    "actions": 3581,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1595,
+    "orders": 1596,
     "products": 40,
     "shifts": 37
   },
   "activity": [
     {
+      "id": 1782639582473,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:39",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782639582473,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:39",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782639059057,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:53",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782636522905,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:48",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782636522905,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:48",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1595,
+    "current": 1596,
     "old": [
       {
         "createdAt": "2026-06-27T10:39:14.373Z",
@@ -50991,6 +50991,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-28T09:55:01.569Z",
+        "id": 2642,
+        "items": [
+          "Черника big x1",
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-28",
+        "shiftLabel": "Смена 28.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-06-28T09:39:42.393Z",
         "id": 2641,
@@ -103107,14 +103145,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 39,
-        "expectedOrders": 39,
+        "databaseOrders": 40,
+        "expectedOrders": 40,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-28",
         "label": "Смена 28.06",
         "missingOrders": 0,
-        "revenue": 1473,
+        "revenue": 1523,
         "status": "ok"
       },
       {
@@ -103599,12 +103637,12 @@
         "status": "ok"
       }
     ],
-    "total": 1595
+    "total": 1596
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 917
+      "total": 967
     },
     {
       "method": "Карта",
@@ -103624,6 +103662,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2642,
+      "items": [
+        "Черника big x1",
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 2641,
       "items": [
@@ -103686,14 +103733,6 @@
       ],
       "status": "Оплачен",
       "total": 80
-    },
-    {
-      "id": 2634,
-      "items": [
-        "МангоБанан mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -103859,16 +103898,16 @@
       "total": 100
     },
     {
+      "name": "Черника big",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Клубничный mini",
       "qty": 3,
       "total": 75
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 7,
-      "total": 70
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-28T16:42:10.306Z"
+  "updatedAt": "2026-06-28T16:57:29.417Z"
 }

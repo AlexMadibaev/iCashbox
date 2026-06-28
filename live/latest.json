@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 31.25,
-    "checks": 28,
+    "average": 31.96551724137931,
+    "checks": 29,
     "expenseTotal": 205,
-    "net": 670,
-    "revenue": 875
+    "net": 722,
+    "revenue": 927
   },
   "data": {
-    "actions": 3557,
+    "actions": 3559,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1584,
+    "orders": 1585,
     "products": 40,
     "shifts": 37
   },
   "activity": [
     {
+      "id": 1782634190005,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:09",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782634190005,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:09",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782630142564,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:09",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782625802104,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:50",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782625802104,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:50",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1584,
+    "current": 1585,
     "old": [
       {
         "createdAt": "2026-06-27T10:39:14.373Z",
@@ -50991,6 +50991,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-28T08:22:59.529Z",
+        "id": 2631,
+        "items": [
+          "Манго Маракуя big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 52,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-28",
+        "shiftLabel": "Смена 28.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-06-28T08:09:49.901Z",
         "id": 2630,
@@ -102680,14 +102709,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 28,
-        "expectedOrders": 28,
+        "databaseOrders": 29,
+        "expectedOrders": 29,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-28",
         "label": "Смена 28.06",
         "missingOrders": 0,
-        "revenue": 875,
+        "revenue": 927,
         "status": "ok"
       },
       {
@@ -103172,7 +103201,7 @@
         "status": "ok"
       }
     ],
-    "total": 1584
+    "total": 1585
   },
   "payments": [
     {
@@ -103185,7 +103214,7 @@
     },
     {
       "method": "Alif",
-      "total": 162
+      "total": 214
     },
     {
       "method": "Dushanbe City",
@@ -103197,6 +103226,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2631,
+      "items": [
+        "Манго Маракуя big x2"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 2630,
       "items": [
@@ -103254,15 +103291,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2623,
-      "items": [
-        "Babl tea big x1",
-        "МангоБанан big x1"
-      ],
-      "status": "Оплачен",
-      "total": 56
     }
   ],
   "shifts": {
@@ -103398,6 +103426,11 @@
   },
   "topProducts": [
     {
+      "name": "Манго Маракуя big",
+      "qty": 4,
+      "total": 104
+    },
+    {
       "name": "Мороженое классическое",
       "qty": 5,
       "total": 100
@@ -103431,13 +103464,8 @@
       "name": "Черника big",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Жасмин лимон big",
-      "qty": 2,
-      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-28T15:12:17.934Z"
+  "updatedAt": "2026-06-28T15:25:27.480Z"
 }

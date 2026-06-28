@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.375,
-    "checks": 32,
+    "average": 36.72727272727273,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 927,
-    "revenue": 1132
+    "net": 1007,
+    "revenue": 1212
   },
   "data": {
-    "actions": 3565,
+    "actions": 3567,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1588,
+    "orders": 1589,
     "products": 40,
     "shifts": 37
   },
   "activity": [
     {
+      "id": 1782636283380,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:44",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782636283380,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:44",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782635681110,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782629097681,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:44",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782629097681,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:44",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1588,
+    "current": 1589,
     "old": [
       {
         "createdAt": "2026-06-27T10:39:14.373Z",
@@ -50991,6 +50991,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-28T08:48:42.815Z",
+        "id": 2635,
+        "items": [
+          "Виноградный тропический mini x1",
+          "Matcha mini x1",
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-28",
+        "shiftLabel": "Смена 28.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 80
+      },
       {
         "createdAt": "2026-06-28T08:44:43.296Z",
         "id": 2634,
@@ -102841,14 +102888,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 32,
-        "expectedOrders": 32,
+        "databaseOrders": 33,
+        "expectedOrders": 33,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-28",
         "label": "Смена 28.06",
         "missingOrders": 0,
-        "revenue": 1132,
+        "revenue": 1212,
         "status": "ok"
       },
       {
@@ -103333,12 +103380,12 @@
         "status": "ok"
       }
     ],
-    "total": 1588
+    "total": 1589
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 626
+      "total": 706
     },
     {
       "method": "Карта",
@@ -103358,6 +103405,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2635,
+      "items": [
+        "Виноградный тропический mini x1",
+        "Matcha mini x1",
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 80
+    },
     {
       "id": 2634,
       "items": [
@@ -103418,15 +103475,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 2627,
-      "items": [
-        "Мороженое классическое x1",
-        "Фреш лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 35
     }
   ],
   "shifts": {
@@ -103577,14 +103625,19 @@
       "total": 100
     },
     {
+      "name": "Matcha mini",
+      "qty": 3,
+      "total": 90
+    },
+    {
+      "name": "Айс Латте",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Babl tea mini",
       "qty": 4,
       "total": 80
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 2,
-      "total": 60
     },
     {
       "name": "Мороженое рожок",
@@ -103595,13 +103648,8 @@
       "name": "Манго Маракуя mini",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "МангоБанан big",
-      "qty": 2,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-28T15:47:11.017Z"
+  "updatedAt": "2026-06-28T15:51:09.295Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.21739130434783,
-    "checks": 46,
+    "average": 40.319148936170215,
+    "checks": 47,
     "expenseTotal": 205,
-    "net": 1645,
-    "revenue": 1850
+    "net": 1690,
+    "revenue": 1895
   },
   "data": {
-    "actions": 3593,
+    "actions": 3595,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1602,
+    "orders": 1603,
     "products": 40,
     "shifts": 37
   },
   "activity": [
     {
+      "id": 1782642364748,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:26",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782642364748,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:26",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782641983285,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:07",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782640501669,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:55",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782640501669,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:55",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1602,
+    "current": 1603,
     "old": [
       {
         "createdAt": "2026-06-27T10:39:14.373Z",
@@ -50991,6 +50991,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-28T10:33:32.258Z",
+        "id": 2649,
+        "items": [
+          "МангоБанан mini x1",
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-28",
+        "shiftLabel": "Смена 28.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-06-28T10:26:04.655Z",
         "id": 2648,
@@ -103364,14 +103402,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 46,
-        "expectedOrders": 46,
+        "databaseOrders": 47,
+        "expectedOrders": 47,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-28",
         "label": "Смена 28.06",
         "missingOrders": 0,
-        "revenue": 1850,
+        "revenue": 1895,
         "status": "ok"
       },
       {
@@ -103856,12 +103894,12 @@
         "status": "ok"
       }
     ],
-    "total": 1602
+    "total": 1603
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1208
+      "total": 1253
     },
     {
       "method": "Карта",
@@ -103881,6 +103919,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2649,
+      "items": [
+        "МангоБанан mini x1",
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 2648,
       "items": [
@@ -103942,15 +103989,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 2641,
-      "items": [
-        "Мороженое классическое x1",
-        "Мороженое Орео x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -104096,12 +104134,12 @@
       "total": 150
     },
     {
-      "name": "Мороженое манго",
-      "qty": 6,
-      "total": 120
+      "name": "Мороженое Орео",
+      "qty": 7,
+      "total": 140
     },
     {
-      "name": "Мороженое Орео",
+      "name": "Мороженое манго",
       "qty": 6,
       "total": 120
     },
@@ -104127,5 +104165,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-28T17:28:31.781Z"
+  "updatedAt": "2026-06-28T17:36:00.411Z"
 }

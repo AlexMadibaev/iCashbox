@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.390243902439025,
-    "checks": 41,
+    "average": 37.642857142857146,
+    "checks": 42,
     "expenseTotal": 205,
-    "net": 1246,
-    "revenue": 1451
+    "net": 1376,
+    "revenue": 1581
   },
   "data": {
-    "actions": 3680,
+    "actions": 3682,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1645,
+    "orders": 1646,
     "products": 40,
     "shifts": 38
   },
   "activity": [
     {
+      "id": 1782726772229,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:52",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782726772229,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:52",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782726424177,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:20",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782721740141,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:29",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782721740141,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:29",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1645,
+    "current": 1646,
     "old": [
       {
         "createdAt": "2026-06-28T10:37:21.994Z",
@@ -52626,6 +52626,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-29T10:37:01.175Z",
+        "id": 2692,
+        "items": [
+          "Babl tea mini x1",
+          "Виноградный тропический mini x1",
+          "Айс Латте x1",
+          "Matcha mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 130,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-29",
+        "shiftLabel": "Смена 29.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 130
+      },
       {
         "createdAt": "2026-06-29T09:52:52.145Z",
         "id": 2691,
@@ -106345,14 +106401,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 41,
-        "expectedOrders": 41,
+        "databaseOrders": 42,
+        "expectedOrders": 42,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-29",
         "label": "Смена 29.06",
         "missingOrders": 0,
-        "revenue": 1451,
+        "revenue": 1581,
         "status": "ok"
       },
       {
@@ -106850,12 +106906,12 @@
         "status": "ok"
       }
     ],
-    "total": 1645
+    "total": 1646
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 880
+      "total": 1010
     },
     {
       "method": "Карта",
@@ -106875,6 +106931,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2692,
+      "items": [
+        "Babl tea mini x1",
+        "Виноградный тропический mini x1",
+        "Айс Латте x1",
+        "Matcha mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 130
+    },
     {
       "id": 2691,
       "items": [
@@ -106930,14 +106997,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2684,
-      "items": [
-        "Виноградный тропический big x2"
-      ],
-      "status": "Оплачен",
-      "total": 52
     }
   ],
   "shifts": {
@@ -107073,6 +107132,11 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea mini",
+      "qty": 8,
+      "total": 160
+    },
+    {
       "name": "Мороженое классическое",
       "qty": 8,
       "total": 160
@@ -107088,9 +107152,9 @@
       "total": 140
     },
     {
-      "name": "Babl tea mini",
-      "qty": 7,
-      "total": 140
+      "name": "Айс Латте",
+      "qty": 4,
+      "total": 120
     },
     {
       "name": "Клубничный big",
@@ -107103,16 +107167,11 @@
       "total": 120
     },
     {
-      "name": "Айс Латте",
-      "qty": 3,
-      "total": 90
-    },
-    {
       "name": "Matcha big",
       "qty": 2,
       "total": 80
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-29T16:55:21.298Z"
+  "updatedAt": "2026-06-29T17:39:31.278Z"
 }

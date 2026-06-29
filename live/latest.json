@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.666666666666664,
-    "checks": 39,
+    "average": 35.525,
+    "checks": 40,
     "expenseTotal": 205,
-    "net": 1186,
-    "revenue": 1391
+    "net": 1216,
+    "revenue": 1421
   },
   "data": {
-    "actions": 3676,
+    "actions": 3678,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1643,
+    "orders": 1644,
     "products": 40,
     "shifts": 38
   },
   "activity": [
     {
+      "id": 1782725976842,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:39",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782725976842,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:39",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782725448335,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:20",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782720660116,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:11",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782720660116,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:11",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1643,
+    "current": 1644,
     "old": [
       {
         "createdAt": "2026-06-28T10:37:21.994Z",
@@ -52626,6 +52626,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-29T09:47:04.087Z",
+        "id": 2690,
+        "items": [
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 30,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-29",
+        "shiftLabel": "Смена 29.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-29T09:39:36.747Z",
         "id": 2689,
@@ -106287,14 +106316,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 39,
-        "expectedOrders": 39,
+        "databaseOrders": 40,
+        "expectedOrders": 40,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-29",
         "label": "Смена 29.06",
         "missingOrders": 0,
-        "revenue": 1391,
+        "revenue": 1421,
         "status": "ok"
       },
       {
@@ -106792,7 +106821,7 @@
         "status": "ok"
       }
     ],
-    "total": 1643
+    "total": 1644
   },
   "payments": [
     {
@@ -106809,7 +106838,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 206
+      "total": 236
     },
     {
       "method": "Семья",
@@ -106817,6 +106846,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2690,
+      "items": [
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2689,
       "items": [
@@ -106872,14 +106909,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2682,
-      "items": [
-        "Matcha big x2"
-      ],
-      "status": "Оплачен",
-      "total": 80
     }
   ],
   "shifts": {
@@ -107035,14 +107064,14 @@
       "total": 140
     },
     {
-      "name": "Мороженое манго",
-      "qty": 6,
+      "name": "Клубничный big",
+      "qty": 4,
       "total": 120
     },
     {
-      "name": "Клубничный big",
-      "qty": 3,
-      "total": 90
+      "name": "Мороженое манго",
+      "qty": 6,
+      "total": 120
     },
     {
       "name": "Matcha big",
@@ -107056,5 +107085,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-29T16:42:06.603Z"
+  "updatedAt": "2026-06-29T16:49:32.763Z"
 }

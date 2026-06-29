@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 34.2,
-    "checks": 5,
+    "average": 42.666666666666664,
+    "checks": 6,
     "expenseTotal": 205,
-    "net": -34,
-    "revenue": 171
+    "net": 51,
+    "revenue": 256
   },
   "data": {
-    "actions": 3608,
+    "actions": 3610,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1609,
+    "orders": 1610,
     "products": 40,
     "shifts": 38
   },
   "activity": [
+    {
+      "id": 1782688727258,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782688727258,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:18",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782687885268,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782643042066,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782642812332,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:33",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1609,
+    "current": 1610,
     "old": [
       {
         "createdAt": "2026-06-28T10:37:21.994Z",
@@ -52626,6 +52626,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-29T00:10:41.079Z",
+        "id": 2656,
+        "items": [
+          "Клубничный big x2",
+          "Капучино x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          },
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-29",
+        "shiftLabel": "Смена 29.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 85
+      },
       {
         "createdAt": "2026-06-28T23:18:47.188Z",
         "id": 2655,
@@ -105211,14 +105249,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 5,
-        "expectedOrders": 5,
+        "databaseOrders": 6,
+        "expectedOrders": 6,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-29",
         "label": "Смена 29.06",
         "missingOrders": 0,
-        "revenue": 171,
+        "revenue": 256,
         "status": "ok"
       },
       {
@@ -105716,12 +105754,12 @@
         "status": "ok"
       }
     ],
-    "total": 1609
+    "total": 1610
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 131
+      "total": 216
     },
     {
       "method": "Карта",
@@ -105741,6 +105779,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2656,
+      "items": [
+        "Клубничный big x2",
+        "Капучино x1"
+      ],
+      "status": "Оплачен",
+      "total": 85
+    },
     {
       "id": 2655,
       "items": [
@@ -105920,9 +105967,19 @@
       "total": 80
     },
     {
+      "name": "Клубничный big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
+    },
+    {
+      "name": "Капучино",
+      "qty": 1,
+      "total": 25
     },
     {
       "name": "Клубничный mini",
@@ -105941,5 +105998,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-29T06:21:17.179Z"
+  "updatedAt": "2026-06-29T07:13:11.495Z"
 }

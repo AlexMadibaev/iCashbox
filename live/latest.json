@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.078947368421055,
-    "checks": 38,
+    "average": 35.666666666666664,
+    "checks": 39,
     "expenseTotal": 205,
-    "net": 1166,
-    "revenue": 1371
+    "net": 1186,
+    "revenue": 1391
   },
   "data": {
-    "actions": 3674,
+    "actions": 3676,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1642,
+    "orders": 1643,
     "products": 40,
     "shifts": 38
   },
   "activity": [
     {
+      "id": 1782725448335,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:30",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782725448335,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:30",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782725273115,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782720416575,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:06",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782720416575,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:06",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1642,
+    "current": 1643,
     "old": [
       {
         "createdAt": "2026-06-28T10:37:21.994Z",
@@ -52626,6 +52626,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-29T09:39:36.747Z",
+        "id": 2689,
+        "items": [
+          "Мороженое манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-29",
+        "shiftLabel": "Смена 29.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-29T09:30:48.251Z",
         "id": 2688,
@@ -106258,14 +106287,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 38,
-        "expectedOrders": 38,
+        "databaseOrders": 39,
+        "expectedOrders": 39,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-29",
         "label": "Смена 29.06",
         "missingOrders": 0,
-        "revenue": 1371,
+        "revenue": 1391,
         "status": "ok"
       },
       {
@@ -106763,12 +106792,12 @@
         "status": "ok"
       }
     ],
-    "total": 1642
+    "total": 1643
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 860
+      "total": 880
     },
     {
       "method": "Карта",
@@ -106788,6 +106817,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2689,
+      "items": [
+        "Мороженое манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2688,
       "items": [
@@ -106843,16 +106880,6 @@
       ],
       "status": "Оплачен",
       "total": 80
-    },
-    {
-      "id": 2681,
-      "items": [
-        "Мороженое клубничное x1",
-        "Мороженое классическое x1",
-        "Мороженое манго x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -107009,8 +107036,8 @@
     },
     {
       "name": "Мороженое манго",
-      "qty": 5,
-      "total": 100
+      "qty": 6,
+      "total": 120
     },
     {
       "name": "Клубничный big",
@@ -107029,5 +107056,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-29T16:33:16.932Z"
+  "updatedAt": "2026-06-29T16:42:06.603Z"
 }

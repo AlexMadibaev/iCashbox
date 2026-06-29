@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38,
-    "checks": 9,
+    "average": 36.8,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 137,
-    "revenue": 342
+    "net": 163,
+    "revenue": 368
   },
   "data": {
-    "actions": 3616,
+    "actions": 3618,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1613,
+    "orders": 1614,
     "products": 40,
     "shifts": 38
   },
   "activity": [
     {
+      "id": 1782695915366,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782695915366,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:18",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782695602378,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:04",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782686500618,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782686500618,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:41",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1613,
+    "current": 1614,
     "old": [
       {
         "createdAt": "2026-06-28T10:37:21.994Z",
@@ -52626,6 +52626,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-29T01:25:54.344Z",
+        "id": 2660,
+        "items": [
+          "Клубничный жасмин big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-big",
+            "name": "Клубничный жасмин big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-29",
+        "shiftLabel": "Смена 29.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-06-29T01:18:35.283Z",
         "id": 2659,
@@ -105354,14 +105383,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-29",
         "label": "Смена 29.06",
         "missingOrders": 0,
-        "revenue": 342,
+        "revenue": 368,
         "status": "ok"
       },
       {
@@ -105859,12 +105888,12 @@
         "status": "ok"
       }
     ],
-    "total": 1613
+    "total": 1614
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 296
+      "total": 322
     },
     {
       "method": "Карта",
@@ -105884,6 +105913,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2660,
+      "items": [
+        "Клубничный жасмин big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 2659,
       "items": [
@@ -105942,14 +105979,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 2652,
-      "items": [
-        "Жасмин лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -106100,6 +106129,11 @@
       "total": 60
     },
     {
+      "name": "Клубничный жасмин big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
@@ -106118,13 +106152,8 @@
       "name": "Манго Маракуя mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 2,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-29T08:21:05.038Z"
+  "updatedAt": "2026-06-29T08:28:24.136Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36,
-    "checks": 9,
+    "average": 34.4,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 119,
-    "revenue": 324
+    "net": 139,
+    "revenue": 344
   },
   "data": {
-    "actions": 3701,
+    "actions": 3703,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1655,
+    "orders": 1656,
     "products": 40,
     "shifts": 39
   },
   "activity": [
     {
+      "id": 1782785406185,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:10",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782785406185,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:10",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782783394022,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782778020082,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:07",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782778020082,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:07",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1655,
+    "current": 1656,
     "old": [
       {
         "createdAt": "2026-06-29T10:37:01.175Z",
@@ -53961,6 +53961,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-30T03:08:20.410Z",
+        "id": 2702,
+        "items": [
+          "Мороженое клубничное x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 20,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-30",
+        "shiftLabel": "Смена 30.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-30T02:10:06.109Z",
         "id": 2701,
@@ -108024,14 +108053,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-30",
         "label": "Смена 30.06",
         "missingOrders": 0,
-        "revenue": 324,
+        "revenue": 344,
         "status": "ok"
       },
       {
@@ -108542,7 +108571,7 @@
         "status": "ok"
       }
     ],
-    "total": 1655
+    "total": 1656
   },
   "payments": [
     {
@@ -108555,7 +108584,7 @@
     },
     {
       "method": "Alif",
-      "total": 90
+      "total": 110
     },
     {
       "method": "Dushanbe City",
@@ -108567,6 +108596,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2702,
+      "items": [
+        "Мороженое клубничное x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2701,
       "items": [
@@ -108624,15 +108661,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 2694,
-      "items": [
-        "Черника big x1",
-        "Клубничный big x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -108783,6 +108811,11 @@
       "total": 45
     },
     {
+      "name": "Мороженое клубничное",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Черника big",
       "qty": 1,
       "total": 30
@@ -108801,13 +108834,8 @@
       "name": "Жасмин лимон mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-30T09:12:36.624Z"
+  "updatedAt": "2026-06-30T10:10:50.897Z"
 }

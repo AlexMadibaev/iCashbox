@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.96551724137931,
-    "checks": 29,
+    "average": 36.4,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 867,
-    "revenue": 1072
+    "net": 887,
+    "revenue": 1092
   },
   "data": {
-    "actions": 3741,
+    "actions": 3743,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1675,
+    "orders": 1676,
     "products": 40,
     "shifts": 39
   },
   "activity": [
     {
+      "id": 1782807496781,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782807496781,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:18",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782807237827,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782801685088,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782801685088,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:41",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1675,
+    "current": 1676,
     "old": [
       {
         "createdAt": "2026-06-29T10:37:01.175Z",
@@ -53961,6 +53961,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-30T08:19:05.481Z",
+        "id": 2722,
+        "items": [
+          "Мороженое клубничное x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 20,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-30",
+        "shiftLabel": "Смена 30.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-30T08:18:16.711Z",
         "id": 2721,
@@ -108694,14 +108723,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-30",
         "label": "Смена 30.06",
         "missingOrders": 0,
-        "revenue": 1072,
+        "revenue": 1092,
         "status": "ok"
       },
       {
@@ -109212,7 +109241,7 @@
         "status": "ok"
       }
     ],
-    "total": 1675
+    "total": 1676
   },
   "payments": [
     {
@@ -109225,7 +109254,7 @@
     },
     {
       "method": "Alif",
-      "total": 291
+      "total": 311
     },
     {
       "method": "Dushanbe City",
@@ -109237,6 +109266,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2722,
+      "items": [
+        "Мороженое клубничное x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2721,
       "items": [
@@ -109295,14 +109332,6 @@
       ],
       "status": "Оплачен",
       "total": 70
-    },
-    {
-      "id": 2714,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -109453,6 +109482,11 @@
       "total": 90
     },
     {
+      "name": "Мороженое клубничное",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Babl tea big",
       "qty": 3,
       "total": 78
@@ -109471,13 +109505,8 @@
       "name": "Мороженое с тапиокой",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Виноградный тропический mini",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-30T15:20:45.951Z"
+  "updatedAt": "2026-06-30T15:21:34.680Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.111111111111114,
-    "checks": 27,
+    "average": 37.92857142857143,
+    "checks": 28,
     "expenseTotal": 205,
-    "net": 797,
-    "revenue": 1002
+    "net": 857,
+    "revenue": 1062
   },
   "data": {
-    "actions": 3737,
+    "actions": 3739,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1673,
+    "orders": 1674,
     "products": 40,
     "shifts": 39
   },
   "activity": [
     {
+      "id": 1782807082835,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:11",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782807082835,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:11",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782806713956,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:03",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782799153599,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:59",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782799153599,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:59",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1673,
+    "current": 1674,
     "old": [
       {
         "createdAt": "2026-06-29T10:37:01.175Z",
@@ -53961,6 +53961,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-30T08:13:57.743Z",
+        "id": 2720,
+        "items": [
+          "Клубничный big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 60,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-30",
+        "shiftLabel": "Смена 30.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-06-30T08:11:22.755Z",
         "id": 2719,
@@ -108636,14 +108665,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 27,
-        "expectedOrders": 27,
+        "databaseOrders": 28,
+        "expectedOrders": 28,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-30",
         "label": "Смена 30.06",
         "missingOrders": 0,
-        "revenue": 1002,
+        "revenue": 1062,
         "status": "ok"
       },
       {
@@ -109154,7 +109183,7 @@
         "status": "ok"
       }
     ],
-    "total": 1673
+    "total": 1674
   },
   "payments": [
     {
@@ -109171,7 +109200,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 0
+      "total": 60
     },
     {
       "method": "Семья",
@@ -109179,6 +109208,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2720,
+      "items": [
+        "Клубничный big x2"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2719,
       "items": [
@@ -109237,14 +109274,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 2712,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -109380,6 +109409,11 @@
   },
   "topProducts": [
     {
+      "name": "Клубничный big",
+      "qty": 5,
+      "total": 150
+    },
+    {
       "name": "Babl tea mini",
       "qty": 7,
       "total": 140
@@ -109387,11 +109421,6 @@
     {
       "name": "Cake-Pops",
       "qty": 6,
-      "total": 90
-    },
-    {
-      "name": "Клубничный big",
-      "qty": 3,
       "total": 90
     },
     {
@@ -109421,5 +109450,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-30T15:13:52.907Z"
+  "updatedAt": "2026-06-30T15:16:27.169Z"
 }

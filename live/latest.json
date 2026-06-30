@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 30.25,
-    "checks": 4,
+    "average": 44.8,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": -84,
-    "revenue": 121
+    "net": 19,
+    "revenue": 224
   },
   "data": {
-    "actions": 3691,
+    "actions": 3693,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1650,
+    "orders": 1651,
     "products": 40,
     "shifts": 39
   },
   "activity": [
+    {
+      "id": 1782778269097,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:11",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782778269097,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:11",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782778020082,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:52",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782726772229,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782726424177,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:47",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1650,
+    "current": 1651,
     "old": [
       {
         "createdAt": "2026-06-29T10:37:01.175Z",
@@ -53961,6 +53961,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-30T00:37:36.477Z",
+        "id": 2697,
+        "items": [
+          "Клубничный mini x1",
+          "Babl tea big x3"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 3,
+            "size": "",
+            "total": 78
+          }
+        ],
+        "payments": {
+          "Наличные": 103,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-30",
+        "shiftLabel": "Смена 30.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 103
+      },
       {
         "createdAt": "2026-06-30T00:11:09.025Z",
         "id": 2696,
@@ -107861,14 +107899,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-30",
         "label": "Смена 30.06",
         "missingOrders": 0,
-        "revenue": 121,
+        "revenue": 224,
         "status": "ok"
       },
       {
@@ -108379,12 +108417,12 @@
         "status": "ok"
       }
     ],
-    "total": 1650
+    "total": 1651
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 46
+      "total": 149
     },
     {
       "method": "Карта",
@@ -108404,6 +108442,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2697,
+      "items": [
+        "Клубничный mini x1",
+        "Babl tea big x3"
+      ],
+      "status": "Оплачен",
+      "total": 103
+    },
     {
       "id": 2696,
       "items": [
@@ -108571,6 +108618,11 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea big",
+      "qty": 3,
+      "total": 78
+    },
+    {
       "name": "Черника big",
       "qty": 1,
       "total": 30
@@ -108586,6 +108638,11 @@
       "total": 26
     },
     {
+      "name": "Клубничный mini",
+      "qty": 1,
+      "total": 25
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 1,
       "total": 20
@@ -108597,5 +108654,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-30T07:13:38.676Z"
+  "updatedAt": "2026-06-30T07:40:07.383Z"
 }

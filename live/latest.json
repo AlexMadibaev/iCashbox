@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.3125,
-    "checks": 32,
+    "average": 36.42424242424242,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 957,
-    "revenue": 1162
+    "net": 997,
+    "revenue": 1202
   },
   "data": {
-    "actions": 3747,
+    "actions": 3749,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1678,
+    "orders": 1679,
     "products": 40,
     "shifts": 39
   },
   "activity": [
     {
+      "id": 1782812103092,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:35",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782812103092,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:35",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782812090488,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782806713956,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:05",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782806713956,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:05",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1678,
+    "current": 1679,
     "old": [
       {
         "createdAt": "2026-06-29T10:37:01.175Z",
@@ -53961,6 +53961,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-30T10:16:58.493Z",
+        "id": 2725,
+        "items": [
+          "Мороженое классическое x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-30",
+        "shiftLabel": "Смена 30.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-30T09:35:03.021Z",
         "id": 2724,
@@ -108781,14 +108810,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 32,
-        "expectedOrders": 32,
+        "databaseOrders": 33,
+        "expectedOrders": 33,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-30",
         "label": "Смена 30.06",
         "missingOrders": 0,
-        "revenue": 1162,
+        "revenue": 1202,
         "status": "ok"
       },
       {
@@ -109299,12 +109328,12 @@
         "status": "ok"
       }
     ],
-    "total": 1678
+    "total": 1679
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 751
+      "total": 791
     },
     {
       "method": "Карта",
@@ -109324,6 +109353,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2725,
+      "items": [
+        "Мороженое классическое x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2724,
       "items": [
@@ -109381,14 +109418,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2717,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -109554,16 +109583,16 @@
       "total": 78
     },
     {
-      "name": "Matcha mini",
-      "qty": 2,
+      "name": "Мороженое классическое",
+      "qty": 3,
       "total": 60
     },
     {
-      "name": "Мороженое с тапиокой",
-      "qty": 3,
+      "name": "Matcha mini",
+      "qty": 2,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-30T16:37:31.771Z"
+  "updatedAt": "2026-06-30T17:19:29.531Z"
 }

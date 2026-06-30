@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.76923076923077,
-    "checks": 13,
+    "average": 37.92857142857143,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 286,
-    "revenue": 491
+    "net": 326,
+    "revenue": 531
   },
   "data": {
-    "actions": 3709,
+    "actions": 3711,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1659,
+    "orders": 1660,
     "products": 40,
     "shifts": 39
   },
   "activity": [
     {
+      "id": 1782793678272,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782793678272,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:27",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782791846871,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:36",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782783245331,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:34",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782783245331,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:34",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1659,
+    "current": 1660,
     "old": [
       {
         "createdAt": "2026-06-29T10:37:01.175Z",
@@ -53961,6 +53961,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-30T04:48:32.063Z",
+        "id": 2706,
+        "items": [
+          "Фреш лимон mini x1",
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-фреш-лимон-mini",
+            "name": "Фреш лимон mini",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          },
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-30",
+        "shiftLabel": "Смена 30.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-06-30T04:27:58.198Z",
         "id": 2705,
@@ -108167,14 +108205,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-30",
         "label": "Смена 30.06",
         "missingOrders": 0,
-        "revenue": 491,
+        "revenue": 531,
         "status": "ok"
       },
       {
@@ -108685,12 +108723,12 @@
         "status": "ok"
       }
     ],
-    "total": 1659
+    "total": 1660
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 300
+      "total": 340
     },
     {
       "method": "Карта",
@@ -108710,6 +108748,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2706,
+      "items": [
+        "Фреш лимон mini x1",
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2705,
       "items": [
@@ -108768,15 +108815,6 @@
       ],
       "status": "Оплачен",
       "total": 15
-    },
-    {
-      "id": 2698,
-      "items": [
-        "Жасмин лимон mini x1",
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -108953,5 +108991,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-30T11:30:28.667Z"
+  "updatedAt": "2026-06-30T11:51:02.552Z"
 }

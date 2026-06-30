@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.516129032258064,
-    "checks": 31,
+    "average": 36.3125,
+    "checks": 32,
     "expenseTotal": 205,
-    "net": 927,
-    "revenue": 1132
+    "net": 957,
+    "revenue": 1162
   },
   "data": {
-    "actions": 3745,
+    "actions": 3747,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1677,
+    "orders": 1678,
     "products": 40,
     "shifts": 39
   },
   "activity": [
     {
+      "id": 1782812090488,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:34",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782812090488,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:34",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782807545553,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:05",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782805219298,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:40",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782805219298,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:40",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1677,
+    "current": 1678,
     "old": [
       {
         "createdAt": "2026-06-29T10:37:01.175Z",
@@ -53961,6 +53961,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-30T09:35:03.021Z",
+        "id": 2724,
+        "items": [
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-30",
+        "shiftLabel": "Смена 30.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-06-30T09:34:50.403Z",
         "id": 2723,
@@ -108752,14 +108781,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 31,
-        "expectedOrders": 31,
+        "databaseOrders": 32,
+        "expectedOrders": 32,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-30",
         "label": "Смена 30.06",
         "missingOrders": 0,
-        "revenue": 1132,
+        "revenue": 1162,
         "status": "ok"
       },
       {
@@ -109270,12 +109299,12 @@
         "status": "ok"
       }
     ],
-    "total": 1677
+    "total": 1678
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 721
+      "total": 751
     },
     {
       "method": "Карта",
@@ -109295,6 +109324,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2724,
+      "items": [
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2723,
       "items": [
@@ -109352,14 +109389,6 @@
       ],
       "status": "Оплачен",
       "total": 10
-    },
-    {
-      "id": 2716,
-      "items": [
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -109496,8 +109525,8 @@
   "topProducts": [
     {
       "name": "Клубничный big",
-      "qty": 5,
-      "total": 150
+      "qty": 6,
+      "total": 180
     },
     {
       "name": "Babl tea mini",
@@ -109536,5 +109565,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-30T16:37:21.070Z"
+  "updatedAt": "2026-06-30T16:37:31.771Z"
 }

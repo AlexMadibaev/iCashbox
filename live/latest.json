@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.23809523809524,
-    "checks": 21,
+    "average": 36.45454545454545,
+    "checks": 22,
     "expenseTotal": 205,
-    "net": 577,
-    "revenue": 782
+    "net": 597,
+    "revenue": 802
   },
   "data": {
-    "actions": 3725,
+    "actions": 3727,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1667,
+    "orders": 1668,
     "products": 40,
     "shifts": 39
   },
   "activity": [
     {
+      "id": 1782799153599,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782799153599,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:59",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782799106143,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782796012080,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:06",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782796012080,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:06",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1667,
+    "current": 1668,
     "old": [
       {
         "createdAt": "2026-06-29T10:37:01.175Z",
@@ -53961,6 +53961,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-30T06:03:13.889Z",
+        "id": 2714,
+        "items": [
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-06-30",
+        "shiftLabel": "Смена 30.06",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-30T05:59:13.517Z",
         "id": 2713,
@@ -108435,14 +108464,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 21,
-        "expectedOrders": 21,
+        "databaseOrders": 22,
+        "expectedOrders": 22,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-06-30",
         "label": "Смена 30.06",
         "missingOrders": 0,
-        "revenue": 782,
+        "revenue": 802,
         "status": "ok"
       },
       {
@@ -108953,12 +108982,12 @@
         "status": "ok"
       }
     ],
-    "total": 1667
+    "total": 1668
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 531
+      "total": 551
     },
     {
       "method": "Карта",
@@ -108978,6 +109007,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2714,
+      "items": [
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2713,
       "items": [
@@ -109036,15 +109073,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2706,
-      "items": [
-        "Фреш лимон mini x1",
-        "Черника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -109181,8 +109209,8 @@
   "topProducts": [
     {
       "name": "Babl tea mini",
-      "qty": 6,
-      "total": 120
+      "qty": 7,
+      "total": 140
     },
     {
       "name": "Клубничный big",
@@ -109221,5 +109249,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-06-30T13:01:42.892Z"
+  "updatedAt": "2026-06-30T13:05:43.201Z"
 }

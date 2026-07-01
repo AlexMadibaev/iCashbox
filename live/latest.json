@@ -6,23 +6,51 @@
     "open": true
   },
   "summary": {
-    "average": 60,
-    "checks": 1,
+    "average": 40,
+    "checks": 2,
     "expenseTotal": 205,
-    "net": -145,
-    "revenue": 60
+    "net": -125,
+    "revenue": 80
   },
   "data": {
-    "actions": 3752,
+    "actions": 3756,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1680,
+    "orders": 1681,
     "products": 40,
     "shifts": 40
   },
   "activity": [
+    {
+      "id": 1782861103003,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:11",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782861103003,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:11",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1782858403891,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:26",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782858403891,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:26",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782855708506,
       "source": "Локально",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782807545553,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:19",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782807496781,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:18",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782807496781,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:18",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782807237827,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:13",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1680,
+    "current": 1681,
     "old": [
       {
         "createdAt": "2026-06-30T10:16:58.493Z",
@@ -55035,6 +55035,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-30T23:11:42.916Z",
+        "id": 2727,
+        "items": [
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-01",
+        "shiftLabel": "Смена 01.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-06-30T22:26:43.762Z",
         "id": 2726,
@@ -109931,14 +109960,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 1,
-        "expectedOrders": 1,
+        "databaseOrders": 2,
+        "expectedOrders": 2,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-01",
         "label": "Смена 01.07",
         "missingOrders": 0,
-        "revenue": 60,
+        "revenue": 80,
         "status": "ok"
       },
       {
@@ -110462,12 +110491,12 @@
         "status": "ok"
       }
     ],
-    "total": 1680
+    "total": 1681
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 60
+      "total": 80
     },
     {
       "method": "Карта",
@@ -110487,6 +110516,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2727,
+      "items": [
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2726,
       "items": [
@@ -110631,6 +110668,11 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 1,
       "total": 20
@@ -110647,5 +110689,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-01T05:29:15.590Z"
+  "updatedAt": "2026-07-01T06:14:15.733Z"
 }

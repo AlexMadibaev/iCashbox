@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 30.807692307692307,
-    "checks": 26,
+    "average": 30.77777777777778,
+    "checks": 27,
     "expenseTotal": 205,
-    "net": 596,
-    "revenue": 801
+    "net": 626,
+    "revenue": 831
   },
   "data": {
-    "actions": 3802,
+    "actions": 3804,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1705,
+    "orders": 1706,
     "products": 40,
     "shifts": 40
   },
   "activity": [
     {
+      "id": 1782880763593,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:39",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782880763593,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:39",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782880722903,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:53",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782877078363,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782877078363,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:37",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1705,
+    "current": 1706,
     "old": [
       {
         "createdAt": "2026-06-30T10:16:58.493Z",
@@ -55035,6 +55035,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-01T04:40:07.353Z",
+        "id": 2752,
+        "items": [
+          "Cake-Pops Шт x2"
+        ],
+        "lines": [
+          {
+            "id": "product-1782200595826",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 2,
+            "size": "Шт",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-01",
+        "shiftLabel": "Смена 01.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-01T04:39:23.504Z",
         "id": 2751,
@@ -110665,14 +110694,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 26,
-        "expectedOrders": 26,
+        "databaseOrders": 27,
+        "expectedOrders": 27,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-01",
         "label": "Смена 01.07",
         "missingOrders": 0,
-        "revenue": 801,
+        "revenue": 831,
         "status": "ok"
       },
       {
@@ -111196,12 +111225,12 @@
         "status": "ok"
       }
     ],
-    "total": 1705
+    "total": 1706
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 506
+      "total": 536
     },
     {
       "method": "Карта",
@@ -111221,6 +111250,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2752,
+      "items": [
+        "Cake-Pops Шт x2"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2751,
       "items": [
@@ -111273,14 +111310,6 @@
       "id": 2745,
       "items": [
         "Мороженое клубничное x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 2744,
-      "items": [
-        "Мороженое с тапиокой x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -111439,6 +111468,11 @@
       "total": 100
     },
     {
+      "name": "Cake-Pops",
+      "qty": 3,
+      "total": 45
+    },
+    {
       "name": "Matcha big",
       "qty": 1,
       "total": 40
@@ -111452,13 +111486,8 @@
       "name": "Манго Маракуя mini",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Клубничный big",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-01T11:41:54.176Z"
+  "updatedAt": "2026-07-01T11:42:37.876Z"
 }

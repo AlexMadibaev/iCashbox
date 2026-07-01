@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 31.975609756097562,
-    "checks": 41,
+    "average": 31.928571428571427,
+    "checks": 42,
     "expenseTotal": 205,
-    "net": 1106,
-    "revenue": 1311
+    "net": 1136,
+    "revenue": 1341
   },
   "data": {
-    "actions": 3832,
+    "actions": 3834,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1720,
+    "orders": 1721,
     "products": 40,
     "shifts": 40
   },
   "activity": [
     {
+      "id": 1782893976328,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:19",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782893976328,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:19",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782891813743,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:25",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782888317569,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:45",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782888317569,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:45",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1720,
+    "current": 1721,
     "old": [
       {
         "createdAt": "2026-06-30T10:16:58.493Z",
@@ -55035,6 +55035,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-01T08:29:57.184Z",
+        "id": 2767,
+        "items": [
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-01",
+        "shiftLabel": "Смена 01.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-01T08:19:36.247Z",
         "id": 2766,
@@ -111136,14 +111165,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 41,
-        "expectedOrders": 41,
+        "databaseOrders": 42,
+        "expectedOrders": 42,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-01",
         "label": "Смена 01.07",
         "missingOrders": 0,
-        "revenue": 1311,
+        "revenue": 1341,
         "status": "ok"
       },
       {
@@ -111667,12 +111696,12 @@
         "status": "ok"
       }
     ],
-    "total": 1720
+    "total": 1721
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 891
+      "total": 921
     },
     {
       "method": "Карта",
@@ -111692,6 +111721,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2767,
+      "items": [
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2766,
       "items": [
@@ -111745,14 +111782,6 @@
       "id": 2760,
       "items": [
         "Виноградный тропический mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
-    },
-    {
-      "id": 2759,
-      "items": [
-        "Мороженое манго x2"
       ],
       "status": "Оплачен",
       "total": 40
@@ -111911,6 +111940,11 @@
       "total": 130
     },
     {
+      "name": "Айс Латте",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Виноградный тропический mini",
       "qty": 4,
       "total": 80
@@ -111924,13 +111958,8 @@
       "name": "Клубничный big",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Клубничный жасмин mini",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-01T15:22:07.515Z"
+  "updatedAt": "2026-07-01T15:32:29.134Z"
 }

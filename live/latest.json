@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.58490566037736,
-    "checks": 53,
+    "average": 34.074074074074076,
+    "checks": 54,
     "expenseTotal": 205,
-    "net": 1575,
-    "revenue": 1780
+    "net": 1635,
+    "revenue": 1840
   },
   "data": {
-    "actions": 3856,
+    "actions": 3858,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1732,
+    "orders": 1733,
     "products": 40,
     "shifts": 40
   },
   "activity": [
     {
+      "id": 1782901574169,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:26",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782901574169,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:26",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782899738601,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782898529739,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:35",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782898529739,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:35",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1732,
+    "current": 1733,
     "old": [
       {
         "createdAt": "2026-06-30T10:16:58.493Z",
@@ -55035,6 +55035,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-01T10:31:40.326Z",
+        "id": 2779,
+        "items": [
+          "Мороженое манго x1",
+          "Мороженое классическое x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-01",
+        "shiftLabel": "Смена 01.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-01T10:26:14.094Z",
         "id": 2778,
@@ -111529,14 +111567,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 53,
-        "expectedOrders": 53,
+        "databaseOrders": 54,
+        "expectedOrders": 54,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-01",
         "label": "Смена 01.07",
         "missingOrders": 0,
-        "revenue": 1780,
+        "revenue": 1840,
         "status": "ok"
       },
       {
@@ -112060,12 +112098,12 @@
         "status": "ok"
       }
     ],
-    "total": 1732
+    "total": 1733
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1056
+      "total": 1116
     },
     {
       "method": "Карта",
@@ -112085,6 +112123,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2779,
+      "items": [
+        "Мороженое манго x1",
+        "Мороженое классическое x2"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2778,
       "items": [
@@ -112143,16 +112190,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 2771,
-      "items": [
-        "Babl tea big x2",
-        "Cake-Pops Шт x1",
-        "МангоБанан mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 92
     }
   ],
   "shifts": {
@@ -112293,6 +112330,11 @@
       "total": 234
     },
     {
+      "name": "Мороженое классическое",
+      "qty": 9,
+      "total": 180
+    },
+    {
       "name": "Babl tea mini",
       "qty": 9,
       "total": 180
@@ -112303,14 +112345,14 @@
       "total": 150
     },
     {
-      "name": "Мороженое классическое",
-      "qty": 7,
-      "total": 140
-    },
-    {
       "name": "МангоБанан mini",
       "qty": 5,
       "total": 125
+    },
+    {
+      "name": "Мороженое манго",
+      "qty": 5,
+      "total": 100
     },
     {
       "name": "Мороженое клубничное",
@@ -112321,13 +112363,8 @@
       "name": "Виноградный тропический mini",
       "qty": 5,
       "total": 100
-    },
-    {
-      "name": "Черника mini",
-      "qty": 4,
-      "total": 100
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-01T17:28:45.641Z"
+  "updatedAt": "2026-07-01T17:34:11.621Z"
 }

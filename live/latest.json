@@ -6,23 +6,51 @@
     "open": true
   },
   "summary": {
-    "average": 33.333333333333336,
-    "checks": 3,
+    "average": 27.5,
+    "checks": 4,
     "expenseTotal": 205,
-    "net": -105,
-    "revenue": 100
+    "net": -95,
+    "revenue": 110
   },
   "data": {
-    "actions": 3756,
+    "actions": 3760,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1682,
+    "orders": 1683,
     "products": 40,
     "shifts": 40
   },
   "activity": [
+    {
+      "id": 1782862148943,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782862148943,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:29",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1782861139656,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:12",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782861139656,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:12",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782861103003,
       "source": "Локально",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:35",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782812103092,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:35",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782812090488,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:34",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782812090488,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:34",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782807545553,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:19",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1682,
+    "current": 1683,
     "old": [
       {
         "createdAt": "2026-06-30T10:16:58.493Z",
@@ -55035,6 +55035,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-06-30T23:29:08.864Z",
+        "id": 2729,
+        "items": [
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 10,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-01",
+        "shiftLabel": "Смена 01.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 10
+      },
       {
         "createdAt": "2026-06-30T23:12:19.558Z",
         "id": 2728,
@@ -109989,14 +110018,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 3,
-        "expectedOrders": 3,
+        "databaseOrders": 4,
+        "expectedOrders": 4,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-01",
         "label": "Смена 01.07",
         "missingOrders": 0,
-        "revenue": 100,
+        "revenue": 110,
         "status": "ok"
       },
       {
@@ -110520,12 +110549,12 @@
         "status": "ok"
       }
     ],
-    "total": 1682
+    "total": 1683
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 100
+      "total": 110
     },
     {
       "method": "Карта",
@@ -110545,6 +110574,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2729,
+      "items": [
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 10
+    },
     {
       "id": 2728,
       "items": [
@@ -110728,8 +110765,13 @@
       "name": "Мороженое манго",
       "qty": 1,
       "total": 20
+    },
+    {
+      "name": "Мороженое рожок",
+      "qty": 1,
+      "total": 10
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-01T06:14:50.364Z"
+  "updatedAt": "2026-07-01T06:31:41.385Z"
 }

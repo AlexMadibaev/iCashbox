@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 27.833333333333332,
-    "checks": 18,
+    "average": 27.42105263157895,
+    "checks": 19,
     "expenseTotal": 205,
-    "net": 296,
-    "revenue": 501
+    "net": 316,
+    "revenue": 521
   },
   "data": {
-    "actions": 3786,
+    "actions": 3788,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1697,
+    "orders": 1698,
     "products": 40,
     "shifts": 40
   },
   "activity": [
     {
+      "id": 1782876522451,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:28",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782876522451,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:28",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782875919947,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:49",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782870383493,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:46",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782870383493,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:46",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1697,
+    "current": 1698,
     "old": [
       {
         "createdAt": "2026-06-30T10:16:58.493Z",
@@ -55035,6 +55035,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-01T03:30:50.411Z",
+        "id": 2744,
+        "items": [
+          "Мороженое с тапиокой x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 20,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-01",
+        "shiftLabel": "Смена 01.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-01T03:28:42.377Z",
         "id": 2743,
@@ -110433,14 +110462,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 18,
-        "expectedOrders": 18,
+        "databaseOrders": 19,
+        "expectedOrders": 19,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-01",
         "label": "Смена 01.07",
         "missingOrders": 0,
-        "revenue": 501,
+        "revenue": 521,
         "status": "ok"
       },
       {
@@ -110964,7 +110993,7 @@
         "status": "ok"
       }
     ],
-    "total": 1697
+    "total": 1698
   },
   "payments": [
     {
@@ -110981,7 +111010,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 0
+      "total": 20
     },
     {
       "method": "Семья",
@@ -110989,6 +111018,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2744,
+      "items": [
+        "Мороженое с тапиокой x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2743,
       "items": [
@@ -111045,14 +111082,6 @@
       ],
       "status": "Оплачен",
       "total": 10
-    },
-    {
-      "id": 2736,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -111223,11 +111252,11 @@
       "total": 26
     },
     {
-      "name": "Мороженое классическое",
+      "name": "Мороженое с тапиокой",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-01T10:31:14.038Z"
+  "updatedAt": "2026-07-01T10:33:21.022Z"
 }

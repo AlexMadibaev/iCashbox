@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 31.91111111111111,
-    "checks": 45,
+    "average": 33.21739130434783,
+    "checks": 46,
     "expenseTotal": 205,
-    "net": 1231,
-    "revenue": 1436
+    "net": 1323,
+    "revenue": 1528
   },
   "data": {
-    "actions": 3840,
+    "actions": 3842,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1724,
+    "orders": 1725,
     "products": 40,
     "shifts": 40
   },
   "activity": [
     {
+      "id": 1782897760719,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782897760719,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782896534070,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782891537768,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:38",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782891537768,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:38",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1724,
+    "current": 1725,
     "old": [
       {
         "createdAt": "2026-06-30T10:16:58.493Z",
@@ -55035,6 +55035,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-01T09:35:14.723Z",
+        "id": 2771,
+        "items": [
+          "Babl tea big x2",
+          "Cake-Pops Шт x1",
+          "МангоБанан mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          },
+          {
+            "id": "product-1782200595826",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "Шт",
+            "total": 15
+          },
+          {
+            "id": "product-милкшейк-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 92,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-01",
+        "shiftLabel": "Смена 01.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 92
+      },
       {
         "createdAt": "2026-07-01T09:22:40.631Z",
         "id": 2770,
@@ -111252,14 +111299,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 45,
-        "expectedOrders": 45,
+        "databaseOrders": 46,
+        "expectedOrders": 46,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-01",
         "label": "Смена 01.07",
         "missingOrders": 0,
-        "revenue": 1436,
+        "revenue": 1528,
         "status": "ok"
       },
       {
@@ -111783,7 +111830,7 @@
         "status": "ok"
       }
     ],
-    "total": 1724
+    "total": 1725
   },
   "payments": [
     {
@@ -111800,7 +111847,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 110
+      "total": 202
     },
     {
       "method": "Семья",
@@ -111808,6 +111855,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2771,
+      "items": [
+        "Babl tea big x2",
+        "Cake-Pops Шт x1",
+        "МангоБанан mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 92
+    },
     {
       "id": 2770,
       "items": [
@@ -111858,14 +111915,6 @@
     },
     {
       "id": 2764,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 2763,
       "items": [
         "Babl tea mini x1"
       ],
@@ -112006,6 +112055,11 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea big",
+      "qty": 7,
+      "total": 182
+    },
+    {
       "name": "Babl tea mini",
       "qty": 8,
       "total": 160
@@ -112021,9 +112075,9 @@
       "total": 140
     },
     {
-      "name": "Babl tea big",
-      "qty": 5,
-      "total": 130
+      "name": "МангоБанан mini",
+      "qty": 4,
+      "total": 100
     },
     {
       "name": "Айс Латте",
@@ -112039,13 +112093,8 @@
       "name": "Виноградный тропический mini",
       "qty": 4,
       "total": 80
-    },
-    {
-      "name": "Мороженое клубничное",
-      "qty": 4,
-      "total": 80
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-01T16:25:12.128Z"
+  "updatedAt": "2026-07-01T16:37:46.829Z"
 }

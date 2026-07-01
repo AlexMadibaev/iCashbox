@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.56,
-    "checks": 50,
+    "average": 34.411764705882355,
+    "checks": 51,
     "expenseTotal": 205,
-    "net": 1473,
-    "revenue": 1678
+    "net": 1550,
+    "revenue": 1755
   },
   "data": {
-    "actions": 3850,
+    "actions": 3852,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1729,
+    "orders": 1730,
     "products": 40,
     "shifts": 40
   },
   "activity": [
     {
+      "id": 1782899326839,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:48",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782899326839,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:48",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782899068901,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782896534070,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:02",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782896534070,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:02",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1729,
+    "current": 1730,
     "old": [
       {
         "createdAt": "2026-06-30T10:16:58.493Z",
@@ -55035,6 +55035,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-01T09:50:31.175Z",
+        "id": 2776,
+        "items": [
+          "Babl tea big x2",
+          "МангоБанан mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          },
+          {
+            "id": "product-милкшейк-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 77,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-01",
+        "shiftLabel": "Смена 01.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 77
+      },
       {
         "createdAt": "2026-07-01T09:48:46.733Z",
         "id": 2775,
@@ -111433,14 +111471,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 50,
-        "expectedOrders": 50,
+        "databaseOrders": 51,
+        "expectedOrders": 51,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-01",
         "label": "Смена 01.07",
         "missingOrders": 0,
-        "revenue": 1678,
+        "revenue": 1755,
         "status": "ok"
       },
       {
@@ -111964,7 +112002,7 @@
         "status": "ok"
       }
     ],
-    "total": 1729
+    "total": 1730
   },
   "payments": [
     {
@@ -111977,7 +112015,7 @@
     },
     {
       "method": "Alif",
-      "total": 395
+      "total": 472
     },
     {
       "method": "Dushanbe City",
@@ -111989,6 +112027,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2776,
+      "items": [
+        "Babl tea big x2",
+        "МангоБанан mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 77
+    },
     {
       "id": 2775,
       "items": [
@@ -112048,14 +112095,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 2768,
-      "items": [
-        "МангоБанан mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -112192,8 +112231,8 @@
   "topProducts": [
     {
       "name": "Babl tea big",
-      "qty": 7,
-      "total": 182
+      "qty": 9,
+      "total": 234
     },
     {
       "name": "Babl tea mini",
@@ -112211,6 +112250,11 @@
       "total": 140
     },
     {
+      "name": "МангоБанан mini",
+      "qty": 5,
+      "total": 125
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 5,
       "total": 100
@@ -112224,13 +112268,8 @@
       "name": "Черника mini",
       "qty": 4,
       "total": 100
-    },
-    {
-      "name": "МангоБанан mini",
-      "qty": 4,
-      "total": 100
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-01T16:51:17.262Z"
+  "updatedAt": "2026-07-01T16:53:01.273Z"
 }

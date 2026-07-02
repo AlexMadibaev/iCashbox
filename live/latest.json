@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 46.8,
-    "checks": 10,
+    "average": 48,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 263,
-    "revenue": 468
+    "net": 323,
+    "revenue": 528
   },
   "data": {
-    "actions": 3886,
+    "actions": 3888,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1745,
+    "orders": 1746,
     "products": 40,
     "shifts": 41
   },
   "activity": [
     {
+      "id": 1782955064071,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:17",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782955064071,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:17",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782954567790,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:56",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782948283467,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:24",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782948283467,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:24",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1745,
+    "current": 1746,
     "old": [
       {
         "createdAt": "2026-07-01T10:41:47.147Z",
@@ -56776,6 +56776,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-02T01:37:51.205Z",
+        "id": 2793,
+        "items": [
+          "Черника big x1",
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 60,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-02",
+        "shiftLabel": "Смена 02.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-02T01:17:43.967Z",
         "id": 2792,
@@ -113728,14 +113766,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-02",
         "label": "Смена 02.07",
         "missingOrders": 0,
-        "revenue": 468,
+        "revenue": 528,
         "status": "ok"
       },
       {
@@ -114272,7 +114310,7 @@
         "status": "ok"
       }
     ],
-    "total": 1745
+    "total": 1746
   },
   "payments": [
     {
@@ -114285,7 +114323,7 @@
     },
     {
       "method": "Alif",
-      "total": 96
+      "total": 156
     },
     {
       "method": "Dushanbe City",
@@ -114297,6 +114335,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2793,
+      "items": [
+        "Черника big x1",
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2792,
       "items": [
@@ -114358,16 +114405,6 @@
       ],
       "status": "Оплачен",
       "total": 180
-    },
-    {
-      "id": 2785,
-      "items": [
-        "Виноградный тропический mini x1",
-        "Виноградный тропический big x1",
-        "Cake-Pops Шт x2"
-      ],
-      "status": "Оплачен",
-      "total": 76
     }
   ],
   "shifts": {
@@ -114508,6 +114545,11 @@
       "total": 100
     },
     {
+      "name": "Клубничный big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Cake-Pops",
       "qty": 4,
       "total": 60
@@ -114523,7 +114565,7 @@
       "total": 50
     },
     {
-      "name": "Клубничный big",
+      "name": "Черника big",
       "qty": 1,
       "total": 30
     },
@@ -114536,13 +114578,8 @@
       "name": "Виноградный тропический big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 2,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-02T08:20:18.132Z"
+  "updatedAt": "2026-07-02T08:40:25.363Z"
 }

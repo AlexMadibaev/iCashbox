@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.23684210526316,
-    "checks": 38,
+    "average": 37.92307692307692,
+    "checks": 39,
     "expenseTotal": 205,
-    "net": 1248,
-    "revenue": 1453
+    "net": 1274,
+    "revenue": 1479
   },
   "data": {
-    "actions": 3942,
+    "actions": 3944,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1773,
+    "orders": 1774,
     "products": 40,
     "shifts": 41
   },
   "activity": [
     {
+      "id": 1782977366163,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782977366163,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:29",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782977330708,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:55",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782970612654,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782970612654,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:36",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1773,
+    "current": 1774,
     "old": [
       {
         "createdAt": "2026-07-01T10:41:47.147Z",
@@ -56776,6 +56776,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-02T07:29:40.039Z",
+        "id": 2821,
+        "items": [
+          "Виноградный тропический big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 26,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-02",
+        "shiftLabel": "Смена 02.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-02T07:29:26.082Z",
         "id": 2820,
@@ -114612,14 +114641,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 38,
-        "expectedOrders": 38,
+        "databaseOrders": 39,
+        "expectedOrders": 39,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-02",
         "label": "Смена 02.07",
         "missingOrders": 0,
-        "revenue": 1453,
+        "revenue": 1479,
         "status": "ok"
       },
       {
@@ -115156,12 +115185,12 @@
         "status": "ok"
       }
     ],
-    "total": 1773
+    "total": 1774
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 914
+      "total": 940
     },
     {
       "method": "Карта",
@@ -115181,6 +115210,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2821,
+      "items": [
+        "Виноградный тропический big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 2820,
       "items": [
@@ -115239,14 +115276,6 @@
       ],
       "status": "Оплачен",
       "total": 78
-    },
-    {
-      "id": 2813,
-      "items": [
-        "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -115387,6 +115416,11 @@
       "total": 150
     },
     {
+      "name": "Виноградный тропический big",
+      "qty": 5,
+      "total": 130
+    },
+    {
       "name": "Айс Латте",
       "qty": 4,
       "total": 120
@@ -115395,11 +115429,6 @@
       "name": "Мороженое манго",
       "qty": 6,
       "total": 120
-    },
-    {
-      "name": "Виноградный тропический big",
-      "qty": 4,
-      "total": 104
     },
     {
       "name": "Мороженое классическое",
@@ -115423,5 +115452,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-02T14:31:58.529Z"
+  "updatedAt": "2026-07-02T14:32:12.596Z"
 }

@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 39.38095238095238,
-    "checks": 21,
+    "average": 38.5,
+    "checks": 22,
     "expenseTotal": 205,
-    "net": 622,
-    "revenue": 827
+    "net": 642,
+    "revenue": 847
   },
   "data": {
-    "actions": 3908,
+    "actions": 3910,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1756,
+    "orders": 1757,
     "products": 40,
     "shifts": 41
   },
   "activity": [
+    {
+      "id": 1782966485296,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:28",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782966485296,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:28",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782966394994,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:28",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782962119322,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:15",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782962119322,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:15",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1756,
+    "current": 1757,
     "old": [
       {
         "createdAt": "2026-07-01T10:41:47.147Z",
@@ -56776,6 +56776,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-02T04:28:12.652Z",
+        "id": 2804,
+        "items": [
+          "Мороженое с тапиокой x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 20,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-02",
+        "shiftLabel": "Смена 02.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-02T04:28:05.200Z",
         "id": 2803,
@@ -114065,14 +114094,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 21,
-        "expectedOrders": 21,
+        "databaseOrders": 22,
+        "expectedOrders": 22,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-02",
         "label": "Смена 02.07",
         "missingOrders": 0,
-        "revenue": 827,
+        "revenue": 847,
         "status": "ok"
       },
       {
@@ -114609,7 +114638,7 @@
         "status": "ok"
       }
     ],
-    "total": 1756
+    "total": 1757
   },
   "payments": [
     {
@@ -114626,7 +114655,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 65
+      "total": 85
     },
     {
       "method": "Семья",
@@ -114634,6 +114663,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2804,
+      "items": [
+        "Мороженое с тапиокой x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2803,
       "items": [
@@ -114690,14 +114727,6 @@
       ],
       "status": "Оплачен",
       "total": 15
-    },
-    {
-      "id": 2796,
-      "items": [
-        "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -114848,6 +114877,11 @@
       "total": 75
     },
     {
+      "name": "Мороженое с тапиокой",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Клубничный big",
       "qty": 2,
       "total": 60
@@ -114866,13 +114900,8 @@
       "name": "МангоБанан mini",
       "qty": 2,
       "total": 50
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-02T11:30:37.844Z"
+  "updatedAt": "2026-07-02T11:30:45.171Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.53061224489796,
-    "checks": 49,
+    "average": 36.7,
+    "checks": 50,
     "expenseTotal": 205,
-    "net": 1585,
-    "revenue": 1790
+    "net": 1630,
+    "revenue": 1835
   },
   "data": {
-    "actions": 3964,
+    "actions": 3966,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1784,
+    "orders": 1785,
     "products": 40,
     "shifts": 41
   },
   "activity": [
     {
+      "id": 1782988407438,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:33",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782988407438,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:33",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782986942127,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782982938384,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:02",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782982938384,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:02",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1784,
+    "current": 1785,
     "old": [
       {
         "createdAt": "2026-07-01T10:41:47.147Z",
@@ -56776,6 +56776,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-02T10:35:24.703Z",
+        "id": 2832,
+        "items": [
+          "Клубничный mini x1",
+          "Виноградный тропический mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 45,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-02",
+        "shiftLabel": "Смена 02.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-07-02T10:33:27.348Z",
         "id": 2831,
@@ -114949,14 +114987,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 49,
-        "expectedOrders": 49,
+        "databaseOrders": 50,
+        "expectedOrders": 50,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-02",
         "label": "Смена 02.07",
         "missingOrders": 0,
-        "revenue": 1790,
+        "revenue": 1835,
         "status": "ok"
       },
       {
@@ -115493,7 +115531,7 @@
         "status": "ok"
       }
     ],
-    "total": 1784
+    "total": 1785
   },
   "payments": [
     {
@@ -115510,7 +115548,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 302
+      "total": 347
     },
     {
       "method": "Семья",
@@ -115518,6 +115556,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2832,
+      "items": [
+        "Клубничный mini x1",
+        "Виноградный тропический mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 2831,
       "items": [
@@ -115575,14 +115622,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 2824,
-      "items": [
-        "Жасмин лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -115724,8 +115763,8 @@
     },
     {
       "name": "Клубничный mini",
-      "qty": 6,
-      "total": 150
+      "qty": 7,
+      "total": 175
     },
     {
       "name": "Мороженое классическое",
@@ -115759,5 +115798,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-02T17:36:01.249Z"
+  "updatedAt": "2026-07-02T17:37:57.197Z"
 }

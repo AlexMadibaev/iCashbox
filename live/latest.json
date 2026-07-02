@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.41935483870968,
-    "checks": 31,
+    "average": 38.6875,
+    "checks": 32,
     "expenseTotal": 205,
-    "net": 955,
-    "revenue": 1160
+    "net": 1033,
+    "revenue": 1238
   },
   "data": {
-    "actions": 3928,
+    "actions": 3930,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1766,
+    "orders": 1767,
     "products": 40,
     "shifts": 41
   },
   "activity": [
     {
+      "id": 1782969782277,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:23",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782969782277,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:23",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782969745947,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:00",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782968026362,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:53",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782968026362,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:53",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1766,
+    "current": 1767,
     "old": [
       {
         "createdAt": "2026-07-01T10:41:47.147Z",
@@ -56776,6 +56776,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-02T05:36:52.566Z",
+        "id": 2814,
+        "items": [
+          "Клубничный жасмин big x1",
+          "Манго Маракуя big x1",
+          "Babl tea big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-big",
+            "name": "Клубничный жасмин big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-mango-maracuya-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 80,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-02",
+        "shiftLabel": "Смена 02.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 78
+      },
       {
         "createdAt": "2026-07-02T05:23:02.191Z",
         "id": 2813,
@@ -114382,14 +114429,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 31,
-        "expectedOrders": 31,
+        "databaseOrders": 32,
+        "expectedOrders": 32,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-02",
         "label": "Смена 02.07",
         "missingOrders": 0,
-        "revenue": 1160,
+        "revenue": 1238,
         "status": "ok"
       },
       {
@@ -114926,12 +114973,12 @@
         "status": "ok"
       }
     ],
-    "total": 1766
+    "total": 1767
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 621
+      "total": 699
     },
     {
       "method": "Карта",
@@ -114951,6 +114998,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2814,
+      "items": [
+        "Клубничный жасмин big x1",
+        "Манго Маракуя big x1",
+        "Babl tea big x1"
+      ],
+      "status": "Оплачен",
+      "total": 78
+    },
     {
       "id": 2813,
       "items": [
@@ -115009,14 +115066,6 @@
       ],
       "status": "Оплачен",
       "total": 52
-    },
-    {
-      "id": 2806,
-      "items": [
-        "ПиноКолада mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -115177,21 +115226,21 @@
       "total": 80
     },
     {
+      "name": "Манго Маракуя big",
+      "qty": 3,
+      "total": 78
+    },
+    {
+      "name": "Babl tea big",
+      "qty": 3,
+      "total": 78
+    },
+    {
       "name": "Cake-Pops",
       "qty": 5,
       "total": 75
-    },
-    {
-      "name": "Мороженое клубничное",
-      "qty": 3,
-      "total": 60
-    },
-    {
-      "name": "Мороженое с тапиокой",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-02T12:25:34.343Z"
+  "updatedAt": "2026-07-02T12:39:26.398Z"
 }

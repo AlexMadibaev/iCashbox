@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 37.166666666666664,
-    "checks": 24,
+    "average": 37.76,
+    "checks": 25,
     "expenseTotal": 205,
-    "net": 687,
-    "revenue": 892
+    "net": 739,
+    "revenue": 944
   },
   "data": {
-    "actions": 3914,
+    "actions": 3916,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1759,
+    "orders": 1760,
     "products": 40,
     "shifts": 41
   },
   "activity": [
+    {
+      "id": 1782967661436,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782967661436,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:47",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782966900194,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:03",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782964859377,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782964859377,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:00",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1759,
+    "current": 1760,
     "old": [
       {
         "createdAt": "2026-07-01T10:41:47.147Z",
@@ -56776,6 +56776,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-02T04:53:46.267Z",
+        "id": 2807,
+        "items": [
+          "Виноградный тропический big x1",
+          "Babl tea big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 52,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-02",
+        "shiftLabel": "Смена 02.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-07-02T04:47:41.357Z",
         "id": 2806,
@@ -114152,14 +114190,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 24,
-        "expectedOrders": 24,
+        "databaseOrders": 25,
+        "expectedOrders": 25,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-02",
         "label": "Смена 02.07",
         "missingOrders": 0,
-        "revenue": 892,
+        "revenue": 944,
         "status": "ok"
       },
       {
@@ -114696,7 +114734,7 @@
         "status": "ok"
       }
     ],
-    "total": 1759
+    "total": 1760
   },
   "payments": [
     {
@@ -114713,7 +114751,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 110
+      "total": 162
     },
     {
       "method": "Семья",
@@ -114721,6 +114759,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2807,
+      "items": [
+        "Виноградный тропический big x1",
+        "Babl tea big x1"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 2806,
       "items": [
@@ -114774,14 +114821,6 @@
       "id": 2800,
       "items": [
         "Флэт Вайт x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
-    },
-    {
-      "id": 2799,
-      "items": [
-        "Жасмин лимон big x1"
       ],
       "status": "Оплачен",
       "total": 26
@@ -114930,6 +114969,11 @@
       "total": 80
     },
     {
+      "name": "Виноградный тропический big",
+      "qty": 3,
+      "total": 78
+    },
+    {
       "name": "Cake-Pops",
       "qty": 5,
       "total": 75
@@ -114945,7 +114989,7 @@
       "total": 60
     },
     {
-      "name": "Виноградный тропический big",
+      "name": "Babl tea big",
       "qty": 2,
       "total": 52
     },
@@ -114953,13 +114997,8 @@
       "name": "Манго Маракуя big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "МангоБанан mini",
-      "qty": 2,
-      "total": 50
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-02T11:50:15.319Z"
+  "updatedAt": "2026-07-02T11:56:20.093Z"
 }

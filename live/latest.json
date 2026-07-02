@@ -6,23 +6,51 @@
     "open": true
   },
   "summary": {
-    "average": 74,
-    "checks": 4,
+    "average": 66.2,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": 91,
-    "revenue": 296
+    "net": 126,
+    "revenue": 331
   },
   "data": {
-    "actions": 3874,
+    "actions": 3878,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1739,
+    "orders": 1740,
     "products": 40,
     "shifts": 41
   },
   "activity": [
+    {
+      "id": 1782950160389,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:56",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782950160389,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:56",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1782948283467,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:24",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782948283467,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:24",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782946784350,
       "source": "Локально",
@@ -78,34 +106,6 @@
       "status": "Сохранено",
       "time": "22:41",
       "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782902507226,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782902483680,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:41",
-      "type": "Удалён заказ"
-    },
-    {
-      "id": 1782902219424,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782902219424,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:36",
-      "type": "Создание заказа"
     }
   ],
   "expenses": {
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1739,
+    "current": 1740,
     "old": [
       {
         "createdAt": "2026-07-01T10:41:47.147Z",
@@ -56776,6 +56776,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-01T23:56:00.300Z",
+        "id": 2787,
+        "items": [
+          "Мороженое рожок x1",
+          "МангоБанан mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          },
+          {
+            "id": "product-милкшейк-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 35,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-02",
+        "shiftLabel": "Смена 02.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-07-01T23:24:43.368Z",
         "id": 2786,
@@ -113545,14 +113583,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-02",
         "label": "Смена 02.07",
         "missingOrders": 0,
-        "revenue": 296,
+        "revenue": 331,
         "status": "ok"
       },
       {
@@ -114089,12 +114127,12 @@
         "status": "ok"
       }
     ],
-    "total": 1739
+    "total": 1740
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 256
+      "total": 291
     },
     {
       "method": "Карта",
@@ -114114,6 +114152,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2787,
+      "items": [
+        "Мороженое рожок x1",
+        "МангоБанан mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    },
     {
       "id": 2786,
       "items": [
@@ -114297,14 +114344,19 @@
       "total": 60
     },
     {
+      "name": "МангоБанан mini",
+      "qty": 2,
+      "total": 50
+    },
+    {
       "name": "Виноградный тропический big",
       "qty": 1,
       "total": 26
     },
     {
-      "name": "МангоБанан mini",
-      "qty": 1,
-      "total": 25
+      "name": "Мороженое рожок",
+      "qty": 2,
+      "total": 20
     },
     {
       "name": "Мороженое клубничное",
@@ -114320,13 +114372,8 @@
       "name": "Мороженое манго",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Мороженое с тапиокой",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-02T06:27:18.060Z"
+  "updatedAt": "2026-07-02T06:58:35.450Z"
 }

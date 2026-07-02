@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 30,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -175,
+    "revenue": 30
   },
   "data": {
     "actions": 3868,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1735,
+    "orders": 1736,
     "products": 40,
     "shifts": 41
   },
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1735,
+    "current": 1736,
     "old": [
       {
         "createdAt": "2026-07-01T10:41:47.147Z",
@@ -56776,6 +56776,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-01T21:46:05.160Z",
+        "id": 2783,
+        "items": [
+          "Cake-Pops Шт x2"
+        ],
+        "lines": [
+          {
+            "id": "product-1782200595826",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 2,
+            "size": "Шт",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 30,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-02",
+        "shiftLabel": "Смена 02.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-01T10:41:47.147Z",
         "id": 2782,
@@ -113366,15 +113395,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-07-02",
         "label": "Смена 02.07",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 30,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -113910,7 +113939,7 @@
         "status": "ok"
       }
     ],
-    "total": 1735
+    "total": 1736
   },
   "payments": [
     {
@@ -113923,7 +113952,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 30
     },
     {
       "method": "Dushanbe City",
@@ -113934,7 +113963,16 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 2783,
+      "items": [
+        "Cake-Pops Шт x2"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -114066,7 +114104,13 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Cake-Pops",
+      "qty": 2,
+      "total": 30
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-07-02T03:37:03.837Z"
+  "updatedAt": "2026-07-02T04:48:39.678Z"
 }

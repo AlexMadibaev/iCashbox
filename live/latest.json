@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 49.22222222222222,
-    "checks": 9,
+    "average": 46.8,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 238,
-    "revenue": 443
+    "net": 263,
+    "revenue": 468
   },
   "data": {
-    "actions": 3884,
+    "actions": 3886,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1744,
+    "orders": 1745,
     "products": 40,
     "shifts": 41
   },
   "activity": [
     {
+      "id": 1782954567790,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:09",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782954567790,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:09",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782953538353,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782946784350,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:59",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782946784350,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:59",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1744,
+    "current": 1745,
     "old": [
       {
         "createdAt": "2026-07-01T10:41:47.147Z",
@@ -56776,6 +56776,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-02T01:17:43.967Z",
+        "id": 2792,
+        "items": [
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 25,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-02",
+        "shiftLabel": "Смена 02.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-02T01:09:27.717Z",
         "id": 2791,
@@ -113699,14 +113728,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-02",
         "label": "Смена 02.07",
         "missingOrders": 0,
-        "revenue": 443,
+        "revenue": 468,
         "status": "ok"
       },
       {
@@ -114243,7 +114272,7 @@
         "status": "ok"
       }
     ],
-    "total": 1744
+    "total": 1745
   },
   "payments": [
     {
@@ -114260,7 +114289,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 0
+      "total": 25
     },
     {
       "method": "Семья",
@@ -114268,6 +114297,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2792,
+      "items": [
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 2791,
       "items": [
@@ -114331,14 +114368,6 @@
       ],
       "status": "Оплачен",
       "total": 76
-    },
-    {
-      "id": 2784,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -114475,8 +114504,8 @@
   "topProducts": [
     {
       "name": "Клубничный mini",
-      "qty": 3,
-      "total": 75
+      "qty": 4,
+      "total": 100
     },
     {
       "name": "Cake-Pops",
@@ -114515,5 +114544,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-02T08:12:01.967Z"
+  "updatedAt": "2026-07-02T08:20:18.132Z"
 }

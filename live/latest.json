@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 20,
-    "checks": 2,
+    "average": 38.666666666666664,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -165,
-    "revenue": 40
+    "net": -89,
+    "revenue": 116
   },
   "data": {
-    "actions": 3870,
+    "actions": 3872,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1737,
+    "orders": 1738,
     "products": 40,
     "shifts": 41
   },
   "activity": [
+    {
+      "id": 1782944182783,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:16",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782944182783,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:16",
+      "type": "Создание заказа"
+    },
     {
       "id": 1782942365246,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:34",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782901900421,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:31",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782901900421,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:31",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1737,
+    "current": 1738,
     "old": [
       {
         "createdAt": "2026-07-01T10:41:47.147Z",
@@ -56776,6 +56776,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-01T22:59:44.256Z",
+        "id": 2785,
+        "items": [
+          "Виноградный тропический mini x1",
+          "Виноградный тропический big x1",
+          "Cake-Pops Шт x2"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-1782200595826",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 2,
+            "size": "Шт",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-02",
+        "shiftLabel": "Смена 02.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 76
+      },
       {
         "createdAt": "2026-07-01T22:16:22.712Z",
         "id": 2784,
@@ -113424,14 +113471,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-02",
         "label": "Смена 02.07",
         "missingOrders": 0,
-        "revenue": 40,
+        "revenue": 116,
         "status": "ok"
       },
       {
@@ -113968,12 +114015,12 @@
         "status": "ok"
       }
     ],
-    "total": 1737
+    "total": 1738
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 76
     },
     {
       "method": "Карта",
@@ -113993,6 +114040,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2785,
+      "items": [
+        "Виноградный тропический mini x1",
+        "Виноградный тропический big x1",
+        "Cake-Pops Шт x2"
+      ],
+      "status": "Оплачен",
+      "total": 76
+    },
     {
       "id": 2784,
       "items": [
@@ -114144,8 +114201,18 @@
   "topProducts": [
     {
       "name": "Cake-Pops",
-      "qty": 2,
-      "total": 30
+      "qty": 4,
+      "total": 60
+    },
+    {
+      "name": "Виноградный тропический big",
+      "qty": 1,
+      "total": 26
+    },
+    {
+      "name": "Виноградный тропический mini",
+      "qty": 1,
+      "total": 20
     },
     {
       "name": "Мороженое рожок",
@@ -114154,5 +114221,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-02T05:18:57.069Z"
+  "updatedAt": "2026-07-02T06:02:18.710Z"
 }

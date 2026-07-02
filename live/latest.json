@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.36842105263158,
-    "checks": 19,
+    "average": 40.35,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 562,
-    "revenue": 767
+    "net": 602,
+    "revenue": 807
   },
   "data": {
-    "actions": 3904,
+    "actions": 3906,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1754,
+    "orders": 1755,
     "products": 40,
     "shifts": 41
   },
   "activity": [
     {
+      "id": 1782964983435,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:03",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1782964983435,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:03",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1782964859377,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:07",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782957382796,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:56",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782957382796,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:56",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1754,
+    "current": 1755,
     "old": [
       {
         "createdAt": "2026-07-01T10:41:47.147Z",
@@ -56776,6 +56776,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-02T04:26:34.896Z",
+        "id": 2802,
+        "items": [
+          "Манго Маракуя mini x1",
+          "Мороженое с тапиокой x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 40,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-02",
+        "shiftLabel": "Смена 02.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-02T04:03:03.346Z",
         "id": 2801,
@@ -113998,14 +114036,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-02",
         "label": "Смена 02.07",
         "missingOrders": 0,
-        "revenue": 767,
+        "revenue": 807,
         "status": "ok"
       },
       {
@@ -114542,7 +114580,7 @@
         "status": "ok"
       }
     ],
-    "total": 1754
+    "total": 1755
   },
   "payments": [
     {
@@ -114559,7 +114597,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 25
+      "total": 65
     },
     {
       "method": "Семья",
@@ -114567,6 +114605,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2802,
+      "items": [
+        "Манго Маракуя mini x1",
+        "Мороженое с тапиокой x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2801,
       "items": [
@@ -114622,14 +114669,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2794,
-      "items": [
-        "Matcha big x2"
-      ],
-      "status": "Оплачен",
-      "total": 80
     }
   ],
   "shifts": {
@@ -114800,11 +114839,11 @@
       "total": 50
     },
     {
-      "name": "Мороженое классическое",
+      "name": "Мороженое с тапиокой",
       "qty": 2,
       "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-02T11:05:36.733Z"
+  "updatedAt": "2026-07-02T11:29:09.388Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.05882352941177,
-    "checks": 17,
+    "average": 35.333333333333336,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 391,
-    "revenue": 596
+    "net": 431,
+    "revenue": 636
   },
   "data": {
-    "actions": 4001,
+    "actions": 4003,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1802,
+    "orders": 1803,
     "products": 40,
     "shifts": 42
   },
   "activity": [
     {
+      "id": 1783048647832,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:17",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783048647832,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:17",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783048362741,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:45",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783042930062,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:42",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783042930062,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:42",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1802,
+    "current": 1803,
     "old": [
       {
         "createdAt": "2026-07-02T10:35:24.703Z",
@@ -58397,6 +58397,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-03T03:18:04.422Z",
+        "id": 2850,
+        "items": [
+          "Мороженое клубничное x1",
+          "Мороженое с тапиокой x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-03",
+        "shiftLabel": "Смена 03.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-03T03:17:27.730Z",
         "id": 2849,
@@ -117155,14 +117193,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-03",
         "label": "Смена 03.07",
         "missingOrders": 0,
-        "revenue": 596,
+        "revenue": 636,
         "status": "ok"
       },
       {
@@ -117712,12 +117750,12 @@
         "status": "ok"
       }
     ],
-    "total": 1802
+    "total": 1803
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 500
+      "total": 540
     },
     {
       "method": "Карта",
@@ -117737,6 +117775,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2850,
+      "items": [
+        "Мороженое клубничное x1",
+        "Мороженое с тапиокой x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2849,
       "items": [
@@ -117793,15 +117840,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2842,
-      "items": [
-        "Matcha mini x1",
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -117978,5 +118016,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-03T10:20:01.606Z"
+  "updatedAt": "2026-07-03T10:20:38.334Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.13636363636363,
-    "checks": 22,
+    "average": 33.73913043478261,
+    "checks": 23,
     "expenseTotal": 205,
-    "net": 546,
-    "revenue": 751
+    "net": 571,
+    "revenue": 776
   },
   "data": {
-    "actions": 4011,
+    "actions": 4013,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1807,
+    "orders": 1808,
     "products": 40,
     "shifts": 42
   },
   "activity": [
     {
+      "id": 1783053800322,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:43",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783053800322,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:43",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783053279862,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:17",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783048362741,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:12",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783048362741,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:12",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1807,
+    "current": 1808,
     "old": [
       {
         "createdAt": "2026-07-02T10:35:24.703Z",
@@ -58397,6 +58397,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-03T04:48:06.262Z",
+        "id": 2855,
+        "items": [
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-03",
+        "shiftLabel": "Смена 03.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-03T04:43:20.250Z",
         "id": 2854,
@@ -117309,14 +117338,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 22,
-        "expectedOrders": 22,
+        "databaseOrders": 23,
+        "expectedOrders": 23,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-03",
         "label": "Смена 03.07",
         "missingOrders": 0,
-        "revenue": 751,
+        "revenue": 776,
         "status": "ok"
       },
       {
@@ -117866,12 +117895,12 @@
         "status": "ok"
       }
     ],
-    "total": 1807
+    "total": 1808
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 655
+      "total": 680
     },
     {
       "method": "Карта",
@@ -117891,6 +117920,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2855,
+      "items": [
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 2854,
       "items": [
@@ -117947,14 +117984,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2847,
-      "items": [
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -118095,14 +118124,14 @@
       "total": 150
     },
     {
+      "name": "Клубничный mini",
+      "qty": 5,
+      "total": 125
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 12,
       "total": 120
-    },
-    {
-      "name": "Клубничный mini",
-      "qty": 4,
-      "total": 100
     },
     {
       "name": "Matcha mini",
@@ -118131,5 +118160,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-03T11:45:55.323Z"
+  "updatedAt": "2026-07-03T11:50:40.079Z"
 }

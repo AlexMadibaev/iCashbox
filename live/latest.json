@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.3,
-    "checks": 20,
+    "average": 34.57142857142857,
+    "checks": 21,
     "expenseTotal": 205,
-    "net": 481,
-    "revenue": 686
+    "net": 521,
+    "revenue": 726
   },
   "data": {
-    "actions": 4007,
+    "actions": 4009,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1805,
+    "orders": 1806,
     "products": 40,
     "shifts": 42
   },
   "activity": [
     {
+      "id": 1783053169496,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:32",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783053169496,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:32",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783050098067,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783046154649,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:35",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783046154649,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:35",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1805,
+    "current": 1806,
     "old": [
       {
         "createdAt": "2026-07-02T10:35:24.703Z",
@@ -58397,6 +58397,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-03T04:34:39.785Z",
+        "id": 2853,
+        "items": [
+          "Мороженое рожок x4"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 4,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-03",
+        "shiftLabel": "Смена 03.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-03T04:32:49.385Z",
         "id": 2852,
@@ -117251,14 +117280,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 20,
-        "expectedOrders": 20,
+        "databaseOrders": 21,
+        "expectedOrders": 21,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-03",
         "label": "Смена 03.07",
         "missingOrders": 0,
-        "revenue": 686,
+        "revenue": 726,
         "status": "ok"
       },
       {
@@ -117808,12 +117837,12 @@
         "status": "ok"
       }
     ],
-    "total": 1805
+    "total": 1806
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 590
+      "total": 630
     },
     {
       "method": "Карта",
@@ -117833,6 +117862,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2853,
+      "items": [
+        "Мороженое рожок x4"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2852,
       "items": [
@@ -117890,14 +117927,6 @@
       ],
       "status": "Оплачен",
       "total": 55
-    },
-    {
-      "id": 2845,
-      "items": [
-        "Мороженое рожок x2"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -118038,14 +118067,14 @@
       "total": 150
     },
     {
+      "name": "Мороженое рожок",
+      "qty": 12,
+      "total": 120
+    },
+    {
       "name": "Matcha mini",
       "qty": 3,
       "total": 90
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 8,
-      "total": 80
     },
     {
       "name": "Клубничный mini",
@@ -118074,5 +118103,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-03T11:35:24.707Z"
+  "updatedAt": "2026-07-03T11:37:13.586Z"
 }

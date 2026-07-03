@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 27,
-    "checks": 5,
+    "average": 32.5,
+    "checks": 6,
     "expenseTotal": 205,
-    "net": -70,
-    "revenue": 135
+    "net": -10,
+    "revenue": 195
   },
   "data": {
-    "actions": 3977,
+    "actions": 3979,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1790,
+    "orders": 1791,
     "products": 40,
     "shifts": 42
   },
   "activity": [
+    {
+      "id": 1783041480763,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783041480763,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:18",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783039407042,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:35",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1782988524781,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:35",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1782988407438,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:33",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1790,
+    "current": 1791,
     "old": [
       {
         "createdAt": "2026-07-02T10:35:24.703Z",
@@ -58397,6 +58397,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-03T01:22:08.290Z",
+        "id": 2838,
+        "items": [
+          "ПиноКолада big x1",
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-03",
+        "shiftLabel": "Смена 03.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-03T01:18:00.666Z",
         "id": 2837,
@@ -116762,14 +116800,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 5,
-        "expectedOrders": 5,
+        "databaseOrders": 6,
+        "expectedOrders": 6,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-03",
         "label": "Смена 03.07",
         "missingOrders": 0,
-        "revenue": 135,
+        "revenue": 195,
         "status": "ok"
       },
       {
@@ -117319,12 +117357,12 @@
         "status": "ok"
       }
     ],
-    "total": 1790
+    "total": 1791
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 85
+      "total": 145
     },
     {
       "method": "Карта",
@@ -117344,6 +117382,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2838,
+      "items": [
+        "ПиноКолада big x1",
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2837,
       "items": [
@@ -117524,6 +117571,16 @@
       "total": 50
     },
     {
+      "name": "ПиноКолада big",
+      "qty": 1,
+      "total": 30
+    },
+    {
+      "name": "Черника big",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
@@ -117540,5 +117597,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-03T08:20:36.109Z"
+  "updatedAt": "2026-07-03T08:24:42.582Z"
 }

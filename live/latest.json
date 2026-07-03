@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.93333333333333,
-    "checks": 30,
+    "average": 37.54838709677419,
+    "checks": 31,
     "expenseTotal": 205,
-    "net": 873,
-    "revenue": 1078
+    "net": 959,
+    "revenue": 1164
   },
   "data": {
-    "actions": 4027,
+    "actions": 4029,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1815,
+    "orders": 1816,
     "products": 40,
     "shifts": 42
   },
   "activity": [
     {
+      "id": 1783067154803,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:25",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783067154803,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:25",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783066258273,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:03",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783057734710,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:48",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783057734710,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:48",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1815,
+    "current": 1816,
     "old": [
       {
         "createdAt": "2026-07-02T10:35:24.703Z",
@@ -58397,6 +58397,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-03T08:35:42.290Z",
+        "id": 2863,
+        "items": [
+          "Черника big x1",
+          "Виноградный тропический big x1",
+          "МангоБанан big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-милкшейк-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 86,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-03",
+        "shiftLabel": "Смена 03.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 86
+      },
       {
         "createdAt": "2026-07-03T08:25:54.705Z",
         "id": 2862,
@@ -117568,14 +117615,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 30,
-        "expectedOrders": 30,
+        "databaseOrders": 31,
+        "expectedOrders": 31,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-03",
         "label": "Смена 03.07",
         "missingOrders": 0,
-        "revenue": 1078,
+        "revenue": 1164,
         "status": "ok"
       },
       {
@@ -118125,7 +118172,7 @@
         "status": "ok"
       }
     ],
-    "total": 1815
+    "total": 1816
   },
   "payments": [
     {
@@ -118138,7 +118185,7 @@
     },
     {
       "method": "Alif",
-      "total": 236
+      "total": 322
     },
     {
       "method": "Dushanbe City",
@@ -118150,6 +118197,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2863,
+      "items": [
+        "Черника big x1",
+        "Виноградный тропический big x1",
+        "МангоБанан big x1"
+      ],
+      "status": "Оплачен",
+      "total": 86
+    },
     {
       "id": 2862,
       "items": [
@@ -118208,14 +118265,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2855,
-      "items": [
-        "Клубничный mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -118371,26 +118420,26 @@
       "total": 120
     },
     {
+      "name": "Черника big",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "ПиноКолада big",
       "qty": 3,
       "total": 90
     },
     {
-      "name": "Черника big",
+      "name": "МангоБанан big",
       "qty": 2,
       "total": 60
     },
     {
-      "name": "Babl tea mini",
+      "name": "Виноградный тропический big",
       "qty": 2,
-      "total": 40
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 2,
-      "total": 40
+      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-03T15:28:30.131Z"
+  "updatedAt": "2026-07-03T15:38:31.915Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.125,
-    "checks": 8,
+    "average": 35,
+    "checks": 9,
     "expenseTotal": 205,
-    "net": 100,
-    "revenue": 305
+    "net": 110,
+    "revenue": 315
   },
   "data": {
-    "actions": 3983,
+    "actions": 3985,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1793,
+    "orders": 1794,
     "products": 40,
     "shifts": 42
   },
   "activity": [
     {
+      "id": 1783041973683,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:26",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783041973683,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:26",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783041838665,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783033494586,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:04",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783033494586,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:04",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1793,
+    "current": 1794,
     "old": [
       {
         "createdAt": "2026-07-02T10:35:24.703Z",
@@ -58397,6 +58397,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-03T01:30:15.701Z",
+        "id": 2841,
+        "items": [
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 10,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-03",
+        "shiftLabel": "Смена 03.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 10
+      },
       {
         "createdAt": "2026-07-03T01:26:13.562Z",
         "id": 2840,
@@ -116876,14 +116905,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 8,
-        "expectedOrders": 8,
+        "databaseOrders": 9,
+        "expectedOrders": 9,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-03",
         "label": "Смена 03.07",
         "missingOrders": 0,
-        "revenue": 305,
+        "revenue": 315,
         "status": "ok"
       },
       {
@@ -117433,12 +117462,12 @@
         "status": "ok"
       }
     ],
-    "total": 1793
+    "total": 1794
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 255
+      "total": 265
     },
     {
       "method": "Карта",
@@ -117458,6 +117487,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2841,
+      "items": [
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 10
+    },
     {
       "id": 2840,
       "items": [
@@ -117517,14 +117554,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 2833,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -117660,14 +117689,14 @@
   },
   "topProducts": [
     {
-      "name": "Айс Латте",
-      "qty": 2,
+      "name": "Мороженое рожок",
+      "qty": 6,
       "total": 60
     },
     {
-      "name": "Мороженое рожок",
-      "qty": 5,
-      "total": 50
+      "name": "Айс Латте",
+      "qty": 2,
+      "total": 60
     },
     {
       "name": "Клубничный mini",
@@ -117701,5 +117730,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-03T08:28:47.338Z"
+  "updatedAt": "2026-07-03T08:32:49.711Z"
 }

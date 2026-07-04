@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.77777777777778,
-    "checks": 36,
+    "average": 43,
+    "checks": 37,
     "expenseTotal": 205,
-    "net": 1335,
-    "revenue": 1540
+    "net": 1386,
+    "revenue": 1591
   },
   "data": {
-    "actions": 4122,
+    "actions": 4124,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1862,
+    "orders": 1863,
     "products": 40,
     "shifts": 43
   },
   "activity": [
     {
+      "id": 1783154941546,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:49",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783154941546,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:49",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783154917294,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783153065613,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:17",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783153065613,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:17",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1862,
+    "current": 1863,
     "old": [
       {
         "createdAt": "2026-07-03T11:05:36.618Z",
@@ -59748,6 +59748,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-04T08:51:30.775Z",
+        "id": 2910,
+        "items": [
+          "Babl tea big x1",
+          "ПиноКолада mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-милкшейк-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 101,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-04",
+        "shiftLabel": "Смена 04.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 51
+      },
       {
         "createdAt": "2026-07-04T08:49:01.442Z",
         "id": 2909,
@@ -120534,14 +120572,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 36,
-        "expectedOrders": 36,
+        "databaseOrders": 37,
+        "expectedOrders": 37,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-04",
         "label": "Смена 04.07",
         "missingOrders": 0,
-        "revenue": 1540,
+        "revenue": 1591,
         "status": "ok"
       },
       {
@@ -121104,12 +121142,12 @@
         "status": "ok"
       }
     ],
-    "total": 1862
+    "total": 1863
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 788
+      "total": 839
     },
     {
       "method": "Карта",
@@ -121129,6 +121167,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2910,
+      "items": [
+        "Babl tea big x1",
+        "ПиноКолада mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 51
+    },
     {
       "id": 2909,
       "items": [
@@ -121186,15 +121233,6 @@
       ],
       "status": "Оплачен",
       "total": 15
-    },
-    {
-      "id": 2902,
-      "items": [
-        "ПиноКолада big x1",
-        "Клубничный жасмин big x2"
-      ],
-      "status": "Оплачен",
-      "total": 82
     }
   ],
   "shifts": {
@@ -121335,6 +121373,11 @@
       "total": 120
     },
     {
+      "name": "Babl tea big",
+      "qty": 4,
+      "total": 104
+    },
+    {
       "name": "Виноградный тропический big",
       "qty": 4,
       "total": 104
@@ -121360,16 +121403,11 @@
       "total": 78
     },
     {
-      "name": "Babl tea big",
-      "qty": 3,
-      "total": 78
-    },
-    {
       "name": "МангоБанан mini",
       "qty": 3,
       "total": 75
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-04T15:51:36.442Z"
+  "updatedAt": "2026-07-04T15:54:05.287Z"
 }

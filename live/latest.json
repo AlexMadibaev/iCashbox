@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 44.793103448275865,
-    "checks": 29,
+    "average": 43.8,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 1094,
-    "revenue": 1299
+    "net": 1109,
+    "revenue": 1314
   },
   "data": {
-    "actions": 4108,
+    "actions": 4110,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1855,
+    "orders": 1856,
     "products": 40,
     "shifts": 43
   },
   "activity": [
     {
+      "id": 1783153060261,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:17",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783153060261,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:17",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783152683107,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783147920734,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:52",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783147920734,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:52",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1855,
+    "current": 1856,
     "old": [
       {
         "createdAt": "2026-07-03T11:05:36.618Z",
@@ -59748,6 +59748,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-04T08:17:45.514Z",
+        "id": 2903,
+        "items": [
+          "Cake-Pops Шт x1"
+        ],
+        "lines": [
+          {
+            "id": "product-1782200595826",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "Шт",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 15,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-04",
+        "shiftLabel": "Смена 04.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 15
+      },
       {
         "createdAt": "2026-07-04T08:17:40.150Z",
         "id": 2902,
@@ -120313,14 +120342,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-04",
         "label": "Смена 04.07",
         "missingOrders": 0,
-        "revenue": 1299,
+        "revenue": 1314,
         "status": "ok"
       },
       {
@@ -120883,7 +120912,7 @@
         "status": "ok"
       }
     ],
-    "total": 1855
+    "total": 1856
   },
   "payments": [
     {
@@ -120896,7 +120925,7 @@
     },
     {
       "method": "Alif",
-      "total": 374
+      "total": 389
     },
     {
       "method": "Dushanbe City",
@@ -120908,6 +120937,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2903,
+      "items": [
+        "Cake-Pops Шт x1"
+      ],
+      "status": "Оплачен",
+      "total": 15
+    },
     {
       "id": 2902,
       "items": [
@@ -120967,15 +121004,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 2895,
-      "items": [
-        "Мороженое клубничное x2",
-        "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -121141,16 +121169,16 @@
       "total": 75
     },
     {
-      "name": "Мороженое клубничное",
-      "qty": 3,
+      "name": "Cake-Pops",
+      "qty": 4,
       "total": 60
     },
     {
-      "name": "Клубничный big",
-      "qty": 2,
+      "name": "Мороженое клубничное",
+      "qty": 3,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-04T15:20:15.906Z"
+  "updatedAt": "2026-07-04T15:20:20.036Z"
 }

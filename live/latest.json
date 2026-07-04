@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 39,
-    "checks": 9,
+    "average": 39.1,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 146,
-    "revenue": 351
+    "net": 186,
+    "revenue": 391
   },
   "data": {
-    "actions": 4068,
+    "actions": 4070,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1835,
+    "orders": 1836,
     "products": 40,
     "shifts": 43
   },
   "activity": [
+    {
+      "id": 1783134526486,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:08",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783134526486,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:08",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783132995667,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:38",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783123454086,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:04",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783123454086,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:04",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1835,
+    "current": 1836,
     "old": [
       {
         "createdAt": "2026-07-03T11:05:36.618Z",
@@ -59748,6 +59748,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-04T03:47:16.920Z",
+        "id": 2883,
+        "items": [
+          "Мороженое классическое x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-04",
+        "shiftLabel": "Смена 04.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-04T03:08:46.408Z",
         "id": 2882,
@@ -119598,14 +119627,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-04",
         "label": "Смена 04.07",
         "missingOrders": 0,
-        "revenue": 351,
+        "revenue": 391,
         "status": "ok"
       },
       {
@@ -120168,12 +120197,12 @@
         "status": "ok"
       }
     ],
-    "total": 1835
+    "total": 1836
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 171
+      "total": 211
     },
     {
       "method": "Карта",
@@ -120193,6 +120222,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2883,
+      "items": [
+        "Мороженое классическое x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 2882,
       "items": [
@@ -120247,14 +120284,6 @@
       "id": 2876,
       "items": [
         "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 2875,
-      "items": [
-        "Мороженое Орео x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -120403,6 +120432,11 @@
       "total": 60
     },
     {
+      "name": "Мороженое классическое",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Matcha big",
       "qty": 1,
       "total": 40
@@ -120426,13 +120460,8 @@
       "name": "Мороженое с тапиокой",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-04T10:11:22.648Z"
+  "updatedAt": "2026-07-04T10:49:53.187Z"
 }

@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 36.90909090909091,
-    "checks": 11,
+    "average": 36,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 201,
-    "revenue": 406
+    "net": 227,
+    "revenue": 432
   },
   "data": {
-    "actions": 4072,
+    "actions": 4074,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1837,
+    "orders": 1838,
     "products": 40,
     "shifts": 43
   },
   "activity": [
+    {
+      "id": 1783136885030,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:48",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783136885030,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:48",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783136837010,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:13",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783126139105,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:48",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783126139105,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:48",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1837,
+    "current": 1838,
     "old": [
       {
         "createdAt": "2026-07-03T11:05:36.618Z",
@@ -59748,6 +59748,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-04T04:10:55.210Z",
+        "id": 2885,
+        "items": [
+          "Манго Маракуя big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 26,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-04",
+        "shiftLabel": "Смена 04.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-04T03:48:04.960Z",
         "id": 2884,
@@ -119656,14 +119685,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-04",
         "label": "Смена 04.07",
         "missingOrders": 0,
-        "revenue": 406,
+        "revenue": 432,
         "status": "ok"
       },
       {
@@ -120226,7 +120255,7 @@
         "status": "ok"
       }
     ],
-    "total": 1837
+    "total": 1838
   },
   "payments": [
     {
@@ -120239,7 +120268,7 @@
     },
     {
       "method": "Alif",
-      "total": 160
+      "total": 186
     },
     {
       "method": "Dushanbe City",
@@ -120251,6 +120280,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2885,
+      "items": [
+        "Манго Маракуя big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 2884,
       "items": [
@@ -120308,14 +120345,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2877,
-      "items": [
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -120481,16 +120510,16 @@
       "total": 30
     },
     {
-      "name": "Виноградный тропический big",
+      "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
     },
     {
-      "name": "Мороженое с тапиокой",
+      "name": "Виноградный тропический big",
       "qty": 1,
-      "total": 20
+      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-04T10:50:39.955Z"
+  "updatedAt": "2026-07-04T11:13:31.416Z"
 }

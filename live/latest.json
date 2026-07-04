@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.464285714285715,
-    "checks": 28,
+    "average": 44.793103448275865,
+    "checks": 29,
     "expenseTotal": 205,
-    "net": 1012,
-    "revenue": 1217
+    "net": 1094,
+    "revenue": 1299
   },
   "data": {
-    "actions": 4106,
+    "actions": 4108,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1854,
+    "orders": 1855,
     "products": 40,
     "shifts": 43
   },
   "activity": [
     {
+      "id": 1783152683107,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:11",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783152683107,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:11",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783152658262,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783147579579,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:46",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783147579579,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:46",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1854,
+    "current": 1855,
     "old": [
       {
         "createdAt": "2026-07-03T11:05:36.618Z",
@@ -59748,6 +59748,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-04T08:17:40.150Z",
+        "id": 2902,
+        "items": [
+          "ПиноКолада big x1",
+          "Клубничный жасмин big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-клубничный-жасмин-big",
+            "name": "Клубничный жасмин big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 82,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-04",
+        "shiftLabel": "Смена 04.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 82
+      },
       {
         "createdAt": "2026-07-04T08:11:23.027Z",
         "id": 2901,
@@ -120275,14 +120313,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 28,
-        "expectedOrders": 28,
+        "databaseOrders": 29,
+        "expectedOrders": 29,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-04",
         "label": "Смена 04.07",
         "missingOrders": 0,
-        "revenue": 1217,
+        "revenue": 1299,
         "status": "ok"
       },
       {
@@ -120845,7 +120883,7 @@
         "status": "ok"
       }
     ],
-    "total": 1854
+    "total": 1855
   },
   "payments": [
     {
@@ -120858,7 +120896,7 @@
     },
     {
       "method": "Alif",
-      "total": 292
+      "total": 374
     },
     {
       "method": "Dushanbe City",
@@ -120870,6 +120908,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2902,
+      "items": [
+        "ПиноКолада big x1",
+        "Клубничный жасмин big x2"
+      ],
+      "status": "Оплачен",
+      "total": 82
+    },
     {
       "id": 2901,
       "items": [
@@ -120929,15 +120976,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 2894,
-      "items": [
-        "Клубничный mini x1",
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 35
     }
   ],
   "shifts": {
@@ -121114,5 +121152,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-04T15:13:58.193Z"
+  "updatedAt": "2026-07-04T15:20:15.906Z"
 }

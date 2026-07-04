@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.46153846153846,
-    "checks": 13,
+    "average": 39.92857142857143,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 308,
-    "revenue": 513
+    "net": 354,
+    "revenue": 559
   },
   "data": {
-    "actions": 4076,
+    "actions": 4078,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1839,
+    "orders": 1840,
     "products": 40,
     "shifts": 43
   },
   "activity": [
     {
+      "id": 1783139911704,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:38",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783139911704,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:38",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783138255286,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783132033311,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:27",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783132033311,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:27",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1839,
+    "current": 1840,
     "old": [
       {
         "createdAt": "2026-07-03T11:05:36.618Z",
@@ -59748,6 +59748,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-04T05:23:01.336Z",
+        "id": 2887,
+        "items": [
+          "Мороженое классическое x2",
+          "Тапиока доп x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-тапиока-доп",
+            "name": "Тапиока доп",
+            "price": 3,
+            "qty": 2,
+            "size": "",
+            "total": 6
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 46,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-04",
+        "shiftLabel": "Смена 04.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-07-04T04:38:31.580Z",
         "id": 2886,
@@ -119732,14 +119770,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-04",
         "label": "Смена 04.07",
         "missingOrders": 0,
-        "revenue": 513,
+        "revenue": 559,
         "status": "ok"
       },
       {
@@ -120302,7 +120340,7 @@
         "status": "ok"
       }
     ],
-    "total": 1839
+    "total": 1840
   },
   "payments": [
     {
@@ -120315,7 +120353,7 @@
     },
     {
       "method": "Alif",
-      "total": 186
+      "total": 232
     },
     {
       "method": "Dushanbe City",
@@ -120327,6 +120365,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2887,
+      "items": [
+        "Мороженое классическое x2",
+        "Тапиока доп x2"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 2886,
       "items": [
@@ -120386,14 +120433,6 @@
       ],
       "status": "Оплачен",
       "total": 100
-    },
-    {
-      "id": 2879,
-      "items": [
-        "Виноградный тропический big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -120534,6 +120573,11 @@
       "total": 90
     },
     {
+      "name": "Мороженое классическое",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Клубничный big",
       "qty": 2,
       "total": 60
@@ -120547,11 +120591,6 @@
       "name": "Манго Маракуя big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "Мороженое классическое",
-      "qty": 2,
-      "total": 40
     },
     {
       "name": "Matcha big",
@@ -120570,5 +120609,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-04T11:41:07.551Z"
+  "updatedAt": "2026-07-04T12:25:37.374Z"
 }

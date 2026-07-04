@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 60,
-    "checks": 1,
+    "average": 40,
+    "checks": 2,
     "expenseTotal": 205,
-    "net": -145,
-    "revenue": 60
+    "net": -125,
+    "revenue": 80
   },
   "data": {
-    "actions": 4052,
+    "actions": 4054,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1827,
+    "orders": 1828,
     "products": 40,
     "shifts": 43
   },
   "activity": [
+    {
+      "id": 1783120867661,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:21",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783120867661,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:21",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783111403806,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:14",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783073656371,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:14",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783072419653,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:53",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1827,
+    "current": 1828,
     "old": [
       {
         "createdAt": "2026-07-03T11:05:36.618Z",
@@ -59748,6 +59748,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-03T23:58:20.103Z",
+        "id": 2875,
+        "items": [
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-04",
+        "shiftLabel": "Смена 04.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-03T23:21:07.581Z",
         "id": 2874,
@@ -119348,14 +119377,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 1,
-        "expectedOrders": 1,
+        "databaseOrders": 2,
+        "expectedOrders": 2,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-04",
         "label": "Смена 04.07",
         "missingOrders": 0,
-        "revenue": 60,
+        "revenue": 80,
         "status": "ok"
       },
       {
@@ -119918,12 +119947,12 @@
         "status": "ok"
       }
     ],
-    "total": 1827
+    "total": 1828
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 60
+      "total": 80
     },
     {
       "method": "Карта",
@@ -119943,6 +119972,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2875,
+      "items": [
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2874,
       "items": [
@@ -120094,8 +120131,13 @@
       "name": "Черника big",
       "qty": 1,
       "total": 30
+    },
+    {
+      "name": "Мороженое Орео",
+      "qty": 1,
+      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-04T06:23:43.833Z"
+  "updatedAt": "2026-07-04T07:00:56.320Z"
 }

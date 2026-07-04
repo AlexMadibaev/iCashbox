@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 60,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -145,
+    "revenue": 60
   },
   "data": {
     "actions": 4052,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1826,
+    "orders": 1827,
     "products": 40,
     "shifts": 43
   },
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1826,
+    "current": 1827,
     "old": [
       {
         "createdAt": "2026-07-03T11:05:36.618Z",
@@ -59748,6 +59748,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-03T23:21:07.581Z",
+        "id": 2874,
+        "items": [
+          "Клубничный big x1",
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-04",
+        "shiftLabel": "Смена 04.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-03T11:05:36.618Z",
         "id": 2873,
@@ -119310,15 +119348,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-07-04",
         "label": "Смена 04.07",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 60,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -119880,12 +119918,12 @@
         "status": "ok"
       }
     ],
-    "total": 1826
+    "total": 1827
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 60
     },
     {
       "method": "Карта",
@@ -119904,7 +119942,17 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 2874,
+      "items": [
+        "Клубничный big x1",
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -120036,7 +120084,18 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Клубничный big",
+      "qty": 1,
+      "total": 30
+    },
+    {
+      "name": "Черника big",
+      "qty": 1,
+      "total": 30
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-07-04T03:46:00.172Z"
+  "updatedAt": "2026-07-04T06:23:43.833Z"
 }

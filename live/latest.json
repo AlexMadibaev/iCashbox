@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 42,
-    "checks": 8,
+    "average": 39,
+    "checks": 9,
     "expenseTotal": 205,
-    "net": 131,
-    "revenue": 336
+    "net": 146,
+    "revenue": 351
   },
   "data": {
-    "actions": 4066,
+    "actions": 4068,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1834,
+    "orders": 1835,
     "products": 40,
     "shifts": 43
   },
   "activity": [
+    {
+      "id": 1783132995667,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:43",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783132995667,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:43",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783132033311,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:04",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783123100210,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:58",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783123100210,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:58",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1834,
+    "current": 1835,
     "old": [
       {
         "createdAt": "2026-07-03T11:05:36.618Z",
@@ -59748,6 +59748,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-04T03:08:46.408Z",
+        "id": 2882,
+        "items": [
+          "Cake-Pops Шт x1"
+        ],
+        "lines": [
+          {
+            "id": "product-1782200595826",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "Шт",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-04",
+        "shiftLabel": "Смена 04.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 15
+      },
       {
         "createdAt": "2026-07-04T02:43:15.572Z",
         "id": 2881,
@@ -119569,14 +119598,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 8,
-        "expectedOrders": 8,
+        "databaseOrders": 9,
+        "expectedOrders": 9,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-04",
         "label": "Смена 04.07",
         "missingOrders": 0,
-        "revenue": 336,
+        "revenue": 351,
         "status": "ok"
       },
       {
@@ -120139,12 +120168,12 @@
         "status": "ok"
       }
     ],
-    "total": 1834
+    "total": 1835
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 156
+      "total": 171
     },
     {
       "method": "Карта",
@@ -120164,6 +120193,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2882,
+      "items": [
+        "Cake-Pops Шт x1"
+      ],
+      "status": "Оплачен",
+      "total": 15
+    },
     {
       "id": 2881,
       "items": [
@@ -120221,15 +120258,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2874,
-      "items": [
-        "Клубничный big x1",
-        "Черника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -120406,5 +120434,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-04T09:45:51.505Z"
+  "updatedAt": "2026-07-04T10:11:22.648Z"
 }

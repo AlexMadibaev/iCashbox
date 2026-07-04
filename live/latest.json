@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.44444444444444,
-    "checks": 18,
+    "average": 45.421052631578945,
+    "checks": 19,
     "expenseTotal": 205,
-    "net": 541,
-    "revenue": 746
+    "net": 658,
+    "revenue": 863
   },
   "data": {
-    "actions": 4086,
+    "actions": 4088,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1844,
+    "orders": 1845,
     "products": 40,
     "shifts": 43
   },
   "activity": [
     {
+      "id": 1783145357457,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:09",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783145357457,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:09",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783143862685,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:38",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783138255286,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:10",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783138255286,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:10",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1844,
+    "current": 1845,
     "old": [
       {
         "createdAt": "2026-07-03T11:05:36.618Z",
@@ -59748,6 +59748,71 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-04T06:15:48.514Z",
+        "id": 2892,
+        "items": [
+          "Мороженое манго x1",
+          "Виноградный тропический big x1",
+          "Babl tea big x1",
+          "МангоБанан big x1",
+          "Cake-Pops Шт x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-виноградный-жасмин-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-милкшейк-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-1782200595826",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "Шт",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 117,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-04",
+        "shiftLabel": "Смена 04.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 117
+      },
       {
         "createdAt": "2026-07-04T06:09:17.364Z",
         "id": 2891,
@@ -119904,14 +119969,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 18,
-        "expectedOrders": 18,
+        "databaseOrders": 19,
+        "expectedOrders": 19,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-04",
         "label": "Смена 04.07",
         "missingOrders": 0,
-        "revenue": 746,
+        "revenue": 863,
         "status": "ok"
       },
       {
@@ -120474,12 +120539,12 @@
         "status": "ok"
       }
     ],
-    "total": 1844
+    "total": 1845
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 346
+      "total": 463
     },
     {
       "method": "Карта",
@@ -120499,6 +120564,18 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2892,
+      "items": [
+        "Мороженое манго x1",
+        "Виноградный тропический big x1",
+        "Babl tea big x1",
+        "МангоБанан big x1",
+        "Cake-Pops Шт x1"
+      ],
+      "status": "Оплачен",
+      "total": 117
+    },
     {
       "id": 2891,
       "items": [
@@ -120559,14 +120636,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 2884,
-      "items": [
-        "Фреш лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 15
     }
   ],
   "shifts": {
@@ -120703,13 +120772,18 @@
   "topProducts": [
     {
       "name": "МангоБанан big",
-      "qty": 3,
-      "total": 90
+      "qty": 4,
+      "total": 120
     },
     {
       "name": "Мороженое классическое",
       "qty": 4,
       "total": 80
+    },
+    {
+      "name": "Babl tea big",
+      "qty": 3,
+      "total": 78
     },
     {
       "name": "МангоБанан mini",
@@ -120727,7 +120801,7 @@
       "total": 60
     },
     {
-      "name": "Babl tea big",
+      "name": "Виноградный тропический big",
       "qty": 2,
       "total": 52
     },
@@ -120735,13 +120809,8 @@
       "name": "Манго Маракуя big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "Matcha big",
-      "qty": 1,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-04T13:11:53.661Z"
+  "updatedAt": "2026-07-04T13:18:24.243Z"
 }

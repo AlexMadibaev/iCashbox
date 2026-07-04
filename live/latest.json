@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 39.42857142857143,
-    "checks": 7,
+    "average": 42,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": 71,
-    "revenue": 276
+    "net": 131,
+    "revenue": 336
   },
   "data": {
-    "actions": 4064,
+    "actions": 4066,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1833,
+    "orders": 1834,
     "products": 40,
     "shifts": 43
   },
   "activity": [
+    {
+      "id": 1783132033311,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783132033311,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:27",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783131188285,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:58",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783120867661,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:21",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783120867661,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:21",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1833,
+    "current": 1834,
     "old": [
       {
         "createdAt": "2026-07-03T11:05:36.618Z",
@@ -59748,6 +59748,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-04T02:43:15.572Z",
+        "id": 2881,
+        "items": [
+          "МангоБанан big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 60,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-04",
+        "shiftLabel": "Смена 04.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-04T02:27:13.212Z",
         "id": 2880,
@@ -119540,14 +119569,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-04",
         "label": "Смена 04.07",
         "missingOrders": 0,
-        "revenue": 276,
+        "revenue": 336,
         "status": "ok"
       },
       {
@@ -120110,7 +120139,7 @@
         "status": "ok"
       }
     ],
-    "total": 1833
+    "total": 1834
   },
   "payments": [
     {
@@ -120123,7 +120152,7 @@
     },
     {
       "method": "Alif",
-      "total": 100
+      "total": 160
     },
     {
       "method": "Dushanbe City",
@@ -120135,6 +120164,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2881,
+      "items": [
+        "МангоБанан big x2"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2880,
       "items": [
@@ -120328,6 +120365,11 @@
   },
   "topProducts": [
     {
+      "name": "МангоБанан big",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Айс Латте",
       "qty": 2,
       "total": 60
@@ -120336,11 +120378,6 @@
       "name": "Matcha big",
       "qty": 1,
       "total": 40
-    },
-    {
-      "name": "МангоБанан big",
-      "qty": 1,
-      "total": 30
     },
     {
       "name": "Клубничный big",
@@ -120369,5 +120406,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-04T09:29:49.353Z"
+  "updatedAt": "2026-07-04T09:45:51.505Z"
 }

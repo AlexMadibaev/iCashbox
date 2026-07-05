@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.77272727272727,
-    "checks": 22,
+    "average": 41.26086956521739,
+    "checks": 23,
     "expenseTotal": 205,
-    "net": 714,
-    "revenue": 919
+    "net": 744,
+    "revenue": 949
   },
   "data": {
-    "actions": 4187,
+    "actions": 4189,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1894,
+    "orders": 1895,
     "products": 40,
     "shifts": 44
   },
   "activity": [
     {
+      "id": 1783233012185,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:30",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783233012185,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:30",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783231528914,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783228721715,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:18",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783228721715,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:18",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1894,
+    "current": 1895,
     "old": [
       {
         "createdAt": "2026-07-04T10:34:13.074Z",
@@ -61325,6 +61325,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-05T06:49:31.407Z",
+        "id": 2942,
+        "items": [
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 30,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-05",
+        "shiftLabel": "Смена 05.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-05T06:30:12.089Z",
         "id": 2941,
@@ -123192,14 +123221,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 22,
-        "expectedOrders": 22,
+        "databaseOrders": 23,
+        "expectedOrders": 23,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-05",
         "label": "Смена 05.07",
         "missingOrders": 0,
-        "revenue": 919,
+        "revenue": 949,
         "status": "ok"
       },
       {
@@ -123775,7 +123804,7 @@
         "status": "ok"
       }
     ],
-    "total": 1894
+    "total": 1895
   },
   "payments": [
     {
@@ -123788,7 +123817,7 @@
     },
     {
       "method": "Alif",
-      "total": 231
+      "total": 261
     },
     {
       "method": "Dushanbe City",
@@ -123800,6 +123829,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2942,
+      "items": [
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2941,
       "items": [
@@ -123857,15 +123894,6 @@
       "id": 2935,
       "items": [
         "Черника mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 50
-    },
-    {
-      "id": 2934,
-      "items": [
-        "Черника mini x1",
-        "МангоБанан mini x1"
       ],
       "status": "Оплачен",
       "total": 50
@@ -124009,6 +124037,11 @@
       "total": 180
     },
     {
+      "name": "Черника big",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Matcha big",
       "qty": 2,
       "total": 80
@@ -124037,13 +124070,8 @@
       "name": "Виноградный тропический mini",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Черника big",
-      "qty": 2,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-05T13:32:50.059Z"
+  "updatedAt": "2026-07-05T13:52:09.370Z"
 }

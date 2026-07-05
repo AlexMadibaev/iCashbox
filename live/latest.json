@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.51219512195122,
-    "checks": 41,
+    "average": 40.976190476190474,
+    "checks": 42,
     "expenseTotal": 205,
-    "net": 1456,
-    "revenue": 1661
+    "net": 1516,
+    "revenue": 1721
   },
   "data": {
-    "actions": 4228,
+    "actions": 4230,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1914,
+    "orders": 1915,
     "products": 40,
     "shifts": 44
   },
   "activity": [
     {
+      "id": 1783244032168,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:33",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783244032168,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:33",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783243645522,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:14",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783242727064,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:12",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783242727064,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:12",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1914,
+    "current": 1915,
     "old": [
       {
         "createdAt": "2026-07-04T10:34:13.074Z",
@@ -61325,6 +61325,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-05T09:36:22.714Z",
+        "id": 2962,
+        "items": [
+          "Мороженое классическое x1",
+          "Мороженое клубничное x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-05",
+        "shiftLabel": "Смена 05.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-05T09:33:52.070Z",
         "id": 2961,
@@ -123862,14 +123900,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 42,
-        "expectedOrders": 42,
+        "databaseOrders": 43,
+        "expectedOrders": 43,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-05",
         "label": "Смена 05.07",
         "missingOrders": 0,
-        "revenue": 1681,
+        "revenue": 1741,
         "status": "ok"
       },
       {
@@ -124445,12 +124483,12 @@
         "status": "ok"
       }
     ],
-    "total": 1914
+    "total": 1915
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1062
+      "total": 1122
     },
     {
       "method": "Карта",
@@ -124470,6 +124508,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2962,
+      "items": [
+        "Мороженое классическое x1",
+        "Мороженое клубничное x2"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 2961,
       "items": [
@@ -124526,14 +124573,6 @@
       "id": 2955,
       "items": [
         "Мороженое манго x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 2954,
-      "items": [
-        "Мороженое клубничное x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -124672,19 +124711,19 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое классическое",
+      "qty": 11,
+      "total": 220
+    },
+    {
       "name": "Мороженое манго",
       "qty": 10,
       "total": 200
     },
     {
-      "name": "Мороженое классическое",
-      "qty": 10,
-      "total": 200
-    },
-    {
       "name": "Мороженое клубничное",
-      "qty": 7,
-      "total": 140
+      "qty": 9,
+      "total": 180
     },
     {
       "name": "Matcha mini",
@@ -124713,5 +124752,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-05T16:36:29.994Z"
+  "updatedAt": "2026-07-05T16:38:59.232Z"
 }

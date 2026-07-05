@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 40.75,
-    "checks": 32,
+    "average": 41.60606060606061,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 1099,
-    "revenue": 1304
+    "net": 1168,
+    "revenue": 1373
   },
   "data": {
-    "actions": 4210,
+    "actions": 4212,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1905,
+    "orders": 1906,
     "products": 40,
     "shifts": 44
   },
   "activity": [
+    {
+      "id": 1783241922752,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:58",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783241922752,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:58",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783240544066,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:57",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783238235434,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:57",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783238036153,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:53",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1905,
+    "current": 1906,
     "old": [
       {
         "createdAt": "2026-07-04T10:34:13.074Z",
@@ -61325,6 +61325,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-05T09:00:45.021Z",
+        "id": 2953,
+        "items": [
+          "Мороженое с тапиокой x1",
+          "Тапиока доп x1",
+          "Фреш лимон big x1",
+          "Babl tea big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-тапиокой",
+            "name": "Мороженое с тапиокой",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-тапиока-доп",
+            "name": "Тапиока доп",
+            "price": 3,
+            "qty": 1,
+            "size": "",
+            "total": 3
+          },
+          {
+            "id": "product-фреш-лимон-big",
+            "name": "Фреш лимон big",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 70,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-05",
+        "shiftLabel": "Смена 05.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 69
+      },
       {
         "createdAt": "2026-07-05T08:58:42.667Z",
         "id": 2952,
@@ -123538,14 +123594,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 33,
-        "expectedOrders": 33,
+        "databaseOrders": 34,
+        "expectedOrders": 34,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-05",
         "label": "Смена 05.07",
         "missingOrders": 0,
-        "revenue": 1324,
+        "revenue": 1393,
         "status": "ok"
       },
       {
@@ -124121,12 +124177,12 @@
         "status": "ok"
       }
     ],
-    "total": 1905
+    "total": 1906
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 750
+      "total": 819
     },
     {
       "method": "Карта",
@@ -124146,6 +124202,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2953,
+      "items": [
+        "Мороженое с тапиокой x1",
+        "Тапиока доп x1",
+        "Фреш лимон big x1",
+        "Babl tea big x1"
+      ],
+      "status": "Оплачен",
+      "total": 69
+    },
     {
       "id": 2952,
       "items": [
@@ -124204,14 +124271,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 2944,
-      "items": [
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -124382,11 +124441,11 @@
       "total": 80
     },
     {
-      "name": "Виноградный тропический big",
+      "name": "Babl tea big",
       "qty": 3,
       "total": 78
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-05T16:01:20.592Z"
+  "updatedAt": "2026-07-05T16:03:21.413Z"
 }

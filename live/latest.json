@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.36,
-    "checks": 25,
+    "average": 39.57692307692308,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 804,
-    "revenue": 1009
+    "net": 824,
+    "revenue": 1029
   },
   "data": {
-    "actions": 4193,
+    "actions": 4195,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1897,
+    "orders": 1898,
     "products": 40,
     "shifts": 44
   },
   "activity": [
     {
+      "id": 1783234686111,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:58",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783234686111,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:58",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783234183388,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:49",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783230134606,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:42",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783230134606,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:42",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1897,
+    "current": 1898,
     "old": [
       {
         "createdAt": "2026-07-04T10:34:13.074Z",
@@ -61325,6 +61325,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-05T07:06:35.275Z",
+        "id": 2945,
+        "items": [
+          "Виноградный тропический mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 20,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-05",
+        "shiftLabel": "Смена 05.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-05T06:58:05.981Z",
         "id": 2944,
@@ -123279,14 +123308,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-05",
         "label": "Смена 05.07",
         "missingOrders": 0,
-        "revenue": 1009,
+        "revenue": 1029,
         "status": "ok"
       },
       {
@@ -123862,7 +123891,7 @@
         "status": "ok"
       }
     ],
-    "total": 1897
+    "total": 1898
   },
   "payments": [
     {
@@ -123879,7 +123908,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 137
+      "total": 157
     },
     {
       "method": "Семья",
@@ -123887,6 +123916,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2945,
+      "items": [
+        "Виноградный тропический mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2944,
       "items": [
@@ -123945,14 +123982,6 @@
       ],
       "status": "Оплачен",
       "total": 55
-    },
-    {
-      "id": 2937,
-      "items": [
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -124103,6 +124132,11 @@
       "total": 90
     },
     {
+      "name": "Виноградный тропический mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Matcha big",
       "qty": 2,
       "total": 80
@@ -124121,13 +124155,8 @@
       "name": "Мороженое манго",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Виноградный тропический mini",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-05T14:00:44.004Z"
+  "updatedAt": "2026-07-05T14:09:13.108Z"
 }

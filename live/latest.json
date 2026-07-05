@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.81818181818182,
-    "checks": 11,
+    "average": 38.916666666666664,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 211,
-    "revenue": 416
+    "net": 262,
+    "revenue": 467
   },
   "data": {
-    "actions": 4165,
+    "actions": 4167,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1883,
+    "orders": 1884,
     "products": 40,
     "shifts": 44
   },
   "activity": [
     {
+      "id": 1783222938699,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:42",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783222938699,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:42",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783221737914,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783215958612,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:45",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783215958612,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:45",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1883,
+    "current": 1884,
     "old": [
       {
         "createdAt": "2026-07-04T10:34:13.074Z",
@@ -61325,6 +61325,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-05T04:12:29.907Z",
+        "id": 2931,
+        "items": [
+          "Манго Маракуя big x1",
+          "Капучино x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-05",
+        "shiftLabel": "Смена 05.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 51
+      },
       {
         "createdAt": "2026-07-05T03:42:18.612Z",
         "id": 2930,
@@ -122801,14 +122839,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-05",
         "label": "Смена 05.07",
         "missingOrders": 0,
-        "revenue": 416,
+        "revenue": 467,
         "status": "ok"
       },
       {
@@ -123384,12 +123422,12 @@
         "status": "ok"
       }
     ],
-    "total": 1883
+    "total": 1884
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 370
+      "total": 421
     },
     {
       "method": "Карта",
@@ -123409,6 +123447,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2931,
+      "items": [
+        "Манго Маракуя big x1",
+        "Капучино x1"
+      ],
+      "status": "Оплачен",
+      "total": 51
+    },
     {
       "id": 2930,
       "items": [
@@ -123465,14 +123512,6 @@
       ],
       "status": "Оплачен",
       "total": 100
-    },
-    {
-      "id": 2923,
-      "items": [
-        "Манго Маракуя big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -123618,6 +123657,11 @@
       "total": 80
     },
     {
+      "name": "Манго Маракуя big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Babl tea mini",
       "qty": 2,
       "total": 40
@@ -123628,9 +123672,9 @@
       "total": 40
     },
     {
-      "name": "Манго Маракуя big",
+      "name": "Капучино",
       "qty": 1,
-      "total": 26
+      "total": 25
     },
     {
       "name": "Мороженое манго",
@@ -123641,13 +123685,8 @@
       "name": "Мороженое Орео",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 1,
-      "total": 10
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-05T10:44:56.515Z"
+  "updatedAt": "2026-07-05T11:15:07.986Z"
 }

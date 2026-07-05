@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.9375,
-    "checks": 16,
+    "average": 43.35294117647059,
+    "checks": 17,
     "expenseTotal": 205,
-    "net": 482,
-    "revenue": 687
+    "net": 532,
+    "revenue": 737
   },
   "data": {
-    "actions": 4175,
+    "actions": 4177,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1888,
+    "orders": 1889,
     "products": 40,
     "shifts": 44
   },
   "activity": [
     {
+      "id": 1783228721715,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783228721715,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:18",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783226161501,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783221737914,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:22",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783221737914,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:22",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1888,
+    "current": 1889,
     "old": [
       {
         "createdAt": "2026-07-04T10:34:13.074Z",
@@ -61325,6 +61325,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-05T05:24:35.684Z",
+        "id": 2936,
+        "items": [
+          "Виноградный тропический mini x1",
+          "Мороженое манго x1",
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 50,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-05",
+        "shiftLabel": "Смена 05.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-05T05:18:41.603Z",
         "id": 2935,
@@ -122973,14 +123020,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 16,
-        "expectedOrders": 16,
+        "databaseOrders": 17,
+        "expectedOrders": 17,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-05",
         "label": "Смена 05.07",
         "missingOrders": 0,
-        "revenue": 687,
+        "revenue": 737,
         "status": "ok"
       },
       {
@@ -123556,7 +123603,7 @@
         "status": "ok"
       }
     ],
-    "total": 1888
+    "total": 1889
   },
   "payments": [
     {
@@ -123569,7 +123616,7 @@
     },
     {
       "method": "Alif",
-      "total": 110
+      "total": 160
     },
     {
       "method": "Dushanbe City",
@@ -123581,6 +123628,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2936,
+      "items": [
+        "Виноградный тропический mini x1",
+        "Мороженое манго x1",
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 2935,
       "items": [
@@ -123640,14 +123697,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 2928,
-      "items": [
-        "Виноградный тропический mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -123798,6 +123847,11 @@
       "total": 75
     },
     {
+      "name": "Виноградный тропический mini",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Черника big",
       "qty": 2,
       "total": 60
@@ -123808,21 +123862,16 @@
       "total": 52
     },
     {
+      "name": "Мороженое манго",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Babl tea mini",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Виноградный тропический mini",
-      "qty": 2,
-      "total": 40
-    },
-    {
-      "name": "ПиноКолада big",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-05T12:21:19.775Z"
+  "updatedAt": "2026-07-05T12:27:13.337Z"
 }

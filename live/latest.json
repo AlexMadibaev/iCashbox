@@ -7,22 +7,36 @@
   },
   "summary": {
     "average": 20,
-    "checks": 1,
+    "checks": 2,
     "expenseTotal": 205,
-    "net": -185,
-    "revenue": 20
+    "net": -165,
+    "revenue": 40
   },
   "data": {
-    "actions": 4145,
+    "actions": 4147,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1873,
+    "orders": 1874,
     "products": 40,
     "shifts": 44
   },
   "activity": [
+    {
+      "id": 1783206343870,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:05",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783206343870,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:05",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783199966080,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:11",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783156278591,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783156118277,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:08",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1873,
+    "current": 1874,
     "old": [
       {
         "createdAt": "2026-07-04T10:34:13.074Z",
@@ -61325,6 +61325,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-05T00:21:44.588Z",
+        "id": 2921,
+        "items": [
+          "Виноградный тропический mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-жасмин-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-05",
+        "shiftLabel": "Смена 05.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-04T23:05:43.782Z",
         "id": 2920,
@@ -122493,14 +122522,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 1,
-        "expectedOrders": 1,
+        "databaseOrders": 2,
+        "expectedOrders": 2,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-05",
         "label": "Смена 05.07",
         "missingOrders": 0,
-        "revenue": 20,
+        "revenue": 40,
         "status": "ok"
       },
       {
@@ -123076,12 +123105,12 @@
         "status": "ok"
       }
     ],
-    "total": 1873
+    "total": 1874
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 20
+      "total": 40
     },
     {
       "method": "Карта",
@@ -123101,6 +123130,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2921,
+      "items": [
+        "Виноградный тропический mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2920,
       "items": [
@@ -123243,11 +123280,16 @@
   },
   "topProducts": [
     {
+      "name": "Виноградный тропический mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Babl tea mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-05T06:08:21.771Z"
+  "updatedAt": "2026-07-05T07:24:22.731Z"
 }

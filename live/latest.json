@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 41.60606060606061,
-    "checks": 33,
+    "average": 40.970588235294116,
+    "checks": 34,
     "expenseTotal": 205,
-    "net": 1168,
-    "revenue": 1373
+    "net": 1188,
+    "revenue": 1393
   },
   "data": {
-    "actions": 4212,
+    "actions": 4214,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1906,
+    "orders": 1907,
     "products": 40,
     "shifts": 44
   },
   "activity": [
+    {
+      "id": 1783242045101,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783242045101,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:00",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783241922752,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:11",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783239094029,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783238235434,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:57",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1906,
+    "current": 1907,
     "old": [
       {
         "createdAt": "2026-07-04T10:34:13.074Z",
@@ -61325,6 +61325,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-05T09:06:30.932Z",
+        "id": 2954,
+        "items": [
+          "Мороженое клубничное x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-05",
+        "shiftLabel": "Смена 05.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-05T09:00:45.021Z",
         "id": 2953,
@@ -123594,14 +123623,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-05",
         "label": "Смена 05.07",
         "missingOrders": 0,
-        "revenue": 1393,
+        "revenue": 1413,
         "status": "ok"
       },
       {
@@ -124177,12 +124206,12 @@
         "status": "ok"
       }
     ],
-    "total": 1906
+    "total": 1907
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 819
+      "total": 839
     },
     {
       "method": "Карта",
@@ -124202,6 +124231,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2954,
+      "items": [
+        "Мороженое клубничное x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 2953,
       "items": [
@@ -124263,14 +124300,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 2946,
-      "items": [
-        "Виноградный тропический big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -124411,6 +124440,11 @@
       "total": 200
     },
     {
+      "name": "Мороженое клубничное",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "Matcha mini",
       "qty": 3,
       "total": 90
@@ -124419,11 +124453,6 @@
       "name": "Черника big",
       "qty": 3,
       "total": 90
-    },
-    {
-      "name": "Мороженое клубничное",
-      "qty": 4,
-      "total": 80
     },
     {
       "name": "Мороженое манго",
@@ -124447,5 +124476,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-05T16:03:21.413Z"
+  "updatedAt": "2026-07-05T16:09:08.453Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.46666666666667,
-    "checks": 15,
+    "average": 42.9375,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 432,
-    "revenue": 637
+    "net": 482,
+    "revenue": 687
   },
   "data": {
-    "actions": 4173,
+    "actions": 4175,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1887,
+    "orders": 1888,
     "products": 40,
     "shifts": 44
   },
   "activity": [
     {
+      "id": 1783226161501,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:36",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783226161501,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:36",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783225691266,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783221205104,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:13",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783221205104,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:13",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1887,
+    "current": 1888,
     "old": [
       {
         "createdAt": "2026-07-04T10:34:13.074Z",
@@ -61325,6 +61325,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-05T05:18:41.603Z",
+        "id": 2935,
+        "items": [
+          "Черника mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-милкшейк-черника-minni",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-05",
+        "shiftLabel": "Смена 05.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-05T04:36:01.407Z",
         "id": 2934,
@@ -122944,14 +122973,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-05",
         "label": "Смена 05.07",
         "missingOrders": 0,
-        "revenue": 637,
+        "revenue": 687,
         "status": "ok"
       },
       {
@@ -123527,12 +123556,12 @@
         "status": "ok"
       }
     ],
-    "total": 1887
+    "total": 1888
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 471
+      "total": 521
     },
     {
       "method": "Карта",
@@ -123552,6 +123581,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2935,
+      "items": [
+        "Черника mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 2934,
       "items": [
@@ -123611,14 +123648,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 2927,
-      "items": [
-        "Matcha big x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -123764,6 +123793,11 @@
       "total": 80
     },
     {
+      "name": "Черника mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "Черника big",
       "qty": 2,
       "total": 60
@@ -123787,13 +123821,8 @@
       "name": "ПиноКолада big",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-05T11:38:39.470Z"
+  "updatedAt": "2026-07-05T12:21:19.775Z"
 }

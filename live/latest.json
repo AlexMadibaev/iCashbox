@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.666666666666664,
-    "checks": 9,
+    "average": 39.6,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 161,
-    "revenue": 366
+    "net": 191,
+    "revenue": 396
   },
   "data": {
-    "actions": 4161,
+    "actions": 4163,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1881,
+    "orders": 1882,
     "products": 40,
     "shifts": 44
   },
   "activity": [
     {
+      "id": 1783221205104,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:13",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783221205104,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:13",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783217960237,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:35",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783211503609,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:31",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783211503609,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:31",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1881,
+    "current": 1882,
     "old": [
       {
         "createdAt": "2026-07-04T10:34:13.074Z",
@@ -61325,6 +61325,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-05T03:22:17.836Z",
+        "id": 2929,
+        "items": [
+          "Мороженое манго x1",
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-05",
+        "shiftLabel": "Смена 05.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-05T03:13:25.017Z",
         "id": 2928,
@@ -122734,14 +122772,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-05",
         "label": "Смена 05.07",
         "missingOrders": 0,
-        "revenue": 366,
+        "revenue": 396,
         "status": "ok"
       },
       {
@@ -123317,12 +123355,12 @@
         "status": "ok"
       }
     ],
-    "total": 1881
+    "total": 1882
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 320
+      "total": 350
     },
     {
       "method": "Карта",
@@ -123342,6 +123380,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2929,
+      "items": [
+        "Мороженое манго x1",
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 2928,
       "items": [
@@ -123398,14 +123445,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 2921,
-      "items": [
-        "Виноградный тропический mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -123561,6 +123600,11 @@
       "total": 26
     },
     {
+      "name": "Мороженое манго",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Мороженое Орео",
       "qty": 1,
       "total": 20
@@ -123569,8 +123613,13 @@
       "name": "Babl tea mini",
       "qty": 1,
       "total": 20
+    },
+    {
+      "name": "Мороженое рожок",
+      "qty": 1,
+      "total": 10
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-05T10:16:03.013Z"
+  "updatedAt": "2026-07-05T10:24:56.047Z"
 }

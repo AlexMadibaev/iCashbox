@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 26,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -179,
+    "revenue": 26
   },
   "data": {
     "actions": 4247,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1922,
+    "orders": 1923,
     "products": 40,
     "shifts": 45
   },
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1922,
+    "current": 1923,
     "old": [
       {
         "createdAt": "2026-07-05T10:38:06.357Z",
@@ -62991,6 +62991,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-05T22:12:18.318Z",
+        "id": 2970,
+        "items": [
+          "Babl tea big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 26,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-06",
+        "shiftLabel": "Смена 06.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-05T10:38:06.357Z",
         "id": 2969,
@@ -125796,15 +125825,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-07-06",
         "label": "Смена 06.07",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 26,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -126392,12 +126421,12 @@
         "status": "ok"
       }
     ],
-    "total": 1922
+    "total": 1923
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 26
     },
     {
       "method": "Карта",
@@ -126416,7 +126445,16 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 2970,
+      "items": [
+        "Babl tea big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -126548,7 +126586,13 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Babl tea big",
+      "qty": 1,
+      "total": 26
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-07-06T03:31:45.835Z"
+  "updatedAt": "2026-07-06T05:14:57.132Z"
 }

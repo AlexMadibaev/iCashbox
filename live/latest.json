@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.083333333333336,
-    "checks": 60,
+    "average": 39.09836065573771,
+    "checks": 61,
     "expenseTotal": 205,
-    "net": 2140,
-    "revenue": 2345
+    "net": 2180,
+    "revenue": 2385
   },
   "data": {
-    "actions": 4482,
+    "actions": 4484,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1982,
+    "orders": 1983,
     "products": 60,
     "shifts": 45
   },
   "activity": [
     {
+      "id": 1783332115100,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:01",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783332115100,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:01",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783331645935,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:32",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783330021395,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:27",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783330021395,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:27",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1982,
+    "current": 1983,
     "old": [
       {
         "createdAt": "2026-07-05T10:38:06.357Z",
@@ -62996,6 +62996,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-06T10:34:42.812Z",
+        "id": 3030,
+        "items": [
+          "Манго Маракуя mini x1",
+          "Жасмин гранат mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-гранат-mini",
+            "name": "Жасмин гранат mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-06",
+        "shiftLabel": "Смена 06.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-06T10:01:55.016Z",
         "id": 3029,
@@ -127784,14 +127822,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 60,
-        "expectedOrders": 60,
+        "databaseOrders": 61,
+        "expectedOrders": 61,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-06",
         "label": "Смена 06.07",
         "missingOrders": 0,
-        "revenue": 2345,
+        "revenue": 2385,
         "status": "ok"
       },
       {
@@ -128380,7 +128418,7 @@
         "status": "ok"
       }
     ],
-    "total": 1982
+    "total": 1983
   },
   "payments": [
     {
@@ -128393,7 +128431,7 @@
     },
     {
       "method": "Alif",
-      "total": 433
+      "total": 473
     },
     {
       "method": "Dushanbe City",
@@ -128405,6 +128443,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3030,
+      "items": [
+        "Манго Маракуя mini x1",
+        "Жасмин гранат mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3029,
       "items": [
@@ -128465,14 +128512,6 @@
       ],
       "status": "Оплачен",
       "total": 100
-    },
-    {
-      "id": 3022,
-      "items": [
-        "МангоБанан mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -128608,6 +128647,11 @@
   },
   "topProducts": [
     {
+      "name": "Манго Маракуя mini",
+      "qty": 10,
+      "total": 200
+    },
+    {
       "name": "Babl tea mini",
       "qty": 10,
       "total": 200
@@ -128619,11 +128663,6 @@
     },
     {
       "name": "Клубничный жасмин mini",
-      "qty": 9,
-      "total": 180
-    },
-    {
-      "name": "Манго Маракуя mini",
       "qty": 9,
       "total": 180
     },
@@ -128649,5 +128688,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-06T17:04:33.416Z"
+  "updatedAt": "2026-07-06T17:37:21.748Z"
 }

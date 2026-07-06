@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 27.444444444444443,
-    "checks": 9,
+    "average": 27.3,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 42,
-    "revenue": 247
+    "net": 68,
+    "revenue": 273
   },
   "data": {
-    "actions": 4263,
+    "actions": 4265,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1931,
+    "orders": 1932,
     "products": 40,
     "shifts": 45
   },
   "activity": [
     {
+      "id": 1783299355784,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:55",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783299355784,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:55",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783298297075,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "10:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783291231120,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:40",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783291231120,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:40",
       "type": "Создание заказа"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1931,
+    "current": 1932,
     "old": [
       {
         "createdAt": "2026-07-05T10:38:06.357Z",
@@ -62991,6 +62991,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-06T01:31:17.631Z",
+        "id": 2979,
+        "items": [
+          "Жасмин лимон big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-tea-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-06",
+        "shiftLabel": "Смена 06.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-06T00:55:55.679Z",
         "id": 2978,
@@ -126075,14 +126104,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-06",
         "label": "Смена 06.07",
         "missingOrders": 0,
-        "revenue": 247,
+        "revenue": 273,
         "status": "ok"
       },
       {
@@ -126671,12 +126700,12 @@
         "status": "ok"
       }
     ],
-    "total": 1931
+    "total": 1932
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 96
+      "total": 122
     },
     {
       "method": "Карта",
@@ -126696,6 +126725,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2979,
+      "items": [
+        "Жасмин лимон big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 2978,
       "items": [
@@ -126753,14 +126790,6 @@
       ],
       "status": "Оплачен",
       "total": 41
-    },
-    {
-      "id": 2971,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -126911,6 +126940,11 @@
       "total": 30
     },
     {
+      "name": "Жасмин лимон big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
@@ -126929,13 +126963,8 @@
       "name": "Американо",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Cake-Pops",
-      "qty": 1,
-      "total": 15
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-06T07:58:34.323Z"
+  "updatedAt": "2026-07-06T08:33:56.399Z"
 }

@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 23,
-    "checks": 2,
+    "average": 29,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -159,
-    "revenue": 46
+    "net": -118,
+    "revenue": 87
   },
   "data": {
-    "actions": 4249,
+    "actions": 4251,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1924,
+    "orders": 1925,
     "products": 40,
     "shifts": 45
   },
   "activity": [
+    {
+      "id": 1783289667303,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:14",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783289667303,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:14",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783289538407,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:53",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783245232070,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:53",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783244944436,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:49",
       "type": "Списание ингредиентов"
     }
   ],
@@ -187,7 +187,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1924,
+    "current": 1925,
     "old": [
       {
         "createdAt": "2026-07-05T10:38:06.357Z",
@@ -62991,6 +62991,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-05T22:40:31.013Z",
+        "id": 2972,
+        "items": [
+          "Манго Маракуя big x1",
+          "Cake-Pops Шт x1"
+        ],
+        "lines": [
+          {
+            "id": "product-mango-maracuya-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-1782200595826",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "Шт",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 41,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-06",
+        "shiftLabel": "Смена 06.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 41
+      },
       {
         "createdAt": "2026-07-05T22:14:27.203Z",
         "id": 2971,
@@ -125854,14 +125892,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-06",
         "label": "Смена 06.07",
         "missingOrders": 0,
-        "revenue": 46,
+        "revenue": 87,
         "status": "ok"
       },
       {
@@ -126450,7 +126488,7 @@
         "status": "ok"
       }
     ],
-    "total": 1924
+    "total": 1925
   },
   "payments": [
     {
@@ -126467,7 +126505,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 0
+      "total": 41
     },
     {
       "method": "Семья",
@@ -126475,6 +126513,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 2972,
+      "items": [
+        "Манго Маракуя big x1",
+        "Cake-Pops Шт x1"
+      ],
+      "status": "Оплачен",
+      "total": 41
+    },
     {
       "id": 2971,
       "items": [
@@ -126625,6 +126672,11 @@
   },
   "topProducts": [
     {
+      "name": "Манго Маракуя big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Babl tea big",
       "qty": 1,
       "total": 26
@@ -126633,8 +126685,13 @@
       "name": "Babl tea mini",
       "qty": 1,
       "total": 20
+    },
+    {
+      "name": "Cake-Pops",
+      "qty": 1,
+      "total": 15
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-06T05:17:04.571Z"
+  "updatedAt": "2026-07-06T05:43:09.658Z"
 }

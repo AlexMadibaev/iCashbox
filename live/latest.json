@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.285714285714285,
-    "checks": 21,
+    "average": 39.04545454545455,
+    "checks": 22,
     "expenseTotal": 205,
-    "net": 599,
-    "revenue": 804
+    "net": 654,
+    "revenue": 859
   },
   "data": {
-    "actions": 4529,
+    "actions": 4531,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2005,
+    "orders": 2006,
     "products": 60,
     "shifts": 46
   },
   "activity": [
     {
+      "id": 1783395851496,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:44",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783395851496,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:44",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783394535770,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:47",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783392282817,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:44",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783392282817,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:44",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2005,
+    "current": 2006,
     "old": [
       {
         "createdAt": "2026-07-06T10:43:37.897Z",
@@ -65064,6 +65064,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T04:25:55.722Z",
+        "id": 3053,
+        "items": [
+          "АйсМатча черника x1",
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-черника",
+            "name": "АйсМатча черника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 55,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-07",
+        "shiftLabel": "Смена 07.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 55
+      },
       {
         "createdAt": "2026-07-07T03:44:11.413Z",
         "id": 3052,
@@ -130645,14 +130683,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 21,
-        "expectedOrders": 21,
+        "databaseOrders": 22,
+        "expectedOrders": 22,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-07",
         "label": "Смена 07.07",
         "missingOrders": 0,
-        "revenue": 804,
+        "revenue": 859,
         "status": "ok"
       },
       {
@@ -131254,7 +131292,7 @@
         "status": "ok"
       }
     ],
-    "total": 2005
+    "total": 2006
   },
   "payments": [
     {
@@ -131267,7 +131305,7 @@
     },
     {
       "method": "Alif",
-      "total": 152
+      "total": 207
     },
     {
       "method": "Dushanbe City",
@@ -131279,6 +131317,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3053,
+      "items": [
+        "АйсМатча черника x1",
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 55
+    },
     {
       "id": 3052,
       "items": [
@@ -131335,15 +131382,6 @@
       ],
       "status": "Оплачен",
       "total": 45
-    },
-    {
-      "id": 3045,
-      "items": [
-        "Мороженое классическое x1",
-        "Blue mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -131479,12 +131517,12 @@
   },
   "topProducts": [
     {
-      "name": "Мороженое клубничное",
-      "qty": 4,
-      "total": 80
+      "name": "Babl tea mini",
+      "qty": 5,
+      "total": 100
     },
     {
-      "name": "Babl tea mini",
+      "name": "Мороженое клубничное",
       "qty": 4,
       "total": 80
     },
@@ -131520,5 +131558,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-07T10:46:51.819Z"
+  "updatedAt": "2026-07-07T11:28:35.958Z"
 }

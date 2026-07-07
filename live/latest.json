@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 29.625,
-    "checks": 8,
+    "average": 30.77777777777778,
+    "checks": 9,
     "expenseTotal": 205,
-    "net": 32,
-    "revenue": 237
+    "net": 72,
+    "revenue": 277
   },
   "data": {
-    "actions": 4503,
+    "actions": 4505,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1992,
+    "orders": 1993,
     "products": 60,
     "shifts": 46
   },
   "activity": [
     {
+      "id": 1783386483920,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:08",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783386483920,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:08",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783383509958,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "10:06",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783374902488,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:55",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783374902488,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:55",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1992,
+    "current": 1993,
     "old": [
       {
         "createdAt": "2026-07-06T10:43:37.897Z",
@@ -65064,6 +65064,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T01:09:54.660Z",
+        "id": 3040,
+        "items": [
+          "Мороженое клубничное x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-07",
+        "shiftLabel": "Смена 07.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-07T01:08:03.839Z",
         "id": 3039,
@@ -130196,14 +130225,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 8,
-        "expectedOrders": 8,
+        "databaseOrders": 9,
+        "expectedOrders": 9,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-07",
         "label": "Смена 07.07",
         "missingOrders": 0,
-        "revenue": 237,
+        "revenue": 277,
         "status": "ok"
       },
       {
@@ -130805,7 +130834,7 @@
         "status": "ok"
       }
     ],
-    "total": 1992
+    "total": 1993
   },
   "payments": [
     {
@@ -130818,7 +130847,7 @@
     },
     {
       "method": "Alif",
-      "total": 46
+      "total": 86
     },
     {
       "method": "Dushanbe City",
@@ -130830,6 +130859,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3040,
+      "items": [
+        "Мороженое клубничное x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3039,
       "items": [
@@ -130888,14 +130925,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3032,
-      "items": [
-        "Клубника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -131036,6 +131065,11 @@
       "total": 80
     },
     {
+      "name": "Мороженое клубничное",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Клубника big",
       "qty": 2,
       "total": 52
@@ -131051,16 +131085,11 @@
       "total": 25
     },
     {
-      "name": "Мороженое клубничное",
-      "qty": 1,
-      "total": 20
-    },
-    {
       "name": "Мороженое с чёрным сахаром",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-07T08:10:44.127Z"
+  "updatedAt": "2026-07-07T08:12:33.368Z"
 }

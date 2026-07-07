@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.375,
-    "checks": 16,
+    "average": 39.1764705882353,
+    "checks": 17,
     "expenseTotal": 205,
-    "net": 441,
-    "revenue": 646
+    "net": 461,
+    "revenue": 666
   },
   "data": {
-    "actions": 4519,
+    "actions": 4521,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2000,
+    "orders": 2001,
     "products": 60,
     "shifts": 46
   },
   "activity": [
     {
+      "id": 1783392431482,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783392431482,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:47",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783392282817,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783388161612,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783388161612,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:36",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2000,
+    "current": 2001,
     "old": [
       {
         "createdAt": "2026-07-06T10:43:37.897Z",
@@ -65064,6 +65064,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T02:52:19.893Z",
+        "id": 3048,
+        "items": [
+          "Клубничный жасмин mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-07",
+        "shiftLabel": "Смена 07.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-07T02:47:11.388Z",
         "id": 3047,
@@ -130500,14 +130529,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 16,
-        "expectedOrders": 16,
+        "databaseOrders": 17,
+        "expectedOrders": 17,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-07",
         "label": "Смена 07.07",
         "missingOrders": 0,
-        "revenue": 646,
+        "revenue": 666,
         "status": "ok"
       },
       {
@@ -131109,12 +131138,12 @@
         "status": "ok"
       }
     ],
-    "total": 2000
+    "total": 2001
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 474
+      "total": 494
     },
     {
       "method": "Карта",
@@ -131134,6 +131163,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3048,
+      "items": [
+        "Клубничный жасмин mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3047,
       "items": [
@@ -131197,14 +131234,6 @@
       ],
       "status": "Оплачен",
       "total": 52
-    },
-    {
-      "id": 3040,
-      "items": [
-        "Мороженое клубничное x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -131350,6 +131379,11 @@
       "total": 80
     },
     {
+      "name": "Клубничный жасмин mini",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Blue big",
       "qty": 2,
       "total": 52
@@ -131373,13 +131407,8 @@
       "name": "Смузи Шавель Ананас",
       "qty": 1,
       "total": 40
-    },
-    {
-      "name": "Клубничный жасмин mini",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-07T09:49:49.819Z"
+  "updatedAt": "2026-07-07T09:54:59.596Z"
 }

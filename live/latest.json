@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.083333333333336,
-    "checks": 12,
+    "average": 40.84615384615385,
+    "checks": 13,
     "expenseTotal": 205,
-    "net": 240,
-    "revenue": 445
+    "net": 326,
+    "revenue": 531
   },
   "data": {
-    "actions": 4511,
+    "actions": 4513,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1996,
+    "orders": 1997,
     "products": 60,
     "shifts": 46
   },
   "activity": [
     {
+      "id": 1783390302184,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:11",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783390302184,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:11",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783390081530,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:18",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783381653153,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:47",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783381653153,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:47",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1996,
+    "current": 1997,
     "old": [
       {
         "createdAt": "2026-07-06T10:43:37.897Z",
@@ -65064,6 +65064,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T02:27:01.134Z",
+        "id": 3044,
+        "items": [
+          "Babl tea big x1",
+          "Мороженое с чёрным сахаром x1",
+          "Мороженое классическое x1",
+          "Мороженое манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-мороженое-с-чёрным-сахаром",
+            "name": "Мороженое с чёрным сахаром",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-07",
+        "shiftLabel": "Смена 07.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 86
+      },
       {
         "createdAt": "2026-07-07T02:11:42.090Z",
         "id": 3043,
@@ -130339,14 +130395,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 12,
-        "expectedOrders": 12,
+        "databaseOrders": 13,
+        "expectedOrders": 13,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-07",
         "label": "Смена 07.07",
         "missingOrders": 0,
-        "revenue": 445,
+        "revenue": 531,
         "status": "ok"
       },
       {
@@ -130948,12 +131004,12 @@
         "status": "ok"
       }
     ],
-    "total": 1996
+    "total": 1997
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 273
+      "total": 359
     },
     {
       "method": "Карта",
@@ -130973,6 +131029,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3044,
+      "items": [
+        "Babl tea big x1",
+        "Мороженое с чёрным сахаром x1",
+        "Мороженое классическое x1",
+        "Мороженое манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 86
+    },
     {
       "id": 3043,
       "items": [
@@ -131032,15 +131099,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3036,
-      "items": [
-        "Babl tea mini x1",
-        "Клубничный жасмин mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -131196,6 +131254,11 @@
       "total": 52
     },
     {
+      "name": "Мороженое с чёрным сахаром",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Смузи Шавель Ананас",
       "qty": 1,
       "total": 40
@@ -131209,13 +131272,8 @@
       "name": "Клубничный big",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Bubble Gum big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-07T09:14:20.647Z"
+  "updatedAt": "2026-07-07T09:29:41.202Z"
 }

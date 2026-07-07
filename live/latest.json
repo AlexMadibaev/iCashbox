@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 28,
-    "checks": 4,
+    "average": 30.4,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": -93,
-    "revenue": 112
+    "net": -53,
+    "revenue": 152
   },
   "data": {
-    "actions": 4495,
+    "actions": 4497,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1988,
+    "orders": 1989,
     "products": 60,
     "shifts": 46
   },
   "activity": [
+    {
+      "id": 1783376942915,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783376942915,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:29",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783375617602,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:34",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783334082937,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:34",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783332115100,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:01",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1988,
+    "current": 1989,
     "old": [
       {
         "createdAt": "2026-07-06T10:43:37.897Z",
@@ -65064,6 +65064,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-06T23:07:31.838Z",
+        "id": 3036,
+        "items": [
+          "Babl tea mini x1",
+          "Клубничный жасмин mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-07",
+        "shiftLabel": "Смена 07.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-06T22:29:02.801Z",
         "id": 3035,
@@ -130062,14 +130100,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-07",
         "label": "Смена 07.07",
         "missingOrders": 0,
-        "revenue": 112,
+        "revenue": 152,
         "status": "ok"
       },
       {
@@ -130671,12 +130709,12 @@
         "status": "ok"
       }
     ],
-    "total": 1988
+    "total": 1989
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 40
+      "total": 80
     },
     {
       "method": "Карта",
@@ -130696,6 +130734,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3036,
+      "items": [
+        "Babl tea mini x1",
+        "Клубничный жасмин mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3035,
       "items": [
@@ -130869,20 +130916,20 @@
     },
     {
       "name": "Babl tea mini",
-      "qty": 1,
-      "total": 20
+      "qty": 2,
+      "total": 40
+    },
+    {
+      "name": "Клубничный жасмин mini",
+      "qty": 2,
+      "total": 40
     },
     {
       "name": "Мороженое с чёрным сахаром",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Клубничный жасмин mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-07T05:31:43.027Z"
+  "updatedAt": "2026-07-07T06:10:12.126Z"
 }

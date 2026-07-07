@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.44736842105263,
-    "checks": 38,
+    "average": 37.05128205128205,
+    "checks": 39,
     "expenseTotal": 205,
-    "net": 1180,
-    "revenue": 1385
+    "net": 1240,
+    "revenue": 1445
   },
   "data": {
-    "actions": 4563,
+    "actions": 4565,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2022,
+    "orders": 2023,
     "products": 60,
     "shifts": 46
   },
   "activity": [
     {
+      "id": 1783413631024,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:40",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783413631024,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:40",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783411102893,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1783409398769,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:29",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783409369445,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:29",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783409369445,
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:29",
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2022,
+    "current": 2023,
     "old": [
       {
         "createdAt": "2026-07-06T10:43:37.897Z",
@@ -65064,6 +65064,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T08:41:18.424Z",
+        "id": 3070,
+        "items": [
+          "Matcha mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 60,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-07",
+        "shiftLabel": "Смена 07.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-07T08:40:30.940Z",
         "id": 3069,
@@ -131174,14 +131203,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 38,
-        "expectedOrders": 38,
+        "databaseOrders": 39,
+        "expectedOrders": 39,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-07",
         "label": "Смена 07.07",
         "missingOrders": 0,
-        "revenue": 1385,
+        "revenue": 1445,
         "status": "ok"
       },
       {
@@ -131783,7 +131812,7 @@
         "status": "ok"
       }
     ],
-    "total": 2022
+    "total": 2023
   },
   "payments": [
     {
@@ -131796,7 +131825,7 @@
     },
     {
       "method": "Alif",
-      "total": 385
+      "total": 445
     },
     {
       "method": "Dushanbe City",
@@ -131808,6 +131837,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3070,
+      "items": [
+        "Matcha mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3069,
       "items": [
@@ -131864,14 +131901,6 @@
       ],
       "status": "Оплачен",
       "total": 52
-    },
-    {
-      "id": 3062,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -132027,6 +132056,11 @@
       "total": 100
     },
     {
+      "name": "Matcha mini",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Клубничный big",
       "qty": 3,
       "total": 90
@@ -132040,13 +132074,8 @@
       "name": "Клубника big",
       "qty": 3,
       "total": 78
-    },
-    {
-      "name": "Клубничный mini",
-      "qty": 3,
-      "total": 75
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-07T15:43:10.661Z"
+  "updatedAt": "2026-07-07T15:43:56.947Z"
 }

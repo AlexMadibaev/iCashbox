@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 36.78125,
-    "checks": 32,
+    "average": 36.45454545454545,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 972,
-    "revenue": 1177
+    "net": 998,
+    "revenue": 1203
   },
   "data": {
     "actions": 4553,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2016,
+    "orders": 2017,
     "products": 60,
     "shifts": 46
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2016,
+    "current": 2017,
     "old": [
       {
         "createdAt": "2026-07-06T10:43:37.897Z",
@@ -65064,6 +65064,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T07:29:58.663Z",
+        "id": 3064,
+        "items": [
+          "Blue big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-big",
+            "name": "Blue big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 26,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-07",
+        "shiftLabel": "Смена 07.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-07T07:29:29.352Z",
         "id": 3063,
@@ -130991,14 +131020,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 32,
-        "expectedOrders": 32,
+        "databaseOrders": 33,
+        "expectedOrders": 33,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-07",
         "label": "Смена 07.07",
         "missingOrders": 0,
-        "revenue": 1177,
+        "revenue": 1203,
         "status": "ok"
       },
       {
@@ -131600,12 +131629,12 @@
         "status": "ok"
       }
     ],
-    "total": 2016
+    "total": 2017
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 716
+      "total": 742
     },
     {
       "method": "Карта",
@@ -131625,6 +131654,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3064,
+      "items": [
+        "Blue big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 3063,
       "items": [
@@ -131680,15 +131717,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3056,
-      "items": [
-        "Мороженое классическое x1",
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -131839,6 +131867,11 @@
       "total": 80
     },
     {
+      "name": "Blue big",
+      "qty": 3,
+      "total": 78
+    },
+    {
       "name": "Клубника big",
       "qty": 3,
       "total": 78
@@ -131857,13 +131890,8 @@
       "name": "Мороженое манго",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Клубничный жасмин mini",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-07T14:32:09.450Z"
+  "updatedAt": "2026-07-07T14:32:37.129Z"
 }

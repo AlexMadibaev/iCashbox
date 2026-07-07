@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.270270270270274,
-    "checks": 37,
+    "average": 36.44736842105263,
+    "checks": 38,
     "expenseTotal": 205,
-    "net": 1100,
-    "revenue": 1305
+    "net": 1180,
+    "revenue": 1385
   },
   "data": {
-    "actions": 4561,
+    "actions": 4563,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2021,
+    "orders": 2022,
     "products": 60,
     "shifts": 46
   },
   "activity": [
     {
+      "id": 1783411102893,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:58",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783411102893,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:58",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783410579258,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:29",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783409192949,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:26",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783409192949,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:26",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2021,
+    "current": 2022,
     "old": [
       {
         "createdAt": "2026-07-06T10:43:37.897Z",
@@ -65064,6 +65064,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T08:40:30.940Z",
+        "id": 3069,
+        "items": [
+          "Клубничный mini x2",
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          },
+          {
+            "id": "product-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 80,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-07",
+        "shiftLabel": "Смена 07.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 80
+      },
       {
         "createdAt": "2026-07-07T07:58:22.795Z",
         "id": 3068,
@@ -131136,14 +131174,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 37,
-        "expectedOrders": 37,
+        "databaseOrders": 38,
+        "expectedOrders": 38,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-07",
         "label": "Смена 07.07",
         "missingOrders": 0,
-        "revenue": 1305,
+        "revenue": 1385,
         "status": "ok"
       },
       {
@@ -131745,7 +131783,7 @@
         "status": "ok"
       }
     ],
-    "total": 2021
+    "total": 2022
   },
   "payments": [
     {
@@ -131758,7 +131796,7 @@
     },
     {
       "method": "Alif",
-      "total": 305
+      "total": 385
     },
     {
       "method": "Dushanbe City",
@@ -131770,6 +131808,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3069,
+      "items": [
+        "Клубничный mini x2",
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 80
+    },
     {
       "id": 3068,
       "items": [
@@ -131822,14 +131869,6 @@
       "id": 3062,
       "items": [
         "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 3061,
-      "items": [
-        "Bubble Gum mini x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -131988,6 +132027,11 @@
       "total": 100
     },
     {
+      "name": "Клубничный big",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 4,
       "total": 80
@@ -131998,16 +132042,11 @@
       "total": 78
     },
     {
-      "name": "Клубничный big",
-      "qty": 2,
-      "total": 60
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 2,
-      "total": 60
+      "name": "Клубничный mini",
+      "qty": 3,
+      "total": 75
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-07T15:01:02.803Z"
+  "updatedAt": "2026-07-07T15:43:10.661Z"
 }

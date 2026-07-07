@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.625,
-    "checks": 40,
+    "average": 37.4390243902439,
+    "checks": 41,
     "expenseTotal": 205,
-    "net": 1300,
-    "revenue": 1505
+    "net": 1330,
+    "revenue": 1535
   },
   "data": {
-    "actions": 4567,
+    "actions": 4569,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2024,
+    "orders": 2025,
     "products": 60,
     "shifts": 46
   },
   "activity": [
     {
+      "id": 1783415474074,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:11",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783415474074,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:11",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783413678506,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783409579469,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:32",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783409579469,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:32",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2024,
+    "current": 2025,
     "old": [
       {
         "createdAt": "2026-07-06T10:43:37.897Z",
@@ -65064,6 +65064,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T09:39:16.407Z",
+        "id": 3072,
+        "items": [
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-07",
+        "shiftLabel": "Смена 07.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-07T09:11:13.987Z",
         "id": 3071,
@@ -131232,14 +131261,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 40,
-        "expectedOrders": 40,
+        "databaseOrders": 41,
+        "expectedOrders": 41,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-07",
         "label": "Смена 07.07",
         "missingOrders": 0,
-        "revenue": 1505,
+        "revenue": 1535,
         "status": "ok"
       },
       {
@@ -131841,12 +131870,12 @@
         "status": "ok"
       }
     ],
-    "total": 2024
+    "total": 2025
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 858
+      "total": 888
     },
     {
       "method": "Карта",
@@ -131866,6 +131895,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3072,
+      "items": [
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 3071,
       "items": [
@@ -131917,14 +131954,6 @@
     },
     {
       "id": 3065,
-      "items": [
-        "Blue big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
-    },
-    {
-      "id": 3064,
       "items": [
         "Blue big x1"
       ],
@@ -132070,6 +132099,11 @@
       "total": 160
     },
     {
+      "name": "Клубничный big",
+      "qty": 4,
+      "total": 120
+    },
+    {
       "name": "Клубничный жасмин mini",
       "qty": 6,
       "total": 120
@@ -132095,16 +132129,11 @@
       "total": 90
     },
     {
-      "name": "Клубничный big",
-      "qty": 3,
-      "total": 90
-    },
-    {
       "name": "Мороженое клубничное",
       "qty": 4,
       "total": 80
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-07T16:14:01.978Z"
+  "updatedAt": "2026-07-07T16:41:56.825Z"
 }

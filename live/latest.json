@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.84615384615385,
-    "checks": 13,
+    "average": 40.785714285714285,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 326,
-    "revenue": 531
+    "net": 366,
+    "revenue": 571
   },
   "data": {
-    "actions": 4513,
+    "actions": 4515,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1997,
+    "orders": 1998,
     "products": 60,
     "shifts": 46
   },
   "activity": [
     {
+      "id": 1783391221230,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783391221230,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:27",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783390302184,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783383509958,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:18",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783383509958,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:18",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1997,
+    "current": 1998,
     "old": [
       {
         "createdAt": "2026-07-06T10:43:37.897Z",
@@ -65064,6 +65064,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T02:37:14.484Z",
+        "id": 3045,
+        "items": [
+          "Мороженое классическое x1",
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-07",
+        "shiftLabel": "Смена 07.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-07T02:27:01.134Z",
         "id": 3044,
@@ -130395,14 +130433,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-07",
         "label": "Смена 07.07",
         "missingOrders": 0,
-        "revenue": 531,
+        "revenue": 571,
         "status": "ok"
       },
       {
@@ -131004,12 +131042,12 @@
         "status": "ok"
       }
     ],
-    "total": 1997
+    "total": 1998
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 359
+      "total": 399
     },
     {
       "method": "Карта",
@@ -131029,6 +131067,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3045,
+      "items": [
+        "Мороженое классическое x1",
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3044,
       "items": [
@@ -131086,14 +131133,6 @@
     },
     {
       "id": 3038,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 3037,
       "items": [
         "Babl tea mini x1"
       ],
@@ -131254,6 +131293,11 @@
       "total": 52
     },
     {
+      "name": "Мороженое классическое",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Мороженое с чёрным сахаром",
       "qty": 2,
       "total": 40
@@ -131267,13 +131311,8 @@
       "name": "Клубничный жасмин mini",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Клубничный big",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-07T09:29:41.202Z"
+  "updatedAt": "2026-07-07T09:39:54.687Z"
 }

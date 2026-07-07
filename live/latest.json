@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.2,
-    "checks": 20,
+    "average": 38.285714285714285,
+    "checks": 21,
     "expenseTotal": 205,
-    "net": 559,
-    "revenue": 764
+    "net": 599,
+    "revenue": 804
   },
   "data": {
-    "actions": 4527,
+    "actions": 4529,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2004,
+    "orders": 2005,
     "products": 60,
     "shifts": 46
   },
   "activity": [
     {
+      "id": 1783394535770,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783394535770,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783393852605,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:44",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783391834569,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783391834569,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:37",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2004,
+    "current": 2005,
     "old": [
       {
         "createdAt": "2026-07-06T10:43:37.897Z",
@@ -65064,6 +65064,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T03:44:11.413Z",
+        "id": 3052,
+        "items": [
+          "Мороженое манго x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-07",
+        "shiftLabel": "Смена 07.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-07T03:22:15.667Z",
         "id": 3051,
@@ -130616,14 +130645,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 20,
-        "expectedOrders": 20,
+        "databaseOrders": 21,
+        "expectedOrders": 21,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-07",
         "label": "Смена 07.07",
         "missingOrders": 0,
-        "revenue": 764,
+        "revenue": 804,
         "status": "ok"
       },
       {
@@ -131225,7 +131254,7 @@
         "status": "ok"
       }
     ],
-    "total": 2004
+    "total": 2005
   },
   "payments": [
     {
@@ -131238,7 +131267,7 @@
     },
     {
       "method": "Alif",
-      "total": 112
+      "total": 152
     },
     {
       "method": "Dushanbe City",
@@ -131250,6 +131279,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3052,
+      "items": [
+        "Мороженое манго x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3051,
       "items": [
@@ -131307,17 +131344,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3044,
-      "items": [
-        "Babl tea big x1",
-        "Мороженое с чёрным сахаром x1",
-        "Мороженое классическое x1",
-        "Мороженое манго x1"
-      ],
-      "status": "Оплачен",
-      "total": 86
     }
   ],
   "shifts": {
@@ -131468,6 +131494,11 @@
       "total": 78
     },
     {
+      "name": "Мороженое манго",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Клубничный жасмин mini",
       "qty": 3,
       "total": 60
@@ -131486,13 +131517,8 @@
       "name": "Мороженое классическое",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Мороженое с чёрным сахаром",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-07T10:24:55.937Z"
+  "updatedAt": "2026-07-07T10:46:51.819Z"
 }

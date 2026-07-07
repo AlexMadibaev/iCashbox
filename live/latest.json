@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 32.9,
-    "checks": 10,
+    "average": 35.36363636363637,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 124,
-    "revenue": 329
+    "net": 184,
+    "revenue": 389
   },
   "data": {
     "actions": 4509,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1994,
+    "orders": 1995,
     "products": 60,
     "shifts": 46
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1994,
+    "current": 1995,
     "old": [
       {
         "createdAt": "2026-07-06T10:43:37.897Z",
@@ -65064,6 +65064,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T02:08:01.444Z",
+        "id": 3042,
+        "items": [
+          "Мороженое клубничное x1",
+          "Смузи Шавель Ананас x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-смузи-шавель-ананас",
+            "name": "Смузи Шавель Ананас",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 60,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-07",
+        "shiftLabel": "Смена 07.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-07T01:36:01.511Z",
         "id": 3041,
@@ -130263,14 +130301,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-07",
         "label": "Смена 07.07",
         "missingOrders": 0,
-        "revenue": 329,
+        "revenue": 389,
         "status": "ok"
       },
       {
@@ -130872,7 +130910,7 @@
         "status": "ok"
       }
     ],
-    "total": 1994
+    "total": 1995
   },
   "payments": [
     {
@@ -130889,7 +130927,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 26
+      "total": 86
     },
     {
       "method": "Семья",
@@ -130897,6 +130935,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3042,
+      "items": [
+        "Мороженое клубничное x1",
+        "Смузи Шавель Ананас x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3041,
       "items": [
@@ -130956,14 +131003,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3034,
-      "items": [
-        "Клубника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -131099,19 +131138,24 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое клубничное",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Babl tea mini",
       "qty": 4,
       "total": 80
     },
     {
-      "name": "Мороженое клубничное",
-      "qty": 3,
-      "total": 60
-    },
-    {
       "name": "Клубника big",
       "qty": 2,
       "total": 52
+    },
+    {
+      "name": "Смузи Шавель Ананас",
+      "qty": 1,
+      "total": 40
     },
     {
       "name": "Клубничный жасмин mini",
@@ -131132,13 +131176,8 @@
       "name": "Клубничный mini",
       "qty": 1,
       "total": 25
-    },
-    {
-      "name": "Мороженое с чёрным сахаром",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-07T08:38:42.292Z"
+  "updatedAt": "2026-07-07T09:10:41.720Z"
 }

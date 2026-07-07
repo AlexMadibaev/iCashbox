@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.785714285714285,
-    "checks": 14,
+    "average": 41.06666666666667,
+    "checks": 15,
     "expenseTotal": 205,
-    "net": 366,
-    "revenue": 571
+    "net": 411,
+    "revenue": 616
   },
   "data": {
-    "actions": 4515,
+    "actions": 4517,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 1998,
+    "orders": 1999,
     "products": 60,
     "shifts": 46
   },
   "activity": [
     {
+      "id": 1783391834569,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:37",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783391834569,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:37",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783391221230,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:09",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783386483920,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:08",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783386483920,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:08",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 1998,
+    "current": 1999,
     "old": [
       {
         "createdAt": "2026-07-06T10:43:37.897Z",
@@ -65064,6 +65064,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T02:44:42.730Z",
+        "id": 3046,
+        "items": [
+          "МангоБанан mini x1",
+          "Виноградный тропический mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-виноградный-тропический-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-07",
+        "shiftLabel": "Смена 07.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-07-07T02:37:14.484Z",
         "id": 3045,
@@ -130433,14 +130471,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 14,
-        "expectedOrders": 14,
+        "databaseOrders": 15,
+        "expectedOrders": 15,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-07",
         "label": "Смена 07.07",
         "missingOrders": 0,
-        "revenue": 571,
+        "revenue": 616,
         "status": "ok"
       },
       {
@@ -131042,12 +131080,12 @@
         "status": "ok"
       }
     ],
-    "total": 1998
+    "total": 1999
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 399
+      "total": 444
     },
     {
       "method": "Карта",
@@ -131067,6 +131105,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3046,
+      "items": [
+        "МангоБанан mini x1",
+        "Виноградный тропический mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 3045,
       "items": [
@@ -131130,14 +131177,6 @@
       ],
       "status": "Оплачен",
       "total": 45
-    },
-    {
-      "id": 3038,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -131314,5 +131353,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-07T09:39:54.687Z"
+  "updatedAt": "2026-07-07T09:47:22.975Z"
 }

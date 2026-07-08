@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.97674418604651,
-    "checks": 43,
+    "average": 42.45454545454545,
+    "checks": 44,
     "expenseTotal": 205,
-    "net": 1643,
-    "revenue": 1848
+    "net": 1663,
+    "revenue": 1868
   },
   "data": {
-    "actions": 4660,
+    "actions": 4662,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2070,
+    "orders": 2071,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783500319119,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:45",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783500319119,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:45",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783500054874,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:19",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783498593729,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:16",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783498593729,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:16",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2070,
+    "current": 2071,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T08:49:17.545Z",
+        "id": 3118,
+        "items": [
+          "Фреш лимон big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-фреш-лимон-big",
+            "name": "Фреш лимон big",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 20,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-08T08:45:19.034Z",
         "id": 3117,
@@ -134236,14 +134265,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 43,
-        "expectedOrders": 43,
+        "databaseOrders": 44,
+        "expectedOrders": 44,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 1848,
+        "revenue": 1868,
         "status": "ok"
       },
       {
@@ -134858,7 +134887,7 @@
         "status": "ok"
       }
     ],
-    "total": 2070
+    "total": 2071
   },
   "payments": [
     {
@@ -134871,7 +134900,7 @@
     },
     {
       "method": "Alif",
-      "total": 535
+      "total": 555
     },
     {
       "method": "Dushanbe City",
@@ -134883,6 +134912,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3118,
+      "items": [
+        "Фреш лимон big x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3117,
       "items": [
@@ -134944,15 +134981,6 @@
       ],
       "status": "Оплачен",
       "total": 108
-    },
-    {
-      "id": 3110,
-      "items": [
-        "Черника big x1",
-        "Клубничный big x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -135098,6 +135126,11 @@
       "total": 120
     },
     {
+      "name": "Фреш лимон big",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "Клубничный mini",
       "qty": 4,
       "total": 100
@@ -135121,13 +135154,8 @@
       "name": "Matcha big",
       "qty": 2,
       "total": 80
-    },
-    {
-      "name": "Мороженое классическое",
-      "qty": 4,
-      "total": 80
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T15:47:59.472Z"
+  "updatedAt": "2026-07-08T15:51:57.249Z"
 }

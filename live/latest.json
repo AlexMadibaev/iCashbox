@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.607142857142854,
-    "checks": 28,
+    "average": 38.13793103448276,
+    "checks": 29,
     "expenseTotal": 205,
-    "net": 876,
-    "revenue": 1081
+    "net": 901,
+    "revenue": 1106
   },
   "data": {
-    "actions": 4630,
+    "actions": 4632,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2055,
+    "orders": 2056,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783490391204,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783490391204,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:59",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783489317099,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:06",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783485450616,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783485450616,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:37",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2055,
+    "current": 2056,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T06:06:55.780Z",
+        "id": 3103,
+        "items": [
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 25,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-08T05:59:51.105Z",
         "id": 3102,
@@ -133675,14 +133704,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 28,
-        "expectedOrders": 28,
+        "databaseOrders": 29,
+        "expectedOrders": 29,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 1081,
+        "revenue": 1106,
         "status": "ok"
       },
       {
@@ -134297,7 +134326,7 @@
         "status": "ok"
       }
     ],
-    "total": 2055
+    "total": 2056
   },
   "payments": [
     {
@@ -134314,7 +134343,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 111
+      "total": 136
     },
     {
       "method": "Семья",
@@ -134322,6 +134351,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3103,
+      "items": [
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 3102,
       "items": [
@@ -134378,15 +134415,6 @@
       ],
       "status": "Оплачен",
       "total": 45
-    },
-    {
-      "id": 3095,
-      "items": [
-        "Капучино x1",
-        "Cake-Pops x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -134563,5 +134591,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T13:02:32.624Z"
+  "updatedAt": "2026-07-08T13:09:37.663Z"
 }

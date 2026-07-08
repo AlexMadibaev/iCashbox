@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.13793103448276,
-    "checks": 29,
+    "average": 39.6,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 901,
-    "revenue": 1106
+    "net": 983,
+    "revenue": 1188
   },
   "data": {
-    "actions": 4632,
+    "actions": 4634,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2056,
+    "orders": 2057,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783490815865,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783490815865,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:06",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783490391204,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1783487184960,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:06",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783487174524,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:06",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783487174524,
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:06",
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2056,
+    "current": 2057,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T06:08:00.864Z",
+        "id": 3104,
+        "items": [
+          "Babl tea big x2",
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          },
+          {
+            "id": "product-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 82
+      },
       {
         "createdAt": "2026-07-08T06:06:55.780Z",
         "id": 3103,
@@ -133704,14 +133742,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 1106,
+        "revenue": 1188,
         "status": "ok"
       },
       {
@@ -134326,12 +134364,12 @@
         "status": "ok"
       }
     ],
-    "total": 2056
+    "total": 2057
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 775
+      "total": 857
     },
     {
       "method": "Карта",
@@ -134351,6 +134389,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3104,
+      "items": [
+        "Babl tea big x2",
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 82
+    },
     {
       "id": 3103,
       "items": [
@@ -134406,15 +134453,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3096,
-      "items": [
-        "Matcha mini x1",
-        "Cake-Pops x1"
-      ],
-      "status": "Оплачен",
-      "total": 45
     }
   ],
   "shifts": {
@@ -134591,5 +134629,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T13:09:37.663Z"
+  "updatedAt": "2026-07-08T13:10:40.840Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.10526315789474,
-    "checks": 19,
+    "average": 42.8,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 576,
-    "revenue": 781
+    "net": 651,
+    "revenue": 856
   },
   "data": {
-    "actions": 4612,
+    "actions": 4614,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2046,
+    "orders": 2047,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783483788788,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:09",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783483788788,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:09",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783483669317,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783477645335,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:27",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783477645335,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:27",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2046,
+    "current": 2047,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T04:12:34.940Z",
+        "id": 3094,
+        "items": [
+          "Капучино x2",
+          "ПиноКолада mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          },
+          {
+            "id": "product-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 105,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 75
+      },
       {
         "createdAt": "2026-07-08T04:09:48.693Z",
         "id": 3093,
@@ -133387,14 +133425,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 781,
+        "revenue": 856,
         "status": "ok"
       },
       {
@@ -134009,12 +134047,12 @@
         "status": "ok"
       }
     ],
-    "total": 2046
+    "total": 2047
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 560
+      "total": 635
     },
     {
       "method": "Карта",
@@ -134034,6 +134072,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3094,
+      "items": [
+        "Капучино x2",
+        "ПиноКолада mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 75
+    },
     {
       "id": 3093,
       "items": [
@@ -134094,16 +134141,6 @@
       ],
       "status": "Оплачен",
       "total": 45
-    },
-    {
-      "id": 3086,
-      "items": [
-        "ПиноКолада mini x1",
-        "Айс Латте x1",
-        "Клубничный mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 80
     }
   ],
   "shifts": {
@@ -134249,6 +134286,11 @@
       "total": 80
     },
     {
+      "name": "ПиноКолада mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "Клубничный mini",
       "qty": 3,
       "total": 75
@@ -134272,13 +134314,8 @@
       "name": "Мороженое классическое",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "ПиноКолада mini",
-      "qty": 2,
-      "total": 50
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T11:12:28.835Z"
+  "updatedAt": "2026-07-08T11:15:15.107Z"
 }

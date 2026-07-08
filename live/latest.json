@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.6,
-    "checks": 30,
+    "average": 40.935483870967744,
+    "checks": 31,
     "expenseTotal": 205,
-    "net": 983,
-    "revenue": 1188
+    "net": 1064,
+    "revenue": 1269
   },
   "data": {
-    "actions": 4634,
+    "actions": 4636,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2057,
+    "orders": 2058,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783490880970,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:08",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783490880970,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:08",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783490815865,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:18",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783487184960,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:06",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783487184960,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:06",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2057,
+    "current": 2058,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T06:19:03.260Z",
+        "id": 3105,
+        "items": [
+          "Bubble Gum mini x1",
+          "АйсМатча клубника x1",
+          "Клубника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-клубника-big",
+            "name": "Клубника big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 81,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 81
+      },
       {
         "createdAt": "2026-07-08T06:08:00.864Z",
         "id": 3104,
@@ -133742,14 +133789,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 30,
-        "expectedOrders": 30,
+        "databaseOrders": 31,
+        "expectedOrders": 31,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 1188,
+        "revenue": 1269,
         "status": "ok"
       },
       {
@@ -134364,7 +134411,7 @@
         "status": "ok"
       }
     ],
-    "total": 2057
+    "total": 2058
   },
   "payments": [
     {
@@ -134377,7 +134424,7 @@
     },
     {
       "method": "Alif",
-      "total": 125
+      "total": 206
     },
     {
       "method": "Dushanbe City",
@@ -134389,6 +134436,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3105,
+      "items": [
+        "Bubble Gum mini x1",
+        "АйсМатча клубника x1",
+        "Клубника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 81
+    },
     {
       "id": 3104,
       "items": [
@@ -134442,14 +134499,6 @@
       "id": 3098,
       "items": [
         "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 3097,
-      "items": [
-        "Мороженое клубничное x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -134629,5 +134678,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T13:10:40.840Z"
+  "updatedAt": "2026-07-08T13:21:45.020Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.8,
-    "checks": 20,
+    "average": 42.666666666666664,
+    "checks": 21,
     "expenseTotal": 205,
-    "net": 651,
-    "revenue": 856
+    "net": 691,
+    "revenue": 896
   },
   "data": {
-    "actions": 4614,
+    "actions": 4616,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2047,
+    "orders": 2048,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783483955043,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:12",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783483955043,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:12",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783483788788,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:20",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783479720681,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:02",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783479720681,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:02",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2047,
+    "current": 2048,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T04:25:16.523Z",
+        "id": 3095,
+        "items": [
+          "Капучино x1",
+          "Cake-Pops x1"
+        ],
+        "lines": [
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-08T04:12:34.940Z",
         "id": 3094,
@@ -133425,14 +133463,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 20,
-        "expectedOrders": 20,
+        "databaseOrders": 21,
+        "expectedOrders": 21,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 856,
+        "revenue": 896,
         "status": "ok"
       },
       {
@@ -134047,12 +134085,12 @@
         "status": "ok"
       }
     ],
-    "total": 2047
+    "total": 2048
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 635
+      "total": 675
     },
     {
       "method": "Карта",
@@ -134072,6 +134110,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3095,
+      "items": [
+        "Капучино x1",
+        "Cake-Pops x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3094,
       "items": [
@@ -134132,15 +134179,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3087,
-      "items": [
-        "МангоБанан mini x1",
-        "Клубничный жасмин mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 45
     }
   ],
   "shifts": {
@@ -134286,6 +134324,11 @@
       "total": 80
     },
     {
+      "name": "Капучино",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "ПиноКолада mini",
       "qty": 3,
       "total": 75
@@ -134309,13 +134352,8 @@
       "name": "Айс Латте",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Мороженое классическое",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T11:15:15.107Z"
+  "updatedAt": "2026-07-08T11:27:58.168Z"
 }

@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 40,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -165,
+    "revenue": 40
   },
   "data": {
-    "actions": 4576,
+    "actions": 4578,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2027,
+    "orders": 2028,
     "products": 60,
     "shifts": 47
   },
   "activity": [
+    {
+      "id": 1783463974957,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:39",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783463974957,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:39",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783458400320,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783413678506,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783413631024,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:40",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2027,
+    "current": 2028,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T22:39:34.865Z",
+        "id": 3075,
+        "items": [
+          "Мороженое классическое x1",
+          "Мороженое с чёрным сахаром x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-с-чёрным-сахаром",
+            "name": "Мороженое с чёрным сахаром",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
         "id": 3074,
@@ -132737,15 +132775,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 40,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -133359,12 +133397,12 @@
         "status": "ok"
       }
     ],
-    "total": 2027
+    "total": 2028
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 40
     },
     {
       "method": "Карта",
@@ -133383,7 +133421,17 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 3075,
+      "items": [
+        "Мороженое классическое x1",
+        "Мороженое с чёрным сахаром x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -133515,7 +133563,18 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Мороженое классическое",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Мороженое с чёрным сахаром",
+      "qty": 1,
+      "total": 20
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-07-08T04:09:23.284Z"
+  "updatedAt": "2026-07-08T05:42:17.292Z"
 }

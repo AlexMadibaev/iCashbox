@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.06666666666667,
-    "checks": 45,
+    "average": 42.130434782608695,
+    "checks": 46,
     "expenseTotal": 205,
-    "net": 1688,
-    "revenue": 1893
+    "net": 1733,
+    "revenue": 1938
   },
   "data": {
-    "actions": 4664,
+    "actions": 4666,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2072,
+    "orders": 2073,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783501000628,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:56",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783501000628,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:56",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783500557636,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783498975041,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:22",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783498975041,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:22",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2072,
+    "current": 2073,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T09:04:45.236Z",
+        "id": 3120,
+        "items": [
+          "Babl tea mini x1",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 45,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-07-08T08:56:40.516Z",
         "id": 3119,
@@ -134294,14 +134332,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 45,
-        "expectedOrders": 45,
+        "databaseOrders": 46,
+        "expectedOrders": 46,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 1893,
+        "revenue": 1938,
         "status": "ok"
       },
       {
@@ -134916,7 +134954,7 @@
         "status": "ok"
       }
     ],
-    "total": 2072
+    "total": 2073
   },
   "payments": [
     {
@@ -134933,7 +134971,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 136
+      "total": 181
     },
     {
       "method": "Семья",
@@ -134941,6 +134979,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3120,
+      "items": [
+        "Babl tea mini x1",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 3119,
       "items": [
@@ -135000,14 +135047,6 @@
       ],
       "status": "Оплачен",
       "total": 70
-    },
-    {
-      "id": 3112,
-      "items": [
-        "Мороженое рожок x2"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -135144,8 +135183,8 @@
   "topProducts": [
     {
       "name": "Клубничный mini",
-      "qty": 5,
-      "total": 125
+      "qty": 6,
+      "total": 150
     },
     {
       "name": "Matcha mini",
@@ -135184,5 +135223,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T15:59:21.560Z"
+  "updatedAt": "2026-07-08T16:07:26.802Z"
 }

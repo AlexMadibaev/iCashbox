@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.72222222222222,
-    "checks": 18,
+    "average": 41.10526315789474,
+    "checks": 19,
     "expenseTotal": 205,
-    "net": 546,
-    "revenue": 751
+    "net": 576,
+    "revenue": 781
   },
   "data": {
-    "actions": 4610,
+    "actions": 4612,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2045,
+    "orders": 2046,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783483669317,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:07",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783483669317,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:07",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783482274723,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:27",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783474705380,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:38",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783474705380,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:38",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2045,
+    "current": 2046,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T04:09:48.693Z",
+        "id": 3093,
+        "items": [
+          "МангоБанан big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-08T04:07:49.216Z",
         "id": 3092,
@@ -133358,14 +133387,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 18,
-        "expectedOrders": 18,
+        "databaseOrders": 19,
+        "expectedOrders": 19,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 751,
+        "revenue": 781,
         "status": "ok"
       },
       {
@@ -133980,12 +134009,12 @@
         "status": "ok"
       }
     ],
-    "total": 2045
+    "total": 2046
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 530
+      "total": 560
     },
     {
       "method": "Карта",
@@ -134005,6 +134034,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3093,
+      "items": [
+        "МангоБанан big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 3092,
       "items": [
@@ -134067,15 +134104,6 @@
       ],
       "status": "Оплачен",
       "total": 80
-    },
-    {
-      "id": 3085,
-      "items": [
-        "Мороженое клубничное x2",
-        "Мороженое Орео x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -134226,6 +134254,11 @@
       "total": 75
     },
     {
+      "name": "МангоБанан big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Клубничный big",
       "qty": 2,
       "total": 60
@@ -134244,13 +134277,8 @@
       "name": "ПиноКолада mini",
       "qty": 2,
       "total": 50
-    },
-    {
-      "name": "Matcha big",
-      "qty": 1,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T11:10:31.081Z"
+  "updatedAt": "2026-07-08T11:12:28.835Z"
 }

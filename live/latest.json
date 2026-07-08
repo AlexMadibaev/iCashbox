@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 29.6,
-    "checks": 10,
+    "average": 32.36363636363637,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 91,
-    "revenue": 296
+    "net": 151,
+    "revenue": 356
   },
   "data": {
-    "actions": 4594,
+    "actions": 4596,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2037,
+    "orders": 2038,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783472246033,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:57",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783472246033,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:57",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783471349719,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783468759291,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:59",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783468759291,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:59",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2037,
+    "current": 2038,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T01:16:49.332Z",
+        "id": 3085,
+        "items": [
+          "Мороженое клубничное x2",
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-08T00:57:25.952Z",
         "id": 3084,
@@ -133054,14 +133092,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 296,
+        "revenue": 356,
         "status": "ok"
       },
       {
@@ -133676,12 +133714,12 @@
         "status": "ok"
       }
     ],
-    "total": 2037
+    "total": 2038
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 165
+      "total": 225
     },
     {
       "method": "Карта",
@@ -133701,6 +133739,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3085,
+      "items": [
+        "Мороженое клубничное x2",
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3084,
       "items": [
@@ -133757,15 +133804,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3077,
-      "items": [
-        "Мороженое классическое x1",
-        "Мороженое Орео x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -133901,17 +133939,22 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое клубничное",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Мороженое классическое",
       "qty": 3,
       "total": 60
     },
     {
-      "name": "Фреш лимон big",
+      "name": "Мороженое Орео",
       "qty": 2,
       "total": 40
     },
     {
-      "name": "Мороженое клубничное",
+      "name": "Фреш лимон big",
       "qty": 2,
       "total": 40
     },
@@ -133934,13 +133977,8 @@
       "name": "Клубничный mini",
       "qty": 1,
       "total": 25
-    },
-    {
-      "name": "Мороженое Орео",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T08:00:08.144Z"
+  "updatedAt": "2026-07-08T08:19:30.736Z"
 }

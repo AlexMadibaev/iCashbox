@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.59375,
-    "checks": 32,
+    "average": 41.18181818181818,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 1094,
-    "revenue": 1299
+    "net": 1154,
+    "revenue": 1359
   },
   "data": {
-    "actions": 4638,
+    "actions": 4640,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2059,
+    "orders": 2060,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783493650968,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:54",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783493650968,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:54",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783491543344,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783488907802,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:35",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783488907802,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:35",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2059,
+    "current": 2060,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T07:05:38.319Z",
+        "id": 3107,
+        "items": [
+          "Cake-Pops x1",
+          "Манго Маракуя mini x1",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          },
+          {
+            "id": "product-манго-маракуя-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-08T06:54:10.869Z",
         "id": 3106,
@@ -133827,14 +133874,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 32,
-        "expectedOrders": 32,
+        "databaseOrders": 33,
+        "expectedOrders": 33,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 1299,
+        "revenue": 1359,
         "status": "ok"
       },
       {
@@ -134449,12 +134496,12 @@
         "status": "ok"
       }
     ],
-    "total": 2059
+    "total": 2060
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 887
+      "total": 947
     },
     {
       "method": "Карта",
@@ -134474,6 +134521,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3107,
+      "items": [
+        "Cake-Pops x1",
+        "Манго Маракуя mini x1",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3106,
       "items": [
@@ -134533,14 +134590,6 @@
       ],
       "status": "Оплачен",
       "total": 35
-    },
-    {
-      "id": 3099,
-      "items": [
-        "ПиноКолада mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -134676,6 +134725,11 @@
   },
   "topProducts": [
     {
+      "name": "Клубничный mini",
+      "qty": 4,
+      "total": 100
+    },
+    {
       "name": "ПиноКолада mini",
       "qty": 4,
       "total": 100
@@ -134701,11 +134755,6 @@
       "total": 75
     },
     {
-      "name": "Клубничный mini",
-      "qty": 3,
-      "total": 75
-    },
-    {
       "name": "МангоБанан big",
       "qty": 2,
       "total": 60
@@ -134717,5 +134766,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T13:56:52.316Z"
+  "updatedAt": "2026-07-08T14:08:19.923Z"
 }

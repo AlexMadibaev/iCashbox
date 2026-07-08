@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 27.285714285714285,
-    "checks": 7,
+    "average": 28.25,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": -14,
-    "revenue": 191
+    "net": 21,
+    "revenue": 226
   },
   "data": {
-    "actions": 4588,
+    "actions": 4590,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2034,
+    "orders": 2035,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783469684746,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:14",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783469684746,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:14",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783469630986,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783463974957,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:39",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783463974957,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:39",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2034,
+    "current": 2035,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T00:35:48.253Z",
+        "id": 3082,
+        "items": [
+          "Фреш лимон mini x1",
+          "Мороженое клубничное x1"
+        ],
+        "lines": [
+          {
+            "id": "product-фреш-лимон-mini",
+            "name": "Фреш лимон mini",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          },
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 35,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-07-08T00:14:44.650Z",
         "id": 3081,
@@ -132958,14 +132996,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 191,
+        "revenue": 226,
         "status": "ok"
       },
       {
@@ -133580,7 +133618,7 @@
         "status": "ok"
       }
     ],
-    "total": 2034
+    "total": 2035
   },
   "payments": [
     {
@@ -133593,7 +133631,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 35
     },
     {
       "method": "Dushanbe City",
@@ -133605,6 +133643,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3082,
+      "items": [
+        "Фреш лимон mini x1",
+        "Мороженое клубничное x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    },
     {
       "id": 3081,
       "items": [
@@ -133802,6 +133849,11 @@
       "total": 60
     },
     {
+      "name": "Мороженое клубничное",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Мороженое с чёрным сахаром",
       "qty": 2,
       "total": 40
@@ -133817,16 +133869,16 @@
       "total": 25
     },
     {
-      "name": "Мороженое клубничное",
+      "name": "Мороженое Орео",
       "qty": 1,
       "total": 20
     },
     {
-      "name": "Мороженое Орео",
+      "name": "Фреш лимон mini",
       "qty": 1,
-      "total": 20
+      "total": 15
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T07:17:24.811Z"
+  "updatedAt": "2026-07-08T07:38:29.669Z"
 }

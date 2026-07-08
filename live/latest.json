@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.214285714285715,
-    "checks": 14,
+    "average": 38.733333333333334,
+    "checks": 15,
     "expenseTotal": 205,
-    "net": 316,
-    "revenue": 521
+    "net": 376,
+    "revenue": 581
   },
   "data": {
-    "actions": 4602,
+    "actions": 4604,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2041,
+    "orders": 2042,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783479720681,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:02",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783479720681,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:02",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783477645335,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783470948334,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:35",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783470948334,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:35",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2041,
+    "current": 2042,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T03:20:43.242Z",
+        "id": 3089,
+        "items": [
+          "Клубничный big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 70,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-08T03:02:00.569Z",
         "id": 3088,
@@ -133206,14 +133235,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 14,
-        "expectedOrders": 14,
+        "databaseOrders": 15,
+        "expectedOrders": 15,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 521,
+        "revenue": 581,
         "status": "ok"
       },
       {
@@ -133828,12 +133857,12 @@
         "status": "ok"
       }
     ],
-    "total": 2041
+    "total": 2042
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 390
+      "total": 450
     },
     {
       "method": "Карта",
@@ -133853,6 +133882,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3089,
+      "items": [
+        "Клубничный big x2"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3088,
       "items": [
@@ -133913,14 +133950,6 @@
       ],
       "status": "Оплачен",
       "total": 35
-    },
-    {
-      "id": 3081,
-      "items": [
-        "Blue big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -134066,6 +134095,11 @@
       "total": 80
     },
     {
+      "name": "Клубничный big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Айс Латте",
       "qty": 2,
       "total": 60
@@ -134089,13 +134123,8 @@
       "name": "Мороженое с чёрным сахаром",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Blue big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T10:04:41.992Z"
+  "updatedAt": "2026-07-08T10:23:24.605Z"
 }

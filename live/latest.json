@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 32.5,
-    "checks": 2,
+    "average": 35,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -140,
-    "revenue": 65
+    "net": -100,
+    "revenue": 105
   },
   "data": {
-    "actions": 4578,
+    "actions": 4580,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2029,
+    "orders": 2030,
     "products": 60,
     "shifts": 47
   },
   "activity": [
+    {
+      "id": 1783467773741,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:42",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783467773741,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:42",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783463974957,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:11",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783415474074,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783413678506,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:41",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2029,
+    "current": 2030,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-07T23:55:17.615Z",
+        "id": 3077,
+        "items": [
+          "Мороженое классическое x1",
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-07T23:42:53.649Z",
         "id": 3076,
@@ -132804,14 +132842,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 65,
+        "revenue": 105,
         "status": "ok"
       },
       {
@@ -133426,12 +133464,12 @@
         "status": "ok"
       }
     ],
-    "total": 2029
+    "total": 2030
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 65
+      "total": 105
     },
     {
       "method": "Карта",
@@ -133451,6 +133489,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3077,
+      "items": [
+        "Мороженое классическое x1",
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3076,
       "items": [
@@ -133602,12 +133649,17 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое классическое",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Клубничный mini",
       "qty": 1,
       "total": 25
     },
     {
-      "name": "Мороженое классическое",
+      "name": "Мороженое Орео",
       "qty": 1,
       "total": 20
     },
@@ -133618,5 +133670,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T06:45:35.626Z"
+  "updatedAt": "2026-07-08T06:57:59.189Z"
 }

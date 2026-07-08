@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.8780487804878,
-    "checks": 41,
+    "average": 43.285714285714285,
+    "checks": 42,
     "expenseTotal": 205,
-    "net": 1553,
-    "revenue": 1758
+    "net": 1613,
+    "revenue": 1818
   },
   "data": {
-    "actions": 4656,
+    "actions": 4658,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2068,
+    "orders": 2069,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783500007072,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:40",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783500007072,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:40",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783499870997,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:00",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783497563336,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:59",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783497563336,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:59",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2068,
+    "current": 2069,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T08:40:54.790Z",
+        "id": 3116,
+        "items": [
+          "ПиноКолада big x1",
+          "МангоБанан big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 60,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-08T08:40:06.978Z",
         "id": 3115,
@@ -134169,14 +134207,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 41,
-        "expectedOrders": 41,
+        "databaseOrders": 42,
+        "expectedOrders": 42,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 1758,
+        "revenue": 1818,
         "status": "ok"
       },
       {
@@ -134791,7 +134829,7 @@
         "status": "ok"
       }
     ],
-    "total": 2068
+    "total": 2069
   },
   "payments": [
     {
@@ -134804,7 +134842,7 @@
     },
     {
       "method": "Alif",
-      "total": 475
+      "total": 535
     },
     {
       "method": "Dushanbe City",
@@ -134816,6 +134854,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3116,
+      "items": [
+        "ПиноКолада big x1",
+        "МангоБанан big x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3115,
       "items": [
@@ -134877,15 +134924,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 3108,
-      "items": [
-        "Мороженое клубничное x1",
-        "МангоБанан mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 45
     }
   ],
   "shifts": {
@@ -135036,6 +135074,11 @@
       "total": 100
     },
     {
+      "name": "МангоБанан big",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Matcha mini",
       "qty": 3,
       "total": 90
@@ -135054,13 +135097,8 @@
       "name": "Мороженое классическое",
       "qty": 4,
       "total": 80
-    },
-    {
-      "name": "Фреш лимон big",
-      "qty": 4,
-      "total": 80
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T15:42:46.982Z"
+  "updatedAt": "2026-07-08T15:43:34.694Z"
 }

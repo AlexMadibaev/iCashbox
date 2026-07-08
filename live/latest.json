@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.45454545454545,
-    "checks": 44,
+    "average": 42.06666666666667,
+    "checks": 45,
     "expenseTotal": 205,
-    "net": 1663,
-    "revenue": 1868
+    "net": 1688,
+    "revenue": 1893
   },
   "data": {
-    "actions": 4662,
+    "actions": 4664,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2071,
+    "orders": 2072,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783500557636,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:49",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783500557636,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:49",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783500319119,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783498775321,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783498775321,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:19",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2071,
+    "current": 2072,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T08:56:40.516Z",
+        "id": 3119,
+        "items": [
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-08T08:49:17.545Z",
         "id": 3118,
@@ -134265,14 +134294,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 44,
-        "expectedOrders": 44,
+        "databaseOrders": 45,
+        "expectedOrders": 45,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 1868,
+        "revenue": 1893,
         "status": "ok"
       },
       {
@@ -134887,12 +134916,12 @@
         "status": "ok"
       }
     ],
-    "total": 2071
+    "total": 2072
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1107
+      "total": 1132
     },
     {
       "method": "Карта",
@@ -134912,6 +134941,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3119,
+      "items": [
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 3118,
       "items": [
@@ -134971,16 +135008,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3111,
-      "items": [
-        "Matcha mini x1",
-        "Манго Маракуя big x2",
-        "Жасмин гранат big x1"
-      ],
-      "status": "Оплачен",
-      "total": 108
     }
   ],
   "shifts": {
@@ -135116,6 +135143,11 @@
   },
   "topProducts": [
     {
+      "name": "Клубничный mini",
+      "qty": 5,
+      "total": 125
+    },
+    {
       "name": "Matcha mini",
       "qty": 4,
       "total": 120
@@ -135128,11 +135160,6 @@
     {
       "name": "Фреш лимон big",
       "qty": 5,
-      "total": 100
-    },
-    {
-      "name": "Клубничный mini",
-      "qty": 4,
       "total": 100
     },
     {
@@ -135157,5 +135184,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T15:51:57.249Z"
+  "updatedAt": "2026-07-08T15:59:21.560Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.24,
-    "checks": 25,
+    "average": 40.03846153846154,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 801,
-    "revenue": 1006
+    "net": 836,
+    "revenue": 1041
   },
   "data": {
-    "actions": 4624,
+    "actions": 4626,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2052,
+    "orders": 2053,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783487891641,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783487891641,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:18",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783487184960,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:12",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783483788788,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:09",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783483788788,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:09",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2052,
+    "current": 2053,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T05:35:07.707Z",
+        "id": 3100,
+        "items": [
+          "АйсМатча манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-манго",
+            "name": "АйсМатча манго",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-07-08T05:18:11.539Z",
         "id": 3099,
@@ -133588,14 +133617,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 1006,
+        "revenue": 1041,
         "status": "ok"
       },
       {
@@ -134210,12 +134239,12 @@
         "status": "ok"
       }
     ],
-    "total": 2052
+    "total": 2053
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 740
+      "total": 775
     },
     {
       "method": "Карта",
@@ -134235,6 +134264,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3100,
+      "items": [
+        "АйсМатча манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    },
     {
       "id": 3099,
       "items": [
@@ -134293,14 +134330,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 3092,
-      "items": [
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -134477,5 +134506,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T12:20:53.591Z"
+  "updatedAt": "2026-07-08T12:37:49.294Z"
 }

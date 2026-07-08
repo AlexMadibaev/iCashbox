@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.733333333333334,
-    "checks": 15,
+    "average": 40.6875,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 376,
-    "revenue": 581
+    "net": 446,
+    "revenue": 651
   },
   "data": {
-    "actions": 4604,
+    "actions": 4606,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2042,
+    "orders": 2043,
     "products": 60,
     "shifts": 47
   },
   "activity": [
     {
+      "id": 1783480843343,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:20",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783480843343,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:20",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783479720681,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:57",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783471349719,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:42",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783471349719,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:42",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2042,
+    "current": 2043,
     "old": [
       {
         "createdAt": "2026-07-07T10:16:54.365Z",
@@ -66464,6 +66464,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T03:34:46.709Z",
+        "id": 3090,
+        "items": [
+          "МангоБанан big x1",
+          "Matcha big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 70,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-08",
+        "shiftLabel": "Смена 08.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-07-08T03:20:43.242Z",
         "id": 3089,
@@ -133235,14 +133273,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-08",
         "label": "Смена 08.07",
         "missingOrders": 0,
-        "revenue": 581,
+        "revenue": 651,
         "status": "ok"
       },
       {
@@ -133857,7 +133895,7 @@
         "status": "ok"
       }
     ],
-    "total": 2042
+    "total": 2043
   },
   "payments": [
     {
@@ -133870,7 +133908,7 @@
     },
     {
       "method": "Alif",
-      "total": 35
+      "total": 105
     },
     {
       "method": "Dushanbe City",
@@ -133882,6 +133920,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3090,
+      "items": [
+        "МангоБанан big x1",
+        "Matcha big x1"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 3089,
       "items": [
@@ -133941,15 +133988,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3082,
-      "items": [
-        "Фреш лимон mini x1",
-        "Мороженое клубничное x1"
-      ],
-      "status": "Оплачен",
-      "total": 35
     }
   ],
   "shifts": {
@@ -134115,16 +134153,16 @@
       "total": 50
     },
     {
-      "name": "Мороженое Орео",
-      "qty": 2,
+      "name": "Matcha big",
+      "qty": 1,
       "total": 40
     },
     {
-      "name": "Мороженое с чёрным сахаром",
+      "name": "Мороженое Орео",
       "qty": 2,
       "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-08T10:23:24.605Z"
+  "updatedAt": "2026-07-08T10:37:28.195Z"
 }

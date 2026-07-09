@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.97435897435897,
-    "checks": 39,
+    "average": 42.55,
+    "checks": 40,
     "expenseTotal": 205,
-    "net": 1471,
-    "revenue": 1676
+    "net": 1497,
+    "revenue": 1702
   },
   "data": {
-    "actions": 4751,
+    "actions": 4753,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2115,
+    "orders": 2116,
     "products": 60,
     "shifts": 48
   },
   "activity": [
     {
+      "id": 1783589149849,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:25",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783589149849,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:25",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783587727858,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:23",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783584720469,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:12",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783584720469,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:12",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2115,
+    "current": 2116,
     "old": [
       {
         "createdAt": "2026-07-08T10:16:56.105Z",
@@ -68146,6 +68146,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-09T09:31:49.452Z",
+        "id": 3163,
+        "items": [
+          "Bubble Gum big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-bubble-gum-big",
+            "name": "Bubble Gum big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-09",
+        "shiftLabel": "Смена 09.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-09T09:25:49.735Z",
         "id": 3162,
@@ -137376,14 +137405,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 39,
-        "expectedOrders": 39,
+        "databaseOrders": 40,
+        "expectedOrders": 40,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-09",
         "label": "Смена 09.07",
         "missingOrders": 0,
-        "revenue": 1676,
+        "revenue": 1702,
         "status": "ok"
       },
       {
@@ -138011,12 +138040,12 @@
         "status": "ok"
       }
     ],
-    "total": 2115
+    "total": 2116
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1180
+      "total": 1206
     },
     {
       "method": "Карта",
@@ -138036,6 +138065,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3163,
+      "items": [
+        "Bubble Gum big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 3162,
       "items": [
@@ -138094,14 +138131,6 @@
       ],
       "status": "Оплачен",
       "total": 52
-    },
-    {
-      "id": 3155,
-      "items": [
-        "Cake-Pops x1"
-      ],
-      "status": "Оплачен",
-      "total": 15
     }
   ],
   "shifts": {
@@ -138278,5 +138307,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-09T16:28:32.126Z"
+  "updatedAt": "2026-07-09T16:34:31.460Z"
 }

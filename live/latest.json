@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.32608695652174,
-    "checks": 46,
+    "average": 41.297872340425535,
+    "checks": 47,
     "expenseTotal": 205,
-    "net": 1696,
-    "revenue": 1901
+    "net": 1736,
+    "revenue": 1941
   },
   "data": {
-    "actions": 4765,
+    "actions": 4767,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2122,
+    "orders": 2123,
     "products": 60,
     "shifts": 48
   },
   "activity": [
     {
+      "id": 1783593475151,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:37",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783593475151,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:37",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783592493280,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:35",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783589509548,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:31",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783589509548,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:31",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2122,
+    "current": 2123,
     "old": [
       {
         "createdAt": "2026-07-08T10:16:56.105Z",
@@ -68146,6 +68146,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-09T10:41:01.393Z",
+        "id": 3170,
+        "items": [
+          "Babl tea mini x1",
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 40,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-09",
+        "shiftLabel": "Смена 09.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-09T10:37:55.040Z",
         "id": 3169,
@@ -137597,14 +137635,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 46,
-        "expectedOrders": 46,
+        "databaseOrders": 47,
+        "expectedOrders": 47,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-09",
         "label": "Смена 09.07",
         "missingOrders": 0,
-        "revenue": 1901,
+        "revenue": 1941,
         "status": "ok"
       },
       {
@@ -138232,7 +138270,7 @@
         "status": "ok"
       }
     ],
-    "total": 2122
+    "total": 2123
   },
   "payments": [
     {
@@ -138249,7 +138287,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 150
+      "total": 190
     },
     {
       "method": "Семья",
@@ -138257,6 +138295,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3170,
+      "items": [
+        "Babl tea mini x1",
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3169,
       "items": [
@@ -138314,16 +138361,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 3162,
-      "items": [
-        "Blue big x1",
-        "Виноградный тропический big x1",
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 82
     }
   ],
   "shifts": {
@@ -138465,18 +138502,18 @@
     },
     {
       "name": "Babl tea mini",
-      "qty": 8,
-      "total": 160
+      "qty": 9,
+      "total": 180
+    },
+    {
+      "name": "Blue mini",
+      "qty": 6,
+      "total": 120
     },
     {
       "name": "АйсМатча черника",
       "qty": 3,
       "total": 105
-    },
-    {
-      "name": "Blue mini",
-      "qty": 5,
-      "total": 100
     },
     {
       "name": "Клубничный mini",
@@ -138500,5 +138537,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-09T17:40:38.311Z"
+  "updatedAt": "2026-07-09T17:43:43.076Z"
 }

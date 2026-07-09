@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.61904761904762,
-    "checks": 21,
+    "average": 45.27272727272727,
+    "checks": 22,
     "expenseTotal": 205,
-    "net": 711,
-    "revenue": 916
+    "net": 791,
+    "revenue": 996
   },
   "data": {
-    "actions": 4715,
+    "actions": 4717,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2097,
+    "orders": 2098,
     "products": 60,
     "shifts": 48
   },
   "activity": [
     {
+      "id": 1783571618191,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:33",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783571618191,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:33",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783570062794,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:23",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783566681422,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:11",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783566681422,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:11",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2097,
+    "current": 2098,
     "old": [
       {
         "createdAt": "2026-07-08T10:16:56.105Z",
@@ -68146,6 +68146,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-09T04:56:41.160Z",
+        "id": 3145,
+        "items": [
+          "Клубничный mini x2",
+          "Фреш лимон mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          },
+          {
+            "id": "product-фреш-лимон-mini",
+            "name": "Фреш лимон mini",
+            "price": 15,
+            "qty": 2,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 80,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-09",
+        "shiftLabel": "Смена 09.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 80
+      },
       {
         "createdAt": "2026-07-09T04:33:38.107Z",
         "id": 3144,
@@ -136782,14 +136820,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 21,
-        "expectedOrders": 21,
+        "databaseOrders": 22,
+        "expectedOrders": 22,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-09",
         "label": "Смена 09.07",
         "missingOrders": 0,
-        "revenue": 916,
+        "revenue": 996,
         "status": "ok"
       },
       {
@@ -137417,7 +137455,7 @@
         "status": "ok"
       }
     ],
-    "total": 2097
+    "total": 2098
   },
   "payments": [
     {
@@ -137434,7 +137472,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 70
+      "total": 150
     },
     {
       "method": "Семья",
@@ -137442,6 +137480,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3145,
+      "items": [
+        "Клубничный mini x2",
+        "Фреш лимон mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 80
+    },
     {
       "id": 3144,
       "items": [
@@ -137503,14 +137550,6 @@
       ],
       "status": "Оплачен",
       "total": 15
-    },
-    {
-      "id": 3137,
-      "items": [
-        "Cake-Pops x2"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -137666,6 +137705,11 @@
       "total": 80
     },
     {
+      "name": "Клубничный mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "АйсМатча черника",
       "qty": 2,
       "total": 70
@@ -137679,13 +137723,8 @@
       "name": "Blue mini",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "ПиноКолада mini",
-      "qty": 2,
-      "total": 50
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-09T11:36:21.147Z"
+  "updatedAt": "2026-07-09T11:59:23.935Z"
 }

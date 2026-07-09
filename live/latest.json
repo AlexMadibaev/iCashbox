@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 45.06896551724138,
-    "checks": 29,
+    "average": 44.4,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 1102,
-    "revenue": 1307
+    "net": 1127,
+    "revenue": 1332
   },
   "data": {
-    "actions": 4731,
+    "actions": 4733,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2105,
+    "orders": 2106,
     "products": 60,
     "shifts": 48
   },
   "activity": [
     {
+      "id": 1783581545602,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:19",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783581545602,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:19",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783581325321,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:05",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783573462521,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:04",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783573462521,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:04",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2105,
+    "current": 2106,
     "old": [
       {
         "createdAt": "2026-07-08T10:16:56.105Z",
@@ -68146,6 +68146,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-09T07:26:23.224Z",
+        "id": 3153,
+        "items": [
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 25,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-09",
+        "shiftLabel": "Смена 09.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-09T07:19:05.504Z",
         "id": 3152,
@@ -137059,14 +137088,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-09",
         "label": "Смена 09.07",
         "missingOrders": 0,
-        "revenue": 1307,
+        "revenue": 1332,
         "status": "ok"
       },
       {
@@ -137694,7 +137723,7 @@
         "status": "ok"
       }
     ],
-    "total": 2105
+    "total": 2106
   },
   "payments": [
     {
@@ -137707,7 +137736,7 @@
     },
     {
       "method": "Alif",
-      "total": 306
+      "total": 331
     },
     {
       "method": "Dushanbe City",
@@ -137719,6 +137748,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3153,
+      "items": [
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 3152,
       "items": [
@@ -137778,15 +137815,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3145,
-      "items": [
-        "Клубничный mini x2",
-        "Фреш лимон mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 80
     }
   ],
   "shifts": {
@@ -137932,6 +137960,11 @@
       "total": 120
     },
     {
+      "name": "Клубничный mini",
+      "qty": 4,
+      "total": 100
+    },
+    {
       "name": "Манго Маракуя mini",
       "qty": 5,
       "total": 100
@@ -137947,11 +137980,6 @@
       "total": 90
     },
     {
-      "name": "Клубничный mini",
-      "qty": 3,
-      "total": 75
-    },
-    {
       "name": "АйсМатча черника",
       "qty": 2,
       "total": 70
@@ -137963,5 +137991,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-09T14:21:46.480Z"
+  "updatedAt": "2026-07-09T14:29:05.753Z"
 }

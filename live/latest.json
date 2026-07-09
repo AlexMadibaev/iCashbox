@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.22222222222222,
-    "checks": 45,
+    "average": 41.32608695652174,
+    "checks": 46,
     "expenseTotal": 205,
-    "net": 1650,
-    "revenue": 1855
+    "net": 1696,
+    "revenue": 1901
   },
   "data": {
-    "actions": 4763,
+    "actions": 4765,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2121,
+    "orders": 2122,
     "products": 60,
     "shifts": 48
   },
   "activity": [
     {
+      "id": 1783592493280,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:21",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783592493280,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:21",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783591706412,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:31",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783589149849,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:25",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783589149849,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:25",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2121,
+    "current": 2122,
     "old": [
       {
         "createdAt": "2026-07-08T10:16:56.105Z",
@@ -68146,6 +68146,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-09T10:37:55.040Z",
+        "id": 3169,
+        "items": [
+          "Babl tea big x1",
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 106,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-09",
+        "shiftLabel": "Смена 09.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-07-09T10:21:33.192Z",
         "id": 3168,
@@ -137559,14 +137597,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 45,
-        "expectedOrders": 45,
+        "databaseOrders": 46,
+        "expectedOrders": 46,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-09",
         "label": "Смена 09.07",
         "missingOrders": 0,
-        "revenue": 1855,
+        "revenue": 1901,
         "status": "ok"
       },
       {
@@ -138194,12 +138232,12 @@
         "status": "ok"
       }
     ],
-    "total": 2121
+    "total": 2122
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1333
+      "total": 1379
     },
     {
       "method": "Карта",
@@ -138219,6 +138257,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3169,
+      "items": [
+        "Babl tea big x1",
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 3168,
       "items": [
@@ -138277,14 +138324,6 @@
       ],
       "status": "Оплачен",
       "total": 82
-    },
-    {
-      "id": 3161,
-      "items": [
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -138426,8 +138465,8 @@
     },
     {
       "name": "Babl tea mini",
-      "qty": 7,
-      "total": 140
+      "qty": 8,
+      "total": 160
     },
     {
       "name": "АйсМатча черника",
@@ -138461,5 +138500,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-09T17:24:15.821Z"
+  "updatedAt": "2026-07-09T17:40:38.311Z"
 }

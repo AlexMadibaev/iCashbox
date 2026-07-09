@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 50,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -155,
+    "revenue": 50
   },
   "data": {
     "actions": 4675,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2076,
+    "orders": 2077,
     "products": 60,
     "shifts": 48
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2076,
+    "current": 2077,
     "old": [
       {
         "createdAt": "2026-07-08T10:16:56.105Z",
@@ -68146,6 +68146,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-08T22:12:23.581Z",
+        "id": 3124,
+        "items": [
+          "Манго Маракуя mini x1",
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 50,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-09",
+        "shiftLabel": "Смена 09.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-08T10:16:56.105Z",
         "id": 3123,
@@ -136101,15 +136139,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-07-09",
         "label": "Смена 09.07",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 50,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -136736,7 +136774,7 @@
         "status": "ok"
       }
     ],
-    "total": 2076
+    "total": 2077
   },
   "payments": [
     {
@@ -136749,7 +136787,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 50
     },
     {
       "method": "Dushanbe City",
@@ -136760,7 +136798,17 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 3124,
+      "items": [
+        "Манго Маракуя mini x1",
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -136892,7 +136940,18 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Matcha mini",
+      "qty": 1,
+      "total": 30
+    },
+    {
+      "name": "Манго Маракуя mini",
+      "qty": 1,
+      "total": 20
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-07-09T04:30:21.827Z"
+  "updatedAt": "2026-07-09T05:15:06.637Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 44.64,
-    "checks": 25,
+    "average": 45.23076923076923,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 911,
-    "revenue": 1116
+    "net": 971,
+    "revenue": 1176
   },
   "data": {
-    "actions": 4723,
+    "actions": 4725,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2101,
+    "orders": 2102,
     "products": 60,
     "shifts": 48
   },
   "activity": [
     {
+      "id": 1783577193833,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783577193833,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:06",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783577138443,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:07",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783569486354,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:58",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783569486354,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:58",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2101,
+    "current": 2102,
     "old": [
       {
         "createdAt": "2026-07-08T10:16:56.105Z",
@@ -68146,6 +68146,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-09T06:28:00.231Z",
+        "id": 3149,
+        "items": [
+          "МангоБанан big x1",
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 60,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-09",
+        "shiftLabel": "Смена 09.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-09T06:06:33.734Z",
         "id": 3148,
@@ -136916,14 +136954,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-09",
         "label": "Смена 09.07",
         "missingOrders": 0,
-        "revenue": 1116,
+        "revenue": 1176,
         "status": "ok"
       },
       {
@@ -137551,7 +137589,7 @@
         "status": "ok"
       }
     ],
-    "total": 2101
+    "total": 2102
   },
   "payments": [
     {
@@ -137564,7 +137602,7 @@
     },
     {
       "method": "Alif",
-      "total": 221
+      "total": 281
     },
     {
       "method": "Dushanbe City",
@@ -137576,6 +137614,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3149,
+      "items": [
+        "МангоБанан big x1",
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3148,
       "items": [
@@ -137636,14 +137683,6 @@
       ],
       "status": "Оплачен",
       "total": 55
-    },
-    {
-      "id": 3141,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -137820,5 +137859,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-09T13:09:15.085Z"
+  "updatedAt": "2026-07-09T13:30:43.046Z"
 }

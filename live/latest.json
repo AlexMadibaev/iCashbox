@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.8,
-    "checks": 20,
+    "average": 43.61904761904762,
+    "checks": 21,
     "expenseTotal": 205,
-    "net": 671,
-    "revenue": 876
+    "net": 711,
+    "revenue": 916
   },
   "data": {
-    "actions": 4713,
+    "actions": 4715,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2096,
+    "orders": 2097,
     "products": 60,
     "shifts": 48
   },
   "activity": [
     {
+      "id": 1783570062794,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:07",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783570062794,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:07",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783569486354,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783565819297,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:56",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783565819297,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:56",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2096,
+    "current": 2097,
     "old": [
       {
         "createdAt": "2026-07-08T10:16:56.105Z",
@@ -68146,6 +68146,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-09T04:33:38.107Z",
+        "id": 3144,
+        "items": [
+          "Манго Маракуя mini x1",
+          "Bubble Gum mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-09",
+        "shiftLabel": "Смена 09.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-09T04:07:42.706Z",
         "id": 3143,
@@ -136744,14 +136782,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 20,
-        "expectedOrders": 20,
+        "databaseOrders": 21,
+        "expectedOrders": 21,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-09",
         "label": "Смена 09.07",
         "missingOrders": 0,
-        "revenue": 876,
+        "revenue": 916,
         "status": "ok"
       },
       {
@@ -137379,12 +137417,12 @@
         "status": "ok"
       }
     ],
-    "total": 2096
+    "total": 2097
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 605
+      "total": 645
     },
     {
       "method": "Карта",
@@ -137404,6 +137442,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3144,
+      "items": [
+        "Манго Маракуя mini x1",
+        "Bubble Gum mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3143,
       "items": [
@@ -137464,14 +137511,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 3136,
-      "items": [
-        "Matcha mini x4"
-      ],
-      "status": "Оплачен",
-      "total": 120
     }
   ],
   "shifts": {
@@ -137622,6 +137661,11 @@
       "total": 90
     },
     {
+      "name": "Манго Маракуя mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "АйсМатча черника",
       "qty": 2,
       "total": 70
@@ -137630,11 +137674,6 @@
       "name": "АйсМатча манго",
       "qty": 2,
       "total": 70
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 3,
-      "total": 60
     },
     {
       "name": "Blue mini",
@@ -137648,5 +137687,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-09T11:10:25.696Z"
+  "updatedAt": "2026-07-09T11:36:21.147Z"
 }

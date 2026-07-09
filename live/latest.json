@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 45.23076923076923,
-    "checks": 26,
+    "average": 46.51851851851852,
+    "checks": 27,
     "expenseTotal": 205,
-    "net": 971,
-    "revenue": 1176
+    "net": 1051,
+    "revenue": 1256
   },
   "data": {
-    "actions": 4725,
+    "actions": 4727,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2102,
+    "orders": 2103,
     "products": 60,
     "shifts": 48
   },
   "activity": [
     {
+      "id": 1783578480321,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:28",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783578480321,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:28",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783577193833,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:33",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783570062794,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:07",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783570062794,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:07",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2102,
+    "current": 2103,
     "old": [
       {
         "createdAt": "2026-07-08T10:16:56.105Z",
@@ -68146,6 +68146,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-09T07:08:22.152Z",
+        "id": 3150,
+        "items": [
+          "Клубничный big x1",
+          "МангоБанан big x1",
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 80,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-09",
+        "shiftLabel": "Смена 09.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 80
+      },
       {
         "createdAt": "2026-07-09T06:28:00.231Z",
         "id": 3149,
@@ -136954,14 +137001,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 26,
-        "expectedOrders": 26,
+        "databaseOrders": 27,
+        "expectedOrders": 27,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-09",
         "label": "Смена 09.07",
         "missingOrders": 0,
-        "revenue": 1176,
+        "revenue": 1256,
         "status": "ok"
       },
       {
@@ -137589,12 +137636,12 @@
         "status": "ok"
       }
     ],
-    "total": 2102
+    "total": 2103
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 745
+      "total": 825
     },
     {
       "method": "Карта",
@@ -137614,6 +137661,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3150,
+      "items": [
+        "Клубничный big x1",
+        "МангоБанан big x1",
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 80
+    },
     {
       "id": 3149,
       "items": [
@@ -137674,15 +137731,6 @@
       ],
       "status": "Оплачен",
       "total": 35
-    },
-    {
-      "id": 3142,
-      "items": [
-        "ПиноКолада mini x1",
-        "ПиноКолада big x1"
-      ],
-      "status": "Оплачен",
-      "total": 55
     }
   ],
   "shifts": {
@@ -137833,6 +137881,11 @@
       "total": 100
     },
     {
+      "name": "Клубничный big",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Айс Латте",
       "qty": 3,
       "total": 90
@@ -137851,13 +137904,8 @@
       "name": "АйсМатча манго",
       "qty": 2,
       "total": 70
-    },
-    {
-      "name": "Клубничный big",
-      "qty": 2,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-09T13:30:43.046Z"
+  "updatedAt": "2026-07-09T14:11:04.935Z"
 }

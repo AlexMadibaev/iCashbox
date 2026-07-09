@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.4,
-    "checks": 15,
+    "average": 44.125,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 371,
-    "revenue": 576
+    "net": 501,
+    "revenue": 706
   },
   "data": {
-    "actions": 4705,
+    "actions": 4707,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2091,
+    "orders": 2092,
     "products": 60,
     "shifts": 48
   },
   "activity": [
     {
+      "id": 1783567401599,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:23",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783567401599,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:23",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783566681422,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:26",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783563542629,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783563542629,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:19",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2091,
+    "current": 2092,
     "old": [
       {
         "createdAt": "2026-07-08T10:16:56.105Z",
@@ -68146,6 +68146,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-09T03:23:21.473Z",
+        "id": 3139,
+        "items": [
+          "АйсМатча клубника x1",
+          "АйсМатча черника x1",
+          "АйсМатча манго x1",
+          "ПиноКолада mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-айсматча-черника",
+            "name": "АйсМатча черника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-айсматча-манго",
+            "name": "АйсМатча манго",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 130,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-09",
+        "shiftLabel": "Смена 09.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 130
+      },
       {
         "createdAt": "2026-07-09T03:11:21.299Z",
         "id": 3138,
@@ -136554,14 +136610,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-09",
         "label": "Смена 09.07",
         "missingOrders": 0,
-        "revenue": 576,
+        "revenue": 706,
         "status": "ok"
       },
       {
@@ -137189,12 +137245,12 @@
         "status": "ok"
       }
     ],
-    "total": 2091
+    "total": 2092
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 365
+      "total": 495
     },
     {
       "method": "Карта",
@@ -137214,6 +137270,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3139,
+      "items": [
+        "АйсМатча клубника x1",
+        "АйсМатча черника x1",
+        "АйсМатча манго x1",
+        "ПиноКолада mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 130
+    },
     {
       "id": 3138,
       "items": [
@@ -137270,14 +137337,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3131,
-      "items": [
-        "Манго Маракуя big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -137423,6 +137482,16 @@
       "total": 80
     },
     {
+      "name": "АйсМатча черника",
+      "qty": 2,
+      "total": 70
+    },
+    {
+      "name": "АйсМатча манго",
+      "qty": 2,
+      "total": 70
+    },
+    {
       "name": "Манго Маракуя mini",
       "qty": 3,
       "total": 60
@@ -137433,12 +137502,7 @@
       "total": 60
     },
     {
-      "name": "АйсМатча черника",
-      "qty": 1,
-      "total": 35
-    },
-    {
-      "name": "АйсМатча манго",
+      "name": "АйсМатча клубника",
       "qty": 1,
       "total": 35
     },
@@ -137446,13 +137510,8 @@
       "name": "Cake-Pops",
       "qty": 2,
       "total": 30
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-09T10:14:04.765Z"
+  "updatedAt": "2026-07-09T10:26:04.745Z"
 }

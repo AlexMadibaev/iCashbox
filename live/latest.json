@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 44.26315789473684,
-    "checks": 19,
+    "average": 43.8,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 636,
-    "revenue": 841
+    "net": 671,
+    "revenue": 876
   },
   "data": {
-    "actions": 4711,
+    "actions": 4713,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2095,
+    "orders": 2096,
     "products": 60,
     "shifts": 48
   },
   "activity": [
     {
+      "id": 1783569486354,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:58",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783569486354,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:58",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783569416031,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:56",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783565643112,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:54",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783565643112,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:54",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2095,
+    "current": 2096,
     "old": [
       {
         "createdAt": "2026-07-08T10:16:56.105Z",
@@ -68146,6 +68146,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-09T04:07:42.706Z",
+        "id": 3143,
+        "items": [
+          "Babl tea mini x1",
+          "Cake-Pops x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-09",
+        "shiftLabel": "Смена 09.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-07-09T03:58:06.250Z",
         "id": 3142,
@@ -136706,14 +136744,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-09",
         "label": "Смена 09.07",
         "missingOrders": 0,
-        "revenue": 841,
+        "revenue": 876,
         "status": "ok"
       },
       {
@@ -137341,12 +137379,12 @@
         "status": "ok"
       }
     ],
-    "total": 2095
+    "total": 2096
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 570
+      "total": 605
     },
     {
       "method": "Карта",
@@ -137366,6 +137404,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3143,
+      "items": [
+        "Babl tea mini x1",
+        "Cake-Pops x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    },
     {
       "id": 3142,
       "items": [
@@ -137425,15 +137472,6 @@
       ],
       "status": "Оплачен",
       "total": 120
-    },
-    {
-      "id": 3135,
-      "items": [
-        "АйсМатча черника x1",
-        "АйсМатча манго x1"
-      ],
-      "status": "Оплачен",
-      "total": 70
     }
   ],
   "shifts": {
@@ -137575,8 +137613,8 @@
     },
     {
       "name": "Babl tea mini",
-      "qty": 5,
-      "total": 100
+      "qty": 6,
+      "total": 120
     },
     {
       "name": "Айс Латте",
@@ -137610,5 +137648,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-09T11:00:47.550Z"
+  "updatedAt": "2026-07-09T11:10:25.696Z"
 }

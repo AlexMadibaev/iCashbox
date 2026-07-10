@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 35.53846153846154,
-    "checks": 13,
+    "average": 38.857142857142854,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 257,
-    "revenue": 462
+    "net": 339,
+    "revenue": 544
   },
   "data": {
-    "actions": 4796,
+    "actions": 4800,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2137,
+    "orders": 2138,
     "products": 60,
     "shifts": 49
   },
   "activity": [
     {
+      "id": 1783654345889,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:32",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783654345889,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:32",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1783653335819,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:15",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783653335819,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:15",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783650829450,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:17",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783649349135,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:09",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783649349135,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:09",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783647438158,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783647438158,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:37",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2137,
+    "current": 2138,
     "old": [
       {
         "createdAt": "2026-07-09T10:51:45.257Z",
@@ -69718,6 +69718,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-10T03:32:25.781Z",
+        "id": 3185,
+        "items": [
+          "Blue big x1",
+          "Клубника big x1",
+          "Cake-Pops x2"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-big",
+            "name": "Blue big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-клубника-big",
+            "name": "Клубника big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 2,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 82,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-10",
+        "shiftLabel": "Смена 10.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 82
+      },
       {
         "createdAt": "2026-07-10T03:15:35.701Z",
         "id": 3184,
@@ -139649,14 +139696,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-10",
         "label": "Смена 10.07",
         "missingOrders": 0,
-        "revenue": 462,
+        "revenue": 544,
         "status": "ok"
       },
       {
@@ -140297,12 +140344,12 @@
         "status": "ok"
       }
     ],
-    "total": 2137
+    "total": 2138
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 250
+      "total": 332
     },
     {
       "method": "Карта",
@@ -140322,6 +140369,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3185,
+      "items": [
+        "Blue big x1",
+        "Клубника big x1",
+        "Cake-Pops x2"
+      ],
+      "status": "Оплачен",
+      "total": 82
+    },
     {
       "id": 3184,
       "items": [
@@ -140378,15 +140435,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 3177,
-      "items": [
-        "Matcha mini x1",
-        "Blue mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -140542,6 +140590,11 @@
       "total": 60
     },
     {
+      "name": "Blue big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Matcha big",
       "qty": 1,
       "total": 40
@@ -140552,16 +140605,11 @@
       "total": 40
     },
     {
-      "name": "Айс Латте",
-      "qty": 1,
+      "name": "Cake-Pops",
+      "qty": 2,
       "total": 30
-    },
-    {
-      "name": "Blue big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-10T10:18:19.546Z"
+  "updatedAt": "2026-07-10T10:35:10.726Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.2,
-    "checks": 10,
+    "average": 34.72727272727273,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 147,
-    "revenue": 352
+    "net": 177,
+    "revenue": 382
   },
   "data": {
-    "actions": 4790,
+    "actions": 4792,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2134,
+    "orders": 2135,
     "products": 60,
     "shifts": 49
   },
   "activity": [
     {
+      "id": 1783650553476,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783650553476,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:29",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783649859452,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:16",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783641712450,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:01",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783641712450,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:01",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2134,
+    "current": 2135,
     "old": [
       {
         "createdAt": "2026-07-09T10:51:45.257Z",
@@ -69718,6 +69718,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-10T02:31:04.008Z",
+        "id": 3182,
+        "items": [
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 30,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-10",
+        "shiftLabel": "Смена 10.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-10T02:29:13.391Z",
         "id": 3181,
@@ -139562,14 +139591,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-10",
         "label": "Смена 10.07",
         "missingOrders": 0,
-        "revenue": 352,
+        "revenue": 382,
         "status": "ok"
       },
       {
@@ -140210,7 +140239,7 @@
         "status": "ok"
       }
     ],
-    "total": 2134
+    "total": 2135
   },
   "payments": [
     {
@@ -140223,7 +140252,7 @@
     },
     {
       "method": "Alif",
-      "total": 116
+      "total": 146
     },
     {
       "method": "Dushanbe City",
@@ -140235,6 +140264,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3182,
+      "items": [
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 3181,
       "items": [
@@ -140292,14 +140329,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3174,
-      "items": [
-        "Фреш лимон big x3"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -140435,6 +140464,11 @@
   },
   "topProducts": [
     {
+      "name": "Matcha mini",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Клубничный жасмин mini",
       "qty": 3,
       "total": 60
@@ -140455,11 +140489,6 @@
       "total": 30
     },
     {
-      "name": "Matcha mini",
-      "qty": 1,
-      "total": 30
-    },
-    {
       "name": "Blue big",
       "qty": 1,
       "total": 26
@@ -140476,5 +140505,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-10T09:31:57.246Z"
+  "updatedAt": "2026-07-10T09:33:46.266Z"
 }

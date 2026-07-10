@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 35,
-    "checks": 4,
+    "average": 36,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": -65,
-    "revenue": 140
+    "net": -25,
+    "revenue": 180
   },
   "data": {
-    "actions": 4778,
+    "actions": 4780,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2128,
+    "orders": 2129,
     "products": 60,
     "shifts": 49
   },
   "activity": [
+    {
+      "id": 1783641712450,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:01",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783641712450,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:01",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783638110393,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783593661493,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783593475151,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:37",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2128,
+    "current": 2129,
     "old": [
       {
         "createdAt": "2026-07-09T10:51:45.257Z",
@@ -69718,6 +69718,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-10T00:16:31.898Z",
+        "id": 3176,
+        "items": [
+          "Клубничный жасмин mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 40,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-10",
+        "shiftLabel": "Смена 10.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-10T00:01:52.360Z",
         "id": 3175,
@@ -139370,14 +139399,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-10",
         "label": "Смена 10.07",
         "missingOrders": 0,
-        "revenue": 140,
+        "revenue": 180,
         "status": "ok"
       },
       {
@@ -140018,7 +140047,7 @@
         "status": "ok"
       }
     ],
-    "total": 2128
+    "total": 2129
   },
   "payments": [
     {
@@ -140035,7 +140064,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 0
+      "total": 40
     },
     {
       "method": "Семья",
@@ -140043,6 +140072,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3176,
+      "items": [
+        "Клубничный жасмин mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3175,
       "items": [
@@ -140210,14 +140247,14 @@
   },
   "topProducts": [
     {
-      "name": "Фреш лимон big",
+      "name": "Клубничный жасмин mini",
       "qty": 3,
       "total": 60
     },
     {
-      "name": "Клубничный жасмин mini",
-      "qty": 1,
-      "total": 20
+      "name": "Фреш лимон big",
+      "qty": 3,
+      "total": 60
     },
     {
       "name": "Клубника mini",
@@ -140236,5 +140273,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-10T07:04:36.598Z"
+  "updatedAt": "2026-07-10T07:19:16.085Z"
 }

@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 36,
-    "checks": 5,
+    "average": 38.333333333333336,
+    "checks": 6,
     "expenseTotal": 205,
-    "net": -25,
-    "revenue": 180
+    "net": 25,
+    "revenue": 230
   },
   "data": {
-    "actions": 4780,
+    "actions": 4782,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2129,
+    "orders": 2130,
     "products": 60,
     "shifts": 49
   },
   "activity": [
+    {
+      "id": 1783642591984,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:16",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783642591984,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:16",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783641712450,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:51",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783594305353,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:51",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783593661493,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:41",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2129,
+    "current": 2130,
     "old": [
       {
         "createdAt": "2026-07-09T10:51:45.257Z",
@@ -69718,6 +69718,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-10T00:35:13.669Z",
+        "id": 3177,
+        "items": [
+          "Matcha mini x1",
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 50,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-10",
+        "shiftLabel": "Смена 10.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-10T00:16:31.898Z",
         "id": 3176,
@@ -139399,14 +139437,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 5,
-        "expectedOrders": 5,
+        "databaseOrders": 6,
+        "expectedOrders": 6,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-10",
         "label": "Смена 10.07",
         "missingOrders": 0,
-        "revenue": 180,
+        "revenue": 230,
         "status": "ok"
       },
       {
@@ -140047,7 +140085,7 @@
         "status": "ok"
       }
     ],
-    "total": 2129
+    "total": 2130
   },
   "payments": [
     {
@@ -140060,7 +140098,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 50
     },
     {
       "method": "Dushanbe City",
@@ -140072,6 +140110,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3177,
+      "items": [
+        "Matcha mini x1",
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 3176,
       "items": [
@@ -140257,12 +140304,17 @@
       "total": 60
     },
     {
-      "name": "Клубника mini",
-      "qty": 1,
-      "total": 20
+      "name": "Blue mini",
+      "qty": 2,
+      "total": 40
     },
     {
-      "name": "Blue mini",
+      "name": "Matcha mini",
+      "qty": 1,
+      "total": 30
+    },
+    {
+      "name": "Клубника mini",
       "qty": 1,
       "total": 20
     },
@@ -140273,5 +140325,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-10T07:19:16.085Z"
+  "updatedAt": "2026-07-10T07:37:57.411Z"
 }

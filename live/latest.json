@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.542857142857144,
-    "checks": 35,
+    "average": 44,
+    "checks": 36,
     "expenseTotal": 205,
-    "net": 1319,
-    "revenue": 1524
+    "net": 1379,
+    "revenue": 1584
   },
   "data": {
-    "actions": 4840,
+    "actions": 4842,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2159,
+    "orders": 2160,
     "products": 60,
     "shifts": 49
   },
   "activity": [
     {
+      "id": 1783678787705,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:19",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783678787705,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:19",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783676727119,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:53",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783673515694,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:51",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783673515694,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:51",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2159,
+    "current": 2160,
     "old": [
       {
         "createdAt": "2026-07-09T10:51:45.257Z",
@@ -69718,6 +69718,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-10T10:33:33.620Z",
+        "id": 3207,
+        "items": [
+          "Bubble Gum mini x1",
+          "Капучино x1",
+          "Cake-Pops x1"
+        ],
+        "lines": [
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 56,
+          "Карта": 0,
+          "Alif": 4,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-10",
+        "shiftLabel": "Смена 10.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-10T10:19:47.600Z",
         "id": 3206,
@@ -140413,14 +140460,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 35,
-        "expectedOrders": 35,
+        "databaseOrders": 36,
+        "expectedOrders": 36,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-10",
         "label": "Смена 10.07",
         "missingOrders": 0,
-        "revenue": 1524,
+        "revenue": 1584,
         "status": "ok"
       },
       {
@@ -141061,12 +141108,12 @@
         "status": "ok"
       }
     ],
-    "total": 2159
+    "total": 2160
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1104
+      "total": 1160
     },
     {
       "method": "Карта",
@@ -141074,7 +141121,7 @@
     },
     {
       "method": "Alif",
-      "total": 304
+      "total": 308
     },
     {
       "method": "Dushanbe City",
@@ -141086,6 +141133,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3207,
+      "items": [
+        "Bubble Gum mini x1",
+        "Капучино x1",
+        "Cake-Pops x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3206,
       "items": [
@@ -141146,14 +141203,6 @@
       ],
       "status": "Оплачен",
       "total": 46
-    },
-    {
-      "id": 3199,
-      "items": [
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -141309,6 +141358,11 @@
       "total": 120
     },
     {
+      "name": "Cake-Pops",
+      "qty": 6,
+      "total": 90
+    },
+    {
       "name": "Айс Латте",
       "qty": 3,
       "total": 90
@@ -141319,16 +141373,11 @@
       "total": 78
     },
     {
-      "name": "Cake-Pops",
-      "qty": 5,
-      "total": 75
-    },
-    {
       "name": "Клубника mini",
       "qty": 3,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-10T17:22:31.107Z"
+  "updatedAt": "2026-07-10T17:36:18.190Z"
 }

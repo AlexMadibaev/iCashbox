@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 40,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -165,
+    "revenue": 40
   },
   "data": {
-    "actions": 4772,
+    "actions": 4774,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2124,
+    "orders": 2125,
     "products": 60,
     "shifts": 49
   },
   "activity": [
+    {
+      "id": 1783635474608,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:17",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783635474608,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:17",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783629225572,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:08",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783591706412,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783591597179,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:06",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2124,
+    "current": 2125,
     "old": [
       {
         "createdAt": "2026-07-09T10:51:45.257Z",
@@ -69718,6 +69718,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-09T22:17:54.511Z",
+        "id": 3172,
+        "items": [
+          "Blue mini x1",
+          "Жасмин гранат mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-гранат-mini",
+            "name": "Жасмин гранат mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-10",
+        "shiftLabel": "Смена 10.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-09T10:51:45.257Z",
         "id": 3171,
@@ -139245,15 +139283,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-07-10",
         "label": "Смена 10.07",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 40,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -139893,12 +139931,12 @@
         "status": "ok"
       }
     ],
-    "total": 2124
+    "total": 2125
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 40
     },
     {
       "method": "Карта",
@@ -139917,7 +139955,17 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 3172,
+      "items": [
+        "Blue mini x1",
+        "Жасмин гранат mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -140049,7 +140097,18 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Blue mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Жасмин гранат mini",
+      "qty": 1,
+      "total": 20
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-07-10T03:36:34.870Z"
+  "updatedAt": "2026-07-10T05:20:39.398Z"
 }

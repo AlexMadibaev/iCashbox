@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.96875,
-    "checks": 32,
+    "average": 42.06060606060606,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 1138,
-    "revenue": 1343
+    "net": 1183,
+    "revenue": 1388
   },
   "data": {
-    "actions": 4834,
+    "actions": 4836,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2156,
+    "orders": 2157,
     "products": 60,
     "shifts": 49
   },
   "activity": [
     {
+      "id": 1783674671337,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:11",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783674671337,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:11",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783674066612,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:16",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783670901811,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:08",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783670901811,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:08",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2156,
+    "current": 2157,
     "old": [
       {
         "createdAt": "2026-07-09T10:51:45.257Z",
@@ -69718,6 +69718,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-10T09:33:36.586Z",
+        "id": 3204,
+        "items": [
+          "Matcha mini x1",
+          "Cake-Pops x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-10",
+        "shiftLabel": "Смена 10.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-07-10T09:11:11.215Z",
         "id": 3203,
@@ -140299,14 +140337,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 32,
-        "expectedOrders": 32,
+        "databaseOrders": 33,
+        "expectedOrders": 33,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-10",
         "label": "Смена 10.07",
         "missingOrders": 0,
-        "revenue": 1343,
+        "revenue": 1388,
         "status": "ok"
       },
       {
@@ -140947,12 +140985,12 @@
         "status": "ok"
       }
     ],
-    "total": 2156
+    "total": 2157
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 923
+      "total": 968
     },
     {
       "method": "Карта",
@@ -140972,6 +141010,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3204,
+      "items": [
+        "Matcha mini x1",
+        "Cake-Pops x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 3203,
       "items": [
@@ -141030,14 +141077,6 @@
       ],
       "status": "Оплачен",
       "total": 41
-    },
-    {
-      "id": 3196,
-      "items": [
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -141174,8 +141213,8 @@
   "topProducts": [
     {
       "name": "Matcha mini",
-      "qty": 7,
-      "total": 210
+      "qty": 8,
+      "total": 240
     },
     {
       "name": "Babl tea mini",
@@ -141199,8 +141238,8 @@
     },
     {
       "name": "Cake-Pops",
-      "qty": 4,
-      "total": 60
+      "qty": 5,
+      "total": 75
     },
     {
       "name": "Клубничный жасмин mini",
@@ -141214,5 +141253,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-10T16:13:55.086Z"
+  "updatedAt": "2026-07-10T16:36:20.644Z"
 }

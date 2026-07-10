@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42,
-    "checks": 25,
+    "average": 41.96153846153846,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 845,
-    "revenue": 1050
+    "net": 886,
+    "revenue": 1091
   },
   "data": {
-    "actions": 4820,
+    "actions": 4822,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2149,
+    "orders": 2150,
     "products": 60,
     "shifts": 49
   },
   "activity": [
     {
+      "id": 1783668611127,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:30",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783668611127,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:30",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783667369578,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:06",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783658720918,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:45",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783658720918,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:45",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2149,
+    "current": 2150,
     "old": [
       {
         "createdAt": "2026-07-09T10:51:45.257Z",
@@ -69718,6 +69718,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-10T08:08:21.711Z",
+        "id": 3197,
+        "items": [
+          "Клубничный жасмин big x1",
+          "Cake-Pops x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-big",
+            "name": "Клубничный жасмин big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-10",
+        "shiftLabel": "Смена 10.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 41
+      },
       {
         "createdAt": "2026-07-10T07:30:11.023Z",
         "id": 3196,
@@ -140069,14 +140107,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-10",
         "label": "Смена 10.07",
         "missingOrders": 0,
-        "revenue": 1050,
+        "revenue": 1091,
         "status": "ok"
       },
       {
@@ -140717,12 +140755,12 @@
         "status": "ok"
       }
     ],
-    "total": 2149
+    "total": 2150
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 726
+      "total": 767
     },
     {
       "method": "Карта",
@@ -140742,6 +140780,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3197,
+      "items": [
+        "Клубничный жасмин big x1",
+        "Cake-Pops x1"
+      ],
+      "status": "Оплачен",
+      "total": 41
+    },
     {
       "id": 3196,
       "items": [
@@ -140800,15 +140847,6 @@
       ],
       "status": "Оплачен",
       "total": 52
-    },
-    {
-      "id": 3189,
-      "items": [
-        "Babl tea mini x2",
-        "Жасмин гранат mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -140969,6 +141007,11 @@
       "total": 78
     },
     {
+      "name": "Cake-Pops",
+      "qty": 4,
+      "total": 60
+    },
+    {
       "name": "Клубничный жасмин mini",
       "qty": 3,
       "total": 60
@@ -140977,13 +141020,8 @@
       "name": "Фреш лимон big",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Bubble Gum big",
-      "qty": 2,
-      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-10T14:32:54.898Z"
+  "updatedAt": "2026-07-10T15:11:05.728Z"
 }

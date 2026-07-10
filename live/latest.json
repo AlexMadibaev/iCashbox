@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.57142857142857,
-    "checks": 7,
+    "average": 39,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": 51,
-    "revenue": 256
+    "net": 107,
+    "revenue": 312
   },
   "data": {
-    "actions": 4784,
+    "actions": 4786,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2131,
+    "orders": 2132,
     "products": 60,
     "shifts": 49
   },
   "activity": [
     {
+      "id": 1783647438158,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:37",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783647438158,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:37",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783643713769,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "10:23",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783635474608,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:17",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783635474608,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:17",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2131,
+    "current": 2132,
     "old": [
       {
         "createdAt": "2026-07-09T10:51:45.257Z",
@@ -69718,6 +69718,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-10T02:09:09.050Z",
+        "id": 3179,
+        "items": [
+          "Айс Латте x1",
+          "Blue big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-blue-big",
+            "name": "Blue big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 56,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-10",
+        "shiftLabel": "Смена 10.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 56
+      },
       {
         "createdAt": "2026-07-10T01:37:18.074Z",
         "id": 3178,
@@ -139466,14 +139504,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-10",
         "label": "Смена 10.07",
         "missingOrders": 0,
-        "revenue": 256,
+        "revenue": 312,
         "status": "ok"
       },
       {
@@ -140114,7 +140152,7 @@
         "status": "ok"
       }
     ],
-    "total": 2131
+    "total": 2132
   },
   "payments": [
     {
@@ -140127,7 +140165,7 @@
     },
     {
       "method": "Alif",
-      "total": 50
+      "total": 106
     },
     {
       "method": "Dushanbe City",
@@ -140139,6 +140177,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3179,
+      "items": [
+        "Айс Латте x1",
+        "Blue big x1"
+      ],
+      "status": "Оплачен",
+      "total": 56
+    },
     {
       "id": 3178,
       "items": [
@@ -140346,9 +140393,19 @@
       "total": 40
     },
     {
+      "name": "Айс Латте",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Matcha mini",
       "qty": 1,
       "total": 30
+    },
+    {
+      "name": "Blue big",
+      "qty": 1,
+      "total": 26
     },
     {
       "name": "Жасмин гранат big",
@@ -140359,13 +140416,8 @@
       "name": "Клубника mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Жасмин гранат mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-10T08:40:02.443Z"
+  "updatedAt": "2026-07-10T09:11:53.231Z"
 }

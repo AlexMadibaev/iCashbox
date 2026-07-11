@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.88235294117647,
-    "checks": 34,
+    "average": 43.2,
+    "checks": 35,
     "expenseTotal": 205,
-    "net": 1287,
-    "revenue": 1492
+    "net": 1307,
+    "revenue": 1512
   },
   "data": {
-    "actions": 4913,
+    "actions": 4915,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2195,
+    "orders": 2196,
     "products": 60,
     "shifts": 50
   },
   "activity": [
     {
+      "id": 1783759786103,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:49",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783759786103,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:49",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783759632548,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:36",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783758763231,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:32",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783758763231,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:32",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2195,
+    "current": 2196,
     "old": [
       {
         "createdAt": "2026-07-10T10:40:09.446Z",
@@ -70962,6 +70962,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-11T09:06:56.845Z",
+        "id": 3243,
+        "items": [
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-11",
+        "shiftLabel": "Смена 11.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-11T08:49:45.998Z",
         "id": 3242,
@@ -142863,14 +142892,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-11",
         "label": "Смена 11.07",
         "missingOrders": 0,
-        "revenue": 1492,
+        "revenue": 1512,
         "status": "ok"
       },
       {
@@ -143524,12 +143553,12 @@
         "status": "ok"
       }
     ],
-    "total": 2195
+    "total": 2196
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 999
+      "total": 1019
     },
     {
       "method": "Карта",
@@ -143549,6 +143578,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3243,
+      "items": [
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3242,
       "items": [
@@ -143611,14 +143648,6 @@
       ],
       "status": "Оплачен",
       "total": 90
-    },
-    {
-      "id": 3235,
-      "items": [
-        "Matcha big x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -143795,5 +143824,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-11T15:52:30.577Z"
+  "updatedAt": "2026-07-11T16:09:42.946Z"
 }

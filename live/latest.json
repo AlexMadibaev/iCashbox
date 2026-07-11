@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.2,
-    "checks": 35,
+    "average": 43.138888888888886,
+    "checks": 36,
     "expenseTotal": 205,
-    "net": 1307,
-    "revenue": 1512
+    "net": 1348,
+    "revenue": 1553
   },
   "data": {
-    "actions": 4915,
+    "actions": 4917,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2196,
+    "orders": 2197,
     "products": 60,
     "shifts": 50
   },
   "activity": [
     {
+      "id": 1783760816950,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783760816950,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:06",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783759786103,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783759016912,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783759016912,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:36",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2196,
+    "current": 2197,
     "old": [
       {
         "createdAt": "2026-07-10T10:40:09.446Z",
@@ -70962,6 +70962,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-11T09:42:44.028Z",
+        "id": 3244,
+        "items": [
+          "Манго big x1",
+          "Фреш лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-big",
+            "name": "Манго big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-фреш-лимон-mini",
+            "name": "Фреш лимон mini",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-11",
+        "shiftLabel": "Смена 11.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 41
+      },
       {
         "createdAt": "2026-07-11T09:06:56.845Z",
         "id": 3243,
@@ -142892,14 +142930,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 35,
-        "expectedOrders": 35,
+        "databaseOrders": 36,
+        "expectedOrders": 36,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-11",
         "label": "Смена 11.07",
         "missingOrders": 0,
-        "revenue": 1512,
+        "revenue": 1553,
         "status": "ok"
       },
       {
@@ -143553,12 +143591,12 @@
         "status": "ok"
       }
     ],
-    "total": 2196
+    "total": 2197
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1019
+      "total": 1060
     },
     {
       "method": "Карта",
@@ -143578,6 +143616,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3244,
+      "items": [
+        "Манго big x1",
+        "Фреш лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 41
+    },
     {
       "id": 3243,
       "items": [
@@ -143639,15 +143686,6 @@
       ],
       "status": "Оплачен",
       "total": 70
-    },
-    {
-      "id": 3236,
-      "items": [
-        "Айс Латте x2",
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 90
     }
   ],
   "shifts": {
@@ -143813,16 +143851,16 @@
       "total": 120
     },
     {
+      "name": "Манго big",
+      "qty": 4,
+      "total": 104
+    },
+    {
       "name": "Клубника mini",
       "qty": 4,
       "total": 80
-    },
-    {
-      "name": "Манго big",
-      "qty": 3,
-      "total": 78
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-11T16:09:42.946Z"
+  "updatedAt": "2026-07-11T16:45:30.216Z"
 }

@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 43,
-    "checks": 27,
+    "average": 44.67857142857143,
+    "checks": 28,
     "expenseTotal": 205,
-    "net": 956,
-    "revenue": 1161
+    "net": 1046,
+    "revenue": 1251
   },
   "data": {
-    "actions": 4899,
+    "actions": 4903,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2188,
+    "orders": 2189,
     "products": 60,
     "shifts": 50
   },
   "activity": [
     {
+      "id": 1783758763231,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:32",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783758763231,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:32",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1783757741790,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:15",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783757741790,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:15",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783757607037,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:48",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783754905280,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:28",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783754905280,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:28",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783751971699,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:39",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783751971699,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:39",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2188,
+    "current": 2189,
     "old": [
       {
         "createdAt": "2026-07-10T10:40:09.446Z",
@@ -70962,6 +70962,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-11T08:32:43.127Z",
+        "id": 3236,
+        "items": [
+          "Айс Латте x2",
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-11",
+        "shiftLabel": "Смена 11.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 90
+      },
       {
         "createdAt": "2026-07-11T08:15:41.688Z",
         "id": 3235,
@@ -142597,14 +142635,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 27,
-        "expectedOrders": 27,
+        "databaseOrders": 28,
+        "expectedOrders": 28,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-11",
         "label": "Смена 11.07",
         "missingOrders": 0,
-        "revenue": 1161,
+        "revenue": 1251,
         "status": "ok"
       },
       {
@@ -143258,12 +143296,12 @@
         "status": "ok"
       }
     ],
-    "total": 2188
+    "total": 2189
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 811
+      "total": 901
     },
     {
       "method": "Карта",
@@ -143283,6 +143321,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3236,
+      "items": [
+        "Айс Латте x2",
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 90
+    },
     {
       "id": 3235,
       "items": [
@@ -143338,15 +143385,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 3228,
-      "items": [
-        "Babl tea mini x1",
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -143497,9 +143535,19 @@
       "total": 140
     },
     {
+      "name": "Айс Латте",
+      "qty": 4,
+      "total": 120
+    },
+    {
       "name": "Matcha big",
       "qty": 3,
       "total": 120
+    },
+    {
+      "name": "Matcha mini",
+      "qty": 3,
+      "total": 90
     },
     {
       "name": "Манго big",
@@ -143507,21 +143555,11 @@
       "total": 78
     },
     {
-      "name": "Айс Латте",
-      "qty": 2,
-      "total": 60
-    },
-    {
       "name": "Манго mini",
       "qty": 3,
-      "total": 60
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 2,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-11T15:18:26.080Z"
+  "updatedAt": "2026-07-11T15:35:29.930Z"
 }

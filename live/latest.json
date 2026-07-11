@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 33,
-    "checks": 5,
+    "average": 30.833333333333332,
+    "checks": 6,
     "expenseTotal": 205,
-    "net": -40,
-    "revenue": 165
+    "net": -20,
+    "revenue": 185
   },
   "data": {
-    "actions": 4855,
+    "actions": 4859,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2166,
+    "orders": 2167,
     "products": 60,
     "shifts": 50
   },
   "activity": [
     {
+      "id": 1783734176287,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:42",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783734176287,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:42",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1783731853618,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:04",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783731853618,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:04",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783730580594,
       "source": "Локально",
       "status": "Сохранено",
@@ -78,34 +106,6 @@
       "status": "Сохранено",
       "time": "10:13",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1783718506408,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:21",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1783680009533,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:40",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783680009533,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:40",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783679613732,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:33",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2166,
+    "current": 2167,
     "old": [
       {
         "createdAt": "2026-07-10T10:40:09.446Z",
@@ -70962,6 +70962,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-11T01:42:56.203Z",
+        "id": 3214,
+        "items": [
+          "Клубничный жасмин mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-11",
+        "shiftLabel": "Смена 11.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-11T01:04:13.507Z",
         "id": 3213,
@@ -141887,14 +141916,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 5,
-        "expectedOrders": 5,
+        "databaseOrders": 6,
+        "expectedOrders": 6,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-11",
         "label": "Смена 11.07",
         "missingOrders": 0,
-        "revenue": 165,
+        "revenue": 185,
         "status": "ok"
       },
       {
@@ -142548,12 +142577,12 @@
         "status": "ok"
       }
     ],
-    "total": 2166
+    "total": 2167
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 135
+      "total": 155
     },
     {
       "method": "Карта",
@@ -142573,6 +142602,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3214,
+      "items": [
+        "Клубничный жасмин mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3213,
       "items": [
@@ -142763,6 +142800,11 @@
       "total": 30
     },
     {
+      "name": "Клубничный жасмин mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Клубника mini",
       "qty": 1,
       "total": 20
@@ -142779,5 +142821,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-11T08:06:59.781Z"
+  "updatedAt": "2026-07-11T08:45:43.079Z"
 }

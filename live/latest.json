@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 44.45,
-    "checks": 20,
+    "average": 43.76190476190476,
+    "checks": 21,
     "expenseTotal": 205,
-    "net": 684,
-    "revenue": 889
+    "net": 714,
+    "revenue": 919
   },
   "data": {
-    "actions": 4885,
+    "actions": 4887,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2181,
+    "orders": 2182,
     "products": 60,
     "shifts": 50
   },
   "activity": [
     {
+      "id": 1783751769592,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:36",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783751769592,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:36",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783749692076,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783746842203,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:14",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783746842203,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:14",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2181,
+    "current": 2182,
     "old": [
       {
         "createdAt": "2026-07-10T10:40:09.446Z",
@@ -70962,6 +70962,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-11T06:39:31.610Z",
+        "id": 3229,
+        "items": [
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-11",
+        "shiftLabel": "Смена 11.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-11T06:36:09.502Z",
         "id": 3228,
@@ -142394,14 +142423,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 20,
-        "expectedOrders": 20,
+        "databaseOrders": 21,
+        "expectedOrders": 21,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-11",
         "label": "Смена 11.07",
         "missingOrders": 0,
-        "revenue": 889,
+        "revenue": 919,
         "status": "ok"
       },
       {
@@ -143055,12 +143084,12 @@
         "status": "ok"
       }
     ],
-    "total": 2181
+    "total": 2182
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 669
+      "total": 699
     },
     {
       "method": "Карта",
@@ -143080,6 +143109,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3229,
+      "items": [
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 3228,
       "items": [
@@ -143135,14 +143172,6 @@
       "items": [
         "Виноградный тропический mini x1",
         "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
-    },
-    {
-      "id": 3221,
-      "items": [
-        "Matcha big x1"
       ],
       "status": "Оплачен",
       "total": 40
@@ -143306,6 +143335,11 @@
       "total": 78
     },
     {
+      "name": "Айс Латте",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Манго mini",
       "qty": 3,
       "total": 60
@@ -143314,13 +143348,8 @@
       "name": "Matcha mini",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Blue mini",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-11T13:38:55.773Z"
+  "updatedAt": "2026-07-11T13:42:16.085Z"
 }

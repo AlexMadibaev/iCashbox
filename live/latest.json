@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 30.833333333333332,
-    "checks": 6,
+    "average": 38.714285714285715,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": -20,
-    "revenue": 185
+    "net": 66,
+    "revenue": 271
   },
   "data": {
-    "actions": 4859,
+    "actions": 4861,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2167,
+    "orders": 2168,
     "products": 60,
     "shifts": 50
   },
   "activity": [
     {
+      "id": 1783735626771,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:07",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783735626771,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:07",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783734176287,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:16",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783721623225,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:13",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783721623225,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:13",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2167,
+    "current": 2168,
     "old": [
       {
         "createdAt": "2026-07-10T10:40:09.446Z",
@@ -70962,6 +70962,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-11T02:07:06.675Z",
+        "id": 3215,
+        "items": [
+          "Фреш лимон big x1",
+          "Matcha big x1",
+          "Виноградный тропический big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-фреш-лимон-big",
+            "name": "Фреш лимон big",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-виноградный-тропический-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 86,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-11",
+        "shiftLabel": "Смена 11.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 86
+      },
       {
         "createdAt": "2026-07-11T01:42:56.203Z",
         "id": 3214,
@@ -141916,14 +141963,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-11",
         "label": "Смена 11.07",
         "missingOrders": 0,
-        "revenue": 185,
+        "revenue": 271,
         "status": "ok"
       },
       {
@@ -142577,7 +142624,7 @@
         "status": "ok"
       }
     ],
-    "total": 2167
+    "total": 2168
   },
   "payments": [
     {
@@ -142590,7 +142637,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 86
     },
     {
       "method": "Dushanbe City",
@@ -142602,6 +142649,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3215,
+      "items": [
+        "Фреш лимон big x1",
+        "Matcha big x1",
+        "Виноградный тропический big x1"
+      ],
+      "status": "Оплачен",
+      "total": 86
+    },
     {
       "id": 3214,
       "items": [
@@ -142785,6 +142842,11 @@
   },
   "topProducts": [
     {
+      "name": "Matcha big",
+      "qty": 1,
+      "total": 40
+    },
+    {
       "name": "Манго mini",
       "qty": 2,
       "total": 40
@@ -142800,6 +142862,16 @@
       "total": 30
     },
     {
+      "name": "Виноградный тропический big",
+      "qty": 1,
+      "total": 26
+    },
+    {
+      "name": "Фреш лимон big",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Клубничный жасмин mini",
       "qty": 1,
       "total": 20
@@ -142808,18 +142880,8 @@
       "name": "Клубника mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Bubble Gum mini",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Cake-Pops",
-      "qty": 1,
-      "total": 15
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-11T08:45:43.079Z"
+  "updatedAt": "2026-07-11T09:09:53.485Z"
 }

@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 45.36363636363637,
-    "checks": 11,
+    "average": 49.25,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 294,
-    "revenue": 499
+    "net": 386,
+    "revenue": 591
   },
   "data": {
     "actions": 4869,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2172,
+    "orders": 2173,
     "products": 60,
     "shifts": 50
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2172,
+    "current": 2173,
     "old": [
       {
         "createdAt": "2026-07-10T10:40:09.446Z",
@@ -70962,6 +70962,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-11T05:02:27.351Z",
+        "id": 3220,
+        "items": [
+          "Babl tea mini x2",
+          "Клубника big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-клубника-big",
+            "name": "Клубника big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          }
+        ],
+        "payments": {
+          "Наличные": 200,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-11",
+        "shiftLabel": "Смена 11.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 92
+      },
       {
         "createdAt": "2026-07-11T04:08:33.710Z",
         "id": 3219,
@@ -142097,14 +142135,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-11",
         "label": "Смена 11.07",
         "missingOrders": 0,
-        "revenue": 499,
+        "revenue": 591,
         "status": "ok"
       },
       {
@@ -142758,12 +142796,12 @@
         "status": "ok"
       }
     ],
-    "total": 2172
+    "total": 2173
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 279
+      "total": 371
     },
     {
       "method": "Карта",
@@ -142783,6 +142821,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3220,
+      "items": [
+        "Babl tea mini x2",
+        "Клубника big x2"
+      ],
+      "status": "Оплачен",
+      "total": 92
+    },
     {
       "id": 3219,
       "items": [
@@ -142843,14 +142890,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 3212,
-      "items": [
-        "Blue mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -142986,17 +143025,22 @@
   },
   "topProducts": [
     {
+      "name": "Клубника big",
+      "qty": 4,
+      "total": 104
+    },
+    {
+      "name": "Babl tea mini",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Babl tea big",
       "qty": 2,
       "total": 52
     },
     {
       "name": "Манго big",
-      "qty": 2,
-      "total": 52
-    },
-    {
-      "name": "Клубника big",
       "qty": 2,
       "total": 52
     },
@@ -143019,13 +143063,8 @@
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-11T11:11:20.628Z"
+  "updatedAt": "2026-07-11T12:05:13.953Z"
 }

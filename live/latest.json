@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 46.46666666666667,
-    "checks": 15,
+    "average": 45.1875,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 492,
-    "revenue": 697
+    "net": 518,
+    "revenue": 723
   },
   "data": {
-    "actions": 4875,
+    "actions": 4877,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2176,
+    "orders": 2177,
     "products": 60,
     "shifts": 50
   },
   "activity": [
     {
+      "id": 1783748629649,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:43",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783748629649,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:43",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783746842203,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:58",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783741832279,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:50",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783741832279,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:50",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2176,
+    "current": 2177,
     "old": [
       {
         "createdAt": "2026-07-10T10:40:09.446Z",
@@ -70962,6 +70962,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-11T05:47:24.945Z",
+        "id": 3224,
+        "items": [
+          "Babl tea big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-11",
+        "shiftLabel": "Смена 11.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-11T05:43:49.540Z",
         "id": 3223,
@@ -142231,14 +142260,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-11",
         "label": "Смена 11.07",
         "missingOrders": 0,
-        "revenue": 697,
+        "revenue": 723,
         "status": "ok"
       },
       {
@@ -142892,12 +142921,12 @@
         "status": "ok"
       }
     ],
-    "total": 2176
+    "total": 2177
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 477
+      "total": 503
     },
     {
       "method": "Карта",
@@ -142917,6 +142946,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3224,
+      "items": [
+        "Babl tea big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 3223,
       "items": [
@@ -142975,15 +143012,6 @@
       ],
       "status": "Оплачен",
       "total": 52
-    },
-    {
-      "id": 3216,
-      "items": [
-        "Манго big x2",
-        "Клубника big x2"
-      ],
-      "status": "Оплачен",
-      "total": 104
     }
   ],
   "shifts": {
@@ -143119,6 +143147,11 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea big",
+      "qty": 4,
+      "total": 104
+    },
+    {
       "name": "Клубника big",
       "qty": 4,
       "total": 104
@@ -143132,11 +143165,6 @@
       "name": "Matcha big",
       "qty": 2,
       "total": 80
-    },
-    {
-      "name": "Babl tea big",
-      "qty": 3,
-      "total": 78
     },
     {
       "name": "Манго big",
@@ -143160,5 +143188,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-11T12:46:35.711Z"
+  "updatedAt": "2026-07-11T12:50:09.770Z"
 }

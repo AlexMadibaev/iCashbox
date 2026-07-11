@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.714285714285715,
-    "checks": 7,
+    "average": 46.875,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": 66,
-    "revenue": 271
+    "net": 170,
+    "revenue": 375
   },
   "data": {
-    "actions": 4861,
+    "actions": 4863,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2168,
+    "orders": 2169,
     "products": 60,
     "shifts": 50
   },
   "activity": [
     {
+      "id": 1783738025765,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783738025765,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:47",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783735626771,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:31",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783725373665,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:16",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783725373665,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:16",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2168,
+    "current": 2169,
     "old": [
       {
         "createdAt": "2026-07-10T10:40:09.446Z",
@@ -70962,6 +70962,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-11T02:47:05.661Z",
+        "id": 3216,
+        "items": [
+          "Манго big x2",
+          "Клубника big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-big",
+            "name": "Манго big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          },
+          {
+            "id": "product-клубника-big",
+            "name": "Клубника big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 104,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-11",
+        "shiftLabel": "Смена 11.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 104
+      },
       {
         "createdAt": "2026-07-11T02:07:06.675Z",
         "id": 3215,
@@ -141963,14 +142001,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-11",
         "label": "Смена 11.07",
         "missingOrders": 0,
-        "revenue": 271,
+        "revenue": 375,
         "status": "ok"
       },
       {
@@ -142624,7 +142662,7 @@
         "status": "ok"
       }
     ],
-    "total": 2168
+    "total": 2169
   },
   "payments": [
     {
@@ -142641,7 +142679,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 30
+      "total": 134
     },
     {
       "method": "Семья",
@@ -142649,6 +142687,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3216,
+      "items": [
+        "Манго big x2",
+        "Клубника big x2"
+      ],
+      "status": "Оплачен",
+      "total": 104
+    },
     {
       "id": 3215,
       "items": [
@@ -142842,6 +142889,16 @@
   },
   "topProducts": [
     {
+      "name": "Манго big",
+      "qty": 2,
+      "total": 52
+    },
+    {
+      "name": "Клубника big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Matcha big",
       "qty": 1,
       "total": 40
@@ -142870,18 +142927,8 @@
       "name": "Фреш лимон big",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Клубничный жасмин mini",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Клубника mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-11T09:09:53.485Z"
+  "updatedAt": "2026-07-11T09:49:52.528Z"
 }

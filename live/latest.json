@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 47.44444444444444,
-    "checks": 9,
+    "average": 47.9,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 222,
-    "revenue": 427
+    "net": 274,
+    "revenue": 479
   },
   "data": {
-    "actions": 4863,
+    "actions": 4865,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2170,
+    "orders": 2171,
     "products": 60,
     "shifts": 50
   },
   "activity": [
     {
+      "id": 1783741832279,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:50",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783741832279,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:50",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783738025765,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783726290646,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:31",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783726290646,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:31",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2170,
+    "current": 2171,
     "old": [
       {
         "createdAt": "2026-07-10T10:40:09.446Z",
@@ -70962,6 +70962,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-11T03:58:05.717Z",
+        "id": 3218,
+        "items": [
+          "Манго Маракуя big x1",
+          "Клубничный жасмин big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-клубничный-жасмин-big",
+            "name": "Клубничный жасмин big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-11",
+        "shiftLabel": "Смена 11.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-07-11T03:50:32.170Z",
         "id": 3217,
@@ -142030,14 +142068,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-11",
         "label": "Смена 11.07",
         "missingOrders": 0,
-        "revenue": 427,
+        "revenue": 479,
         "status": "ok"
       },
       {
@@ -142691,12 +142729,12 @@
         "status": "ok"
       }
     ],
-    "total": 2170
+    "total": 2171
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 207
+      "total": 259
     },
     {
       "method": "Карта",
@@ -142716,6 +142754,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3218,
+      "items": [
+        "Манго Маракуя big x1",
+        "Клубничный жасмин big x1"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 3217,
       "items": [
@@ -142775,14 +142822,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3210,
-      "items": [
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -142953,11 +142992,11 @@
       "total": 30
     },
     {
-      "name": "Виноградный тропический big",
+      "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-11T10:53:18.468Z"
+  "updatedAt": "2026-07-11T11:00:51.933Z"
 }

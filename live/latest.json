@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.6,
-    "checks": 10,
+    "average": 39.63636363636363,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 191,
-    "revenue": 396
+    "net": 231,
+    "revenue": 436
   },
   "data": {
-    "actions": 4953,
+    "actions": 4955,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2213,
+    "orders": 2214,
     "products": 60,
     "shifts": 51
   },
   "activity": [
     {
+      "id": 1783831911484,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:51",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783831911484,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:51",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783827496680,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:48",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783814403991,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783814403991,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:00",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2213,
+    "current": 2214,
     "old": [
       {
         "createdAt": "2026-07-11T10:46:53.939Z",
@@ -72333,6 +72333,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-12T04:59:17.718Z",
+        "id": 3261,
+        "items": [
+          "Клубника mini x1",
+          "Bubble Gum mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-12",
+        "shiftLabel": "Смена 12.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-12T04:51:51.371Z",
         "id": 3260,
@@ -144810,14 +144848,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-12",
         "label": "Смена 12.07",
         "missingOrders": 0,
-        "revenue": 396,
+        "revenue": 436,
         "status": "ok"
       },
       {
@@ -145484,12 +145522,12 @@
         "status": "ok"
       }
     ],
-    "total": 2213
+    "total": 2214
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 275
+      "total": 315
     },
     {
       "method": "Карта",
@@ -145509,6 +145547,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3261,
+      "items": [
+        "Клубника mini x1",
+        "Bubble Gum mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3260,
       "items": [
@@ -145566,17 +145613,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 3253,
-      "items": [
-        "Blue big x1",
-        "Виноградный тропический big x1",
-        "Манго Маракуя big x1",
-        "Bubble Gum big x1"
-      ],
-      "status": "Оплачен",
-      "total": 104
     }
   ],
   "shifts": {
@@ -145753,5 +145789,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-12T11:54:38.966Z"
+  "updatedAt": "2026-07-12T12:02:06.052Z"
 }

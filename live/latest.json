@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.5625,
-    "checks": 16,
+    "average": 42.411764705882355,
+    "checks": 17,
     "expenseTotal": 205,
-    "net": 476,
-    "revenue": 681
+    "net": 516,
+    "revenue": 721
   },
   "data": {
-    "actions": 4967,
+    "actions": 4969,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2219,
+    "orders": 2220,
     "products": 60,
     "shifts": 51
   },
   "activity": [
     {
+      "id": 1783840319538,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:11",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783840319538,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:11",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783839671608,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:28",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783832357832,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:59",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783832357832,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:59",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2219,
+    "current": 2220,
     "old": [
       {
         "createdAt": "2026-07-11T10:46:53.939Z",
@@ -72333,6 +72333,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-12T07:11:59.441Z",
+        "id": 3267,
+        "items": [
+          "Babl tea mini x1",
+          "Bubble Gum mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-12",
+        "shiftLabel": "Смена 12.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-12T07:01:11.516Z",
         "id": 3266,
@@ -145020,14 +145058,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 16,
-        "expectedOrders": 16,
+        "databaseOrders": 17,
+        "expectedOrders": 17,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-12",
         "label": "Смена 12.07",
         "missingOrders": 0,
-        "revenue": 681,
+        "revenue": 721,
         "status": "ok"
       },
       {
@@ -145694,12 +145732,12 @@
         "status": "ok"
       }
     ],
-    "total": 2219
+    "total": 2220
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 460
+      "total": 500
     },
     {
       "method": "Карта",
@@ -145719,6 +145757,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3267,
+      "items": [
+        "Babl tea mini x1",
+        "Bubble Gum mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3266,
       "items": [
@@ -145778,14 +145825,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3259,
-      "items": [
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -145921,19 +145960,19 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea mini",
+      "qty": 6,
+      "total": 120
+    },
+    {
       "name": "Айс Латте",
       "qty": 4,
       "total": 120
     },
     {
-      "name": "Babl tea mini",
-      "qty": 5,
-      "total": 100
-    },
-    {
       "name": "Bubble Gum mini",
-      "qty": 3,
-      "total": 60
+      "qty": 4,
+      "total": 80
     },
     {
       "name": "Манго Маракуя big",
@@ -145962,5 +146001,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-12T14:03:58.980Z"
+  "updatedAt": "2026-07-12T14:14:47.164Z"
 }

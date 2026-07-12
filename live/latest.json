@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 42.25,
-    "checks": 4,
+    "average": 39.8,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": -36,
-    "revenue": 169
+    "net": -6,
+    "revenue": 199
   },
   "data": {
-    "actions": 4941,
+    "actions": 4943,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2207,
+    "orders": 2208,
     "products": 60,
     "shifts": 51
   },
   "activity": [
+    {
+      "id": 1783814403991,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783814403991,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:00",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783810431489,
       "source": "Локально",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "22:46",
       "type": "Удалён заказ"
-    },
-    {
-      "id": 1783766759907,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:45",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783766759907,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:45",
-      "type": "Создание заказа"
     }
   ],
   "expenses": {
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2207,
+    "current": 2208,
     "old": [
       {
         "createdAt": "2026-07-11T10:46:53.939Z",
@@ -72333,6 +72333,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-12T00:48:18.760Z",
+        "id": 3255,
+        "items": [
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 30,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-12",
+        "shiftLabel": "Смена 12.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-12T00:00:03.900Z",
         "id": 3254,
@@ -144618,14 +144647,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-12",
         "label": "Смена 12.07",
         "missingOrders": 0,
-        "revenue": 169,
+        "revenue": 199,
         "status": "ok"
       },
       {
@@ -145292,7 +145321,7 @@
         "status": "ok"
       }
     ],
-    "total": 2207
+    "total": 2208
   },
   "payments": [
     {
@@ -145305,7 +145334,7 @@
     },
     {
       "method": "Alif",
-      "total": 25
+      "total": 55
     },
     {
       "method": "Dushanbe City",
@@ -145317,6 +145346,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3255,
+      "items": [
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 3254,
       "items": [
@@ -145486,6 +145523,11 @@
   },
   "topProducts": [
     {
+      "name": "Айс Латте",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Blue big",
       "qty": 1,
       "total": 26
@@ -145522,5 +145564,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-12T07:02:51.664Z"
+  "updatedAt": "2026-07-12T07:51:06.199Z"
 }

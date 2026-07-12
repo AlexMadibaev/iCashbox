@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 49,
-    "checks": 29,
+    "average": 48.03333333333333,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 1216,
-    "revenue": 1421
+    "net": 1236,
+    "revenue": 1441
   },
   "data": {
-    "actions": 4991,
+    "actions": 4993,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2232,
+    "orders": 2233,
     "products": 60,
     "shifts": 51
   },
   "activity": [
     {
+      "id": 1783849836117,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:50",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783849836117,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:50",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783848657901,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783846658082,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:57",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783846658082,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:57",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2232,
+    "current": 2233,
     "old": [
       {
         "createdAt": "2026-07-11T10:46:53.939Z",
@@ -72333,6 +72333,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-12T09:52:34.564Z",
+        "id": 3280,
+        "items": [
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-12",
+        "shiftLabel": "Смена 12.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-12T09:50:35.980Z",
         "id": 3279,
@@ -145505,14 +145534,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-12",
         "label": "Смена 12.07",
         "missingOrders": 0,
-        "revenue": 1421,
+        "revenue": 1441,
         "status": "ok"
       },
       {
@@ -146179,12 +146208,12 @@
         "status": "ok"
       }
     ],
-    "total": 2232
+    "total": 2233
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 805
+      "total": 825
     },
     {
       "method": "Карта",
@@ -146204,6 +146233,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3280,
+      "items": [
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3279,
       "items": [
@@ -146269,15 +146306,6 @@
       ],
       "status": "Оплачен",
       "total": 148
-    },
-    {
-      "id": 3272,
-      "items": [
-        "Blue mini x1",
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -146428,14 +146456,14 @@
       "total": 105
     },
     {
-      "name": "Клубника mini",
+      "name": "Blue mini",
       "qty": 5,
       "total": 100
     },
     {
-      "name": "Blue mini",
-      "qty": 4,
-      "total": 80
+      "name": "Клубника mini",
+      "qty": 5,
+      "total": 100
     },
     {
       "name": "Bubble Gum mini",
@@ -146454,5 +146482,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-12T16:53:23.107Z"
+  "updatedAt": "2026-07-12T16:55:20.103Z"
 }

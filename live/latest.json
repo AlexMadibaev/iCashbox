@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37,
-    "checks": 17,
+    "average": 36.05555555555556,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 424,
-    "revenue": 629
+    "net": 444,
+    "revenue": 649
   },
   "data": {
-    "actions": 5034,
+    "actions": 5036,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2252,
+    "orders": 2253,
     "products": 60,
     "shifts": 52
   },
   "activity": [
     {
+      "id": 1783918086244,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:48",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783918086244,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:48",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783916653201,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:35",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783911859952,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:04",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783911859952,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:04",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2252,
+    "current": 2253,
     "old": [
       {
         "createdAt": "2026-07-12T10:12:33.544Z",
@@ -73468,6 +73468,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-13T04:48:06.140Z",
+        "id": 3300,
+        "items": [
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-13",
+        "shiftLabel": "Смена 13.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-13T04:24:13.095Z",
         "id": 3299,
@@ -147301,14 +147330,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-13",
         "label": "Смена 13.07",
         "missingOrders": 0,
-        "revenue": 629,
+        "revenue": 649,
         "status": "ok"
       },
       {
@@ -147988,12 +148017,12 @@
         "status": "ok"
       }
     ],
-    "total": 2252
+    "total": 2253
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 292
+      "total": 312
     },
     {
       "method": "Карта",
@@ -148013,6 +148042,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3300,
+      "items": [
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3299,
       "items": [
@@ -148073,14 +148110,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 3292,
-      "items": [
-        "Клубника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -148226,12 +148255,12 @@
       "total": 80
     },
     {
-      "name": "Манго Маракуя mini",
-      "qty": 2,
-      "total": 40
+      "name": "Babl tea mini",
+      "qty": 3,
+      "total": 60
     },
     {
-      "name": "Babl tea mini",
+      "name": "Манго Маракуя mini",
       "qty": 2,
       "total": 40
     },
@@ -148257,5 +148286,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-13T11:27:02.330Z"
+  "updatedAt": "2026-07-13T11:50:55.068Z"
 }

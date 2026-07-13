@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.285714285714285,
-    "checks": 7,
+    "average": 37,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": 21,
-    "revenue": 226
+    "net": 91,
+    "revenue": 296
   },
   "data": {
-    "actions": 5012,
+    "actions": 5014,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2242,
+    "orders": 2243,
     "products": 60,
     "shifts": 52
   },
   "activity": [
     {
+      "id": 1783902475701,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783902475701,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:27",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783901833510,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:29",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783898740824,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:25",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783898740824,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:25",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2242,
+    "current": 2243,
     "old": [
       {
         "createdAt": "2026-07-12T10:12:33.544Z",
@@ -73468,6 +73468,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-13T00:51:15.580Z",
+        "id": 3290,
+        "items": [
+          "АйсМатча манго x1",
+          "АйсМатча клубника x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-манго",
+            "name": "АйсМатча манго",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-13",
+        "shiftLabel": "Смена 13.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-07-13T00:27:55.599Z",
         "id": 3289,
@@ -146948,14 +146986,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-13",
         "label": "Смена 13.07",
         "missingOrders": 0,
-        "revenue": 226,
+        "revenue": 296,
         "status": "ok"
       },
       {
@@ -147635,12 +147673,12 @@
         "status": "ok"
       }
     ],
-    "total": 2242
+    "total": 2243
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 56
+      "total": 126
     },
     {
       "method": "Карта",
@@ -147660,6 +147698,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3290,
+      "items": [
+        "АйсМатча манго x1",
+        "АйсМатча клубника x1"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 3289,
       "items": [
@@ -147855,6 +147902,16 @@
       "total": 80
     },
     {
+      "name": "АйсМатча манго",
+      "qty": 1,
+      "total": 35
+    },
+    {
+      "name": "АйсМатча клубника",
+      "qty": 1,
+      "total": 35
+    },
+    {
       "name": "Matcha mini",
       "qty": 1,
       "total": 30
@@ -147878,13 +147935,8 @@
       "name": "Манго mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-13T07:30:44.508Z"
+  "updatedAt": "2026-07-13T07:54:03.997Z"
 }

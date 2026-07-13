@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 35,
-    "checks": 5,
+    "average": 33.333333333333336,
+    "checks": 6,
     "expenseTotal": 205,
-    "net": -30,
-    "revenue": 175
+    "net": -5,
+    "revenue": 200
   },
   "data": {
-    "actions": 5008,
+    "actions": 5012,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2240,
+    "orders": 2241,
     "products": 60,
     "shifts": 52
   },
   "activity": [
     {
+      "id": 1783901833510,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:17",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783901833510,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:17",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1783901341645,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:09",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783901341645,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:09",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783900015724,
       "source": "Локально",
       "status": "Сохранено",
@@ -78,34 +106,6 @@
       "status": "Сохранено",
       "time": "11:25",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1783889919854,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "08:58",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1783851153634,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:12",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783851153634,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:12",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783850356175,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:59",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2240,
+    "current": 2241,
     "old": [
       {
         "createdAt": "2026-07-12T10:12:33.544Z",
@@ -73468,6 +73468,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-13T00:17:13.396Z",
+        "id": 3288,
+        "items": [
+          "Капучино x1"
+        ],
+        "lines": [
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 25,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-13",
+        "shiftLabel": "Смена 13.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-13T00:09:01.541Z",
         "id": 3287,
@@ -146890,14 +146919,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 5,
-        "expectedOrders": 5,
+        "databaseOrders": 6,
+        "expectedOrders": 6,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-13",
         "label": "Смена 13.07",
         "missingOrders": 0,
-        "revenue": 175,
+        "revenue": 200,
         "status": "ok"
       },
       {
@@ -147577,7 +147606,7 @@
         "status": "ok"
       }
     ],
-    "total": 2240
+    "total": 2241
   },
   "payments": [
     {
@@ -147594,7 +147623,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 20
+      "total": 45
     },
     {
       "method": "Семья",
@@ -147602,6 +147631,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3288,
+      "items": [
+        "Капучино x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 3287,
       "items": [
@@ -147786,6 +147823,11 @@
       "total": 30
     },
     {
+      "name": "Капучино",
+      "qty": 1,
+      "total": 25
+    },
+    {
       "name": "Клубничный mini",
       "qty": 1,
       "total": 25
@@ -147802,5 +147844,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-13T07:11:50.372Z"
+  "updatedAt": "2026-07-13T07:20:02.658Z"
 }

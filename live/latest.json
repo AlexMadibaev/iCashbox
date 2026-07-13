@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38,
-    "checks": 9,
+    "average": 36.2,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 137,
-    "revenue": 342
+    "net": 157,
+    "revenue": 362
   },
   "data": {
-    "actions": 5016,
+    "actions": 5018,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2244,
+    "orders": 2245,
     "products": 60,
     "shifts": 52
   },
   "activity": [
     {
+      "id": 1783904392007,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783904392007,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:59",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783903875696,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:46",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783899571352,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:39",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783899571352,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:39",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2244,
+    "current": 2245,
     "old": [
       {
         "createdAt": "2026-07-12T10:12:33.544Z",
@@ -73468,6 +73468,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-13T01:23:07.253Z",
+        "id": 3292,
+        "items": [
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-13",
+        "shiftLabel": "Смена 13.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-13T00:59:51.906Z",
         "id": 3291,
@@ -147024,14 +147053,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-13",
         "label": "Смена 13.07",
         "missingOrders": 0,
-        "revenue": 342,
+        "revenue": 362,
         "status": "ok"
       },
       {
@@ -147711,12 +147740,12 @@
         "status": "ok"
       }
     ],
-    "total": 2244
+    "total": 2245
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 126
+      "total": 146
     },
     {
       "method": "Карта",
@@ -147736,6 +147765,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3292,
+      "items": [
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3291,
       "items": [
@@ -147793,14 +147830,6 @@
       ],
       "status": "Оплачен",
       "total": 80
-    },
-    {
-      "id": 3284,
-      "items": [
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -147977,5 +148006,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-13T08:02:40.270Z"
+  "updatedAt": "2026-07-13T08:25:55.540Z"
 }

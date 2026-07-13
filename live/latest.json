@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.375,
-    "checks": 16,
+    "average": 37,
+    "checks": 17,
     "expenseTotal": 205,
-    "net": 329,
-    "revenue": 534
+    "net": 424,
+    "revenue": 629
   },
   "data": {
-    "actions": 5030,
+    "actions": 5032,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2251,
+    "orders": 2252,
     "products": 60,
     "shifts": 52
   },
   "activity": [
     {
+      "id": 1783915933943,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:12",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783915933943,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:12",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783915161746,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:00",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783905787344,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783905787344,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:23",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2251,
+    "current": 2252,
     "old": [
       {
         "createdAt": "2026-07-12T10:12:33.544Z",
@@ -73468,6 +73468,71 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-13T04:24:13.095Z",
+        "id": 3299,
+        "items": [
+          "Клубничный жасмин mini x1",
+          "Виноградный тропический mini x1",
+          "Жасмин гранат mini x1",
+          "Манго Маракуя mini x1",
+          "Cake-Pops x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-виноградный-тропический-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-гранат-mini",
+            "name": "Жасмин гранат mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-манго-маракуя-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 95,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-13",
+        "shiftLabel": "Смена 13.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 95
+      },
       {
         "createdAt": "2026-07-13T04:12:13.807Z",
         "id": 3298,
@@ -147236,14 +147301,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 16,
-        "expectedOrders": 16,
+        "databaseOrders": 17,
+        "expectedOrders": 17,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-13",
         "label": "Смена 13.07",
         "missingOrders": 0,
-        "revenue": 534,
+        "revenue": 629,
         "status": "ok"
       },
       {
@@ -147923,7 +147988,7 @@
         "status": "ok"
       }
     ],
-    "total": 2251
+    "total": 2252
   },
   "payments": [
     {
@@ -147936,7 +148001,7 @@
     },
     {
       "method": "Alif",
-      "total": 197
+      "total": 292
     },
     {
       "method": "Dushanbe City",
@@ -147948,6 +148013,18 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3299,
+      "items": [
+        "Клубничный жасмин mini x1",
+        "Виноградный тропический mini x1",
+        "Жасмин гранат mini x1",
+        "Манго Маракуя mini x1",
+        "Cake-Pops x1"
+      ],
+      "status": "Оплачен",
+      "total": 95
+    },
     {
       "id": 3298,
       "items": [
@@ -148004,15 +148081,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3291,
-      "items": [
-        "Babl tea mini x1",
-        "Жасмин лимон big x1"
-      ],
-      "status": "Оплачен",
-      "total": 46
     }
   ],
   "shifts": {
@@ -148158,6 +148226,11 @@
       "total": 80
     },
     {
+      "name": "Манго Маракуя mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Babl tea mini",
       "qty": 2,
       "total": 40
@@ -148181,13 +148254,8 @@
       "name": "Bubble Gum big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Манго big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-13T11:15:02.255Z"
+  "updatedAt": "2026-07-13T11:27:01.537Z"
 }

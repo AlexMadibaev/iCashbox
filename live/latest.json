@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 36.2,
-    "checks": 10,
+    "average": 35.27272727272727,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 157,
-    "revenue": 362
+    "net": 183,
+    "revenue": 388
   },
   "data": {
-    "actions": 5018,
+    "actions": 5022,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2245,
+    "orders": 2246,
     "products": 60,
     "shifts": 52
   },
   "activity": [
     {
+      "id": 1783911615075,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783911615075,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:00",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1783905787344,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:23",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783905787344,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:23",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783904392007,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:17",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783901341645,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:09",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783901341645,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:09",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783900015724,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:46",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783900015724,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:46",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2245,
+    "current": 2246,
     "old": [
       {
         "createdAt": "2026-07-12T10:12:33.544Z",
@@ -73468,6 +73468,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-13T03:00:14.983Z",
+        "id": 3293,
+        "items": [
+          "Манго big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-big",
+            "name": "Манго big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 26,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-13",
+        "shiftLabel": "Смена 13.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-13T01:23:07.253Z",
         "id": 3292,
@@ -147053,14 +147082,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-13",
         "label": "Смена 13.07",
         "missingOrders": 0,
-        "revenue": 362,
+        "revenue": 388,
         "status": "ok"
       },
       {
@@ -147740,7 +147769,7 @@
         "status": "ok"
       }
     ],
-    "total": 2245
+    "total": 2246
   },
   "payments": [
     {
@@ -147753,7 +147782,7 @@
     },
     {
       "method": "Alif",
-      "total": 171
+      "total": 197
     },
     {
       "method": "Dushanbe City",
@@ -147765,6 +147794,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3293,
+      "items": [
+        "Манго big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 3292,
       "items": [
@@ -147822,14 +147859,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 3285,
-      "items": [
-        "Смузи Шавель Ананас x2"
-      ],
-      "status": "Оплачен",
-      "total": 80
     }
   ],
   "shifts": {
@@ -147985,6 +148014,11 @@
       "total": 30
     },
     {
+      "name": "Манго big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Жасмин лимон big",
       "qty": 1,
       "total": 26
@@ -147998,13 +148032,8 @@
       "name": "Капучино",
       "qty": 1,
       "total": 25
-    },
-    {
-      "name": "Клубничный mini",
-      "qty": 1,
-      "total": 25
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-13T08:25:55.540Z"
+  "updatedAt": "2026-07-13T10:03:04.342Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.851851851851855,
-    "checks": 27,
+    "average": 37.392857142857146,
+    "checks": 28,
     "expenseTotal": 205,
-    "net": 790,
-    "revenue": 995
+    "net": 842,
+    "revenue": 1047
   },
   "data": {
-    "actions": 5052,
+    "actions": 5054,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2262,
+    "orders": 2263,
     "products": 60,
     "shifts": 52
   },
   "activity": [
     {
+      "id": 1783926077722,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:01",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783926077722,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:01",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783924576531,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783918824613,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783918824613,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:00",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2262,
+    "current": 2263,
     "old": [
       {
         "createdAt": "2026-07-12T10:12:33.544Z",
@@ -73468,6 +73468,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-13T07:06:18.756Z",
+        "id": 3310,
+        "items": [
+          "Blue big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-big",
+            "name": "Blue big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 52,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-13",
+        "shiftLabel": "Смена 13.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-07-13T07:01:17.624Z",
         "id": 3309,
@@ -147609,14 +147638,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 27,
-        "expectedOrders": 27,
+        "databaseOrders": 28,
+        "expectedOrders": 28,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-13",
         "label": "Смена 13.07",
         "missingOrders": 0,
-        "revenue": 995,
+        "revenue": 1047,
         "status": "ok"
       },
       {
@@ -148296,7 +148325,7 @@
         "status": "ok"
       }
     ],
-    "total": 2262
+    "total": 2263
   },
   "payments": [
     {
@@ -148309,7 +148338,7 @@
     },
     {
       "method": "Alif",
-      "total": 337
+      "total": 389
     },
     {
       "method": "Dushanbe City",
@@ -148321,6 +148350,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3310,
+      "items": [
+        "Blue big x2"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 3309,
       "items": [
@@ -148378,14 +148415,6 @@
       ],
       "status": "Оплачен",
       "total": 104
-    },
-    {
-      "id": 3302,
-      "items": [
-        "Манго Маракуя big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -148521,14 +148550,14 @@
   },
   "topProducts": [
     {
+      "name": "Blue big",
+      "qty": 6,
+      "total": 156
+    },
+    {
       "name": "Matcha mini",
       "qty": 4,
       "total": 120
-    },
-    {
-      "name": "Blue big",
-      "qty": 4,
-      "total": 104
     },
     {
       "name": "Капучино",
@@ -148562,5 +148591,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-13T14:04:06.234Z"
+  "updatedAt": "2026-07-13T14:09:05.378Z"
 }

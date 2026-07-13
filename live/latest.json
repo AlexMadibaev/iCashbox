@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.392857142857146,
-    "checks": 28,
+    "average": 38.51724137931034,
+    "checks": 29,
     "expenseTotal": 205,
-    "net": 842,
-    "revenue": 1047
+    "net": 912,
+    "revenue": 1117
   },
   "data": {
-    "actions": 5056,
+    "actions": 5058,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2263,
+    "orders": 2264,
     "products": 60,
     "shifts": 52
   },
   "activity": [
     {
+      "id": 1783931167224,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:26",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783931167224,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:26",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783926378846,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:04",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783921670595,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:47",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783921670595,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:47",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2263,
+    "current": 2264,
     "old": [
       {
         "createdAt": "2026-07-12T10:12:33.544Z",
@@ -73468,6 +73468,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-13T08:26:07.131Z",
+        "id": 3311,
+        "items": [
+          "АйсМатча черника x1",
+          "АйсМатча манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-черника",
+            "name": "АйсМатча черника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-айсматча-манго",
+            "name": "АйсМатча манго",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 70,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-13",
+        "shiftLabel": "Смена 13.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-07-13T07:06:18.756Z",
         "id": 3310,
@@ -147638,14 +147676,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 28,
-        "expectedOrders": 28,
+        "databaseOrders": 29,
+        "expectedOrders": 29,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-13",
         "label": "Смена 13.07",
         "missingOrders": 0,
-        "revenue": 1047,
+        "revenue": 1117,
         "status": "ok"
       },
       {
@@ -148325,12 +148363,12 @@
         "status": "ok"
       }
     ],
-    "total": 2263
+    "total": 2264
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 533
+      "total": 603
     },
     {
       "method": "Карта",
@@ -148350,6 +148388,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3311,
+      "items": [
+        "АйсМатча черника x1",
+        "АйсМатча манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 3310,
       "items": [
@@ -148406,15 +148453,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 3303,
-      "items": [
-        "Blue big x3",
-        "Babl tea big x1"
-      ],
-      "status": "Оплачен",
-      "total": 104
     }
   ],
   "shifts": {
@@ -148570,6 +148608,11 @@
       "total": 80
     },
     {
+      "name": "АйсМатча манго",
+      "qty": 2,
+      "total": 70
+    },
+    {
       "name": "Cake-Pops",
       "qty": 4,
       "total": 60
@@ -148583,13 +148626,8 @@
       "name": "Жасмин гранат mini",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-13T14:09:09.495Z"
+  "updatedAt": "2026-07-13T15:28:56.617Z"
 }

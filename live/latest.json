@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.11538461538461,
-    "checks": 26,
+    "average": 36.851851851851855,
+    "checks": 27,
     "expenseTotal": 205,
-    "net": 760,
-    "revenue": 965
+    "net": 790,
+    "revenue": 995
   },
   "data": {
-    "actions": 5050,
+    "actions": 5052,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2261,
+    "orders": 2262,
     "products": 60,
     "shifts": 52
   },
   "activity": [
     {
+      "id": 1783924576531,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:36",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783924576531,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:36",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783923602050,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:00",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783918716659,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:58",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783918716659,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:58",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2261,
+    "current": 2262,
     "old": [
       {
         "createdAt": "2026-07-12T10:12:33.544Z",
@@ -73468,6 +73468,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-13T07:01:17.624Z",
+        "id": 3309,
+        "items": [
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 30,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-13",
+        "shiftLabel": "Смена 13.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-13T06:36:16.433Z",
         "id": 3308,
@@ -147580,14 +147609,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 26,
-        "expectedOrders": 26,
+        "databaseOrders": 27,
+        "expectedOrders": 27,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-13",
         "label": "Смена 13.07",
         "missingOrders": 0,
-        "revenue": 965,
+        "revenue": 995,
         "status": "ok"
       },
       {
@@ -148267,7 +148296,7 @@
         "status": "ok"
       }
     ],
-    "total": 2261
+    "total": 2262
   },
   "payments": [
     {
@@ -148280,7 +148309,7 @@
     },
     {
       "method": "Alif",
-      "total": 307
+      "total": 337
     },
     {
       "method": "Dushanbe City",
@@ -148292,6 +148321,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3309,
+      "items": [
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 3308,
       "items": [
@@ -148349,14 +148386,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 3301,
-      "items": [
-        "Жасмин гранат mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -148492,6 +148521,11 @@
   },
   "topProducts": [
     {
+      "name": "Matcha mini",
+      "qty": 4,
+      "total": 120
+    },
+    {
       "name": "Blue big",
       "qty": 4,
       "total": 104
@@ -148500,11 +148534,6 @@
       "name": "Капучино",
       "qty": 4,
       "total": 100
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 3,
-      "total": 90
     },
     {
       "name": "Смузи Шавель Ананас",
@@ -148533,5 +148562,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-13T13:39:04.695Z"
+  "updatedAt": "2026-07-13T14:04:06.234Z"
 }

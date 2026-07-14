@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.09090909090909,
-    "checks": 33,
+    "average": 41.529411764705884,
+    "checks": 34,
     "expenseTotal": 205,
-    "net": 1151,
-    "revenue": 1356
+    "net": 1207,
+    "revenue": 1412
   },
   "data": {
-    "actions": 5135,
+    "actions": 5137,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2303,
+    "orders": 2304,
     "products": 60,
     "shifts": 53
   },
   "activity": [
     {
+      "id": 1784014343722,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:32",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784014343722,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:32",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784012745519,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:59",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784008123013,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:48",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784008123013,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:48",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2303,
+    "current": 2304,
     "old": [
       {
         "createdAt": "2026-07-13T10:21:54.634Z",
@@ -74609,6 +74609,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-14T08:27:56.755Z",
+        "id": 3351,
+        "items": [
+          "Клубника big x1",
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-big",
+            "name": "Клубника big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 56,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-14",
+        "shiftLabel": "Смена 14.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 56
+      },
       {
         "createdAt": "2026-07-14T07:32:23.632Z",
         "id": 3350,
@@ -150137,14 +150175,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 33,
-        "expectedOrders": 33,
+        "databaseOrders": 34,
+        "expectedOrders": 34,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-14",
         "label": "Смена 14.07",
         "missingOrders": 0,
-        "revenue": 1356,
+        "revenue": 1412,
         "status": "ok"
       },
       {
@@ -150837,7 +150875,7 @@
         "status": "ok"
       }
     ],
-    "total": 2303
+    "total": 2304
   },
   "payments": [
     {
@@ -150850,7 +150888,7 @@
     },
     {
       "method": "Alif",
-      "total": 368
+      "total": 424
     },
     {
       "method": "Dushanbe City",
@@ -150862,6 +150900,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3351,
+      "items": [
+        "Клубника big x1",
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 56
+    },
     {
       "id": 3350,
       "items": [
@@ -150919,14 +150966,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 3343,
-      "items": [
-        "Фреш лимон big x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -151078,8 +151117,8 @@
     },
     {
       "name": "Matcha mini",
-      "qty": 4,
-      "total": 120
+      "qty": 5,
+      "total": 150
     },
     {
       "name": "АйсМатча клубника",
@@ -151103,5 +151142,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-14T14:35:13.137Z"
+  "updatedAt": "2026-07-14T15:30:46.479Z"
 }

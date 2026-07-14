@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.5,
-    "checks": 6,
+    "average": 43,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": 56,
-    "revenue": 261
+    "net": 96,
+    "revenue": 301
   },
   "data": {
-    "actions": 5081,
+    "actions": 5083,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2276,
+    "orders": 2277,
     "products": 60,
     "shifts": 53
   },
   "activity": [
     {
+      "id": 1783988046618,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:14",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783988046618,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:14",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783987697706,
       "source": "Локально",
       "status": "Сохранено",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "10:02",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1783974844446,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "08:34",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1783938114723,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:21",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2276,
+    "current": 2277,
     "old": [
       {
         "createdAt": "2026-07-13T10:21:54.634Z",
@@ -74609,6 +74609,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-14T00:23:48.724Z",
+        "id": 3324,
+        "items": [
+          "Клубничный жасмин mini x1",
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-14",
+        "shiftLabel": "Смена 14.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-14T00:14:06.508Z",
         "id": 3323,
@@ -149246,14 +149284,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-14",
         "label": "Смена 14.07",
         "missingOrders": 0,
-        "revenue": 261,
+        "revenue": 301,
         "status": "ok"
       },
       {
@@ -149946,12 +149984,12 @@
         "status": "ok"
       }
     ],
-    "total": 2276
+    "total": 2277
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 241
+      "total": 281
     },
     {
       "method": "Карта",
@@ -149971,6 +150009,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3324,
+      "items": [
+        "Клубничный жасмин mini x1",
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3323,
       "items": [
@@ -150158,19 +150205,19 @@
   },
   "topProducts": [
     {
-      "name": "Matcha mini",
-      "qty": 2,
-      "total": 60
+      "name": "Клубничный жасмин mini",
+      "qty": 4,
+      "total": 80
     },
     {
-      "name": "Клубничный жасмин mini",
+      "name": "Babl tea mini",
       "qty": 3,
       "total": 60
     },
     {
-      "name": "Babl tea mini",
+      "name": "Matcha mini",
       "qty": 2,
-      "total": 40
+      "total": 60
     },
     {
       "name": "АйсМатча черника",
@@ -150194,5 +150241,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-14T07:16:55.395Z"
+  "updatedAt": "2026-07-14T07:26:38.118Z"
 }

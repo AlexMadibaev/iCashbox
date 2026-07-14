@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.54545454545455,
-    "checks": 11,
+    "average": 36.416666666666664,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 186,
-    "revenue": 391
+    "net": 232,
+    "revenue": 437
   },
   "data": {
-    "actions": 5091,
+    "actions": 5093,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2281,
+    "orders": 2282,
     "products": 60,
     "shifts": 53
   },
   "activity": [
     {
+      "id": 1783990256249,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:50",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783990256249,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:50",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783989714044,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:14",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783987697706,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:08",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783987697706,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:08",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2281,
+    "current": 2282,
     "old": [
       {
         "createdAt": "2026-07-13T10:21:54.634Z",
@@ -74609,6 +74609,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-14T00:54:21.954Z",
+        "id": 3329,
+        "items": [
+          "Babl tea mini x1",
+          "Жасмин лимон big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-лимон-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 46,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-14",
+        "shiftLabel": "Смена 14.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-07-14T00:50:56.144Z",
         "id": 3328,
@@ -149400,14 +149438,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-14",
         "label": "Смена 14.07",
         "missingOrders": 0,
-        "revenue": 391,
+        "revenue": 437,
         "status": "ok"
       },
       {
@@ -150100,7 +150138,7 @@
         "status": "ok"
       }
     ],
-    "total": 2281
+    "total": 2282
   },
   "payments": [
     {
@@ -150113,7 +150151,7 @@
     },
     {
       "method": "Alif",
-      "total": 20
+      "total": 66
     },
     {
       "method": "Dushanbe City",
@@ -150125,6 +150163,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3329,
+      "items": [
+        "Babl tea mini x1",
+        "Жасмин лимон big x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 3328,
       "items": [
@@ -150183,14 +150230,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 3321,
-      "items": [
-        "Клубничный жасмин mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -150327,8 +150366,8 @@
   "topProducts": [
     {
       "name": "Babl tea mini",
-      "qty": 6,
-      "total": 120
+      "qty": 7,
+      "total": 140
     },
     {
       "name": "Matcha mini",
@@ -150344,6 +150383,11 @@
       "name": "АйсМатча черника",
       "qty": 1,
       "total": 35
+    },
+    {
+      "name": "Жасмин лимон big",
+      "qty": 1,
+      "total": 26
     },
     {
       "name": "Babl tea big",
@@ -150362,5 +150406,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-14T07:53:45.471Z"
+  "updatedAt": "2026-07-14T07:57:09.932Z"
 }

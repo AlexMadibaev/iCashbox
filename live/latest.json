@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.8,
-    "checks": 15,
+    "average": 37.375,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 332,
-    "revenue": 537
+    "net": 393,
+    "revenue": 598
   },
   "data": {
-    "actions": 5099,
+    "actions": 5101,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2285,
+    "orders": 2286,
     "products": 60,
     "shifts": 53
   },
   "activity": [
     {
+      "id": 1783993543867,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:45",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783993543867,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:45",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783992363491,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783989469360,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783989469360,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:37",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2285,
+    "current": 2286,
     "old": [
       {
         "createdAt": "2026-07-13T10:21:54.634Z",
@@ -74609,6 +74609,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-14T02:24:11.397Z",
+        "id": 3333,
+        "items": [
+          "Bubble Gum big x1",
+          "АйсМатча клубника x1"
+        ],
+        "lines": [
+          {
+            "id": "product-bubble-gum-big",
+            "name": "Bubble Gum big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 61,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-14",
+        "shiftLabel": "Смена 14.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 61
+      },
       {
         "createdAt": "2026-07-14T01:45:43.774Z",
         "id": 3332,
@@ -149534,14 +149572,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-14",
         "label": "Смена 14.07",
         "missingOrders": 0,
-        "revenue": 537,
+        "revenue": 598,
         "status": "ok"
       },
       {
@@ -150234,7 +150272,7 @@
         "status": "ok"
       }
     ],
-    "total": 2285
+    "total": 2286
   },
   "payments": [
     {
@@ -150247,7 +150285,7 @@
     },
     {
       "method": "Alif",
-      "total": 66
+      "total": 127
     },
     {
       "method": "Dushanbe City",
@@ -150259,6 +150297,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3333,
+      "items": [
+        "Bubble Gum big x1",
+        "АйсМатча клубника x1"
+      ],
+      "status": "Оплачен",
+      "total": 61
+    },
     {
       "id": 3332,
       "items": [
@@ -150311,14 +150358,6 @@
     },
     {
       "id": 3326,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 3325,
       "items": [
         "Babl tea mini x1"
       ],
@@ -150474,9 +150513,19 @@
       "total": 90
     },
     {
+      "name": "АйсМатча клубника",
+      "qty": 1,
+      "total": 35
+    },
+    {
       "name": "АйсМатча черника",
       "qty": 1,
       "total": 35
+    },
+    {
+      "name": "Bubble Gum big",
+      "qty": 1,
+      "total": 26
     },
     {
       "name": "Жасмин лимон big",
@@ -150487,18 +150536,8 @@
       "name": "Babl tea big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Манго mini",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Blue mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-14T08:48:33.573Z"
+  "updatedAt": "2026-07-14T09:27:01.128Z"
 }

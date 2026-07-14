@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.529411764705884,
-    "checks": 17,
+    "average": 37.666666666666664,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 433,
-    "revenue": 638
+    "net": 473,
+    "revenue": 678
   },
   "data": {
-    "actions": 5103,
+    "actions": 5105,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2287,
+    "orders": 2288,
     "products": 60,
     "shifts": 53
   },
   "activity": [
     {
+      "id": 1783995900901,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:25",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783995900901,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:25",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1783995851504,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:54",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783990256249,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:50",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783990256249,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:50",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2287,
+    "current": 2288,
     "old": [
       {
         "createdAt": "2026-07-13T10:21:54.634Z",
@@ -74609,6 +74609,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-14T02:27:57.315Z",
+        "id": 3335,
+        "items": [
+          "Bubble Gum mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-14",
+        "shiftLabel": "Смена 14.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-14T02:25:00.793Z",
         "id": 3334,
@@ -149610,14 +149639,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-14",
         "label": "Смена 14.07",
         "missingOrders": 0,
-        "revenue": 638,
+        "revenue": 678,
         "status": "ok"
       },
       {
@@ -150310,12 +150339,12 @@
         "status": "ok"
       }
     ],
-    "total": 2287
+    "total": 2288
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 461
+      "total": 501
     },
     {
       "method": "Карта",
@@ -150335,6 +150364,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3335,
+      "items": [
+        "Bubble Gum mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3334,
       "items": [
@@ -150394,14 +150431,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3327,
-      "items": [
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -150552,6 +150581,11 @@
       "total": 90
     },
     {
+      "name": "Bubble Gum mini",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Манго mini",
       "qty": 2,
       "total": 40
@@ -150570,13 +150604,8 @@
       "name": "Bubble Gum big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Жасмин лимон big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-14T09:27:48.715Z"
+  "updatedAt": "2026-07-14T09:30:45.196Z"
 }

@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 38,
-    "checks": 2,
+    "average": 50.333333333333336,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -129,
-    "revenue": 76
+    "net": -54,
+    "revenue": 151
   },
   "data": {
-    "actions": 5073,
+    "actions": 5075,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2272,
+    "orders": 2273,
     "products": 60,
     "shifts": 53
   },
   "activity": [
+    {
+      "id": 1783984801394,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:20",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1783984801394,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:20",
+      "type": "Создание заказа"
+    },
     {
       "id": 1783980166358,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:38",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1783935525654,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:38",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1783933538254,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:05",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2272,
+    "current": 2273,
     "old": [
       {
         "createdAt": "2026-07-13T10:21:54.634Z",
@@ -74609,6 +74609,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-13T23:53:59.490Z",
+        "id": 3320,
+        "items": [
+          "АйсМатча черника x1",
+          "Babl tea mini x1",
+          "Клубничный жасмин mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-черника",
+            "name": "АйсМатча черника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-14",
+        "shiftLabel": "Смена 14.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 75
+      },
       {
         "createdAt": "2026-07-13T23:20:01.304Z",
         "id": 3319,
@@ -149094,14 +149141,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-14",
         "label": "Смена 14.07",
         "missingOrders": 0,
-        "revenue": 76,
+        "revenue": 151,
         "status": "ok"
       },
       {
@@ -149794,12 +149841,12 @@
         "status": "ok"
       }
     ],
-    "total": 2272
+    "total": 2273
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 76
+      "total": 151
     },
     {
       "method": "Карта",
@@ -149819,6 +149866,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3320,
+      "items": [
+        "АйсМатча черника x1",
+        "Babl tea mini x1",
+        "Клубничный жасмин mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 75
+    },
     {
       "id": 3319,
       "items": [
@@ -149970,6 +150027,11 @@
   },
   "topProducts": [
     {
+      "name": "АйсМатча черника",
+      "qty": 1,
+      "total": 35
+    },
+    {
       "name": "Matcha mini",
       "qty": 1,
       "total": 30
@@ -149980,11 +150042,21 @@
       "total": 26
     },
     {
+      "name": "Babl tea mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Клубничный жасмин mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Виноградный тропический mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-14T06:22:50.978Z"
+  "updatedAt": "2026-07-14T06:56:49.243Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 48.125,
-    "checks": 8,
+    "average": 46.666666666666664,
+    "checks": 9,
     "expenseTotal": 205,
-    "net": 180,
-    "revenue": 385
+    "net": 215,
+    "revenue": 420
   },
   "data": {
-    "actions": 5162,
+    "actions": 5164,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2316,
+    "orders": 2317,
     "products": 60,
     "shifts": 54
   },
   "activity": [
     {
+      "id": 1784097530949,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:38",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784097530949,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:38",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784097430145,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784080208700,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:50",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784080208700,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:50",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2316,
+    "current": 2317,
     "old": [
       {
         "createdAt": "2026-07-14T09:24:10.813Z",
@@ -75882,6 +75882,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-15T06:39:50.244Z",
+        "id": 3364,
+        "items": [
+          "АйсМатча черника x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-черника",
+            "name": "АйсМатча черника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-15",
+        "shiftLabel": "Смена 15.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-07-15T06:38:50.838Z",
         "id": 3363,
@@ -151850,14 +151879,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 8,
-        "expectedOrders": 8,
+        "databaseOrders": 9,
+        "expectedOrders": 9,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-15",
         "label": "Смена 15.07",
         "missingOrders": 0,
-        "revenue": 385,
+        "revenue": 420,
         "status": "ok"
       },
       {
@@ -152563,12 +152592,12 @@
         "status": "ok"
       }
     ],
-    "total": 2316
+    "total": 2317
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 359
+      "total": 394
     },
     {
       "method": "Карта",
@@ -152588,6 +152617,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3364,
+      "items": [
+        "АйсМатча черника x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    },
     {
       "id": 3363,
       "items": [
@@ -152648,14 +152685,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 3356,
-      "items": [
-        "Манго Маракуя big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -152811,6 +152840,11 @@
       "total": 40
     },
     {
+      "name": "АйсМатча черника",
+      "qty": 1,
+      "total": 35
+    },
+    {
       "name": "АйсМатча клубника",
       "qty": 1,
       "total": 35
@@ -152824,13 +152858,8 @@
       "name": "Клубничный жасмин mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-15T13:41:40.849Z"
+  "updatedAt": "2026-07-15T13:42:40.257Z"
 }

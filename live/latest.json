@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 43,
-    "checks": 2,
+    "average": 63.333333333333336,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -119,
-    "revenue": 86
+    "net": -15,
+    "revenue": 190
   },
   "data": {
-    "actions": 5150,
+    "actions": 5152,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2310,
+    "orders": 2311,
     "products": 60,
     "shifts": 54
   },
   "activity": [
+    {
+      "id": 1784080208700,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:50",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784080208700,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:50",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784077395902,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784018256603,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784017676848,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:27",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2310,
+    "current": 2311,
     "old": [
       {
         "createdAt": "2026-07-14T09:24:10.813Z",
@@ -75882,6 +75882,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-15T02:43:03.789Z",
+        "id": 3358,
+        "items": [
+          "Babl tea big x2",
+          "Клубника big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          },
+          {
+            "id": "product-клубника-big",
+            "name": "Клубника big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          }
+        ],
+        "payments": {
+          "Наличные": 206,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-15",
+        "shiftLabel": "Смена 15.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 104
+      },
       {
         "createdAt": "2026-07-15T01:50:08.600Z",
         "id": 3357,
@@ -151649,14 +151687,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-15",
         "label": "Смена 15.07",
         "missingOrders": 0,
-        "revenue": 86,
+        "revenue": 190,
         "status": "ok"
       },
       {
@@ -152362,12 +152400,12 @@
         "status": "ok"
       }
     ],
-    "total": 2310
+    "total": 2311
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 60
+      "total": 164
     },
     {
       "method": "Карта",
@@ -152387,6 +152425,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3358,
+      "items": [
+        "Babl tea big x2",
+        "Клубника big x2"
+      ],
+      "status": "Оплачен",
+      "total": 104
+    },
     {
       "id": 3357,
       "items": [
@@ -152539,6 +152586,16 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea big",
+      "qty": 2,
+      "total": 52
+    },
+    {
+      "name": "Клубника big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
@@ -152560,5 +152617,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-15T08:53:00.054Z"
+  "updatedAt": "2026-07-15T09:45:55.757Z"
 }

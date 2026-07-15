@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 47.72727272727273,
-    "checks": 11,
+    "average": 47.583333333333336,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 320,
-    "revenue": 525
+    "net": 366,
+    "revenue": 571
   },
   "data": {
-    "actions": 5168,
+    "actions": 5170,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2319,
+    "orders": 2320,
     "products": 60,
     "shifts": 54
   },
   "activity": [
     {
+      "id": 1784098831231,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784098831231,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:00",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784098499486,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:05",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784085789165,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784085789165,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:23",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2319,
+    "current": 2320,
     "old": [
       {
         "createdAt": "2026-07-14T09:24:10.813Z",
@@ -75882,6 +75882,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-15T07:30:37.786Z",
+        "id": 3367,
+        "items": [
+          "Клубника mini x1",
+          "Клубника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубника-big",
+            "name": "Клубника big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-15",
+        "shiftLabel": "Смена 15.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-07-15T07:00:31.118Z",
         "id": 3366,
@@ -151955,14 +151993,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-15",
         "label": "Смена 15.07",
         "missingOrders": 0,
-        "revenue": 525,
+        "revenue": 571,
         "status": "ok"
       },
       {
@@ -152668,12 +152706,12 @@
         "status": "ok"
       }
     ],
-    "total": 2319
+    "total": 2320
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 394
+      "total": 440
     },
     {
       "method": "Карта",
@@ -152693,6 +152731,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3367,
+      "items": [
+        "Клубника mini x1",
+        "Клубника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 3366,
       "items": [
@@ -152752,14 +152799,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3359,
-      "items": [
-        "АйсМатча клубника x1"
-      ],
-      "status": "Оплачен",
-      "total": 35
     }
   ],
   "shifts": {
@@ -152895,6 +152934,11 @@
   },
   "topProducts": [
     {
+      "name": "Клубника big",
+      "qty": 3,
+      "total": 78
+    },
+    {
       "name": "АйсМатча клубника",
       "qty": 2,
       "total": 70
@@ -152915,9 +152959,9 @@
       "total": 52
     },
     {
-      "name": "Клубника big",
+      "name": "Клубника mini",
       "qty": 2,
-      "total": 52
+      "total": 40
     },
     {
       "name": "Babl tea mini",
@@ -152928,13 +152972,8 @@
       "name": "Matcha big",
       "qty": 1,
       "total": 40
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-15T14:03:22.393Z"
+  "updatedAt": "2026-07-15T14:33:29.610Z"
 }

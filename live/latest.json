@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 49,
-    "checks": 10,
+    "average": 47.72727272727273,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 285,
-    "revenue": 490
+    "net": 320,
+    "revenue": 525
   },
   "data": {
-    "actions": 5166,
+    "actions": 5168,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2318,
+    "orders": 2319,
     "products": 60,
     "shifts": 54
   },
   "activity": [
     {
+      "id": 1784098499486,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:54",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784098499486,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:54",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784097590349,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:23",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784084289469,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:58",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784084289469,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:58",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2318,
+    "current": 2319,
     "old": [
       {
         "createdAt": "2026-07-14T09:24:10.813Z",
@@ -75882,6 +75882,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-15T07:00:31.118Z",
+        "id": 3366,
+        "items": [
+          "Babl tea mini x1",
+          "Cake-Pops x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 35,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-15",
+        "shiftLabel": "Смена 15.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-07-15T06:54:59.382Z",
         "id": 3365,
@@ -151917,14 +151955,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-15",
         "label": "Смена 15.07",
         "missingOrders": 0,
-        "revenue": 490,
+        "revenue": 525,
         "status": "ok"
       },
       {
@@ -152630,7 +152668,7 @@
         "status": "ok"
       }
     ],
-    "total": 2318
+    "total": 2319
   },
   "payments": [
     {
@@ -152643,7 +152681,7 @@
     },
     {
       "method": "Alif",
-      "total": 96
+      "total": 131
     },
     {
       "method": "Dushanbe City",
@@ -152655,6 +152693,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3366,
+      "items": [
+        "Babl tea mini x1",
+        "Cake-Pops x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    },
     {
       "id": 3365,
       "items": [
@@ -152713,15 +152760,6 @@
       ],
       "status": "Оплачен",
       "total": 35
-    },
-    {
-      "id": 3358,
-      "items": [
-        "Babl tea big x2",
-        "Клубника big x2"
-      ],
-      "status": "Оплачен",
-      "total": 104
     }
   ],
   "shifts": {
@@ -152882,6 +152920,11 @@
       "total": 52
     },
     {
+      "name": "Babl tea mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Matcha big",
       "qty": 1,
       "total": 40
@@ -152890,13 +152933,8 @@
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Клубничный жасмин mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-15T13:57:50.607Z"
+  "updatedAt": "2026-07-15T14:03:22.393Z"
 }

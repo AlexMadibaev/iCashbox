@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 45.46153846153846,
-    "checks": 13,
+    "average": 45.785714285714285,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 386,
-    "revenue": 591
+    "net": 436,
+    "revenue": 641
   },
   "data": {
-    "actions": 5172,
+    "actions": 5174,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2321,
+    "orders": 2322,
     "products": 60,
     "shifts": 54
   },
   "activity": [
     {
+      "id": 1784100931968,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:35",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784100931968,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:35",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784100637902,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:38",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784097430145,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784097430145,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:37",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2321,
+    "current": 2322,
     "old": [
       {
         "createdAt": "2026-07-14T09:24:10.813Z",
@@ -75882,6 +75882,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-15T07:53:54.636Z",
+        "id": 3369,
+        "items": [
+          "Cake-Pops x1",
+          "АйсМатча клубника x1"
+        ],
+        "lines": [
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          },
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-15",
+        "shiftLabel": "Смена 15.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-15T07:35:31.860Z",
         "id": 3368,
@@ -152022,14 +152060,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-15",
         "label": "Смена 15.07",
         "missingOrders": 0,
-        "revenue": 591,
+        "revenue": 641,
         "status": "ok"
       },
       {
@@ -152735,12 +152773,12 @@
         "status": "ok"
       }
     ],
-    "total": 2321
+    "total": 2322
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 460
+      "total": 510
     },
     {
       "method": "Карта",
@@ -152760,6 +152798,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3369,
+      "items": [
+        "Cake-Pops x1",
+        "АйсМатча клубника x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 3368,
       "items": [
@@ -152820,14 +152867,6 @@
       ],
       "status": "Оплачен",
       "total": 70
-    },
-    {
-      "id": 3361,
-      "items": [
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -152963,14 +153002,14 @@
   },
   "topProducts": [
     {
+      "name": "АйсМатча клубника",
+      "qty": 3,
+      "total": 105
+    },
+    {
       "name": "Клубника big",
       "qty": 3,
       "total": 78
-    },
-    {
-      "name": "АйсМатча клубника",
-      "qty": 2,
-      "total": 70
     },
     {
       "name": "АйсМатча черника",
@@ -153004,5 +153043,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-15T14:38:21.700Z"
+  "updatedAt": "2026-07-15T14:56:46.029Z"
 }

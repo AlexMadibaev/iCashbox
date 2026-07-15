@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 46.2,
-    "checks": 15,
+    "average": 46.5,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 488,
-    "revenue": 693
+    "net": 539,
+    "revenue": 744
   },
   "data": {
-    "actions": 5176,
+    "actions": 5178,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2323,
+    "orders": 2324,
     "products": 60,
     "shifts": 54
   },
   "activity": [
     {
+      "id": 1784105940633,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784105940633,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:59",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784102034756,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:54",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784097590349,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:39",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784097590349,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:39",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2323,
+    "current": 2324,
     "old": [
       {
         "createdAt": "2026-07-14T09:24:10.813Z",
@@ -75882,6 +75882,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-15T09:34:56.526Z",
+        "id": 3371,
+        "items": [
+          "Капучино x1",
+          "Bubble Gum big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-bubble-gum-big",
+            "name": "Bubble Gum big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 1,
+          "Карта": 0,
+          "Alif": 50,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-15",
+        "shiftLabel": "Смена 15.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 51
+      },
       {
         "createdAt": "2026-07-15T08:59:00.522Z",
         "id": 3370,
@@ -152098,14 +152136,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-15",
         "label": "Смена 15.07",
         "missingOrders": 0,
-        "revenue": 693,
+        "revenue": 744,
         "status": "ok"
       },
       {
@@ -152811,12 +152849,12 @@
         "status": "ok"
       }
     ],
-    "total": 2323
+    "total": 2324
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 510
+      "total": 511
     },
     {
       "method": "Карта",
@@ -152824,7 +152862,7 @@
     },
     {
       "method": "Alif",
-      "total": 131
+      "total": 181
     },
     {
       "method": "Dushanbe City",
@@ -152836,6 +152874,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3371,
+      "items": [
+        "Капучино x1",
+        "Bubble Gum big x1"
+      ],
+      "status": "Оплачен",
+      "total": 51
+    },
     {
       "id": 3370,
       "items": [
@@ -152896,15 +152943,6 @@
       ],
       "status": "Оплачен",
       "total": 35
-    },
-    {
-      "id": 3363,
-      "items": [
-        "Клубничный жасмин mini x1",
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -153081,5 +153119,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-15T16:01:52.074Z"
+  "updatedAt": "2026-07-15T16:37:47.993Z"
 }

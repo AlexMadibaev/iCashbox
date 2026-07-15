@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 63.333333333333336,
-    "checks": 3,
+    "average": 56.25,
+    "checks": 4,
     "expenseTotal": 205,
-    "net": -15,
-    "revenue": 190
+    "net": 20,
+    "revenue": 225
   },
   "data": {
-    "actions": 5152,
+    "actions": 5154,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2311,
+    "orders": 2312,
     "products": 60,
     "shifts": 54
   },
   "activity": [
+    {
+      "id": 1784083383900,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:43",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784083383900,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:43",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784080208700,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:52",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784019141031,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784018256603,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:37",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2311,
+    "current": 2312,
     "old": [
       {
         "createdAt": "2026-07-14T09:24:10.813Z",
@@ -75882,6 +75882,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-15T02:58:09.363Z",
+        "id": 3359,
+        "items": [
+          "АйсМатча клубника x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-15",
+        "shiftLabel": "Смена 15.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-07-15T02:43:03.789Z",
         "id": 3358,
@@ -151687,14 +151716,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 3,
-        "expectedOrders": 3,
+        "databaseOrders": 4,
+        "expectedOrders": 4,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-15",
         "label": "Смена 15.07",
         "missingOrders": 0,
-        "revenue": 190,
+        "revenue": 225,
         "status": "ok"
       },
       {
@@ -152400,12 +152429,12 @@
         "status": "ok"
       }
     ],
-    "total": 2311
+    "total": 2312
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 164
+      "total": 199
     },
     {
       "method": "Карта",
@@ -152425,6 +152454,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3359,
+      "items": [
+        "АйсМатча клубника x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    },
     {
       "id": 3358,
       "items": [
@@ -152596,6 +152633,11 @@
       "total": 52
     },
     {
+      "name": "АйсМатча клубника",
+      "qty": 1,
+      "total": 35
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
@@ -152617,5 +152659,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-15T09:45:55.757Z"
+  "updatedAt": "2026-07-15T10:01:01.125Z"
 }

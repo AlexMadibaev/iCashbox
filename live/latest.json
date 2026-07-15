@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 26,
-    "checks": 1,
+    "average": 43,
+    "checks": 2,
     "expenseTotal": 205,
-    "net": -179,
-    "revenue": 26
+    "net": -119,
+    "revenue": 86
   },
   "data": {
-    "actions": 5148,
+    "actions": 5150,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2309,
+    "orders": 2310,
     "products": 60,
     "shifts": 54
   },
   "activity": [
+    {
+      "id": 1784077395902,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:03",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784077395902,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:03",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784062856632,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:27",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784017676848,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:27",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784014343722,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:32",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2309,
+    "current": 2310,
     "old": [
       {
         "createdAt": "2026-07-14T09:24:10.813Z",
@@ -75882,6 +75882,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-15T01:50:08.600Z",
+        "id": 3357,
+        "items": [
+          "Bubble Gum mini x1",
+          "Манго mini x1",
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-манго-mini",
+            "name": "Манго mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-15",
+        "shiftLabel": "Смена 15.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-15T01:03:15.799Z",
         "id": 3356,
@@ -151602,14 +151649,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 1,
-        "expectedOrders": 1,
+        "databaseOrders": 2,
+        "expectedOrders": 2,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-15",
         "label": "Смена 15.07",
         "missingOrders": 0,
-        "revenue": 26,
+        "revenue": 86,
         "status": "ok"
       },
       {
@@ -152315,12 +152362,12 @@
         "status": "ok"
       }
     ],
-    "total": 2309
+    "total": 2310
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 60
     },
     {
       "method": "Карта",
@@ -152340,6 +152387,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3357,
+      "items": [
+        "Bubble Gum mini x1",
+        "Манго mini x1",
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3356,
       "items": [
@@ -152485,8 +152542,23 @@
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
+    },
+    {
+      "name": "Bubble Gum mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Манго mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Клубника mini",
+      "qty": 1,
+      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-15T08:06:07.386Z"
+  "updatedAt": "2026-07-15T08:53:00.054Z"
 }

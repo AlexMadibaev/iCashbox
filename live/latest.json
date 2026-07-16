@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.5,
-    "checks": 12,
+    "average": 32.46153846153846,
+    "checks": 13,
     "expenseTotal": 205,
-    "net": 197,
-    "revenue": 402
+    "net": 217,
+    "revenue": 422
   },
   "data": {
-    "actions": 5209,
+    "actions": 5211,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2339,
+    "orders": 2340,
     "products": 60,
     "shifts": 55
   },
   "activity": [
     {
+      "id": 1784168454801,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:20",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784168454801,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:20",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784167212362,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:45",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784157770746,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:22",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784157770746,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:22",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2339,
+    "current": 2340,
     "old": [
       {
         "createdAt": "2026-07-15T10:35:20.070Z",
@@ -76559,6 +76559,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-16T02:32:05.598Z",
+        "id": 3387,
+        "items": [
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-16",
+        "shiftLabel": "Смена 16.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-16T02:20:54.709Z",
         "id": 3386,
@@ -153311,14 +153340,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 12,
-        "expectedOrders": 12,
+        "databaseOrders": 13,
+        "expectedOrders": 13,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-16",
         "label": "Смена 16.07",
         "missingOrders": 0,
-        "revenue": 402,
+        "revenue": 422,
         "status": "ok"
       },
       {
@@ -154037,12 +154066,12 @@
         "status": "ok"
       }
     ],
-    "total": 2339
+    "total": 2340
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 146
+      "total": 166
     },
     {
       "method": "Карта",
@@ -154062,6 +154091,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3387,
+      "items": [
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3386,
       "items": [
@@ -154119,14 +154156,6 @@
       ],
       "status": "Оплачен",
       "total": 70
-    },
-    {
-      "id": 3379,
-      "items": [
-        "Виноградный тропический mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -154272,6 +154301,11 @@
       "total": 60
     },
     {
+      "name": "Клубника mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Манго Маракуя mini",
       "qty": 2,
       "total": 40
@@ -154295,13 +154329,8 @@
       "name": "Манго big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Виноградный тропический big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-16T09:23:47.208Z"
+  "updatedAt": "2026-07-16T09:34:58.262Z"
 }

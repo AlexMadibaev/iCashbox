@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 40.333333333333336,
-    "checks": 6,
+    "average": 37.42857142857143,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": 37,
-    "revenue": 242
+    "net": 57,
+    "revenue": 262
   },
   "data": {
-    "actions": 5197,
+    "actions": 5201,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2333,
+    "orders": 2334,
     "products": 60,
     "shifts": 55
   },
   "activity": [
     {
+      "id": 1784159145274,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:45",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784159145274,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:45",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1784157770746,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784157770746,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784155435547,
       "source": "Локально",
       "status": "Сохранено",
@@ -78,34 +106,6 @@
       "status": "Сохранено",
       "time": "10:02",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1784150861457,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:27",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784150861457,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:27",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784147382280,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "08:29",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1784111720171,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:35",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2333,
+    "current": 2334,
     "old": [
       {
         "createdAt": "2026-07-15T10:35:20.070Z",
@@ -76559,6 +76559,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-15T23:45:45.168Z",
+        "id": 3381,
+        "items": [
+          "Виноградный тропический mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-тропический-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-16",
+        "shiftLabel": "Смена 16.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-15T23:22:50.623Z",
         "id": 3380,
@@ -153128,14 +153157,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-16",
         "label": "Смена 16.07",
         "missingOrders": 0,
-        "revenue": 242,
+        "revenue": 262,
         "status": "ok"
       },
       {
@@ -153854,12 +153883,12 @@
         "status": "ok"
       }
     ],
-    "total": 2333
+    "total": 2334
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 86
+      "total": 106
     },
     {
       "method": "Карта",
@@ -153879,6 +153908,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3381,
+      "items": [
+        "Виноградный тропический mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3380,
       "items": [
@@ -154064,6 +154101,11 @@
   },
   "topProducts": [
     {
+      "name": "Виноградный тропический mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "АйсМатча клубника",
       "qty": 1,
       "total": 35
@@ -154094,16 +154136,11 @@
       "total": 25
     },
     {
-      "name": "Виноградный тропический mini",
-      "qty": 1,
-      "total": 20
-    },
-    {
       "name": "Жасмин лимон mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-16T06:25:43.336Z"
+  "updatedAt": "2026-07-16T06:48:38.399Z"
 }

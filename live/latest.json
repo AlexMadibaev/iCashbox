@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.93333333333333,
-    "checks": 15,
+    "average": 32.125,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 289,
-    "revenue": 494
+    "net": 309,
+    "revenue": 514
   },
   "data": {
-    "actions": 5215,
+    "actions": 5217,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2342,
+    "orders": 2343,
     "products": 60,
     "shifts": 55
   },
   "activity": [
     {
+      "id": 1784171304459,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:08",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784171304459,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:08",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784171237344,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:17",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784163224806,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:53",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784163224806,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:53",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2342,
+    "current": 2343,
     "old": [
       {
         "createdAt": "2026-07-15T10:35:20.070Z",
@@ -76559,6 +76559,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-16T03:21:26.807Z",
+        "id": 3390,
+        "items": [
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 20,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-16",
+        "shiftLabel": "Смена 16.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-16T03:08:24.325Z",
         "id": 3389,
@@ -153398,14 +153427,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-16",
         "label": "Смена 16.07",
         "missingOrders": 0,
-        "revenue": 494,
+        "revenue": 514,
         "status": "ok"
       },
       {
@@ -154124,7 +154153,7 @@
         "status": "ok"
       }
     ],
-    "total": 2342
+    "total": 2343
   },
   "payments": [
     {
@@ -154137,7 +154166,7 @@
     },
     {
       "method": "Alif",
-      "total": 135
+      "total": 155
     },
     {
       "method": "Dushanbe City",
@@ -154149,6 +154178,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3390,
+      "items": [
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3389,
       "items": [
@@ -154205,14 +154242,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3382,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -154348,17 +154377,17 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Манго Маракуя mini",
       "qty": 3,
       "total": 60
     },
     {
       "name": "Виноградный тропический mini",
-      "qty": 3,
-      "total": 60
-    },
-    {
-      "name": "Babl tea mini",
       "qty": 3,
       "total": 60
     },
@@ -154389,5 +154418,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-16T10:11:15.005Z"
+  "updatedAt": "2026-07-16T10:24:19.319Z"
 }

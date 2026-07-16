@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 38,
-    "checks": 4,
+    "average": 34.4,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": -53,
-    "revenue": 152
+    "net": -33,
+    "revenue": 172
   },
   "data": {
-    "actions": 5193,
+    "actions": 5195,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2331,
+    "orders": 2332,
     "products": 60,
     "shifts": 55
   },
   "activity": [
+    {
+      "id": 1784155085573,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:38",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784155085573,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:38",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784154894963,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:05",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784109950681,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:05",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784109096537,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:51",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2331,
+    "current": 2332,
     "old": [
       {
         "createdAt": "2026-07-15T10:35:20.070Z",
@@ -76559,6 +76559,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-15T22:43:55.440Z",
+        "id": 3379,
+        "items": [
+          "Виноградный тропический mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-тропический-mini",
+            "name": "Виноградный тропический mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-16",
+        "shiftLabel": "Смена 16.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-15T22:38:05.478Z",
         "id": 3378,
@@ -153061,14 +153090,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-16",
         "label": "Смена 16.07",
         "missingOrders": 0,
-        "revenue": 152,
+        "revenue": 172,
         "status": "ok"
       },
       {
@@ -153787,12 +153816,12 @@
         "status": "ok"
       }
     ],
-    "total": 2331
+    "total": 2332
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 66
+      "total": 86
     },
     {
       "method": "Карта",
@@ -153812,6 +153841,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3379,
+      "items": [
+        "Виноградный тропический mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3378,
       "items": [
@@ -154000,6 +154037,11 @@
       "total": 25
     },
     {
+      "name": "Виноградный тропический mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Жасмин лимон mini",
       "qty": 1,
       "total": 20
@@ -154011,5 +154053,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-16T05:40:56.961Z"
+  "updatedAt": "2026-07-16T05:46:47.591Z"
 }

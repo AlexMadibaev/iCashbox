@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 31.41176470588235,
-    "checks": 17,
+    "average": 30,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 329,
-    "revenue": 534
+    "net": 335,
+    "revenue": 540
   },
   "data": {
-    "actions": 5219,
+    "actions": 5221,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2344,
+    "orders": 2345,
     "products": 60,
     "shifts": 55
   },
   "activity": [
     {
+      "id": 1784172987577,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:36",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784172987577,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:36",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784172086900,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:20",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784167212362,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784167212362,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:00",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2344,
+    "current": 2345,
     "old": [
       {
         "createdAt": "2026-07-15T10:35:20.070Z",
@@ -76559,6 +76559,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-16T03:37:21.828Z",
+        "id": 3392,
+        "items": [
+          "Тапиока доп x2"
+        ],
+        "lines": [
+          {
+            "id": "product-тапиока-доп",
+            "name": "Тапиока доп",
+            "price": 3,
+            "qty": 2,
+            "size": "",
+            "total": 6
+          }
+        ],
+        "payments": {
+          "Наличные": 10,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-16",
+        "shiftLabel": "Смена 16.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 6
+      },
       {
         "createdAt": "2026-07-16T03:36:27.485Z",
         "id": 3391,
@@ -153456,14 +153485,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-16",
         "label": "Смена 16.07",
         "missingOrders": 0,
-        "revenue": 534,
+        "revenue": 540,
         "status": "ok"
       },
       {
@@ -154182,12 +154211,12 @@
         "status": "ok"
       }
     ],
-    "total": 2344
+    "total": 2345
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 258
+      "total": 264
     },
     {
       "method": "Карта",
@@ -154207,6 +154236,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3392,
+      "items": [
+        "Тапиока доп x2"
+      ],
+      "status": "Оплачен",
+      "total": 6
+    },
     {
       "id": 3391,
       "items": [
@@ -154262,15 +154299,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3384,
-      "items": [
-        "Клубничный жасмин mini x1",
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -154447,5 +154475,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-16T10:39:19.504Z"
+  "updatedAt": "2026-07-16T10:40:12.728Z"
 }

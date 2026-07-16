@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 25,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -180,
+    "revenue": 25
   },
   "data": {
     "actions": 5187,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2327,
+    "orders": 2328,
     "products": 60,
     "shifts": 55
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2327,
+    "current": 2328,
     "old": [
       {
         "createdAt": "2026-07-15T10:35:20.070Z",
@@ -76559,6 +76559,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-15T21:27:41.364Z",
+        "id": 3375,
+        "items": [
+          "Капучино x1"
+        ],
+        "lines": [
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 25,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-16",
+        "shiftLabel": "Смена 16.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-15T10:35:20.070Z",
         "id": 3374,
@@ -152927,15 +152956,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-07-16",
         "label": "Смена 16.07",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 25,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -153653,7 +153682,7 @@
         "status": "ok"
       }
     ],
-    "total": 2327
+    "total": 2328
   },
   "payments": [
     {
@@ -153666,7 +153695,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 25
     },
     {
       "method": "Dushanbe City",
@@ -153677,7 +153706,16 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 3375,
+      "items": [
+        "Капучино x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -153809,7 +153847,13 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Капучино",
+      "qty": 1,
+      "total": 25
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-07-16T03:55:47.242Z"
+  "updatedAt": "2026-07-16T04:30:33.563Z"
 }

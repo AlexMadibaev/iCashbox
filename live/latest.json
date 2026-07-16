@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.46153846153846,
-    "checks": 13,
+    "average": 33.857142857142854,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 217,
-    "revenue": 422
+    "net": 269,
+    "revenue": 474
   },
   "data": {
-    "actions": 5211,
+    "actions": 5213,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2340,
+    "orders": 2341,
     "products": 60,
     "shifts": 55
   },
   "activity": [
     {
+      "id": 1784169125688,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:32",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784169125688,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:32",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784168454801,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784159145274,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:45",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784159145274,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:45",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2340,
+    "current": 2341,
     "old": [
       {
         "createdAt": "2026-07-15T10:35:20.070Z",
@@ -76559,6 +76559,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-16T03:07:17.215Z",
+        "id": 3388,
+        "items": [
+          "Манго Маракуя big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          }
+        ],
+        "payments": {
+          "Наличные": 53,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-16",
+        "shiftLabel": "Смена 16.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-07-16T02:32:05.598Z",
         "id": 3387,
@@ -153340,14 +153369,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-16",
         "label": "Смена 16.07",
         "missingOrders": 0,
-        "revenue": 422,
+        "revenue": 474,
         "status": "ok"
       },
       {
@@ -154066,12 +154095,12 @@
         "status": "ok"
       }
     ],
-    "total": 2340
+    "total": 2341
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 166
+      "total": 218
     },
     {
       "method": "Карта",
@@ -154091,6 +154120,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3388,
+      "items": [
+        "Манго Маракуя big x2"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 3387,
       "items": [
@@ -154147,15 +154184,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3380,
-      "items": [
-        "АйсМатча клубника x1",
-        "АйсМатча черника x1"
-      ],
-      "status": "Оплачен",
-      "total": 70
     }
   ],
   "shifts": {
@@ -154301,6 +154329,11 @@
       "total": 60
     },
     {
+      "name": "Манго Маракуя big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Клубника mini",
       "qty": 2,
       "total": 40
@@ -154324,13 +154357,8 @@
       "name": "АйсМатча манго",
       "qty": 1,
       "total": 35
-    },
-    {
-      "name": "Манго big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-16T09:34:58.262Z"
+  "updatedAt": "2026-07-16T10:10:09.873Z"
 }

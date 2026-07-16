@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.75555555555555,
-    "checks": 45,
+    "average": 37.80434782608695,
+    "checks": 46,
     "expenseTotal": 205,
-    "net": 1404,
-    "revenue": 1609
+    "net": 1534,
+    "revenue": 1739
   },
   "data": {
-    "actions": 5275,
+    "actions": 5277,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2372,
+    "orders": 2373,
     "products": 60,
     "shifts": 55
   },
   "activity": [
     {
+      "id": 1784192147414,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:55",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784192147414,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:55",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784191897280,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784189119689,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:05",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784189119689,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:05",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2372,
+    "current": 2373,
     "old": [
       {
         "createdAt": "2026-07-15T10:35:20.070Z",
@@ -76559,6 +76559,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-16T08:59:21.580Z",
+        "id": 3420,
+        "items": [
+          "АйсМатча черника x1",
+          "Клубничный жасмин mini x2",
+          "Манго mini x1",
+          "АйсМатча клубника x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-черника",
+            "name": "АйсМатча черника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-манго-mini",
+            "name": "Манго mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 150,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-16",
+        "shiftLabel": "Смена 16.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 130
+      },
       {
         "createdAt": "2026-07-16T08:55:47.301Z",
         "id": 3419,
@@ -154340,14 +154396,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 45,
-        "expectedOrders": 45,
+        "databaseOrders": 46,
+        "expectedOrders": 46,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-16",
         "label": "Смена 16.07",
         "missingOrders": 0,
-        "revenue": 1609,
+        "revenue": 1739,
         "status": "ok"
       },
       {
@@ -155066,12 +155122,12 @@
         "status": "ok"
       }
     ],
-    "total": 2372
+    "total": 2373
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 883
+      "total": 1013
     },
     {
       "method": "Карта",
@@ -155091,6 +155147,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3420,
+      "items": [
+        "АйсМатча черника x1",
+        "Клубничный жасмин mini x2",
+        "Манго mini x1",
+        "АйсМатча клубника x1"
+      ],
+      "status": "Оплачен",
+      "total": 130
+    },
     {
       "id": 3419,
       "items": [
@@ -155148,14 +155215,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3412,
-      "items": [
-        "АйсМатча клубника x1"
-      ],
-      "status": "Оплачен",
-      "total": 35
     }
   ],
   "shifts": {
@@ -155301,6 +155360,11 @@
       "total": 150
     },
     {
+      "name": "АйсМатча клубника",
+      "qty": 4,
+      "total": 140
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 5,
       "total": 130
@@ -155316,11 +155380,6 @@
       "total": 120
     },
     {
-      "name": "АйсМатча клубника",
-      "qty": 3,
-      "total": 105
-    },
-    {
       "name": "Манго Маракуя mini",
       "qty": 4,
       "total": 80
@@ -155332,5 +155391,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-16T15:58:37.884Z"
+  "updatedAt": "2026-07-16T16:02:12.090Z"
 }

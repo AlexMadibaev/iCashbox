@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.10526315789474,
-    "checks": 19,
+    "average": 35.6,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 481,
-    "revenue": 686
+    "net": 507,
+    "revenue": 712
   },
   "data": {
-    "actions": 5330,
+    "actions": 5332,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2399,
+    "orders": 2400,
     "products": 60,
     "shifts": 56
   },
   "activity": [
     {
+      "id": 1784267861718,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:57",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784267861718,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:57",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784267196758,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:51",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784263291004,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784263291004,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:41",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2399,
+    "current": 2400,
     "old": [
       {
         "createdAt": "2026-07-16T10:12:10.651Z",
@@ -78240,6 +78240,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-17T06:19:11.528Z",
+        "id": 3447,
+        "items": [
+          "Blue big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-big",
+            "name": "Blue big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-17",
+        "shiftLabel": "Смена 17.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-17T05:57:41.618Z",
         "id": 3446,
@@ -156885,14 +156914,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-17",
         "label": "Смена 17.07",
         "missingOrders": 0,
-        "revenue": 686,
+        "revenue": 712,
         "status": "ok"
       },
       {
@@ -157624,12 +157653,12 @@
         "status": "ok"
       }
     ],
-    "total": 2399
+    "total": 2400
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 465
+      "total": 491
     },
     {
       "method": "Карта",
@@ -157649,6 +157678,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3447,
+      "items": [
+        "Blue big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 3446,
       "items": [
@@ -157704,14 +157741,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 3439,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -157857,17 +157886,17 @@
       "total": 90
     },
     {
+      "name": "Blue big",
+      "qty": 3,
+      "total": 78
+    },
+    {
       "name": "Клубника big",
       "qty": 3,
       "total": 78
     },
     {
       "name": "Жасмин лимон big",
-      "qty": 2,
-      "total": 52
-    },
-    {
-      "name": "Blue big",
       "qty": 2,
       "total": 52
     },
@@ -157888,5 +157917,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-17T13:00:35.562Z"
+  "updatedAt": "2026-07-17T13:22:05.203Z"
 }

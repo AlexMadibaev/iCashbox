@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.14705882352941,
-    "checks": 34,
+    "average": 37.51428571428571,
+    "checks": 35,
     "expenseTotal": 205,
-    "net": 1058,
-    "revenue": 1263
+    "net": 1108,
+    "revenue": 1313
   },
   "data": {
-    "actions": 5360,
+    "actions": 5362,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2414,
+    "orders": 2415,
     "products": 60,
     "shifts": 56
   },
   "activity": [
     {
+      "id": 1784281802935,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:50",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784281802935,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:50",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784281078124,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:49",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784275652566,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:07",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784275652565,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:07",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2414,
+    "current": 2415,
     "old": [
       {
         "createdAt": "2026-07-16T10:12:10.651Z",
@@ -78240,6 +78240,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-17T09:56:47.769Z",
+        "id": 3462,
+        "items": [
+          "АйсМатча манго x1",
+          "Cake-Pops x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-манго",
+            "name": "АйсМатча манго",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-17",
+        "shiftLabel": "Смена 17.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-17T09:50:02.837Z",
         "id": 3461,
@@ -157383,14 +157421,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-17",
         "label": "Смена 17.07",
         "missingOrders": 0,
-        "revenue": 1263,
+        "revenue": 1313,
         "status": "ok"
       },
       {
@@ -158122,12 +158160,12 @@
         "status": "ok"
       }
     ],
-    "total": 2414
+    "total": 2415
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 709
+      "total": 759
     },
     {
       "method": "Карта",
@@ -158147,6 +158185,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3462,
+      "items": [
+        "АйсМатча манго x1",
+        "Cake-Pops x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 3461,
       "items": [
@@ -158208,14 +158255,6 @@
       ],
       "status": "Оплачен",
       "total": 46
-    },
-    {
-      "id": 3454,
-      "items": [
-        "Манго mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -158392,5 +158431,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-17T16:52:56.528Z"
+  "updatedAt": "2026-07-17T16:59:41.378Z"
 }

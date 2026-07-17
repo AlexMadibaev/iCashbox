@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.27272727272727,
-    "checks": 11,
+    "average": 39.5,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 249,
-    "revenue": 454
+    "net": 269,
+    "revenue": 474
   },
   "data": {
-    "actions": 5314,
+    "actions": 5316,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2391,
+    "orders": 2392,
     "products": 60,
     "shifts": 56
   },
   "activity": [
     {
+      "id": 1784258634893,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:23",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784258634893,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:23",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784258269894,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784251164981,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784251164981,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:19",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2391,
+    "current": 2392,
     "old": [
       {
         "createdAt": "2026-07-16T10:12:10.651Z",
@@ -78240,6 +78240,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-17T03:27:43.900Z",
+        "id": 3439,
+        "items": [
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-17",
+        "shiftLabel": "Смена 17.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-17T03:23:54.762Z",
         "id": 3438,
@@ -156653,14 +156682,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-17",
         "label": "Смена 17.07",
         "missingOrders": 0,
-        "revenue": 454,
+        "revenue": 474,
         "status": "ok"
       },
       {
@@ -157392,12 +157421,12 @@
         "status": "ok"
       }
     ],
-    "total": 2391
+    "total": 2392
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 353
+      "total": 373
     },
     {
       "method": "Карта",
@@ -157417,6 +157446,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3439,
+      "items": [
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3438,
       "items": [
@@ -157477,14 +157514,6 @@
       ],
       "status": "Оплачен",
       "total": 49
-    },
-    {
-      "id": 3431,
-      "items": [
-        "Клубника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -157620,14 +157649,14 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Клубника big",
       "qty": 3,
       "total": 78
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 3,
-      "total": 60
     },
     {
       "name": "Жасмин лимон big",
@@ -157661,5 +157690,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-17T10:26:48.149Z"
+  "updatedAt": "2026-07-17T10:30:36.204Z"
 }

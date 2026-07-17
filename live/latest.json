@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.6,
-    "checks": 20,
+    "average": 37.23809523809524,
+    "checks": 21,
     "expenseTotal": 205,
-    "net": 507,
-    "revenue": 712
+    "net": 577,
+    "revenue": 782
   },
   "data": {
-    "actions": 5332,
+    "actions": 5334,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2400,
+    "orders": 2401,
     "products": 60,
     "shifts": 56
   },
   "activity": [
     {
+      "id": 1784269151657,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:19",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784269151657,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:19",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784267861718,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784263894118,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:51",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784263894118,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:51",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2400,
+    "current": 2401,
     "old": [
       {
         "createdAt": "2026-07-16T10:12:10.651Z",
@@ -78240,6 +78240,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-17T06:43:26.399Z",
+        "id": 3448,
+        "items": [
+          "АйсМатча клубника x2"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 2,
+            "size": "",
+            "total": 70
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 70,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-17",
+        "shiftLabel": "Смена 17.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-07-17T06:19:11.528Z",
         "id": 3447,
@@ -156914,14 +156943,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 20,
-        "expectedOrders": 20,
+        "databaseOrders": 21,
+        "expectedOrders": 21,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-17",
         "label": "Смена 17.07",
         "missingOrders": 0,
-        "revenue": 712,
+        "revenue": 782,
         "status": "ok"
       },
       {
@@ -157653,7 +157682,7 @@
         "status": "ok"
       }
     ],
-    "total": 2400
+    "total": 2401
   },
   "payments": [
     {
@@ -157666,7 +157695,7 @@
     },
     {
       "method": "Alif",
-      "total": 75
+      "total": 145
     },
     {
       "method": "Dushanbe City",
@@ -157678,6 +157707,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3448,
+      "items": [
+        "АйсМатча клубника x2"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 3447,
       "items": [
@@ -157733,14 +157770,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 3440,
-      "items": [
-        "Клубничный жасмин big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -157881,6 +157910,11 @@
       "total": 180
     },
     {
+      "name": "АйсМатча клубника",
+      "qty": 3,
+      "total": 105
+    },
+    {
       "name": "Айс Латте",
       "qty": 3,
       "total": 90
@@ -157906,16 +157940,11 @@
       "total": 52
     },
     {
-      "name": "АйсМатча клубника",
-      "qty": 1,
-      "total": 35
-    },
-    {
       "name": "Манго big",
       "qty": 1,
       "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-17T13:22:05.203Z"
+  "updatedAt": "2026-07-17T13:46:20.230Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.3,
-    "checks": 10,
+    "average": 41.27272727272727,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 188,
-    "revenue": 393
+    "net": 249,
+    "revenue": 454
   },
   "data": {
-    "actions": 5312,
+    "actions": 5314,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2390,
+    "orders": 2391,
     "products": 60,
     "shifts": 56
   },
   "activity": [
     {
+      "id": 1784258269894,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:17",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784258269894,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:17",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784256859708,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:19",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784249870297,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:57",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784249870297,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:57",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2390,
+    "current": 2391,
     "old": [
       {
         "createdAt": "2026-07-16T10:12:10.651Z",
@@ -78240,6 +78240,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-17T03:23:54.762Z",
+        "id": 3438,
+        "items": [
+          "АйсМатча клубника x1",
+          "Жасмин лимон big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-жасмин-лимон-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 70,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-17",
+        "shiftLabel": "Смена 17.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 61
+      },
       {
         "createdAt": "2026-07-17T03:17:49.799Z",
         "id": 3437,
@@ -156615,14 +156653,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-17",
         "label": "Смена 17.07",
         "missingOrders": 0,
-        "revenue": 393,
+        "revenue": 454,
         "status": "ok"
       },
       {
@@ -157354,12 +157392,12 @@
         "status": "ok"
       }
     ],
-    "total": 2390
+    "total": 2391
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 292
+      "total": 353
     },
     {
       "method": "Карта",
@@ -157379,6 +157417,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3438,
+      "items": [
+        "АйсМатча клубника x1",
+        "Жасмин лимон big x1"
+      ],
+      "status": "Оплачен",
+      "total": 61
+    },
     {
       "id": 3437,
       "items": [
@@ -157435,14 +157482,6 @@
       "id": 3431,
       "items": [
         "Клубника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
-    },
-    {
-      "id": 3430,
-      "items": [
-        "Blue big x1"
       ],
       "status": "Оплачен",
       "total": 26
@@ -157591,6 +157630,11 @@
       "total": 60
     },
     {
+      "name": "Жасмин лимон big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Blue big",
       "qty": 2,
       "total": 52
@@ -157601,26 +157645,21 @@
       "total": 52
     },
     {
+      "name": "АйсМатча клубника",
+      "qty": 1,
+      "total": 35
+    },
+    {
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
     },
     {
-      "name": "Жасмин лимон big",
-      "qty": 1,
-      "total": 26
-    },
-    {
       "name": "Виноградный тропический big",
-      "qty": 1,
-      "total": 26
-    },
-    {
-      "name": "Babl tea big",
       "qty": 1,
       "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-17T10:20:43.532Z"
+  "updatedAt": "2026-07-17T10:26:48.149Z"
 }

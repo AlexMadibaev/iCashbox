@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 39,
-    "checks": 27,
+    "average": 40.107142857142854,
+    "checks": 28,
     "expenseTotal": 205,
-    "net": 848,
-    "revenue": 1053
+    "net": 918,
+    "revenue": 1123
   },
   "data": {
-    "actions": 5421,
+    "actions": 5423,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2444,
+    "orders": 2445,
     "products": 60,
     "shifts": 57
   },
   "activity": [
+    {
+      "id": 1784362098153,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:08",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784362098153,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:08",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784360563124,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:18",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784355204212,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:13",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784355204212,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:13",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2444,
+    "current": 2445,
     "old": [
       {
         "createdAt": "2026-07-17T10:37:28.981Z",
@@ -79430,6 +79430,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-18T08:09:25.870Z",
+        "id": 3492,
+        "items": [
+          "Фреш лимон mini x2",
+          "Клубничный жасмин mini x1",
+          "Манго Маракуя mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-фреш-лимон-mini",
+            "name": "Фреш лимон mini",
+            "price": 15,
+            "qty": 2,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-манго-маракуя-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-18",
+        "shiftLabel": "Смена 18.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-07-18T08:08:18.045Z",
         "id": 3491,
@@ -159542,14 +159589,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 27,
-        "expectedOrders": 27,
+        "databaseOrders": 28,
+        "expectedOrders": 28,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-18",
         "label": "Смена 18.07",
         "missingOrders": 0,
-        "revenue": 1053,
+        "revenue": 1123,
         "status": "ok"
       },
       {
@@ -160294,12 +160341,12 @@
         "status": "ok"
       }
     ],
-    "total": 2444
+    "total": 2445
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 730
+      "total": 800
     },
     {
       "method": "Карта",
@@ -160319,6 +160366,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3492,
+      "items": [
+        "Фреш лимон mini x2",
+        "Клубничный жасмин mini x1",
+        "Манго Маракуя mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 3491,
       "items": [
@@ -160378,15 +160435,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3484,
-      "items": [
-        "Babl tea mini x1",
-        "Фреш лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 35
     }
   ],
   "shifts": {
@@ -160537,6 +160585,11 @@
       "total": 104
     },
     {
+      "name": "Манго Маракуя mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Клубника big",
       "qty": 3,
       "total": 78
@@ -160545,11 +160598,6 @@
       "name": "АйсМатча клубника",
       "qty": 2,
       "total": 70
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 3,
-      "total": 60
     },
     {
       "name": "Bubble Gum big",
@@ -160563,5 +160611,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-18T15:11:13.875Z"
+  "updatedAt": "2026-07-18T15:12:19.876Z"
 }

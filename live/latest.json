@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.76190476190476,
-    "checks": 21,
+    "average": 36.90909090909091,
+    "checks": 22,
     "expenseTotal": 205,
-    "net": 567,
-    "revenue": 772
+    "net": 607,
+    "revenue": 812
   },
   "data": {
-    "actions": 5409,
+    "actions": 5411,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2438,
+    "orders": 2439,
     "products": 60,
     "shifts": 57
   },
   "activity": [
     {
+      "id": 1784355204212,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:13",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784355204212,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:13",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784354474099,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784348472452,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:21",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784348472452,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:21",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2438,
+    "current": 2439,
     "old": [
       {
         "createdAt": "2026-07-17T10:37:28.981Z",
@@ -79430,6 +79430,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-18T06:18:15.659Z",
+        "id": 3486,
+        "items": [
+          "Манго Маракуя mini x1",
+          "Жасмин лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-лимон-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-18",
+        "shiftLabel": "Смена 18.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-18T06:13:24.111Z",
         "id": 3485,
@@ -159332,14 +159370,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 21,
-        "expectedOrders": 21,
+        "databaseOrders": 22,
+        "expectedOrders": 22,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-18",
         "label": "Смена 18.07",
         "missingOrders": 0,
-        "revenue": 772,
+        "revenue": 812,
         "status": "ok"
       },
       {
@@ -160084,12 +160122,12 @@
         "status": "ok"
       }
     ],
-    "total": 2438
+    "total": 2439
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 475
+      "total": 515
     },
     {
       "method": "Карта",
@@ -160109,6 +160147,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3486,
+      "items": [
+        "Манго Маракуя mini x1",
+        "Жасмин лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3485,
       "items": [
@@ -160163,14 +160210,6 @@
       "id": 3479,
       "items": [
         "Bubble Gum big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
-    },
-    {
-      "id": 3478,
-      "items": [
-        "Blue big x1"
       ],
       "status": "Оплачен",
       "total": 26
@@ -160324,6 +160363,11 @@
       "total": 70
     },
     {
+      "name": "Манго Маракуя mini",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Жасмин гранат big",
       "qty": 2,
       "total": 52
@@ -160334,7 +160378,7 @@
       "total": 52
     },
     {
-      "name": "Манго Маракуя mini",
+      "name": "Жасмин лимон mini",
       "qty": 2,
       "total": 40
     },
@@ -160342,13 +160386,8 @@
       "name": "Виноградный тропический mini",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "АйсМатча черника",
-      "qty": 1,
-      "total": 35
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-18T13:16:20.076Z"
+  "updatedAt": "2026-07-18T13:21:09.888Z"
 }

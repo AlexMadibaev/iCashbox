@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.90909090909091,
-    "checks": 22,
+    "average": 40.47826086956522,
+    "checks": 23,
     "expenseTotal": 205,
-    "net": 607,
-    "revenue": 812
+    "net": 726,
+    "revenue": 931
   },
   "data": {
-    "actions": 5411,
+    "actions": 5413,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2439,
+    "orders": 2440,
     "products": 60,
     "shifts": 57
   },
   "activity": [
     {
+      "id": 1784355495752,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784355495751,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:18",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784355204212,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:40",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784348575290,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:22",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784348575290,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:22",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2439,
+    "current": 2440,
     "old": [
       {
         "createdAt": "2026-07-17T10:37:28.981Z",
@@ -79430,6 +79430,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-18T06:22:25.843Z",
+        "id": 3487,
+        "items": [
+          "Blue big x2",
+          "Клубника big x2",
+          "Cake-Pops x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-big",
+            "name": "Blue big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          },
+          {
+            "id": "product-клубника-big",
+            "name": "Клубника big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          },
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 120,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-18",
+        "shiftLabel": "Смена 18.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 119
+      },
       {
         "createdAt": "2026-07-18T06:18:15.659Z",
         "id": 3486,
@@ -159370,14 +159417,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 22,
-        "expectedOrders": 22,
+        "databaseOrders": 23,
+        "expectedOrders": 23,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-18",
         "label": "Смена 18.07",
         "missingOrders": 0,
-        "revenue": 812,
+        "revenue": 931,
         "status": "ok"
       },
       {
@@ -160122,12 +160169,12 @@
         "status": "ok"
       }
     ],
-    "total": 2439
+    "total": 2440
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 515
+      "total": 634
     },
     {
       "method": "Карта",
@@ -160147,6 +160194,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3487,
+      "items": [
+        "Blue big x2",
+        "Клубника big x2",
+        "Cake-Pops x1"
+      ],
+      "status": "Оплачен",
+      "total": 119
+    },
     {
       "id": 3486,
       "items": [
@@ -160202,14 +160259,6 @@
       "id": 3480,
       "items": [
         "Жасмин гранат big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
-    },
-    {
-      "id": 3479,
-      "items": [
-        "Bubble Gum big x1"
       ],
       "status": "Оплачен",
       "total": 26
@@ -160353,9 +160402,19 @@
       "total": 180
     },
     {
+      "name": "Blue big",
+      "qty": 4,
+      "total": 104
+    },
+    {
       "name": "Айс Латте",
       "qty": 3,
       "total": 90
+    },
+    {
+      "name": "Клубника big",
+      "qty": 3,
+      "total": 78
     },
     {
       "name": "АйсМатча клубника",
@@ -160373,21 +160432,11 @@
       "total": 52
     },
     {
-      "name": "Blue big",
-      "qty": 2,
-      "total": 52
-    },
-    {
       "name": "Жасмин лимон mini",
-      "qty": 2,
-      "total": 40
-    },
-    {
-      "name": "Виноградный тропический mini",
       "qty": 2,
       "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-18T13:21:09.888Z"
+  "updatedAt": "2026-07-18T13:25:19.976Z"
 }

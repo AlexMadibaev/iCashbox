@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 38.34615384615385,
-    "checks": 26,
+    "average": 39,
+    "checks": 27,
     "expenseTotal": 205,
-    "net": 792,
-    "revenue": 997
+    "net": 848,
+    "revenue": 1053
   },
   "data": {
-    "actions": 5419,
+    "actions": 5421,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2443,
+    "orders": 2444,
     "products": 60,
     "shifts": 57
   },
   "activity": [
+    {
+      "id": 1784360563124,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:42",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784360563124,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:42",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784359386556,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:13",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784354474099,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:01",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784354474099,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:01",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2443,
+    "current": 2444,
     "old": [
       {
         "createdAt": "2026-07-17T10:37:28.981Z",
@@ -79430,6 +79430,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-18T08:08:18.045Z",
+        "id": 3491,
+        "items": [
+          "Bubble Gum big x1",
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-bubble-gum-big",
+            "name": "Bubble Gum big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 56,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-18",
+        "shiftLabel": "Смена 18.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 56
+      },
       {
         "createdAt": "2026-07-18T07:42:43.010Z",
         "id": 3490,
@@ -159504,14 +159542,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 26,
-        "expectedOrders": 26,
+        "databaseOrders": 27,
+        "expectedOrders": 27,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-18",
         "label": "Смена 18.07",
         "missingOrders": 0,
-        "revenue": 997,
+        "revenue": 1053,
         "status": "ok"
       },
       {
@@ -160256,12 +160294,12 @@
         "status": "ok"
       }
     ],
-    "total": 2443
+    "total": 2444
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 674
+      "total": 730
     },
     {
       "method": "Карта",
@@ -160281,6 +160319,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3491,
+      "items": [
+        "Bubble Gum big x1",
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 56
+    },
     {
       "id": 3490,
       "items": [
@@ -160340,15 +160387,6 @@
       ],
       "status": "Оплачен",
       "total": 35
-    },
-    {
-      "id": 3483,
-      "items": [
-        "Babl tea mini x1",
-        "Жасмин лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -160489,14 +160527,14 @@
       "total": 220
     },
     {
+      "name": "Айс Латте",
+      "qty": 4,
+      "total": 120
+    },
+    {
       "name": "Blue big",
       "qty": 4,
       "total": 104
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 3,
-      "total": 90
     },
     {
       "name": "Клубника big",
@@ -160514,16 +160552,16 @@
       "total": 60
     },
     {
-      "name": "Жасмин гранат big",
+      "name": "Bubble Gum big",
       "qty": 2,
       "total": 52
     },
     {
-      "name": "Жасмин лимон mini",
+      "name": "Жасмин гранат big",
       "qty": 2,
-      "total": 40
+      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-18T14:45:38.737Z"
+  "updatedAt": "2026-07-18T15:11:13.875Z"
 }

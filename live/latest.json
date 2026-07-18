@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.3125,
-    "checks": 16,
+    "average": 35.705882352941174,
+    "checks": 17,
     "expenseTotal": 205,
-    "net": 376,
-    "revenue": 581
+    "net": 402,
+    "revenue": 607
   },
   "data": {
-    "actions": 5399,
+    "actions": 5401,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2433,
+    "orders": 2434,
     "products": 60,
     "shifts": 57
   },
   "activity": [
     {
+      "id": 1784348575290,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784348575290,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784348472452,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:30",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784341125881,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:18",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784341125881,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:18",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2433,
+    "current": 2434,
     "old": [
       {
         "createdAt": "2026-07-17T10:37:28.981Z",
@@ -79430,6 +79430,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-18T04:40:57.798Z",
+        "id": 3481,
+        "items": [
+          "Жасмин гранат big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-гранат-big",
+            "name": "Жасмин гранат big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-18",
+        "shiftLabel": "Смена 18.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-18T04:22:55.177Z",
         "id": 3480,
@@ -159169,14 +159198,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 16,
-        "expectedOrders": 16,
+        "databaseOrders": 17,
+        "expectedOrders": 17,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-18",
         "label": "Смена 18.07",
         "missingOrders": 0,
-        "revenue": 581,
+        "revenue": 607,
         "status": "ok"
       },
       {
@@ -159921,12 +159950,12 @@
         "status": "ok"
       }
     ],
-    "total": 2433
+    "total": 2434
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 374
+      "total": 400
     },
     {
       "method": "Карта",
@@ -159946,6 +159975,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3481,
+      "items": [
+        "Жасмин гранат big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 3480,
       "items": [
@@ -160001,14 +160038,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3473,
-      "items": [
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -160154,6 +160183,11 @@
       "total": 90
     },
     {
+      "name": "Жасмин гранат big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Blue big",
       "qty": 2,
       "total": 52
@@ -160177,13 +160211,8 @@
       "name": "АйсМатча манго",
       "qty": 1,
       "total": 35
-    },
-    {
-      "name": "Жасмин гранат big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-18T11:25:49.374Z"
+  "updatedAt": "2026-07-18T11:43:53.516Z"
 }

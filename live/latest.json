@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 37.111111111111114,
-    "checks": 18,
+    "average": 36.526315789473685,
+    "checks": 19,
     "expenseTotal": 205,
-    "net": 463,
-    "revenue": 668
+    "net": 489,
+    "revenue": 694
   },
   "data": {
-    "actions": 5482,
+    "actions": 5484,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2474,
+    "orders": 2475,
     "products": 60,
     "shifts": 58
   },
   "activity": [
+    {
+      "id": 1784441042942,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:04",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784441042942,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:04",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784440673555,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:57",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784432883251,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:48",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784432883251,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:48",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2474,
+    "current": 2475,
     "old": [
       {
         "createdAt": "2026-07-18T10:20:18.753Z",
@@ -80714,6 +80714,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-19T07:07:17.414Z",
+        "id": 3522,
+        "items": [
+          "Клубника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-big",
+            "name": "Клубника big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 26,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-19",
+        "shiftLabel": "Смена 19.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-19T06:04:02.825Z",
         "id": 3521,
@@ -161813,14 +161842,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 18,
-        "expectedOrders": 18,
+        "databaseOrders": 19,
+        "expectedOrders": 19,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-19",
         "label": "Смена 19.07",
         "missingOrders": 0,
-        "revenue": 668,
+        "revenue": 694,
         "status": "ok"
       },
       {
@@ -162578,7 +162607,7 @@
         "status": "ok"
       }
     ],
-    "total": 2474
+    "total": 2475
   },
   "payments": [
     {
@@ -162591,7 +162620,7 @@
     },
     {
       "method": "Alif",
-      "total": 90
+      "total": 116
     },
     {
       "method": "Dushanbe City",
@@ -162603,6 +162632,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3522,
+      "items": [
+        "Клубника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 3521,
       "items": [
@@ -162659,15 +162696,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 3514,
-      "items": [
-        "Matcha mini x1",
-        "Жасмин гранат mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -162803,6 +162831,11 @@
   },
   "topProducts": [
     {
+      "name": "Клубника big",
+      "qty": 4,
+      "total": 104
+    },
+    {
       "name": "Babl tea big",
       "qty": 4,
       "total": 104
@@ -162816,11 +162849,6 @@
       "name": "Babl tea mini",
       "qty": 4,
       "total": 80
-    },
-    {
-      "name": "Клубника big",
-      "qty": 3,
-      "total": 78
     },
     {
       "name": "Blue mini",
@@ -162844,5 +162872,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-19T13:07:00.129Z"
+  "updatedAt": "2026-07-19T14:10:15.139Z"
 }

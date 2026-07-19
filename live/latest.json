@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.23076923076923,
-    "checks": 13,
+    "average": 40.142857142857146,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 279,
-    "revenue": 484
+    "net": 357,
+    "revenue": 562
   },
   "data": {
-    "actions": 5472,
+    "actions": 5474,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2469,
+    "orders": 2470,
     "products": 60,
     "shifts": 58
   },
   "activity": [
     {
+      "id": 1784437028386,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:57",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784437028385,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:57",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784432883251,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784427393235,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:16",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784427393235,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:16",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2469,
+    "current": 2470,
     "old": [
       {
         "createdAt": "2026-07-18T10:20:18.753Z",
@@ -80714,6 +80714,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-19T05:25:46.268Z",
+        "id": 3517,
+        "items": [
+          "Клубника big x3"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-big",
+            "name": "Клубника big",
+            "price": 26,
+            "qty": 3,
+            "size": "",
+            "total": 78
+          }
+        ],
+        "payments": {
+          "Наличные": 80,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-19",
+        "shiftLabel": "Смена 19.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 78
+      },
       {
         "createdAt": "2026-07-19T04:57:08.286Z",
         "id": 3516,
@@ -161659,14 +161688,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-19",
         "label": "Смена 19.07",
         "missingOrders": 0,
-        "revenue": 484,
+        "revenue": 562,
         "status": "ok"
       },
       {
@@ -162424,12 +162453,12 @@
         "status": "ok"
       }
     ],
-    "total": 2469
+    "total": 2470
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 272
+      "total": 350
     },
     {
       "method": "Карта",
@@ -162449,6 +162478,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3517,
+      "items": [
+        "Клубника big x3"
+      ],
+      "status": "Оплачен",
+      "total": 78
+    },
     {
       "id": 3516,
       "items": [
@@ -162508,14 +162545,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3509,
-      "items": [
-        "Babl tea big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -162656,6 +162685,11 @@
       "total": 104
     },
     {
+      "name": "Клубника big",
+      "qty": 3,
+      "total": 78
+    },
+    {
       "name": "Babl tea big",
       "qty": 3,
       "total": 78
@@ -162684,13 +162718,8 @@
       "name": "Клубничный жасмин big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-19T12:00:06.114Z"
+  "updatedAt": "2026-07-19T12:28:44.107Z"
 }

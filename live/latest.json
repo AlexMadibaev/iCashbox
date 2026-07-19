@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 31.666666666666668,
-    "checks": 6,
+    "average": 30,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": -15,
-    "revenue": 190
+    "net": 5,
+    "revenue": 210
   },
   "data": {
-    "actions": 5458,
+    "actions": 5460,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2462,
+    "orders": 2463,
     "products": 60,
     "shifts": 58
   },
   "activity": [
     {
+      "id": 1784427349092,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:15",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784427349092,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:15",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784424755889,
       "source": "Локально",
       "status": "Сохранено",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "11:06",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1784407966833,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "08:52",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1784370018866,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:20",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2462,
+    "current": 2463,
     "old": [
       {
         "createdAt": "2026-07-18T10:20:18.753Z",
@@ -80714,6 +80714,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-19T02:16:33.143Z",
+        "id": 3510,
+        "items": [
+          "Манго mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-mini",
+            "name": "Манго mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 20,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-19",
+        "shiftLabel": "Смена 19.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-19T02:15:48.998Z",
         "id": 3509,
@@ -161420,14 +161449,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-19",
         "label": "Смена 19.07",
         "missingOrders": 0,
-        "revenue": 190,
+        "revenue": 210,
         "status": "ok"
       },
       {
@@ -162185,7 +162214,7 @@
         "status": "ok"
       }
     ],
-    "total": 2462
+    "total": 2463
   },
   "payments": [
     {
@@ -162194,7 +162223,7 @@
     },
     {
       "method": "Карта",
-      "total": 26
+      "total": 46
     },
     {
       "method": "Alif",
@@ -162210,6 +162239,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3510,
+      "items": [
+        "Манго mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3509,
       "items": [
@@ -162418,11 +162455,16 @@
       "total": 26
     },
     {
+      "name": "Манго mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Babl tea mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-19T09:18:46.990Z"
+  "updatedAt": "2026-07-19T09:19:29.227Z"
 }

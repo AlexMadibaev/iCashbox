@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.44444444444444,
-    "checks": 9,
+    "average": 37.8,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 123,
-    "revenue": 328
+    "net": 173,
+    "revenue": 378
   },
   "data": {
-    "actions": 5464,
+    "actions": 5466,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2465,
+    "orders": 2466,
     "products": 60,
     "shifts": 58
   },
   "activity": [
     {
+      "id": 1784428832762,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:40",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784428832762,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:40",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784427868283,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:59",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784417187632,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:26",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784417187632,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:26",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2465,
+    "current": 2466,
     "old": [
       {
         "createdAt": "2026-07-18T10:20:18.753Z",
@@ -80714,6 +80714,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-19T03:23:57.492Z",
+        "id": 3513,
+        "items": [
+          "Blue mini x1",
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-19",
+        "shiftLabel": "Смена 19.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-19T02:40:32.668Z",
         "id": 3512,
@@ -161525,14 +161563,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-19",
         "label": "Смена 19.07",
         "missingOrders": 0,
-        "revenue": 328,
+        "revenue": 378,
         "status": "ok"
       },
       {
@@ -162290,12 +162328,12 @@
         "status": "ok"
       }
     ],
-    "total": 2465
+    "total": 2466
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 196
+      "total": 246
     },
     {
       "method": "Карта",
@@ -162315,6 +162353,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3513,
+      "items": [
+        "Blue mini x1",
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 3512,
       "items": [
@@ -162372,14 +162419,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 3505,
-      "items": [
-        "Жасмин лимон mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -162525,9 +162564,19 @@
       "total": 52
     },
     {
+      "name": "Blue mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Жасмин лимон mini",
       "qty": 2,
       "total": 40
+    },
+    {
+      "name": "Айс Латте",
+      "qty": 1,
+      "total": 30
     },
     {
       "name": "Клубничный жасмин big",
@@ -162540,21 +162589,11 @@
       "total": 26
     },
     {
-      "name": "Blue mini",
-      "qty": 1,
-      "total": 20
-    },
-    {
       "name": "Клубника mini",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Манго mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-19T09:43:30.448Z"
+  "updatedAt": "2026-07-19T10:26:55.580Z"
 }

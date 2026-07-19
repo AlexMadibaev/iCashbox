@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 46,
-    "checks": 2,
+    "average": 39.333333333333336,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -113,
-    "revenue": 92
+    "net": -87,
+    "revenue": 118
   },
   "data": {
-    "actions": 5450,
+    "actions": 5452,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2458,
+    "orders": 2459,
     "products": 60,
     "shifts": 58
   },
   "activity": [
+    {
+      "id": 1784416492504,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:14",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784416492504,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:14",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784415982338,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:30",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784367032514,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:30",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784366399266,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:19",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2458,
+    "current": 2459,
     "old": [
       {
         "createdAt": "2026-07-18T10:20:18.753Z",
@@ -80714,6 +80714,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-18T23:26:27.529Z",
+        "id": 3506,
+        "items": [
+          "Манго big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-big",
+            "name": "Манго big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-19",
+        "shiftLabel": "Смена 19.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-18T23:14:52.382Z",
         "id": 3505,
@@ -161304,14 +161333,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-19",
         "label": "Смена 19.07",
         "missingOrders": 0,
-        "revenue": 92,
+        "revenue": 118,
         "status": "ok"
       },
       {
@@ -162069,12 +162098,12 @@
         "status": "ok"
       }
     ],
-    "total": 2458
+    "total": 2459
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 92
+      "total": 118
     },
     {
       "method": "Карта",
@@ -162094,6 +162123,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3506,
+      "items": [
+        "Манго big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 3505,
       "items": [
@@ -162250,6 +162287,11 @@
       "total": 40
     },
     {
+      "name": "Манго big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Babl tea big",
       "qty": 1,
       "total": 26
@@ -162261,5 +162303,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-19T06:17:50.234Z"
+  "updatedAt": "2026-07-19T06:29:25.238Z"
 }

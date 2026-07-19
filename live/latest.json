@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.8,
-    "checks": 10,
+    "average": 38.90909090909091,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 173,
-    "revenue": 378
+    "net": 223,
+    "revenue": 428
   },
   "data": {
-    "actions": 5466,
+    "actions": 5468,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2466,
+    "orders": 2467,
     "products": 60,
     "shifts": 58
   },
   "activity": [
     {
+      "id": 1784431437590,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:23",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784431437590,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:23",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784428832762,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:32",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784419178966,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:59",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784419178966,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:59",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2466,
+    "current": 2467,
     "old": [
       {
         "createdAt": "2026-07-18T10:20:18.753Z",
@@ -80714,6 +80714,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-19T03:34:34.858Z",
+        "id": 3514,
+        "items": [
+          "Matcha mini x1",
+          "Жасмин гранат mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-жасмин-гранат-mini",
+            "name": "Жасмин гранат mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 50,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-19",
+        "shiftLabel": "Смена 19.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-19T03:23:57.492Z",
         "id": 3513,
@@ -161563,14 +161601,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-19",
         "label": "Смена 19.07",
         "missingOrders": 0,
-        "revenue": 378,
+        "revenue": 428,
         "status": "ok"
       },
       {
@@ -162328,7 +162366,7 @@
         "status": "ok"
       }
     ],
-    "total": 2466
+    "total": 2467
   },
   "payments": [
     {
@@ -162341,7 +162379,7 @@
     },
     {
       "method": "Alif",
-      "total": 20
+      "total": 70
     },
     {
       "method": "Dushanbe City",
@@ -162353,6 +162391,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3514,
+      "items": [
+        "Matcha mini x1",
+        "Жасмин гранат mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 3513,
       "items": [
@@ -162411,14 +162458,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3506,
-      "items": [
-        "Манго big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -162574,6 +162613,11 @@
       "total": 40
     },
     {
+      "name": "Matcha mini",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
@@ -162587,13 +162631,8 @@
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Клубника mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-19T10:26:55.580Z"
+  "updatedAt": "2026-07-19T10:37:32.420Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.56,
-    "checks": 25,
+    "average": 40.76923076923077,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 809,
-    "revenue": 1014
+    "net": 855,
+    "revenue": 1060
   },
   "data": {
-    "actions": 5496,
+    "actions": 5498,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2481,
+    "orders": 2482,
     "products": 60,
     "shifts": 58
   },
   "activity": [
     {
+      "id": 1784452048777,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:07",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784452048777,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:07",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784451314674,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:10",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784444837524,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:07",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784444837524,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:07",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2481,
+    "current": 2482,
     "old": [
       {
         "createdAt": "2026-07-18T10:20:18.753Z",
@@ -80714,6 +80714,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-19T09:33:58.464Z",
+        "id": 3529,
+        "items": [
+          "Манго Маракуя big x1",
+          "Bubble Gum mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 46,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-19",
+        "shiftLabel": "Смена 19.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-07-19T09:07:28.673Z",
         "id": 3528,
@@ -162052,14 +162090,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-19",
         "label": "Смена 19.07",
         "missingOrders": 0,
-        "revenue": 1014,
+        "revenue": 1060,
         "status": "ok"
       },
       {
@@ -162817,7 +162855,7 @@
         "status": "ok"
       }
     ],
-    "total": 2481
+    "total": 2482
   },
   "payments": [
     {
@@ -162830,7 +162868,7 @@
     },
     {
       "method": "Alif",
-      "total": 304
+      "total": 350
     },
     {
       "method": "Dushanbe City",
@@ -162842,6 +162880,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3529,
+      "items": [
+        "Манго Маракуя big x1",
+        "Bubble Gum mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 3528,
       "items": [
@@ -162901,14 +162948,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 3521,
-      "items": [
-        "Blue mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -163085,5 +163124,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-19T16:10:26.347Z"
+  "updatedAt": "2026-07-19T16:36:55.876Z"
 }

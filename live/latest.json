@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 22.5,
-    "checks": 2,
+    "average": 19.333333333333332,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -160,
-    "revenue": 45
+    "net": -147,
+    "revenue": 58
   },
   "data": {
-    "actions": 5505,
+    "actions": 5507,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2485,
+    "orders": 2486,
     "products": 60,
     "shifts": 59
   },
   "activity": [
+    {
+      "id": 1784499484113,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784499484113,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:18",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784499231623,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:55",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784451314674,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:55",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784450810701,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:46",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2485,
+    "current": 2486,
     "old": [
       {
         "createdAt": "2026-07-19T10:10:36.286Z",
@@ -81596,6 +81596,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-19T22:19:17.261Z",
+        "id": 3533,
+        "items": [
+          "Эспрессо x1"
+        ],
+        "lines": [
+          {
+            "id": "product-эспрессо",
+            "name": "Эспрессо",
+            "price": 13,
+            "qty": 1,
+            "size": "",
+            "total": 13
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 13,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-20",
+        "shiftLabel": "Смена 20.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 13
+      },
       {
         "createdAt": "2026-07-19T22:18:04.026Z",
         "id": 3532,
@@ -163059,14 +163088,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-20",
         "label": "Смена 20.07",
         "missingOrders": 0,
-        "revenue": 45,
+        "revenue": 58,
         "status": "ok"
       },
       {
@@ -163837,7 +163866,7 @@
         "status": "ok"
       }
     ],
-    "total": 2485
+    "total": 2486
   },
   "payments": [
     {
@@ -163850,7 +163879,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 13
     },
     {
       "method": "Dushanbe City",
@@ -163862,6 +163891,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3533,
+      "items": [
+        "Эспрессо x1"
+      ],
+      "status": "Оплачен",
+      "total": 13
+    },
     {
       "id": 3532,
       "items": [
@@ -164020,8 +164057,13 @@
       "name": "Blue mini",
       "qty": 1,
       "total": 20
+    },
+    {
+      "name": "Эспрессо",
+      "qty": 1,
+      "total": 13
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-20T05:21:01.245Z"
+  "updatedAt": "2026-07-20T05:22:14.672Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.42857142857143,
-    "checks": 28,
+    "average": 37.51724137931034,
+    "checks": 29,
     "expenseTotal": 205,
-    "net": 843,
-    "revenue": 1048
+    "net": 883,
+    "revenue": 1088
   },
   "data": {
-    "actions": 5557,
+    "actions": 5559,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2511,
+    "orders": 2512,
     "products": 60,
     "shifts": 59
   },
   "activity": [
     {
+      "id": 1784529400698,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:36",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784529400698,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:36",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784528893117,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:58",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784519660130,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:54",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784519660130,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:54",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2511,
+    "current": 2512,
     "old": [
       {
         "createdAt": "2026-07-19T10:10:36.286Z",
@@ -81596,6 +81596,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-20T06:49:47.046Z",
+        "id": 3559,
+        "items": [
+          "Blue mini x1",
+          "Жасмин лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-лимон-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-20",
+        "shiftLabel": "Смена 20.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-20T06:36:40.597Z",
         "id": 3558,
@@ -163858,14 +163896,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 28,
-        "expectedOrders": 28,
+        "databaseOrders": 29,
+        "expectedOrders": 29,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-20",
         "label": "Смена 20.07",
         "missingOrders": 0,
-        "revenue": 1048,
+        "revenue": 1088,
         "status": "ok"
       },
       {
@@ -164636,7 +164674,7 @@
         "status": "ok"
       }
     ],
-    "total": 2511
+    "total": 2512
   },
   "payments": [
     {
@@ -164649,7 +164687,7 @@
     },
     {
       "method": "Alif",
-      "total": 41
+      "total": 81
     },
     {
       "method": "Dushanbe City",
@@ -164661,6 +164699,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3559,
+      "items": [
+        "Blue mini x1",
+        "Жасмин лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3558,
       "items": [
@@ -164716,15 +164763,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3551,
-      "items": [
-        "Matcha mini x1",
-        "Клубника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 56
     }
   ],
   "shifts": {
@@ -164890,16 +164928,16 @@
       "total": 78
     },
     {
-      "name": "Виноградный тропический mini",
+      "name": "Blue mini",
       "qty": 2,
       "total": 40
     },
     {
-      "name": "Клубника mini",
+      "name": "Виноградный тропический mini",
       "qty": 2,
       "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-20T13:39:39.327Z"
+  "updatedAt": "2026-07-20T13:52:45.844Z"
 }

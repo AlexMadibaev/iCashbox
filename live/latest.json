@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.411764705882355,
-    "checks": 34,
+    "average": 37.08571428571429,
+    "checks": 35,
     "expenseTotal": 205,
-    "net": 1067,
-    "revenue": 1272
+    "net": 1093,
+    "revenue": 1298
   },
   "data": {
-    "actions": 5569,
+    "actions": 5571,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2517,
+    "orders": 2518,
     "products": 60,
     "shifts": 59
   },
   "activity": [
     {
+      "id": 1784533360842,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:42",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784533360842,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:42",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784533111297,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:49",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784529400698,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784529400698,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:36",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2517,
+    "current": 2518,
     "old": [
       {
         "createdAt": "2026-07-19T10:10:36.286Z",
@@ -81596,6 +81596,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-20T07:43:30.867Z",
+        "id": 3565,
+        "items": [
+          "Жасмин лимон big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-лимон-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-20",
+        "shiftLabel": "Смена 20.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-20T07:42:40.730Z",
         "id": 3564,
@@ -164059,14 +164088,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-20",
         "label": "Смена 20.07",
         "missingOrders": 0,
-        "revenue": 1272,
+        "revenue": 1298,
         "status": "ok"
       },
       {
@@ -164837,12 +164866,12 @@
         "status": "ok"
       }
     ],
-    "total": 2517
+    "total": 2518
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 981
+      "total": 1007
     },
     {
       "method": "Карта",
@@ -164862,6 +164891,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3565,
+      "items": [
+        "Жасмин лимон big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 3564,
       "items": [
@@ -164920,14 +164957,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3557,
-      "items": [
-        "Babl tea big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -165088,6 +165117,11 @@
       "total": 90
     },
     {
+      "name": "Жасмин лимон big",
+      "qty": 3,
+      "total": 78
+    },
+    {
       "name": "Babl tea big",
       "qty": 3,
       "total": 78
@@ -165096,13 +165130,8 @@
       "name": "Виноградный тропический mini",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Жасмин лимон big",
-      "qty": 2,
-      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-20T14:45:38.526Z"
+  "updatedAt": "2026-07-20T14:46:28.087Z"
 }

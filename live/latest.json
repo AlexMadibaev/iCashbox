@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.888888888888886,
-    "checks": 36,
+    "average": 40.13513513513514,
+    "checks": 37,
     "expenseTotal": 205,
-    "net": 1159,
-    "revenue": 1364
+    "net": 1280,
+    "revenue": 1485
   },
   "data": {
-    "actions": 5573,
+    "actions": 5575,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2519,
+    "orders": 2520,
     "products": 60,
     "shifts": 59
   },
   "activity": [
     {
+      "id": 1784537013302,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:43",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784537013302,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:43",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784533411005,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:00",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784530575394,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:56",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784530575394,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:56",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2519,
+    "current": 2520,
     "old": [
       {
         "createdAt": "2026-07-19T10:10:36.286Z",
@@ -81596,6 +81596,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-20T08:46:05.763Z",
+        "id": 3567,
+        "items": [
+          "Babl tea mini x2",
+          "Babl tea big x1",
+          "Жасмин гранат mini x1",
+          "АйсМатча клубника x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-жасмин-гранат-mini",
+            "name": "Жасмин гранат mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 121,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-20",
+        "shiftLabel": "Смена 20.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 121
+      },
       {
         "createdAt": "2026-07-20T08:43:33.188Z",
         "id": 3566,
@@ -164135,14 +164191,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 36,
-        "expectedOrders": 36,
+        "databaseOrders": 37,
+        "expectedOrders": 37,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-20",
         "label": "Смена 20.07",
         "missingOrders": 0,
-        "revenue": 1364,
+        "revenue": 1485,
         "status": "ok"
       },
       {
@@ -164913,7 +164969,7 @@
         "status": "ok"
       }
     ],
-    "total": 2519
+    "total": 2520
   },
   "payments": [
     {
@@ -164930,7 +164986,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 118
+      "total": 239
     },
     {
       "method": "Семья",
@@ -164938,6 +164994,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3567,
+      "items": [
+        "Babl tea mini x2",
+        "Babl tea big x1",
+        "Жасмин гранат mini x1",
+        "АйсМатча клубника x1"
+      ],
+      "status": "Оплачен",
+      "total": 121
+    },
     {
       "id": 3566,
       "items": [
@@ -164997,15 +165064,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 3559,
-      "items": [
-        "Blue mini x1",
-        "Жасмин лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -165142,8 +165200,13 @@
   "topProducts": [
     {
       "name": "АйсМатча клубника",
-      "qty": 5,
-      "total": 175
+      "qty": 6,
+      "total": 210
+    },
+    {
+      "name": "Babl tea mini",
+      "qty": 8,
+      "total": 160
     },
     {
       "name": "Blue big",
@@ -165156,9 +165219,9 @@
       "total": 130
     },
     {
-      "name": "Babl tea mini",
-      "qty": 6,
-      "total": 120
+      "name": "Babl tea big",
+      "qty": 4,
+      "total": 104
     },
     {
       "name": "Matcha mini",
@@ -165171,16 +165234,11 @@
       "total": 78
     },
     {
-      "name": "Babl tea big",
-      "qty": 3,
-      "total": 78
-    },
-    {
-      "name": "Виноградный тропический mini",
+      "name": "Жасмин гранат mini",
       "qty": 3,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-20T15:46:32.038Z"
+  "updatedAt": "2026-07-20T15:49:02.929Z"
 }

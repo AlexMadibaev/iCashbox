@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 24,
-    "checks": 4,
+    "average": 33.2,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": -109,
-    "revenue": 96
+    "net": -39,
+    "revenue": 166
   },
   "data": {
-    "actions": 5604,
+    "actions": 5606,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2534,
+    "orders": 2535,
     "products": 60,
     "shifts": 60
   },
   "activity": [
+    {
+      "id": 1784587500663,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:45",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784587500663,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:45",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784587464104,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:08",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784542119528,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784541973180,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:06",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2534,
+    "current": 2535,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-20T23:14:13.561Z",
+        "id": 3582,
+        "items": [
+          "АйсМатча черника x2"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-черника",
+            "name": "АйсМатча черника",
+            "price": 35,
+            "qty": 2,
+            "size": "",
+            "total": 70
+          }
+        ],
+        "payments": {
+          "Наличные": 70,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-07-20T22:45:00.566Z",
         "id": 3581,
@@ -166095,14 +166124,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 96,
+        "revenue": 166,
         "status": "ok"
       },
       {
@@ -166886,12 +166915,12 @@
         "status": "ok"
       }
     ],
-    "total": 2534
+    "total": 2535
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 46
+      "total": 116
     },
     {
       "method": "Карта",
@@ -166911,6 +166940,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3582,
+      "items": [
+        "АйсМатча черника x2"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 3581,
       "items": [
@@ -167077,6 +167114,11 @@
   },
   "topProducts": [
     {
+      "name": "АйсМатча черника",
+      "qty": 2,
+      "total": 70
+    },
+    {
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
@@ -167098,5 +167140,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T05:47:59.698Z"
+  "updatedAt": "2026-07-21T06:17:14.405Z"
 }

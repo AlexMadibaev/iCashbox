@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 31.142857142857142,
-    "checks": 7,
+    "average": 33.5,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": 13,
-    "revenue": 218
+    "net": 63,
+    "revenue": 268
   },
   "data": {
-    "actions": 5610,
+    "actions": 5612,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2537,
+    "orders": 2538,
     "products": 60,
     "shifts": 60
   },
   "activity": [
     {
+      "id": 1784590296504,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:31",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784590296504,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:31",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784590019278,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "10:29",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784584322473,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:52",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784584322473,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:52",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2537,
+    "current": 2538,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-20T23:52:30.020Z",
+        "id": 3585,
+        "items": [
+          "Cake-Pops x2",
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 2,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-20T23:31:36.402Z",
         "id": 3584,
@@ -166182,14 +166220,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 218,
+        "revenue": 268,
         "status": "ok"
       },
       {
@@ -166973,12 +167011,12 @@
         "status": "ok"
       }
     ],
-    "total": 2537
+    "total": 2538
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 168
+      "total": 218
     },
     {
       "method": "Карта",
@@ -166998,6 +167036,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3585,
+      "items": [
+        "Cake-Pops x2",
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 3584,
       "items": [
@@ -167193,6 +167240,11 @@
       "total": 70
     },
     {
+      "name": "Cake-Pops",
+      "qty": 2,
+      "total": 30
+    },
+    {
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
@@ -167213,16 +167265,16 @@
       "total": 26
     },
     {
-      "name": "Blue mini",
+      "name": "Babl tea mini",
       "qty": 1,
       "total": 20
     },
     {
-      "name": "Манго Маракуя mini",
+      "name": "Blue mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T06:34:35.553Z"
+  "updatedAt": "2026-07-21T06:55:30.906Z"
 }

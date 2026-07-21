@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.375,
-    "checks": 32,
+    "average": 34.121212121212125,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 895,
-    "revenue": 1100
+    "net": 921,
+    "revenue": 1126
   },
   "data": {
-    "actions": 5660,
+    "actions": 5662,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2562,
+    "orders": 2563,
     "products": 60,
     "shifts": 60
   },
   "activity": [
     {
+      "id": 1784617761117,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:09",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784617761117,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:09",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784616706007,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:05",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784613489192,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:58",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784613489192,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:58",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2562,
+    "current": 2563,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-21T07:41:05.823Z",
+        "id": 3610,
+        "items": [
+          "Манго Маракуя big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 26,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-21T07:09:20.989Z",
         "id": 3609,
@@ -166997,14 +167026,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 32,
-        "expectedOrders": 32,
+        "databaseOrders": 33,
+        "expectedOrders": 33,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 1100,
+        "revenue": 1126,
         "status": "ok"
       },
       {
@@ -167788,7 +167817,7 @@
         "status": "ok"
       }
     ],
-    "total": 2562
+    "total": 2563
   },
   "payments": [
     {
@@ -167801,7 +167830,7 @@
     },
     {
       "method": "Alif",
-      "total": 142
+      "total": 168
     },
     {
       "method": "Dushanbe City",
@@ -167813,6 +167842,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3610,
+      "items": [
+        "Манго Маракуя big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 3609,
       "items": [
@@ -167871,14 +167908,6 @@
       ],
       "status": "Оплачен",
       "total": 46
-    },
-    {
-      "id": 3602,
-      "items": [
-        "Matcha big x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -168039,6 +168068,11 @@
       "total": 80
     },
     {
+      "name": "Манго Маракуя big",
+      "qty": 3,
+      "total": 78
+    },
+    {
       "name": "Клубничный жасмин mini",
       "qty": 3,
       "total": 60
@@ -168047,13 +168081,8 @@
       "name": "Bubble Gum big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "Blue big",
-      "qty": 2,
-      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T14:12:21.778Z"
+  "updatedAt": "2026-07-21T14:44:06.503Z"
 }

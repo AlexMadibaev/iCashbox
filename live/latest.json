@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.416666666666664,
-    "checks": 24,
+    "average": 34.64,
+    "checks": 25,
     "expenseTotal": 205,
-    "net": 621,
-    "revenue": 826
+    "net": 661,
+    "revenue": 866
   },
   "data": {
-    "actions": 5644,
+    "actions": 5646,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2554,
+    "orders": 2555,
     "products": 60,
     "shifts": 60
   },
   "activity": [
     {
+      "id": 1784613075091,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:51",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784613075091,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:51",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784611240854,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:44",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784605257007,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:40",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784605257007,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:40",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2554,
+    "current": 2555,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-21T05:52:31.610Z",
+        "id": 3602,
+        "items": [
+          "Matcha big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-21T05:51:14.988Z",
         "id": 3601,
@@ -166738,14 +166767,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 24,
-        "expectedOrders": 24,
+        "databaseOrders": 25,
+        "expectedOrders": 25,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 826,
+        "revenue": 866,
         "status": "ok"
       },
       {
@@ -167529,7 +167558,7 @@
         "status": "ok"
       }
     ],
-    "total": 2554
+    "total": 2555
   },
   "payments": [
     {
@@ -167542,7 +167571,7 @@
     },
     {
       "method": "Alif",
-      "total": 102
+      "total": 142
     },
     {
       "method": "Dushanbe City",
@@ -167554,6 +167583,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3602,
+      "items": [
+        "Matcha big x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3601,
       "items": [
@@ -167611,15 +167648,6 @@
       ],
       "status": "Оплачен",
       "total": 35
-    },
-    {
-      "id": 3594,
-      "items": [
-        "Манго Маракуя mini x1",
-        "АйсМатча черника x1"
-      ],
-      "status": "Оплачен",
-      "total": 55
     }
   ],
   "shifts": {
@@ -167790,11 +167818,11 @@
       "total": 45
     },
     {
-      "name": "Bubble Gum mini",
-      "qty": 2,
+      "name": "Matcha big",
+      "qty": 1,
       "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T12:54:15.961Z"
+  "updatedAt": "2026-07-21T12:55:30.752Z"
 }

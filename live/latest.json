@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 30.8,
-    "checks": 10,
+    "average": 33.45454545454545,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 103,
-    "revenue": 308
+    "net": 163,
+    "revenue": 368
   },
   "data": {
-    "actions": 5616,
+    "actions": 5618,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2540,
+    "orders": 2541,
     "products": 60,
     "shifts": 60
   },
   "activity": [
     {
+      "id": 1784592188111,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:03",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784592188111,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:03",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784592170596,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:14",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784587500663,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:45",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784587500663,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:45",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2540,
+    "current": 2541,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-21T00:36:57.793Z",
+        "id": 3588,
+        "items": [
+          "Babl tea mini x2",
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 200,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-21T00:03:08.011Z",
         "id": 3587,
@@ -166278,14 +166316,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 308,
+        "revenue": 368,
         "status": "ok"
       },
       {
@@ -167069,12 +167107,12 @@
         "status": "ok"
       }
     ],
-    "total": 2540
+    "total": 2541
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 258
+      "total": 318
     },
     {
       "method": "Карта",
@@ -167094,6 +167132,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3588,
+      "items": [
+        "Babl tea mini x2",
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3587,
       "items": [
@@ -167150,14 +167197,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 3580,
-      "items": [
-        "Жасмин гранат big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -167293,14 +167332,14 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "АйсМатча черника",
       "qty": 2,
       "total": 70
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 2,
-      "total": 40
     },
     {
       "name": "Cake-Pops",
@@ -167328,11 +167367,11 @@
       "total": 26
     },
     {
-      "name": "Bubble Gum mini",
+      "name": "Клубника mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T07:06:06.937Z"
+  "updatedAt": "2026-07-21T07:39:58.491Z"
 }

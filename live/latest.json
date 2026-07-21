@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.31578947368421,
-    "checks": 38,
+    "average": 34.53846153846154,
+    "checks": 39,
     "expenseTotal": 205,
-    "net": 1061,
-    "revenue": 1266
+    "net": 1142,
+    "revenue": 1347
   },
   "data": {
-    "actions": 5672,
+    "actions": 5674,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2568,
+    "orders": 2569,
     "products": 60,
     "shifts": 60
   },
   "activity": [
     {
+      "id": 1784622947889,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:35",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784622947889,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:35",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784622051752,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784617761117,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:09",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784617761117,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:09",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2568,
+    "current": 2569,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-21T08:50:30.912Z",
+        "id": 3616,
+        "items": [
+          "АйсМатча черника x1",
+          "Blue mini x1",
+          "Bubble Gum big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-черника",
+            "name": "АйсМатча черника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-bubble-gum-big",
+            "name": "Bubble Gum big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 101,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 81
+      },
       {
         "createdAt": "2026-07-21T08:35:47.776Z",
         "id": 3615,
@@ -167189,14 +167236,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 38,
-        "expectedOrders": 38,
+        "databaseOrders": 39,
+        "expectedOrders": 39,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 1266,
+        "revenue": 1347,
         "status": "ok"
       },
       {
@@ -167980,12 +168027,12 @@
         "status": "ok"
       }
     ],
-    "total": 2568
+    "total": 2569
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 898
+      "total": 979
     },
     {
       "method": "Карта",
@@ -168005,6 +168052,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3616,
+      "items": [
+        "АйсМатча черника x1",
+        "Blue mini x1",
+        "Bubble Gum big x1"
+      ],
+      "status": "Оплачен",
+      "total": 81
+    },
     {
       "id": 3615,
       "items": [
@@ -168059,14 +168116,6 @@
       "id": 3609,
       "items": [
         "Клубничный жасмин mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 3608,
-      "items": [
-        "Blue mini x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -168205,6 +168254,11 @@
   },
   "topProducts": [
     {
+      "name": "АйсМатча черника",
+      "qty": 4,
+      "total": 140
+    },
+    {
       "name": "Babl tea mini",
       "qty": 7,
       "total": 140
@@ -168220,31 +168274,26 @@
       "total": 105
     },
     {
-      "name": "АйсМатча черника",
-      "qty": 3,
-      "total": 105
-    },
-    {
       "name": "Манго Маракуя mini",
       "qty": 5,
       "total": 100
     },
     {
-      "name": "Манго Маракуя big",
+      "name": "Blue mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
+      "name": "Bubble Gum big",
       "qty": 3,
       "total": 78
     },
     {
-      "name": "Blue mini",
+      "name": "Манго Маракуя big",
       "qty": 3,
-      "total": 60
-    },
-    {
-      "name": "Bubble Gum mini",
-      "qty": 3,
-      "total": 60
+      "total": 78
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T15:38:48.409Z"
+  "updatedAt": "2026-07-21T15:53:31.791Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.13513513513514,
-    "checks": 37,
+    "average": 33.31578947368421,
+    "checks": 38,
     "expenseTotal": 205,
-    "net": 1021,
-    "revenue": 1226
+    "net": 1061,
+    "revenue": 1266
   },
   "data": {
-    "actions": 5670,
+    "actions": 5672,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2567,
+    "orders": 2568,
     "products": 60,
     "shifts": 60
   },
   "activity": [
     {
+      "id": 1784622051752,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:20",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784622051752,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:20",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784620955238,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:09",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784616706007,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:51",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784616706007,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:51",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2567,
+    "current": 2568,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-21T08:35:47.776Z",
+        "id": 3615,
+        "items": [
+          "Blue mini x1",
+          "Bubble Gum mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-21T08:20:51.631Z",
         "id": 3614,
@@ -167151,14 +167189,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 37,
-        "expectedOrders": 37,
+        "databaseOrders": 38,
+        "expectedOrders": 38,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 1226,
+        "revenue": 1266,
         "status": "ok"
       },
       {
@@ -167942,7 +167980,7 @@
         "status": "ok"
       }
     ],
-    "total": 2567
+    "total": 2568
   },
   "payments": [
     {
@@ -167955,7 +167993,7 @@
     },
     {
       "method": "Alif",
-      "total": 188
+      "total": 228
     },
     {
       "method": "Dushanbe City",
@@ -167967,6 +168005,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3615,
+      "items": [
+        "Blue mini x1",
+        "Bubble Gum mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3614,
       "items": [
@@ -168023,15 +168070,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3607,
-      "items": [
-        "Bubble Gum big x1",
-        "Blue big x1"
-      ],
-      "status": "Оплачен",
-      "total": 52
     }
   ],
   "shifts": {
@@ -168197,16 +168235,16 @@
       "total": 78
     },
     {
-      "name": "Клубничный жасмин mini",
+      "name": "Blue mini",
       "qty": 3,
       "total": 60
     },
     {
-      "name": "Bubble Gum big",
-      "qty": 2,
-      "total": 52
+      "name": "Bubble Gum mini",
+      "qty": 3,
+      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T15:23:52.725Z"
+  "updatedAt": "2026-07-21T15:38:48.409Z"
 }

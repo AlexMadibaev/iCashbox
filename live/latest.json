@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.05882352941177,
-    "checks": 17,
+    "average": 34.111111111111114,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 374,
-    "revenue": 579
+    "net": 409,
+    "revenue": 614
   },
   "data": {
-    "actions": 5630,
+    "actions": 5632,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2547,
+    "orders": 2548,
     "products": 60,
     "shifts": 60
   },
   "activity": [
     {
+      "id": 1784602753960,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784602753960,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:59",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784597667951,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784594217914,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784594217914,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:36",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2547,
+    "current": 2548,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-21T03:40:56.904Z",
+        "id": 3595,
+        "items": [
+          "АйсМатча клубника x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-07-21T02:59:13.838Z",
         "id": 3594,
@@ -166517,14 +166546,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 579,
+        "revenue": 614,
         "status": "ok"
       },
       {
@@ -167308,12 +167337,12 @@
         "status": "ok"
       }
     ],
-    "total": 2547
+    "total": 2548
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 454
+      "total": 489
     },
     {
       "method": "Карта",
@@ -167333,6 +167362,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3595,
+      "items": [
+        "АйсМатча клубника x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    },
     {
       "id": 3594,
       "items": [
@@ -167392,14 +167429,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 3587,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -167560,6 +167589,11 @@
       "total": 40
     },
     {
+      "name": "АйсМатча клубника",
+      "qty": 1,
+      "total": 35
+    },
+    {
       "name": "АйсМатча манго",
       "qty": 1,
       "total": 35
@@ -167568,13 +167602,8 @@
       "name": "Cake-Pops",
       "qty": 2,
       "total": 30
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T10:02:14.777Z"
+  "updatedAt": "2026-07-21T10:43:57.677Z"
 }

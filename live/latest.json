@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.111111111111114,
-    "checks": 18,
+    "average": 34.68421052631579,
+    "checks": 19,
     "expenseTotal": 205,
-    "net": 409,
-    "revenue": 614
+    "net": 454,
+    "revenue": 659
   },
   "data": {
-    "actions": 5632,
+    "actions": 5634,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2548,
+    "orders": 2549,
     "products": 60,
     "shifts": 60
   },
   "activity": [
     {
+      "id": 1784605257007,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:40",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784605257007,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:40",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784602753960,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:47",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784594253299,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784594253299,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:37",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2548,
+    "current": 2549,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-21T03:44:20.626Z",
+        "id": 3596,
+        "items": [
+          "Айс Латте x1",
+          "Cake-Pops x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-07-21T03:40:56.904Z",
         "id": 3595,
@@ -166546,14 +166584,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 18,
-        "expectedOrders": 18,
+        "databaseOrders": 19,
+        "expectedOrders": 19,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 614,
+        "revenue": 659,
         "status": "ok"
       },
       {
@@ -167337,12 +167375,12 @@
         "status": "ok"
       }
     ],
-    "total": 2548
+    "total": 2549
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 489
+      "total": 534
     },
     {
       "method": "Карта",
@@ -167362,6 +167400,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3596,
+      "items": [
+        "Айс Латте x1",
+        "Cake-Pops x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 3595,
       "items": [
@@ -167420,15 +167467,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3588,
-      "items": [
-        "Babl tea mini x2",
-        "Клубника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -167574,6 +167612,11 @@
       "total": 80
     },
     {
+      "name": "Айс Латте",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Манго Маракуя mini",
       "qty": 3,
       "total": 60
@@ -167584,6 +167627,11 @@
       "total": 52
     },
     {
+      "name": "Cake-Pops",
+      "qty": 3,
+      "total": 45
+    },
+    {
       "name": "Клубничный жасмин mini",
       "qty": 2,
       "total": 40
@@ -167592,18 +167640,8 @@
       "name": "АйсМатча клубника",
       "qty": 1,
       "total": 35
-    },
-    {
-      "name": "АйсМатча манго",
-      "qty": 1,
-      "total": 35
-    },
-    {
-      "name": "Cake-Pops",
-      "qty": 2,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T10:43:57.677Z"
+  "updatedAt": "2026-07-21T10:47:19.860Z"
 }

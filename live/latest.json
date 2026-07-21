@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.07142857142857,
-    "checks": 42,
+    "average": 36.58139534883721,
+    "checks": 43,
     "expenseTotal": 205,
-    "net": 1268,
-    "revenue": 1473
+    "net": 1368,
+    "revenue": 1573
   },
   "data": {
-    "actions": 5680,
+    "actions": 5682,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2572,
+    "orders": 2573,
     "products": 60,
     "shifts": 60
   },
   "activity": [
     {
+      "id": 1784625447146,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:17",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784625447146,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:17",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784625056156,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:20",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784620955238,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:02",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784620955238,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:02",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2572,
+    "current": 2573,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-21T09:19:04.173Z",
+        "id": 3620,
+        "items": [
+          "Babl tea mini x4",
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 4,
+            "size": "",
+            "total": 80
+          },
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 100
+      },
       {
         "createdAt": "2026-07-21T09:17:27.024Z",
         "id": 3619,
@@ -167323,14 +167361,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 42,
-        "expectedOrders": 42,
+        "databaseOrders": 43,
+        "expectedOrders": 43,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 1473,
+        "revenue": 1573,
         "status": "ok"
       },
       {
@@ -168114,12 +168152,12 @@
         "status": "ok"
       }
     ],
-    "total": 2572
+    "total": 2573
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1105
+      "total": 1205
     },
     {
       "method": "Карта",
@@ -168139,6 +168177,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3620,
+      "items": [
+        "Babl tea mini x4",
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 100
+    },
     {
       "id": 3619,
       "items": [
@@ -168193,14 +168240,6 @@
     },
     {
       "id": 3613,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 3612,
       "items": [
         "Babl tea mini x1"
       ],
@@ -168342,8 +168381,8 @@
   "topProducts": [
     {
       "name": "Babl tea mini",
-      "qty": 9,
-      "total": 180
+      "qty": 13,
+      "total": 260
     },
     {
       "name": "Айс Латте",
@@ -168382,5 +168421,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T16:20:27.663Z"
+  "updatedAt": "2026-07-21T16:22:03.057Z"
 }

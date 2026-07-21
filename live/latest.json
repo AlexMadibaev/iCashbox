@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 31.846153846153847,
-    "checks": 13,
+    "average": 32.07142857142857,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 209,
-    "revenue": 414
+    "net": 244,
+    "revenue": 449
   },
   "data": {
-    "actions": 5622,
+    "actions": 5624,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2543,
+    "orders": 2544,
     "products": 60,
     "shifts": 60
   },
   "activity": [
     {
+      "id": 1784594841822,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784594841822,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:47",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784594253299,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784590296504,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:31",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784590296504,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:31",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2543,
+    "current": 2544,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-21T01:05:49.009Z",
+        "id": 3591,
+        "items": [
+          "АйсМатча манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-манго",
+            "name": "АйсМатча манго",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 35,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-07-21T00:47:21.717Z",
         "id": 3590,
@@ -166374,14 +166403,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 414,
+        "revenue": 449,
         "status": "ok"
       },
       {
@@ -167165,7 +167194,7 @@
         "status": "ok"
       }
     ],
-    "total": 2543
+    "total": 2544
   },
   "payments": [
     {
@@ -167182,7 +167211,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 30
+      "total": 65
     },
     {
       "method": "Семья",
@@ -167190,6 +167219,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3591,
+      "items": [
+        "АйсМатча манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    },
     {
       "id": 3590,
       "items": [
@@ -167244,14 +167281,6 @@
       "id": 3584,
       "items": [
         "Манго Маракуя big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
-    },
-    {
-      "id": 3583,
-      "items": [
-        "Babl tea big x1"
       ],
       "status": "Оплачен",
       "total": 26
@@ -167410,6 +167439,11 @@
       "total": 40
     },
     {
+      "name": "АйсМатча манго",
+      "qty": 1,
+      "total": 35
+    },
+    {
       "name": "Cake-Pops",
       "qty": 2,
       "total": 30
@@ -167423,13 +167457,8 @@
       "name": "Babl tea big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Жасмин гранат big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T07:50:22.633Z"
+  "updatedAt": "2026-07-21T08:08:50.144Z"
 }

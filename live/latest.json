@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.07142857142857,
-    "checks": 14,
+    "average": 32.6,
+    "checks": 15,
     "expenseTotal": 205,
-    "net": 244,
-    "revenue": 449
+    "net": 284,
+    "revenue": 489
   },
   "data": {
-    "actions": 5624,
+    "actions": 5626,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2544,
+    "orders": 2545,
     "products": 60,
     "shifts": 60
   },
   "activity": [
     {
+      "id": 1784595949133,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:05",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784595949133,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:05",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784594841822,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784591550150,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:52",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784591550150,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:52",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2544,
+    "current": 2545,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-21T01:27:14.544Z",
+        "id": 3592,
+        "items": [
+          "Клубничный жасмин mini x1",
+          "Жасмин лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-лимон-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 40,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-21T01:05:49.009Z",
         "id": 3591,
@@ -166403,14 +166441,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 14,
-        "expectedOrders": 14,
+        "databaseOrders": 15,
+        "expectedOrders": 15,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 449,
+        "revenue": 489,
         "status": "ok"
       },
       {
@@ -167194,7 +167232,7 @@
         "status": "ok"
       }
     ],
-    "total": 2544
+    "total": 2545
   },
   "payments": [
     {
@@ -167211,7 +167249,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 65
+      "total": 105
     },
     {
       "method": "Семья",
@@ -167219,6 +167257,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3592,
+      "items": [
+        "Клубничный жасмин mini x1",
+        "Жасмин лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3591,
       "items": [
@@ -167276,14 +167323,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 3584,
-      "items": [
-        "Манго Маракуя big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -167460,5 +167499,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T08:08:50.144Z"
+  "updatedAt": "2026-07-21T08:30:15.580Z"
 }

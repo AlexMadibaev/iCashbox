@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32,
-    "checks": 9,
+    "average": 30.8,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 83,
-    "revenue": 288
+    "net": 103,
+    "revenue": 308
   },
   "data": {
-    "actions": 5614,
+    "actions": 5616,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2539,
+    "orders": 2540,
     "products": 60,
     "shifts": 60
   },
   "activity": [
     {
+      "id": 1784592170596,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:02",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784592170596,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:02",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784591550150,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "10:45",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784587464104,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:44",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784587464104,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:44",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2539,
+    "current": 2540,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-21T00:03:08.011Z",
+        "id": 3587,
+        "items": [
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-21T00:02:50.485Z",
         "id": 3586,
@@ -166249,14 +166278,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 288,
+        "revenue": 308,
         "status": "ok"
       },
       {
@@ -167040,12 +167069,12 @@
         "status": "ok"
       }
     ],
-    "total": 2539
+    "total": 2540
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 238
+      "total": 258
     },
     {
       "method": "Карта",
@@ -167065,6 +167094,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3587,
+      "items": [
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3586,
       "items": [
@@ -167121,14 +167158,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 3579,
-      "items": [
-        "Blue mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -167269,6 +167298,11 @@
       "total": 70
     },
     {
+      "name": "Babl tea mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Cake-Pops",
       "qty": 2,
       "total": 30
@@ -167297,13 +167331,8 @@
       "name": "Bubble Gum mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T07:05:51.337Z"
+  "updatedAt": "2026-07-21T07:06:06.937Z"
 }

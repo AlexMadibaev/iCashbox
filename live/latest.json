@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 20,
-    "checks": 2,
+    "average": 22,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -165,
-    "revenue": 40
+    "net": -139,
+    "revenue": 66
   },
   "data": {
-    "actions": 5600,
+    "actions": 5602,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2532,
+    "orders": 2533,
     "products": 60,
     "shifts": 60
   },
   "activity": [
+    {
+      "id": 1784586584660,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784586584660,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:29",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784584322473,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:48",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784540927879,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:48",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784540120992,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:35",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2532,
+    "current": 2533,
     "old": [
       {
         "createdAt": "2026-07-20T10:35:47.038Z",
@@ -83085,6 +83085,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-20T22:44:23.980Z",
+        "id": 3580,
+        "items": [
+          "Жасмин гранат big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-гранат-big",
+            "name": "Жасмин гранат big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 26,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-21",
+        "shiftLabel": "Смена 21.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-20T22:29:44.540Z",
         "id": 3579,
@@ -166037,14 +166066,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-21",
         "label": "Смена 21.07",
         "missingOrders": 0,
-        "revenue": 40,
+        "revenue": 66,
         "status": "ok"
       },
       {
@@ -166828,12 +166857,12 @@
         "status": "ok"
       }
     ],
-    "total": 2532
+    "total": 2533
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 20
+      "total": 46
     },
     {
       "method": "Карта",
@@ -166853,6 +166882,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3580,
+      "items": [
+        "Жасмин гранат big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 3579,
       "items": [
@@ -167003,6 +167040,11 @@
   },
   "topProducts": [
     {
+      "name": "Жасмин гранат big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Blue mini",
       "qty": 1,
       "total": 20
@@ -167014,5 +167056,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-21T05:32:47.659Z"
+  "updatedAt": "2026-07-21T05:47:24.933Z"
 }

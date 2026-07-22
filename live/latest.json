@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.55555555555556,
-    "checks": 9,
+    "average": 35.7,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 106,
-    "revenue": 311
+    "net": 152,
+    "revenue": 357
   },
   "data": {
-    "actions": 5705,
+    "actions": 5707,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2584,
+    "orders": 2585,
     "products": 60,
     "shifts": 61
   },
   "activity": [
     {
+      "id": 1784683372184,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784683372184,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784682910133,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784675888782,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:18",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784675888782,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:18",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2584,
+    "current": 2585,
     "old": [
       {
         "createdAt": "2026-07-21T10:11:13.395Z",
@@ -84534,6 +84534,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-22T01:31:57.115Z",
+        "id": 3632,
+        "items": [
+          "Манго Маракуя big x1",
+          "Фреш лимон big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-фреш-лимон-big",
+            "name": "Фреш лимон big",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 46,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-22",
+        "shiftLabel": "Смена 22.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-07-22T01:22:52.077Z",
         "id": 3631,
@@ -169156,14 +169194,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-22",
         "label": "Смена 22.07",
         "missingOrders": 0,
-        "revenue": 311,
+        "revenue": 357,
         "status": "ok"
       },
       {
@@ -169960,12 +169998,12 @@
         "status": "ok"
       }
     ],
-    "total": 2584
+    "total": 2585
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 135
+      "total": 181
     },
     {
       "method": "Карта",
@@ -169985,6 +170023,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3632,
+      "items": [
+        "Манго Маракуя big x1",
+        "Фреш лимон big x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 3631,
       "items": [
@@ -170041,15 +170088,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3624,
-      "items": [
-        "АйсМатча клубника x1",
-        "Клубника mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 75
     }
   ],
   "shifts": {
@@ -170195,6 +170233,11 @@
       "total": 60
     },
     {
+      "name": "Манго Маракуя big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Капучино",
       "qty": 2,
       "total": 50
@@ -170205,9 +170248,9 @@
       "total": 35
     },
     {
-      "name": "Манго Маракуя big",
+      "name": "Фреш лимон big",
       "qty": 1,
-      "total": 26
+      "total": 20
     },
     {
       "name": "Манго mini",
@@ -170218,13 +170261,8 @@
       "name": "Bubble Gum mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-22T08:25:54.514Z"
+  "updatedAt": "2026-07-22T08:34:59.546Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.370370370370374,
-    "checks": 27,
+    "average": 34.035714285714285,
+    "checks": 28,
     "expenseTotal": 205,
-    "net": 723,
-    "revenue": 928
+    "net": 748,
+    "revenue": 953
   },
   "data": {
-    "actions": 5741,
+    "actions": 5743,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2602,
+    "orders": 2603,
     "products": 60,
     "shifts": 61
   },
   "activity": [
     {
+      "id": 1784697184432,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:13",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784697184432,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:13",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784697103017,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784694101833,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:21",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784694101833,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:21",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2602,
+    "current": 2603,
     "old": [
       {
         "createdAt": "2026-07-21T10:11:13.395Z",
@@ -84534,6 +84534,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-22T05:45:06.902Z",
+        "id": 3650,
+        "items": [
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-22",
+        "shiftLabel": "Смена 22.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-22T05:13:04.321Z",
         "id": 3649,
@@ -169741,14 +169770,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 27,
-        "expectedOrders": 27,
+        "databaseOrders": 28,
+        "expectedOrders": 28,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-22",
         "label": "Смена 22.07",
         "missingOrders": 0,
-        "revenue": 928,
+        "revenue": 953,
         "status": "ok"
       },
       {
@@ -170545,12 +170574,12 @@
         "status": "ok"
       }
     ],
-    "total": 2602
+    "total": 2603
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 527
+      "total": 552
     },
     {
       "method": "Карта",
@@ -170570,6 +170599,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3650,
+      "items": [
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 3649,
       "items": [
@@ -170627,16 +170664,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3642,
-      "items": [
-        "Blue big x1",
-        "Bubble Gum big x1",
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 82
     }
   ],
   "shifts": {
@@ -170813,5 +170840,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-22T12:16:05.014Z"
+  "updatedAt": "2026-07-22T12:48:09.256Z"
 }

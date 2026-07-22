@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.857142857142854,
-    "checks": 42,
+    "average": 35.72093023255814,
+    "checks": 43,
     "expenseTotal": 205,
-    "net": 1301,
-    "revenue": 1506
+    "net": 1331,
+    "revenue": 1536
   },
   "data": {
-    "actions": 5771,
+    "actions": 5773,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2617,
+    "orders": 2618,
     "products": 60,
     "shifts": 61
   },
   "activity": [
     {
+      "id": 1784709753495,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:42",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784709753495,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:42",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784709684415,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:33",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784705239605,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:27",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784705239605,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:27",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2617,
+    "current": 2618,
     "old": [
       {
         "createdAt": "2026-07-21T10:11:13.395Z",
@@ -84534,6 +84534,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-22T08:51:21.719Z",
+        "id": 3665,
+        "items": [
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-22",
+        "shiftLabel": "Смена 22.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-22T08:42:33.358Z",
         "id": 3664,
@@ -170239,14 +170268,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 42,
-        "expectedOrders": 42,
+        "databaseOrders": 43,
+        "expectedOrders": 43,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-22",
         "label": "Смена 22.07",
         "missingOrders": 0,
-        "revenue": 1506,
+        "revenue": 1536,
         "status": "ok"
       },
       {
@@ -171043,12 +171072,12 @@
         "status": "ok"
       }
     ],
-    "total": 2617
+    "total": 2618
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1015
+      "total": 1045
     },
     {
       "method": "Карта",
@@ -171068,6 +171097,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3665,
+      "items": [
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 3664,
       "items": [
@@ -171129,14 +171166,6 @@
       ],
       "status": "Оплачен",
       "total": 128
-    },
-    {
-      "id": 3657,
-      "items": [
-        "Мороженое классическое x3"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -171307,11 +171336,11 @@
       "total": 70
     },
     {
-      "name": "Matcha mini",
+      "name": "Клубничный big",
       "qty": 2,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-22T15:45:34.001Z"
+  "updatedAt": "2026-07-22T15:54:24.280Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38,
-    "checks": 47,
+    "average": 39.8125,
+    "checks": 48,
     "expenseTotal": 205,
-    "net": 1581,
-    "revenue": 1786
+    "net": 1706,
+    "revenue": 1911
   },
   "data": {
-    "actions": 5781,
+    "actions": 5783,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2622,
+    "orders": 2623,
     "products": 60,
     "shifts": 61
   },
   "activity": [
     {
+      "id": 1784713328193,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:42",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784713328193,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:42",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784712661920,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784709684415,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784709684415,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:41",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2622,
+    "current": 2623,
     "old": [
       {
         "createdAt": "2026-07-21T10:11:13.395Z",
@@ -84534,6 +84534,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-22T10:03:29.618Z",
+        "id": 3670,
+        "items": [
+          "Babl tea mini x1",
+          "Мороженое Орео x4",
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 4,
+            "size": "",
+            "total": 80
+          },
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 125,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-22",
+        "shiftLabel": "Смена 22.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 125
+      },
       {
         "createdAt": "2026-07-22T09:42:08.086Z",
         "id": 3669,
@@ -170420,14 +170467,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 47,
-        "expectedOrders": 47,
+        "databaseOrders": 48,
+        "expectedOrders": 48,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-22",
         "label": "Смена 22.07",
         "missingOrders": 0,
-        "revenue": 1786,
+        "revenue": 1911,
         "status": "ok"
       },
       {
@@ -171224,7 +171271,7 @@
         "status": "ok"
       }
     ],
-    "total": 2622
+    "total": 2623
   },
   "payments": [
     {
@@ -171241,7 +171288,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 194
+      "total": 319
     },
     {
       "method": "Семья",
@@ -171249,6 +171296,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3670,
+      "items": [
+        "Babl tea mini x1",
+        "Мороженое Орео x4",
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 125
+    },
     {
       "id": 3669,
       "items": [
@@ -171309,14 +171366,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 3662,
-      "items": [
-        "Мороженое Орео x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -171453,13 +171502,18 @@
   "topProducts": [
     {
       "name": "Babl tea mini",
-      "qty": 8,
-      "total": 160
+      "qty": 9,
+      "total": 180
     },
     {
       "name": "Мороженое классическое",
       "qty": 7,
       "total": 140
+    },
+    {
+      "name": "Мороженое Орео",
+      "qty": 6,
+      "total": 120
     },
     {
       "name": "Matcha mini",
@@ -171485,13 +171539,8 @@
       "name": "Клубника mini",
       "qty": 4,
       "total": 80
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 3,
-      "total": 78
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-22T16:45:10.455Z"
+  "updatedAt": "2026-07-22T17:06:32.363Z"
 }

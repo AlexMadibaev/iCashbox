@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.3421052631579,
-    "checks": 38,
+    "average": 36.43589743589744,
+    "checks": 39,
     "expenseTotal": 205,
-    "net": 1176,
-    "revenue": 1381
+    "net": 1216,
+    "revenue": 1421
   },
   "data": {
-    "actions": 5763,
+    "actions": 5765,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2613,
+    "orders": 2614,
     "products": 60,
     "shifts": 61
   },
   "activity": [
     {
+      "id": 1784707406118,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:03",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784707406118,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:03",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784705591660,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784701813190,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:30",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784701813190,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:30",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2613,
+    "current": 2614,
     "old": [
       {
         "createdAt": "2026-07-21T10:11:13.395Z",
@@ -84534,6 +84534,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-22T08:04:11.471Z",
+        "id": 3661,
+        "items": [
+          "Манго mini x1",
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-mini",
+            "name": "Манго mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-22",
+        "shiftLabel": "Смена 22.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-22T08:03:26.010Z",
         "id": 3660,
@@ -170105,14 +170143,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 38,
-        "expectedOrders": 38,
+        "databaseOrders": 39,
+        "expectedOrders": 39,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-22",
         "label": "Смена 22.07",
         "missingOrders": 0,
-        "revenue": 1381,
+        "revenue": 1421,
         "status": "ok"
       },
       {
@@ -170909,12 +170947,12 @@
         "status": "ok"
       }
     ],
-    "total": 2613
+    "total": 2614
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 890
+      "total": 930
     },
     {
       "method": "Карта",
@@ -170934,6 +170972,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3661,
+      "items": [
+        "Манго mini x1",
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3660,
       "items": [
@@ -170994,14 +171041,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 3653,
-      "items": [
-        "Мороженое рожок x2"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -171178,5 +171217,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-22T15:06:28.440Z"
+  "updatedAt": "2026-07-22T15:07:12.316Z"
 }

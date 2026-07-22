@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.83870967741935,
-    "checks": 31,
+    "average": 33.375,
+    "checks": 32,
     "expenseTotal": 205,
-    "net": 813,
-    "revenue": 1018
+    "net": 863,
+    "revenue": 1068
   },
   "data": {
-    "actions": 5749,
+    "actions": 5751,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2606,
+    "orders": 2607,
     "products": 60,
     "shifts": 61
   },
   "activity": [
     {
+      "id": 1784701706771,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:28",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784701706771,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:28",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784699361249,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784695588253,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:46",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784695588253,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:46",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2606,
+    "current": 2607,
     "old": [
       {
         "createdAt": "2026-07-21T10:11:13.395Z",
@@ -84534,6 +84534,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-22T06:30:13.064Z",
+        "id": 3654,
+        "items": [
+          "Matcha mini x1",
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 50,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-22",
+        "shiftLabel": "Смена 22.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-22T06:28:26.649Z",
         "id": 3653,
@@ -169857,14 +169895,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 31,
-        "expectedOrders": 31,
+        "databaseOrders": 32,
+        "expectedOrders": 32,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-22",
         "label": "Смена 22.07",
         "missingOrders": 0,
-        "revenue": 1018,
+        "revenue": 1068,
         "status": "ok"
       },
       {
@@ -170661,7 +170699,7 @@
         "status": "ok"
       }
     ],
-    "total": 2606
+    "total": 2607
   },
   "payments": [
     {
@@ -170674,7 +170712,7 @@
     },
     {
       "method": "Alif",
-      "total": 247
+      "total": 297
     },
     {
       "method": "Dushanbe City",
@@ -170686,6 +170724,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3654,
+      "items": [
+        "Matcha mini x1",
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 3653,
       "items": [
@@ -170743,14 +170790,6 @@
       ],
       "status": "Оплачен",
       "total": 45
-    },
-    {
-      "id": 3646,
-      "items": [
-        "Клубника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -170896,12 +170935,17 @@
       "total": 100
     },
     {
-      "name": "Мороженое классическое",
-      "qty": 3,
+      "name": "Клубника mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
+      "name": "Matcha mini",
+      "qty": 2,
       "total": 60
     },
     {
-      "name": "Клубника mini",
+      "name": "Мороженое классическое",
       "qty": 3,
       "total": 60
     },
@@ -170919,13 +170963,8 @@
       "name": "Манго Маракуя big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "Клубничный mini",
-      "qty": 2,
-      "total": 50
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-22T13:31:30.319Z"
+  "updatedAt": "2026-07-22T13:33:15.194Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.916666666666664,
-    "checks": 12,
+    "average": 35.61538461538461,
+    "checks": 13,
     "expenseTotal": 205,
-    "net": 238,
-    "revenue": 443
+    "net": 258,
+    "revenue": 463
   },
   "data": {
-    "actions": 5711,
+    "actions": 5713,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2587,
+    "orders": 2588,
     "products": 60,
     "shifts": 61
   },
   "activity": [
     {
+      "id": 1784685308512,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:55",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784685308512,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:55",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784684427214,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:49",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784679814796,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784679814796,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:23",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2587,
+    "current": 2588,
     "old": [
       {
         "createdAt": "2026-07-21T10:11:13.395Z",
@@ -84534,6 +84534,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-22T03:10:05.370Z",
+        "id": 3635,
+        "items": [
+          "Манго Маракуя mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-22",
+        "shiftLabel": "Смена 22.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-22T01:55:08.403Z",
         "id": 3634,
@@ -169261,14 +169290,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 12,
-        "expectedOrders": 12,
+        "databaseOrders": 13,
+        "expectedOrders": 13,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-22",
         "label": "Смена 22.07",
         "missingOrders": 0,
-        "revenue": 443,
+        "revenue": 463,
         "status": "ok"
       },
       {
@@ -170065,12 +170094,12 @@
         "status": "ok"
       }
     ],
-    "total": 2587
+    "total": 2588
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 241
+      "total": 261
     },
     {
       "method": "Карта",
@@ -170090,6 +170119,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3635,
+      "items": [
+        "Манго Маракуя mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3634,
       "items": [
@@ -170148,14 +170185,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3627,
-      "items": [
-        "Капучино x2"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -170311,6 +170340,11 @@
       "total": 50
     },
     {
+      "name": "Манго Маракуя mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Babl tea mini",
       "qty": 2,
       "total": 40
@@ -170324,13 +170358,8 @@
       "name": "АйсМатча клубника",
       "qty": 1,
       "total": 35
-    },
-    {
-      "name": "Bubble Gum big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-22T08:58:10.906Z"
+  "updatedAt": "2026-07-22T10:13:07.648Z"
 }

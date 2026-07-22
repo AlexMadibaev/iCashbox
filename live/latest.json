@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.8125,
-    "checks": 48,
+    "average": 39.53061224489796,
+    "checks": 49,
     "expenseTotal": 205,
-    "net": 1706,
-    "revenue": 1911
+    "net": 1732,
+    "revenue": 1937
   },
   "data": {
-    "actions": 5783,
+    "actions": 5785,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2623,
+    "orders": 2624,
     "products": 60,
     "shifts": 61
   },
   "activity": [
     {
+      "id": 1784714609720,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:03",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784714609720,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:03",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784713328193,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:51",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784709753495,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:42",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784709753495,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:42",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2623,
+    "current": 2624,
     "old": [
       {
         "createdAt": "2026-07-21T10:11:13.395Z",
@@ -84534,6 +84534,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-22T10:10:42.082Z",
+        "id": 3671,
+        "items": [
+          "Клубника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-big",
+            "name": "Клубника big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-22",
+        "shiftLabel": "Смена 22.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-22T10:03:29.618Z",
         "id": 3670,
@@ -170467,14 +170496,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 48,
-        "expectedOrders": 48,
+        "databaseOrders": 49,
+        "expectedOrders": 49,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-22",
         "label": "Смена 22.07",
         "missingOrders": 0,
-        "revenue": 1911,
+        "revenue": 1937,
         "status": "ok"
       },
       {
@@ -171271,12 +171300,12 @@
         "status": "ok"
       }
     ],
-    "total": 2623
+    "total": 2624
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1265
+      "total": 1291
     },
     {
       "method": "Карта",
@@ -171296,6 +171325,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3671,
+      "items": [
+        "Клубника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 3670,
       "items": [
@@ -171358,14 +171395,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3663,
-      "items": [
-        "Мороженое матча x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -171542,5 +171571,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-22T17:06:32.363Z"
+  "updatedAt": "2026-07-22T17:13:44.479Z"
 }

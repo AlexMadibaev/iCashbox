@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 36.09090909090909,
-    "checks": 11,
+    "average": 36.916666666666664,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 192,
-    "revenue": 397
+    "net": 238,
+    "revenue": 443
   },
   "data": {
     "actions": 5711,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2586,
+    "orders": 2587,
     "products": 60,
     "shifts": 61
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2586,
+    "current": 2587,
     "old": [
       {
         "createdAt": "2026-07-21T10:11:13.395Z",
@@ -84534,6 +84534,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-22T01:55:08.403Z",
+        "id": 3634,
+        "items": [
+          "Babl tea mini x1",
+          "Bubble Gum big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-bubble-gum-big",
+            "name": "Bubble Gum big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 26,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-22",
+        "shiftLabel": "Смена 22.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-07-22T01:40:27.103Z",
         "id": 3633,
@@ -169223,14 +169261,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-22",
         "label": "Смена 22.07",
         "missingOrders": 0,
-        "revenue": 397,
+        "revenue": 443,
         "status": "ok"
       },
       {
@@ -170027,12 +170065,12 @@
         "status": "ok"
       }
     ],
-    "total": 2586
+    "total": 2587
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 221
+      "total": 241
     },
     {
       "method": "Карта",
@@ -170044,7 +170082,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 20
+      "total": 46
     },
     {
       "method": "Семья",
@@ -170052,6 +170090,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3634,
+      "items": [
+        "Babl tea mini x1",
+        "Bubble Gum big x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 3633,
       "items": [
@@ -170109,14 +170156,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 3626,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -170272,6 +170311,11 @@
       "total": 50
     },
     {
+      "name": "Babl tea mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 2,
       "total": 40
@@ -170282,16 +170326,11 @@
       "total": 35
     },
     {
-      "name": "Фреш лимон big",
+      "name": "Bubble Gum big",
       "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Манго mini",
-      "qty": 1,
-      "total": 20
+      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-22T08:43:30.109Z"
+  "updatedAt": "2026-07-22T08:58:10.906Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.53333333333333,
-    "checks": 15,
+    "average": 33.9375,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 298,
-    "revenue": 503
+    "net": 338,
+    "revenue": 543
   },
   "data": {
-    "actions": 5717,
+    "actions": 5719,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2590,
+    "orders": 2591,
     "products": 60,
     "shifts": 61
   },
   "activity": [
     {
+      "id": 1784690129553,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:15",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784690129553,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:15",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784689918875,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:31",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784683372184,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:22",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784683372184,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:22",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2590,
+    "current": 2591,
     "old": [
       {
         "createdAt": "2026-07-21T10:11:13.395Z",
@@ -84534,6 +84534,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-22T03:33:51.758Z",
+        "id": 3638,
+        "items": [
+          "Манго Маракуя mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-22",
+        "shiftLabel": "Смена 22.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-22T03:15:29.411Z",
         "id": 3637,
@@ -169348,14 +169377,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-22",
         "label": "Смена 22.07",
         "missingOrders": 0,
-        "revenue": 503,
+        "revenue": 543,
         "status": "ok"
       },
       {
@@ -170152,12 +170181,12 @@
         "status": "ok"
       }
     ],
-    "total": 2590
+    "total": 2591
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 301
+      "total": 341
     },
     {
       "method": "Карта",
@@ -170177,6 +170206,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3638,
+      "items": [
+        "Манго Маракуя mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3637,
       "items": [
@@ -170234,14 +170271,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3630,
-      "items": [
-        "Манго Маракуя big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -170377,6 +170406,11 @@
   },
   "topProducts": [
     {
+      "name": "Манго Маракуя mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Babl tea mini",
       "qty": 4,
       "total": 80
@@ -170402,11 +170436,6 @@
       "total": 50
     },
     {
-      "name": "Манго Маракуя mini",
-      "qty": 2,
-      "total": 40
-    },
-    {
       "name": "Мороженое клубничное",
       "qty": 2,
       "total": 40
@@ -170418,5 +170447,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-22T10:18:30.946Z"
+  "updatedAt": "2026-07-22T10:36:54.093Z"
 }

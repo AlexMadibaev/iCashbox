@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.76470588235294,
-    "checks": 34,
+    "average": 40.34285714285714,
+    "checks": 35,
     "expenseTotal": 205,
-    "net": 1147,
-    "revenue": 1352
+    "net": 1207,
+    "revenue": 1412
   },
   "data": {
-    "actions": 5854,
+    "actions": 5856,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2658,
+    "orders": 2659,
     "products": 60,
     "shifts": 62
   },
   "activity": [
     {
+      "id": 1784795488526,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:31",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784795488526,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:31",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784795325621,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:05",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784792636836,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:43",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784792636836,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:43",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2658,
+    "current": 2659,
     "old": [
       {
         "createdAt": "2026-07-22T10:10:42.082Z",
@@ -86153,6 +86153,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-23T09:08:04.463Z",
+        "id": 3706,
+        "items": [
+          "Babl tea mini x2",
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-23",
+        "shiftLabel": "Смена 23.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-23T08:31:28.410Z",
         "id": 3705,
@@ -173290,14 +173328,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-23",
         "label": "Смена 23.07",
         "missingOrders": 0,
-        "revenue": 1352,
+        "revenue": 1412,
         "status": "ok"
       },
       {
@@ -174107,12 +174145,12 @@
         "status": "ok"
       }
     ],
-    "total": 2658
+    "total": 2659
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 924
+      "total": 984
     },
     {
       "method": "Карта",
@@ -174132,6 +174170,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3706,
+      "items": [
+        "Babl tea mini x2",
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3705,
       "items": [
@@ -174194,14 +174241,6 @@
       ],
       "status": "Оплачен",
       "total": 80
-    },
-    {
-      "id": 3698,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -174338,8 +174377,8 @@
   "topProducts": [
     {
       "name": "Babl tea mini",
-      "qty": 6,
-      "total": 120
+      "qty": 8,
+      "total": 160
     },
     {
       "name": "Bubble Gum mini",
@@ -174378,5 +174417,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-23T15:34:31.204Z"
+  "updatedAt": "2026-07-23T16:11:08.525Z"
 }

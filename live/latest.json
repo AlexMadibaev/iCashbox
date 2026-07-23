@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.54545454545455,
-    "checks": 22,
+    "average": 36.69565217391305,
+    "checks": 23,
     "expenseTotal": 205,
-    "net": 599,
-    "revenue": 804
+    "net": 639,
+    "revenue": 844
   },
   "data": {
-    "actions": 5830,
+    "actions": 5832,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2646,
+    "orders": 2647,
     "products": 60,
     "shifts": 62
   },
   "activity": [
     {
+      "id": 1784785705781,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:48",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784785705781,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:48",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784784175813,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784781371153,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784781371153,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:36",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2646,
+    "current": 2647,
     "old": [
       {
         "createdAt": "2026-07-22T10:10:42.082Z",
@@ -86153,6 +86153,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-23T06:10:36.608Z",
+        "id": 3694,
+        "items": [
+          "Мороженое манго x1",
+          "Мороженое с чёрным сахаром x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-с-чёрным-сахаром",
+            "name": "Мороженое с чёрным сахаром",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-23",
+        "shiftLabel": "Смена 23.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-23T05:48:25.650Z",
         "id": 3693,
@@ -172870,14 +172908,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 22,
-        "expectedOrders": 22,
+        "databaseOrders": 23,
+        "expectedOrders": 23,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-23",
         "label": "Смена 23.07",
         "missingOrders": 0,
-        "revenue": 804,
+        "revenue": 844,
         "status": "ok"
       },
       {
@@ -173687,12 +173725,12 @@
         "status": "ok"
       }
     ],
-    "total": 2646
+    "total": 2647
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 498
+      "total": 538
     },
     {
       "method": "Карта",
@@ -173712,6 +173750,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3694,
+      "items": [
+        "Мороженое манго x1",
+        "Мороженое с чёрным сахаром x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3693,
       "items": [
@@ -173770,14 +173817,6 @@
       ],
       "status": "Оплачен",
       "total": 29
-    },
-    {
-      "id": 3686,
-      "items": [
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -173954,5 +173993,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-23T12:51:29.865Z"
+  "updatedAt": "2026-07-23T13:13:40.868Z"
 }

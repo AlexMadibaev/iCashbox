@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.38095238095238,
-    "checks": 21,
+    "average": 36.54545454545455,
+    "checks": 22,
     "expenseTotal": 205,
-    "net": 559,
-    "revenue": 764
+    "net": 599,
+    "revenue": 804
   },
   "data": {
-    "actions": 5828,
+    "actions": 5830,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2645,
+    "orders": 2646,
     "products": 60,
     "shifts": 62
   },
   "activity": [
     {
+      "id": 1784784175813,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784784175813,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784783885840,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:36",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784777547883,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:32",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784777547883,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:32",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2645,
+    "current": 2646,
     "old": [
       {
         "createdAt": "2026-07-22T10:10:42.082Z",
@@ -86153,6 +86153,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-23T05:48:25.650Z",
+        "id": 3693,
+        "items": [
+          "Bubble Gum mini x1",
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-23",
+        "shiftLabel": "Смена 23.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-23T05:22:55.709Z",
         "id": 3692,
@@ -172832,14 +172870,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 21,
-        "expectedOrders": 21,
+        "databaseOrders": 22,
+        "expectedOrders": 22,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-23",
         "label": "Смена 23.07",
         "missingOrders": 0,
-        "revenue": 764,
+        "revenue": 804,
         "status": "ok"
       },
       {
@@ -173649,7 +173687,7 @@
         "status": "ok"
       }
     ],
-    "total": 2645
+    "total": 2646
   },
   "payments": [
     {
@@ -173662,7 +173700,7 @@
     },
     {
       "method": "Alif",
-      "total": 52
+      "total": 92
     },
     {
       "method": "Dushanbe City",
@@ -173674,6 +173712,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3693,
+      "items": [
+        "Bubble Gum mini x1",
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3692,
       "items": [
@@ -173728,14 +173775,6 @@
       "id": 3686,
       "items": [
         "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 3685,
-      "items": [
-        "Babl tea mini x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -173894,6 +173933,16 @@
       "total": 50
     },
     {
+      "name": "Bubble Gum mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
+      "name": "Blue mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Манго Маракуя mini",
       "qty": 2,
       "total": 40
@@ -173902,18 +173951,8 @@
       "name": "Мороженое клубничное",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Манго mini",
-      "qty": 2,
-      "total": 40
-    },
-    {
-      "name": "ПиноКолада big",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-23T12:25:58.133Z"
+  "updatedAt": "2026-07-23T12:51:29.865Z"
 }

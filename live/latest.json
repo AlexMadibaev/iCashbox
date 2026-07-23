@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 47.666666666666664,
-    "checks": 6,
+    "average": 44.42857142857143,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": 81,
-    "revenue": 286
+    "net": 106,
+    "revenue": 311
   },
   "data": {
-    "actions": 5798,
+    "actions": 5800,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2630,
+    "orders": 2631,
     "products": 60,
     "shifts": 62
   },
   "activity": [
     {
+      "id": 1784767003208,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:36",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784767003208,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:36",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784766664795,
       "source": "Локально",
       "status": "Сохранено",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "10:16",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1784758577806,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:16",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1784715042209,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:10",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2630,
+    "current": 2631,
     "old": [
       {
         "createdAt": "2026-07-22T10:10:42.082Z",
@@ -86153,6 +86153,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-23T00:41:26.315Z",
+        "id": 3678,
+        "items": [
+          "ПиноКолада mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 25,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-23",
+        "shiftLabel": "Смена 23.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-23T00:36:43.090Z",
         "id": 3677,
@@ -172343,14 +172372,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-23",
         "label": "Смена 23.07",
         "missingOrders": 0,
-        "revenue": 286,
+        "revenue": 311,
         "status": "ok"
       },
       {
@@ -173160,12 +173189,12 @@
         "status": "ok"
       }
     ],
-    "total": 2630
+    "total": 2631
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 176
+      "total": 201
     },
     {
       "method": "Карта",
@@ -173185,6 +173214,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3678,
+      "items": [
+        "ПиноКолада mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 3677,
       "items": [
@@ -173388,6 +173425,11 @@
       "total": 26
     },
     {
+      "name": "ПиноКолада mini",
+      "qty": 1,
+      "total": 25
+    },
+    {
       "name": "Клубничный mini",
       "qty": 1,
       "total": 25
@@ -173406,13 +173448,8 @@
       "name": "Жасмин гранат mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-23T07:39:46.991Z"
+  "updatedAt": "2026-07-23T07:44:28.892Z"
 }

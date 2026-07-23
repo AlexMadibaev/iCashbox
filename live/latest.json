@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 48.888888888888886,
-    "checks": 9,
+    "average": 47,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 235,
-    "revenue": 440
+    "net": 265,
+    "revenue": 470
   },
   "data": {
-    "actions": 5804,
+    "actions": 5806,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2633,
+    "orders": 2634,
     "products": 60,
     "shifts": 62
   },
   "activity": [
     {
+      "id": 1784774726019,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:45",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784774726019,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:45",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784767763710,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:17",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784762937437,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:28",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784762937437,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:28",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2633,
+    "current": 2634,
     "old": [
       {
         "createdAt": "2026-07-22T10:10:42.082Z",
@@ -86153,6 +86153,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-23T02:45:41.409Z",
+        "id": 3681,
+        "items": [
+          "Мороженое клубничное x1",
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-23",
+        "shiftLabel": "Смена 23.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-23T02:45:25.896Z",
         "id": 3680,
@@ -172457,14 +172495,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-23",
         "label": "Смена 23.07",
         "missingOrders": 0,
-        "revenue": 440,
+        "revenue": 470,
         "status": "ok"
       },
       {
@@ -173274,12 +173312,12 @@
         "status": "ok"
       }
     ],
-    "total": 2633
+    "total": 2634
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 226
+      "total": 256
     },
     {
       "method": "Карта",
@@ -173299,6 +173337,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3681,
+      "items": [
+        "Мороженое клубничное x1",
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 3680,
       "items": [
@@ -173362,15 +173409,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3673,
-      "items": [
-        "Клубничный mini x1",
-        "Черника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -173511,6 +173549,11 @@
       "total": 50
     },
     {
+      "name": "Мороженое клубничное",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Манго mini",
       "qty": 2,
       "total": 40
@@ -173539,13 +173582,8 @@
       "name": "Виноградный тропический big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Жасмин лимон big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-23T09:48:30.331Z"
+  "updatedAt": "2026-07-23T09:48:44.041Z"
 }

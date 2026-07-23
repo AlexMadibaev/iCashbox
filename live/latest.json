@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.03225806451613,
-    "checks": 31,
+    "average": 39.875,
+    "checks": 32,
     "expenseTotal": 205,
-    "net": 1036,
-    "revenue": 1241
+    "net": 1071,
+    "revenue": 1276
   },
   "data": {
-    "actions": 5848,
+    "actions": 5850,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2655,
+    "orders": 2656,
     "products": 60,
     "shifts": 62
   },
   "activity": [
     {
+      "id": 1784795093151,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:24",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784795093151,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:24",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784794807603,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:30",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784790809719,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:13",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784790809719,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:13",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2655,
+    "current": 2656,
     "old": [
       {
         "createdAt": "2026-07-22T10:10:42.082Z",
@@ -86153,6 +86153,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-23T08:25:57.572Z",
+        "id": 3703,
+        "items": [
+          "Мороженое классическое x1",
+          "Cake-Pops x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-cake-pops",
+            "name": "Cake-Pops",
+            "price": 15,
+            "qty": 1,
+            "size": "",
+            "total": 15
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-23",
+        "shiftLabel": "Смена 23.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-07-23T08:24:53.037Z",
         "id": 3702,
@@ -173185,14 +173223,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 31,
-        "expectedOrders": 31,
+        "databaseOrders": 32,
+        "expectedOrders": 32,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-23",
         "label": "Смена 23.07",
         "missingOrders": 0,
-        "revenue": 1241,
+        "revenue": 1276,
         "status": "ok"
       },
       {
@@ -174002,12 +174040,12 @@
         "status": "ok"
       }
     ],
-    "total": 2655
+    "total": 2656
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 869
+      "total": 904
     },
     {
       "method": "Карта",
@@ -174027,6 +174065,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3703,
+      "items": [
+        "Мороженое классическое x1",
+        "Cake-Pops x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    },
     {
       "id": 3702,
       "items": [
@@ -174087,14 +174134,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 3695,
-      "items": [
-        "Babl tea mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -174245,6 +174284,11 @@
       "total": 104
     },
     {
+      "name": "Мороженое классическое",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 3,
       "total": 60
@@ -174263,13 +174307,8 @@
       "name": "Babl tea big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 5,
-      "total": 50
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-23T15:27:55.659Z"
+  "updatedAt": "2026-07-23T15:28:59.925Z"
 }

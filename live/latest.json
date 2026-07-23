@@ -6,23 +6,51 @@
     "open": true
   },
   "summary": {
-    "average": 32,
-    "checks": 3,
+    "average": 44,
+    "checks": 4,
     "expenseTotal": 205,
-    "net": -109,
-    "revenue": 96
+    "net": -29,
+    "revenue": 176
   },
   "data": {
-    "actions": 5792,
+    "actions": 5796,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2627,
+    "orders": 2628,
     "products": 60,
     "shifts": 62
   },
   "activity": [
+    {
+      "id": 1784765855805,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:17",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784765855805,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:17",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1784762937437,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:28",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784762937437,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:28",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784758811798,
       "source": "Локально",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:03",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784714609720,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:03",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784713328193,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:42",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784713328193,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784712661920,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:31",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2627,
+    "current": 2628,
     "old": [
       {
         "createdAt": "2026-07-22T10:10:42.082Z",
@@ -86153,6 +86153,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-23T00:17:35.683Z",
+        "id": 3675,
+        "items": [
+          "Манго mini x2",
+          "Bubble Gum mini x1",
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-mini",
+            "name": "Манго mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-23",
+        "shiftLabel": "Смена 23.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 80
+      },
       {
         "createdAt": "2026-07-22T23:28:57.319Z",
         "id": 3674,
@@ -172211,14 +172258,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 3,
-        "expectedOrders": 3,
+        "databaseOrders": 4,
+        "expectedOrders": 4,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-23",
         "label": "Смена 23.07",
         "missingOrders": 0,
-        "revenue": 96,
+        "revenue": 176,
         "status": "ok"
       },
       {
@@ -173028,12 +173075,12 @@
         "status": "ok"
       }
     ],
-    "total": 2627
+    "total": 2628
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 96
+      "total": 176
     },
     {
       "method": "Карта",
@@ -173053,6 +173100,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3675,
+      "items": [
+        "Манго mini x2",
+        "Bubble Gum mini x1",
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 80
+    },
     {
       "id": 3674,
       "items": [
@@ -173212,6 +173269,11 @@
   },
   "topProducts": [
     {
+      "name": "Манго mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Жасмин лимон big",
       "qty": 1,
       "total": 26
@@ -173227,11 +173289,21 @@
       "total": 25
     },
     {
+      "name": "Bubble Gum mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Blue mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-23T06:32:01.765Z"
+  "updatedAt": "2026-07-23T07:20:40.762Z"
 }

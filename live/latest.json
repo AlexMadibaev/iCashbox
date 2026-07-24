@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.17142857142857,
-    "checks": 35,
+    "average": 36.27777777777778,
+    "checks": 36,
     "expenseTotal": 205,
-    "net": 1061,
-    "revenue": 1266
+    "net": 1101,
+    "revenue": 1306
   },
   "data": {
-    "actions": 5949,
+    "actions": 5951,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2705,
+    "orders": 2706,
     "products": 60,
     "shifts": 63
   },
   "activity": [
     {
+      "id": 1784873001134,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:03",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784873001134,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:03",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784872611332,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:19",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784869917187,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:11",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784869917187,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:11",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2705,
+    "current": 2706,
     "old": [
       {
         "createdAt": "2026-07-23T10:25:28.527Z",
@@ -87793,6 +87793,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-24T06:26:17.710Z",
+        "id": 3753,
+        "items": [
+          "Blue mini x1",
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-24",
+        "shiftLabel": "Смена 24.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-24T06:03:21.019Z",
         "id": 3752,
@@ -176491,14 +176529,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 35,
-        "expectedOrders": 35,
+        "databaseOrders": 36,
+        "expectedOrders": 36,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-24",
         "label": "Смена 24.07",
         "missingOrders": 0,
-        "revenue": 1266,
+        "revenue": 1306,
         "status": "ok"
       },
       {
@@ -177321,12 +177359,12 @@
         "status": "ok"
       }
     ],
-    "total": 2705
+    "total": 2706
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 841
+      "total": 881
     },
     {
       "method": "Карта",
@@ -177346,6 +177384,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3753,
+      "items": [
+        "Blue mini x1",
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3752,
       "items": [
@@ -177402,14 +177449,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3745,
-      "items": [
-        "Babl tea mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -177545,14 +177584,14 @@
   },
   "topProducts": [
     {
-      "name": "АйсМатча клубника",
-      "qty": 4,
+      "name": "Babl tea mini",
+      "qty": 7,
       "total": 140
     },
     {
-      "name": "Babl tea mini",
-      "qty": 6,
-      "total": 120
+      "name": "АйсМатча клубника",
+      "qty": 4,
+      "total": 140
     },
     {
       "name": "Манго Маракуя big",
@@ -177570,6 +177609,11 @@
       "total": 80
     },
     {
+      "name": "Blue mini",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Мороженое Орео",
       "qty": 3,
       "total": 60
@@ -177578,13 +177622,8 @@
       "name": "Мороженое классическое",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "ПиноКолада big",
-      "qty": 2,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-24T13:06:26.003Z"
+  "updatedAt": "2026-07-24T13:29:22.357Z"
 }

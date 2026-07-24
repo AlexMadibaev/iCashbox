@@ -1138,6 +1138,16 @@ function receiptText(payload) {
 
   if (isSticker) return stickerPages(payload);
 
+  // Текстовая шапка вместо логотипа: печатается по центру над телом чека.
+  const header = payload.header || {};
+  if (header.mode === 'text') {
+    const headerText = String(header.text || '').trim();
+    if (headerText) {
+      for (const headerLine of wrapText(headerText, width)) rows.push(center(headerLine, width));
+      rows.push('');
+    }
+  }
+
   if (!isKitchen && !isSticker) {
     rows.push(padColumns('Чек №', order.id || '', width));
     rows.push(padColumns('Кассир', payload.shift?.cashier || 'Кассир', width));
@@ -1211,6 +1221,20 @@ function receiptText(payload) {
   return rows.join('\r\n');
 }
 
+// Логотип из настроек приходит как data:image/...;base64,...
+function decodeDataUrlImage(value) {
+  const match = /^data:image\/([a-z0-9.+-]+);base64,(.+)$/i.exec(String(value || '').trim());
+  if (!match) return null;
+  try {
+    const buffer = Buffer.from(match[2], 'base64');
+    if (!buffer.length) return null;
+    const subtype = match[1].toLowerCase();
+    return { buffer, extension: subtype === 'jpeg' ? 'jpg' : subtype.replace(/[^a-z0-9]/g, '') || 'png' };
+  } catch {
+    return null;
+  }
+}
+
 function paperUnitsToMm(value) {
   return Math.round((Number(value || 0) / PAPER_UNITS_PER_MM) * 10) / 10;
 }
@@ -1255,15 +1279,29 @@ async function printText(text, printerName, options = {}) {
   let logoPath = '';
   let tempLogoPath = '';
   if (options.logo) {
-    const sourceLogoPath = receiptLogoPath();
-    if (sourceLogoPath) {
-      tempLogoPath = join(tmpdir(), `icashbox-logo-${Date.now()}.png`);
+    // Загруженный кассиром логотип приходит data-URL'ом и имеет приоритет
+    // над встроенным pos-logo.png.
+    const customLogo = decodeDataUrlImage(options.logoDataUrl);
+    if (customLogo) {
+      tempLogoPath = join(tmpdir(), `icashbox-logo-${Date.now()}.${customLogo.extension}`);
       try {
-        await writeFile(tempLogoPath, await readFile(sourceLogoPath));
+        await writeFile(tempLogoPath, customLogo.buffer);
         logoPath = tempLogoPath;
       } catch {
         tempLogoPath = '';
-        logoPath = sourceLogoPath;
+      }
+    }
+    if (!logoPath) {
+      const sourceLogoPath = receiptLogoPath();
+      if (sourceLogoPath) {
+        tempLogoPath = join(tmpdir(), `icashbox-logo-${Date.now()}.png`);
+        try {
+          await writeFile(tempLogoPath, await readFile(sourceLogoPath));
+          logoPath = tempLogoPath;
+        } catch {
+          tempLogoPath = '';
+          logoPath = sourceLogoPath;
+        }
       }
     }
   }
@@ -1550,9 +1588,14 @@ function registerPrintIpc() {
   ipcMain.handle('icashbox:print', async (_event, payload) => {
     const beforePrint = await printerDiagnostics(payload.printerName);
     assertPrinterReady(beforePrint);
+    const header = payload.header || {};
+    const headerMode = header.mode || 'logo';
+    const wantsLogo = !payload.type || payload.type === 'receipt' || payload.type === 'sticker';
     await printText(receiptText(payload), payload.printerName, {
       copies: payload.copies,
-      logo: !payload.type || payload.type === 'receipt' || payload.type === 'sticker',
+      // Текстовая шапка печатается строкой в receiptText, картинка не нужна.
+      logo: headerMode !== 'text' && wantsLogo,
+      logoDataUrl: headerMode === 'custom' ? String(header.logoDataUrl || '') : '',
       sticker: payload.type === 'sticker'
     });
     const afterPrint = await printerDiagnostics(payload.printerName);

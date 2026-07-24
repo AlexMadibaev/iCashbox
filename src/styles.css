@@ -2828,3 +2828,63 @@ th {
   width: 100%;
   justify-content: center;
 }
+
+/* Receipt header configuration (logo / custom logo / text) */
+.receipt-header-settings {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #e1e7e2;
+}
+
+.receipt-header-title {
+  font-size: 12px;
+  font-weight: 800;
+  color: #526158;
+}
+
+.receipt-header-modes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.receipt-header-mode {
+  padding: 10px 8px;
+  border: 1px solid #d5dfd3;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #526158;
+  font: 700 12px inherit;
+  cursor: pointer;
+}
+
+.receipt-header-mode.active {
+  border-color: #17201b;
+  background: #17201b;
+  color: #ffffff;
+}
+
+.receipt-header-logo {
+  display: grid;
+  gap: 10px;
+}
+
+.receipt-header-logo img {
+  max-width: 190px;
+  max-height: 90px;
+  object-fit: contain;
+  padding: 10px;
+  border: 1px solid #e1e7e2;
+  border-radius: 8px;
+  background: #f8faf8;
+}
+
+.receipt-header-text {
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+  color: #17201b;
+}

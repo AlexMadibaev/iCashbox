@@ -838,6 +838,10 @@ function App() {
     autoReceipt: false,
     directAgent: true,
     printerName: '',
+    // Шапка чека: встроенный логотип, свой логотип или просто текст.
+    receiptHeaderMode: 'logo',
+    receiptHeaderText: '',
+    receiptLogoDataUrl: '',
     stickerPrinterName: ''
   });
   const [printers, setPrinters] = useState([]);
@@ -1711,6 +1715,11 @@ function App() {
     const printerName = type === 'sticker' ? printSettings.stickerPrinterName : printSettings.printerName;
     const payload = {
       copies: normalizeCopies(copies),
+      header: {
+        logoDataUrl: printSettings.receiptLogoDataUrl || '',
+        mode: printSettings.receiptHeaderMode || 'logo',
+        text: (printSettings.receiptHeaderText || '').trim()
+      },
       order,
       printerName: printerName.trim(),
       shift,
@@ -1971,6 +1980,7 @@ function App() {
             sendToReceiptPrinter(order, type, false, 1);
             setPrintJob(null);
           }}
+          printSettings={printSettings}
           shift={shift}
           type={printJob.type}
         />
@@ -3799,6 +3809,19 @@ function PrinterPicker({ label, onChange, placeholder, printers, value }) {
 }
 
 function PrinterSettingsFields({ loadPrinters, printSettings, printers, setPrintSettings }) {
+  const headerLogoInputRef = useRef(null);
+  const headerMode = printSettings.receiptHeaderMode || 'logo';
+
+  const uploadHeaderLogo = async (file) => {
+    if (!file) return;
+    try {
+      const receiptLogoDataUrl = await menuImageFileToDataUrl(file);
+      setPrintSettings((current) => ({ ...current, receiptLogoDataUrl, receiptHeaderMode: 'custom' }));
+    } catch (error) {
+      window.alert(error.message || 'Не удалось загрузить логотип');
+    }
+  };
+
   return (
     <div className="printer-settings">
       <PrinterPicker
@@ -3841,6 +3864,78 @@ function PrinterSettingsFields({ loadPrinters, printSettings, printers, setPrint
         />
         <span>Автопечать чека после заказа</span>
       </label>
+
+      <div className="receipt-header-settings">
+        <span className="receipt-header-title">Шапка чека</span>
+        <div className="receipt-header-modes">
+          {[
+            { id: 'logo', label: 'Логотип по умолчанию' },
+            { id: 'custom', label: 'Свой логотип' },
+            { id: 'text', label: 'Только текст' }
+          ].map((option) => (
+            <button
+              className={headerMode === option.id ? 'receipt-header-mode active' : 'receipt-header-mode'}
+              key={option.id}
+              type="button"
+              onClick={() => setPrintSettings((current) => ({ ...current, receiptHeaderMode: option.id }))}
+            >
+              {option.label}
+            </button>
+          ))}
+        </div>
+
+        {headerMode === 'custom' && (
+          <div className="receipt-header-logo">
+            {printSettings.receiptLogoDataUrl ? (
+              <img src={printSettings.receiptLogoDataUrl} alt="Логотип чека" />
+            ) : (
+              <p className="field-hint">Логотип не загружен — чек напечатается без него.</p>
+            )}
+            <div className="backup-actions">
+              <button className="secondary-action" type="button" onClick={() => headerLogoInputRef.current?.click()}>
+                <ImagePlus size={18} />
+                <span>{printSettings.receiptLogoDataUrl ? 'Заменить логотип' : 'Загрузить логотип'}</span>
+              </button>
+              {printSettings.receiptLogoDataUrl && (
+                <button
+                  className="secondary-action"
+                  type="button"
+                  onClick={() => setPrintSettings((current) => ({ ...current, receiptLogoDataUrl: '' }))}
+                >
+                  <Trash2 size={18} />
+                  <span>Убрать</span>
+                </button>
+              )}
+            </div>
+            <input
+              ref={headerLogoInputRef}
+              type="file"
+              accept="image/*"
+              hidden
+              onChange={(event) => {
+                const file = event.target.files?.[0];
+                event.target.value = '';
+                uploadHeaderLogo(file);
+              }}
+            />
+          </div>
+        )}
+
+        {headerMode === 'text' && (
+          <label className="field-label">
+            <span>Текст в шапке</span>
+            <input
+              type="text"
+              maxLength={60}
+              value={printSettings.receiptHeaderText || ''}
+              placeholder="Например: Кафе «Восток»"
+              onChange={(event) =>
+                setPrintSettings((current) => ({ ...current, receiptHeaderText: event.target.value }))
+              }
+            />
+          </label>
+        )}
+      </div>
     </div>
   );
 }
@@ -4382,7 +4477,10 @@ function buildStickerLabels(order) {
   return labels;
 }
 
-function PrintModal({ order, onClose, onPrint, shift, type }) {
+function PrintModal({ order, onClose, onPrint, printSettings = {}, shift, type }) {
+  const headerMode = printSettings.receiptHeaderMode || 'logo';
+  const headerLogoSrc = headerMode === 'custom' ? printSettings.receiptLogoDataUrl || '' : receiptLogoUrl;
+  const headerText = (printSettings.receiptHeaderText || '').trim();
   const isSticker = type === 'sticker';
   const stickerLabels = isSticker ? buildStickerLabels(order) : [];
   const receiptText = isSticker ? '' : buildPrintableReceipt(order, shift, type);
@@ -4420,7 +4518,9 @@ function PrintModal({ order, onClose, onPrint, shift, type }) {
           </div>
         ) : (
           <>
-            <img className="receipt-logo" src={receiptLogoUrl} alt="" />
+            {headerMode === 'text'
+              ? headerText && <p className="receipt-header-text">{headerText}</p>
+              : headerLogoSrc && <img className="receipt-logo" src={headerLogoSrc} alt="" />}
             <div className="receipt-body">
               <pre className="receipt-text">{receiptText}</pre>
             </div>

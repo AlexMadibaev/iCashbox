@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 45,
-    "checks": 1,
+    "average": 70,
+    "checks": 2,
     "expenseTotal": 205,
-    "net": -160,
-    "revenue": 45
+    "net": -65,
+    "revenue": 140
   },
   "data": {
-    "actions": 5881,
+    "actions": 5883,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2671,
+    "orders": 2672,
     "products": 60,
     "shifts": 63
   },
   "activity": [
+    {
+      "id": 1784847758885,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:02",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784847758885,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:02",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784840969022,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:56",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784800602986,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:56",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784800026650,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:47",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2671,
+    "current": 2672,
     "old": [
       {
         "createdAt": "2026-07-23T10:25:28.527Z",
@@ -87793,6 +87793,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-23T23:23:17.928Z",
+        "id": 3719,
+        "items": [
+          "Blue mini x1",
+          "МангоБанан big x1",
+          "Мороженое Орео x1",
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 95,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-24",
+        "shiftLabel": "Смена 24.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 95
+      },
       {
         "createdAt": "2026-07-23T23:02:38.730Z",
         "id": 3718,
@@ -175433,14 +175489,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 1,
-        "expectedOrders": 1,
+        "databaseOrders": 2,
+        "expectedOrders": 2,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-24",
         "label": "Смена 24.07",
         "missingOrders": 0,
-        "revenue": 45,
+        "revenue": 140,
         "status": "ok"
       },
       {
@@ -176263,12 +176319,12 @@
         "status": "ok"
       }
     ],
-    "total": 2671
+    "total": 2672
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 45
+      "total": 140
     },
     {
       "method": "Карта",
@@ -176288,6 +176344,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3719,
+      "items": [
+        "Blue mini x1",
+        "МангоБанан big x1",
+        "Мороженое Орео x1",
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 95
+    },
     {
       "id": 3718,
       "items": [
@@ -176431,9 +176498,29 @@
   },
   "topProducts": [
     {
+      "name": "МангоБанан big",
+      "qty": 1,
+      "total": 30
+    },
+    {
+      "name": "Черника mini",
+      "qty": 1,
+      "total": 25
+    },
+    {
       "name": "МангоБанан mini",
       "qty": 1,
       "total": 25
+    },
+    {
+      "name": "Blue mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Мороженое Орео",
+      "qty": 1,
+      "total": 20
     },
     {
       "name": "Жасмин гранат mini",
@@ -176442,5 +176529,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-24T06:05:44.265Z"
+  "updatedAt": "2026-07-24T06:26:23.070Z"
 }

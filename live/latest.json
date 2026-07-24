@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.65853658536585,
-    "checks": 41,
+    "average": 36.38095238095238,
+    "checks": 42,
     "expenseTotal": 205,
-    "net": 1298,
-    "revenue": 1503
+    "net": 1323,
+    "revenue": 1528
   },
   "data": {
-    "actions": 5961,
+    "actions": 5963,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2711,
+    "orders": 2712,
     "products": 60,
     "shifts": 63
   },
   "activity": [
     {
+      "id": 1784879333096,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:48",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784879333096,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:48",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784879051127,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:26",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784873001134,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:03",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784873001134,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:03",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2711,
+    "current": 2712,
     "old": [
       {
         "createdAt": "2026-07-23T10:25:28.527Z",
@@ -87793,6 +87793,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-24T07:51:02.576Z",
+        "id": 3759,
+        "items": [
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 25,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-24",
+        "shiftLabel": "Смена 24.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-24T07:48:52.957Z",
         "id": 3758,
@@ -176710,14 +176739,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 41,
-        "expectedOrders": 41,
+        "databaseOrders": 42,
+        "expectedOrders": 42,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-24",
         "label": "Смена 24.07",
         "missingOrders": 0,
-        "revenue": 1503,
+        "revenue": 1528,
         "status": "ok"
       },
       {
@@ -177540,7 +177569,7 @@
         "status": "ok"
       }
     ],
-    "total": 2711
+    "total": 2712
   },
   "payments": [
     {
@@ -177553,7 +177582,7 @@
     },
     {
       "method": "Alif",
-      "total": 325
+      "total": 350
     },
     {
       "method": "Dushanbe City",
@@ -177565,6 +177594,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3759,
+      "items": [
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 3758,
       "items": [
@@ -177626,14 +177663,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3751,
-      "items": [
-        "Мороженое с чёрным сахаром x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -177789,14 +177818,14 @@
       "total": 120
     },
     {
-      "name": "Клубника mini",
-      "qty": 5,
+      "name": "Черника mini",
+      "qty": 4,
       "total": 100
     },
     {
-      "name": "Черника mini",
-      "qty": 3,
-      "total": 75
+      "name": "Клубника mini",
+      "qty": 5,
+      "total": 100
     },
     {
       "name": "Blue mini",
@@ -177810,5 +177839,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-24T14:51:56.252Z"
+  "updatedAt": "2026-07-24T14:54:06.680Z"
 }

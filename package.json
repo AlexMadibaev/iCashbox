@@ -12,11 +12,14 @@
     "preview": "vite preview --host 127.0.0.1",
     "print-agent": "node print-agent/server.js",
     "desktop": "npm run build:desktop && electron .",
-    "dist:win": "npm run build:desktop && electron-builder --win portable"
+    "dist:win": "npm run build:desktop && electron-builder --win portable",
+    "dist:mac": "npm run build:desktop && electron-builder --mac"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
+    "exceljs": "^4.4.0",
     "lucide-react": "latest",
+    "pdfmake": "^0.3.8",
     "react": "latest",
     "react-dom": "latest",
     "vite": "latest"
@@ -37,6 +40,7 @@
       "package.json"
     ],
     "win": {
+      "icon": "public/app-icon.ico",
       "signAndEditExecutable": false,
       "target": [
         {
@@ -46,6 +50,30 @@
           ]
         }
       ]
+    },
+    "mac": {
+      "icon": "public/app-icon.png",
+      "category": "public.app-category.business",
+      "identity": null,
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ]
+    },
+    "dmg": {
+      "title": "iCashbox POS"
     },
     "nsis": {
       "oneClick": false,

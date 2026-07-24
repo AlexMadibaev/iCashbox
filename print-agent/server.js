@@ -1,11 +1,27 @@
 import { createServer } from 'node:http';
+import { request as httpsRequest } from 'node:https';
 import { spawn } from 'node:child_process';
 import { existsSync } from 'node:fs';
 import { readFile, writeFile, unlink } from 'node:fs/promises';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
+import { stickerWishForSeed } from '../src/stickerWishes.js';
 
 const PORT = 8787;
+const STICKER_WIDTH_MM = 57;
+const STICKER_HEIGHT_MM = 40;
+const STICKER_GAP_MM = 2.3;
+const PAPER_UNITS_PER_MM = 100 / 25.4;
+const STICKER_PAPER_WIDTH = mmToPaperUnits(STICKER_WIDTH_MM);
+const STICKER_CONTENT_HEIGHT = mmToPaperUnits(STICKER_HEIGHT_MM);
+const STICKER_GAP_HEIGHT = mmToPaperUnits(STICKER_GAP_MM);
+const STICKER_PAPER_HEIGHT = STICKER_CONTENT_HEIGHT + STICKER_GAP_HEIGHT;
+const STICKER_PRINT_PAUSE_MS = 350;
+const NETWORK_TIME_ZONE_OFFSET = '+05:00';
+
+function mmToPaperUnits(value) {
+  return Math.round(value * PAPER_UNITS_PER_MM);
+}
 
 function receiptLogoPath() {
   const candidates = [
@@ -23,6 +39,82 @@ function sendJson(res, status, payload) {
     'Content-Type': 'application/json; charset=utf-8'
   });
   res.end(JSON.stringify(payload));
+}
+
+function requestJson(url, timeoutMs = 4500) {
+  return new Promise((resolve, reject) => {
+    const req = httpsRequest(url, { headers: { Accept: 'application/json' } }, (res) => {
+      let body = '';
+      res.setEncoding('utf8');
+      res.on('data', (chunk) => {
+        body += chunk;
+      });
+      res.on('end', () => {
+        if ((res.statusCode || 0) >= 400) {
+          reject(new Error(`HTTP ${res.statusCode}`));
+          return;
+        }
+
+        try {
+          resolve(JSON.parse(body));
+        } catch (error) {
+          reject(error);
+        }
+      });
+    });
+
+    req.setTimeout(timeoutMs, () => {
+      req.destroy(new Error('Network time request timed out'));
+    });
+    req.on('error', reject);
+    req.end();
+  });
+}
+
+function parseNetworkTimePayload(payload) {
+  const candidates = [
+    payload?.iso,
+    payload?.datetime,
+    payload?.utc_datetime,
+    payload?.dateTime,
+    payload?.currentLocalTime,
+    payload?.currentDateTime
+  ];
+
+  for (const candidate of candidates) {
+    const value = String(candidate || '').trim();
+    if (!value) continue;
+    const iso = /(?:z|[+-]\d{2}:?\d{2})$/i.test(value) ? value : `${value}${NETWORK_TIME_ZONE_OFFSET}`;
+    const date = new Date(iso);
+    if (!Number.isNaN(date.getTime())) return date;
+  }
+
+  return null;
+}
+
+async function fetchNetworkTime() {
+  const sources = [
+    {
+      source: 'worldtimeapi',
+      url: 'https://worldtimeapi.org/api/timezone/Asia/Dushanbe'
+    },
+    {
+      source: 'timeapi',
+      url: 'https://timeapi.io/api/Time/current/zone?timeZone=Asia/Dushanbe'
+    }
+  ];
+
+  for (const item of sources) {
+    try {
+      const payload = await requestJson(item.url);
+      const date = parseNetworkTimePayload(payload);
+      if (date) return { iso: date.toISOString(), ok: true, source: item.source };
+    } catch {
+      // Try the next provider.
+    }
+  }
+
+  throw new Error('Network time is unavailable');
 }
 
 function readBody(req) {
@@ -189,6 +281,69 @@ async function listPrinters() {
   return Array.from(names).sort((a, b) => a.localeCompare(b));
 }
 
+function psQuote(value) {
+  return `'${String(value || '').replace(/'/g, "''")}'`;
+}
+
+async function printerDiagnostics(printerName = '') {
+  const command = `
+$requestedName = ${psQuote(printerName)}
+$printer = $null
+if ($requestedName) {
+  $printer = Get-CimInstance -ClassName Win32_Printer | Where-Object { $_.Name -ieq $requestedName } | Select-Object -First 1
+} else {
+  $printer = Get-CimInstance -ClassName Win32_Printer | Where-Object { $_.Default } | Select-Object -First 1
+}
+if (-not $printer) {
+  [pscustomobject]@{
+    exists = $false
+    requestedName = $requestedName
+  } | ConvertTo-Json -Compress
+  exit
+}
+$jobs = @(Get-PrintJob -PrinterName $printer.Name -ErrorAction SilentlyContinue)
+$printInfo = Get-Printer -Name $printer.Name -ErrorAction SilentlyContinue
+[pscustomobject]@{
+  exists = $true
+  name = $printer.Name
+  isDefault = [bool]$printer.Default
+  workOffline = [bool]$printer.WorkOffline
+  printerStatus = [int]$printer.PrinterStatus
+  extendedPrinterStatus = [int]$printer.ExtendedPrinterStatus
+  detectedErrorState = [int]$printer.DetectedErrorState
+  printerStatusText = if ($printInfo) { [string]$printInfo.PrinterStatus } else { '' }
+  portName = $printer.PortName
+  driverName = $printer.DriverName
+  jobCount = if ($printInfo -and $null -ne $printInfo.JobCount) { [int]$printInfo.JobCount } else { $jobs.Count }
+  jobs = @($jobs | Select-Object -First 5 ID, DocumentName, JobStatus, SubmittedTime)
+} | ConvertTo-Json -Compress -Depth 4
+`;
+  const output = (await runPowerShell(command)).trim();
+  return output ? JSON.parse(output) : { exists: false, requestedName: printerName };
+}
+
+function assertPrinterReady(diagnostics) {
+  if (!diagnostics.exists) {
+    throw new Error(
+      diagnostics.requestedName
+        ? `Принтер "${diagnostics.requestedName}" не найден в Windows`
+        : 'В Windows не выбран принтер по умолчанию'
+    );
+  }
+
+  if (diagnostics.workOffline) {
+    throw new Error(
+      `Принтер "${diagnostics.name}" в режиме offline. В Windows отключите "Use Printer Offline" и проверьте USB/питание. В очереди: ${diagnostics.jobCount}.`
+    );
+  }
+
+  if (/error|offline|paused/i.test(String(diagnostics.printerStatusText || ''))) {
+    throw new Error(
+      `Принтер "${diagnostics.name}" сейчас в статусе ${diagnostics.printerStatusText}. Проверьте питание, USB и очистите очередь. В очереди: ${diagnostics.jobCount}.`
+    );
+  }
+}
+
 function center(text, width = 36) {
   const value = String(text || '').slice(0, width);
   const left = Math.max(0, Math.floor((width - value.length) / 2));
@@ -211,6 +366,22 @@ function padColumns(left, right, width = 36) {
   const r = String(right || '');
   const space = Math.max(1, width - l.length - r.length);
   return `${l}${' '.repeat(space)}${r}`;
+}
+
+function formatShiftNumber(date = new Date()) {
+  return new Intl.DateTimeFormat('ru-RU', {
+    day: '2-digit',
+    month: '2-digit'
+  }).format(date);
+}
+
+function normalizeShiftNumber(value) {
+  const text = String(value ?? '').trim();
+  return /^\d{2}\.\d{2}$/.test(text) ? text : formatShiftNumber();
+}
+
+function shiftLabel(shift) {
+  return `Смена ${normalizeShiftNumber(shift?.number)}`;
 }
 
 function parseOrderItem(raw) {
@@ -264,38 +435,39 @@ function wrapText(text, width = 36) {
   return lines.length ? lines : [''];
 }
 
-function stickerPages(payload, width = 38) {
+function formatGuestName(name) {
+  const cleanName = String(name || '').trim();
+  return cleanName || 'Дорогой гость';
+}
+
+function stickerWish(order, labelIndex) {
+  return (
+    order.stickerWishes?.[labelIndex] ||
+    order.stickerWish ||
+    stickerWishForSeed(`${order.id || 'order'}-${labelIndex}`)
+  );
+}
+
+function stickerPages(payload, width = 30) {
   const order = payload.order || {};
   const lines = orderLines(order);
-  const now = new Date();
-  const time = now.toLocaleString('ru-RU', {
-    day: '2-digit',
-    month: '2-digit',
-    hour: '2-digit',
-    minute: '2-digit'
-  });
+  const guestName = formatGuestName(order.guestName);
   const pages = [];
+  let labelIndex = 0;
 
   for (const item of lines) {
     const qty = Math.max(1, Math.round(Number(item.qty || 1)));
     for (let index = 1; index <= qty; index += 1) {
       const rows = [];
-      rows.push(padColumns(`Заказ #${order.id || ''}`, time, width));
-      rows.push(line(width));
-      wrapText(String(item.name || '').toUpperCase(), width).forEach((row) => rows.push(center(row, width)));
-      if (qty > 1) rows.push(center(`${index}/${qty}`, width));
-      if (order.comment) {
-        rows.push(line(width));
-        wrapText(order.comment, width).forEach((row) => rows.push(row));
-      }
-      rows.push(line(width));
-      rows.push('\n');
+      rows.push(guestName);
+      wrapText(stickerWish(order, labelIndex), width).forEach((row) => rows.push(row));
       pages.push(rows.join('\r\n'));
+      labelIndex += 1;
     }
   }
 
   if (!pages.length) {
-    pages.push([padColumns(`Заказ #${order.id || ''}`, time, width), line(width), center('НЕТ ПОЗИЦИЙ', width)].join('\r\n'));
+    pages.push([guestName, ...wrapText(stickerWish(order, 0), width)].join('\r\n'));
   }
 
   return pages.join('\f');
@@ -307,6 +479,8 @@ function receiptText(payload) {
   const isKitchen = payload.type === 'kitchen';
   const isSticker = payload.type === 'sticker';
   const payments = Object.entries(order.payments || {}).filter(([, value]) => Number(value) > 0);
+  const paidTotal = payments.reduce((sum, [, value]) => sum + Number(value || 0), 0);
+  const change = Math.max(0, Math.round((paidTotal - Number(order.total || 0)) * 100) / 100);
   const lines = orderLines(order);
   const now = new Date();
   const time = now.toLocaleString('ru-RU', {
@@ -331,7 +505,7 @@ function receiptText(payload) {
     rows.push(center(isSticker ? 'НАКЛЕЙКА' : 'КУХОННЫЙ ТАЛОН', width));
     rows.push(center(isSticker ? 'КОММЕНТАРИЙ' : 'НА ПРИГОТОВЛЕНИЕ', width));
     rows.push(line(width));
-    rows.push(padColumns(`Заказ #${order.id || ''}`, `Смена #${payload.shift?.number || ''}`, width));
+    rows.push(padColumns(`Заказ #${order.id || ''}`, shiftLabel(payload.shift), width));
     rows.push(padColumns(order.type || 'Продажа', order.status || '', width));
     rows.push(line(width));
   }
@@ -374,6 +548,9 @@ function receiptText(payload) {
       for (const [method, value] of payments) {
         rows.push(padColumns(method, `${money(value)} TJS`, width));
       }
+      if (change > 0) {
+        rows.push(padColumns('Сдача', `${money(change)} TJS`, width));
+      }
     }
     rows.push('');
     rows.push(line(width));
@@ -412,8 +589,9 @@ async function printText(text, printerName, options = {}) {
   const copies = Math.min(20, Math.max(1, Math.round(Number(options.copies || 1))));
   const pages = text.split('\f');
   const maxPageLines = Math.max(...pages.map((page) => page.split(/\r?\n/).length));
+  const paperWidth = options.sticker ? STICKER_PAPER_WIDTH : 315;
   const paperHeight = options.sticker
-    ? Math.max(150, Math.ceil(maxPageLines * 18 + 34))
+    ? STICKER_PAPER_HEIGHT
     : Math.max(320, Math.ceil(maxPageLines * 17 + (logoPath ? 120 : 76)));
   const script = `
 param(
@@ -422,12 +600,16 @@ param(
   [string]$LogoPath,
   [int]$Copies,
   [int]$PaperWidth,
-  [int]$PaperHeight
+  [int]$PaperHeight,
+  [int]$StickerContentHeight,
+  [int]$StickerPauseMs,
+  [switch]$Sticker
 )
 Add-Type -AssemblyName System.Drawing
 $doc = New-Object System.Drawing.Printing.PrintDocument
 if ($PrinterName) { $doc.PrinterSettings.PrinterName = $PrinterName }
-$paper = New-Object System.Drawing.Printing.PaperSize('Receipt80mm', $PaperWidth, $PaperHeight)
+$paperName = if ($Sticker) { 'Sticker57x40Gap2_3mm' } else { 'Receipt80mm' }
+$paper = New-Object System.Drawing.Printing.PaperSize($paperName, $PaperWidth, $PaperHeight)
 $doc.DefaultPageSettings.PaperSize = $paper
 $doc.PrinterSettings.DefaultPageSettings.PaperSize = $paper
 $doc.DefaultPageSettings.Margins = New-Object System.Drawing.Printing.Margins(0, 0, 0, 0)
@@ -441,8 +623,52 @@ if ($LogoPath -and (Test-Path -LiteralPath $LogoPath)) { $logo = [System.Drawing
 $font = New-Object System.Drawing.Font('Consolas', 8.8, [System.Drawing.FontStyle]::Regular)
 $bold = New-Object System.Drawing.Font('Consolas', 10.8, [System.Drawing.FontStyle]::Bold)
 $brush = [System.Drawing.Brushes]::Black
+$doc.DocumentName = if ($Sticker) { 'iCashbox Sticker' } else { 'iCashbox Receipt' }
+$centerFormat = New-Object System.Drawing.StringFormat
+$centerFormat.Alignment = [System.Drawing.StringAlignment]::Center
+$centerFormat.LineAlignment = [System.Drawing.StringAlignment]::Near
 $doc.add_PrintPage({
   param($sender, $e)
+  $e.Graphics.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::SingleBitPerPixelGridFit
+  if ($Sticker) {
+    $pageText = $script:pages[$script:pageIndex]
+    $lines = @(($pageText -split "\\r?\\n") | Where-Object { $_ -ne $null -and $_.Trim().Length -gt 0 })
+    $guestName = if ($lines.Count -gt 0) { $lines[0] } else { 'Дорогой гость' }
+    $wishText = if ($lines.Count -gt 1) { ($lines[1..($lines.Count - 1)] -join " ") } else { '' }
+    $contentHeight = if ($StickerContentHeight -gt 0) { $StickerContentHeight } else { $PaperHeight }
+    $safeWidth = [Math]::Max(1, $PaperWidth - 12)
+    $y = 5
+    if ($logo) {
+      $maxLogoWidth = [Math]::Min(158.0, $safeWidth)
+      $maxLogoHeight = 38.0
+      $scale = [Math]::Min($maxLogoWidth / $logo.Width, $maxLogoHeight / $logo.Height)
+      $logoWidth = [int][Math]::Round($logo.Width * $scale)
+      $logoHeight = [int][Math]::Round($logo.Height * $scale)
+      $logoX = [Math]::Max(0, [int][Math]::Round(($PaperWidth - $logoWidth) / 2))
+      $e.Graphics.DrawImage($logo, $logoX, $y, $logoWidth, $logoHeight)
+      $y += $logoHeight + 8
+    }
+    $guestSize = 13.5
+    do {
+      $guestFont = New-Object System.Drawing.Font('Arial', $guestSize, [System.Drawing.FontStyle]::Bold)
+      $guestMeasure = $e.Graphics.MeasureString($guestName, $guestFont)
+      if ($guestMeasure.Width -le $safeWidth -or $guestSize -le 9.0) { break }
+      $guestFont.Dispose()
+      $guestSize -= 0.5
+    } while ($true)
+    $guestRect = New-Object System.Drawing.RectangleF(6, $y, $safeWidth, 28)
+    $e.Graphics.DrawString($guestName, $guestFont, $brush, $guestRect, $centerFormat)
+    $guestFont.Dispose()
+    $wishFont = New-Object System.Drawing.Font('Arial', 8.4, [System.Drawing.FontStyle]::Bold)
+    $wishRectY = [Math]::Min($contentHeight - 58, $y + 31)
+    $wishRect = New-Object System.Drawing.RectangleF(6, $wishRectY, $safeWidth, [Math]::Max(38, $contentHeight - $wishRectY - 5))
+    $e.Graphics.DrawString($wishText, $wishFont, $brush, $wishRect, $centerFormat)
+    $wishFont.Dispose()
+    $script:pageIndex += 1
+    $e.HasMorePages = $script:pageIndex -lt $script:pages.Count
+    if ($e.HasMorePages -and $StickerPauseMs -gt 0) { Start-Sleep -Milliseconds $StickerPauseMs }
+    return
+  }
   $x = 3
   $y = 6
   if ($logo) {
@@ -470,6 +696,9 @@ $copyCount = [Math]::Min(20, [Math]::Max(1, $Copies))
 for ($copyIndex = 0; $copyIndex -lt $copyCount; $copyIndex++) {
   $script:pageIndex = 0
   $doc.Print()
+  if ($Sticker -and $StickerPauseMs -gt 0 -and $copyIndex -lt ($copyCount - 1)) {
+    Start-Sleep -Milliseconds $StickerPauseMs
+  }
 }
 if ($logo) { $logo.Dispose() }
 $doc.Dispose()
@@ -486,14 +715,19 @@ $doc.Dispose()
       '-TextPath',
       filePath,
       '-PaperWidth',
-      '315',
+      String(paperWidth),
       '-Copies',
       String(copies),
       '-PaperHeight',
-      String(paperHeight)
+      String(paperHeight),
+      '-StickerContentHeight',
+      String(STICKER_CONTENT_HEIGHT),
+      '-StickerPauseMs',
+      String(STICKER_PRINT_PAUSE_MS)
     ];
     if (printerName) args.push('-PrinterName', printerName);
     if (logoPath) args.push('-LogoPath', logoPath);
+    if (options.sticker) args.push('-Sticker');
     await runCommand('powershell.exe', args);
   } finally {
     unlink(filePath).catch(() => {});
@@ -513,6 +747,15 @@ createServer(async (req, res) => {
     return;
   }
 
+  if (req.method === 'GET' && req.url === '/time') {
+    try {
+      sendJson(res, 200, await fetchNetworkTime());
+    } catch (error) {
+      sendJson(res, 503, { ok: false, error: error.message });
+    }
+    return;
+  }
+
   if (req.method === 'GET' && req.url === '/printers') {
     try {
       sendJson(res, 200, { ok: true, printers: await listPrinters() });
@@ -529,13 +772,17 @@ createServer(async (req, res) => {
 
   try {
     const payload = JSON.parse(await readBody(req));
+    const beforePrint = await printerDiagnostics(payload.printerName);
+    assertPrinterReady(beforePrint);
     await printText(receiptText(payload), payload.printerName, {
       copies: payload.copies,
-      logo: !payload.type || payload.type === 'receipt',
+      logo: !payload.type || payload.type === 'receipt' || payload.type === 'sticker',
       sticker: payload.type === 'sticker'
     });
-    sendJson(res, 200, { ok: true });
+    const afterPrint = await printerDiagnostics(payload.printerName);
+    sendJson(res, 200, { ok: true, printer: afterPrint.name, jobCount: afterPrint.jobCount });
   } catch (error) {
+    console.error(error);
     sendJson(res, 500, { ok: false, error: error.message });
   }
 }).listen(PORT, '127.0.0.1', () => {

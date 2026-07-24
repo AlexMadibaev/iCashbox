@@ -6,18 +6,19 @@ import {
   Check,
   ClipboardList,
   CircleDollarSign,
-  Cloud,
-  CloudOff,
   CreditCard,
   Database,
   Download,
+  FolderOpen,
+  ImagePlus,
   KeyRound,
-  Landmark,
   LogOut,
   MenuSquare,
   Minus,
   PackagePlus,
+  Pencil,
   Plus,
+  Power,
   Printer,
   ReceiptText,
   RotateCcw,
@@ -26,14 +27,23 @@ import {
   Settings,
   ShieldCheck,
   Smartphone,
+  Trash2,
   Undo2,
   Upload,
   User,
   UserRoundCog,
-  Wifi,
   WifiOff,
   X
 } from 'lucide-react';
+import {
+  createPosterMenuWorkbook,
+  menuTemplateProducts,
+  parsePosterMenuWorkbook,
+  productSeed,
+  productSeedVersion
+} from './menuExcel.js';
+import { createOrdersWorkbook, parseOrdersWorkbook } from './orderExcel.js';
+import { STICKER_WISH_BANK_SIZE, pickStickerWish, stickerWishForSeed } from './stickerWishes.js';
 
 const currency = new Intl.NumberFormat('ru-RU', {
   style: 'currency',
@@ -46,9 +56,46 @@ const receiptMoney = new Intl.NumberFormat('ru-RU', {
   maximumFractionDigits: 2
 });
 
-const blankPayments = { Наличные: 0, Alif: 0, 'Dushanbe City': 0, Карта: 0, Перевод: 0 };
+const blankPayments = { Наличные: 0, Alif: 0, 'Dushanbe City': 0 };
 const paymentMethods = Object.keys(blankPayments);
+const paymentButtonLabels = {
+  Наличные: 'Наличка',
+  Alif: 'Alif',
+  'Dushanbe City': 'Dushanbe City'
+};
+const paymentButtonLogos = {
+  Alif: {
+    alt: 'Alif',
+    src: `${import.meta.env.BASE_URL}payment-alif.svg`
+  },
+  'Dushanbe City': {
+    alt: 'Dushanbe City',
+    src: `${import.meta.env.BASE_URL}payment-dushanbe-city.svg`
+  }
+};
 const receiptLogoUrl = `${import.meta.env.BASE_URL}pos-logo.png`;
+
+function paymentMethodLabel(method) {
+  return paymentButtonLabels[method] || method;
+}
+
+function formatOrderTime(value) {
+  if (!value) return '-';
+  return toDate(value).toLocaleTimeString('ru-RU', {
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+}
+
+function formatOrderPayments(order, paymentFilter = null) {
+  const entries = Object.entries(order.payments || {}).filter(([, value]) => Number(value) > 0);
+  const filteredEntries = paymentFilter ? entries.filter(([method]) => method === paymentFilter) : entries;
+  if (!filteredEntries.length) return 'Оплата ожидает';
+
+  return filteredEntries
+    .map(([method, value]) => `${paymentMethodLabel(method)}: ${currency.format(value)}`)
+    .join(', ');
+}
 
 const defaultAccounts = [
   {
@@ -77,73 +124,45 @@ const fallbackRolePins = {
   cashier: ['1234']
 };
 
-const roleAccess = {
+function accountPasswordMatches(account, password) {
+  const savedPassword = String(account?.password ?? '').trim();
+  const enteredPassword = String(password ?? '');
+
+  if (savedPassword) return savedPassword === enteredPassword;
+  return (fallbackRolePins[account?.role] || []).includes(enteredPassword);
+}
+
+const defaultRoleAccess = {
   admin: ['pos', 'menu', 'orders', 'inventory', 'analytics', 'cloud', 'roles'],
   cashier: ['pos', 'orders']
 };
 
-const productSeed = [
-  {
-    id: 'capuccino-250',
-    name: 'Капучино',
-    category: 'Кофе',
-    size: '250 мл',
-    price: 25,
-    modifiers: ['Сироп', 'Альт. молоко', 'Сахар'],
-    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80',
-    active: true
-  },
-  {
-    id: 'capuccino-350',
-    name: 'Капучино',
-    category: 'Кофе',
-    size: '350 мл',
-    price: 32,
-    modifiers: ['Сироп', 'Альт. молоко', 'Сахар'],
-    image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80',
-    active: true
-  },
-  {
-    id: 'burger',
-    name: 'Бургер',
-    category: 'Кухня',
-    size: 'классик',
-    price: 68,
-    modifiers: ['Без лука', 'Острый соус', 'Доп. сыр'],
-    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80',
-    active: true
-  },
-  {
-    id: 'salad',
-    name: 'Цезарь',
-    category: 'Кухня',
-    size: 'порция',
-    price: 54,
-    modifiers: ['Без сухариков', 'Доп. курица'],
-    image: 'https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&fit=crop&w=600&q=80',
-    active: true
-  },
-  {
-    id: 'pizza',
-    name: 'Пицца Маргарита',
-    category: 'Пицца',
-    size: '30 см',
-    price: 82,
-    modifiers: ['Тонкое тесто', 'Доп. сыр'],
-    image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80',
-    active: true
-  },
-  {
-    id: 'lemonade',
-    name: 'Лимонад',
-    category: 'Напитки',
-    size: '400 мл',
-    price: 22,
-    modifiers: ['Лед', 'Без сахара'],
-    image: 'https://images.unsplash.com/photo-1523371054106-bbf80586c38c?auto=format&fit=crop&w=600&q=80',
-    active: true
+const hiddenViewIds = new Set(['inventory']);
+const showShiftExpensesSection = false;
+const menuClearVersion = 'menu-cleared-260521';
+const menuClearVersionKey = 'icashbox.menuClearVersion';
+const productCategorySeedVersionKey = 'icashbox.productsCategorySeedVersion';
+const manualOrderHistoryVersion = 'manual-orders-260522-v1';
+const manualOrderHistoryVersionKey = 'icashbox.manualOrderHistoryVersion';
+const legacyDemoProductIds = new Set(['capuccino-250', 'capuccino-350', 'burger', 'salad', 'pizza', 'lemonade']);
+const previousPosterProductIds = new Set(Array.from({ length: 39 }, (_, index) => `poster-${index + 7}`));
+const businessTimeZone = 'Asia/Dushanbe';
+let pdfMakeLoader;
+
+function loadPdfMake() {
+  if (!pdfMakeLoader) {
+    pdfMakeLoader = Promise.all([
+      import('pdfmake/build/pdfmake.js'),
+      import('pdfmake/build/vfs_fonts.js')
+    ]).then(([pdfMakeModule, pdfFontsModule]) => {
+      const loadedPdfMake = pdfMakeModule.default;
+      loadedPdfMake.addVirtualFileSystem(pdfFontsModule.default);
+      return loadedPdfMake;
+    });
   }
-];
+
+  return pdfMakeLoader;
+}
 
 const stockSeed = [
   { id: 'coffee', name: 'Кофе зерно', unit: 'кг', stock: 8.4, min: 3, cost: 120 },
@@ -223,13 +242,53 @@ const orderSeed = [
   }
 ];
 
+const manualOrderHistoryRows = [
+  'Пинокалада биг-30 алиф',
+  'Капучино-25 нал',
+  'Латте 2 шт-50 нал',
+  'Милкшейк черника мини-25 нал',
+  'Матча биг-40 алиф',
+  'Морож рожок-10 алиф',
+  'Морож с черн сах 2шт -40алиф',
+  'Матча мини-30алиф',
+  'Мохито мини-20 нал',
+  'Морожн рож-10 нал',
+  'Бабл ти мини- 20 нал',
+  'Милкшейк черника биг-30дс',
+  'Мороженое 3шт- 60алиф',
+  'Мохито мини-20 нал',
+  'Милкшейк пинаколада биг-30 нал',
+  'Манго маракуйя больш + матча мини-56 алиф',
+  'Мороженное рожок - нал 10с',
+  'Манго-маракуя - 26с нал',
+  'Мохито-манго и Баблти - 40с нал',
+  'Мороженное клубника и манго маракуя - 40с Алиф',
+  'Милкшейк клубника большой - 30с Алиф',
+  'Баблти большой , фреш лимон большой 2шт , мороженное клубника 2шт - 106с нал',
+  'Фреш лимон большой и мороженное рожок 2шт - 40с Алиф',
+  'Мороженное клубника - 20с нал',
+  'Милкшейк клубника и Баблти большой - 56с Алиф',
+  'Мороженное клубника 2шт - 40с нал',
+  'Милкшейк клубника 4шт - 100с нал',
+  'Милкшейк клубника - 25с нал',
+  'Милкшейк клубника - 25с Алиф',
+  'Матча мал - 30с Алиф',
+  'Милкшейк Пинаколада маленький - 25с нал',
+  'Милкшейк клубника большой - 30с ДС',
+  'Мороженное клубника 3шт - 60с ДС',
+  'Милкшейк клубника и клубничный жасмин - 45с ДС',
+  'Милкшейк клубника большой 3шт - 90с нал',
+  'Троп.виноград большой - 26с нал',
+  'Милкшейк клубника большой - 30с ДС'
+];
+
 const navItems = [
   { id: 'pos', label: 'Касса', icon: ReceiptText },
   { id: 'menu', label: 'Меню', icon: MenuSquare },
   { id: 'orders', label: 'Заказы', icon: ClipboardList },
   { id: 'inventory', label: 'Склад', icon: Boxes },
   { id: 'analytics', label: 'Отчёты', icon: BarChart3 },
-  { id: 'cloud', label: 'Облако', icon: Cloud },
+  { id: 'cloud', label: 'База', icon: Database },
   { id: 'roles', label: 'Роли', icon: ShieldCheck }
 ];
 
@@ -242,6 +301,56 @@ function readStored(key, fallback) {
   }
 }
 
+function isLegacyDemoProductList(items) {
+  return (
+    Array.isArray(items) &&
+    items.length === legacyDemoProductIds.size &&
+    items.every((item) => legacyDemoProductIds.has(item.id))
+  );
+}
+
+function isPreviousPosterSeedProductList(items) {
+  return (
+    Array.isArray(items) &&
+    items.length === previousPosterProductIds.size &&
+    items.every((item) => previousPosterProductIds.has(item.id))
+  );
+}
+
+function isPosterSeedProductList(items) {
+  return (
+    Array.isArray(items) &&
+    items.length === menuTemplateProducts.length &&
+    items.every((item, index) => item.id === menuTemplateProducts[index]?.id)
+  );
+}
+
+function menuSeedKey(value) {
+  return String(value ?? '').replace(/\s+/g, ' ').trim().toLowerCase();
+}
+
+function applySeedCategories(items) {
+  const seedByName = new Map(menuTemplateProducts.map((product) => [menuSeedKey(product.name), product]));
+  let changed = 0;
+  let matched = 0;
+
+  const products = items.map((product) => {
+    const seedProduct = seedByName.get(menuSeedKey(product.name));
+    if (!seedProduct) return product;
+
+    matched += 1;
+    if (product.category === seedProduct.category) return product;
+
+    changed += 1;
+    return {
+      ...product,
+      category: seedProduct.category
+    };
+  });
+
+  return { changed, matched, products };
+}
+
 function useStoredState(key, fallback) {
   const [value, setValue] = useState(() => readStored(key, fallback));
 
@@ -252,9 +361,10 @@ function useStoredState(key, fallback) {
   return [value, setValue];
 }
 
-function canAccessView(account, viewId) {
+function canAccessView(account, viewId, accessRules = defaultRoleAccess) {
   if (!account) return false;
-  return (roleAccess[account.role] || []).includes(viewId);
+  if (viewId === 'roles') return account.role === 'admin';
+  return (accessRules[account.role] || []).includes(viewId);
 }
 
 function normalizeCopies(value) {
@@ -263,11 +373,432 @@ function normalizeCopies(value) {
   return Math.min(20, Math.max(1, Math.round(copies)));
 }
 
+function formatShiftNumber(date = new Date()) {
+  return new Intl.DateTimeFormat('ru-RU', {
+    day: '2-digit',
+    month: '2-digit',
+    timeZone: businessTimeZone
+  }).format(date);
+}
+
+function normalizeShiftNumber(value) {
+  const text = String(value ?? '').trim();
+  return /^\d{2}\.\d{2}$/.test(text) ? text : formatShiftNumber();
+}
+
+function shiftLabel(shift) {
+  return `Смена ${normalizeShiftNumber(shift?.number)}`;
+}
+
+function formatShiftClosedAt(value) {
+  if (!value) return 'закрытие ожидает';
+  return `закрыта ${toDate(value).toLocaleString('ru-RU', {
+    day: '2-digit',
+    hour: '2-digit',
+    month: '2-digit',
+    minute: '2-digit',
+    timeZone: businessTimeZone
+  })}`;
+}
+
+function shiftTimingLine(report, shift) {
+  const openedAt = report?.openedAt || shift?.openedAt || '-';
+  const closedAt = report?.closedAt || shift?.closedAt;
+  const closeText = report?.open || shift?.open ? 'закрытие ожидает' : formatShiftClosedAt(closedAt);
+  return `${report?.label || shiftLabel(shift)} · открыта ${openedAt} · ${closeText}`;
+}
+
+function methodSlug(method) {
+  return String(method || '')
+    .toLowerCase()
+    .replace(/[^a-zа-я0-9]+/gi, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function toDate(value) {
+  const date = value ? new Date(value) : new Date();
+  return Number.isNaN(date.getTime()) ? new Date() : date;
+}
+
+function localDateKey(value = new Date()) {
+  const date = toDate(value);
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    day: '2-digit',
+    month: '2-digit',
+    timeZone: businessTimeZone,
+    year: 'numeric'
+  })
+    .formatToParts(date)
+    .reduce((acc, part) => {
+      acc[part.type] = part.value;
+      return acc;
+    }, {});
+  return `${parts.year}-${parts.month}-${parts.day}`;
+}
+
+function formatBusinessTime(value = new Date()) {
+  return toDate(value).toLocaleTimeString('ru-RU', {
+    hour: '2-digit',
+    minute: '2-digit',
+    timeZone: businessTimeZone
+  });
+}
+
+function parseNetworkTimePayload(payload) {
+  const candidates = [
+    payload?.iso,
+    payload?.datetime,
+    payload?.utc_datetime,
+    payload?.dateTime,
+    payload?.currentLocalTime,
+    payload?.currentDateTime
+  ];
+
+  for (const candidate of candidates) {
+    const value = String(candidate || '').trim();
+    if (!value) continue;
+    const iso = /(?:z|[+-]\d{2}:?\d{2})$/i.test(value) ? value : `${value}+05:00`;
+    const date = new Date(iso);
+    if (!Number.isNaN(date.getTime())) return date;
+  }
+
+  return null;
+}
+
+async function fetchJsonWithTimeout(url, timeoutMs = 4500) {
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    const response = await fetch(url, {
+      cache: 'no-store',
+      signal: controller.signal
+    });
+    const payload = await response.json().catch(() => null);
+    if (!response.ok) throw new Error(payload?.error || `HTTP ${response.status}`);
+    return payload;
+  } finally {
+    window.clearTimeout(timeout);
+  }
+}
+
+async function fetchInternetDate() {
+  if (typeof window !== 'undefined' && window.icashboxSystem?.getNetworkTime) {
+    try {
+      const payload = await window.icashboxSystem.getNetworkTime();
+      const date = parseNetworkTimePayload(payload);
+      if (date) return { date, source: payload?.source || 'internet' };
+    } catch {
+      // The desktop bridge can be unavailable while the app is still usable in the browser.
+    }
+  }
+
+  const sources = [
+    {
+      source: 'local-print-agent',
+      url: 'http://127.0.0.1:8787/time'
+    },
+    {
+      source: 'worldtimeapi',
+      url: 'https://worldtimeapi.org/api/timezone/Asia/Dushanbe'
+    },
+    {
+      source: 'timeapi',
+      url: 'https://timeapi.io/api/Time/current/zone?timeZone=Asia/Dushanbe'
+    }
+  ];
+
+  for (const item of sources) {
+    try {
+      const payload = await fetchJsonWithTimeout(item.url);
+      const date = parseNetworkTimePayload(payload);
+      if (date) return { date, source: payload?.source || item.source };
+    } catch {
+      // Try the next time source.
+    }
+  }
+
+  throw new Error('Интернет-время недоступно');
+}
+
+async function getShiftClock() {
+  try {
+    const time = await fetchInternetDate();
+    return { ...time, online: true };
+  } catch {
+    return { date: new Date(), online: false, source: 'local-clock' };
+  }
+}
+
+function shiftNumberFromKey(key) {
+  const [, month, day] = String(key || '').split('-');
+  if (!month || !day) return formatShiftNumber();
+  return `${day}.${month}`;
+}
+
+function shiftKeyFromShift(shift) {
+  return shift?.shiftKey || localDateKey(shift?.openedAtIso);
+}
+
+function orderShiftKey(order, fallbackShift) {
+  return order.shiftKey || localDateKey(order.createdAt || fallbackShift?.openedAtIso);
+}
+
+function expenseShiftKey(expense, fallbackShift) {
+  return expense.shiftKey || localDateKey(expense.createdAt || fallbackShift?.openedAtIso);
+}
+
+function summarizePeriod(orders, expenses = []) {
+  const activeOrders = orders.filter((order) => !order.cancelled && !order.refunded);
+  const revenue = activeOrders.reduce((sum, order) => sum + Number(order.total || 0), 0);
+  const paid = activeOrders.filter((order) => order.paid).reduce((sum, order) => sum + Number(order.total || 0), 0);
+  const average = Math.round(revenue / Math.max(activeOrders.length, 1));
+  const expenseTotal = expenses.reduce((sum, expense) => sum + Number(expense.amount || 0), 0);
+  const refundTotal = orders
+    .filter((order) => order.refunded)
+    .reduce((sum, order) => sum + Number(order.total || 0), 0);
+  const paymentTotals = paymentMethods.map((method) => [
+    method,
+    activeOrders.reduce((sum, order) => sum + Number(order.payments?.[method] || 0), 0)
+  ]);
+
+  return {
+    activeOrders,
+    average,
+    expenseTotal,
+    orders,
+    paid,
+    paymentTotals,
+    refundTotal,
+    revenue
+  };
+}
+
+function formatLicenseExpiry(value) {
+  const text = String(value || '').trim();
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(text)) return null;
+  const date = new Date(`${text}T23:59:59.999Z`);
+  if (Number.isNaN(date.getTime())) return null;
+  const formatted = date.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+  const days = Math.ceil((date.getTime() - Date.now()) / 86400000);
+  return { formatted, days, expired: days < 0 };
+}
+
+function arrayBufferToBase64(buffer) {
+  const bytes = new Uint8Array(buffer);
+  let binary = '';
+  const chunk = 0x8000;
+  for (let index = 0; index < bytes.length; index += chunk) {
+    binary += String.fromCharCode.apply(null, bytes.subarray(index, index + chunk));
+  }
+  return btoa(binary);
+}
+
+function buildLiveSnapshot({ orders, shift }) {
+  const currentKey = shiftKeyFromShift(shift);
+  const shiftOrders = orders.filter((order) => orderShiftKey(order, shift) === currentKey);
+  const summary = summarizePeriod(shiftOrders);
+  const payments = summary.paymentTotals
+    .filter(([, total]) => Number(total) > 0)
+    .map(([method, total]) => ({ method, total: Math.round(Number(total || 0)) }));
+  const recentOrders = summary.activeOrders
+    .slice(0, 8)
+    .map((order) => ({
+      id: order.id,
+      items: Array.isArray(order.items) ? order.items : [],
+      total: Math.round(Number(order.total || 0))
+    }));
+  const productTotals = new Map();
+  summary.activeOrders.forEach((order) => {
+    (order.lines || []).forEach((line) => {
+      const name = productLineLabel(line);
+      if (!name) return;
+      const entry = productTotals.get(name) || { name, qty: 0, total: 0 };
+      entry.qty += Number(line.qty || 0);
+      entry.total += Number(line.total || Number(line.price || 0) * Number(line.qty || 0));
+      productTotals.set(name, entry);
+    });
+  });
+  const topProducts = Array.from(productTotals.values())
+    .sort((a, b) => b.qty - a.qty)
+    .slice(0, 6)
+    .map((item) => ({ name: item.name, qty: item.qty, total: Math.round(item.total) }));
+  return {
+    message: shift.open ? 'Смена открыта' : 'Смена закрыта',
+    shift: { open: Boolean(shift.open), label: shiftLabel(shift), cashier: shift.cashier || 'Кассир' },
+    summary: {
+      revenue: Math.round(summary.revenue),
+      checks: summary.activeOrders.length,
+      average: Math.round(summary.average)
+    },
+    payments,
+    recentOrders,
+    topProducts
+  };
+}
+
+function buildShiftReports(orders, expenses, shiftHistory, shift) {
+  const currentKey = shiftKeyFromShift(shift);
+  const keys = new Set([currentKey]);
+
+  orders.forEach((order) => keys.add(orderShiftKey(order, shift)));
+  expenses.forEach((expense) => keys.add(expenseShiftKey(expense, shift)));
+  shiftHistory.forEach((item) => item.key && keys.add(item.key));
+
+  return Array.from(keys)
+    .sort((a, b) => b.localeCompare(a))
+    .map((key) => {
+      const historyItem = shiftHistory.find((item) => item.key === key);
+      const periodOrders = orders.filter((order) => orderShiftKey(order, shift) === key);
+      const periodExpenses = expenses.filter((expense) => expenseShiftKey(expense, shift) === key);
+      const summary = summarizePeriod(periodOrders, periodExpenses);
+      const number = historyItem?.number || (key === currentKey ? normalizeShiftNumber(shift.number) : shiftNumberFromKey(key));
+
+      return {
+        ...historyItem,
+        key,
+        label: `Смена ${number}`,
+        number,
+        cashier: historyItem?.cashier || (key === currentKey ? shift.cashier : '-'),
+        openedAt: historyItem?.openedAt || (key === currentKey ? shift.openedAt : '-'),
+        open: key === currentKey && shift.open,
+        summary
+      };
+    });
+}
+
+function productLineLabel(product) {
+  return [product.name, product.size].filter(Boolean).join(' ');
+}
+
+function roundPayment(value) {
+  const numeric = Number(value);
+  if (!Number.isFinite(numeric)) return 0;
+  return Math.max(0, Math.round(numeric * 100) / 100);
+}
+
+function manualPaymentMethod(raw) {
+  const text = String(raw || '').toLowerCase();
+  if (text.includes('алиф') || text.includes('alif')) return 'Alif';
+  if (text.includes('дс') || text.includes('ds')) return 'Dushanbe City';
+  return 'Наличные';
+}
+
+function parseManualOrderHistoryRow(raw) {
+  const text = String(raw || '').replace(/\s+/g, ' ').trim();
+  const amountMatches = Array.from(text.matchAll(/\d+\s*с?/gi));
+  const amountMatch = amountMatches.at(-1);
+  const total = Number(String(amountMatch?.[0] || '').replace(/\D/g, ''));
+
+  if (!text || !amountMatch || !Number.isFinite(total) || total <= 0) return null;
+
+  const method = manualPaymentMethod(text);
+  const name = text
+    .slice(0, amountMatch.index)
+    .replace(/(алиф|alif|дс|ds|наличные|наличка|налик|нал)/gi, '')
+    .replace(/\s*[-–—,]+\s*$/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  return {
+    item: name || 'Позиция',
+    method,
+    total
+  };
+}
+
+function buildManualOrderHistoryOrders({ baseId, shift }) {
+  const shiftKey = shiftKeyFromShift(shift);
+  const shiftName = shiftLabel(shift);
+  const shiftNumber = normalizeShiftNumber(shift.number);
+  const openedAt = toDate(shift.openedAtIso);
+
+  return manualOrderHistoryRows
+    .map(parseManualOrderHistoryRow)
+    .filter(Boolean)
+    .map((row, index) => {
+      const createdAt = new Date(openedAt.getTime() + (index + 1) * 2 * 60 * 1000).toISOString();
+      return {
+        id: baseId + index,
+        type: 'Продажа',
+        table: 'Касса',
+        status: 'Оплачен',
+        minutes: 0,
+        total: row.total,
+        items: [row.item],
+        lines: [
+          {
+            id: `manual-${baseId + index}`,
+            name: row.item,
+            price: row.total,
+            qty: 1,
+            total: row.total
+          }
+        ],
+        paid: true,
+        payments: { ...blankPayments, [row.method]: row.total },
+        shiftKey,
+        shiftLabel: shiftName,
+        shiftNumber,
+        createdAt,
+        importBatch: manualOrderHistoryVersion
+      };
+    });
+}
+
+function readFileAsDataUrl(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = () => reject(new Error('Не удалось прочитать файл'));
+    reader.readAsDataURL(file);
+  });
+}
+
+function menuImageFileToDataUrl(file) {
+  if (!file || !file.type.startsWith('image/')) {
+    return Promise.reject(new Error('Выберите файл изображения'));
+  }
+
+  if (file.type === 'image/svg+xml') {
+    return readFileAsDataUrl(file);
+  }
+
+  return new Promise((resolve, reject) => {
+    const sourceUrl = URL.createObjectURL(file);
+    const image = new Image();
+
+    image.onload = () => {
+      const maxSide = 900;
+      const scale = Math.min(1, maxSide / Math.max(image.width, image.height));
+      const width = Math.max(1, Math.round(image.width * scale));
+      const height = Math.max(1, Math.round(image.height * scale));
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+
+      canvas.width = width;
+      canvas.height = height;
+      context.fillStyle = '#ffffff';
+      context.fillRect(0, 0, width, height);
+      context.drawImage(image, 0, 0, width, height);
+      URL.revokeObjectURL(sourceUrl);
+      resolve(canvas.toDataURL('image/jpeg', 0.82));
+    };
+
+    image.onerror = () => {
+      URL.revokeObjectURL(sourceUrl);
+      reject(new Error('Не удалось загрузить изображение'));
+    };
+
+    image.src = sourceUrl;
+  });
+}
+
 function App() {
   const [activeView, setActiveView] = useState('pos');
-  const [accounts] = useStoredState('icashbox.accounts', defaultAccounts);
+  const [accounts, setAccounts] = useStoredState('icashbox.accounts', defaultAccounts);
+  const [accessRules, setAccessRules] = useStoredState('icashbox.accessRules', defaultRoleAccess);
   const [session, setSession] = useStoredState('icashbox.session', null);
-  const [isOnline, setIsOnline] = useStoredState('icashbox.online', false);
   const [products, setProducts] = useStoredState('icashbox.products', productSeed);
   const [stock, setStock] = useStoredState('icashbox.stock', stockSeed);
   const [orders, setOrders] = useStoredState('icashbox.orders', orderSeed);
@@ -276,24 +807,32 @@ function App() {
     { id: 2, title: 'Хозтовары', category: 'Операционные', amount: 85, time: '11:10' }
   ]);
   const [syncQueue, setSyncQueue] = useStoredState('icashbox.syncQueue', [
-    { id: 1, type: 'Изменение цены', source: 'Облако', status: 'Ожидает', time: '09:20' },
+    { id: 1, type: 'Изменение цены', source: 'Локально', status: 'Ожидает', time: '09:20' },
     { id: 2, type: 'Закрытие смены', source: 'Локально', status: 'Ожидает', time: '10:05' },
     { id: 3, type: 'Списание склада', source: 'Локально', status: 'Ожидает', time: '10:14' }
   ]);
   const [shift, setShift] = useStoredState('icashbox.shift', {
-    number: 24,
+    number: formatShiftNumber(),
     open: true,
+    shiftKey: localDateKey(),
     openedAt: '08:00',
+    openedAtIso: new Date().toISOString(),
     cashier: 'Мадина'
   });
+  const [shiftHistory, setShiftHistory] = useStoredState('icashbox.shiftHistory', []);
   const [selectedCategory, setSelectedCategory] = useState('Все');
   const [search, setSearch] = useState('');
   const [cart, setCart] = useState([]);
+  const [guestName, setGuestName] = useState('');
   const [orderComment, setOrderComment] = useState('');
   const [payments, setPayments] = useState(blankPayments);
   const [lastMessage, setLastMessage] = useState('Локальная база готова к работе');
   const [printJob, setPrintJob] = useState(null);
   const [copyRequest, setCopyRequest] = useState(null);
+  const [orderEditAuth, setOrderEditAuth] = useState(null);
+  const [adminActionAuth, setAdminActionAuth] = useState(null);
+  const [orderEditor, setOrderEditor] = useState(null);
+  const [clearOrdersAuth, setClearOrdersAuth] = useState(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [printSettings, setPrintSettings] = useStoredState('icashbox.printSettings', {
     autoReceipt: false,
@@ -304,10 +843,15 @@ function App() {
   const [printers, setPrinters] = useState([]);
   const importInputRef = useRef(null);
   const creatingOrderRef = useRef(false);
+  const [autoLaunch, setAutoLaunch] = useState(false);
+  const [license, setLicense] = useState(null);
+  const [licenseGuard, setLicenseGuard] = useState(null);
+  const [exportConfig, setExportConfig] = useStoredState('icashbox.exportConfig', { directory: '' });
   const currentUser = accounts.find((account) => account.id === session?.accountId) || null;
+  const currentShiftLabel = shiftLabel(shift);
   const visibleNavItems = useMemo(
-    () => navItems.filter((item) => canAccessView(currentUser, item.id)),
-    [currentUser]
+    () => navItems.filter((item) => !hiddenViewIds.has(item.id) && canAccessView(currentUser, item.id, accessRules)),
+    [accessRules, currentUser]
   );
 
   const categories = useMemo(() => ['Все', ...new Set(products.map((item) => item.category))], [products]);
@@ -318,20 +862,199 @@ function App() {
   });
   const cartTotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
   const paidAmount = Object.values(payments).reduce((sum, value) => sum + Number(value || 0), 0);
-  const pendingSync = syncQueue.filter((item) => item.status === 'Ожидает').length;
+
+  // Desktop integration (portable Electron build). Every call degrades quietly in
+  // the browser preview, where window.icashboxSystem is undefined.
+  useEffect(() => {
+    let cancelled = false;
+    window.icashboxSystem?.getAutoLaunch?.()
+      .then((result) => { if (!cancelled) setAutoLaunch(Boolean(result?.openAtLogin)); })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    window.icashboxSystem?.getLicense?.()
+      .then((info) => { if (!cancelled && info) setLicense(info); })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, []);
+
+  // Keep the key validity live: re-check the CMS on a timer, on reconnect and on
+  // focus. Without internet the POS is guarded by a banner, then blocked once the
+  // 1-day offline grace runs out — there is no silent local-only mode.
+  const retryLicense = async () => {
+    if (!window.icashboxSystem?.verifyLicense) return;
+    try {
+      const status = await window.icashboxSystem.verifyLicense();
+      setLicenseGuard(status);
+      if (status?.license) setLicense(status.license);
+    } catch {
+      setLicenseGuard({ state: 'offline', error: 'Не удалось проверить лицензию.' });
+    }
+  };
+
+  useEffect(() => {
+    if (!window.icashboxSystem?.verifyLicense) return undefined;
+    let active = true;
+    const check = async () => {
+      try {
+        const status = await window.icashboxSystem.verifyLicense();
+        if (!active) return;
+        setLicenseGuard(status);
+        if (status?.license) setLicense(status.license);
+      } catch {
+        if (active) setLicenseGuard({ state: 'offline', error: 'Не удалось проверить лицензию.' });
+      }
+    };
+    check();
+    const timer = setInterval(check, 60000);
+    const onOnline = () => check();
+    const onFocus = () => check();
+    window.addEventListener('online', onOnline);
+    window.addEventListener('focus', onFocus);
+    return () => {
+      active = false;
+      clearInterval(timer);
+      window.removeEventListener('online', onOnline);
+      window.removeEventListener('focus', onFocus);
+    };
+  }, []);
+
+  const toggleAutoLaunch = async () => {
+    if (!window.icashboxSystem?.setAutoLaunch) {
+      setLastMessage('Автозагрузка доступна только в portable-версии');
+      return;
+    }
+    try {
+      const result = await window.icashboxSystem.setAutoLaunch(!autoLaunch);
+      setAutoLaunch(Boolean(result?.openAtLogin));
+      setLastMessage(result?.openAtLogin ? 'iCashbox будет запускаться со входом в Windows' : 'Автозагрузка отключена');
+    } catch {
+      setLastMessage('Не удалось изменить автозагрузку');
+    }
+  };
+
+  const selectExportFolder = async () => {
+    if (!window.icashboxSystem?.selectExportDirectory) {
+      setLastMessage('Выбор папки доступен только в portable-версии');
+      return;
+    }
+    try {
+      const directory = await window.icashboxSystem.selectExportDirectory();
+      if (directory) {
+        setExportConfig({ directory });
+        setLastMessage(`Папка отчётов: ${directory}`);
+      }
+    } catch {
+      setLastMessage('Не удалось выбрать папку');
+    }
+  };
+
+  const archiveShiftOrders = async () => {
+    if (!window.icashboxSystem?.archiveOrders) {
+      setLastMessage('Архив на диск доступен только в portable-версии');
+      return;
+    }
+    try {
+      const report = buildLiveSnapshot({ orders, shift });
+      let ordersWorkbookBase64 = '';
+      try {
+        ordersWorkbookBase64 = arrayBufferToBase64(await createOrdersWorkbook(orders));
+      } catch {
+        ordersWorkbookBase64 = '';
+      }
+      const result = await window.icashboxSystem.archiveOrders({
+        dateKey: localDateKey(),
+        exportDir: exportConfig.directory || '',
+        orders,
+        report,
+        ordersWorkbookBase64
+      });
+      setLastMessage(result?.archiveDir ? `Отчёт сохранён: ${result.archiveDir}` : 'Отчёт сохранён на диск');
+    } catch {
+      setLastMessage('Не удалось сохранить отчёт на диск');
+    }
+  };
+
+  const resetLicense = async () => {
+    if (!window.icashboxSystem?.resetLicense) {
+      setLastMessage('Смена ключа доступна только в portable-версии');
+      return;
+    }
+    const confirmed = window.confirm(
+      'Удалить текущий ключ и перезапустить кассу для ввода нового? Текущая активация и пароли будут сброшены.'
+    );
+    if (!confirmed) return;
+    setLastMessage('Удаляю ключ и перезапускаю кассу…');
+    try {
+      await window.icashboxSystem.resetLicense();
+    } catch {
+      setLastMessage('Не удалось сменить ключ');
+    }
+  };
+
+  useEffect(() => {
+    if (localStorage.getItem(menuClearVersionKey) === menuClearVersion) return;
+
+    const categoryPatch = applySeedCategories(products);
+    const isKnownMenu = categoryPatch.matched >= Math.min(30, menuTemplateProducts.length);
+
+    if (isLegacyDemoProductList(products) || isPreviousPosterSeedProductList(products)) {
+      setProducts([]);
+      setCart([]);
+      setSelectedCategory('Все');
+      localStorage.setItem('icashbox.productsSeedVersion', productSeedVersion);
+      localStorage.setItem(productCategorySeedVersionKey, productSeedVersion);
+      localStorage.setItem(menuClearVersionKey, menuClearVersion);
+      setLastMessage('Текущее меню удалено');
+      return;
+    }
+
+    if (isKnownMenu || isPosterSeedProductList(products)) {
+      setProducts([]);
+      setCart([]);
+      setSelectedCategory('Все');
+      localStorage.setItem('icashbox.productsSeedVersion', productSeedVersion);
+      localStorage.setItem(productCategorySeedVersionKey, productSeedVersion);
+      localStorage.setItem(menuClearVersionKey, menuClearVersion);
+      setLastMessage('Текущее меню удалено');
+    }
+  }, []);
 
   useEffect(() => {
     if (!currentUser) return;
-    if (!canAccessView(currentUser, activeView)) {
-      setActiveView(roleAccess[currentUser.role]?.[0] || 'pos');
+    if (!canAccessView(currentUser, activeView, accessRules)) {
+      setActiveView(accessRules[currentUser.role]?.[0] || 'pos');
     }
-  }, [activeView, currentUser]);
+  }, [accessRules, activeView, currentUser]);
+
+  useEffect(() => {
+    const nextNumber = normalizeShiftNumber(shift.number);
+    const nextShiftKey = shift.shiftKey || localDateKey(shift.openedAtIso);
+    if (shift.number === nextNumber && shift.shiftKey === nextShiftKey) return;
+    setShift((current) => ({ ...current, number: nextNumber, shiftKey: nextShiftKey }));
+  }, [setShift, shift.number, shift.openedAtIso, shift.shiftKey]);
+
+  useEffect(() => {
+    if (localStorage.getItem(manualOrderHistoryVersionKey) === manualOrderHistoryVersion) return;
+
+    localStorage.setItem(manualOrderHistoryVersionKey, manualOrderHistoryVersion);
+    setOrders((current) => {
+      if (current.some((order) => order.importBatch === manualOrderHistoryVersion)) return current;
+
+      const numericIds = current.map((order) => Number(order.id)).filter(Number.isFinite);
+      const baseId = Math.max(1044, ...numericIds) + 1;
+      const importedOrders = buildManualOrderHistoryOrders({ baseId, shift });
+      return [...importedOrders].reverse().concat(current);
+    });
+    setLastMessage(`Добавлены заказы в историю: ${manualOrderHistoryRows.length}`);
+  }, [setOrders, shift]);
 
   const login = ({ password, role }) => {
     const account = accounts.find(
-      (item) =>
-        item.role === role &&
-        [item.password, ...(fallbackRolePins[item.role] || [])].includes(password)
+      (item) => item.role === role && accountPasswordMatches(item, password)
     );
 
     if (!account) return false;
@@ -345,10 +1068,15 @@ function App() {
   const logout = () => {
     setSession(null);
     setCart([]);
+    setGuestName('');
     setOrderComment('');
     setPayments(blankPayments);
     setPrintJob(null);
     setCopyRequest(null);
+    setOrderEditAuth(null);
+    setAdminActionAuth(null);
+    setOrderEditor(null);
+    setClearOrdersAuth(null);
     setSettingsOpen(false);
     setLastMessage('Вы вышли из аккаунта');
   };
@@ -360,7 +1088,7 @@ function App() {
         id: now.getTime(),
         type,
         source,
-        status: isOnline ? 'Синхронизировано' : 'Ожидает',
+        status: 'Сохранено',
         time: now.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })
       },
       ...queue
@@ -388,6 +1116,10 @@ function App() {
   const createOrder = () => {
     if (!cart.length || !shift.open || creatingOrderRef.current) return;
     creatingOrderRef.current = true;
+    const createdAt = new Date().toISOString();
+    const shiftKey = shiftKeyFromShift(shift);
+    const stickerCount = cart.reduce((sum, item) => sum + Math.max(1, Math.round(Number(item.qty || 1))), 0);
+    const stickerWishes = Array.from({ length: stickerCount }, () => pickStickerWish());
     const nextOrder = {
       id: Math.max(1044, ...orders.map((order) => order.id)) + 1,
       type: 'Продажа',
@@ -395,7 +1127,7 @@ function App() {
       status: paidAmount >= cartTotal ? 'Оплачен' : 'Принят',
       minutes: 0,
       total: cartTotal,
-      items: cart.map((item) => `${item.name} ${item.size} x${item.qty}`),
+      items: cart.map((item) => `${productLineLabel(item)} x${item.qty}`),
       lines: cart.map((item) => ({
         id: item.id,
         name: item.name,
@@ -404,10 +1136,15 @@ function App() {
         qty: item.qty,
         total: item.price * item.qty
       })),
+      guestName: guestName.trim(),
       comment: orderComment,
+      stickerWishes,
       paid: paidAmount >= cartTotal,
       payments: { ...payments },
-      createdAt: new Date().toISOString()
+      shiftKey,
+      shiftLabel: currentShiftLabel,
+      shiftNumber: normalizeShiftNumber(shift.number),
+      createdAt
     };
 
     setOrders([nextOrder, ...orders]);
@@ -421,6 +1158,7 @@ function App() {
       setPrintJob({ order: nextOrder, type: 'receipt', autoPrint: false });
     }
     setCart([]);
+    setGuestName('');
     setOrderComment('');
     setPayments(blankPayments);
     window.setTimeout(() => {
@@ -428,39 +1166,107 @@ function App() {
     }, 900);
   };
 
-  const toggleNetwork = () => {
-    setIsOnline((value) => {
-      const next = !value;
-      if (next) {
-        setSyncQueue((queue) => queue.map((item) => ({ ...item, status: 'Синхронизировано' })));
-        setLastMessage('Очередь синхронизации отправлена в облако');
-      } else {
-        setLastMessage('Интернет отключён, касса продолжает работать локально');
+  const closeShift = async () => {
+    setLastMessage('Получаю актуальную дату смены из интернета...');
+    const clock = await getShiftClock();
+    const closedAt = clock.date.toISOString();
+    const key = shiftKeyFromShift(shift);
+    const summary = summarizePeriod(
+      orders.filter((order) => orderShiftKey(order, shift) === key),
+      expenses.filter((expense) => expenseShiftKey(expense, shift) === key)
+    );
+    const closedShift = {
+      id: `shift-${key}`,
+      key,
+      number: normalizeShiftNumber(shift.number),
+      label: currentShiftLabel,
+      cashier: shift.cashier,
+      openedAt: shift.openedAt,
+      openedAtIso: shift.openedAtIso,
+      closedAt,
+      summary: {
+        average: summary.average,
+        expenseTotal: summary.expenseTotal,
+        orders: summary.orders.length,
+        paid: summary.paid,
+        refundTotal: summary.refundTotal,
+        revenue: summary.revenue
       }
-      return next;
-    });
-  };
+    };
 
-  const closeShift = () => {
-    setShift((current) => ({ ...current, open: false, closedAt: new Date().toISOString() }));
+    setShiftHistory((current) => [closedShift, ...current.filter((item) => item.key !== key)]);
+    setShift((current) => ({ ...current, open: false, closedAt }));
     queueSync('Закрытие смены');
-    setLastMessage('Смена закрыта, отчёт сохранён');
+    setLastMessage(clock.online ? 'Смена закрыта по интернет-времени' : 'Смена закрыта по локальному времени: интернет-время недоступно');
   };
 
-  const openShift = () => {
+  const openShift = async () => {
+    setLastMessage('Получаю актуальную дату смены из интернета...');
+    const clock = await getShiftClock();
+    const openedAt = clock.date;
     setShift((current) => ({
-      number: current.number + 1,
+      number: formatShiftNumber(openedAt),
       open: true,
-      openedAt: new Date().toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' }),
+      shiftKey: localDateKey(openedAt),
+      openedAt: formatBusinessTime(openedAt),
+      openedAtIso: openedAt.toISOString(),
+      timeSource: clock.source,
       cashier: current.cashier
     }));
     queueSync('Открытие смены');
-    setLastMessage('Новая смена открыта');
+    setLastMessage(clock.online ? 'Новая смена открыта по интернет-времени' : 'Новая смена открыта по локальному времени: интернет-время недоступно');
+  };
+
+  const requestShiftToggle = () => {
+    requestAdminAction({
+      action: shift.open ? closeShift : openShift,
+      confirmLabel: shift.open ? 'Закрыть смену' : 'Открыть смену',
+      description: shift.open
+        ? `${currentShiftLabel}: подтвердите закрытие смены паролем администратора`
+        : `${currentShiftLabel}: подтвердите открытие смены паролем администратора`,
+      title: shift.open ? 'Пароль для закрытия смены' : 'Пароль для открытия смены'
+    });
   };
 
   const updateProduct = (id, patch) => {
     setProducts((current) => current.map((product) => (product.id === id ? { ...product, ...patch } : product)));
-    queueSync('Изменение меню', 'Облако');
+    queueSync('Изменение меню');
+    setLastMessage('Меню обновлено');
+  };
+
+  const addProduct = (draft) => {
+    const now = Date.now();
+    const patch = draft ? menuDraftToProductPatch(draft) : {};
+    const nextProduct = {
+      id: `product-${now}`,
+      name: patch.name || 'Новая позиция',
+      category: patch.category || 'Меню',
+      size: patch.size || 'порция',
+      price: Number(patch.price || 0),
+      modifiers: patch.modifiers || [],
+      image: patch.image || 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80',
+      active: true
+    };
+    setProducts((current) => [nextProduct, ...current]);
+    queueSync('Добавлена позиция меню');
+    setLastMessage('Новая позиция добавлена в меню');
+  };
+
+  const deleteProduct = (id) => {
+    setProducts((current) => current.filter((product) => product.id !== id));
+    queueSync('Удалена позиция меню');
+    setLastMessage('Позиция удалена из меню');
+  };
+
+  const clearProductsMenu = () => {
+    setProducts([]);
+    setCart([]);
+    setSelectedCategory('Все');
+    localStorage.setItem('icashbox.productsSeedVersion', productSeedVersion);
+    localStorage.setItem(productCategorySeedVersionKey, productSeedVersion);
+    localStorage.setItem(menuClearVersionKey, menuClearVersion);
+    queueSync('Удалено меню', 'Локально');
+    setLastMessage('Меню удалено');
   };
 
   const receiveStock = (id, amount) => {
@@ -468,7 +1274,7 @@ function App() {
       current.map((item) => (item.id === id ? { ...item, stock: roundStock(item.stock + amount) } : item))
     );
     queueSync('Приход товара');
-    setLastMessage('Приход добавлен и попадёт в журнал синхронизации');
+    setLastMessage('Приход добавлен в локальный журнал');
   };
 
   const refundOrder = (id) => {
@@ -495,6 +1301,305 @@ function App() {
     setLastMessage(`Заказ #${id} отмечен как готов`);
   };
 
+  const isAdminPassword = (password) => {
+    return accounts.some(
+      (account) => account.role === 'admin' && accountPasswordMatches(account, password)
+    );
+  };
+
+  const requestAdminAction = ({ action, confirmLabel = 'Подтвердить', description, title = 'Пароль администратора' }) => {
+    if (currentUser?.role !== 'admin') {
+      setLastMessage('Действие доступно только администратору');
+      return;
+    }
+    setAdminActionAuth({ action, confirmLabel, description, error: '', password: '', title });
+  };
+
+  const confirmAdminAction = () => {
+    if (!adminActionAuth) return;
+    if (!isAdminPassword(adminActionAuth.password)) {
+      setAdminActionAuth((current) => ({ ...current, password: '', error: 'Неверный пароль администратора' }));
+      return;
+    }
+    const action = adminActionAuth.action;
+    setAdminActionAuth(null);
+    action?.();
+  };
+
+  const requestMenuAction = (description, action) => {
+    requestAdminAction({
+      action,
+      confirmLabel: 'Выполнить',
+      description,
+      title: 'Пароль для меню'
+    });
+  };
+
+  const secureAddProduct = (draft) => {
+    const patch = draft ? menuDraftToProductPatch(draft) : {};
+    requestMenuAction(`Добавить позицию: ${patch.name || 'Новая позиция'}`, () => addProduct(draft));
+  };
+
+  const secureUpdateProduct = (id, patch, productName, actionLabel = 'Сохранить изменения') => {
+    const productLabel = productName || products.find((product) => product.id === id)?.name || 'позиция меню';
+    requestMenuAction(`${actionLabel}: ${productLabel}`, () => updateProduct(id, patch));
+  };
+
+  const secureDeleteProduct = (id, productName) => {
+    requestMenuAction(`Удалить позицию: ${productName || 'позиция меню'}`, () => deleteProduct(id));
+  };
+
+  const requestClearProductsMenu = () => {
+    if (!products.length) {
+      setLastMessage('Меню уже пустое');
+      return;
+    }
+
+    setSettingsOpen(false);
+    requestAdminAction({
+      action: clearProductsMenu,
+      confirmLabel: 'Удалить меню',
+      description: `Удалить все позиции меню: ${products.length}`,
+      title: 'Пароль для удаления меню'
+    });
+  };
+
+  const addAccount = () => {
+    if (currentUser?.role !== 'admin') {
+      setLastMessage('Добавлять доступы может только администратор');
+      return;
+    }
+    const now = Date.now();
+    const nextAccount = {
+      id: `account-${now}`,
+      username: `user${accounts.length + 1}`,
+      password: '0000',
+      name: 'Новый сотрудник',
+      role: 'cashier'
+    };
+    setAccounts((current) => [...current, nextAccount]);
+    queueSync('Добавлен доступ сотрудника');
+    setLastMessage('Новый сотрудник добавлен в доступы');
+  };
+
+  const updateAccount = (id, patch) => {
+    if (currentUser?.role !== 'admin') {
+      setLastMessage('Менять доступы может только администратор');
+      return;
+    }
+    const target = accounts.find((account) => account.id === id);
+    const nextRole = ['admin', 'cashier'].includes(patch.role ?? target?.role) ? patch.role ?? target?.role : target?.role;
+    const adminCount = accounts.filter((account) => account.role === 'admin').length;
+    if (target?.role === 'admin' && nextRole !== 'admin' && adminCount <= 1) {
+      setLastMessage('Должен остаться хотя бы один администратор');
+      return;
+    }
+    setAccounts((current) =>
+      current.map((account) =>
+        account.id === id
+          ? {
+              ...account,
+              ...patch,
+              name: String(patch.name ?? account.name).trim() || account.name,
+              password: String(patch.password ?? account.password).trim() || account.password,
+              role: ['admin', 'cashier'].includes(patch.role ?? account.role) ? patch.role ?? account.role : account.role,
+              username: String(patch.username ?? account.username).trim() || account.username
+            }
+          : account
+      )
+    );
+    queueSync('Изменён доступ сотрудника');
+    setLastMessage('Доступ сотрудника обновлён');
+  };
+
+  const deleteAccount = (id) => {
+    if (currentUser?.role !== 'admin') {
+      setLastMessage('Удалять доступы может только администратор');
+      return;
+    }
+    if (id === currentUser.id) {
+      setLastMessage('Нельзя удалить текущий аккаунт администратора');
+      return;
+    }
+    const target = accounts.find((account) => account.id === id);
+    const adminCount = accounts.filter((account) => account.role === 'admin').length;
+    if (target?.role === 'admin' && adminCount <= 1) {
+      setLastMessage('Должен остаться хотя бы один администратор');
+      return;
+    }
+    setAccounts((current) => current.filter((account) => account.id !== id));
+    queueSync('Удалён доступ сотрудника');
+    setLastMessage('Доступ сотрудника удалён');
+  };
+
+  const toggleRoleRight = (roleId, viewId) => {
+    if (currentUser?.role !== 'admin') {
+      setLastMessage('Менять права может только администратор');
+      return;
+    }
+    if (viewId === 'roles') {
+      setLastMessage('Раздел ролей доступен только администраторам');
+      return;
+    }
+
+    setAccessRules((current) => {
+      const nextRights = new Set(current[roleId] || []);
+      if (nextRights.has(viewId)) {
+        nextRights.delete(viewId);
+      } else {
+        nextRights.add(viewId);
+      }
+      if (roleId === 'admin') {
+        nextRights.add('roles');
+      }
+      return { ...current, [roleId]: Array.from(nextRights) };
+    });
+    queueSync('Изменены права доступа');
+    setLastMessage('Права доступа обновлены');
+  };
+
+  const requestOrderEdit = (order) => {
+    if (currentUser?.role !== 'admin') {
+      setLastMessage('Редактировать заказы может только администратор');
+      return;
+    }
+    setOrderEditAuth({ orderId: order.id, password: '', error: '' });
+  };
+
+  const confirmOrderEdit = (password) => {
+    if (!isAdminPassword(password)) {
+      setOrderEditAuth((current) => ({ ...current, password: '', error: 'Неверный пароль администратора' }));
+      return;
+    }
+    const order = orders.find((item) => item.id === orderEditAuth?.orderId);
+    if (!order) {
+      setOrderEditAuth(null);
+      setLastMessage('Заказ не найден');
+      return;
+    }
+    setOrderEditAuth(null);
+    setOrderEditor(order);
+  };
+
+  const saveOrderEdit = (updatedOrder) => {
+    setOrders((current) => current.map((order) => (order.id === updatedOrder.id ? updatedOrder : order)));
+    queueSync('Редактирование заказа');
+    setLastMessage(`Заказ #${updatedOrder.id} обновлён администратором`);
+    setOrderEditor(null);
+  };
+
+  const deleteOrder = (id) => {
+    setOrders((current) => current.filter((order) => order.id !== id));
+    setOrderEditor((current) => (current?.id === id ? null : current));
+    queueSync('Удалён заказ');
+    setLastMessage(`Заказ #${id} удалён`);
+  };
+
+  const deleteAllOrders = () => {
+    setOrders([]);
+    setOrderEditor(null);
+    setPrintJob(null);
+    setCopyRequest(null);
+    setClearOrdersAuth(null);
+    queueSync('Удалены все заказы');
+    setLastMessage('История заказов очищена');
+  };
+
+  const requestDeleteOrder = (order) => {
+    requestAdminAction({
+      action: () => deleteOrder(order.id),
+      confirmLabel: 'Удалить заказ',
+      description: `Удалить заказ #${order.id} на ${currency.format(order.total)}`,
+      title: 'Пароль для удаления заказа'
+    });
+  };
+
+  const requestDeleteAllOrders = () => {
+    if (!orders.length) {
+      setLastMessage('История заказов уже пуста');
+      return;
+    }
+
+    if (currentUser?.role !== 'admin') {
+      setLastMessage('Очищать историю может только администратор');
+      return;
+    }
+
+    setAdminActionAuth(null);
+    setClearOrdersAuth({
+      error: '',
+      password: '',
+      sessionId: `clear-orders-${Date.now()}-${Math.random().toString(36).slice(2)}`,
+      typed: false,
+      total: orders.length
+    });
+  };
+
+  const confirmClearOrdersPassword = () => {
+    if (!clearOrdersAuth) return;
+    if (!clearOrdersAuth.typed || !String(clearOrdersAuth.password || '').trim()) {
+      setClearOrdersAuth((current) => ({ ...current, password: '', error: 'Введите пароль администратора заново' }));
+      return;
+    }
+    if (!isAdminPassword(clearOrdersAuth.password)) {
+      setClearOrdersAuth((current) => ({
+        ...current,
+        error: 'Неверный пароль администратора',
+        password: '',
+        sessionId: `clear-orders-${Date.now()}-${Math.random().toString(36).slice(2)}`,
+        typed: false
+      }));
+      return;
+    }
+
+    deleteAllOrders();
+  };
+
+  const exportOrders = async () => {
+    try {
+      const workbook = await createOrdersWorkbook(orders);
+      const blob = new Blob([workbook], {
+        type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+      });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `icashbox-orders-${new Date().toISOString().slice(0, 10)}.xlsx`;
+      link.click();
+      URL.revokeObjectURL(url);
+      setLastMessage('Заказы экспортированы в XLSX');
+    } catch {
+      setLastMessage('Не удалось экспортировать заказы');
+    }
+  };
+
+  const importOrders = async (event) => {
+    const file = event.target.files?.[0];
+    event.target.value = '';
+    if (!file) return;
+
+    try {
+      const importedOrders = await parseOrdersWorkbook(await file.arrayBuffer());
+      if (!importedOrders.length) {
+        throw new Error('В файле не найдены заказы');
+      }
+
+      requestAdminAction({
+        action: () => {
+          setOrders(importedOrders);
+          setOrderEditor(null);
+          queueSync('Импорт заказов XLSX');
+          setLastMessage(`Импортировано заказов: ${importedOrders.length}`);
+        },
+        confirmLabel: 'Импортировать',
+        description: `Импортировать ${importedOrders.length} заказов из ${file.name}`,
+        title: 'Пароль для импорта заказов'
+      });
+    } catch (error) {
+      setLastMessage(error.message || 'Не удалось импортировать заказы из XLSX');
+    }
+  };
+
   const addExpense = () => {
     const now = new Date();
     const nextExpense = {
@@ -502,7 +1607,9 @@ function App() {
       title: 'Закупка по смене',
       category: 'Склад',
       amount: 100,
-      time: now.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })
+      time: now.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' }),
+      shiftKey: shiftKeyFromShift(shift),
+      createdAt: now.toISOString()
     };
     setExpenses((current) => [nextExpense, ...current]);
     queueSync('Добавлен расход');
@@ -513,12 +1620,15 @@ function App() {
     const payload = {
       version: 1,
       exportedAt: new Date().toISOString(),
+      accessRules,
+      accounts,
       products,
       stock,
       orders,
       expenses,
       syncQueue,
-      shift
+      shift,
+      shiftHistory
     };
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -537,12 +1647,15 @@ function App() {
     reader.onload = () => {
       try {
         const payload = JSON.parse(reader.result);
+        if (Array.isArray(payload.accounts)) setAccounts(payload.accounts);
+        if (payload.accessRules && typeof payload.accessRules === 'object') setAccessRules(payload.accessRules);
         if (Array.isArray(payload.products)) setProducts(payload.products);
         if (Array.isArray(payload.stock)) setStock(payload.stock);
         if (Array.isArray(payload.orders)) setOrders(payload.orders);
         if (Array.isArray(payload.expenses)) setExpenses(payload.expenses);
         if (Array.isArray(payload.syncQueue)) setSyncQueue(payload.syncQueue);
         if (payload.shift) setShift(payload.shift);
+        if (Array.isArray(payload.shiftHistory)) setShiftHistory(payload.shiftHistory);
         queueSync('Импорт локальной базы');
         setLastMessage('Локальная база импортирована');
       } catch {
@@ -551,6 +1664,47 @@ function App() {
     };
     reader.readAsText(file);
     event.target.value = '';
+  };
+
+  const exportMenuProducts = async () => {
+    try {
+      const workbook = await createPosterMenuWorkbook(products);
+      const blob = new Blob([workbook], {
+        type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+      });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `export_products_${new Date().toISOString().slice(0, 10)}.xlsx`;
+      link.click();
+      URL.revokeObjectURL(url);
+      setLastMessage('Меню экспортировано в XLSX');
+    } catch {
+      setLastMessage('Не удалось экспортировать меню');
+    }
+  };
+
+  const importMenuProducts = async (event) => {
+    const file = event.target.files?.[0];
+    event.target.value = '';
+    if (!file) return;
+
+    try {
+      const importedProducts = await parsePosterMenuWorkbook(await file.arrayBuffer());
+      if (!importedProducts.length) {
+        throw new Error('В файле не найдены позиции меню');
+      }
+
+      requestMenuAction(`Импортировать ${importedProducts.length} позиций меню из ${file.name}`, () => {
+        setProducts(importedProducts);
+        setCart([]);
+        setSelectedCategory('Все');
+        queueSync('Импорт меню XLSX');
+        setLastMessage(`Импортировано позиций меню: ${importedProducts.length}`);
+      });
+    } catch (error) {
+      setLastMessage(error.message || 'Не удалось импортировать меню из XLSX');
+    }
   };
 
   const sendToReceiptPrinter = async (order, type = 'receipt', silent = false, copies = 1) => {
@@ -564,24 +1718,29 @@ function App() {
     };
 
     try {
+      let result = { ok: true };
       if (window.icashboxPrint?.print) {
-        await window.icashboxPrint.print(payload);
+        result = await window.icashboxPrint.print(payload);
       } else {
         const response = await fetch('http://127.0.0.1:8787/print', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
-        if (!response.ok) throw new Error('print failed');
+        result = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(result.error || 'Не удалось отправить задание на принтер');
       }
+      result = result || {};
+      const printerLabel = result.printer ? ` (${result.printer})` : '';
+      const queueLabel = Number.isFinite(result.jobCount) ? `, очередь: ${result.jobCount}` : '';
       setLastMessage(
         type === 'sticker'
-          ? `Наклейки отправлены: ${countStickerLabels(order)} шт.`
-          : `Чек отправлен на принтер: ${payload.copies} коп.`
+          ? `Наклейки отправлены: ${countStickerLabels(order)} шт.${printerLabel}${queueLabel}`
+          : `Чек отправлен на принтер: ${payload.copies} коп.${printerLabel}${queueLabel}`
       );
-    } catch {
+    } catch (error) {
       if (!silent) {
-        setLastMessage('Print-agent не отвечает. Запустите npm run print-agent');
+        setLastMessage(error.message || 'Print-agent не отвечает. Запустите npm run print-agent');
       }
       setPrintJob({ order, type, autoPrint: false });
     }
@@ -607,11 +1766,17 @@ function App() {
   };
 
   if (!currentUser) {
-    return <LoginScreen onLogin={login} />;
+    return (
+      <>
+        <LoginScreen onLogin={login} license={license} />
+        <LicenseGuard status={licenseGuard} onRetry={retryLicense} />
+      </>
+    );
   }
 
   return (
     <div className="app-shell">
+      <LicenseGuard status={licenseGuard} onRetry={retryLicense} />
       <aside className="sidebar">
         <div className="brand">
           <div className="brand-mark">
@@ -640,6 +1805,11 @@ function App() {
           })}
         </nav>
 
+        <button className="sidebar-cash-button" onClick={() => setActiveView('pos')}>
+          <ReceiptText size={20} />
+          <span>Касса</span>
+        </button>
+
         <div className="user-card">
           <User size={18} />
           <div>
@@ -650,25 +1820,19 @@ function App() {
             <LogOut size={17} />
           </button>
         </div>
-
-        <div className={isOnline ? 'network online' : 'network offline'}>
-          {isOnline ? <Wifi size={18} /> : <WifiOff size={18} />}
-          <div>
-            <strong>{isOnline ? 'Онлайн' : 'Оффлайн'}</strong>
-            <span>{pendingSync ? `${pendingSync} в очереди` : 'Локальная база'}</span>
-          </div>
-        </div>
       </aside>
 
       <main className="main">
         <header className="topbar">
           <div>
             <p className="eyebrow">Автономная POS-система для кафе и ресторанов</p>
-            <h1>{pageTitle(activeView)}</h1>
+            <h1 onClick={(event) => activeView === 'orders' && event.detail >= 3 && requestDeleteAllOrders()}>
+              {pageTitle(activeView)}
+            </h1>
           </div>
           <div className="topbar-actions">
             <div className={shift.open ? 'shift-pill open' : 'shift-pill'}>
-              <span>Смена #{shift.number}</span>
+              <span>{currentShiftLabel}</span>
               <strong>{shift.open ? 'Открыта' : 'Закрыта'}</strong>
             </div>
             <button
@@ -693,10 +1857,6 @@ function App() {
             >
               <Settings size={19} />
             </button>
-            <button className="network-toggle" onClick={toggleNetwork}>
-              {isOnline ? <Cloud size={18} /> : <CloudOff size={18} />}
-              <span>{isOnline ? 'Синхронизация включена' : 'Работа без интернета'}</span>
-            </button>
           </div>
         </header>
 
@@ -711,12 +1871,14 @@ function App() {
             cartTotal={cartTotal}
             categories={categories}
             createOrder={createOrder}
+            guestName={guestName}
             orderComment={orderComment}
             paidAmount={paidAmount}
             payments={payments}
             products={visibleProducts}
             search={search}
             selectedCategory={selectedCategory}
+            setGuestName={setGuestName}
             setOrderComment={setOrderComment}
             setPayments={setPayments}
             setSearch={setSearch}
@@ -727,15 +1889,33 @@ function App() {
             clearCart={() => setCart([])}
           />
         )}
-        {activeView === 'menu' && <MenuManager products={products} stock={stock} updateProduct={updateProduct} />}
+        {activeView === 'menu' && (
+          <MenuManager
+            addProduct={secureAddProduct}
+            deleteProduct={secureDeleteProduct}
+            exportMenuProducts={exportMenuProducts}
+            importMenuProducts={importMenuProducts}
+            products={products}
+            stock={stock}
+            updateProduct={secureUpdateProduct}
+          />
+        )}
         {activeView === 'orders' && (
           <OrderHistory
+            canEditOrders={currentUser.role === 'admin'}
             orders={orders}
             cancelOrder={cancelOrder}
+            exportOrders={exportOrders}
+            importOrders={importOrders}
             markOrderReady={markOrderReady}
             printOrder={(order, type = 'receipt') => setPrintJob({ order, type, autoPrint: false })}
+            requestDeleteAllOrders={requestDeleteAllOrders}
+            requestDeleteOrder={requestDeleteOrder}
+            requestOrderEdit={requestOrderEdit}
             requestReceiptCopies={requestReceiptCopies}
             sendToReceiptPrinter={sendToReceiptPrinter}
+            shift={shift}
+            shiftHistory={shiftHistory}
             refundOrder={refundOrder}
           />
         )}
@@ -746,25 +1926,42 @@ function App() {
             expenses={expenses}
             orders={orders}
             shift={shift}
-            closeShift={closeShift}
-            openShift={openShift}
+            shiftHistory={shiftHistory}
+            requestShiftToggle={requestShiftToggle}
           />
         )}
         {activeView === 'cloud' && (
           <CloudSync
+            archiveShiftOrders={archiveShiftOrders}
+            autoLaunch={autoLaunch}
+            canManageLicense={currentUser.role === 'admin'}
+            exportConfig={exportConfig}
             exportLocalDatabase={exportLocalDatabase}
             importInputRef={importInputRef}
             importLocalDatabase={importLocalDatabase}
-            isOnline={isOnline}
+            license={license}
             loadPrinters={loadPrinters}
             printSettings={printSettings}
             printers={printers}
+            resetLicense={resetLicense}
+            selectExportFolder={selectExportFolder}
             setPrintSettings={setPrintSettings}
             syncQueue={syncQueue}
-            toggleNetwork={toggleNetwork}
+            toggleAutoLaunch={toggleAutoLaunch}
           />
         )}
-        {activeView === 'roles' && <Roles accounts={accounts} />}
+        {activeView === 'roles' && (
+          <Roles
+            accessRules={accessRules}
+            accounts={accounts}
+            addAccount={addAccount}
+            canManageAccess={currentUser.role === 'admin'}
+            currentUserId={currentUser.id}
+            deleteAccount={deleteAccount}
+            toggleRoleRight={toggleRoleRight}
+            updateAccount={updateAccount}
+          />
+        )}
       </main>
       {printJob && (
         <PrintModal
@@ -781,8 +1978,10 @@ function App() {
       {settingsOpen && (
         <SettingsModal
           loadPrinters={loadPrinters}
+          onClearMenu={requestClearProductsMenu}
           onClose={() => setSettingsOpen(false)}
           printSettings={printSettings}
+          productsCount={products.length}
           printers={printers}
           setPrintSettings={setPrintSettings}
         />
@@ -800,14 +1999,101 @@ function App() {
           order={copyRequest.order}
         />
       )}
+      {clearOrdersAuth && (
+        <AdminPasswordModal
+          confirmLabel="Удалить историю"
+          description={`Будут удалены все заказы: ${clearOrdersAuth.total}. Введите пароль администратора заново.`}
+          disabled={!clearOrdersAuth.typed || !String(clearOrdersAuth.password || '').trim()}
+          error={clearOrdersAuth.error}
+          inputKey={clearOrdersAuth.sessionId}
+          onChange={(password) => setClearOrdersAuth((current) => ({ ...current, error: '', password }))}
+          onClose={() => setClearOrdersAuth(null)}
+          onConfirm={confirmClearOrdersPassword}
+          onUserInput={() => setClearOrdersAuth((current) => ({ ...current, error: '', typed: true }))}
+          password={clearOrdersAuth.password}
+          title="Удалить всю историю?"
+        />
+      )}
+      {orderEditAuth && (
+        <AdminPasswordModal
+          error={orderEditAuth.error}
+          onChange={(password) => setOrderEditAuth((current) => ({ ...current, password }))}
+          onClose={() => setOrderEditAuth(null)}
+          onConfirm={() => confirmOrderEdit(orderEditAuth.password)}
+          password={orderEditAuth.password}
+        />
+      )}
+      {adminActionAuth && (
+        <AdminPasswordModal
+          confirmLabel={adminActionAuth.confirmLabel}
+          description={adminActionAuth.description}
+          error={adminActionAuth.error}
+          onChange={(password) => setAdminActionAuth((current) => ({ ...current, password }))}
+          onClose={() => setAdminActionAuth(null)}
+          onConfirm={confirmAdminAction}
+          password={adminActionAuth.password}
+          title={adminActionAuth.title}
+        />
+      )}
+      {orderEditor && (
+        <OrderEditModal
+          onClose={() => setOrderEditor(null)}
+          onSave={saveOrderEdit}
+          order={orderEditor}
+        />
+      )}
     </div>
   );
 }
 
-function LoginScreen({ onLogin }) {
+function LicenseGuard({ status, onRetry }) {
+  if (!status || status.state === 'online') return null;
+  const graceTime = status.graceUntil
+    ? new Date(status.graceUntil).toLocaleString('ru-RU', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' })
+    : null;
+
+  if (status.state === 'grace') {
+    return (
+      <div className="license-guard-banner" role="status">
+        <WifiOff size={18} />
+        <div>
+          <strong>Нет подключения к интернету</strong>
+          <span>
+            {graceTime
+              ? `Касса работает офлайн до ${graceTime}. Пожалуйста, подключитесь к интернету.`
+              : 'Пожалуйста, подключитесь к интернету.'}
+          </span>
+        </div>
+        <button type="button" onClick={onRetry}>Повторить</button>
+      </div>
+    );
+  }
+
+  const invalid = status.state === 'invalid';
+  return (
+    <div className="license-guard-overlay" role="alertdialog" aria-modal="true">
+      <div className="license-guard-card">
+        <div className="license-guard-icon">{invalid ? <ShieldCheck size={40} /> : <WifiOff size={40} />}</div>
+        <h2>{invalid ? 'Лицензия недействительна' : 'Пожалуйста, подключитесь к интернету'}</h2>
+        <p>
+          {invalid
+            ? status.error || 'Ключ отклонён сервером. Обратитесь к администратору.'
+            : 'Работа кассы приостановлена: истёк разрешённый день работы без интернета. Для продолжения нужен доступ к серверу лицензий.'}
+        </p>
+        <button className="primary-action" type="button" onClick={onRetry}>
+          <RotateCcw size={18} />
+          <span>Проверить соединение</span>
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function LoginScreen({ onLogin, license }) {
   const [role, setRole] = useState('cashier');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const licenseExpiry = formatLicenseExpiry(license?.expiresAt);
   const loginRoles = [
     { id: 'cashier', label: 'Кассир', text: 'Продажи и заказы' },
     { id: 'admin', label: 'Админ', text: 'Полный доступ' }
@@ -835,6 +2121,19 @@ function LoginScreen({ onLogin }) {
         <div className="login-heading">
           <p className="eyebrow">Локальный вход</p>
           <h1>Выберите роль</h1>
+          {license && (
+            <p className={`login-license${licenseExpiry?.expired ? ' expired' : licenseExpiry && licenseExpiry.days <= 14 ? ' soon' : ''}`}>
+              <KeyRound size={14} />
+              <span>
+                {licenseExpiry
+                  ? licenseExpiry.expired
+                    ? `Лицензия истекла ${licenseExpiry.formatted}`
+                    : `Ключ активен до ${licenseExpiry.formatted}`
+                  : 'Лицензия активна'}
+                {license.customer ? ` · ${license.customer}` : ''}
+              </span>
+            </p>
+          )}
         </div>
         <form className="login-form" onSubmit={submitLogin}>
           <div className="login-role-grid" role="group" aria-label="Роль пользователя">
@@ -904,6 +2203,7 @@ function PosView({
   cartTotal,
   categories,
   createOrder,
+  guestName,
   orderComment,
   paidAmount,
   payments,
@@ -912,6 +2212,7 @@ function PosView({
   selectedCategory,
   setOrderComment,
   setPayments,
+  setGuestName,
   setSearch,
   setSelectedCategory,
   shift,
@@ -919,162 +2220,631 @@ function PosView({
   addToCart,
   clearCart
 }) {
+  const [paymentEditorMethod, setPaymentEditorMethod] = useState(null);
+  const currentShiftLabel = shiftLabel(shift);
+  const remainingAmount = Math.max(0, roundPayment(cartTotal - paidAmount));
+  const changeAmount = Math.max(0, roundPayment(paidAmount - cartTotal));
+  const paymentComplete = paidAmount >= cartTotal && cartTotal > 0;
+  const updatePaymentAmount = (method, value) => {
+    setPayments({ ...payments, [method]: roundPayment(value) });
+  };
+
   return (
-    <section className="pos-layout">
-      <div className="catalog-panel">
-        <div className="section-row">
-          <div>
-            <h2>Меню</h2>
-            <p>Категории, размеры, модификаторы и стоп-лист</p>
-          </div>
-          <div className="search-box">
-            <Search size={17} />
-            <input placeholder="Поиск блюда" value={search} onChange={(event) => setSearch(event.target.value)} />
-          </div>
-        </div>
-
-        <div className="segmented">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={selectedCategory === category ? 'selected' : ''}
-              onClick={() => setSelectedCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        <div className="product-grid">
-          {products.map((product) => (
-            <button className="product-card" key={product.id} onClick={() => addToCart(product)}>
-              <img src={product.image} alt="" />
-              <span className="product-category">{product.category}</span>
-              <strong>{product.name}</strong>
-              <span>{product.size}</span>
-              <b>{currency.format(product.price)}</b>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <aside className="ticket-panel">
-        <div className="section-row compact">
-          <div>
-            <h2>Заказ</h2>
-            <p>Кассовая продажа · смена #{shift.number}</p>
-          </div>
-          <button className="icon-button" title="Очистить заказ" onClick={clearCart}>
-            <X size={18} />
-          </button>
-        </div>
-
-        <div className="cart-list">
-          {cart.length === 0 && <div className="empty-state">Выберите позиции из меню</div>}
-          {cart.map((item) => (
-            <div className="cart-item" key={item.id}>
-              <div>
-                <strong>{item.name}</strong>
-                <span>{item.size}</span>
-              </div>
-              <div className="qty-control">
-                <button title="Уменьшить" onClick={() => updateQty(item.id, -1)}>
-                  <Minus size={14} />
-                </button>
-                <span>{item.qty}</span>
-                <button title="Добавить" onClick={() => updateQty(item.id, 1)}>
-                  <Plus size={14} />
-                </button>
-              </div>
-              <b>{currency.format(item.price * item.qty)}</b>
+    <>
+      <section className="pos-layout">
+        <div className="catalog-panel">
+          <div className="section-row">
+            <div>
+              <h2>Меню</h2>
+              <p>Категории, размеры, модификаторы и стоп-лист</p>
             </div>
-          ))}
+            <div className="search-box">
+              <Search size={17} />
+              <input placeholder="Поиск блюда" value={search} onChange={(event) => setSearch(event.target.value)} />
+            </div>
+          </div>
+
+          <div className="segmented">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className={selectedCategory === category ? 'selected' : ''}
+                onClick={() => setSelectedCategory(category)}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          <div className="product-grid">
+            {products.length === 0 && <div className="empty-state">Меню пустое</div>}
+            {products.map((product) => (
+              <button className="product-card" key={product.id} onClick={() => addToCart(product)}>
+                <img src={product.image} alt="" />
+                <span className="product-category">{product.category}</span>
+                <strong>{product.name}</strong>
+                {product.size && <span>{product.size}</span>}
+                <b>{currency.format(product.price)}</b>
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="payments">
-          <h3>Комбинированная оплата</h3>
-          <label className="comment-field">
-            <span>Комментарий</span>
-            <input
-              value={orderComment}
-              onChange={(event) => setOrderComment(event.target.value)}
-              placeholder="Например: без лука, срочно"
-            />
-          </label>
-          {paymentMethods.map((method) => (
-            <label key={method}>
-              <span>{method}</span>
+        <aside className="ticket-panel">
+          <div className="section-row compact">
+            <div>
+              <h2>Заказ</h2>
+              <p>Кассовая продажа · {currentShiftLabel}</p>
+            </div>
+            <button className="icon-button" title="Очистить заказ" onClick={clearCart}>
+              <X size={18} />
+            </button>
+          </div>
+
+          <div className="cart-list">
+            {cart.length === 0 && <div className="empty-state">Выберите позиции из меню</div>}
+            {cart.map((item) => (
+              <div className="cart-item" key={item.id}>
+                <div>
+                  <strong>{item.name}</strong>
+                  {item.size && <span>{item.size}</span>}
+                </div>
+                <div className="qty-control">
+                  <button title="Уменьшить" onClick={() => updateQty(item.id, -1)}>
+                    <Minus size={14} />
+                  </button>
+                  <span>{item.qty}</span>
+                  <button title="Добавить" onClick={() => updateQty(item.id, 1)}>
+                    <Plus size={14} />
+                  </button>
+                </div>
+                <b>{currency.format(item.price * item.qty)}</b>
+              </div>
+            ))}
+          </div>
+
+          <div className="payments">
+            <label className="comment-field">
+              <span>Имя гостя для стикера</span>
               <input
-                type="number"
-                min="0"
-                value={payments[method]}
-                onChange={(event) => setPayments({ ...payments, [method]: Number(event.target.value) })}
+                value={guestName}
+                onChange={(event) => setGuestName(event.target.value)}
+                placeholder="Например: Азиза"
               />
             </label>
-          ))}
-        </div>
+            <label className="comment-field">
+              <span>Комментарий к заказу</span>
+              <input
+                value={orderComment}
+                onChange={(event) => setOrderComment(event.target.value)}
+                placeholder="Например: без лука, срочно"
+              />
+            </label>
+            <div className="payment-summary-grid">
+              <div>
+                <span>К оплате</span>
+                <strong>{currency.format(cartTotal)}</strong>
+              </div>
+              <div>
+                <span>Остаток</span>
+                <strong>{currency.format(remainingAmount)}</strong>
+              </div>
+              <div>
+                <span>Сдача</span>
+                <strong>{currency.format(changeAmount)}</strong>
+              </div>
+            </div>
+            <div className="payment-method-buttons">
+              {paymentMethods.map((method) => {
+                const logo = paymentButtonLogos[method];
 
-        <div className="ticket-total">
-          <span>Итого</span>
-          <strong>{currency.format(cartTotal)}</strong>
-        </div>
-        <div className={paidAmount >= cartTotal && cartTotal > 0 ? 'payment-status done' : 'payment-status'}>
-          Оплачено: {currency.format(paidAmount)}
-        </div>
-        <button className="primary-action" disabled={!cart.length || !shift.open} onClick={createOrder}>
-          <Check size={19} />
-          <span>{shift.open ? 'Создать заказ' : 'Откройте смену'}</span>
-        </button>
-      </aside>
-    </section>
+                return (
+                  <button
+                    className={Number(payments[method] || 0) > 0 ? 'payment-method-button active' : 'payment-method-button'}
+                    key={method}
+                    type="button"
+                    disabled={!cartTotal}
+                    onClick={() => setPaymentEditorMethod(method)}
+                  >
+                    {logo ? (
+                      <span className="payment-method-logo-frame">
+                        <img className="payment-method-logo" src={logo.src} alt={logo.alt} />
+                      </span>
+                    ) : (
+                      <span className="payment-method-label">{paymentMethodLabel(method)}</span>
+                    )}
+                    <strong>{currency.format(payments[method] || 0)}</strong>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="ticket-total">
+            <span>Итого</span>
+            <strong>{currency.format(cartTotal)}</strong>
+          </div>
+          <div className={paymentComplete ? 'payment-status done' : 'payment-status'}>
+            {paymentComplete ? `Оплачено: ${currency.format(paidAmount)}` : `Осталось: ${currency.format(remainingAmount)}`}
+          </div>
+          <button className="primary-action" disabled={!cart.length || !shift.open} onClick={createOrder}>
+            <Check size={19} />
+            <span>{shift.open ? 'Оплатить' : 'Откройте смену'}</span>
+          </button>
+        </aside>
+      </section>
+      {paymentEditorMethod && (
+        <PaymentAmountModal
+          cartTotal={cartTotal}
+          label={paymentMethodLabel(paymentEditorMethod)}
+          method={paymentEditorMethod}
+          onClose={() => setPaymentEditorMethod(null)}
+          onSave={(value) => {
+            updatePaymentAmount(paymentEditorMethod, value);
+            setPaymentEditorMethod(null);
+          }}
+          remainingAmount={remainingAmount}
+          value={payments[paymentEditorMethod] || 0}
+        />
+      )}
+    </>
   );
 }
 
-function MenuManager({ products, stock, updateProduct }) {
+function PaymentAmountModal({ cartTotal, label, method, onClose, onSave, remainingAmount, value }) {
+  const [draft, setDraft] = useState(String(value || 0));
+  const logo = paymentButtonLogos[method];
+  const amountToClose = roundPayment(Number(value || 0) + remainingAmount);
+  const quickValues = [
+    ['Остаток', amountToClose],
+    ['Вся сумма', cartTotal],
+    ['Очистить', 0]
+  ];
+
+  useEffect(() => {
+    setDraft(String(value || 0));
+  }, [method, value]);
+
+  const submit = (event) => {
+    event.preventDefault();
+    onSave(draft);
+  };
+
+  return (
+    <div className="modal-backdrop">
+      <section className="payment-amount-modal" aria-label="Ввод суммы оплаты">
+        <form className="payment-amount-form" onSubmit={submit}>
+          <div className="section-row compact">
+            <div>
+              <h2 className={logo ? 'payment-amount-logo-title' : undefined}>
+                {logo ? (
+                  <>
+                    <img src={logo.src} alt={logo.alt} />
+                    <span>{label}</span>
+                  </>
+                ) : (
+                  label
+                )}
+              </h2>
+              <p>Введите сумму для этого способа оплаты</p>
+            </div>
+            <button className="icon-button" type="button" title="Закрыть" onClick={onClose}>
+              <X size={18} />
+            </button>
+          </div>
+
+          <label className="payment-amount-field">
+            <span>Сумма</span>
+            <input
+              autoFocus
+              inputMode="decimal"
+              min="0"
+              step="1"
+              type="number"
+              value={draft}
+              onFocus={(event) => event.target.select()}
+              onChange={(event) => setDraft(event.target.value)}
+            />
+          </label>
+
+          <div className="payment-amount-presets">
+            {quickValues.map(([title, amount]) => (
+              <button key={title} type="button" onClick={() => setDraft(String(amount))}>
+                <span>{title}</span>
+                <strong>{currency.format(amount)}</strong>
+              </button>
+            ))}
+          </div>
+
+          <div className="modal-actions">
+            <button className="secondary-action" type="button" onClick={onClose}>
+              <X size={18} />
+              <span>Отмена</span>
+            </button>
+            <button className="primary-action" type="submit">
+              <Check size={18} />
+              <span>Готово</span>
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  );
+}
+
+function productToMenuDraft(product = {}) {
+  return {
+    category: product.category || '',
+    image: product.image || '',
+    modifiers: (product.modifiers || []).join(', '),
+    name: product.name || '',
+    price: product.price == null ? '' : String(product.price),
+    size: product.size || ''
+  };
+}
+
+function menuDraftToProductPatch(draft) {
+  const price = Number(String(draft.price ?? '').replace(',', '.'));
+  return {
+    category: draft.category.trim() || 'Меню',
+    image: draft.image.trim(),
+    modifiers: String(draft.modifiers ?? '')
+      .split(',')
+      .map((item) => item.trim())
+      .filter(Boolean),
+    name: draft.name.trim() || 'Без названия',
+    price: Number.isFinite(price) ? Math.max(0, price) : 0,
+    size: draft.size.trim()
+  };
+}
+
+function menuDraftChanged(product, draft) {
+  const patch = menuDraftToProductPatch(draft);
+  return (
+    patch.category !== (product.category || '') ||
+    patch.image !== (product.image || '') ||
+    JSON.stringify(patch.modifiers) !== JSON.stringify(product.modifiers || []) ||
+    patch.name !== (product.name || '') ||
+    patch.price !== Number(product.price || 0) ||
+    patch.size !== (product.size || '')
+  );
+}
+
+function MenuManager({ addProduct, deleteProduct, exportMenuProducts, importMenuProducts, products, stock, updateProduct }) {
+  const [uploadingId, setUploadingId] = useState(null);
+  const [menuSearch, setMenuSearch] = useState('');
+  const [productCreatorOpen, setProductCreatorOpen] = useState(false);
+  const menuImportInputRef = useRef(null);
+  const [drafts, setDrafts] = useState(() =>
+    Object.fromEntries(products.map((product) => [product.id, productToMenuDraft(product)]))
+  );
+  const visibleProducts = products.filter((product) =>
+    [product.name, product.category, product.size, ...(product.modifiers || [])]
+      .join(' ')
+      .toLowerCase()
+      .includes(menuSearch.trim().toLowerCase())
+  );
+
+  useEffect(() => {
+    setDrafts(Object.fromEntries(products.map((product) => [product.id, productToMenuDraft(product)])));
+  }, [products]);
+
+  const updateDraft = (product, patch) => {
+    setDrafts((current) => ({
+      ...current,
+      [product.id]: {
+        ...(current[product.id] || productToMenuDraft(product)),
+        ...patch
+      }
+    }));
+  };
+
+  const uploadProductImage = async (product, file) => {
+    if (!file) return;
+    setUploadingId(product.id);
+    try {
+      const image = await menuImageFileToDataUrl(file);
+      updateProduct(product.id, { image }, product.name, 'Сохранить фото');
+    } catch (error) {
+      window.alert(error.message || 'Не удалось сохранить фото');
+    } finally {
+      setUploadingId(null);
+    }
+  };
+
   return (
     <section className="data-section">
       <div className="section-row">
         <div>
           <h2>Управление меню</h2>
-          <p>Цены, активность, стоп-лист, варианты и техкарты</p>
+          <p>Названия, категории, размеры, цены, фото и стоп-лист</p>
         </div>
-        <button className="secondary-action">
-          <Plus size={18} />
-          <span>Позиция</span>
-        </button>
+        <div className="section-actions">
+          <button className="secondary-action" onClick={exportMenuProducts}>
+            <Download size={18} />
+            <span>Экспорт XLSX</span>
+          </button>
+          <button className="secondary-action" onClick={() => menuImportInputRef.current?.click()}>
+            <Upload size={18} />
+            <span>Импорт XLSX</span>
+          </button>
+          <input
+            ref={menuImportInputRef}
+            type="file"
+            accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            onChange={importMenuProducts}
+            hidden
+          />
+          <button className="secondary-action" onClick={() => setProductCreatorOpen(true)}>
+            <Plus size={18} />
+            <span>Позиция</span>
+          </button>
+        </div>
+      </div>
+      <div className="menu-search-row">
+        <div className="search-box">
+          <Search size={17} />
+          <input
+            placeholder="Поиск по меню"
+            value={menuSearch}
+            onChange={(event) => setMenuSearch(event.target.value)}
+          />
+        </div>
       </div>
       <div className="menu-grid">
-        {products.map((product) => (
-          <article className={product.active ? 'menu-card' : 'menu-card paused'} key={product.id}>
-            <img src={product.image} alt="" />
-            <div className="menu-card-main">
-              <span className="product-category">{product.category}</span>
-              <h3>{product.name}</h3>
-              <p>{product.size} · {product.modifiers.join(', ')}</p>
-              <RecipePreview productId={product.id} stock={stock} />
+        {visibleProducts.length === 0 && (
+          <div className="empty-state">{products.length ? 'Поиск ничего не нашёл' : 'Меню пустое'}</div>
+        )}
+        {visibleProducts.map((product) => {
+          const draft = drafts[product.id] || productToMenuDraft(product);
+          const draftLabel = draft.name.trim() || product.name || 'позиция меню';
+          const hasDraftChanges = menuDraftChanged(product, draft);
+          const productDetails = [product.size, (product.modifiers || []).join(', ')].filter(Boolean).join(' · ');
+
+          return (
+            <article className={product.active ? 'menu-card' : 'menu-card paused'} key={product.id}>
+              <img src={product.image} alt="" />
+              <div className="menu-card-main">
+                <span className="product-category">{product.category}</span>
+                <h3>{product.name}</h3>
+                {productDetails && <p>{productDetails}</p>}
+                <RecipePreview productId={product.id} stock={stock} />
+              </div>
+              <div className="menu-edit-fields">
+                <label>
+                  <span>Название</span>
+                  <input
+                    value={draft.name}
+                    onChange={(event) => updateDraft(product, { name: event.target.value })}
+                  />
+                </label>
+                <label>
+                  <span>Категория</span>
+                  <input
+                    value={draft.category}
+                    onChange={(event) => updateDraft(product, { category: event.target.value })}
+                  />
+                </label>
+                <label>
+                  <span>Размер</span>
+                  <input
+                    value={draft.size}
+                    onChange={(event) => updateDraft(product, { size: event.target.value })}
+                  />
+                </label>
+                <label>
+                  <span>Цена</span>
+                  <input
+                    type="number"
+                    min="0"
+                    value={draft.price}
+                    onChange={(event) => updateDraft(product, { price: event.target.value })}
+                  />
+                </label>
+                <label className="wide-field">
+                  <span>Модификаторы</span>
+                  <input
+                    value={draft.modifiers}
+                    onChange={(event) => updateDraft(product, { modifiers: event.target.value })}
+                  />
+                </label>
+              </div>
+              <div className="menu-actions">
+                <button
+                  className="primary-action"
+                  disabled={!hasDraftChanges}
+                  onClick={() =>
+                    updateProduct(product.id, menuDraftToProductPatch(draft), draftLabel, 'Сохранить изменения')
+                  }
+                >
+                  <Save size={17} />
+                  <span>Сохранить</span>
+                </button>
+                <label className="secondary-action file-action">
+                  <Upload size={17} />
+                  <span>{uploadingId === product.id ? 'Сохраняю' : 'Фото'}</span>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={(event) => {
+                      uploadProductImage(product, event.target.files?.[0]);
+                      event.target.value = '';
+                    }}
+                  />
+                </label>
+                <button
+                  className={product.active ? 'secondary-action' : 'primary-action'}
+                  onClick={() =>
+                    updateProduct(
+                      product.id,
+                      { active: !product.active },
+                      product.name,
+                      product.active ? 'Поставить в стоп' : 'Вернуть в меню'
+                    )
+                  }
+                >
+                  {product.active ? <X size={17} /> : <Check size={17} />}
+                  <span>{product.active ? 'Стоп' : 'Вернуть'}</span>
+                </button>
+                <button className="secondary-action danger-action" onClick={() => deleteProduct(product.id, product.name)}>
+                  <Trash2 size={17} />
+                  <span>Удалить</span>
+                </button>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      {productCreatorOpen && (
+        <ProductCreateModal
+          onClose={() => setProductCreatorOpen(false)}
+          onSave={(draft) => {
+            addProduct(draft);
+            setProductCreatorOpen(false);
+          }}
+        />
+      )}
+    </section>
+  );
+}
+
+function ProductCreateModal({ onClose, onSave }) {
+  const [draft, setDraft] = useState(() => ({
+    category: 'Меню',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80',
+    modifiers: '',
+    name: '',
+    price: '',
+    size: 'порция'
+  }));
+
+  const [uploadingImage, setUploadingImage] = useState(false);
+  const imageInputRef = useRef(null);
+
+  const updateDraft = (patch) => setDraft((current) => ({ ...current, ...patch }));
+
+  const handleImageFile = async (file) => {
+    if (!file) return;
+    setUploadingImage(true);
+    try {
+      const image = await menuImageFileToDataUrl(file);
+      updateDraft({ image });
+    } catch (error) {
+      window.alert(error.message || 'Не удалось сохранить фото');
+    } finally {
+      setUploadingImage(false);
+    }
+  };
+
+  const submit = (event) => {
+    event.preventDefault();
+    onSave(draft);
+  };
+
+  return (
+    <div className="modal-backdrop">
+      <section className="product-create-modal" aria-label="Новая позиция меню">
+        <form className="product-create-form" onSubmit={submit}>
+          <div className="section-row compact">
+            <div>
+              <h2>Карточка товара</h2>
+              <p>Заполните позицию меню перед добавлением</p>
             </div>
-            <div className="menu-actions">
+            <button className="icon-button" type="button" title="Закрыть" onClick={onClose}>
+              <X size={18} />
+            </button>
+          </div>
+
+          <div className="product-create-layout">
+            <div className="product-create-preview">
+              <button
+                type="button"
+                className="product-image-picker"
+                onClick={() => imageInputRef.current?.click()}
+                title="Загрузить фото"
+              >
+                <img src={draft.image} alt="" />
+                <span className="product-image-overlay">
+                  <ImagePlus size={18} />
+                  {uploadingImage ? 'Загрузка…' : 'Загрузить фото'}
+                </span>
+              </button>
+              <input
+                ref={imageInputRef}
+                type="file"
+                accept="image/*"
+                hidden
+                onChange={(event) => {
+                  const file = event.target.files?.[0];
+                  event.target.value = '';
+                  handleImageFile(file);
+                }}
+              />
+              <span className="product-category">{draft.category || 'Меню'}</span>
+              <strong>{draft.name || 'Новая позиция'}</strong>
+              <small>{draft.size || 'порция'}</small>
+              <b>{currency.format(Number(draft.price || 0))}</b>
+            </div>
+            <div className="menu-edit-fields product-create-fields">
+              <label>
+                <span>Название</span>
+                <input
+                  autoFocus
+                  value={draft.name}
+                  onChange={(event) => updateDraft({ name: event.target.value })}
+                  placeholder="Например: Латте"
+                />
+              </label>
+              <label>
+                <span>Категория</span>
+                <input
+                  value={draft.category}
+                  onChange={(event) => updateDraft({ category: event.target.value })}
+                  placeholder="Кофе"
+                />
+              </label>
+              <label>
+                <span>Размер</span>
+                <input
+                  value={draft.size}
+                  onChange={(event) => updateDraft({ size: event.target.value })}
+                  placeholder="350 мл"
+                />
+              </label>
               <label>
                 <span>Цена</span>
                 <input
                   type="number"
                   min="0"
-                  value={product.price}
-                  onChange={(event) => updateProduct(product.id, { price: Number(event.target.value) })}
+                  value={draft.price}
+                  onChange={(event) => updateDraft({ price: event.target.value })}
+                  placeholder="0"
                 />
               </label>
-              <button
-                className={product.active ? 'secondary-action' : 'primary-action'}
-                onClick={() => updateProduct(product.id, { active: !product.active })}
-              >
-                {product.active ? <X size={17} /> : <Check size={17} />}
-                <span>{product.active ? 'Стоп' : 'Вернуть'}</span>
-              </button>
+              <label className="wide-field">
+                <span>Модификаторы</span>
+                <input
+                  value={draft.modifiers}
+                  onChange={(event) => updateDraft({ modifiers: event.target.value })}
+                  placeholder="Сироп, сахар, альтернативное молоко"
+                />
+              </label>
             </div>
-          </article>
-        ))}
-      </div>
-    </section>
+          </div>
+
+          <div className="modal-actions">
+            <button className="secondary-action" type="button" onClick={onClose}>
+              <X size={18} />
+              <span>Отмена</span>
+            </button>
+            <button className="primary-action" type="submit">
+              <Save size={18} />
+              <span>Добавить</span>
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
   );
 }
 
@@ -1095,35 +2865,106 @@ function RecipePreview({ productId, stock }) {
 }
 
 function OrderHistory({
+  canEditOrders,
   orders,
   cancelOrder,
+  exportOrders,
+  importOrders,
   markOrderReady,
   printOrder,
   refundOrder,
+  requestDeleteAllOrders,
+  requestDeleteOrder,
+  requestOrderEdit,
   requestReceiptCopies,
-  sendToReceiptPrinter
+  sendToReceiptPrinter,
+  shift,
+  shiftHistory
 }) {
+  const orderImportInputRef = useRef(null);
+  const historyTitleClickRef = useRef({ count: 0, lastAt: 0 });
+  const currentShiftKey = shiftKeyFromShift(shift);
+  const reports = useMemo(
+    () => buildShiftReports(orders, [], shiftHistory, shift),
+    [orders, shift, shiftHistory]
+  );
+  const [selectedShiftKey, setSelectedShiftKey] = useState(currentShiftKey);
+
+  useEffect(() => {
+    if (!reports.some((report) => report.key === selectedShiftKey)) {
+      setSelectedShiftKey(currentShiftKey);
+    }
+  }, [currentShiftKey, reports, selectedShiftKey]);
+
+  const selectedReport = reports.find((report) => report.key === selectedShiftKey) || reports[0];
+  const visibleOrders = orders.filter((order) => orderShiftKey(order, shift) === selectedReport?.key);
+  const handleHistoryTitleClick = () => {
+    const now = Date.now();
+    const previous = historyTitleClickRef.current;
+    const nextCount = now - previous.lastAt <= 900 ? previous.count + 1 : 1;
+
+    if (nextCount >= 3) {
+      historyTitleClickRef.current = { count: 0, lastAt: 0 };
+      requestDeleteAllOrders?.();
+      return;
+    }
+
+    historyTitleClickRef.current = { count: nextCount, lastAt: now };
+  };
+
   return (
     <section className="data-section">
       <div className="section-row">
         <div>
-          <h2>История заказов</h2>
-          <p>Контроль оплат, отмен, возвратов и комментариев по смене</p>
+          <h2 onClick={handleHistoryTitleClick}>История заказов</h2>
+          <p>{selectedReport?.label || shiftLabel(shift)} · контроль оплат, отмен, возвратов и комментариев</p>
         </div>
-        <button className="secondary-action">
-          <ReceiptText size={18} />
-          <span>Экспорт</span>
-        </button>
+        <div className="section-actions">
+          <label className="history-shift-filter">
+            <span>Смена</span>
+            <select value={selectedReport?.key || ''} onChange={(event) => setSelectedShiftKey(event.target.value)}>
+              {reports.map((report) => (
+                <option key={report.key} value={report.key}>
+                  {report.label}{report.open ? ' · открыта' : ''}
+                </option>
+              ))}
+            </select>
+          </label>
+          <button className="secondary-action" onClick={exportOrders}>
+            <Download size={18} />
+            <span>Экспорт XLSX</span>
+          </button>
+          {canEditOrders && (
+            <>
+              <button className="secondary-action" onClick={() => orderImportInputRef.current?.click()}>
+                <Upload size={18} />
+                <span>Импорт XLSX</span>
+              </button>
+              <input
+                ref={orderImportInputRef}
+                type="file"
+                accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                onChange={importOrders}
+                hidden
+              />
+            </>
+          )}
+        </div>
       </div>
       <div className="order-history">
-        {orders.map((order) => (
+        {visibleOrders.length === 0 && <div className="empty-state">Заказов за эту смену пока нет</div>}
+        {visibleOrders.map((order) => (
           <article className="history-card" key={order.id}>
             <div className="history-main">
               <div className="order-head">
                 <strong>#{order.id}</strong>
                 <span className={orderStatusClass(order.status)}>{order.status}</span>
               </div>
-              <p>{order.type} · {order.table} · {currency.format(order.total)}</p>
+              <p>
+                {order.type} · {order.table} · {order.shiftLabel || selectedReport?.label || shiftLabel(shift)} ·{' '}
+                {currency.format(order.total)}
+              </p>
+              {order.guestName && <p className="order-comment">Гость: {order.guestName}</p>}
               {order.comment && <p className="order-comment">{order.comment}</p>}
               <ul>
                 {order.items.map((item) => (
@@ -1144,6 +2985,12 @@ function OrderHistory({
                 <Printer size={17} />
                 <span>Стикеры</span>
               </button>
+              {canEditOrders && (
+                <button className="secondary-action" onClick={() => requestOrderEdit(order)}>
+                  <Pencil size={17} />
+                  <span>Правка</span>
+                </button>
+              )}
               <button
                 className="secondary-action"
                 disabled={['Готов', 'Выдан', 'Отменён', 'Возврат'].includes(order.status)}
@@ -1160,6 +3007,12 @@ function OrderHistory({
                 <Undo2 size={17} />
                 <span>Возврат</span>
               </button>
+              {canEditOrders && (
+                <button className="secondary-action danger-action" onClick={() => requestDeleteOrder(order)}>
+                  <Trash2 size={17} />
+                  <span>Удалить</span>
+                </button>
+              )}
             </div>
           </article>
         ))}
@@ -1220,24 +3073,87 @@ function Inventory({ stock, receiveStock }) {
   );
 }
 
-function Analytics({ addExpense, expenses, orders, shift, closeShift, openShift }) {
-  const activeOrders = orders.filter((order) => !order.cancelled && !order.refunded);
-  const revenue = activeOrders.reduce((sum, order) => sum + order.total, 0);
-  const paid = activeOrders.filter((order) => order.paid).reduce((sum, order) => sum + order.total, 0);
-  const average = Math.round(revenue / Math.max(activeOrders.length, 1));
-  const expenseTotal = expenses.reduce((sum, expense) => sum + expense.amount, 0);
-  const paymentTotals = paymentMethods.map((method) => [
-    method,
-    activeOrders.reduce((sum, order) => sum + Number(order.payments?.[method] || 0), 0)
-  ]);
+function Analytics({ addExpense, expenses, orders, shift, shiftHistory, requestShiftToggle }) {
+  const currentShiftKey = shiftKeyFromShift(shift);
+  const reports = useMemo(
+    () => buildShiftReports(orders, expenses, shiftHistory, shift),
+    [expenses, orders, shift, shiftHistory]
+  );
+  const [selectedShiftKey, setSelectedShiftKey] = useState(currentShiftKey);
+
+  useEffect(() => {
+    if (!reports.some((report) => report.key === selectedShiftKey)) {
+      setSelectedShiftKey(currentShiftKey);
+    }
+  }, [currentShiftKey, reports, selectedShiftKey]);
+
+  const selectedReport = reports.find((report) => report.key === selectedShiftKey) || reports[0];
+  const {
+    activeOrders = [],
+    average = 0,
+    expenseTotal = 0,
+    orders: periodOrders = [],
+    paid = 0,
+    paymentTotals = [],
+    refundTotal = 0,
+    revenue = 0
+  } = selectedReport?.summary || summarizePeriod([]);
+  const paymentOrderGroups = paymentMethods.map((method) => {
+    const methodOrders = activeOrders.filter((order) => Number(order.payments?.[method] || 0) > 0);
+    return {
+      method,
+      orders: methodOrders,
+      total: methodOrders.reduce((sum, order) => sum + Number(order.payments?.[method] || 0), 0)
+    };
+  });
+  const currentReport = reports.find((report) => report.key === currentShiftKey);
+  const {
+    activeOrders: currentActiveOrders = [],
+    average: currentAverage = 0,
+    orders: currentPeriodOrders = [],
+    paid: currentPaid = 0,
+    paymentTotals: currentPaymentTotals = [],
+    refundTotal: currentRefundTotal = 0,
+    revenue: currentRevenue = 0
+  } = currentReport?.summary || summarizePeriod([]);
+  const currentReportShift = {
+    cashier: shift.cashier,
+    closedAt: currentReport?.closedAt || shift.closedAt,
+    number: normalizeShiftNumber(shift.number),
+    open: shift.open,
+    openedAt: shift.openedAt,
+    shiftKey: currentShiftKey
+  };
+  const downloadCurrentReport = (paymentFilter = null) => {
+    downloadAnalyticsReportPdf({
+      activeOrders: currentActiveOrders,
+      average: currentAverage,
+      paid: currentPaid,
+      paymentFilter,
+      paymentTotals: currentPaymentTotals,
+      revenue: currentRevenue,
+      shift: currentReportShift
+    });
+  };
   const stats = [
-    ['Выручка', revenue, BarChart3],
-    ['Оплачено', paid, CreditCard],
-    ['Средний чек', average, ReceiptText],
-    ['Расходы', expenseTotal, Landmark]
+    ['Выручка', currentRevenue, BarChart3],
+    ['Оплачено', currentPaid, CreditCard],
+    ['Средний чек', currentAverage, ReceiptText]
   ];
   return (
     <section className="analytics">
+      <div className="section-row analytics-report-row">
+        <div>
+          <h2>Отчёты по смене</h2>
+          <p>{shiftTimingLine(currentReport, shift)}</p>
+        </div>
+        <div className="report-period-actions">
+          <button className="secondary-action" onClick={() => downloadCurrentReport()}>
+            <Download size={18} />
+            <span>PDF отчёт</span>
+          </button>
+        </div>
+      </div>
       <div className="metric-grid">
         {stats.map(([label, value, Icon]) => (
           <article className="metric-card" key={label}>
@@ -1252,13 +3168,13 @@ function Analytics({ addExpense, expenses, orders, shift, closeShift, openShift 
           <div className="section-row">
             <div>
               <h2>Отчёт по оплатам</h2>
-              <p>Разбивка по способам оплаты за текущие данные</p>
+              <p>{shiftLabel(shift)} · только текущая смена</p>
             </div>
           </div>
           <div className="payment-report">
-            {paymentTotals.map(([method, value]) => (
+            {currentPaymentTotals.map(([method, value]) => (
               <div key={method}>
-                <span>{method}</span>
+                <span>{paymentMethodLabel(method)}</span>
                 <strong>{currency.format(value)}</strong>
               </div>
             ))}
@@ -1266,71 +3182,350 @@ function Analytics({ addExpense, expenses, orders, shift, closeShift, openShift 
         </div>
         <div className="data-section shift-section">
           <div>
-            <h2>Закрытие смены</h2>
-            <p>Кассир: {shift.cashier} · открыта: {shift.openedAt}</p>
+            <h2>Управление сменой</h2>
+            <p>{shiftTimingLine(currentReport, shift)} · кассир: {shift.cashier}</p>
           </div>
           <div className="shift-summary">
-            <div><span>Заказы</span><strong>{orders.length}</strong></div>
-            <div><span>Возвраты</span><strong>{currency.format(0)}</strong></div>
-            <div><span>Факт наличных</span><strong>{currency.format(paymentTotals[0][1])}</strong></div>
+            <div><span>Заказы</span><strong>{currentPeriodOrders.length}</strong></div>
+            <div><span>Возвраты</span><strong>{currency.format(currentRefundTotal)}</strong></div>
+            <div><span>Факт наличных</span><strong>{currency.format(currentPaymentTotals[0]?.[1] || 0)}</strong></div>
             <div><span>Расхождение</span><strong>{currency.format(0)}</strong></div>
           </div>
-          <button className="primary-action" onClick={shift.open ? closeShift : openShift}>
+          <button className="primary-action" onClick={requestShiftToggle}>
             {shift.open ? <Save size={18} /> : <Check size={18} />}
             <span>{shift.open ? 'Закрыть смену' : 'Открыть смену'}</span>
           </button>
         </div>
       </div>
-      <div className="data-section expenses-section">
+      <div className="data-section shift-history-section">
         <div className="section-row">
           <div>
-            <h2>Расходы смены</h2>
-            <p>Закупки, логистика и операционные траты</p>
+            <h2>История смен</h2>
+            <p>Дневные итоги сохраняются при закрытии смены и дополняются заказами за день</p>
           </div>
-          <button className="secondary-action" onClick={addExpense}>
-            <Plus size={18} />
-            <span>Расход</span>
-          </button>
         </div>
-        <div className="expense-list">
-          {expenses.map((expense) => (
-            <div key={expense.id}>
-              <span>{expense.time}</span>
-              <strong>{expense.title}</strong>
-              <small>{expense.category}</small>
-              <b>{currency.format(expense.amount)}</b>
-            </div>
+        <div className="shift-history-list">
+          {reports.map((report) => (
+            <button
+              className={report.key === selectedReport?.key ? 'shift-history-row selected' : 'shift-history-row'}
+              key={report.key}
+              type="button"
+              onClick={() => setSelectedShiftKey(report.key)}
+            >
+              <div>
+                <strong>{report.label}</strong>
+                <span>
+                  {report.open
+                    ? 'Открыта'
+                    : report.closedAt
+                      ? `Закрыта ${toDate(report.closedAt).toLocaleTimeString('ru-RU', {
+                          hour: '2-digit',
+                          minute: '2-digit'
+                        })}`
+                      : 'Без закрытия'}
+                </span>
+              </div>
+              <span>{report.summary.orders.length} заказов</span>
+              <span>{report.cashier}</span>
+              <b>{currency.format(report.summary.revenue)}</b>
+            </button>
           ))}
         </div>
       </div>
+      <div className="data-section shift-detail-section">
+        <div className="section-row">
+          <div>
+            <h2>Детализация смены</h2>
+            <p>{selectedReport?.label || shiftLabel(shift)} · оплаты и все заказы</p>
+          </div>
+          <div className="shift-detail-total">
+            <span>Итого смены</span>
+            <strong>{currency.format(revenue)}</strong>
+          </div>
+        </div>
+        <div className="shift-payment-detail">
+          {paymentTotals.map(([method, value]) => {
+            const logo = paymentButtonLogos[method];
+
+            return (
+              <div className={`shift-payment-card method-${methodSlug(method)}`} key={method}>
+                <span className="shift-payment-card-label">
+                  {logo ? <img src={logo.src} alt={logo.alt} /> : paymentMethodLabel(method)}
+                </span>
+                <strong>{currency.format(value)}</strong>
+                <small>{value > 0 ? 'Есть оплаты' : 'Без оплат'}</small>
+              </div>
+            );
+          })}
+        </div>
+        <div className="shift-order-detail">
+          {activeOrders.length === 0 && <div className="empty-state">Оплаченных заказов за эту смену пока нет</div>}
+          {paymentOrderGroups.map(({ method, orders: methodOrders, total }) => (
+            <section className={`shift-payment-orders method-${methodSlug(method)}`} key={method}>
+              <div className="shift-payment-orders-head">
+                <strong>{paymentMethodLabel(method)}</strong>
+                <span>{methodOrders.length} заказов</span>
+                <b>{currency.format(total)}</b>
+              </div>
+              {methodOrders.length === 0 && <div className="empty-state">Оплат этим способом нет</div>}
+              {methodOrders.map((order) => {
+                const methodAmount = Number(order.payments?.[method] || 0);
+
+                return (
+                  <article className="shift-order-row" key={`${method}-${order.id}`}>
+                    <div className="shift-order-id">
+                      <strong>#{order.id}</strong>
+                      <span className={orderStatusClass(order.status)}>{order.status}</span>
+                    </div>
+                    <div className="shift-order-main">
+                      <p>{(order.items || []).join(', ') || 'Без позиций'}</p>
+                      <span>{order.guestName ? `Гость: ${order.guestName}` : order.type || 'Продажа'}</span>
+                    </div>
+                    <div className="shift-order-payments">
+                      <span className="shift-order-payment-chip">Время · {formatOrderTime(order.createdAt)}</span>
+                    </div>
+                    <b>{currency.format(methodAmount)}</b>
+                  </article>
+                );
+              })}
+            </section>
+          ))}
+        </div>
+      </div>
+      {showShiftExpensesSection && (
+        <div className="data-section expenses-section">
+          <div className="section-row">
+            <div>
+              <h2>Расходы смены</h2>
+              <p>Закупки, логистика и операционные траты</p>
+            </div>
+            <button className="secondary-action" onClick={addExpense}>
+              <Plus size={18} />
+              <span>Расход</span>
+            </button>
+          </div>
+          <div className="expense-list">
+            {expenses.map((expense) => (
+              <div key={expense.id}>
+                <span>{expense.time}</span>
+                <strong>{expense.title}</strong>
+                <small>{expense.category}</small>
+                <b>{currency.format(expense.amount)}</b>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
 
+async function downloadAnalyticsReportPdf({
+  activeOrders,
+  average,
+  paid,
+  paymentFilter = null,
+  paymentTotals,
+  revenue,
+  shift
+}) {
+  const reportDate = new Date().toLocaleString('ru-RU', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+  const reportOrders = paymentFilter
+    ? activeOrders.filter((order) => Number(order.payments?.[paymentFilter] || 0) > 0)
+    : activeOrders;
+  const filteredPaymentTotal = paymentFilter
+    ? reportOrders.reduce((sum, order) => sum + Number(order.payments?.[paymentFilter] || 0), 0)
+    : 0;
+  const reportRevenue = paymentFilter ? filteredPaymentTotal : revenue;
+  const reportPaid = paymentFilter ? filteredPaymentTotal : paid;
+  const reportAverage = Math.round(reportRevenue / Math.max(reportOrders.length, 1));
+  const unpaid = Math.max(0, reportRevenue - reportPaid);
+  const reportShiftLabel = shiftLabel(shift);
+  const filterLabel = paymentFilter ? paymentMethodLabel(paymentFilter) : 'Все способы оплаты';
+  const reportTitle = paymentFilter ? `${reportShiftLabel}: ${filterLabel}` : reportShiftLabel;
+  const summaryRows = [
+    ['Выручка', currency.format(reportRevenue), 'Оплачено', currency.format(reportPaid)],
+    [paymentFilter ? 'Фильтр' : 'Ожидает оплаты', paymentFilter ? filterLabel : currency.format(unpaid), 'Средний чек', currency.format(reportAverage)],
+    ['Заказы', String(reportOrders.length), 'Способ оплаты', filterLabel]
+  ];
+  const paymentRows = (paymentFilter ? [[paymentFilter, filteredPaymentTotal]] : paymentTotals).map(([method, value]) => [
+    paymentMethodLabel(method),
+    currency.format(value)
+  ]);
+  const paymentOrderSections = (paymentFilter ? [paymentFilter] : paymentMethods).flatMap((method) => {
+    const methodOrders = activeOrders.filter((order) => Number(order.payments?.[method] || 0) > 0);
+    const methodTotal = methodOrders.reduce((sum, order) => sum + Number(order.payments?.[method] || 0), 0);
+    const methodTitle = `${paymentMethodLabel(method)} · ${currency.format(methodTotal)}`;
+
+    return [
+      { text: methodTitle, style: 'sectionTitle' },
+      {
+        table: {
+          headerRows: 1,
+          widths: [30, 38, 48, '*', 58],
+          body: [
+            [
+              { text: '№', style: 'tableHeader' },
+              { text: 'Время', style: 'tableHeader' },
+              { text: 'Статус', style: 'tableHeader' },
+              { text: 'Позиции', style: 'tableHeader' },
+              { text: 'Сумма', style: 'tableHeader', alignment: 'right' }
+            ],
+            ...(methodOrders.length
+              ? methodOrders.map((order) => [
+                  `#${order.id}`,
+                  formatOrderTime(order.createdAt),
+                  order.status || '-',
+                  (order.items || []).join(', ') || '-',
+                  {
+                    text: currency.format(Number(order.payments?.[method] || 0)),
+                    alignment: 'right',
+                    noWrap: true
+                  }
+                ])
+              : [[{ text: 'Оплат этим способом нет', colSpan: 5, alignment: 'center' }, {}, {}, {}, {}]])
+          ]
+        },
+        layout: 'lightHorizontalLines'
+      }
+    ];
+  });
+
+  const docDefinition = {
+    pageSize: 'A4',
+    pageMargins: [34, 34, 34, 34],
+    defaultStyle: {
+      font: 'Roboto',
+      fontSize: 8,
+      lineHeight: 1.12
+    },
+    styles: {
+      title: { fontSize: 18, bold: true, margin: [0, 0, 0, 4] },
+      meta: { color: '#64736a', fontSize: 8 },
+      sectionTitle: { fontSize: 11, bold: true, margin: [0, 10, 0, 5] },
+      tableHeader: { bold: true, fillColor: '#edf4ea' }
+    },
+    content: [
+      {
+        columns: [
+          [
+            { text: 'iCashbox POS', style: 'meta' },
+            { text: `Отчёт: ${reportTitle}`, style: 'title' }
+          ],
+          {
+            width: 170,
+            stack: [
+              { text: reportDate, alignment: 'right', bold: true },
+              { text: `Кассир: ${shift.cashier}`, alignment: 'right', style: 'meta' },
+              { text: `Открыта: ${shift.openedAt}`, alignment: 'right', style: 'meta' }
+            ]
+          }
+        ],
+        columnGap: 16,
+        margin: [0, 0, 0, 8]
+      },
+      {
+        canvas: [{ type: 'line', x1: 0, y1: 0, x2: 527, y2: 0, lineWidth: 1.2, lineColor: '#17201b' }],
+        margin: [0, 0, 0, 10]
+      },
+      {
+        table: {
+          widths: ['*', 'auto', '*', 'auto'],
+          body: summaryRows.map((row) => [
+            { text: row[0], color: '#64736a' },
+            { text: row[1], bold: true, alignment: 'right' },
+            { text: row[2], color: '#64736a' },
+            { text: row[3], bold: true, alignment: 'right' }
+          ])
+        },
+        layout: 'lightHorizontalLines'
+      },
+      { text: 'Оплаты', style: 'sectionTitle' },
+      {
+        table: {
+          widths: ['*', 'auto'],
+          body: [
+            [
+              { text: 'Способ', style: 'tableHeader' },
+              { text: 'Сумма', style: 'tableHeader', alignment: 'right' }
+            ],
+            ...paymentRows.map(([method, value]) => [method, { text: value, alignment: 'right', bold: true }])
+          ]
+        },
+        layout: 'lightHorizontalLines'
+      },
+      { text: 'Заказы по способам оплаты', style: 'sectionTitle' },
+      ...paymentOrderSections
+    ]
+  };
+
+  const datePart = shift.shiftKey || new Date().toISOString().slice(0, 10);
+  const loadedPdfMake = await loadPdfMake();
+  loadedPdfMake
+    .createPdf(docDefinition)
+    .download(
+      `icashbox-shift-${normalizeShiftNumber(shift.number).replace('.', '-')}${
+        paymentFilter ? `-${methodSlug(paymentFilter)}` : ''
+      }-${datePart}.pdf`
+    );
+}
+
 function CloudSync({
+  archiveShiftOrders,
+  autoLaunch,
+  canManageLicense,
+  exportConfig,
   exportLocalDatabase,
   importInputRef,
   importLocalDatabase,
-  isOnline,
+  license,
   loadPrinters,
   printSettings,
   printers,
+  resetLicense,
+  selectExportFolder,
   setPrintSettings,
   syncQueue,
-  toggleNetwork
+  toggleAutoLaunch
 }) {
+  const licenseExpiry = formatLicenseExpiry(license?.expiresAt);
   return (
     <section className="cloud-layout">
-      <div className={isOnline ? 'sync-hero online' : 'sync-hero'}>
+      <div className="sync-hero">
         <Smartphone size={34} />
-        <h2>{isOnline ? 'Облачное управление активно' : 'Система работает локально'}</h2>
+        <h2>Локальная база</h2>
         <p>
-          Меню, склад, заказы, смены и роли сохраняются на локальном сервере. При восстановлении связи очередь операций уходит в облако.
+          Меню, склад, заказы, смены и роли сохраняются на этом компьютере. Экспорт базы можно использовать для ручной резервной копии.
         </p>
-        <button className="primary-action" onClick={toggleNetwork}>
-          {isOnline ? <WifiOff size={18} /> : <Wifi size={18} />}
-          <span>{isOnline ? 'Перейти в оффлайн' : 'Включить интернет'}</span>
-        </button>
+        {license && (
+          <div className={`license-badge${licenseExpiry?.expired ? ' expired' : licenseExpiry && licenseExpiry.days <= 14 ? ' soon' : ''}`}>
+            <KeyRound size={18} />
+            <div>
+              <strong>{license.customer || 'Лицензия'}</strong>
+              {licenseExpiry ? (
+                <span>
+                  {licenseExpiry.expired
+                    ? `Лицензия истекла ${licenseExpiry.formatted}`
+                    : `Действует до ${licenseExpiry.formatted} · осталось ${licenseExpiry.days} дн.`}
+                </span>
+              ) : (
+                <span>Лицензия активна</span>
+              )}
+            </div>
+          </div>
+        )}
+        {canManageLicense && (
+          <button className="secondary-action license-reset" type="button" onClick={resetLicense}>
+            <KeyRound size={18} />
+            <span>Сменить ключ лицензии</span>
+          </button>
+        )}
         <div className="backup-actions">
           <button className="secondary-action" onClick={exportLocalDatabase}>
             <Download size={18} />
@@ -1361,8 +3556,32 @@ function CloudSync({
       <div className="data-section">
         <div className="section-row">
           <div>
-            <h2>Журнал синхронизации</h2>
-            <p>Двусторонняя очередь локальных и облачных изменений</p>
+            <h2>Рабочий стол</h2>
+            <p>Автозагрузка и выгрузка отчётов на диск</p>
+          </div>
+          <Power size={22} />
+        </div>
+        <label className="toggle-row">
+          <span>Запускать iCashbox при входе в Windows</span>
+          <input type="checkbox" checked={Boolean(autoLaunch)} onChange={toggleAutoLaunch} />
+        </label>
+        <div className="backup-actions">
+          <button className="secondary-action" onClick={selectExportFolder}>
+            <FolderOpen size={18} />
+            <span>{exportConfig?.directory ? 'Сменить папку отчётов' : 'Папка отчётов'}</span>
+          </button>
+          <button className="secondary-action" onClick={archiveShiftOrders}>
+            <Download size={18} />
+            <span>Сохранить отчёт смены</span>
+          </button>
+        </div>
+        {exportConfig?.directory && <p className="field-hint">Текущая папка: {exportConfig.directory}</p>}
+      </div>
+      <div className="data-section">
+        <div className="section-row">
+          <div>
+            <h2>Журнал действий</h2>
+            <p>Последние локальные операции кассы</p>
           </div>
           <Database size={22} />
         </div>
@@ -1372,9 +3591,11 @@ function CloudSync({
               <RotateCcw size={17} />
               <div>
                 <strong>{item.type}</strong>
-                <span>{item.source} · {item.time}</span>
+                <span>{item.source === 'Облако' ? 'Локально' : item.source} · {item.time}</span>
               </div>
-              <span className={item.status === 'Ожидает' ? 'badge warning' : 'badge'}>{item.status}</span>
+              <span className={item.status === 'Ожидает' ? 'badge warning' : 'badge'}>
+                {item.status === 'Синхронизировано' ? 'Сохранено' : item.status}
+              </span>
             </div>
           ))}
         </div>
@@ -1383,43 +3604,150 @@ function CloudSync({
   );
 }
 
-function Roles({ accounts }) {
+function accountToDraft(account = {}) {
+  return {
+    name: account.name || '',
+    password: account.password || '',
+    role: account.role || 'cashier',
+    username: account.username || ''
+  };
+}
+
+function accountDraftChanged(account, draft) {
+  return (
+    draft.name.trim() !== (account.name || '') ||
+    draft.password.trim() !== (account.password || '') ||
+    draft.role !== (account.role || 'cashier') ||
+    draft.username.trim() !== (account.username || '')
+  );
+}
+
+function Roles({
+  accessRules,
+  accounts,
+  addAccount,
+  canManageAccess,
+  currentUserId,
+  deleteAccount,
+  toggleRoleRight,
+  updateAccount
+}) {
+  const [drafts, setDrafts] = useState(() =>
+    Object.fromEntries(accounts.map((account) => [account.id, accountToDraft(account)]))
+  );
   const rights = [
     { id: 'pos', label: 'Касса' },
     { id: 'orders', label: 'Заказы' },
     { id: 'menu', label: 'Меню' },
     { id: 'inventory', label: 'Склад' },
     { id: 'analytics', label: 'Отчёты' },
-    { id: 'cloud', label: 'Облако' },
+    { id: 'cloud', label: 'База' },
     { id: 'roles', label: 'Роли' }
-  ];
+  ].filter((right) => !hiddenViewIds.has(right.id));
   const roles = [
     { id: 'admin', title: 'Админ', text: 'Полный доступ к кассе, меню, складу, отчётам и настройкам.' },
     { id: 'cashier', title: 'Кассир', text: 'Работа с продажами и заказами.' }
   ];
+
+  useEffect(() => {
+    setDrafts(Object.fromEntries(accounts.map((account) => [account.id, accountToDraft(account)])));
+  }, [accounts]);
+
+  const updateDraft = (account, patch) => {
+    setDrafts((current) => ({
+      ...current,
+      [account.id]: {
+        ...(current[account.id] || accountToDraft(account)),
+        ...patch
+      }
+    }));
+  };
 
   return (
     <section className="data-section">
       <div className="section-row">
         <div>
           <h2>Сотрудники и роли</h2>
-          <p>Два уровня доступа для MVP-версии</p>
+          <p>Администратор меняет сотрудников, PIN и права разделов</p>
         </div>
-        <button className="secondary-action" disabled>
+        <button className="secondary-action" disabled={!canManageAccess} onClick={addAccount}>
           <UserRoundCog size={18} />
-          <span>2 аккаунта</span>
+          <span>Добавить</span>
         </button>
       </div>
       <div className="account-grid">
-        {accounts.map((account) => (
-          <article className="account-card" key={account.id}>
-            <div>
-              <strong>{account.name}</strong>
-              <span>{roleLabels[account.role]}</span>
-            </div>
-            <code>PIN</code>
-          </article>
-        ))}
+        {accounts.map((account) => {
+          const draft = drafts[account.id] || accountToDraft(account);
+          const changed = accountDraftChanged(account, draft);
+          const isCurrentUser = account.id === currentUserId;
+
+          return (
+            <article className="account-card editable-account-card" key={account.id}>
+              <div className="account-card-head">
+                <div>
+                  <strong>{account.name}</strong>
+                  <span>{roleLabels[account.role]}</span>
+                </div>
+                <code>PIN</code>
+              </div>
+              <div className="account-edit-grid">
+                <label>
+                  <span>Имя</span>
+                  <input
+                    disabled={!canManageAccess}
+                    value={draft.name}
+                    onChange={(event) => updateDraft(account, { name: event.target.value })}
+                  />
+                </label>
+                <label>
+                  <span>Логин</span>
+                  <input
+                    disabled={!canManageAccess}
+                    value={draft.username}
+                    onChange={(event) => updateDraft(account, { username: event.target.value })}
+                  />
+                </label>
+                <label>
+                  <span>Роль</span>
+                  <select
+                    disabled={!canManageAccess}
+                    value={draft.role}
+                    onChange={(event) => updateDraft(account, { role: event.target.value })}
+                  >
+                    <option value="admin">Админ</option>
+                    <option value="cashier">Кассир</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Пароль</span>
+                  <input
+                    disabled={!canManageAccess}
+                    value={draft.password}
+                    onChange={(event) => updateDraft(account, { password: event.target.value })}
+                  />
+                </label>
+              </div>
+              <div className="account-actions">
+                <button
+                  className="primary-action"
+                  disabled={!canManageAccess || !changed}
+                  onClick={() => updateAccount(account.id, draft)}
+                >
+                  <Save size={17} />
+                  <span>Сохранить</span>
+                </button>
+                <button
+                  className="secondary-action danger-action"
+                  disabled={!canManageAccess || isCurrentUser}
+                  onClick={() => deleteAccount(account.id)}
+                >
+                  <Trash2 size={17} />
+                  <span>Удалить</span>
+                </button>
+              </div>
+            </article>
+          );
+        })}
       </div>
       <div className="role-grid">
         {roles.map((role) => (
@@ -1429,7 +3757,12 @@ function Roles({ accounts }) {
             <div>
               {rights.map((right) => (
                 <label key={right.id}>
-                  <input type="checkbox" checked={roleAccess[role.id].includes(right.id)} readOnly />
+                  <input
+                    type="checkbox"
+                    checked={right.id === 'roles' ? role.id === 'admin' : (accessRules[role.id] || []).includes(right.id)}
+                    disabled={!canManageAccess || right.id === 'roles'}
+                    onChange={() => toggleRoleRight(role.id, right.id)}
+                  />
                   <span>{right.label}</span>
                 </label>
               ))}
@@ -1512,7 +3845,7 @@ function PrinterSettingsFields({ loadPrinters, printSettings, printers, setPrint
   );
 }
 
-function SettingsModal({ loadPrinters, onClose, printSettings, printers, setPrintSettings }) {
+function SettingsModal({ loadPrinters, onClearMenu, onClose, printSettings, productsCount, printers, setPrintSettings }) {
   return (
     <div className="modal-backdrop">
       <section className="settings-modal" aria-label="Настройки программы">
@@ -1539,6 +3872,19 @@ function SettingsModal({ loadPrinters, onClose, printSettings, printers, setPrin
             printers={printers}
             setPrintSettings={setPrintSettings}
           />
+        </div>
+        <div className="settings-panel danger-settings-panel">
+          <div className="settings-panel-title">
+            <Trash2 size={22} />
+            <div>
+              <h3>Меню</h3>
+              <p>Текущих позиций: {productsCount}</p>
+            </div>
+          </div>
+          <button className="secondary-action danger-action" disabled={!productsCount} onClick={onClearMenu}>
+            <Trash2 size={18} />
+            <span>Удалить меню</span>
+          </button>
         </div>
         <div className="modal-actions">
           <button className="primary-action" onClick={onClose}>
@@ -1600,6 +3946,284 @@ function CopiesModal({ copies, onChange, onClose, onPrint, order }) {
       </section>
     </div>
   );
+}
+
+function AdminPasswordModal({
+  confirmLabel = 'Открыть',
+  description = 'Редактирование заказа требует повторного подтверждения',
+  disabled = false,
+  error,
+  inputKey,
+  onChange,
+  onClose,
+  onConfirm,
+  onUserInput,
+  password,
+  title = 'Пароль администратора'
+}) {
+  const markUserInput = () => {
+    onUserInput?.();
+  };
+
+  const submit = (event) => {
+    event.preventDefault();
+    if (disabled) return;
+    onConfirm();
+  };
+
+  return (
+    <div className="modal-backdrop">
+      <section className="admin-auth-modal" aria-label="Подтверждение администратора">
+        <form className="admin-auth-form" autoComplete="off" onSubmit={submit}>
+          <div className="section-row compact">
+            <div>
+              <h2>{title}</h2>
+              <p>{description}</p>
+            </div>
+            <button className="icon-button" type="button" title="Закрыть" onClick={onClose}>
+              <X size={18} />
+            </button>
+          </div>
+          <label>
+            <span>Пароль</span>
+            <input
+              autoFocus
+              autoComplete="off"
+              key={inputKey || title}
+              name={inputKey || `admin-password-${title}`}
+              onBeforeInput={markUserInput}
+              spellCheck="false"
+              type="password"
+              value={password}
+              onChange={(event) => onChange(event.target.value)}
+              onKeyDown={markUserInput}
+              onPaste={markUserInput}
+              placeholder="Введите пароль"
+            />
+          </label>
+          {error && <div className="login-error">{error}</div>}
+          <div className="modal-actions">
+            <button className="secondary-action" type="button" onClick={onClose}>
+              <X size={18} />
+              <span>Отмена</span>
+            </button>
+            <button className="primary-action" disabled={disabled} type="submit">
+              <ShieldCheck size={18} />
+              <span>{confirmLabel}</span>
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  );
+}
+
+function DangerConfirmModal({
+  confirmLabel = 'Удалить',
+  description,
+  onClose,
+  onConfirm,
+  title
+}) {
+  return (
+    <div className="modal-backdrop">
+      <section className="admin-auth-modal danger-confirm-modal" aria-label={title}>
+        <div className="section-row compact">
+          <div>
+            <h2>{title}</h2>
+            <p>{description}</p>
+          </div>
+          <button className="icon-button" type="button" title="Закрыть" onClick={onClose}>
+            <X size={18} />
+          </button>
+        </div>
+        <div className="modal-actions">
+          <button className="secondary-action" type="button" onClick={onClose}>
+            <X size={18} />
+            <span>Отмена</span>
+          </button>
+          <button className="secondary-action danger-action" type="button" onClick={onConfirm}>
+            <Trash2 size={18} />
+            <span>{confirmLabel}</span>
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function OrderEditModal({ onClose, onSave, order }) {
+  const [draft, setDraft] = useState(() => ({
+    comment: order.comment || '',
+    guestName: order.guestName || '',
+    itemsText: (order.items || []).join('\n'),
+    paid: Boolean(order.paid),
+    payments: { ...blankPayments, ...(order.payments || {}) },
+    status: order.status || 'Принят',
+    table: order.table || 'Касса',
+    total: String(order.total || 0),
+    type: order.type || 'Продажа'
+  }));
+  const statuses = ['Новый', 'Принят', 'Готовится', 'Готов', 'Выдан', 'Оплачен', 'Отменён', 'Возврат'];
+
+  const updatePayment = (method, value) => {
+    setDraft((current) => ({
+      ...current,
+      payments: { ...current.payments, [method]: Number(value) }
+    }));
+  };
+
+  const submit = (event) => {
+    event.preventDefault();
+    const itemLines = draft.itemsText
+      .split(/\r?\n/)
+      .map((item) => item.trim())
+      .filter(Boolean);
+    const total = Math.max(0, Number(draft.total || 0));
+    const payments = Object.fromEntries(paymentMethods.map((method) => [method, Number(draft.payments[method] || 0)]));
+    const paidAmount = Object.values(payments).reduce((sum, value) => sum + Number(value || 0), 0);
+
+    onSave({
+      ...order,
+      cancelled: draft.status === 'Отменён',
+      comment: draft.comment.trim(),
+      editedAt: new Date().toISOString(),
+      guestName: draft.guestName.trim(),
+      items: itemLines,
+      lines: buildEditableOrderLines(itemLines, total),
+      paid: draft.paid || paidAmount >= total || draft.status === 'Оплачен',
+      payments,
+      refunded: draft.status === 'Возврат',
+      status: draft.status,
+      table: draft.table.trim() || 'Касса',
+      total,
+      type: draft.type.trim() || 'Продажа'
+    });
+  };
+
+  return (
+    <div className="modal-backdrop">
+      <section className="order-edit-modal" aria-label="Редактирование заказа">
+        <form className="order-edit-form" onSubmit={submit}>
+          <div className="section-row compact">
+            <div>
+              <h2>Редактирование #{order.id}</h2>
+              <p>Изменения сохраняются в истории и локальном журнале</p>
+            </div>
+            <button className="icon-button" type="button" title="Закрыть" onClick={onClose}>
+              <X size={18} />
+            </button>
+          </div>
+
+          <div className="edit-grid">
+            <label>
+              <span>Тип</span>
+              <input value={draft.type} onChange={(event) => setDraft({ ...draft, type: event.target.value })} />
+            </label>
+            <label>
+              <span>Место</span>
+              <input value={draft.table} onChange={(event) => setDraft({ ...draft, table: event.target.value })} />
+            </label>
+            <label>
+              <span>Статус</span>
+              <select value={draft.status} onChange={(event) => setDraft({ ...draft, status: event.target.value })}>
+                {statuses.map((status) => (
+                  <option key={status} value={status}>
+                    {status}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span>Итого</span>
+              <input
+                type="number"
+                min="0"
+                value={draft.total}
+                onChange={(event) => setDraft({ ...draft, total: event.target.value })}
+              />
+            </label>
+            <label>
+              <span>Имя гостя</span>
+              <input
+                value={draft.guestName}
+                onChange={(event) => setDraft({ ...draft, guestName: event.target.value })}
+              />
+            </label>
+            <label>
+              <span>Оплачен</span>
+              <select
+                value={draft.paid ? 'yes' : 'no'}
+                onChange={(event) => setDraft({ ...draft, paid: event.target.value === 'yes' })}
+              >
+                <option value="yes">Да</option>
+                <option value="no">Нет</option>
+              </select>
+            </label>
+            <label className="wide-field">
+              <span>Позиции</span>
+              <textarea
+                value={draft.itemsText}
+                onChange={(event) => setDraft({ ...draft, itemsText: event.target.value })}
+                rows={4}
+                placeholder="Капучино 250 мл x1"
+              />
+            </label>
+            <label className="wide-field">
+              <span>Комментарий</span>
+              <textarea
+                value={draft.comment}
+                onChange={(event) => setDraft({ ...draft, comment: event.target.value })}
+                rows={3}
+              />
+            </label>
+          </div>
+
+          <div className="payment-edit-grid">
+            {paymentMethods.map((method) => (
+              <label key={method}>
+                <span>{paymentMethodLabel(method)}</span>
+                <input
+                  type="number"
+                  min="0"
+                  value={draft.payments[method] || 0}
+                  onChange={(event) => updatePayment(method, event.target.value)}
+                />
+              </label>
+            ))}
+          </div>
+
+          <div className="modal-actions">
+            <button className="secondary-action" type="button" onClick={onClose}>
+              <X size={18} />
+              <span>Отмена</span>
+            </button>
+            <button className="primary-action" type="submit">
+              <Save size={18} />
+              <span>Сохранить</span>
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  );
+}
+
+function buildEditableOrderLines(items, total) {
+  const fallbackTotal = items.length ? total / items.length : 0;
+  return items.map((item, index) => {
+    const match = String(item).match(/^(.*)\s+x(\d+)$/i);
+    const qty = match ? Math.max(1, Number(match[2])) : 1;
+    const name = match ? match[1].trim() : String(item).trim();
+    const lineTotal = Math.round(fallbackTotal);
+    return {
+      id: `edited-${index}`,
+      name,
+      price: qty ? Math.round(lineTotal / qty) : lineTotal,
+      qty,
+      total: lineTotal
+    };
+  });
 }
 
 function receiptCenter(text, width = 36) {
@@ -1669,7 +4293,7 @@ function buildPrintableReceipt(order, shift, type) {
   });
 
   if (isSticker) {
-    return buildStickerPreview(order, printedAt);
+    return '';
   }
 
   rows.push(receiptColumns('Чек №', order.id || '', width));
@@ -1700,8 +4324,13 @@ function buildPrintableReceipt(order, shift, type) {
   rows.push('');
 
   const paid = Object.entries(order.payments || {}).filter(([, value]) => Number(value) > 0);
+  const paidTotal = paid.reduce((sum, [, value]) => sum + Number(value || 0), 0);
+  const change = Math.max(0, roundPayment(paidTotal - Number(order.total || 0)));
   if (paid.length) {
     paid.forEach(([method, value]) => rows.push(receiptColumns(method, `${receiptMoney.format(value)} TJS`, width)));
+    if (change > 0) {
+      rows.push(receiptColumns('Сдача', `${receiptMoney.format(change)} TJS`, width));
+    }
   } else {
     rows.push(receiptColumns('Оплата', 'Ожидает', width));
   }
@@ -1717,33 +4346,46 @@ function countStickerLabels(order) {
   return printableOrderLines(order).reduce((total, item) => total + Math.max(1, Math.round(Number(item.qty || 1))), 0);
 }
 
-function buildStickerPreview(order, printedAt) {
-  const width = 38;
-  const pages = [];
+function formatGuestName(name) {
+  const cleanName = String(name || '').trim();
+  return cleanName || 'Дорогой гость';
+}
+
+function buildStickerLabels(order) {
+  const labels = [];
+  const guestLabel = formatGuestName(order.guestName);
+  let labelIndex = 0;
 
   for (const item of printableOrderLines(order)) {
     const qty = Math.max(1, Math.round(Number(item.qty || 1)));
     for (let index = 1; index <= qty; index += 1) {
-      const rows = [];
-      rows.push(receiptColumns(`Заказ #${order.id || ''}`, printedAt.slice(-5), width));
-      rows.push(receiptRule(width));
-      receiptWrap(String(item.name || '').toUpperCase(), width).forEach((row) => rows.push(receiptCenter(row, width)));
-      if (qty > 1) rows.push(receiptCenter(`${index}/${qty}`, width));
-      if (order.comment) {
-        rows.push(receiptRule(width));
-        receiptWrap(order.comment, width).forEach((row) => rows.push(row));
-      }
-      rows.push(receiptRule(width));
-      pages.push(rows.join('\n'));
+      labels.push({
+        id: `${order.id || 'order'}-${labelIndex}`,
+        guestName: guestLabel,
+        wish:
+          order.stickerWishes?.[labelIndex] ||
+          order.stickerWish ||
+          stickerWishForSeed(`${order.id || 'order'}-${labelIndex}`)
+      });
+      labelIndex += 1;
     }
   }
 
-  return pages.join('\n\n');
+  if (!labels.length) {
+    labels.push({
+      id: `${order.id || 'order'}-empty`,
+      guestName: guestLabel,
+      wish: order.stickerWish || stickerWishForSeed(`${order.id || 'order'}-empty`)
+    });
+  }
+
+  return labels;
 }
 
 function PrintModal({ order, onClose, onPrint, shift, type }) {
   const isSticker = type === 'sticker';
-  const receiptText = buildPrintableReceipt(order, shift, type);
+  const stickerLabels = isSticker ? buildStickerLabels(order) : [];
+  const receiptText = isSticker ? '' : buildPrintableReceipt(order, shift, type);
 
   return (
     <div className="modal-backdrop">
@@ -1751,19 +4393,39 @@ function PrintModal({ order, onClose, onPrint, shift, type }) {
         className={isSticker ? 'receipt-modal sticker-print' : 'receipt-modal'}
         aria-label="Печать заказа"
       >
-        <div className="section-row compact">
+        <div className={isSticker ? 'section-row compact no-print' : 'section-row compact'}>
           <div>
-            <h2>{isSticker ? 'Самоклейка' : 'Чек'} #{order.id}</h2>
-            <p>{isSticker ? 'Комментарий' : 'iCashbox Cafe'} · смена #{shift.number}</p>
+            <h2>{isSticker ? `Стикеры: ${stickerLabels.length}` : `Чек #${order.id}`}</h2>
+            <p>
+              {isSticker
+                ? `${formatGuestName(order.guestName)} · ${STICKER_WISH_BANK_SIZE} пожеланий`
+                : `iCashbox Cafe · ${shiftLabel(shift)}`}
+            </p>
           </div>
           <button className="icon-button no-print" title="Закрыть" onClick={onClose}>
             <X size={18} />
           </button>
         </div>
-        {!isSticker && <img className="receipt-logo" src={receiptLogoUrl} alt="" />}
-        <div className="receipt-body">
-          <pre className="receipt-text">{receiptText}</pre>
-        </div>
+        {isSticker ? (
+          <div className="sticker-labels">
+            {stickerLabels.map((label) => (
+              <article className="sticker-label-preview" key={label.id}>
+                <img className="sticker-label-logo" src={receiptLogoUrl} alt="" />
+                <div className="sticker-label-copy">
+                  <strong>{label.guestName}</strong>
+                  <p>{label.wish}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <>
+            <img className="receipt-logo" src={receiptLogoUrl} alt="" />
+            <div className="receipt-body">
+              <pre className="receipt-text">{receiptText}</pre>
+            </div>
+          </>
+        )}
         <div className="modal-actions no-print">
           <button className="secondary-action" onClick={() => onPrint(order, type)}>
             <Printer size={18} />
@@ -1801,7 +4463,7 @@ function pageTitle(view) {
     orders: 'История заказов',
     inventory: 'Склад и техкарты',
     analytics: 'Аналитика и смены',
-    cloud: 'Синхронизация',
+    cloud: 'Локальная база',
     roles: 'Доступы'
   }[view];
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40,
-    "checks": 12,
+    "average": 41.53846153846154,
+    "checks": 13,
     "expenseTotal": 205,
-    "net": 275,
-    "revenue": 480
+    "net": 335,
+    "revenue": 540
   },
   "data": {
-    "actions": 5903,
+    "actions": 5905,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2682,
+    "orders": 2683,
     "products": 60,
     "shifts": 63
   },
   "activity": [
     {
+      "id": 1784858268748,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:57",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784858268748,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:57",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784857556963,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784852002090,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:13",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784852002090,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:13",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2682,
+    "current": 2683,
     "old": [
       {
         "createdAt": "2026-07-23T10:25:28.527Z",
@@ -87793,6 +87793,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-24T02:06:50.240Z",
+        "id": 3730,
+        "items": [
+          "ПиноКолада big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 60,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-24",
+        "shiftLabel": "Смена 24.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-24T01:57:48.646Z",
         "id": 3729,
@@ -175788,14 +175817,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 12,
-        "expectedOrders": 12,
+        "databaseOrders": 13,
+        "expectedOrders": 13,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-24",
         "label": "Смена 24.07",
         "missingOrders": 0,
-        "revenue": 480,
+        "revenue": 540,
         "status": "ok"
       },
       {
@@ -176618,7 +176647,7 @@
         "status": "ok"
       }
     ],
-    "total": 2682
+    "total": 2683
   },
   "payments": [
     {
@@ -176631,7 +176660,7 @@
     },
     {
       "method": "Alif",
-      "total": 97
+      "total": 157
     },
     {
       "method": "Dushanbe City",
@@ -176643,6 +176672,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3730,
+      "items": [
+        "ПиноКолада big x2"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3729,
       "items": [
@@ -176699,14 +176736,6 @@
       ],
       "status": "Оплачен",
       "total": 35
-    },
-    {
-      "id": 3722,
-      "items": [
-        "Манго Маракуя big x3"
-      ],
-      "status": "Оплачен",
-      "total": 78
     }
   ],
   "shifts": {
@@ -176847,6 +176876,11 @@
       "total": 104
     },
     {
+      "name": "ПиноКолада big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Babl tea mini",
       "qty": 3,
       "total": 60
@@ -176875,13 +176909,8 @@
       "name": "Капучино",
       "qty": 1,
       "total": 25
-    },
-    {
-      "name": "Черника mini",
-      "qty": 1,
-      "total": 25
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-24T09:00:53.853Z"
+  "updatedAt": "2026-07-24T09:09:55.255Z"
 }

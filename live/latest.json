@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.395348837209305,
-    "checks": 43,
+    "average": 37.56818181818182,
+    "checks": 44,
     "expenseTotal": 205,
-    "net": 1403,
-    "revenue": 1608
+    "net": 1448,
+    "revenue": 1653
   },
   "data": {
-    "actions": 5965,
+    "actions": 5967,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2713,
+    "orders": 2714,
     "products": 60,
     "shifts": 63
   },
   "activity": [
     {
+      "id": 1784880352690,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:05",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784880352690,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:05",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784879462714,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:40",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784875136147,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:38",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784875136147,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:38",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2713,
+    "current": 2714,
     "old": [
       {
         "createdAt": "2026-07-23T10:25:28.527Z",
@@ -87793,6 +87793,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-24T09:10:32.363Z",
+        "id": 3761,
+        "items": [
+          "Черника mini x1",
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-24",
+        "shiftLabel": "Смена 24.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-07-24T08:05:52.552Z",
         "id": 3760,
@@ -176777,14 +176815,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 43,
-        "expectedOrders": 43,
+        "databaseOrders": 44,
+        "expectedOrders": 44,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-24",
         "label": "Смена 24.07",
         "missingOrders": 0,
-        "revenue": 1608,
+        "revenue": 1653,
         "status": "ok"
       },
       {
@@ -177607,12 +177645,12 @@
         "status": "ok"
       }
     ],
-    "total": 2713
+    "total": 2714
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1118
+      "total": 1163
     },
     {
       "method": "Карта",
@@ -177632,6 +177670,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3761,
+      "items": [
+        "Черника mini x1",
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 3760,
       "items": [
@@ -177689,15 +177736,6 @@
       "items": [
         "Клубничный жасмин mini x1",
         "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
-    },
-    {
-      "id": 3753,
-      "items": [
-        "Blue mini x1",
-        "Babl tea mini x1"
       ],
       "status": "Оплачен",
       "total": 40
@@ -177842,8 +177880,8 @@
     },
     {
       "name": "Черника mini",
-      "qty": 6,
-      "total": 150
+      "qty": 7,
+      "total": 175
     },
     {
       "name": "АйсМатча клубника",
@@ -177867,8 +177905,8 @@
     },
     {
       "name": "Blue mini",
-      "qty": 3,
-      "total": 60
+      "qty": 4,
+      "total": 80
     },
     {
       "name": "Мороженое Орео",
@@ -177877,5 +177915,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-24T15:08:57.577Z"
+  "updatedAt": "2026-07-24T16:13:37.194Z"
 }

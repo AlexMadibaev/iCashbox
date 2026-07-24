@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 51.25,
-    "checks": 4,
+    "average": 56.6,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": 0,
-    "revenue": 205
+    "net": 78,
+    "revenue": 283
   },
   "data": {
-    "actions": 5887,
+    "actions": 5889,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2674,
+    "orders": 2675,
     "products": 60,
     "shifts": 63
   },
   "activity": [
+    {
+      "id": 1784851829019,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:10",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784851829019,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:10",
+      "type": "Создание заказа"
+    },
     {
       "id": 1784851719289,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:22",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784802159338,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784801885616,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:18",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2674,
+    "current": 2675,
     "old": [
       {
         "createdAt": "2026-07-23T10:25:28.527Z",
@@ -87793,6 +87793,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-24T00:11:00.286Z",
+        "id": 3722,
+        "items": [
+          "Манго Маракуя big x3"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 3,
+            "size": "",
+            "total": 78
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-24",
+        "shiftLabel": "Смена 24.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 78
+      },
       {
         "createdAt": "2026-07-24T00:10:28.887Z",
         "id": 3721,
@@ -175547,14 +175576,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-24",
         "label": "Смена 24.07",
         "missingOrders": 0,
-        "revenue": 205,
+        "revenue": 283,
         "status": "ok"
       },
       {
@@ -176377,12 +176406,12 @@
         "status": "ok"
       }
     ],
-    "total": 2674
+    "total": 2675
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 205
+      "total": 283
     },
     {
       "method": "Карта",
@@ -176402,6 +176431,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3722,
+      "items": [
+        "Манго Маракуя big x3"
+      ],
+      "status": "Оплачен",
+      "total": 78
+    },
     {
       "id": 3721,
       "items": [
@@ -176572,6 +176609,11 @@
   },
   "topProducts": [
     {
+      "name": "Манго Маракуя big",
+      "qty": 3,
+      "total": 78
+    },
+    {
       "name": "Babl tea mini",
       "qty": 2,
       "total": 40
@@ -176605,13 +176647,8 @@
       "name": "Мороженое Орео",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Жасмин гранат mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-24T07:13:32.286Z"
+  "updatedAt": "2026-07-24T07:14:03.764Z"
 }

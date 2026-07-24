@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.56818181818182,
-    "checks": 44,
+    "average": 37.733333333333334,
+    "checks": 45,
     "expenseTotal": 205,
-    "net": 1448,
-    "revenue": 1653
+    "net": 1493,
+    "revenue": 1698
   },
   "data": {
-    "actions": 5967,
+    "actions": 5969,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2714,
+    "orders": 2715,
     "products": 60,
     "shifts": 63
   },
   "activity": [
     {
+      "id": 1784884232479,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:10",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784884232479,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:10",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784880352690,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784875213309,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:40",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784875213309,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:40",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2714,
+    "current": 2715,
     "old": [
       {
         "createdAt": "2026-07-23T10:25:28.527Z",
@@ -87793,6 +87793,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-24T09:24:12.026Z",
+        "id": 3762,
+        "items": [
+          "Мороженое рожок x1",
+          "АйсМатча манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          },
+          {
+            "id": "product-айсматча-манго",
+            "name": "АйсМатча манго",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-24",
+        "shiftLabel": "Смена 24.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-07-24T09:10:32.363Z",
         "id": 3761,
@@ -176815,14 +176853,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 44,
-        "expectedOrders": 44,
+        "databaseOrders": 45,
+        "expectedOrders": 45,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-24",
         "label": "Смена 24.07",
         "missingOrders": 0,
-        "revenue": 1653,
+        "revenue": 1698,
         "status": "ok"
       },
       {
@@ -177645,12 +177683,12 @@
         "status": "ok"
       }
     ],
-    "total": 2714
+    "total": 2715
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1163
+      "total": 1208
     },
     {
       "method": "Карта",
@@ -177670,6 +177708,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3762,
+      "items": [
+        "Мороженое рожок x1",
+        "АйсМатча манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 3761,
       "items": [
@@ -177730,15 +177777,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3754,
-      "items": [
-        "Клубничный жасмин mini x1",
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -177889,14 +177927,14 @@
       "total": 140
     },
     {
-      "name": "Манго Маракуя big",
-      "qty": 5,
+      "name": "Мороженое рожок",
+      "qty": 13,
       "total": 130
     },
     {
-      "name": "Мороженое рожок",
-      "qty": 12,
-      "total": 120
+      "name": "Манго Маракуя big",
+      "qty": 5,
+      "total": 130
     },
     {
       "name": "Клубника mini",
@@ -177915,5 +177953,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-24T16:13:37.194Z"
+  "updatedAt": "2026-07-24T16:27:17.149Z"
 }

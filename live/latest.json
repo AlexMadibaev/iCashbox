@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.1578947368421,
-    "checks": 19,
+    "average": 38.25,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 520,
-    "revenue": 725
+    "net": 560,
+    "revenue": 765
   },
   "data": {
-    "actions": 5917,
+    "actions": 5919,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2689,
+    "orders": 2690,
     "products": 60,
     "shifts": 63
   },
   "activity": [
     {
+      "id": 1784864761965,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:46",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784864761965,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:46",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784864114191,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:19",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784858810371,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:06",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784858810371,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:06",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2689,
+    "current": 2690,
     "old": [
       {
         "createdAt": "2026-07-23T10:25:28.527Z",
@@ -87793,6 +87793,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-24T03:48:15.782Z",
+        "id": 3737,
+        "items": [
+          "Мороженое рожок x4"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 4,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-24",
+        "shiftLabel": "Смена 24.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-24T03:46:01.840Z",
         "id": 3736,
@@ -176009,14 +176038,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-24",
         "label": "Смена 24.07",
         "missingOrders": 0,
-        "revenue": 725,
+        "revenue": 765,
         "status": "ok"
       },
       {
@@ -176839,12 +176868,12 @@
         "status": "ok"
       }
     ],
-    "total": 2689
+    "total": 2690
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 430
+      "total": 470
     },
     {
       "method": "Карта",
@@ -176864,6 +176893,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3737,
+      "items": [
+        "Мороженое рожок x4"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3736,
       "items": [
@@ -176921,15 +176958,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 3729,
-      "items": [
-        "Клубника big x1",
-        "Манго Маракуя big x1"
-      ],
-      "status": "Оплачен",
-      "total": 52
     }
   ],
   "shifts": {
@@ -177070,6 +177098,11 @@
       "total": 104
     },
     {
+      "name": "Мороженое рожок",
+      "qty": 9,
+      "total": 90
+    },
+    {
       "name": "ПиноКолада big",
       "qty": 2,
       "total": 60
@@ -177083,11 +177116,6 @@
       "name": "МангоБанан big",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 5,
-      "total": 50
     },
     {
       "name": "Черника mini",
@@ -177106,5 +177134,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-24T10:49:07.014Z"
+  "updatedAt": "2026-07-24T10:51:19.395Z"
 }

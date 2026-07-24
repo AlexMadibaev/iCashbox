@@ -12,8 +12,8 @@
     "preview": "vite preview --host 127.0.0.1",
     "print-agent": "node print-agent/server.js",
     "desktop": "npm run build:desktop && electron .",
-    "dist:win": "npm run build:desktop && electron-builder --win portable",
-    "dist:mac": "npm run build:desktop && electron-builder --mac"
+    "dist:win": "npm run build:desktop && electron-builder --win portable --publish never",
+    "dist:mac": "npm run build:desktop && electron-builder --mac --publish never"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",

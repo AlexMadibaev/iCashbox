@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 45.611111111111114,
-    "checks": 36,
+    "average": 45.45945945945946,
+    "checks": 37,
     "expenseTotal": 205,
-    "net": 1437,
-    "revenue": 1642
+    "net": 1477,
+    "revenue": 1682
   },
   "data": {
-    "actions": 6070,
+    "actions": 6072,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2765,
+    "orders": 2766,
     "products": 60,
     "shifts": 64
   },
   "activity": [
     {
+      "id": 1784969705950,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:55",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784969705950,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:55",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784968964979,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784964708394,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:31",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784964708394,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:31",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2765,
+    "current": 2766,
     "old": [
       {
         "createdAt": "2026-07-24T10:47:03.217Z",
@@ -89693,6 +89693,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-25T08:58:18.350Z",
+        "id": 3813,
+        "items": [
+          "Babl tea mini x1",
+          "Жасмин гранат mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-гранат-mini",
+            "name": "Жасмин гранат mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 40,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-25",
+        "shiftLabel": "Смена 25.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-25T08:55:05.843Z",
         "id": 3812,
@@ -180419,14 +180457,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 36,
-        "expectedOrders": 36,
+        "databaseOrders": 37,
+        "expectedOrders": 37,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-25",
         "label": "Смена 25.07",
         "missingOrders": 0,
-        "revenue": 1642,
+        "revenue": 1682,
         "status": "ok"
       },
       {
@@ -181262,7 +181300,7 @@
         "status": "ok"
       }
     ],
-    "total": 2765
+    "total": 2766
   },
   "payments": [
     {
@@ -181279,7 +181317,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 70
+      "total": 110
     },
     {
       "method": "Семья",
@@ -181287,6 +181325,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3813,
+      "items": [
+        "Babl tea mini x1",
+        "Жасмин гранат mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3812,
       "items": [
@@ -181345,15 +181392,6 @@
       ],
       "status": "Оплачен",
       "total": 115
-    },
-    {
-      "id": 3805,
-      "items": [
-        "Манго Маракуя big x1",
-        "МангоБанан big x1"
-      ],
-      "status": "Оплачен",
-      "total": 56
     }
   ],
   "shifts": {
@@ -181494,13 +181532,13 @@
       "total": 175
     },
     {
-      "name": "Мороженое рожок",
-      "qty": 14,
-      "total": 140
+      "name": "Babl tea mini",
+      "qty": 8,
+      "total": 160
     },
     {
-      "name": "Babl tea mini",
-      "qty": 7,
+      "name": "Мороженое рожок",
+      "qty": 14,
       "total": 140
     },
     {
@@ -181530,5 +181568,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-25T15:58:12.938Z"
+  "updatedAt": "2026-07-25T16:01:23.975Z"
 }

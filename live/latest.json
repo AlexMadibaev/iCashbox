@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.142857142857146,
-    "checks": 7,
+    "average": 48.625,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": 62,
-    "revenue": 267
+    "net": 184,
+    "revenue": 389
   },
   "data": {
-    "actions": 6012,
+    "actions": 6014,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2736,
+    "orders": 2737,
     "products": 60,
     "shifts": 64
   },
   "activity": [
     {
+      "id": 1784948429381,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784948429381,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:00",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784947543914,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:30",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784931510538,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:18",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784931510538,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:18",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2736,
+    "current": 2737,
     "old": [
       {
         "createdAt": "2026-07-24T10:47:03.217Z",
@@ -89693,6 +89693,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-25T03:08:22.667Z",
+        "id": 3784,
+        "items": [
+          "Babl tea big x1",
+          "Matcha big x1",
+          "Blue big x1",
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-blue-big",
+            "name": "Blue big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 122,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-25",
+        "shiftLabel": "Смена 25.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 122
+      },
       {
         "createdAt": "2026-07-25T03:00:29.275Z",
         "id": 3783,
@@ -179425,14 +179481,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-25",
         "label": "Смена 25.07",
         "missingOrders": 0,
-        "revenue": 267,
+        "revenue": 389,
         "status": "ok"
       },
       {
@@ -180268,7 +180324,7 @@
         "status": "ok"
       }
     ],
-    "total": 2736
+    "total": 2737
   },
   "payments": [
     {
@@ -180281,7 +180337,7 @@
     },
     {
       "method": "Alif",
-      "total": 55
+      "total": 177
     },
     {
       "method": "Dushanbe City",
@@ -180293,6 +180349,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3784,
+      "items": [
+        "Babl tea big x1",
+        "Matcha big x1",
+        "Blue big x1",
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 122
+    },
     {
       "id": 3783,
       "items": [
@@ -180487,8 +180554,8 @@
   "topProducts": [
     {
       "name": "Babl tea big",
-      "qty": 2,
-      "total": 52
+      "qty": 3,
+      "total": 78
     },
     {
       "name": "Жасмин лимон big",
@@ -180496,9 +180563,19 @@
       "total": 52
     },
     {
+      "name": "Matcha big",
+      "qty": 1,
+      "total": 40
+    },
+    {
       "name": "АйсМатча черника",
       "qty": 1,
       "total": 35
+    },
+    {
+      "name": "Айс Латте",
+      "qty": 1,
+      "total": 30
     },
     {
       "name": "Айс Американо",
@@ -180506,26 +180583,16 @@
       "total": 28
     },
     {
+      "name": "Blue big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 2,
-      "total": 20
-    },
-    {
-      "name": "Мороженое классическое",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Манго mini",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-25T10:03:36.736Z"
+  "updatedAt": "2026-07-25T10:11:30.268Z"
 }

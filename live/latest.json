@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.172413793103445,
-    "checks": 29,
+    "average": 45.56666666666667,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 1047,
-    "revenue": 1252
+    "net": 1162,
+    "revenue": 1367
   },
   "data": {
-    "actions": 6056,
+    "actions": 6058,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2758,
+    "orders": 2759,
     "products": 60,
     "shifts": 64
   },
   "activity": [
     {
+      "id": 1784964101876,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:21",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784964101876,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:21",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784963856778,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:32",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784960910683,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:28",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784960910683,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:28",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2758,
+    "current": 2759,
     "old": [
       {
         "createdAt": "2026-07-24T10:47:03.217Z",
@@ -89693,6 +89693,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-25T07:31:48.257Z",
+        "id": 3806,
+        "items": [
+          "Matcha big x2",
+          "АйсМатча черника x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 2,
+            "size": "",
+            "total": 80
+          },
+          {
+            "id": "product-айсматча-черника",
+            "name": "АйсМатча черника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 200,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-25",
+        "shiftLabel": "Смена 25.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 115
+      },
       {
         "createdAt": "2026-07-25T07:21:41.745Z",
         "id": 3805,
@@ -180189,14 +180227,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-25",
         "label": "Смена 25.07",
         "missingOrders": 0,
-        "revenue": 1252,
+        "revenue": 1367,
         "status": "ok"
       },
       {
@@ -181032,12 +181070,12 @@
         "status": "ok"
       }
     ],
-    "total": 2758
+    "total": 2759
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 755
+      "total": 870
     },
     {
       "method": "Карта",
@@ -181057,6 +181095,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3806,
+      "items": [
+        "Matcha big x2",
+        "АйсМатча черника x1"
+      ],
+      "status": "Оплачен",
+      "total": 115
+    },
     {
       "id": 3805,
       "items": [
@@ -181115,17 +181162,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 3798,
-      "items": [
-        "Babl tea mini x1",
-        "Matcha mini x1",
-        "Клубничный mini x1",
-        "Жасмин лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 95
     }
   ],
   "shifts": {
@@ -181261,6 +181297,11 @@
   },
   "topProducts": [
     {
+      "name": "Matcha big",
+      "qty": 3,
+      "total": 120
+    },
+    {
       "name": "Babl tea mini",
       "qty": 6,
       "total": 120
@@ -181281,6 +181322,11 @@
       "total": 78
     },
     {
+      "name": "АйсМатча черника",
+      "qty": 2,
+      "total": 70
+    },
+    {
       "name": "АйсМатча клубника",
       "qty": 2,
       "total": 70
@@ -181289,18 +181335,8 @@
       "name": "Мороженое Орео",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 2,
-      "total": 60
-    },
-    {
-      "name": "Мороженое клубничное",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-25T14:24:47.468Z"
+  "updatedAt": "2026-07-25T14:34:55.766Z"
 }

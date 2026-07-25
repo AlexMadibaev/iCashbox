@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 45.292682926829265,
-    "checks": 41,
+    "average": 45.166666666666664,
+    "checks": 42,
     "expenseTotal": 205,
-    "net": 1652,
-    "revenue": 1857
+    "net": 1692,
+    "revenue": 1897
   },
   "data": {
-    "actions": 6080,
+    "actions": 6082,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2770,
+    "orders": 2771,
     "products": 60,
     "shifts": 64
   },
   "activity": [
     {
+      "id": 1784970445636,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:07",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784970445636,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:07",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784970294304,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:55",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784968964979,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:42",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784968964979,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:42",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2770,
+    "current": 2771,
     "old": [
       {
         "createdAt": "2026-07-24T10:47:03.217Z",
@@ -89693,6 +89693,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-25T09:14:01.623Z",
+        "id": 3818,
+        "items": [
+          "Мороженое с чёрным сахаром x1",
+          "Мороженое клубничное x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-чёрным-сахаром",
+            "name": "Мороженое с чёрным сахаром",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-25",
+        "shiftLabel": "Смена 25.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-25T09:07:25.528Z",
         "id": 3817,
@@ -180600,14 +180638,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 41,
-        "expectedOrders": 41,
+        "databaseOrders": 42,
+        "expectedOrders": 42,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-25",
         "label": "Смена 25.07",
         "missingOrders": 0,
-        "revenue": 1857,
+        "revenue": 1897,
         "status": "ok"
       },
       {
@@ -181443,12 +181481,12 @@
         "status": "ok"
       }
     ],
-    "total": 2770
+    "total": 2771
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1145
+      "total": 1185
     },
     {
       "method": "Карта",
@@ -181468,6 +181506,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3818,
+      "items": [
+        "Мороженое с чёрным сахаром x1",
+        "Мороженое клубничное x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3817,
       "items": [
@@ -181525,14 +181572,6 @@
       "id": 3811,
       "items": [
         "Мороженое клубничное x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 3810,
-      "items": [
-        "Мороженое рожок x2"
       ],
       "status": "Оплачен",
       "total": 20
@@ -181681,14 +181720,14 @@
       "total": 160
     },
     {
-      "name": "Мороженое рожок",
-      "qty": 14,
+      "name": "Мороженое клубничное",
+      "qty": 7,
       "total": 140
     },
     {
-      "name": "Мороженое клубничное",
-      "qty": 6,
-      "total": 120
+      "name": "Мороженое рожок",
+      "qty": 14,
+      "total": 140
     },
     {
       "name": "Matcha big",
@@ -181712,5 +181751,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-25T16:10:31.167Z"
+  "updatedAt": "2026-07-25T16:17:08.650Z"
 }

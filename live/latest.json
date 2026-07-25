@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.92307692307692,
-    "checks": 26,
+    "average": 43.333333333333336,
+    "checks": 27,
     "expenseTotal": 205,
-    "net": 885,
-    "revenue": 1090
+    "net": 965,
+    "revenue": 1170
   },
   "data": {
-    "actions": 6050,
+    "actions": 6052,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2755,
+    "orders": 2756,
     "products": 60,
     "shifts": 64
   },
   "activity": [
     {
+      "id": 1784962600090,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:56",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784962600090,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:56",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784961475618,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:07",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784956383941,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:13",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784956383941,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:13",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2755,
+    "current": 2756,
     "old": [
       {
         "createdAt": "2026-07-24T10:47:03.217Z",
@@ -89693,6 +89693,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-25T07:02:05.096Z",
+        "id": 3803,
+        "items": [
+          "Babl tea mini x1",
+          "АйсМатча клубника x1",
+          "ПиноКолада mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 80,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-25",
+        "shiftLabel": "Смена 25.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 80
+      },
       {
         "createdAt": "2026-07-25T06:56:39.972Z",
         "id": 3802,
@@ -180075,14 +180122,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 26,
-        "expectedOrders": 26,
+        "databaseOrders": 27,
+        "expectedOrders": 27,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-25",
         "label": "Смена 25.07",
         "missingOrders": 0,
-        "revenue": 1090,
+        "revenue": 1170,
         "status": "ok"
       },
       {
@@ -180918,7 +180965,7 @@
         "status": "ok"
       }
     ],
-    "total": 2755
+    "total": 2756
   },
   "payments": [
     {
@@ -180931,7 +180978,7 @@
     },
     {
       "method": "Alif",
-      "total": 287
+      "total": 367
     },
     {
       "method": "Dushanbe City",
@@ -180943,6 +180990,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3803,
+      "items": [
+        "Babl tea mini x1",
+        "АйсМатча клубника x1",
+        "ПиноКолада mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 80
+    },
     {
       "id": 3802,
       "items": [
@@ -181001,14 +181058,6 @@
       ],
       "status": "Оплачен",
       "total": 35
-    },
-    {
-      "id": 3795,
-      "items": [
-        "Мороженое Орео x3"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -181144,19 +181193,24 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea mini",
+      "qty": 6,
+      "total": 120
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 12,
       "total": 120
     },
     {
-      "name": "Babl tea mini",
-      "qty": 5,
-      "total": 100
-    },
-    {
       "name": "Babl tea big",
       "qty": 3,
       "total": 78
+    },
+    {
+      "name": "АйсМатча клубника",
+      "qty": 2,
+      "total": 70
     },
     {
       "name": "МангоБанан big",
@@ -181177,13 +181231,8 @@
       "name": "Мороженое клубничное",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Жасмин лимон big",
-      "qty": 2,
-      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-25T13:59:47.556Z"
+  "updatedAt": "2026-07-25T14:05:12.187Z"
 }

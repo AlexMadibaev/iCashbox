@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 45.266666666666666,
-    "checks": 45,
+    "average": 45.80434782608695,
+    "checks": 46,
     "expenseTotal": 205,
-    "net": 1832,
-    "revenue": 2037
+    "net": 1902,
+    "revenue": 2107
   },
   "data": {
-    "actions": 6088,
+    "actions": 6090,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2774,
+    "orders": 2775,
     "products": 60,
     "shifts": 64
   },
   "activity": [
     {
+      "id": 1784971138573,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784971138573,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:18",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784970994680,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:04",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784970160477,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:02",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784970160477,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:02",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2774,
+    "current": 2775,
     "old": [
       {
         "createdAt": "2026-07-24T10:47:03.217Z",
@@ -89693,6 +89693,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-25T09:25:32.210Z",
+        "id": 3822,
+        "items": [
+          "Черника mini x1",
+          "Жасмин гранат mini x1",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-жасмин-гранат-mini",
+            "name": "Жасмин гранат mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 70,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-25",
+        "shiftLabel": "Смена 25.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-07-25T09:18:58.446Z",
         "id": 3821,
@@ -180752,14 +180799,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 45,
-        "expectedOrders": 45,
+        "databaseOrders": 46,
+        "expectedOrders": 46,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-25",
         "label": "Смена 25.07",
         "missingOrders": 0,
-        "revenue": 2037,
+        "revenue": 2107,
         "status": "ok"
       },
       {
@@ -181595,7 +181642,7 @@
         "status": "ok"
       }
     ],
-    "total": 2774
+    "total": 2775
   },
   "payments": [
     {
@@ -181612,7 +181659,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 110
+      "total": 180
     },
     {
       "method": "Семья",
@@ -181620,6 +181667,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3822,
+      "items": [
+        "Черника mini x1",
+        "Жасмин гранат mini x1",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 3821,
       "items": [
@@ -181681,15 +181738,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3814,
-      "items": [
-        "Клубничный mini x1",
-        "Черника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -181850,6 +181898,11 @@
       "total": 120
     },
     {
+      "name": "Клубничный mini",
+      "qty": 4,
+      "total": 100
+    },
+    {
       "name": "Мороженое Орео",
       "qty": 5,
       "total": 100
@@ -181858,13 +181911,8 @@
       "name": "ПиноКолада big",
       "qty": 3,
       "total": 90
-    },
-    {
-      "name": "МангоБанан big",
-      "qty": 3,
-      "total": 90
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-25T16:22:04.025Z"
+  "updatedAt": "2026-07-25T16:28:39.617Z"
 }

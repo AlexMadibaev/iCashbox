@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.333333333333336,
-    "checks": 15,
+    "average": 43.125,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 445,
-    "revenue": 650
+    "net": 485,
+    "revenue": 690
   },
   "data": {
-    "actions": 6028,
+    "actions": 6030,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2744,
+    "orders": 2745,
     "products": 60,
     "shifts": 64
   },
   "activity": [
     {
+      "id": 1784953503553,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:25",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1784953503553,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:25",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1784952668874,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:33",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784950330745,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:32",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784950330745,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:32",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2744,
+    "current": 2745,
     "old": [
       {
         "createdAt": "2026-07-24T10:47:03.217Z",
@@ -89693,6 +89693,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-25T04:25:40.081Z",
+        "id": 3792,
+        "items": [
+          "Мороженое рожок x4"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 4,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-25",
+        "shiftLabel": "Смена 25.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-25T04:25:03.445Z",
         "id": 3791,
@@ -179729,14 +179758,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-25",
         "label": "Смена 25.07",
         "missingOrders": 0,
-        "revenue": 650,
+        "revenue": 690,
         "status": "ok"
       },
       {
@@ -180572,12 +180601,12 @@
         "status": "ok"
       }
     ],
-    "total": 2744
+    "total": 2745
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 353
+      "total": 393
     },
     {
       "method": "Карта",
@@ -180597,6 +180626,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3792,
+      "items": [
+        "Мороженое рожок x4"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3791,
       "items": [
@@ -180657,17 +180694,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3784,
-      "items": [
-        "Babl tea big x1",
-        "Matcha big x1",
-        "Blue big x1",
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 122
     }
   ],
   "shifts": {
@@ -180803,6 +180829,11 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое рожок",
+      "qty": 8,
+      "total": 80
+    },
+    {
       "name": "Babl tea big",
       "qty": 3,
       "total": 78
@@ -180828,11 +180859,6 @@
       "total": 52
     },
     {
-      "name": "Мороженое рожок",
-      "qty": 4,
-      "total": 40
-    },
-    {
       "name": "Манго mini",
       "qty": 2,
       "total": 40
@@ -180844,5 +180870,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-25T11:28:10.863Z"
+  "updatedAt": "2026-07-25T11:28:46.112Z"
 }

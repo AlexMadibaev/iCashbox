@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 20,
-    "checks": 2,
+    "average": 41.666666666666664,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -165,
-    "revenue": 40
+    "net": -80,
+    "revenue": 125
   },
   "data": {
-    "actions": 6109,
+    "actions": 6111,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2784,
+    "orders": 2785,
     "products": 60,
     "shifts": 65
   },
   "activity": [
+    {
+      "id": 1785017558532,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:12",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785017558531,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:12",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785017199866,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:44",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1784972658002,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:44",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1784972153320,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:35",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2784,
+    "current": 2785,
     "old": [
       {
         "createdAt": "2026-07-25T10:41:28.481Z",
@@ -91581,6 +91581,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-25T23:39:05.615Z",
+        "id": 3832,
+        "items": [
+          "Мороженое с чёрным сахаром x1",
+          "Черника mini x1",
+          "Мороженое Орео x1",
+          "Bubble Gum mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-чёрным-сахаром",
+            "name": "Мороженое с чёрным сахаром",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-26",
+        "shiftLabel": "Смена 26.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 85
+      },
       {
         "createdAt": "2026-07-25T22:12:38.392Z",
         "id": 3831,
@@ -183029,14 +183085,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-26",
         "label": "Смена 26.07",
         "missingOrders": 0,
-        "revenue": 40,
+        "revenue": 125,
         "status": "ok"
       },
       {
@@ -183885,12 +183941,12 @@
         "status": "ok"
       }
     ],
-    "total": 2784
+    "total": 2785
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 40
+      "total": 125
     },
     {
       "method": "Карта",
@@ -183910,6 +183966,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3832,
+      "items": [
+        "Мороженое с чёрным сахаром x1",
+        "Черника mini x1",
+        "Мороженое Орео x1",
+        "Bubble Gum mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 85
+    },
     {
       "id": 3831,
       "items": [
@@ -184060,16 +184127,31 @@
   },
   "topProducts": [
     {
-      "name": "Babl tea mini",
+      "name": "Мороженое Орео",
+      "qty": 2,
+      "total": 40
+    },
+    {
+      "name": "Черника mini",
+      "qty": 1,
+      "total": 25
+    },
+    {
+      "name": "Мороженое с чёрным сахаром",
       "qty": 1,
       "total": 20
     },
     {
-      "name": "Мороженое Орео",
+      "name": "Bubble Gum mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Babl tea mini",
       "qty": 1,
       "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-26T05:15:46.835Z"
+  "updatedAt": "2026-07-26T06:42:14.648Z"
 }

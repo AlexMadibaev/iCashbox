@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.78787878787879,
-    "checks": 33,
+    "average": 38.8235294117647,
+    "checks": 34,
     "expenseTotal": 205,
-    "net": 1075,
-    "revenue": 1280
+    "net": 1115,
+    "revenue": 1320
   },
   "data": {
-    "actions": 6171,
+    "actions": 6173,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2815,
+    "orders": 2816,
     "products": 60,
     "shifts": 65
   },
   "activity": [
     {
+      "id": 1785056667413,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:04",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785056667413,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:04",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785055743039,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1785052133081,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:48",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785052108059,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:48",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785052108059,
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:48",
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2815,
+    "current": 2816,
     "old": [
       {
         "createdAt": "2026-07-25T10:41:28.481Z",
@@ -91581,6 +91581,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-26T09:20:28.140Z",
+        "id": 3863,
+        "items": [
+          "Babl tea mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 40,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-26",
+        "shiftLabel": "Смена 26.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-26T09:04:27.294Z",
         "id": 3862,
@@ -184090,14 +184119,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 33,
-        "expectedOrders": 33,
+        "databaseOrders": 34,
+        "expectedOrders": 34,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-26",
         "label": "Смена 26.07",
         "missingOrders": 0,
-        "revenue": 1280,
+        "revenue": 1320,
         "status": "ok"
       },
       {
@@ -184946,7 +184975,7 @@
         "status": "ok"
       }
     ],
-    "total": 2815
+    "total": 2816
   },
   "payments": [
     {
@@ -184963,7 +184992,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 314
+      "total": 354
     },
     {
       "method": "Семья",
@@ -184971,6 +185000,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3863,
+      "items": [
+        "Babl tea mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3862,
       "items": [
@@ -185030,14 +185067,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 3855,
-      "items": [
-        "Мороженое Орео x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -185173,6 +185202,11 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea mini",
+      "qty": 7,
+      "total": 140
+    },
+    {
       "name": "Babl tea big",
       "qty": 5,
       "total": 130
@@ -185181,11 +185215,6 @@
       "name": "Мороженое Орео",
       "qty": 6,
       "total": 120
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 5,
-      "total": 100
     },
     {
       "name": "Айс Латте",
@@ -185214,5 +185243,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-26T16:07:36.078Z"
+  "updatedAt": "2026-07-26T16:23:36.581Z"
 }

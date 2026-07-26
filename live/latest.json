@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.2,
-    "checks": 20,
+    "average": 37.285714285714285,
+    "checks": 21,
     "expenseTotal": 205,
-    "net": 519,
-    "revenue": 724
+    "net": 578,
+    "revenue": 783
   },
   "data": {
-    "actions": 6145,
+    "actions": 6147,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2802,
+    "orders": 2803,
     "products": 60,
     "shifts": 65
   },
   "activity": [
     {
+      "id": 1785044540105,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:42",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785044540105,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:42",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785044188886,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:32",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785039892012,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:24",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785039892012,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:24",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2802,
+    "current": 2803,
     "old": [
       {
         "createdAt": "2026-07-25T10:41:28.481Z",
@@ -91581,6 +91581,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-26T05:46:59.740Z",
+        "id": 3850,
+        "items": [
+          "Тапиока доп x1",
+          "Черника big x1",
+          "Клубничный жасмин big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-тапиока-доп",
+            "name": "Тапиока доп",
+            "price": 3,
+            "qty": 1,
+            "size": "",
+            "total": 3
+          },
+          {
+            "id": "product-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-клубничный-жасмин-big",
+            "name": "Клубничный жасмин big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 59,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-26",
+        "shiftLabel": "Смена 26.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 59
+      },
       {
         "createdAt": "2026-07-26T05:42:19.987Z",
         "id": 3849,
@@ -183614,14 +183661,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 20,
-        "expectedOrders": 20,
+        "databaseOrders": 21,
+        "expectedOrders": 21,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-26",
         "label": "Смена 26.07",
         "missingOrders": 0,
-        "revenue": 724,
+        "revenue": 783,
         "status": "ok"
       },
       {
@@ -184470,7 +184517,7 @@
         "status": "ok"
       }
     ],
-    "total": 2802
+    "total": 2803
   },
   "payments": [
     {
@@ -184483,7 +184530,7 @@
     },
     {
       "method": "Alif",
-      "total": 40
+      "total": 99
     },
     {
       "method": "Dushanbe City",
@@ -184495,6 +184542,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3850,
+      "items": [
+        "Тапиока доп x1",
+        "Черника big x1",
+        "Клубничный жасмин big x1"
+      ],
+      "status": "Оплачен",
+      "total": 59
+    },
     {
       "id": 3849,
       "items": [
@@ -184550,14 +184607,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3842,
-      "items": [
-        "Черника big x2"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -184693,6 +184742,11 @@
   },
   "topProducts": [
     {
+      "name": "Черника big",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 7,
       "total": 70
@@ -184713,11 +184767,6 @@
       "total": 60
     },
     {
-      "name": "Черника big",
-      "qty": 2,
-      "total": 60
-    },
-    {
       "name": "Мороженое Орео",
       "qty": 3,
       "total": 60
@@ -184734,5 +184783,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-26T12:45:28.298Z"
+  "updatedAt": "2026-07-26T12:50:07.110Z"
 }

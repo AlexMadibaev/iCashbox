@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.81818181818182,
-    "checks": 11,
+    "average": 34.333333333333336,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 167,
-    "revenue": 372
+    "net": 207,
+    "revenue": 412
   },
   "data": {
-    "actions": 6127,
+    "actions": 6129,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2793,
+    "orders": 2794,
     "products": 60,
     "shifts": 65
   },
   "activity": [
     {
+      "id": 1785032063408,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:14",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785032063408,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:14",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785031793538,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785024906875,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:15",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785024906875,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:15",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2793,
+    "current": 2794,
     "old": [
       {
         "createdAt": "2026-07-25T10:41:28.481Z",
@@ -91581,6 +91581,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-26T03:16:44.550Z",
+        "id": 3841,
+        "items": [
+          "Жасмин гранат mini x1",
+          "Жасмин лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-гранат-mini",
+            "name": "Жасмин гранат mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-лимон-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-26",
+        "shiftLabel": "Смена 26.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-26T02:14:23.304Z",
         "id": 3840,
@@ -183344,14 +183382,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-26",
         "label": "Смена 26.07",
         "missingOrders": 0,
-        "revenue": 372,
+        "revenue": 412,
         "status": "ok"
       },
       {
@@ -184200,12 +184238,12 @@
         "status": "ok"
       }
     ],
-    "total": 2793
+    "total": 2794
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 242
+      "total": 282
     },
     {
       "method": "Карта",
@@ -184225,6 +184263,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3841,
+      "items": [
+        "Жасмин гранат mini x1",
+        "Жасмин лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3840,
       "items": [
@@ -184282,15 +184329,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 3833,
-      "items": [
-        "Жасмин лимон big x1",
-        "Клубника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 52
     }
   ],
   "shifts": {
@@ -184467,5 +184505,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-26T09:17:30.390Z"
+  "updatedAt": "2026-07-26T10:19:53.026Z"
 }

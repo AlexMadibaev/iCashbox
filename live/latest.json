@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.5625,
-    "checks": 32,
+    "average": 38.78787878787879,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 1029,
-    "revenue": 1234
+    "net": 1075,
+    "revenue": 1280
   },
   "data": {
-    "actions": 6169,
+    "actions": 6171,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2814,
+    "orders": 2815,
     "products": 60,
     "shifts": 65
   },
   "activity": [
     {
+      "id": 1785055743039,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:49",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785055743039,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:49",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785054607560,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:48",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785051934429,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:45",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785051934429,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:45",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2814,
+    "current": 2815,
     "old": [
       {
         "createdAt": "2026-07-25T10:41:28.481Z",
@@ -91581,6 +91581,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-26T09:04:27.294Z",
+        "id": 3862,
+        "items": [
+          "Мороженое Орео x1",
+          "Манго big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-манго-big",
+            "name": "Манго big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-26",
+        "shiftLabel": "Смена 26.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-07-26T08:49:02.900Z",
         "id": 3861,
@@ -184052,14 +184090,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 32,
-        "expectedOrders": 32,
+        "databaseOrders": 33,
+        "expectedOrders": 33,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-26",
         "label": "Смена 26.07",
         "missingOrders": 0,
-        "revenue": 1234,
+        "revenue": 1280,
         "status": "ok"
       },
       {
@@ -184908,12 +184946,12 @@
         "status": "ok"
       }
     ],
-    "total": 2814
+    "total": 2815
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 741
+      "total": 787
     },
     {
       "method": "Карта",
@@ -184933,6 +184971,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3862,
+      "items": [
+        "Мороженое Орео x1",
+        "Манго big x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 3861,
       "items": [
@@ -184991,15 +185038,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3854,
-      "items": [
-        "Babl tea mini x1",
-        "Babl tea big x1"
-      ],
-      "status": "Оплачен",
-      "total": 46
     }
   ],
   "shifts": {
@@ -185140,12 +185178,12 @@
       "total": 130
     },
     {
-      "name": "Babl tea mini",
-      "qty": 5,
-      "total": 100
+      "name": "Мороженое Орео",
+      "qty": 6,
+      "total": 120
     },
     {
-      "name": "Мороженое Орео",
+      "name": "Babl tea mini",
       "qty": 5,
       "total": 100
     },
@@ -185176,5 +185214,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-26T15:52:11.275Z"
+  "updatedAt": "2026-07-26T16:07:36.078Z"
 }

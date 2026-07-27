@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.333333333333336,
-    "checks": 30,
+    "average": 36.645161290322584,
+    "checks": 31,
     "expenseTotal": 205,
-    "net": 885,
-    "revenue": 1090
+    "net": 931,
+    "revenue": 1136
   },
   "data": {
-    "actions": 6240,
+    "actions": 6242,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2849,
+    "orders": 2850,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785133850350,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:30",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785133850350,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:30",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785133488484,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:50",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785131222473,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:47",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785131222473,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:47",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2849,
+    "current": 2850,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T06:31:54.163Z",
+        "id": 3897,
+        "items": [
+          "Babl tea big x1",
+          "Babl tea mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-07-27T06:30:50.240Z",
         "id": 3896,
@@ -186401,14 +186439,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 30,
-        "expectedOrders": 30,
+        "databaseOrders": 31,
+        "expectedOrders": 31,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 1090,
+        "revenue": 1136,
         "status": "ok"
       },
       {
@@ -187270,12 +187308,12 @@
         "status": "ok"
       }
     ],
-    "total": 2849
+    "total": 2850
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 638
+      "total": 684
     },
     {
       "method": "Карта",
@@ -187295,6 +187333,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3897,
+      "items": [
+        "Babl tea big x1",
+        "Babl tea mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 3896,
       "items": [
@@ -187348,14 +187395,6 @@
       "id": 3890,
       "items": [
         "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 3889,
-      "items": [
-        "Blue mini x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -187509,6 +187548,11 @@
       "total": 60
     },
     {
+      "name": "Babl tea big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Клубника big",
       "qty": 2,
       "total": 52
@@ -187527,13 +187571,8 @@
       "name": "Мороженое рожок",
       "qty": 5,
       "total": 50
-    },
-    {
-      "name": "Мороженое с чёрным сахаром",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T13:33:59.897Z"
+  "updatedAt": "2026-07-27T13:35:02.203Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.6,
-    "checks": 25,
+    "average": 36.73076923076923,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 710,
-    "revenue": 915
+    "net": 750,
+    "revenue": 955
   },
   "data": {
-    "actions": 6230,
+    "actions": 6232,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2844,
+    "orders": 2845,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785131413545,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:50",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785131413545,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:50",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785131222473,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:14",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785125094478,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:04",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785125094478,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:04",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2844,
+    "current": 2845,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T06:07:45.741Z",
+        "id": 3892,
+        "items": [
+          "Мороженое с чёрным сахаром x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-чёрным-сахаром",
+            "name": "Мороженое с чёрным сахаром",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-27T05:50:13.436Z",
         "id": 3891,
@@ -186247,14 +186276,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 915,
+        "revenue": 955,
         "status": "ok"
       },
       {
@@ -187116,12 +187145,12 @@
         "status": "ok"
       }
     ],
-    "total": 2844
+    "total": 2845
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 488
+      "total": 528
     },
     {
       "method": "Карта",
@@ -187141,6 +187170,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3892,
+      "items": [
+        "Мороженое с чёрным сахаром x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3891,
       "items": [
@@ -187196,14 +187233,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3884,
-      "items": [
-        "Клубника big x2"
-      ],
-      "status": "Оплачен",
-      "total": 52
     }
   ],
   "shifts": {
@@ -187364,6 +187393,11 @@
       "total": 52
     },
     {
+      "name": "Мороженое с чёрным сахаром",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Клубника mini",
       "qty": 2,
       "total": 40
@@ -187372,13 +187406,8 @@
       "name": "Клубничный жасмин mini",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Matcha big",
-      "qty": 1,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T12:53:21.778Z"
+  "updatedAt": "2026-07-27T13:10:55.438Z"
 }

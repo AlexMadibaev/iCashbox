@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.904761904761905,
-    "checks": 42,
+    "average": 36.55813953488372,
+    "checks": 43,
     "expenseTotal": 205,
-    "net": 1261,
-    "revenue": 1466
+    "net": 1367,
+    "revenue": 1572
   },
   "data": {
-    "actions": 6264,
+    "actions": 6266,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2861,
+    "orders": 2862,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785141422499,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:37",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785141422499,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:37",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785140874033,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785136001196,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:06",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785136001196,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:06",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2861,
+    "current": 2862,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T08:45:20.408Z",
+        "id": 3909,
+        "items": [
+          "Мороженое манго x3",
+          "Мороженое Орео x1",
+          "Жасмин лимон big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 3,
+            "size": "",
+            "total": 60
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-лимон-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 106,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 106
+      },
       {
         "createdAt": "2026-07-27T08:37:02.390Z",
         "id": 3908,
@@ -186767,14 +186814,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 42,
-        "expectedOrders": 42,
+        "databaseOrders": 43,
+        "expectedOrders": 43,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 1466,
+        "revenue": 1572,
         "status": "ok"
       },
       {
@@ -187636,7 +187683,7 @@
         "status": "ok"
       }
     ],
-    "total": 2861
+    "total": 2862
   },
   "payments": [
     {
@@ -187653,7 +187700,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 263
+      "total": 369
     },
     {
       "method": "Семья",
@@ -187661,6 +187708,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3909,
+      "items": [
+        "Мороженое манго x3",
+        "Мороженое Орео x1",
+        "Жасмин лимон big x1"
+      ],
+      "status": "Оплачен",
+      "total": 106
+    },
     {
       "id": 3908,
       "items": [
@@ -187717,14 +187774,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 3901,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -187880,6 +187929,11 @@
       "total": 90
     },
     {
+      "name": "Мороженое манго",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "МангоБанан mini",
       "qty": 3,
       "total": 75
@@ -187893,13 +187947,8 @@
       "name": "Мороженое рожок",
       "qty": 6,
       "total": 60
-    },
-    {
-      "name": "Blue mini",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T15:40:12.186Z"
+  "updatedAt": "2026-07-27T15:48:29.965Z"
 }

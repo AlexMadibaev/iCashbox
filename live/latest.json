@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.111111111111114,
-    "checks": 27,
+    "average": 35.714285714285715,
+    "checks": 28,
     "expenseTotal": 205,
-    "net": 770,
-    "revenue": 975
+    "net": 795,
+    "revenue": 1000
   },
   "data": {
-    "actions": 6234,
+    "actions": 6236,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2846,
+    "orders": 2847,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785133337827,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785133337827,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785132465857,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:35",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785125909238,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:18",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785125909238,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:18",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2846,
+    "current": 2847,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T06:24:13.160Z",
+        "id": 3894,
+        "items": [
+          "МангоБанан mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 25,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-27T06:22:17.707Z",
         "id": 3893,
@@ -186305,14 +186334,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 27,
-        "expectedOrders": 27,
+        "databaseOrders": 28,
+        "expectedOrders": 28,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 975,
+        "revenue": 1000,
         "status": "ok"
       },
       {
@@ -187174,7 +187203,7 @@
         "status": "ok"
       }
     ],
-    "total": 2846
+    "total": 2847
   },
   "payments": [
     {
@@ -187191,7 +187220,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 238
+      "total": 263
     },
     {
       "method": "Семья",
@@ -187199,6 +187228,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3894,
+      "items": [
+        "МангоБанан mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 3893,
       "items": [
@@ -187254,14 +187291,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3886,
-      "items": [
-        "Bubble Gum mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -187422,6 +187451,11 @@
       "total": 52
     },
     {
+      "name": "МангоБанан mini",
+      "qty": 2,
+      "total": 50
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 5,
       "total": 50
@@ -187430,13 +187464,8 @@
       "name": "Мороженое с чёрным сахаром",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Клубника mini",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T13:25:27.506Z"
+  "updatedAt": "2026-07-27T13:27:21.497Z"
 }

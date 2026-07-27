@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.673469387755105,
-    "checks": 49,
+    "average": 35.86,
+    "checks": 50,
     "expenseTotal": 205,
-    "net": 1543,
-    "revenue": 1748
+    "net": 1588,
+    "revenue": 1793
   },
   "data": {
-    "actions": 6278,
+    "actions": 6280,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2868,
+    "orders": 2869,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785145865369,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:51",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785145865369,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:51",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785145571501,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:01",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785141920530,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:45",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785141920530,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:45",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2868,
+    "current": 2869,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T09:54:25.199Z",
+        "id": 3916,
+        "items": [
+          "Черника mini x1",
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-07-27T09:51:05.243Z",
         "id": 3915,
@@ -187015,14 +187053,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 49,
-        "expectedOrders": 49,
+        "databaseOrders": 50,
+        "expectedOrders": 50,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 1748,
+        "revenue": 1793,
         "status": "ok"
       },
       {
@@ -187884,12 +187922,12 @@
         "status": "ok"
       }
     ],
-    "total": 2868
+    "total": 2869
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 977
+      "total": 1022
     },
     {
       "method": "Карта",
@@ -187909,6 +187947,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3916,
+      "items": [
+        "Черника mini x1",
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 3915,
       "items": [
@@ -187969,14 +188016,6 @@
       ],
       "status": "Оплачен",
       "total": 106
-    },
-    {
-      "id": 3908,
-      "items": [
-        "АйсМатча манго x1"
-      ],
-      "status": "Оплачен",
-      "total": 35
     }
   ],
   "shifts": {
@@ -188118,8 +188157,8 @@
     },
     {
       "name": "Мороженое классическое",
-      "qty": 6,
-      "total": 120
+      "qty": 7,
+      "total": 140
     },
     {
       "name": "АйсМатча манго",
@@ -188153,5 +188192,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T16:54:13.280Z"
+  "updatedAt": "2026-07-27T16:57:33.018Z"
 }

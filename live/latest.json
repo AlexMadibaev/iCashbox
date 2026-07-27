@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.520833333333336,
-    "checks": 48,
+    "average": 35.673469387755105,
+    "checks": 49,
     "expenseTotal": 205,
-    "net": 1500,
-    "revenue": 1705
+    "net": 1543,
+    "revenue": 1748
   },
   "data": {
-    "actions": 6276,
+    "actions": 6278,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2867,
+    "orders": 2868,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785145571501,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:46",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785145571501,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:46",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785145521381,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:45",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785141422499,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785141422499,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:37",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2867,
+    "current": 2868,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T09:51:05.243Z",
+        "id": 3915,
+        "items": [
+          "Matcha big x1",
+          "Тапиока доп x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-тапиока-доп",
+            "name": "Тапиока доп",
+            "price": 3,
+            "qty": 1,
+            "size": "",
+            "total": 3
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 43,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 43
+      },
       {
         "createdAt": "2026-07-27T09:46:11.349Z",
         "id": 3914,
@@ -186977,14 +187015,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 48,
-        "expectedOrders": 48,
+        "databaseOrders": 49,
+        "expectedOrders": 49,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 1705,
+        "revenue": 1748,
         "status": "ok"
       },
       {
@@ -187846,7 +187884,7 @@
         "status": "ok"
       }
     ],
-    "total": 2867
+    "total": 2868
   },
   "payments": [
     {
@@ -187859,7 +187897,7 @@
     },
     {
       "method": "Alif",
-      "total": 299
+      "total": 342
     },
     {
       "method": "Dushanbe City",
@@ -187871,6 +187909,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3915,
+      "items": [
+        "Matcha big x1",
+        "Тапиока доп x1"
+      ],
+      "status": "Оплачен",
+      "total": 43
+    },
     {
       "id": 3914,
       "items": [
@@ -187925,14 +187972,6 @@
     },
     {
       "id": 3908,
-      "items": [
-        "АйсМатча манго x1"
-      ],
-      "status": "Оплачен",
-      "total": 35
-    },
-    {
-      "id": 3907,
       "items": [
         "АйсМатча манго x1"
       ],
@@ -188098,6 +188137,11 @@
       "total": 90
     },
     {
+      "name": "Matcha big",
+      "qty": 2,
+      "total": 80
+    },
+    {
       "name": "Babl tea mini",
       "qty": 4,
       "total": 80
@@ -188106,13 +188150,8 @@
       "name": "Мороженое манго",
       "qty": 4,
       "total": 80
-    },
-    {
-      "name": "МангоБанан mini",
-      "qty": 3,
-      "total": 75
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T16:49:19.545Z"
+  "updatedAt": "2026-07-27T16:54:13.280Z"
 }

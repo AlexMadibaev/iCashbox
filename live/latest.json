@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.549019607843135,
-    "checks": 51,
+    "average": 34.92307692307692,
+    "checks": 52,
     "expenseTotal": 205,
-    "net": 1608,
-    "revenue": 1813
+    "net": 1611,
+    "revenue": 1816
   },
   "data": {
-    "actions": 6282,
+    "actions": 6284,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2870,
+    "orders": 2871,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785146102991,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:55",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785146102991,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:55",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785146065348,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785144656326,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:30",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785144656326,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:30",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2870,
+    "current": 2871,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T09:55:29.253Z",
+        "id": 3918,
+        "items": [
+          "Тапиока доп x1"
+        ],
+        "lines": [
+          {
+            "id": "product-тапиока-доп",
+            "name": "Тапиока доп",
+            "price": 3,
+            "qty": 1,
+            "size": "",
+            "total": 3
+          }
+        ],
+        "payments": {
+          "Наличные": 3,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 3
+      },
       {
         "createdAt": "2026-07-27T09:55:02.863Z",
         "id": 3917,
@@ -187082,14 +187111,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 51,
-        "expectedOrders": 51,
+        "databaseOrders": 52,
+        "expectedOrders": 52,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 1813,
+        "revenue": 1816,
         "status": "ok"
       },
       {
@@ -187951,12 +187980,12 @@
         "status": "ok"
       }
     ],
-    "total": 2870
+    "total": 2871
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1042
+      "total": 1045
     },
     {
       "method": "Карта",
@@ -187976,6 +188005,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3918,
+      "items": [
+        "Тапиока доп x1"
+      ],
+      "status": "Оплачен",
+      "total": 3
+    },
     {
       "id": 3917,
       "items": [
@@ -188035,14 +188072,6 @@
       ],
       "status": "Оплачен",
       "total": 10
-    },
-    {
-      "id": 3910,
-      "items": [
-        "Мороженое с чёрным сахаром x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -188219,5 +188248,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T16:58:10.601Z"
+  "updatedAt": "2026-07-27T16:58:37.176Z"
 }

@@ -2888,3 +2888,143 @@ th {
   font-weight: 800;
   color: #17201b;
 }
+
+/* ===== Masters & commissions ===== */
+
+/* Per-line master selector inside the cart */
+.cart-item {
+  position: relative;
+}
+.cart-master {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d5dfd3;
+  border-radius: 8px;
+  background: #ffffff;
+  font: 600 12px inherit;
+  color: #17201b;
+  cursor: pointer;
+}
+.cart-master.unset {
+  border-color: #f0d8a6;
+  background: #fbf3e2;
+  color: #6b5320;
+}
+
+/* Masters management view */
+.masters-layout {
+  display: grid;
+  gap: 16px;
+}
+.master-add {
+  display: grid;
+  grid-template-columns: 1fr 120px auto;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.master-add input,
+.master-name,
+.master-percent input,
+.master-add-percent input {
+  padding: 11px 12px;
+  border: 1px solid #d5dfd3;
+  border-radius: 9px;
+  font: inherit;
+  background: #fff;
+  color: #17201b;
+}
+.master-add-percent,
+.master-percent {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.master-add-percent input,
+.master-percent input {
+  width: 70px;
+  text-align: right;
+}
+.master-list {
+  display: grid;
+  gap: 10px;
+}
+.master-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 1.4fr) auto minmax(180px, 1fr) auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #e0e6e1;
+  border-radius: 10px;
+  background: #fff;
+}
+.master-row.inactive {
+  opacity: 0.6;
+}
+.master-earned {
+  display: grid;
+  gap: 2px;
+  font-size: 12px;
+  color: #64736a;
+}
+.master-earned strong {
+  color: #17201b;
+  font-size: 13px;
+}
+.master-active {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #526158;
+  white-space: nowrap;
+}
+.master-active input {
+  width: 18px;
+  height: 18px;
+  accent-color: #17201b;
+}
+
+/* Masters breakdown in reports */
+.masters-report-list {
+  display: grid;
+  gap: 8px;
+}
+.masters-report-row-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e0e6e1;
+  border-radius: 8px;
+  background: #fff;
+}
+.masters-report-name {
+  display: grid;
+  gap: 3px;
+}
+.masters-report-name span {
+  font-size: 12px;
+  color: #64736a;
+}
+.masters-report-values {
+  display: grid;
+  gap: 2px;
+  text-align: right;
+  font-size: 12px;
+  color: #64736a;
+}
+.masters-report-values strong {
+  color: #17201b;
+  font-size: 14px;
+}
+.order-master {
+  margin: 2px 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #4c7a25;
+}

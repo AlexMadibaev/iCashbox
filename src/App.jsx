@@ -133,7 +133,7 @@ function accountPasswordMatches(account, password) {
 }
 
 const defaultRoleAccess = {
-  admin: ['pos', 'menu', 'orders', 'inventory', 'analytics', 'cloud', 'roles'],
+  admin: ['pos', 'menu', 'orders', 'inventory', 'analytics', 'masters', 'cloud', 'roles'],
   cashier: ['pos', 'orders']
 };
 
@@ -288,6 +288,7 @@ const navItems = [
   { id: 'orders', label: 'Заказы', icon: ClipboardList },
   { id: 'inventory', label: 'Склад', icon: Boxes },
   { id: 'analytics', label: 'Отчёты', icon: BarChart3 },
+  { id: 'masters', label: 'Мастера', icon: UserRoundCog },
   { id: 'cloud', label: 'База', icon: Database },
   { id: 'roles', label: 'Роли', icon: ShieldCheck }
 ];
@@ -363,7 +364,7 @@ function useStoredState(key, fallback) {
 
 function canAccessView(account, viewId, accessRules = defaultRoleAccess) {
   if (!account) return false;
-  if (viewId === 'roles') return account.role === 'admin';
+  if (viewId === 'roles' || viewId === 'masters') return account.role === 'admin';
   return (accessRules[account.role] || []).includes(viewId);
 }
 
@@ -637,6 +638,56 @@ function buildLiveSnapshot({ orders, shift }) {
   };
 }
 
+function lineCommission(total, percent) {
+  return Math.round(Number(total || 0) * Number(percent || 0)) / 100;
+}
+
+// Сводка по мастерам из позиций заказов: выручка, комиссия, число позиций.
+function summarizeMasters(orders, masters = []) {
+  const percentById = new Map(masters.map((master) => [master.id, Number(master.commissionPercent || 0)]));
+  const map = new Map();
+  orders
+    .filter((order) => !order.cancelled && !order.refunded)
+    .forEach((order) => {
+      (order.lines || []).forEach((line) => {
+        if (!line.masterId) return;
+        const revenue = Number(line.total || 0);
+        const percent = line.masterPercent != null ? Number(line.masterPercent) : percentById.get(line.masterId) || 0;
+        const commission = line.commission != null ? Number(line.commission) : lineCommission(revenue, percent);
+        const entry = map.get(line.masterId) || {
+          id: line.masterId,
+          name: line.masterName || 'Мастер',
+          percent,
+          revenue: 0,
+          commission: 0,
+          items: 0,
+          orders: new Set()
+        };
+        entry.revenue += revenue;
+        entry.commission += commission;
+        entry.items += Number(line.qty || 0);
+        entry.orders.add(order.id);
+        if (line.masterName) entry.name = line.masterName;
+        entry.percent = percent;
+        map.set(line.masterId, entry);
+      });
+    });
+  return Array.from(map.values())
+    .map((entry) => ({ ...entry, orders: entry.orders.size }))
+    .sort((a, b) => b.revenue - a.revenue);
+}
+
+function orderMastersLabel(order) {
+  const counts = new Map();
+  (order?.lines || []).forEach((line) => {
+    if (!line.masterName) return;
+    counts.set(line.masterName, (counts.get(line.masterName) || 0) + Number(line.qty || 0));
+  });
+  return Array.from(counts.entries())
+    .map(([masterName, qty]) => `${masterName} (${qty})`)
+    .join(', ');
+}
+
 function buildShiftReports(orders, expenses, shiftHistory, shift) {
   const currentKey = shiftKeyFromShift(shift);
   const keys = new Set([currentKey]);
@@ -797,6 +848,7 @@ function menuImageFileToDataUrl(file) {
 function App() {
   const [activeView, setActiveView] = useState('pos');
   const [accounts, setAccounts] = useStoredState('icashbox.accounts', defaultAccounts);
+  const [masters, setMasters] = useStoredState('icashbox.masters', []);
   const [accessRules, setAccessRules] = useStoredState('icashbox.accessRules', defaultRoleAccess);
   const [session, setSession] = useStoredState('icashbox.session', null);
   const [products, setProducts] = useStoredState('icashbox.products', productSeed);
@@ -1117,6 +1169,44 @@ function App() {
     );
   };
 
+  const setCartItemMaster = (id, masterId) => {
+    setCart((current) => current.map((item) => (item.id === id ? { ...item, masterId } : item)));
+  };
+
+  const activeMasters = masters.filter((master) => master.active !== false);
+
+  const addMaster = (draft = {}) => {
+    if (currentUser?.role !== 'admin') return;
+    const name = String(draft.name || '').trim();
+    if (!name) return;
+    const percent = Math.max(0, Math.min(100, Number(draft.commissionPercent) || 0));
+    setMasters((current) => [
+      ...current,
+      { id: `master-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, name, commissionPercent: percent, active: true }
+    ]);
+    setLastMessage(`Мастер «${name}» добавлен`);
+  };
+
+  const updateMaster = (id, patch = {}) => {
+    if (currentUser?.role !== 'admin') return;
+    setMasters((current) =>
+      current.map((master) => {
+        if (master.id !== id) return master;
+        const next = { ...master, ...patch };
+        if (patch.name != null) next.name = String(patch.name);
+        if (patch.commissionPercent != null) {
+          next.commissionPercent = Math.max(0, Math.min(100, Number(patch.commissionPercent) || 0));
+        }
+        return next;
+      })
+    );
+  };
+
+  const deleteMaster = (id) => {
+    if (currentUser?.role !== 'admin') return;
+    setMasters((current) => current.filter((master) => master.id !== id));
+  };
+
   const createOrder = () => {
     if (!cart.length || !shift.open || creatingOrderRef.current) return;
     creatingOrderRef.current = true;
@@ -1132,14 +1222,23 @@ function App() {
       minutes: 0,
       total: cartTotal,
       items: cart.map((item) => `${productLineLabel(item)} x${item.qty}`),
-      lines: cart.map((item) => ({
-        id: item.id,
-        name: item.name,
-        size: item.size,
-        price: item.price,
-        qty: item.qty,
-        total: item.price * item.qty
-      })),
+      lines: cart.map((item) => {
+        const total = item.price * item.qty;
+        const master = masters.find((entry) => entry.id === item.masterId) || null;
+        const masterPercent = master ? Number(master.commissionPercent || 0) : 0;
+        return {
+          id: item.id,
+          name: item.name,
+          size: item.size,
+          price: item.price,
+          qty: item.qty,
+          total,
+          masterId: master ? master.id : '',
+          masterName: master ? master.name : '',
+          masterPercent,
+          commission: master ? lineCommission(total, masterPercent) : 0
+        };
+      }),
       guestName: guestName.trim(),
       comment: orderComment,
       stickerWishes,
@@ -1881,12 +1980,14 @@ function App() {
             categories={categories}
             createOrder={createOrder}
             guestName={guestName}
+            masters={activeMasters}
             orderComment={orderComment}
             paidAmount={paidAmount}
             payments={payments}
             products={visibleProducts}
             search={search}
             selectedCategory={selectedCategory}
+            setCartItemMaster={setCartItemMaster}
             setGuestName={setGuestName}
             setOrderComment={setOrderComment}
             setPayments={setPayments}
@@ -1933,10 +2034,20 @@ function App() {
           <Analytics
             addExpense={addExpense}
             expenses={expenses}
+            masters={masters}
             orders={orders}
             shift={shift}
             shiftHistory={shiftHistory}
             requestShiftToggle={requestShiftToggle}
+          />
+        )}
+        {activeView === 'masters' && (
+          <MastersManager
+            addMaster={addMaster}
+            deleteMaster={deleteMaster}
+            masters={masters}
+            orders={orders}
+            updateMaster={updateMaster}
           />
         )}
         {activeView === 'cloud' && (
@@ -2214,12 +2325,14 @@ function PosView({
   categories,
   createOrder,
   guestName,
+  masters,
   orderComment,
   paidAmount,
   payments,
   products,
   search,
   selectedCategory,
+  setCartItemMaster,
   setOrderComment,
   setPayments,
   setGuestName,
@@ -2309,6 +2422,21 @@ function PosView({
                   </button>
                 </div>
                 <b>{currency.format(item.price * item.qty)}</b>
+                {masters.length > 0 && (
+                  <select
+                    className={item.masterId ? 'cart-master' : 'cart-master unset'}
+                    value={item.masterId || ''}
+                    onChange={(event) => setCartItemMaster(item.id, event.target.value)}
+                    title="Мастер по позиции"
+                  >
+                    <option value="">Мастер не выбран</option>
+                    {masters.map((master) => (
+                      <option key={master.id} value={master.id}>
+                        {master.name} · {Number(master.commissionPercent || 0)}%
+                      </option>
+                    ))}
+                  </select>
+                )}
               </div>
             ))}
           </div>
@@ -2975,6 +3103,7 @@ function OrderHistory({
                 {currency.format(order.total)}
               </p>
               {order.guestName && <p className="order-comment">Гость: {order.guestName}</p>}
+              {orderMastersLabel(order) && <p className="order-master">Мастера: {orderMastersLabel(order)}</p>}
               {order.comment && <p className="order-comment">{order.comment}</p>}
               <ul>
                 {order.items.map((item) => (
@@ -3083,7 +3212,7 @@ function Inventory({ stock, receiveStock }) {
   );
 }
 
-function Analytics({ addExpense, expenses, orders, shift, shiftHistory, requestShiftToggle }) {
+function Analytics({ addExpense, expenses, masters = [], orders, shift, shiftHistory, requestShiftToggle }) {
   const currentShiftKey = shiftKeyFromShift(shift);
   const reports = useMemo(
     () => buildShiftReports(orders, expenses, shiftHistory, shift),
@@ -3116,6 +3245,8 @@ function Analytics({ addExpense, expenses, orders, shift, shiftHistory, requestS
       total: methodOrders.reduce((sum, order) => sum + Number(order.payments?.[method] || 0), 0)
     };
   });
+  const masterRows = useMemo(() => summarizeMasters(periodOrders, masters), [periodOrders, masters]);
+  const masterCommissionTotal = masterRows.reduce((sum, row) => sum + row.commission, 0);
   const currentReport = reports.find((report) => report.key === currentShiftKey);
   const {
     activeOrders: currentActiveOrders = [],
@@ -3301,6 +3432,36 @@ function Analytics({ addExpense, expenses, orders, shift, shiftHistory, requestS
             </section>
           ))}
         </div>
+      </div>
+      <div className="data-section masters-report-section">
+        <div className="section-row">
+          <div>
+            <h2>По мастерам</h2>
+            <p>Продажи и комиссия за выбранную смену</p>
+          </div>
+          <UserRoundCog size={22} />
+        </div>
+        {masterRows.length === 0 ? (
+          <div className="empty-state">В этой смене продаж с мастером нет</div>
+        ) : (
+          <>
+            <div className="masters-report-list">
+              {masterRows.map((row) => (
+                <div className="masters-report-row-item" key={row.id}>
+                  <div className="masters-report-name">
+                    <strong>{row.name}</strong>
+                    <span>{row.percent}% · {row.orders} чек., {row.items} поз.</span>
+                  </div>
+                  <div className="masters-report-values">
+                    <span>Выручка: {currency.format(row.revenue)}</span>
+                    <strong>Комиссия: {currency.format(row.commission)}</strong>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="field-hint">Итого комиссий за смену: {currency.format(masterCommissionTotal)}</p>
+          </>
+        )}
       </div>
       {showShiftExpensesSection && (
         <div className="data-section expenses-section">
@@ -3629,6 +3790,116 @@ function accountDraftChanged(account, draft) {
     draft.password.trim() !== (account.password || '') ||
     draft.role !== (account.role || 'cashier') ||
     draft.username.trim() !== (account.username || '')
+  );
+}
+
+function MastersManager({ addMaster, deleteMaster, masters, orders, updateMaster }) {
+  const [name, setName] = useState('');
+  const [percent, setPercent] = useState('');
+  const stats = useMemo(() => {
+    const map = new Map();
+    summarizeMasters(orders, masters).forEach((entry) => map.set(entry.id, entry));
+    return map;
+  }, [orders, masters]);
+
+  const submit = (event) => {
+    event.preventDefault();
+    if (!name.trim()) return;
+    addMaster({ name, commissionPercent: percent });
+    setName('');
+    setPercent('');
+  };
+
+  const totalCommission = Array.from(stats.values()).reduce((sum, entry) => sum + entry.commission, 0);
+
+  return (
+    <section className="masters-layout">
+      <div className="data-section">
+        <div className="section-row">
+          <div>
+            <h2>Мастера</h2>
+            <p>Кто выполняет продажу и какой процент получает с позиции</p>
+          </div>
+          <UserRoundCog size={22} />
+        </div>
+
+        <form className="master-add" onSubmit={submit}>
+          <input
+            className="master-add-name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            placeholder="Имя мастера"
+          />
+          <div className="master-add-percent">
+            <input
+              type="number"
+              min="0"
+              max="100"
+              value={percent}
+              onChange={(event) => setPercent(event.target.value)}
+              placeholder="0"
+            />
+            <span>%</span>
+          </div>
+          <button className="primary-action" type="submit">
+            <Plus size={18} />
+            <span>Добавить</span>
+          </button>
+        </form>
+
+        <div className="master-list">
+          {masters.length === 0 && <div className="empty-state">Мастеров пока нет — добавьте первого</div>}
+          {masters.map((master) => {
+            const earned = stats.get(master.id);
+            return (
+              <div className={master.active === false ? 'master-row inactive' : 'master-row'} key={master.id}>
+                <input
+                  className="master-name"
+                  value={master.name}
+                  onChange={(event) => updateMaster(master.id, { name: event.target.value })}
+                />
+                <div className="master-percent">
+                  <input
+                    type="number"
+                    min="0"
+                    max="100"
+                    value={master.commissionPercent ?? 0}
+                    onChange={(event) => updateMaster(master.id, { commissionPercent: event.target.value })}
+                  />
+                  <span>%</span>
+                </div>
+                <div className="master-earned">
+                  <span>Выручка: {currency.format(earned?.revenue || 0)}</span>
+                  <strong>Комиссия: {currency.format(earned?.commission || 0)}</strong>
+                </div>
+                <label className="master-active" title="Доступен на кассе">
+                  <input
+                    type="checkbox"
+                    checked={master.active !== false}
+                    onChange={(event) => updateMaster(master.id, { active: event.target.checked })}
+                  />
+                  <span>Активен</span>
+                </label>
+                <button
+                  className="icon-button"
+                  type="button"
+                  title="Удалить мастера"
+                  onClick={() => {
+                    if (window.confirm(`Удалить мастера «${master.name}»? История продаж сохранится.`)) deleteMaster(master.id);
+                  }}
+                >
+                  <Trash2 size={18} />
+                </button>
+              </div>
+            );
+          })}
+        </div>
+
+        {masters.length > 0 && (
+          <p className="field-hint">Итого комиссий по всем мастерам: {currency.format(totalCommission)}</p>
+        )}
+      </div>
+    </section>
   );
 }
 
@@ -4563,6 +4834,7 @@ function pageTitle(view) {
     orders: 'История заказов',
     inventory: 'Склад и техкарты',
     analytics: 'Аналитика и смены',
+    masters: 'Мастера и комиссии',
     cloud: 'Локальная база',
     roles: 'Доступы'
   }[view];

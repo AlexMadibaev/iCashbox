@@ -14,8 +14,25 @@ const orderHeaders = [
   'Dushanbe City',
   'Дата создания',
   'Отменён',
-  'Возврат'
+  'Возврат',
+  'Мастера',
+  'Комиссия'
 ];
+
+function orderMastersSummary(order) {
+  const counts = new Map();
+  (order.lines || []).forEach((line) => {
+    if (!line.masterName) return;
+    counts.set(line.masterName, (counts.get(line.masterName) || 0) + Number(line.qty || 0));
+  });
+  return Array.from(counts.entries())
+    .map(([name, qty]) => `${name} (${qty})`)
+    .join('; ');
+}
+
+function orderCommissionTotal(order) {
+  return (order.lines || []).reduce((sum, line) => sum + Number(line.commission || 0), 0);
+}
 
 const paymentColumns = ['Наличные', 'Alif', 'Dushanbe City'];
 
@@ -140,7 +157,9 @@ function ordersToRows(orders) {
       Number(payments['Dushanbe City'] || 0),
       order.createdAt || '',
       order.cancelled ? 'Да' : 'Нет',
-      order.refunded ? 'Да' : 'Нет'
+      order.refunded ? 'Да' : 'Нет',
+      orderMastersSummary(order),
+      Number(orderCommissionTotal(order) || 0)
     ]);
   });
 

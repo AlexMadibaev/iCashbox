@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.9,
-    "checks": 40,
+    "average": 34.90243902439025,
+    "checks": 41,
     "expenseTotal": 205,
-    "net": 1191,
-    "revenue": 1396
+    "net": 1226,
+    "revenue": 1431
   },
   "data": {
-    "actions": 6262,
+    "actions": 6264,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2859,
+    "orders": 2860,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785140874033,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785140874033,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:27",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785140525855,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:06",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785135108016,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:51",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785135108016,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:51",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2859,
+    "current": 2860,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T08:27:53.913Z",
+        "id": 3907,
+        "items": [
+          "АйсМатча манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-манго",
+            "name": "АйсМатча манго",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-07-27T08:22:05.732Z",
         "id": 3906,
@@ -186709,14 +186738,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 40,
-        "expectedOrders": 40,
+        "databaseOrders": 41,
+        "expectedOrders": 41,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 1396,
+        "revenue": 1431,
         "status": "ok"
       },
       {
@@ -187578,12 +187607,12 @@
         "status": "ok"
       }
     ],
-    "total": 2859
+    "total": 2860
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 854
+      "total": 889
     },
     {
       "method": "Карта",
@@ -187603,6 +187632,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3907,
+      "items": [
+        "АйсМатча манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    },
     {
       "id": 3906,
       "items": [
@@ -187659,14 +187696,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 3899,
-      "items": [
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -187822,6 +187851,11 @@
       "total": 75
     },
     {
+      "name": "АйсМатча манго",
+      "qty": 2,
+      "total": 70
+    },
+    {
       "name": "Клубничный жасмин mini",
       "qty": 3,
       "total": 60
@@ -187835,13 +187869,8 @@
       "name": "Blue mini",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Babl tea big",
-      "qty": 2,
-      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T15:25:16.184Z"
+  "updatedAt": "2026-07-27T15:31:04.130Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.1764705882353,
-    "checks": 17,
+    "average": 40.833333333333336,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 478,
-    "revenue": 683
+    "net": 530,
+    "revenue": 735
   },
   "data": {
-    "actions": 6214,
+    "actions": 6216,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2836,
+    "orders": 2837,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785124190005,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:49",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785124190005,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:49",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785120596719,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:47",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785116539879,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:42",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785116539879,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:42",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2836,
+    "current": 2837,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T03:53:14.797Z",
+        "id": 3884,
+        "items": [
+          "Клубника big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-big",
+            "name": "Клубника big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-07-27T03:49:49.874Z",
         "id": 3883,
@@ -186015,14 +186044,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 683,
+        "revenue": 735,
         "status": "ok"
       },
       {
@@ -186884,12 +186913,12 @@
         "status": "ok"
       }
     ],
-    "total": 2836
+    "total": 2837
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 276
+      "total": 328
     },
     {
       "method": "Карта",
@@ -186909,6 +186938,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3884,
+      "items": [
+        "Клубника big x2"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 3883,
       "items": [
@@ -186967,14 +187004,6 @@
       ],
       "status": "Оплачен",
       "total": 90
-    },
-    {
-      "id": 3876,
-      "items": [
-        "Мороженое классическое x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -187115,6 +187144,11 @@
       "total": 90
     },
     {
+      "name": "Клубника big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 2,
       "total": 52
@@ -187143,13 +187177,8 @@
       "name": "Смузи Шавель Ананас",
       "qty": 1,
       "total": 40
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 3,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T10:52:59.847Z"
+  "updatedAt": "2026-07-27T10:56:23.217Z"
 }

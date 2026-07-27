@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.4375,
-    "checks": 32,
+    "average": 36.24242424242424,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 961,
-    "revenue": 1166
+    "net": 991,
+    "revenue": 1196
   },
   "data": {
-    "actions": 6244,
+    "actions": 6246,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2851,
+    "orders": 2852,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785134156042,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:35",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785134156042,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:35",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785133914289,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785132465857,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:07",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785132465857,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:07",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2851,
+    "current": 2852,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T06:49:18.920Z",
+        "id": 3899,
+        "items": [
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 30,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-27T06:35:55.929Z",
         "id": 3898,
@@ -186468,14 +186497,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 32,
-        "expectedOrders": 32,
+        "databaseOrders": 33,
+        "expectedOrders": 33,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 1166,
+        "revenue": 1196,
         "status": "ok"
       },
       {
@@ -187337,7 +187366,7 @@
         "status": "ok"
       }
     ],
-    "total": 2851
+    "total": 2852
   },
   "payments": [
     {
@@ -187350,7 +187379,7 @@
     },
     {
       "method": "Alif",
-      "total": 189
+      "total": 219
     },
     {
       "method": "Dushanbe City",
@@ -187362,6 +187391,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3899,
+      "items": [
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 3898,
       "items": [
@@ -187419,14 +187456,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3891,
-      "items": [
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -187563,8 +187592,8 @@
   "topProducts": [
     {
       "name": "Matcha mini",
-      "qty": 5,
-      "total": 150
+      "qty": 6,
+      "total": 180
     },
     {
       "name": "Мороженое классическое",
@@ -187603,5 +187632,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T13:39:04.468Z"
+  "updatedAt": "2026-07-27T13:52:28.697Z"
 }

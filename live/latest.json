@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 39.166666666666664,
-    "checks": 6,
+    "average": 39.285714285714285,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": 30,
-    "revenue": 235
+    "net": 70,
+    "revenue": 275
   },
   "data": {
-    "actions": 6192,
+    "actions": 6194,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2825,
+    "orders": 2826,
     "products": 60,
     "shifts": 66
   },
   "activity": [
+    {
+      "id": 1785113859213,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:57",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785113859213,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:57",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785113368191,
       "source": "Локально",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "10:31",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1785100993471,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:23",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1785059587323,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:53",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2825,
+    "current": 2826,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T01:05:57.953Z",
+        "id": 3873,
+        "items": [
+          "Смузи Шавель Ананас x1"
+        ],
+        "lines": [
+          {
+            "id": "product-смузи-шавель-ананас",
+            "name": "Смузи Шавель Ананас",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-27T00:57:39.099Z",
         "id": 3872,
@@ -185660,14 +185689,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 235,
+        "revenue": 275,
         "status": "ok"
       },
       {
@@ -186529,7 +186558,7 @@
         "status": "ok"
       }
     ],
-    "total": 2825
+    "total": 2826
   },
   "payments": [
     {
@@ -186542,7 +186571,7 @@
     },
     {
       "method": "Alif",
-      "total": 89
+      "total": 129
     },
     {
       "method": "Dushanbe City",
@@ -186554,6 +186583,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3873,
+      "items": [
+        "Смузи Шавель Ананас x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3872,
       "items": [
@@ -186741,6 +186778,11 @@
   },
   "topProducts": [
     {
+      "name": "Смузи Шавель Ананас",
+      "qty": 1,
+      "total": 40
+    },
+    {
       "name": "Клубничный big",
       "qty": 1,
       "total": 30
@@ -186774,13 +186816,8 @@
       "name": "Babl tea mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T08:00:49.134Z"
+  "updatedAt": "2026-07-27T08:09:07.847Z"
 }

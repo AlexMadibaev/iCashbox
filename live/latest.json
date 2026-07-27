@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.285714285714285,
-    "checks": 7,
+    "average": 40.625,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": 70,
-    "revenue": 275
+    "net": 120,
+    "revenue": 325
   },
   "data": {
-    "actions": 6194,
+    "actions": 6196,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2826,
+    "orders": 2827,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785114358089,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:05",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785114358089,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:05",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785113859213,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:01",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785105115119,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:31",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785105115118,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:31",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2826,
+    "current": 2827,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T01:13:17.189Z",
+        "id": 3874,
+        "items": [
+          "ПиноКолада mini x1",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-27T01:05:57.953Z",
         "id": 3873,
@@ -185689,14 +185727,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 275,
+        "revenue": 325,
         "status": "ok"
       },
       {
@@ -186558,12 +186596,12 @@
         "status": "ok"
       }
     ],
-    "total": 2826
+    "total": 2827
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 70
+      "total": 120
     },
     {
       "method": "Карта",
@@ -186583,6 +186621,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3874,
+      "items": [
+        "ПиноКолада mini x1",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 3873,
       "items": [
@@ -186798,6 +186845,16 @@
       "total": 26
     },
     {
+      "name": "ПиноКолада mini",
+      "qty": 1,
+      "total": 25
+    },
+    {
+      "name": "Клубничный mini",
+      "qty": 1,
+      "total": 25
+    },
+    {
       "name": "МангоБанан mini",
       "qty": 1,
       "total": 25
@@ -186806,18 +186863,8 @@
       "name": "Черника mini",
       "qty": 1,
       "total": 25
-    },
-    {
-      "name": "Манго mini",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T08:09:07.847Z"
+  "updatedAt": "2026-07-27T08:16:27.261Z"
 }

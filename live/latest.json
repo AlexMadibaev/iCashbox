@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.53333333333333,
-    "checks": 15,
+    "average": 40.1875,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 418,
-    "revenue": 623
+    "net": 438,
+    "revenue": 643
   },
   "data": {
-    "actions": 6210,
+    "actions": 6212,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2834,
+    "orders": 2835,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785120589377,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:49",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785120589377,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:49",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785120249978,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785115245823,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:20",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785115245823,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:20",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2834,
+    "current": 2835,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T02:49:56.587Z",
+        "id": 3882,
+        "items": [
+          "Клубничный жасмин mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 20,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-27T02:49:49.262Z",
         "id": 3881,
@@ -185948,14 +185977,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 623,
+        "revenue": 643,
         "status": "ok"
       },
       {
@@ -186817,7 +186846,7 @@
         "status": "ok"
       }
     ],
-    "total": 2834
+    "total": 2835
   },
   "payments": [
     {
@@ -186834,7 +186863,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 218
+      "total": 238
     },
     {
       "method": "Семья",
@@ -186842,6 +186871,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3882,
+      "items": [
+        "Клубничный жасмин mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3881,
       "items": [
@@ -186899,15 +186936,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3874,
-      "items": [
-        "ПиноКолада mini x1",
-        "Клубничный mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -187053,6 +187081,11 @@
       "total": 52
     },
     {
+      "name": "Клубничный жасмин mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Matcha big",
       "qty": 1,
       "total": 40
@@ -187076,13 +187109,8 @@
       "name": "Мороженое рожок",
       "qty": 3,
       "total": 30
-    },
-    {
-      "name": "Клубничный big",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T09:52:58.826Z"
+  "updatedAt": "2026-07-27T09:53:04.941Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.1875,
-    "checks": 16,
+    "average": 40.1764705882353,
+    "checks": 17,
     "expenseTotal": 205,
-    "net": 438,
-    "revenue": 643
+    "net": 478,
+    "revenue": 683
   },
   "data": {
-    "actions": 6212,
+    "actions": 6214,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2835,
+    "orders": 2836,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785120596719,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:49",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785120596719,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:49",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785120589377,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785116496663,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785116496663,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:41",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2835,
+    "current": 2836,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T03:49:49.874Z",
+        "id": 3883,
+        "items": [
+          "Клубника mini x1",
+          "Манго Маракуя mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-манго-маракуя-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-27T02:49:56.587Z",
         "id": 3882,
@@ -185977,14 +186015,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 16,
-        "expectedOrders": 16,
+        "databaseOrders": 17,
+        "expectedOrders": 17,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 643,
+        "revenue": 683,
         "status": "ok"
       },
       {
@@ -186846,7 +186884,7 @@
         "status": "ok"
       }
     ],
-    "total": 2835
+    "total": 2836
   },
   "payments": [
     {
@@ -186859,7 +186897,7 @@
     },
     {
       "method": "Alif",
-      "total": 129
+      "total": 169
     },
     {
       "method": "Dushanbe City",
@@ -186871,6 +186909,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3883,
+      "items": [
+        "Клубника mini x1",
+        "Манго Маракуя mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3882,
       "items": [
@@ -186928,14 +186975,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3875,
-      "items": [
-        "Blue mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -187112,5 +187151,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T09:53:04.941Z"
+  "updatedAt": "2026-07-27T10:52:59.847Z"
 }

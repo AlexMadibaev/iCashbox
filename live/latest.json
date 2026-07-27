@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.861111111111114,
-    "checks": 36,
+    "average": 35.567567567567565,
+    "checks": 37,
     "expenseTotal": 205,
-    "net": 1086,
-    "revenue": 1291
+    "net": 1111,
+    "revenue": 1316
   },
   "data": {
-    "actions": 6252,
+    "actions": 6254,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2855,
+    "orders": 2856,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785136001196,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785136001196,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:06",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785135108016,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:31",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785133850350,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:30",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785133850350,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:30",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2855,
+    "current": 2856,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T07:08:08.754Z",
+        "id": 3903,
+        "items": [
+          "МангоБанан mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 25,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-27T07:06:41.083Z",
         "id": 3902,
@@ -186584,14 +186613,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 36,
-        "expectedOrders": 36,
+        "databaseOrders": 37,
+        "expectedOrders": 37,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 1291,
+        "revenue": 1316,
         "status": "ok"
       },
       {
@@ -187453,7 +187482,7 @@
         "status": "ok"
       }
     ],
-    "total": 2855
+    "total": 2856
   },
   "payments": [
     {
@@ -187466,7 +187495,7 @@
     },
     {
       "method": "Alif",
-      "total": 254
+      "total": 279
     },
     {
       "method": "Dushanbe City",
@@ -187478,6 +187507,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3903,
+      "items": [
+        "МангоБанан mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 3902,
       "items": [
@@ -187534,15 +187571,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3895,
-      "items": [
-        "АйсМатча черника x1",
-        "АйсМатча манго x1"
-      ],
-      "status": "Оплачен",
-      "total": 70
     }
   ],
   "shifts": {
@@ -187693,6 +187721,11 @@
       "total": 90
     },
     {
+      "name": "МангоБанан mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 6,
       "total": 60
@@ -187711,13 +187744,8 @@
       "name": "Клубника big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 2,
-      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T14:09:50.524Z"
+  "updatedAt": "2026-07-27T14:11:16.878Z"
 }

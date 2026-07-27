@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.0188679245283,
-    "checks": 53,
+    "average": 34.7962962962963,
+    "checks": 54,
     "expenseTotal": 205,
-    "net": 1651,
-    "revenue": 1856
+    "net": 1674,
+    "revenue": 1879
   },
   "data": {
-    "actions": 6286,
+    "actions": 6288,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2872,
+    "orders": 2873,
     "products": 60,
     "shifts": 66
   },
   "activity": [
     {
+      "id": 1785146779105,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785146779105,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:06",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785146129372,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:46",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785145521381,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:45",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785145521381,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:45",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2872,
+    "current": 2873,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T10:08:05.867Z",
+        "id": 3920,
+        "items": [
+          "Манго Маракуя mini x1",
+          "Тапиока доп x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-тапиока-доп",
+            "name": "Тапиока доп",
+            "price": 3,
+            "qty": 1,
+            "size": "",
+            "total": 3
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 23,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 23
+      },
       {
         "createdAt": "2026-07-27T10:06:18.986Z",
         "id": 3919,
@@ -187149,14 +187187,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 53,
-        "expectedOrders": 53,
+        "databaseOrders": 54,
+        "expectedOrders": 54,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 1856,
+        "revenue": 1879,
         "status": "ok"
       },
       {
@@ -188018,7 +188056,7 @@
         "status": "ok"
       }
     ],
-    "total": 2872
+    "total": 2873
   },
   "payments": [
     {
@@ -188031,7 +188069,7 @@
     },
     {
       "method": "Alif",
-      "total": 342
+      "total": 365
     },
     {
       "method": "Dushanbe City",
@@ -188043,6 +188081,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3920,
+      "items": [
+        "Манго Маракуя mini x1",
+        "Тапиока доп x1"
+      ],
+      "status": "Оплачен",
+      "total": 23
+    },
     {
       "id": 3919,
       "items": [
@@ -188102,15 +188149,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 3912,
-      "items": [
-        "Мороженое рожок x2",
-        "Кокос добавка x1"
-      ],
-      "status": "Оплачен",
-      "total": 23
     }
   ],
   "shifts": {
@@ -188287,5 +188325,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T17:09:28.680Z"
+  "updatedAt": "2026-07-27T17:11:13.847Z"
 }

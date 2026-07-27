@@ -3269,6 +3269,7 @@ function Analytics({ addExpense, expenses, masters = [], orders, shift, shiftHis
     downloadAnalyticsReportPdf({
       activeOrders: currentActiveOrders,
       average: currentAverage,
+      masters,
       paid: currentPaid,
       paymentFilter,
       paymentTotals: currentPaymentTotals,
@@ -3494,6 +3495,7 @@ function Analytics({ addExpense, expenses, masters = [], orders, shift, shiftHis
 async function downloadAnalyticsReportPdf({
   activeOrders,
   average,
+  masters = [],
   paid,
   paymentFilter = null,
   paymentTotals,
@@ -3568,6 +3570,44 @@ async function downloadAnalyticsReportPdf({
     ];
   });
 
+  const masterRows = summarizeMasters(reportOrders, masters);
+  const masterCommissionTotal = masterRows.reduce((sum, row) => sum + row.commission, 0);
+  const mastersSection = masterRows.length
+    ? [
+        { text: 'По мастерам', style: 'sectionTitle' },
+        {
+          table: {
+            headerRows: 1,
+            widths: ['*', 'auto', 'auto', 'auto', 'auto'],
+            body: [
+              [
+                { text: 'Мастер', style: 'tableHeader' },
+                { text: '%', style: 'tableHeader', alignment: 'right' },
+                { text: 'Чеки', style: 'tableHeader', alignment: 'right' },
+                { text: 'Выручка', style: 'tableHeader', alignment: 'right' },
+                { text: 'Комиссия', style: 'tableHeader', alignment: 'right' }
+              ],
+              ...masterRows.map((row) => [
+                row.name,
+                { text: `${row.percent}%`, alignment: 'right' },
+                { text: String(row.orders), alignment: 'right' },
+                { text: currency.format(row.revenue), alignment: 'right' },
+                { text: currency.format(row.commission), alignment: 'right', bold: true }
+              ]),
+              [
+                { text: 'Итого комиссий', colSpan: 4, bold: true },
+                {},
+                {},
+                {},
+                { text: currency.format(masterCommissionTotal), alignment: 'right', bold: true }
+              ]
+            ]
+          },
+          layout: 'lightHorizontalLines'
+        }
+      ]
+    : [];
+
   const docDefinition = {
     pageSize: 'A4',
     pageMargins: [34, 34, 34, 34],
@@ -3631,6 +3671,7 @@ async function downloadAnalyticsReportPdf({
         },
         layout: 'lightHorizontalLines'
       },
+      ...mastersSection,
       { text: 'Заказы по способам оплаты', style: 'sectionTitle' },
       ...paymentOrderSections
     ]

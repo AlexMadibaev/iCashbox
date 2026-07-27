@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 20,
-    "checks": 2,
+    "average": 30,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -165,
-    "revenue": 40
+    "net": -115,
+    "revenue": 90
   },
   "data": {
-    "actions": 6184,
+    "actions": 6186,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2821,
+    "orders": 2822,
     "products": 60,
     "shifts": 66
   },
   "activity": [
+    {
+      "id": 1785106918175,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:01",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785106918175,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:01",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785105115119,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:20",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785057628280,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:20",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785056667413,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:04",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2821,
+    "current": 2822,
     "old": [
       {
         "createdAt": "2026-07-26T09:53:07.192Z",
@@ -92816,6 +92816,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-26T23:25:43.290Z",
+        "id": 3869,
+        "items": [
+          "МангоБанан mini x1",
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-27",
+        "shiftLabel": "Смена 27.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-26T23:01:58.060Z",
         "id": 3868,
@@ -185499,14 +185537,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-27",
         "label": "Смена 27.07",
         "missingOrders": 0,
-        "revenue": 40,
+        "revenue": 90,
         "status": "ok"
       },
       {
@@ -186368,12 +186406,12 @@
         "status": "ok"
       }
     ],
-    "total": 2821
+    "total": 2822
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 20
+      "total": 70
     },
     {
       "method": "Карта",
@@ -186393,6 +186431,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3869,
+      "items": [
+        "МангоБанан mini x1",
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 3868,
       "items": [
@@ -186543,6 +186590,16 @@
   },
   "topProducts": [
     {
+      "name": "МангоБанан mini",
+      "qty": 1,
+      "total": 25
+    },
+    {
+      "name": "Черника mini",
+      "qty": 1,
+      "total": 25
+    },
+    {
       "name": "Blue mini",
       "qty": 1,
       "total": 20
@@ -186554,5 +186611,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-27T06:05:08.127Z"
+  "updatedAt": "2026-07-27T06:28:53.175Z"
 }

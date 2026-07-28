@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.11764705882353,
-    "checks": 34,
+    "average": 39.57142857142857,
+    "checks": 35,
     "expenseTotal": 205,
-    "net": 1125,
-    "revenue": 1330
+    "net": 1180,
+    "revenue": 1385
   },
   "data": {
-    "actions": 6359,
+    "actions": 6361,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2908,
+    "orders": 2909,
     "products": 60,
     "shifts": 67
   },
   "activity": [
     {
+      "id": 1785223491836,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:24",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785223491836,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:24",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785222969644,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:39",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785219589386,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785219589386,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:19",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2908,
+    "current": 2909,
     "old": [
       {
         "createdAt": "2026-07-27T10:46:40.020Z",
@@ -94591,6 +94591,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-28T07:27:50.305Z",
+        "id": 3956,
+        "items": [
+          "АйсМатча манго x1",
+          "Жасмин лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-манго",
+            "name": "АйсМатча манго",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-жасмин-лимон-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 55,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-28",
+        "shiftLabel": "Смена 28.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 55
+      },
       {
         "createdAt": "2026-07-28T07:24:51.704Z",
         "id": 3955,
@@ -190139,14 +190177,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-28",
         "label": "Смена 28.07",
         "missingOrders": 0,
-        "revenue": 1330,
+        "revenue": 1385,
         "status": "ok"
       },
       {
@@ -191021,12 +191059,12 @@
         "status": "ok"
       }
     ],
-    "total": 2908
+    "total": 2909
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 970
+      "total": 1025
     },
     {
       "method": "Карта",
@@ -191046,6 +191084,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3956,
+      "items": [
+        "АйсМатча манго x1",
+        "Жасмин лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 55
+    },
     {
       "id": 3955,
       "items": [
@@ -191105,14 +191152,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3948,
-      "items": [
-        "Babl tea big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -191268,6 +191307,11 @@
       "total": 75
     },
     {
+      "name": "АйсМатча манго",
+      "qty": 2,
+      "total": 70
+    },
+    {
       "name": "АйсМатча клубника",
       "qty": 2,
       "total": 70
@@ -191281,13 +191325,8 @@
       "name": "Matcha mini",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Клубничный жасмин mini",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-28T14:28:03.337Z"
+  "updatedAt": "2026-07-28T14:31:00.332Z"
 }

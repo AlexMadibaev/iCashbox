@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.80555555555556,
-    "checks": 36,
+    "average": 40.78378378378378,
+    "checks": 37,
     "expenseTotal": 205,
-    "net": 1264,
-    "revenue": 1469
+    "net": 1304,
+    "revenue": 1509
   },
   "data": {
-    "actions": 6363,
+    "actions": 6365,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2910,
+    "orders": 2911,
     "products": 60,
     "shifts": 67
   },
   "activity": [
     {
+      "id": 1785224114801,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:35",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785224114801,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:35",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785223670425,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785222327006,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:05",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785222327006,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:05",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2910,
+    "current": 2911,
     "old": [
       {
         "createdAt": "2026-07-27T10:46:40.020Z",
@@ -94591,6 +94591,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-28T07:40:12.913Z",
+        "id": 3958,
+        "items": [
+          "Мороженое рожок x4"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 4,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 40,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-28",
+        "shiftLabel": "Смена 28.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-28T07:35:14.677Z",
         "id": 3957,
@@ -190215,14 +190244,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 36,
-        "expectedOrders": 36,
+        "databaseOrders": 37,
+        "expectedOrders": 37,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-28",
         "label": "Смена 28.07",
         "missingOrders": 0,
-        "revenue": 1469,
+        "revenue": 1509,
         "status": "ok"
       },
       {
@@ -191097,7 +191126,7 @@
         "status": "ok"
       }
     ],
-    "total": 2910
+    "total": 2911
   },
   "payments": [
     {
@@ -191114,7 +191143,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 61
+      "total": 101
     },
     {
       "method": "Семья",
@@ -191122,6 +191151,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3958,
+      "items": [
+        "Мороженое рожок x4"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3957,
       "items": [
@@ -191181,16 +191218,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 3950,
-      "items": [
-        "Фреш лимон mini x1",
-        "Манго Маракуя mini x1",
-        "Клубника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 55
     }
   ],
   "shifts": {
@@ -191326,14 +191353,14 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое рожок",
+      "qty": 12,
+      "total": 120
+    },
+    {
       "name": "Babl tea big",
       "qty": 4,
       "total": 104
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 8,
-      "total": 80
     },
     {
       "name": "Babl tea mini",
@@ -191367,5 +191394,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-28T14:38:26.188Z"
+  "updatedAt": "2026-07-28T14:43:22.770Z"
 }

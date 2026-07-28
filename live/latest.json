@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.57575757575758,
-    "checks": 33,
+    "average": 39.11764705882353,
+    "checks": 34,
     "expenseTotal": 205,
-    "net": 1068,
-    "revenue": 1273
+    "net": 1125,
+    "revenue": 1330
   },
   "data": {
-    "actions": 6357,
+    "actions": 6359,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2907,
+    "orders": 2908,
     "products": 60,
     "shifts": 67
   },
   "activity": [
     {
+      "id": 1785222969644,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:16",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785222969644,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:16",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785222745963,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:19",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785219390640,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:16",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785219390640,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:16",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2907,
+    "current": 2908,
     "old": [
       {
         "createdAt": "2026-07-27T10:46:40.020Z",
@@ -94591,6 +94591,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-28T07:24:51.704Z",
+        "id": 3955,
+        "items": [
+          "Жасмин гранат big x1",
+          "Тапиока доп x2",
+          "ПиноКолада mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-гранат-big",
+            "name": "Жасмин гранат big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-тапиока-доп",
+            "name": "Тапиока доп",
+            "price": 3,
+            "qty": 2,
+            "size": "",
+            "total": 6
+          },
+          {
+            "id": "product-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-28",
+        "shiftLabel": "Смена 28.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 57
+      },
       {
         "createdAt": "2026-07-28T07:16:09.511Z",
         "id": 3954,
@@ -190092,14 +190139,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 33,
-        "expectedOrders": 33,
+        "databaseOrders": 34,
+        "expectedOrders": 34,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-28",
         "label": "Смена 28.07",
         "missingOrders": 0,
-        "revenue": 1273,
+        "revenue": 1330,
         "status": "ok"
       },
       {
@@ -190974,12 +191021,12 @@
         "status": "ok"
       }
     ],
-    "total": 2907
+    "total": 2908
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 913
+      "total": 970
     },
     {
       "method": "Карта",
@@ -190999,6 +191046,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3955,
+      "items": [
+        "Жасмин гранат big x1",
+        "Тапиока доп x2",
+        "ПиноКолада mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 57
+    },
     {
       "id": 3954,
       "items": [
@@ -191056,14 +191113,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 3947,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -191209,6 +191258,11 @@
       "total": 80
     },
     {
+      "name": "ПиноКолада mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "Черника mini",
       "qty": 3,
       "total": 75
@@ -191232,13 +191286,8 @@
       "name": "Клубничный жасмин mini",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Черника big",
-      "qty": 2,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-28T14:19:20.472Z"
+  "updatedAt": "2026-07-28T14:28:03.337Z"
 }

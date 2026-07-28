@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.875,
-    "checks": 16,
+    "average": 41.529411764705884,
+    "checks": 17,
     "expenseTotal": 205,
-    "net": 481,
-    "revenue": 686
+    "net": 501,
+    "revenue": 706
   },
   "data": {
-    "actions": 6323,
+    "actions": 6325,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2890,
+    "orders": 2891,
     "products": 60,
     "shifts": 67
   },
   "activity": [
     {
+      "id": 1785214263091,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:51",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785214263091,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:51",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785214117155,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:36",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785209404332,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:30",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785209404332,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:30",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2890,
+    "current": 2891,
     "old": [
       {
         "createdAt": "2026-07-27T10:46:40.020Z",
@@ -94591,6 +94591,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-28T04:59:18.818Z",
+        "id": 3938,
+        "items": [
+          "Мороженое с чёрным сахаром x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-чёрным-сахаром",
+            "name": "Мороженое с чёрным сахаром",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-28",
+        "shiftLabel": "Смена 28.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-28T04:51:02.983Z",
         "id": 3937,
@@ -189527,14 +189556,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 16,
-        "expectedOrders": 16,
+        "databaseOrders": 17,
+        "expectedOrders": 17,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-28",
         "label": "Смена 28.07",
         "missingOrders": 0,
-        "revenue": 686,
+        "revenue": 706,
         "status": "ok"
       },
       {
@@ -190409,12 +190438,12 @@
         "status": "ok"
       }
     ],
-    "total": 2890
+    "total": 2891
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 466
+      "total": 486
     },
     {
       "method": "Карта",
@@ -190434,6 +190463,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3938,
+      "items": [
+        "Мороженое с чёрным сахаром x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 3937,
       "items": [
@@ -190491,14 +190528,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3930,
-      "items": [
-        "Клубника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -190675,5 +190704,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-28T11:54:13.442Z"
+  "updatedAt": "2026-07-28T12:02:30.625Z"
 }

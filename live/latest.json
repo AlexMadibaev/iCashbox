@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 32.5,
-    "checks": 2,
+    "average": 51.666666666666664,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -140,
-    "revenue": 65
+    "net": -50,
+    "revenue": 155
   },
   "data": {
-    "actions": 6295,
+    "actions": 6297,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2876,
+    "orders": 2877,
     "products": 60,
     "shifts": 67
   },
   "activity": [
+    {
+      "id": 1785197106673,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:05",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785197106673,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:05",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785195125362,
       "source": "Локально",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1785146129372,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:55",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785146129372,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:55",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785146102991,
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:55",
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2876,
+    "current": 2877,
     "old": [
       {
         "createdAt": "2026-07-27T10:46:40.020Z",
@@ -94591,6 +94591,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-28T00:09:39.814Z",
+        "id": 3924,
+        "items": [
+          "Черника mini x2",
+          "Смузи Ягодный x1"
+        ],
+        "lines": [
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          },
+          {
+            "id": "product-смузи-ягодный",
+            "name": "Смузи Ягодный",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 90,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-28",
+        "shiftLabel": "Смена 28.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 90
+      },
       {
         "createdAt": "2026-07-28T00:05:06.554Z",
         "id": 3923,
@@ -189058,14 +189096,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-28",
         "label": "Смена 28.07",
         "missingOrders": 0,
-        "revenue": 65,
+        "revenue": 155,
         "status": "ok"
       },
       {
@@ -189940,12 +189978,12 @@
         "status": "ok"
       }
     ],
-    "total": 2876
+    "total": 2877
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 40
+      "total": 130
     },
     {
       "method": "Карта",
@@ -189965,6 +190003,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3924,
+      "items": [
+        "Черника mini x2",
+        "Смузи Ягодный x1"
+      ],
+      "status": "Оплачен",
+      "total": 90
+    },
     {
       "id": 3923,
       "items": [
@@ -190117,8 +190164,13 @@
   "topProducts": [
     {
       "name": "Черника mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
+      "name": "Смузи Ягодный",
       "qty": 1,
-      "total": 25
+      "total": 40
     },
     {
       "name": "Клубника mini",
@@ -190132,5 +190184,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-28T07:08:18.470Z"
+  "updatedAt": "2026-07-28T07:12:50.063Z"
 }

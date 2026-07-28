@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.333333333333336,
-    "checks": 45,
+    "average": 40.76086956521739,
+    "checks": 46,
     "expenseTotal": 205,
-    "net": 1610,
-    "revenue": 1815
+    "net": 1670,
+    "revenue": 1875
   },
   "data": {
-    "actions": 6381,
+    "actions": 6383,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2919,
+    "orders": 2920,
     "products": 60,
     "shifts": 67
   },
   "activity": [
     {
+      "id": 1785228379747,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:46",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785228379747,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:46",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785228268418,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785225686545,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:01",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785225686545,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:01",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2919,
+    "current": 2920,
     "old": [
       {
         "createdAt": "2026-07-27T10:46:40.020Z",
@@ -94591,6 +94591,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-28T09:09:45.949Z",
+        "id": 3967,
+        "items": [
+          "Babl tea mini x3"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 3,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 60,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-28",
+        "shiftLabel": "Смена 28.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-28T08:46:19.617Z",
         "id": 3966,
@@ -190512,14 +190541,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 45,
-        "expectedOrders": 45,
+        "databaseOrders": 46,
+        "expectedOrders": 46,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-28",
         "label": "Смена 28.07",
         "missingOrders": 0,
-        "revenue": 1815,
+        "revenue": 1875,
         "status": "ok"
       },
       {
@@ -191394,7 +191423,7 @@
         "status": "ok"
       }
     ],
-    "total": 2919
+    "total": 2920
   },
   "payments": [
     {
@@ -191407,7 +191436,7 @@
     },
     {
       "method": "Alif",
-      "total": 294
+      "total": 354
     },
     {
       "method": "Dushanbe City",
@@ -191419,6 +191448,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3967,
+      "items": [
+        "Babl tea mini x3"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3966,
       "items": [
@@ -191477,15 +191514,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3959,
-      "items": [
-        "Жасмин гранат mini x1",
-        "Виноградный тропический big x1"
-      ],
-      "status": "Оплачен",
-      "total": 46
     }
   ],
   "shifts": {
@@ -191621,6 +191649,11 @@
   },
   "topProducts": [
     {
+      "name": "Babl tea mini",
+      "qty": 7,
+      "total": 140
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 14,
       "total": 140
@@ -191654,13 +191687,8 @@
       "name": "Клубника mini",
       "qty": 4,
       "total": 80
-    },
-    {
-      "name": "Мороженое клубничное",
-      "qty": 4,
-      "total": 80
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-28T15:49:29.914Z"
+  "updatedAt": "2026-07-28T16:13:00.360Z"
 }

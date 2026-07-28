@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.529411764705884,
-    "checks": 17,
+    "average": 43.111111111111114,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 501,
-    "revenue": 706
+    "net": 571,
+    "revenue": 776
   },
   "data": {
-    "actions": 6325,
+    "actions": 6327,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2891,
+    "orders": 2892,
     "products": 60,
     "shifts": 67
   },
   "activity": [
     {
+      "id": 1785214758953,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785214758953,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:59",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785214263091,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:39",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785209789316,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785209789316,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:36",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2891,
+    "current": 2892,
     "old": [
       {
         "createdAt": "2026-07-27T10:46:40.020Z",
@@ -94591,6 +94591,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-28T05:09:40.484Z",
+        "id": 3939,
+        "items": [
+          "ПиноКолада mini x1",
+          "Мороженое матча x1",
+          "Мороженое рожок x2"
+        ],
+        "lines": [
+          {
+            "id": "product-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-мороженое-матча",
+            "name": "Мороженое матча",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 2,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-28",
+        "shiftLabel": "Смена 28.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-07-28T04:59:18.818Z",
         "id": 3938,
@@ -189556,14 +189603,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-28",
         "label": "Смена 28.07",
         "missingOrders": 0,
-        "revenue": 706,
+        "revenue": 776,
         "status": "ok"
       },
       {
@@ -190438,12 +190485,12 @@
         "status": "ok"
       }
     ],
-    "total": 2891
+    "total": 2892
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 486
+      "total": 556
     },
     {
       "method": "Карта",
@@ -190463,6 +190510,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3939,
+      "items": [
+        "ПиноКолада mini x1",
+        "Мороженое матча x1",
+        "Мороженое рожок x2"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 3938,
       "items": [
@@ -190520,14 +190577,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3931,
-      "items": [
-        "Клубничный жасмин mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -190693,16 +190742,16 @@
       "total": 60
     },
     {
-      "name": "Клубника mini",
-      "qty": 2,
+      "name": "Мороженое рожок",
+      "qty": 4,
       "total": 40
     },
     {
-      "name": "Смузи Ягодный",
-      "qty": 1,
+      "name": "Клубника mini",
+      "qty": 2,
       "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-28T12:02:30.625Z"
+  "updatedAt": "2026-07-28T12:12:51.991Z"
 }

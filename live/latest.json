@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.41935483870968,
-    "checks": 31,
+    "average": 38.96875,
+    "checks": 32,
     "expenseTotal": 205,
-    "net": 1017,
-    "revenue": 1222
+    "net": 1042,
+    "revenue": 1247
   },
   "data": {
-    "actions": 6353,
+    "actions": 6355,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2905,
+    "orders": 2906,
     "products": 60,
     "shifts": 67
   },
   "activity": [
     {
+      "id": 1785222676911,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:11",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785222676911,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:11",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785222327006,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:14",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785219026872,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:10",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785219026872,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:10",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2905,
+    "current": 2906,
     "old": [
       {
         "createdAt": "2026-07-27T10:46:40.020Z",
@@ -94591,6 +94591,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-28T07:12:25.846Z",
+        "id": 3953,
+        "items": [
+          "Капучино x1"
+        ],
+        "lines": [
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-28",
+        "shiftLabel": "Смена 28.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-28T07:11:16.778Z",
         "id": 3952,
@@ -190034,14 +190063,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 31,
-        "expectedOrders": 31,
+        "databaseOrders": 32,
+        "expectedOrders": 32,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-28",
         "label": "Смена 28.07",
         "missingOrders": 0,
-        "revenue": 1222,
+        "revenue": 1247,
         "status": "ok"
       },
       {
@@ -190916,12 +190945,12 @@
         "status": "ok"
       }
     ],
-    "total": 2905
+    "total": 2906
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 862
+      "total": 887
     },
     {
       "method": "Карта",
@@ -190941,6 +190970,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3953,
+      "items": [
+        "Капучино x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 3952,
       "items": [
@@ -190999,14 +191036,6 @@
       ],
       "status": "Оплачен",
       "total": 75
-    },
-    {
-      "id": 3945,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -191183,5 +191212,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-28T14:14:28.058Z"
+  "updatedAt": "2026-07-28T14:15:35.757Z"
 }

@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 25,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -180,
+    "revenue": 25
   },
   "data": {
     "actions": 6293,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2874,
+    "orders": 2875,
     "products": 60,
     "shifts": 67
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2874,
+    "current": 2875,
     "old": [
       {
         "createdAt": "2026-07-27T10:46:40.020Z",
@@ -94591,6 +94591,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-27T23:32:05.233Z",
+        "id": 3922,
+        "items": [
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 25,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-28",
+        "shiftLabel": "Смена 28.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-27T10:46:40.020Z",
         "id": 3921,
@@ -188991,15 +189020,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-07-28",
         "label": "Смена 28.07",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 25,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -189873,7 +189902,7 @@
         "status": "ok"
       }
     ],
-    "total": 2874
+    "total": 2875
   },
   "payments": [
     {
@@ -189886,7 +189915,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 25
     },
     {
       "method": "Dushanbe City",
@@ -189897,7 +189926,16 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 3922,
+      "items": [
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -190029,7 +190067,13 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Черника mini",
+      "qty": 1,
+      "total": 25
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-07-28T04:40:26.524Z"
+  "updatedAt": "2026-07-28T06:35:17.333Z"
 }

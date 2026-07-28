@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.04,
-    "checks": 25,
+    "average": 39.84615384615385,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 821,
-    "revenue": 1026
+    "net": 831,
+    "revenue": 1036
   },
   "data": {
-    "actions": 6341,
+    "actions": 6343,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2899,
+    "orders": 2900,
     "products": 60,
     "shifts": 67
   },
   "activity": [
     {
+      "id": 1785219026872,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:10",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785219026872,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:10",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785218656597,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1785215519110,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785215472789,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:11",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785215472789,
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:11",
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2899,
+    "current": 2900,
     "old": [
       {
         "createdAt": "2026-07-27T10:46:40.020Z",
@@ -94591,6 +94591,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-28T06:14:30.852Z",
+        "id": 3947,
+        "items": [
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 10,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-28",
+        "shiftLabel": "Смена 28.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 10
+      },
       {
         "createdAt": "2026-07-28T06:10:26.749Z",
         "id": 3946,
@@ -189842,14 +189871,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-28",
         "label": "Смена 28.07",
         "missingOrders": 0,
-        "revenue": 1026,
+        "revenue": 1036,
         "status": "ok"
       },
       {
@@ -190724,7 +190753,7 @@
         "status": "ok"
       }
     ],
-    "total": 2899
+    "total": 2900
   },
   "payments": [
     {
@@ -190737,7 +190766,7 @@
     },
     {
       "method": "Alif",
-      "total": 249
+      "total": 259
     },
     {
       "method": "Dushanbe City",
@@ -190749,6 +190778,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3947,
+      "items": [
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 10
+    },
     {
       "id": 3946,
       "items": [
@@ -190808,16 +190845,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 3939,
-      "items": [
-        "ПиноКолада mini x1",
-        "Мороженое матча x1",
-        "Мороженое рожок x2"
-      ],
-      "status": "Оплачен",
-      "total": 70
     }
   ],
   "shifts": {
@@ -190953,6 +190980,11 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое рожок",
+      "qty": 8,
+      "total": 80
+    },
+    {
       "name": "Babl tea mini",
       "qty": 4,
       "total": 80
@@ -190961,11 +190993,6 @@
       "name": "Черника mini",
       "qty": 3,
       "total": 75
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 7,
-      "total": 70
     },
     {
       "name": "АйсМатча клубника",
@@ -190994,5 +191021,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-28T13:13:37.721Z"
+  "updatedAt": "2026-07-28T13:17:40.971Z"
 }

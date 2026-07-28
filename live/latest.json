@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 49.142857142857146,
-    "checks": 7,
+    "average": 58,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": 139,
-    "revenue": 344
+    "net": 259,
+    "revenue": 464
   },
   "data": {
-    "actions": 6305,
+    "actions": 6307,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2881,
+    "orders": 2882,
     "products": 60,
     "shifts": 67
   },
   "activity": [
     {
+      "id": 1785207609189,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785207609189,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:00",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785207266165,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:05",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785195125362,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:32",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785195125362,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:32",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2881,
+    "current": 2882,
     "old": [
       {
         "createdAt": "2026-07-27T10:46:40.020Z",
@@ -94591,6 +94591,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-28T03:09:12.398Z",
+        "id": 3929,
+        "items": [
+          "Черника big x2",
+          "Клубничный big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          },
+          {
+            "id": "product-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 120,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-28",
+        "shiftLabel": "Смена 28.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 120
+      },
       {
         "createdAt": "2026-07-28T03:00:09.079Z",
         "id": 3928,
@@ -189239,14 +189277,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-28",
         "label": "Смена 28.07",
         "missingOrders": 0,
-        "revenue": 344,
+        "revenue": 464,
         "status": "ok"
       },
       {
@@ -190121,12 +190159,12 @@
         "status": "ok"
       }
     ],
-    "total": 2881
+    "total": 2882
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 170
+      "total": 290
     },
     {
       "method": "Карта",
@@ -190146,6 +190184,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3929,
+      "items": [
+        "Черника big x2",
+        "Клубничный big x2"
+      ],
+      "status": "Оплачен",
+      "total": 120
+    },
     {
       "id": 3928,
       "items": [
@@ -190351,6 +190398,16 @@
       "total": 70
     },
     {
+      "name": "Черника big",
+      "qty": 2,
+      "total": 60
+    },
+    {
+      "name": "Клубничный big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Смузи Ягодный",
       "qty": 1,
       "total": 40
@@ -190369,18 +190426,8 @@
       "name": "Жасмин лимон mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 2,
-      "total": 20
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-28T10:03:21.102Z"
+  "updatedAt": "2026-07-28T10:12:24.252Z"
 }

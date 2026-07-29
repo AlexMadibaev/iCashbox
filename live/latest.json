@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.7,
-    "checks": 30,
+    "average": 39.38709677419355,
+    "checks": 31,
     "expenseTotal": 205,
-    "net": 986,
-    "revenue": 1191
+    "net": 1016,
+    "revenue": 1221
   },
   "data": {
-    "actions": 6454,
+    "actions": 6456,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2955,
+    "orders": 2956,
     "products": 60,
     "shifts": 68
   },
   "activity": [
     {
+      "id": 1785315623604,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785315623604,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:00",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785314544668,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:51",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785311135639,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:45",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785311135639,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:45",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2955,
+    "current": 2956,
     "old": [
       {
         "createdAt": "2026-07-28T10:36:02.785Z",
@@ -96331,6 +96331,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-29T09:05:44.481Z",
+        "id": 4003,
+        "items": [
+          "Айс Латте x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айс-латте",
+            "name": "Айс Латте",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-29",
+        "shiftLabel": "Смена 29.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-07-29T09:00:23.483Z",
         "id": 4002,
@@ -193494,14 +193523,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 30,
-        "expectedOrders": 30,
+        "databaseOrders": 31,
+        "expectedOrders": 31,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-29",
         "label": "Смена 29.07",
         "missingOrders": 0,
-        "revenue": 1191,
+        "revenue": 1221,
         "status": "ok"
       },
       {
@@ -194389,12 +194418,12 @@
         "status": "ok"
       }
     ],
-    "total": 2955
+    "total": 2956
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 744
+      "total": 774
     },
     {
       "method": "Карта",
@@ -194414,6 +194443,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4003,
+      "items": [
+        "Айс Латте x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 4002,
       "items": [
@@ -194473,15 +194510,6 @@
       ],
       "status": "Оплачен",
       "total": 61
-    },
-    {
-      "id": 3995,
-      "items": [
-        "Babl tea mini x1",
-        "Клубника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -194622,6 +194650,11 @@
       "total": 120
     },
     {
+      "name": "Айс Латте",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "ПиноКолада big",
       "qty": 3,
       "total": 90
@@ -194650,13 +194683,8 @@
       "name": "Matcha mini",
       "qty": 2,
       "total": 60
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-29T16:03:36.842Z"
+  "updatedAt": "2026-07-29T16:08:57.361Z"
 }

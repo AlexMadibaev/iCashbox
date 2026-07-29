@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 44.76923076923077,
-    "checks": 13,
+    "average": 43.214285714285715,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 377,
-    "revenue": 582
+    "net": 400,
+    "revenue": 605
   },
   "data": {
-    "actions": 6420,
+    "actions": 6422,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2938,
+    "orders": 2939,
     "products": 60,
     "shifts": 68
   },
   "activity": [
     {
+      "id": 1785291757044,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785291757044,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785291658642,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:38",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785288326609,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:25",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785288326609,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:25",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2938,
+    "current": 2939,
     "old": [
       {
         "createdAt": "2026-07-28T10:36:02.785Z",
@@ -96331,6 +96331,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-29T02:34:12.744Z",
+        "id": 3986,
+        "items": [
+          "Мороженое с чёрным сахаром x1",
+          "Тапиока доп x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-чёрным-сахаром",
+            "name": "Мороженое с чёрным сахаром",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-тапиока-доп",
+            "name": "Тапиока доп",
+            "price": 3,
+            "qty": 1,
+            "size": "",
+            "total": 3
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-29",
+        "shiftLabel": "Смена 29.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 23
+      },
       {
         "createdAt": "2026-07-29T02:22:36.921Z",
         "id": 3985,
@@ -192920,14 +192958,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-29",
         "label": "Смена 29.07",
         "missingOrders": 0,
-        "revenue": 582,
+        "revenue": 605,
         "status": "ok"
       },
       {
@@ -193815,12 +193853,12 @@
         "status": "ok"
       }
     ],
-    "total": 2938
+    "total": 2939
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 360
+      "total": 383
     },
     {
       "method": "Карта",
@@ -193840,6 +193878,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3986,
+      "items": [
+        "Мороженое с чёрным сахаром x1",
+        "Тапиока доп x1"
+      ],
+      "status": "Оплачен",
+      "total": 23
+    },
     {
       "id": 3985,
       "items": [
@@ -193900,15 +193947,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3978,
-      "items": [
-        "Babl tea mini x2",
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -194069,6 +194107,11 @@
       "total": 52
     },
     {
+      "name": "Мороженое с чёрным сахаром",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Мороженое манго",
       "qty": 2,
       "total": 40
@@ -194077,13 +194120,8 @@
       "name": "Черника big",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Манго big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-29T09:25:48.458Z"
+  "updatedAt": "2026-07-29T09:37:25.947Z"
 }

@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 92,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -113,
+    "revenue": 92
   },
   "data": {
     "actions": 6396,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2925,
+    "orders": 2926,
     "products": 60,
     "shifts": 68
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2925,
+    "current": 2926,
     "old": [
       {
         "createdAt": "2026-07-28T10:36:02.785Z",
@@ -96331,6 +96331,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-28T22:03:52.589Z",
+        "id": 3973,
+        "items": [
+          "Blue big x2",
+          "Мороженое манго x1",
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-big",
+            "name": "Blue big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          },
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-29",
+        "shiftLabel": "Смена 29.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 92
+      },
       {
         "createdAt": "2026-07-28T10:36:02.785Z",
         "id": 3972,
@@ -192471,15 +192518,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-07-29",
         "label": "Смена 29.07",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 92,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -193366,12 +193413,12 @@
         "status": "ok"
       }
     ],
-    "total": 2925
+    "total": 2926
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 92
     },
     {
       "method": "Карта",
@@ -193390,7 +193437,18 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 3973,
+      "items": [
+        "Blue big x2",
+        "Мороженое манго x1",
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 92
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -193522,7 +193580,23 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Blue big",
+      "qty": 2,
+      "total": 52
+    },
+    {
+      "name": "Мороженое манго",
+      "qty": 1,
+      "total": 20
+    },
+    {
+      "name": "Мороженое классическое",
+      "qty": 1,
+      "total": 20
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-07-29T04:24:33.240Z"
+  "updatedAt": "2026-07-29T05:07:05.847Z"
 }

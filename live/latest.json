@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.57142857142857,
-    "checks": 7,
+    "average": 44.75,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": 93,
-    "revenue": 298
+    "net": 153,
+    "revenue": 358
   },
   "data": {
-    "actions": 6408,
+    "actions": 6410,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2932,
+    "orders": 2933,
     "products": 60,
     "shifts": 68
   },
   "activity": [
     {
+      "id": 1785288326609,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:25",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785288326609,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:25",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785287300624,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "10:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785276232718,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:03",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785276232718,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:03",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2932,
+    "current": 2933,
     "old": [
       {
         "createdAt": "2026-07-28T10:36:02.785Z",
@@ -96331,6 +96331,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-29T01:38:10.083Z",
+        "id": 3980,
+        "items": [
+          "ПиноКолада big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 60,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-29",
+        "shiftLabel": "Смена 29.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-29T01:25:26.478Z",
         "id": 3979,
@@ -192710,14 +192739,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-29",
         "label": "Смена 29.07",
         "missingOrders": 0,
-        "revenue": 298,
+        "revenue": 358,
         "status": "ok"
       },
       {
@@ -193605,7 +193634,7 @@
         "status": "ok"
       }
     ],
-    "total": 2932
+    "total": 2933
   },
   "payments": [
     {
@@ -193622,7 +193651,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 0
+      "total": 60
     },
     {
       "method": "Семья",
@@ -193630,6 +193659,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3980,
+      "items": [
+        "ПиноКолада big x2"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 3979,
       "items": [
@@ -193824,6 +193861,11 @@
   },
   "topProducts": [
     {
+      "name": "ПиноКолада big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Мороженое Орео",
       "qty": 3,
       "total": 60
@@ -193857,13 +193899,8 @@
       "name": "Клубника mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-29T08:28:39.744Z"
+  "updatedAt": "2026-07-29T08:41:23.395Z"
 }

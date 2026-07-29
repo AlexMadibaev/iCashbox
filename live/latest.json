@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.51724137931034,
-    "checks": 29,
+    "average": 39.7,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 941,
-    "revenue": 1146
+    "net": 986,
+    "revenue": 1191
   },
   "data": {
-    "actions": 6452,
+    "actions": 6454,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2954,
+    "orders": 2955,
     "products": 60,
     "shifts": 68
   },
   "activity": [
     {
+      "id": 1785314544668,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:42",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785314544668,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:42",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785313983614,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:45",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785308711996,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:05",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785308711996,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:05",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2954,
+    "current": 2955,
     "old": [
       {
         "createdAt": "2026-07-28T10:36:02.785Z",
@@ -96331,6 +96331,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-29T09:00:23.483Z",
+        "id": 4002,
+        "items": [
+          "Babl tea mini x1",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 45,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-29",
+        "shiftLabel": "Смена 29.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-07-29T08:42:24.556Z",
         "id": 4001,
@@ -193456,14 +193494,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-29",
         "label": "Смена 29.07",
         "missingOrders": 0,
-        "revenue": 1146,
+        "revenue": 1191,
         "status": "ok"
       },
       {
@@ -194351,7 +194389,7 @@
         "status": "ok"
       }
     ],
-    "total": 2954
+    "total": 2955
   },
   "payments": [
     {
@@ -194364,7 +194402,7 @@
     },
     {
       "method": "Alif",
-      "total": 160
+      "total": 205
     },
     {
       "method": "Dushanbe City",
@@ -194376,6 +194414,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4002,
+      "items": [
+        "Babl tea mini x1",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 4001,
       "items": [
@@ -194435,14 +194482,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 3994,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -194579,8 +194618,8 @@
   "topProducts": [
     {
       "name": "Babl tea mini",
-      "qty": 5,
-      "total": 100
+      "qty": 6,
+      "total": 120
     },
     {
       "name": "ПиноКолада big",
@@ -194619,5 +194658,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-29T15:45:37.742Z"
+  "updatedAt": "2026-07-29T16:03:36.842Z"
 }

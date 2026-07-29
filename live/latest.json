@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.95454545454545,
-    "checks": 22,
+    "average": 38.04347826086956,
+    "checks": 23,
     "expenseTotal": 205,
-    "net": 630,
-    "revenue": 835
+    "net": 670,
+    "revenue": 875
   },
   "data": {
-    "actions": 6438,
+    "actions": 6440,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2947,
+    "orders": 2948,
     "products": 60,
     "shifts": 68
   },
   "activity": [
     {
+      "id": 1785308223403,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:57",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785308223403,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:57",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785308077944,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:00",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785296321780,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:38",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785296321780,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:38",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2947,
+    "current": 2948,
     "old": [
       {
         "createdAt": "2026-07-28T10:36:02.785Z",
@@ -96331,6 +96331,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-29T07:05:11.865Z",
+        "id": 3995,
+        "items": [
+          "Babl tea mini x1",
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-29",
+        "shiftLabel": "Смена 29.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-29T06:57:03.283Z",
         "id": 3994,
@@ -193217,14 +193255,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 22,
-        "expectedOrders": 22,
+        "databaseOrders": 23,
+        "expectedOrders": 23,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-29",
         "label": "Смена 29.07",
         "missingOrders": 0,
-        "revenue": 835,
+        "revenue": 875,
         "status": "ok"
       },
       {
@@ -194112,12 +194150,12 @@
         "status": "ok"
       }
     ],
-    "total": 2947
+    "total": 2948
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 593
+      "total": 633
     },
     {
       "method": "Карта",
@@ -194137,6 +194175,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3995,
+      "items": [
+        "Babl tea mini x1",
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 3994,
       "items": [
@@ -194194,15 +194241,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 3987,
-      "items": [
-        "Мороженое классическое x1",
-        "МангоБанан big x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -194339,8 +194377,8 @@
   "topProducts": [
     {
       "name": "Babl tea mini",
-      "qty": 4,
-      "total": 80
+      "qty": 5,
+      "total": 100
     },
     {
       "name": "Мороженое Орео",
@@ -194379,5 +194417,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-29T14:00:15.046Z"
+  "updatedAt": "2026-07-29T14:08:25.080Z"
 }

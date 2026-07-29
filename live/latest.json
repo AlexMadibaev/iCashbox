@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.04347826086956,
-    "checks": 23,
+    "average": 39,
+    "checks": 24,
     "expenseTotal": 205,
-    "net": 670,
-    "revenue": 875
+    "net": 731,
+    "revenue": 936
   },
   "data": {
-    "actions": 6440,
+    "actions": 6442,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2948,
+    "orders": 2949,
     "products": 60,
     "shifts": 68
   },
   "activity": [
     {
+      "id": 1785308711996,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:05",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785308711996,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:05",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785308223403,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:04",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785301206458,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785301206458,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:00",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2948,
+    "current": 2949,
     "old": [
       {
         "createdAt": "2026-07-28T10:36:02.785Z",
@@ -96331,6 +96331,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-29T07:45:35.531Z",
+        "id": 3996,
+        "items": [
+          "АйсМатча манго x1",
+          "Жасмин лимон big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-манго",
+            "name": "АйсМатча манго",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-жасмин-лимон-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 103,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-29",
+        "shiftLabel": "Смена 29.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 61
+      },
       {
         "createdAt": "2026-07-29T07:05:11.865Z",
         "id": 3995,
@@ -193255,14 +193293,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 23,
-        "expectedOrders": 23,
+        "databaseOrders": 24,
+        "expectedOrders": 24,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-29",
         "label": "Смена 29.07",
         "missingOrders": 0,
-        "revenue": 875,
+        "revenue": 936,
         "status": "ok"
       },
       {
@@ -194150,12 +194188,12 @@
         "status": "ok"
       }
     ],
-    "total": 2948
+    "total": 2949
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 633
+      "total": 694
     },
     {
       "method": "Карта",
@@ -194175,6 +194213,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3996,
+      "items": [
+        "АйсМатча манго x1",
+        "Жасмин лимон big x1"
+      ],
+      "status": "Оплачен",
+      "total": 61
+    },
     {
       "id": 3995,
       "items": [
@@ -194233,14 +194280,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 3988,
-      "items": [
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -194417,5 +194456,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-29T14:08:25.080Z"
+  "updatedAt": "2026-07-29T14:48:48.895Z"
 }

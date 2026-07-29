@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.111111111111114,
-    "checks": 9,
+    "average": 44,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 183,
-    "revenue": 388
+    "net": 235,
+    "revenue": 440
   },
   "data": {
-    "actions": 6412,
+    "actions": 6414,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2934,
+    "orders": 2935,
     "products": 60,
     "shifts": 68
   },
   "activity": [
     {
+      "id": 1785289470387,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:44",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785289470387,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:44",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785289090198,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:15",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785280651856,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:17",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785280651856,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:17",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2934,
+    "current": 2935,
     "old": [
       {
         "createdAt": "2026-07-28T10:36:02.785Z",
@@ -96331,6 +96331,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-29T01:56:47.592Z",
+        "id": 3982,
+        "items": [
+          "Жасмин гранат big x1",
+          "Виноградный тропический big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-гранат-big",
+            "name": "Жасмин гранат big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-виноградный-тропический-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 52,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-29",
+        "shiftLabel": "Смена 29.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-07-29T01:44:30.250Z",
         "id": 3981,
@@ -192768,14 +192806,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-29",
         "label": "Смена 29.07",
         "missingOrders": 0,
-        "revenue": 388,
+        "revenue": 440,
         "status": "ok"
       },
       {
@@ -193663,7 +193701,7 @@
         "status": "ok"
       }
     ],
-    "total": 2934
+    "total": 2935
   },
   "payments": [
     {
@@ -193680,7 +193718,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 60
+      "total": 112
     },
     {
       "method": "Семья",
@@ -193688,6 +193726,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3982,
+      "items": [
+        "Жасмин гранат big x1",
+        "Виноградный тропический big x1"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 3981,
       "items": [
@@ -193745,14 +193792,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 3974,
-      "items": [
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -193918,16 +193957,16 @@
       "total": 30
     },
     {
-      "name": "Клубничный жасмин big",
+      "name": "Жасмин гранат big",
       "qty": 1,
       "total": 26
     },
     {
-      "name": "Мороженое с чёрным сахаром",
+      "name": "Виноградный тропический big",
       "qty": 1,
-      "total": 20
+      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-29T08:47:43.566Z"
+  "updatedAt": "2026-07-29T09:00:01.134Z"
 }

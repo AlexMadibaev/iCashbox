@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.77777777777778,
-    "checks": 36,
+    "average": 38.7027027027027,
+    "checks": 37,
     "expenseTotal": 205,
-    "net": 1191,
-    "revenue": 1396
+    "net": 1227,
+    "revenue": 1432
   },
   "data": {
-    "actions": 6466,
+    "actions": 6468,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2961,
+    "orders": 2962,
     "products": 60,
     "shifts": 68
   },
   "activity": [
     {
+      "id": 1785317776617,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:36",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785317776617,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:36",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785316968114,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:05",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785315623604,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785315623604,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:00",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2961,
+    "current": 2962,
     "old": [
       {
         "createdAt": "2026-07-28T10:36:02.785Z",
@@ -96331,6 +96331,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-29T09:44:58.498Z",
+        "id": 4009,
+        "items": [
+          "Мороженое рожок x1",
+          "Жасмин гранат big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          },
+          {
+            "id": "product-жасмин-гранат-big",
+            "name": "Жасмин гранат big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 36,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-29",
+        "shiftLabel": "Смена 29.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 36
+      },
       {
         "createdAt": "2026-07-29T09:36:16.509Z",
         "id": 4008,
@@ -193695,14 +193733,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 36,
-        "expectedOrders": 36,
+        "databaseOrders": 37,
+        "expectedOrders": 37,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-29",
         "label": "Смена 29.07",
         "missingOrders": 0,
-        "revenue": 1396,
+        "revenue": 1432,
         "status": "ok"
       },
       {
@@ -194590,7 +194628,7 @@
         "status": "ok"
       }
     ],
-    "total": 2961
+    "total": 2962
   },
   "payments": [
     {
@@ -194599,7 +194637,7 @@
     },
     {
       "method": "Карта",
-      "total": 20
+      "total": 56
     },
     {
       "method": "Alif",
@@ -194615,6 +194653,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4009,
+      "items": [
+        "Мороженое рожок x1",
+        "Жасмин гранат big x1"
+      ],
+      "status": "Оплачен",
+      "total": 36
+    },
     {
       "id": 4008,
       "items": [
@@ -194674,16 +194721,6 @@
       ],
       "status": "Оплачен",
       "total": 45
-    },
-    {
-      "id": 4001,
-      "items": [
-        "Мороженое с чёрным сахаром x1",
-        "Мороженое клубничное x1",
-        "МангоБанан mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 90
     }
   ],
   "shifts": {
@@ -194860,5 +194897,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-29T16:39:29.443Z"
+  "updatedAt": "2026-07-29T16:48:11.678Z"
 }

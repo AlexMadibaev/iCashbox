@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 61,
-    "checks": 2,
+    "average": 49.333333333333336,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -83,
-    "revenue": 122
+    "net": -57,
+    "revenue": 148
   },
   "data": {
-    "actions": 6398,
+    "actions": 6400,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2927,
+    "orders": 2928,
     "products": 60,
     "shifts": 68
   },
   "activity": [
+    {
+      "id": 1785279178143,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:52",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785279178143,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:52",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785276232718,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:28",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785230907625,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:28",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785230552126,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:22",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2927,
+    "current": 2928,
     "old": [
       {
         "createdAt": "2026-07-28T10:36:02.785Z",
@@ -96331,6 +96331,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-28T23:17:31.730Z",
+        "id": 3975,
+        "items": [
+          "Клубничный жасмин big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-big",
+            "name": "Клубничный жасмин big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 26,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-29",
+        "shiftLabel": "Смена 29.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-28T22:52:58.008Z",
         "id": 3974,
@@ -192547,14 +192576,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-29",
         "label": "Смена 29.07",
         "missingOrders": 0,
-        "revenue": 122,
+        "revenue": 148,
         "status": "ok"
       },
       {
@@ -193442,12 +193471,12 @@
         "status": "ok"
       }
     ],
-    "total": 2927
+    "total": 2928
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 92
+      "total": 118
     },
     {
       "method": "Карта",
@@ -193467,6 +193496,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 3975,
+      "items": [
+        "Клубничный жасмин big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 3974,
       "items": [
@@ -193629,6 +193666,11 @@
       "total": 30
     },
     {
+      "name": "Клубничный жасмин big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Мороженое манго",
       "qty": 1,
       "total": 20
@@ -193640,5 +193682,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-29T05:56:11.580Z"
+  "updatedAt": "2026-07-29T06:20:44.928Z"
 }

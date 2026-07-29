@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.714285714285715,
-    "checks": 28,
+    "average": 39.51724137931034,
+    "checks": 29,
     "expenseTotal": 205,
-    "net": 851,
-    "revenue": 1056
+    "net": 941,
+    "revenue": 1146
   },
   "data": {
-    "actions": 6450,
+    "actions": 6452,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2953,
+    "orders": 2954,
     "products": 60,
     "shifts": 68
   },
   "activity": [
     {
+      "id": 1785313983614,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:33",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785313983614,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:33",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785313543773,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:05",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785308223403,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:57",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785308223403,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:57",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2953,
+    "current": 2954,
     "old": [
       {
         "createdAt": "2026-07-28T10:36:02.785Z",
@@ -96331,6 +96331,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-29T08:42:24.556Z",
+        "id": 4001,
+        "items": [
+          "Мороженое с чёрным сахаром x1",
+          "Мороженое клубничное x1",
+          "МангоБанан mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-чёрным-сахаром",
+            "name": "Мороженое с чёрным сахаром",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 90,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-29",
+        "shiftLabel": "Смена 29.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 90
+      },
       {
         "createdAt": "2026-07-29T08:33:03.483Z",
         "id": 4000,
@@ -193409,14 +193456,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 28,
-        "expectedOrders": 28,
+        "databaseOrders": 29,
+        "expectedOrders": 29,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-29",
         "label": "Смена 29.07",
         "missingOrders": 0,
-        "revenue": 1056,
+        "revenue": 1146,
         "status": "ok"
       },
       {
@@ -194304,7 +194351,7 @@
         "status": "ok"
       }
     ],
-    "total": 2953
+    "total": 2954
   },
   "payments": [
     {
@@ -194321,7 +194368,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 152
+      "total": 242
     },
     {
       "method": "Семья",
@@ -194329,6 +194376,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4001,
+      "items": [
+        "Мороженое с чёрным сахаром x1",
+        "Мороженое клубничное x1",
+        "МангоБанан mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 90
+    },
     {
       "id": 4000,
       "items": [
@@ -194386,16 +194443,6 @@
       ],
       "status": "Оплачен",
       "total": 10
-    },
-    {
-      "id": 3993,
-      "items": [
-        "Мороженое классическое x1",
-        "Babl tea mini x1",
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -194551,6 +194598,11 @@
       "total": 80
     },
     {
+      "name": "Мороженое с чёрным сахаром",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Мороженое классическое",
       "qty": 3,
       "total": 60
@@ -194564,13 +194616,8 @@
       "name": "Мороженое манго",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 2,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-29T15:36:16.699Z"
+  "updatedAt": "2026-07-29T15:45:37.742Z"
 }

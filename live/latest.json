@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.27272727272727,
-    "checks": 44,
+    "average": 39.733333333333334,
+    "checks": 45,
     "expenseTotal": 205,
-    "net": 1479,
-    "revenue": 1684
+    "net": 1583,
+    "revenue": 1788
   },
   "data": {
-    "actions": 6563,
+    "actions": 6565,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3009,
+    "orders": 3010,
     "products": 60,
     "shifts": 69
   },
   "activity": [
     {
+      "id": 1785399540017,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:19",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785399540017,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:19",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785397985355,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785396893555,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:34",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785396893555,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:34",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3009,
+    "current": 3010,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-30T08:22:57.110Z",
+        "id": 4057,
+        "items": [
+          "Bubble Gum big x2",
+          "Жасмин гранат big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-bubble-gum-big",
+            "name": "Bubble Gum big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          },
+          {
+            "id": "product-жасмин-гранат-big",
+            "name": "Жасмин гранат big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 104,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 104
+      },
       {
         "createdAt": "2026-07-30T08:18:59.897Z",
         "id": 4056,
@@ -196634,14 +196672,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 44,
-        "expectedOrders": 44,
+        "databaseOrders": 45,
+        "expectedOrders": 45,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 1684,
+        "revenue": 1788,
         "status": "ok"
       },
       {
@@ -197542,7 +197580,7 @@
         "status": "ok"
       }
     ],
-    "total": 3009
+    "total": 3010
   },
   "payments": [
     {
@@ -197559,7 +197597,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 172
+      "total": 276
     },
     {
       "method": "Семья",
@@ -197567,6 +197605,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4057,
+      "items": [
+        "Bubble Gum big x2",
+        "Жасмин гранат big x2"
+      ],
+      "status": "Оплачен",
+      "total": 104
+    },
     {
       "id": 4056,
       "items": [
@@ -197623,14 +197670,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4049,
-      "items": [
-        "Blue big x2"
-      ],
-      "status": "Оплачен",
-      "total": 52
     }
   ],
   "shifts": {
@@ -197796,16 +197835,16 @@
       "total": 80
     },
     {
+      "name": "Bubble Gum big",
+      "qty": 3,
+      "total": 78
+    },
+    {
       "name": "Капучино",
       "qty": 3,
       "total": 75
-    },
-    {
-      "name": "Клубничный жасмин mini",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T15:22:14.439Z"
+  "updatedAt": "2026-07-30T15:26:10.182Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.52173913043478,
-    "checks": 46,
+    "average": 39.234042553191486,
+    "checks": 47,
     "expenseTotal": 205,
-    "net": 1613,
-    "revenue": 1818
+    "net": 1639,
+    "revenue": 1844
   },
   "data": {
-    "actions": 6567,
+    "actions": 6569,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3011,
+    "orders": 3012,
     "products": 60,
     "shifts": 69
   },
   "activity": [
     {
+      "id": 1785400399043,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:33",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785400399043,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:33",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785399777225,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:47",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785397477100,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:44",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785397477100,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:44",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3011,
+    "current": 3012,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-30T08:36:35.388Z",
+        "id": 4059,
+        "items": [
+          "Blue big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-big",
+            "name": "Blue big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-30T08:33:18.930Z",
         "id": 4058,
@@ -196701,14 +196730,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 46,
-        "expectedOrders": 46,
+        "databaseOrders": 47,
+        "expectedOrders": 47,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 1818,
+        "revenue": 1844,
         "status": "ok"
       },
       {
@@ -197609,12 +197638,12 @@
         "status": "ok"
       }
     ],
-    "total": 3011
+    "total": 3012
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1212
+      "total": 1238
     },
     {
       "method": "Карта",
@@ -197634,6 +197663,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4059,
+      "items": [
+        "Blue big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 4058,
       "items": [
@@ -197691,14 +197728,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4051,
-      "items": [
-        "МангоБанан mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -197839,14 +197868,14 @@
       "total": 180
     },
     {
+      "name": "Blue big",
+      "qty": 6,
+      "total": 156
+    },
+    {
       "name": "Babl tea mini",
       "qty": 7,
       "total": 140
-    },
-    {
-      "name": "Blue big",
-      "qty": 5,
-      "total": 130
     },
     {
       "name": "Черника mini",
@@ -197875,5 +197904,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T15:36:33.283Z"
+  "updatedAt": "2026-07-30T15:39:48.324Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.611111111111114,
-    "checks": 18,
+    "average": 42.1578947368421,
+    "checks": 19,
     "expenseTotal": 205,
-    "net": 544,
-    "revenue": 749
+    "net": 596,
+    "revenue": 801
   },
   "data": {
-    "actions": 6511,
+    "actions": 6513,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2983,
+    "orders": 2984,
     "products": 60,
     "shifts": 69
   },
   "activity": [
     {
+      "id": 1785378846971,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:34",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785378846971,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:34",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785378435406,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:47",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785374916750,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:28",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785374916750,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:28",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2983,
+    "current": 2984,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-30T02:59:05.650Z",
+        "id": 4031,
+        "items": [
+          "Клубника big x1",
+          "Blue big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-big",
+            "name": "Клубника big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-blue-big",
+            "name": "Blue big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 52,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-07-30T02:34:06.856Z",
         "id": 4030,
@@ -195799,14 +195837,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 18,
-        "expectedOrders": 18,
+        "databaseOrders": 19,
+        "expectedOrders": 19,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 749,
+        "revenue": 801,
         "status": "ok"
       },
       {
@@ -196707,7 +196745,7 @@
         "status": "ok"
       }
     ],
-    "total": 2983
+    "total": 2984
   },
   "payments": [
     {
@@ -196724,7 +196762,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 90
+      "total": 142
     },
     {
       "method": "Семья",
@@ -196732,6 +196770,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4031,
+      "items": [
+        "Клубника big x1",
+        "Blue big x1"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 4030,
       "items": [
@@ -196792,14 +196839,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 4023,
-      "items": [
-        "Виноградный тропический mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -196950,6 +196989,11 @@
       "total": 60
     },
     {
+      "name": "Blue big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 5,
       "total": 50
@@ -196968,13 +197012,8 @@
       "name": "Мороженое клубничное",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "ПиноКолада big",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T09:37:21.391Z"
+  "updatedAt": "2026-07-30T10:02:20.071Z"
 }

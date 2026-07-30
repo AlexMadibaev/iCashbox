@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.94736842105263,
-    "checks": 38,
+    "average": 39.56410256410256,
+    "checks": 39,
     "expenseTotal": 205,
-    "net": 1313,
-    "revenue": 1518
+    "net": 1338,
+    "revenue": 1543
   },
   "data": {
-    "actions": 6551,
+    "actions": 6553,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3003,
+    "orders": 3004,
     "products": 60,
     "shifts": 69
   },
   "activity": [
     {
+      "id": 1785396893555,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:34",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785396893555,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:34",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785395859701,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:15",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785391777201,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:09",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785391777201,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:09",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3003,
+    "current": 3004,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-30T07:37:05.794Z",
+        "id": 4051,
+        "items": [
+          "МангоБанан mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 25,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-30T07:34:53.438Z",
         "id": 4050,
@@ -196451,14 +196480,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 38,
-        "expectedOrders": 38,
+        "databaseOrders": 39,
+        "expectedOrders": 39,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 1518,
+        "revenue": 1543,
         "status": "ok"
       },
       {
@@ -197359,7 +197388,7 @@
         "status": "ok"
       }
     ],
-    "total": 3003
+    "total": 3004
   },
   "payments": [
     {
@@ -197372,7 +197401,7 @@
     },
     {
       "method": "Alif",
-      "total": 275
+      "total": 300
     },
     {
       "method": "Dushanbe City",
@@ -197384,6 +197413,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4051,
+      "items": [
+        "МангоБанан mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 4050,
       "items": [
@@ -197442,15 +197479,6 @@
       ],
       "status": "Оплачен",
       "total": 65
-    },
-    {
-      "id": 4043,
-      "items": [
-        "Клубничный жасмин mini x1",
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -197627,5 +197655,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T14:38:07.972Z"
+  "updatedAt": "2026-07-30T14:40:18.593Z"
 }

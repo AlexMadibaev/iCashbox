@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 52.75,
-    "checks": 4,
+    "average": 47.2,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": 6,
-    "revenue": 211
+    "net": 31,
+    "revenue": 236
   },
   "data": {
-    "actions": 6483,
+    "actions": 6485,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2969,
+    "orders": 2970,
     "products": 60,
     "shifts": 69
   },
   "activity": [
+    {
+      "id": 1785368981342,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:49",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785368981342,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:49",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785366315230,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:52",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785318772008,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785318580243,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:49",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2969,
+    "current": 2970,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-30T00:09:42.785Z",
+        "id": 4017,
+        "items": [
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 25,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-07-29T23:49:41.200Z",
         "id": 4016,
@@ -195330,14 +195359,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 211,
+        "revenue": 236,
         "status": "ok"
       },
       {
@@ -196238,7 +196267,7 @@
         "status": "ok"
       }
     ],
-    "total": 2969
+    "total": 2970
   },
   "payments": [
     {
@@ -196251,7 +196280,7 @@
     },
     {
       "method": "Alif",
-      "total": 26
+      "total": 51
     },
     {
       "method": "Dushanbe City",
@@ -196263,6 +196292,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4017,
+      "items": [
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 4016,
       "items": [
@@ -196433,8 +196470,8 @@
   "topProducts": [
     {
       "name": "Черника mini",
-      "qty": 2,
-      "total": 50
+      "qty": 3,
+      "total": 75
     },
     {
       "name": "Мороженое клубничное",
@@ -196468,5 +196505,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T06:52:58.133Z"
+  "updatedAt": "2026-07-30T07:12:59.636Z"
 }

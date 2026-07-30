@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 39.130434782608695,
-    "checks": 23,
+    "average": 40,
+    "checks": 24,
     "expenseTotal": 205,
-    "net": 695,
-    "revenue": 900
+    "net": 755,
+    "revenue": 960
   },
   "data": {
-    "actions": 6521,
+    "actions": 6523,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2988,
+    "orders": 2989,
     "products": 60,
     "shifts": 69
   },
   "activity": [
     {
+      "id": 1785382829291,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:40",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785382829291,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:40",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785382722158,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:34",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785378435406,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:27",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785378435406,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:27",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2988,
+    "current": 2989,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-30T04:42:05.761Z",
+        "id": 4036,
+        "items": [
+          "Matcha big x1",
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-30T03:40:29.180Z",
         "id": 4035,
@@ -195962,14 +196000,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 23,
-        "expectedOrders": 23,
+        "databaseOrders": 24,
+        "expectedOrders": 24,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 900,
+        "revenue": 960,
         "status": "ok"
       },
       {
@@ -196870,12 +196908,12 @@
         "status": "ok"
       }
     ],
-    "total": 2988
+    "total": 2989
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 568
+      "total": 628
     },
     {
       "method": "Карта",
@@ -196895,6 +196933,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4036,
+      "items": [
+        "Matcha big x1",
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 4035,
       "items": [
@@ -196952,14 +196999,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 4028,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -197125,16 +197164,16 @@
       "total": 52
     },
     {
-      "name": "Манго Маракуя mini",
-      "qty": 2,
+      "name": "Matcha big",
+      "qty": 1,
       "total": 40
     },
     {
-      "name": "Мороженое клубничное",
+      "name": "Манго Маракуя mini",
       "qty": 2,
       "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T10:43:41.982Z"
+  "updatedAt": "2026-07-30T11:45:20.107Z"
 }

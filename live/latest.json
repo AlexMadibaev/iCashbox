@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.853658536585364,
-    "checks": 41,
+    "average": 38.88095238095238,
+    "checks": 42,
     "expenseTotal": 205,
-    "net": 1388,
-    "revenue": 1593
+    "net": 1428,
+    "revenue": 1633
   },
   "data": {
-    "actions": 6557,
+    "actions": 6559,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3006,
+    "orders": 3007,
     "products": 60,
     "shifts": 69
   },
   "activity": [
     {
+      "id": 1785397670586,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785397670586,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:47",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785397477100,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:13",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785395262074,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:07",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785395262074,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:07",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3006,
+    "current": 3007,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-30T07:52:23.951Z",
+        "id": 4054,
+        "items": [
+          "Клубника mini x1",
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-30T07:47:50.467Z",
         "id": 4053,
@@ -196538,14 +196576,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 41,
-        "expectedOrders": 41,
+        "databaseOrders": 42,
+        "expectedOrders": 42,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 1593,
+        "revenue": 1633,
         "status": "ok"
       },
       {
@@ -197446,12 +197484,12 @@
         "status": "ok"
       }
     ],
-    "total": 3006
+    "total": 3007
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1121
+      "total": 1161
     },
     {
       "method": "Карта",
@@ -197471,6 +197509,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4054,
+      "items": [
+        "Клубника mini x1",
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4053,
       "items": [
@@ -197527,14 +197574,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 4046,
-      "items": [
-        "Жасмин гранат mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -197691,8 +197730,8 @@
     },
     {
       "name": "Blue mini",
-      "qty": 5,
-      "total": 100
+      "qty": 6,
+      "total": 120
     },
     {
       "name": "Мороженое рожок",
@@ -197711,5 +197750,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T14:51:03.648Z"
+  "updatedAt": "2026-07-30T14:55:36.950Z"
 }

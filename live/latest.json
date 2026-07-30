@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 47.2,
-    "checks": 5,
+    "average": 42.666666666666664,
+    "checks": 6,
     "expenseTotal": 205,
-    "net": 31,
-    "revenue": 236
+    "net": 51,
+    "revenue": 256
   },
   "data": {
-    "actions": 6485,
+    "actions": 6487,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2970,
+    "orders": 2971,
     "products": 60,
     "shifts": 69
   },
   "activity": [
+    {
+      "id": 1785370182923,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:09",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785370182923,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:09",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785368981342,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:02",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785319332792,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785318772008,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:52",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2970,
+    "current": 2971,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-30T00:13:22.832Z",
+        "id": 4018,
+        "items": [
+          "Фруктовый лёд малина x1"
+        ],
+        "lines": [
+          {
+            "id": "product-фруктовый-лёд-малина",
+            "name": "Фруктовый лёд малина",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-30T00:09:42.785Z",
         "id": 4017,
@@ -195359,14 +195388,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 5,
-        "expectedOrders": 5,
+        "databaseOrders": 6,
+        "expectedOrders": 6,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 236,
+        "revenue": 256,
         "status": "ok"
       },
       {
@@ -196267,12 +196296,12 @@
         "status": "ok"
       }
     ],
-    "total": 2970
+    "total": 2971
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 185
+      "total": 205
     },
     {
       "method": "Карта",
@@ -196292,6 +196321,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4018,
+      "items": [
+        "Фруктовый лёд малина x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 4017,
       "items": [
@@ -196494,6 +196531,11 @@
       "total": 25
     },
     {
+      "name": "Фруктовый лёд малина",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Манго Маракуя mini",
       "qty": 1,
       "total": 20
@@ -196505,5 +196547,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T07:12:59.636Z"
+  "updatedAt": "2026-07-30T07:16:36.917Z"
 }

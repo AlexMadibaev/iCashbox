@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.705882352941174,
-    "checks": 17,
+    "average": 41.611111111111114,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 504,
-    "revenue": 709
+    "net": 544,
+    "revenue": 749
   },
   "data": {
-    "actions": 6509,
+    "actions": 6511,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2982,
+    "orders": 2983,
     "products": 60,
     "shifts": 69
   },
   "activity": [
     {
+      "id": 1785378435406,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785378435406,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:27",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785378408316,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:28",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785374430634,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:20",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785374430634,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:20",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2982,
+    "current": 2983,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-30T02:34:06.856Z",
+        "id": 4030,
+        "items": [
+          "Мороженое рожок x4"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 4,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-07-30T02:27:15.275Z",
         "id": 4029,
@@ -195770,14 +195799,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 709,
+        "revenue": 749,
         "status": "ok"
       },
       {
@@ -196678,7 +196707,7 @@
         "status": "ok"
       }
     ],
-    "total": 2982
+    "total": 2983
   },
   "payments": [
     {
@@ -196691,7 +196720,7 @@
     },
     {
       "method": "Alif",
-      "total": 91
+      "total": 131
     },
     {
       "method": "Dushanbe City",
@@ -196703,6 +196732,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4030,
+      "items": [
+        "Мороженое рожок x4"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4029,
       "items": [
@@ -196763,16 +196800,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4022,
-      "items": [
-        "Blue big x1",
-        "Манго big x1",
-        "Клубника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 72
     }
   ],
   "shifts": {
@@ -196923,6 +196950,11 @@
       "total": 60
     },
     {
+      "name": "Мороженое рожок",
+      "qty": 5,
+      "total": 50
+    },
+    {
       "name": "Капучино",
       "qty": 2,
       "total": 50
@@ -196941,13 +196973,8 @@
       "name": "ПиноКолада big",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Cake-Pops",
-      "qty": 2,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T09:30:28.431Z"
+  "updatedAt": "2026-07-30T09:37:21.391Z"
 }

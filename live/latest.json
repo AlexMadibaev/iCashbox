@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 30,
-    "checks": 1,
+    "average": 28,
+    "checks": 2,
     "expenseTotal": 205,
-    "net": -175,
-    "revenue": 30
+    "net": -149,
+    "revenue": 56
   },
   "data": {
-    "actions": 6477,
+    "actions": 6479,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2966,
+    "orders": 2967,
     "products": 60,
     "shifts": 69
   },
   "activity": [
+    {
+      "id": 1785365014501,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:43",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785365014501,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:43",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785359270175,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785317776617,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:36",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785316968114,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:22",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2966,
+    "current": 2967,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-29T22:56:22.805Z",
+        "id": 4014,
+        "items": [
+          "Виноградный тропический big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-тропический-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 26,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-07-29T22:43:34.398Z",
         "id": 4013,
@@ -195216,14 +195245,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 1,
-        "expectedOrders": 1,
+        "databaseOrders": 2,
+        "expectedOrders": 2,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 30,
+        "revenue": 56,
         "status": "ok"
       },
       {
@@ -196124,7 +196153,7 @@
         "status": "ok"
       }
     ],
-    "total": 2966
+    "total": 2967
   },
   "payments": [
     {
@@ -196137,7 +196166,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 26
     },
     {
       "method": "Dushanbe City",
@@ -196149,6 +196178,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4014,
+      "items": [
+        "Виноградный тропический big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 4013,
       "items": [
@@ -196294,8 +196331,13 @@
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
+    },
+    {
+      "name": "Виноградный тропический big",
+      "qty": 1,
+      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T05:46:49.031Z"
+  "updatedAt": "2026-07-30T05:59:37.306Z"
 }

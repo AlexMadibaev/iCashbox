@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.55555555555556,
-    "checks": 9,
+    "average": 41.9,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 142,
-    "revenue": 347
+    "net": 214,
+    "revenue": 419
   },
   "data": {
-    "actions": 6493,
+    "actions": 6495,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2974,
+    "orders": 2975,
     "products": 60,
     "shifts": 69
   },
   "activity": [
     {
+      "id": 1785373144101,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785373144101,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:59",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785371444637,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:49",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785366315230,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:05",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785366315230,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:05",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2974,
+    "current": 2975,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-30T01:13:53.455Z",
+        "id": 4022,
+        "items": [
+          "Blue big x1",
+          "Манго big x1",
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-big",
+            "name": "Blue big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-манго-big",
+            "name": "Манго big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 72,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 72
+      },
       {
         "createdAt": "2026-07-30T00:59:03.978Z",
         "id": 4021,
@@ -195475,14 +195522,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 347,
+        "revenue": 419,
         "status": "ok"
       },
       {
@@ -196383,12 +196430,12 @@
         "status": "ok"
       }
     ],
-    "total": 2974
+    "total": 2975
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 256
+      "total": 328
     },
     {
       "method": "Карта",
@@ -196408,6 +196455,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4022,
+      "items": [
+        "Blue big x1",
+        "Манго big x1",
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 72
+    },
     {
       "id": 4021,
       "items": [
@@ -196466,14 +196523,6 @@
       ],
       "status": "Оплачен",
       "total": 90
-    },
-    {
-      "id": 4014,
-      "items": [
-        "Виноградный тропический big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -196629,6 +196678,16 @@
       "total": 30
     },
     {
+      "name": "Blue big",
+      "qty": 1,
+      "total": 26
+    },
+    {
+      "name": "Манго big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
@@ -196637,18 +196696,8 @@
       "name": "Виноградный тропический big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Клубничный mini",
-      "qty": 1,
-      "total": 25
-    },
-    {
-      "name": "Фруктовый лёд малина",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T08:02:18.428Z"
+  "updatedAt": "2026-07-30T08:17:07.829Z"
 }

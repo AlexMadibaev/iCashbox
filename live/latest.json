@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.1578947368421,
-    "checks": 19,
+    "average": 42.55,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 596,
-    "revenue": 801
+    "net": 646,
+    "revenue": 851
   },
   "data": {
-    "actions": 6513,
+    "actions": 6515,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2984,
+    "orders": 2985,
     "products": 60,
     "shifts": 69
   },
   "activity": [
     {
+      "id": 1785380345762,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785380345762,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:59",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785378846971,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:14",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785376074284,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:47",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785376074284,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:47",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2984,
+    "current": 2985,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-30T03:15:12.541Z",
+        "id": 4032,
+        "items": [
+          "Латте x1",
+          "Капучино x1"
+        ],
+        "lines": [
+          {
+            "id": "product-латте",
+            "name": "Латте",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 50,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-30T02:59:05.650Z",
         "id": 4031,
@@ -195837,14 +195875,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 801,
+        "revenue": 851,
         "status": "ok"
       },
       {
@@ -196745,7 +196783,7 @@
         "status": "ok"
       }
     ],
-    "total": 2984
+    "total": 2985
   },
   "payments": [
     {
@@ -196758,7 +196796,7 @@
     },
     {
       "method": "Alif",
-      "total": 131
+      "total": 181
     },
     {
       "method": "Dushanbe City",
@@ -196770,6 +196808,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4032,
+      "items": [
+        "Латте x1",
+        "Капучино x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 4031,
       "items": [
@@ -196830,15 +196877,6 @@
       ],
       "status": "Оплачен",
       "total": 90
-    },
-    {
-      "id": 4024,
-      "items": [
-        "Манго Маракуя mini x1",
-        "Клубничный жасмин mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -196984,6 +197022,11 @@
       "total": 100
     },
     {
+      "name": "Капучино",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "Айс Латте",
       "qty": 2,
       "total": 60
@@ -196999,11 +197042,6 @@
       "total": 50
     },
     {
-      "name": "Капучино",
-      "qty": 2,
-      "total": 50
-    },
-    {
       "name": "Манго Маракуя mini",
       "qty": 2,
       "total": 40
@@ -197015,5 +197053,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T10:02:20.071Z"
+  "updatedAt": "2026-07-30T10:18:27.082Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.28125,
-    "checks": 32,
+    "average": 41.39393939393939,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 1116,
-    "revenue": 1321
+    "net": 1161,
+    "revenue": 1366
   },
   "data": {
-    "actions": 6539,
+    "actions": 6541,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2997,
+    "orders": 2998,
     "products": 60,
     "shifts": 69
   },
   "activity": [
     {
+      "id": 1785391777201,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:09",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785391777201,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:09",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785391703073,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:30",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785388853300,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:20",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785388853300,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:20",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2997,
+    "current": 2998,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-30T06:15:30.565Z",
+        "id": 4045,
+        "items": [
+          "Blue mini x1",
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 45,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-07-30T06:09:37.079Z",
         "id": 4044,
@@ -196259,14 +196297,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 32,
-        "expectedOrders": 32,
+        "databaseOrders": 33,
+        "expectedOrders": 33,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 1321,
+        "revenue": 1366,
         "status": "ok"
       },
       {
@@ -197167,7 +197205,7 @@
         "status": "ok"
       }
     ],
-    "total": 2997
+    "total": 2998
   },
   "payments": [
     {
@@ -197180,7 +197218,7 @@
     },
     {
       "method": "Alif",
-      "total": 210
+      "total": 255
     },
     {
       "method": "Dushanbe City",
@@ -197192,6 +197230,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4045,
+      "items": [
+        "Blue mini x1",
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 4044,
       "items": [
@@ -197250,14 +197297,6 @@
       ],
       "status": "Оплачен",
       "total": 120
-    },
-    {
-      "id": 4037,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -197398,14 +197437,14 @@
       "total": 180
     },
     {
+      "name": "Черника mini",
+      "qty": 5,
+      "total": 125
+    },
+    {
       "name": "Babl tea mini",
       "qty": 6,
       "total": 120
-    },
-    {
-      "name": "Черника mini",
-      "qty": 4,
-      "total": 100
     },
     {
       "name": "Мороженое рожок",
@@ -197434,5 +197473,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T13:12:49.825Z"
+  "updatedAt": "2026-07-30T13:18:45.135Z"
 }

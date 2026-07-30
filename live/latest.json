@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 48.666666666666664,
-    "checks": 3,
+    "average": 52.75,
+    "checks": 4,
     "expenseTotal": 205,
-    "net": -59,
-    "revenue": 146
+    "net": 6,
+    "revenue": 211
   },
   "data": {
-    "actions": 6481,
+    "actions": 6483,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2968,
+    "orders": 2969,
     "products": 60,
     "shifts": 69
   },
   "activity": [
+    {
+      "id": 1785366315230,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:05",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785366315230,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "11:05",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785365782934,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:49",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785318580243,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:49",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785318298625,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:44",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2968,
+    "current": 2969,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-29T23:49:41.200Z",
+        "id": 4016,
+        "items": [
+          "Мороженое клубничное x2",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 65,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 65
+      },
       {
         "createdAt": "2026-07-29T23:05:15.115Z",
         "id": 4015,
@@ -195292,14 +195330,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 3,
-        "expectedOrders": 3,
+        "databaseOrders": 4,
+        "expectedOrders": 4,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 146,
+        "revenue": 211,
         "status": "ok"
       },
       {
@@ -196200,12 +196238,12 @@
         "status": "ok"
       }
     ],
-    "total": 2968
+    "total": 2969
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 120
+      "total": 185
     },
     {
       "method": "Карта",
@@ -196225,6 +196263,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4016,
+      "items": [
+        "Мороженое клубничное x2",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 65
+    },
     {
       "id": 4015,
       "items": [
@@ -196390,6 +196437,11 @@
       "total": 50
     },
     {
+      "name": "Мороженое клубничное",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
@@ -196398,6 +196450,11 @@
       "name": "Виноградный тропический big",
       "qty": 1,
       "total": 26
+    },
+    {
+      "name": "Клубничный mini",
+      "qty": 1,
+      "total": 25
     },
     {
       "name": "Манго Маракуя mini",
@@ -196411,5 +196468,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T06:08:29.707Z"
+  "updatedAt": "2026-07-30T06:52:58.133Z"
 }

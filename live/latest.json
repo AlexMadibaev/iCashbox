@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 43.76923076923077,
-    "checks": 13,
+    "average": 44.214285714285715,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 364,
-    "revenue": 569
+    "net": 414,
+    "revenue": 619
   },
   "data": {
-    "actions": 6501,
+    "actions": 6505,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 2978,
+    "orders": 2979,
     "products": 60,
     "shifts": 69
   },
   "activity": [
     {
+      "id": 1785377688324,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:14",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785377688324,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:14",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1785376074284,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785376074284,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:47",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785374916750,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:59",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785371444637,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:30",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785371444637,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:30",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785371049008,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:24",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785371049008,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:24",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 2978,
+    "current": 2979,
     "old": [
       {
         "createdAt": "2026-07-29T10:02:12.666Z",
@@ -97689,6 +97689,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-30T02:14:48.210Z",
+        "id": 4026,
+        "items": [
+          "Фреш лимон big x1",
+          "ПиноКолада big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-фреш-лимон-big",
+            "name": "Фреш лимон big",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-30",
+        "shiftLabel": "Смена 30.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-07-30T01:47:54.162Z",
         "id": 4025,
@@ -195636,14 +195674,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-30",
         "label": "Смена 30.07",
         "missingOrders": 0,
-        "revenue": 569,
+        "revenue": 619,
         "status": "ok"
       },
       {
@@ -196544,12 +196582,12 @@
         "status": "ok"
       }
     ],
-    "total": 2978
+    "total": 2979
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 388
+      "total": 438
     },
     {
       "method": "Карта",
@@ -196569,6 +196607,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4026,
+      "items": [
+        "Фреш лимон big x1",
+        "ПиноКолада big x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 4025,
       "items": [
@@ -196629,14 +196676,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 4018,
-      "items": [
-        "Фруктовый лёд малина x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -196797,6 +196836,11 @@
       "total": 40
     },
     {
+      "name": "ПиноКолада big",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Cake-Pops",
       "qty": 2,
       "total": 30
@@ -196805,13 +196849,8 @@
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Blue big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-30T08:51:08.777Z"
+  "updatedAt": "2026-07-30T09:18:03.256Z"
 }

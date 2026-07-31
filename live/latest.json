@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.10526315789474,
-    "checks": 38,
+    "average": 32.61538461538461,
+    "checks": 39,
     "expenseTotal": 205,
-    "net": 1015,
-    "revenue": 1220
+    "net": 1067,
+    "revenue": 1272
   },
   "data": {
-    "actions": 6678,
+    "actions": 6680,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3065,
+    "orders": 3066,
     "products": 60,
     "shifts": 70
   },
   "activity": [
     {
+      "id": 1785489118450,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:11",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785489118450,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:11",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785488498575,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:14",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785484516586,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:55",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785484516586,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:55",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3065,
+    "current": 3066,
     "old": [
       {
         "createdAt": "2026-07-30T10:35:34.057Z",
@@ -99703,6 +99703,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-31T09:11:58.274Z",
+        "id": 4113,
+        "items": [
+          "Клубничный жасмин big x1",
+          "Жасмин лимон big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-жасмин-big",
+            "name": "Клубничный жасмин big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-жасмин-лимон-big",
+            "name": "Жасмин лимон big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 52,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-31",
+        "shiftLabel": "Смена 31.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-07-31T09:01:38.449Z",
         "id": 4112,
@@ -200461,14 +200499,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 38,
-        "expectedOrders": 38,
+        "databaseOrders": 39,
+        "expectedOrders": 39,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-31",
         "label": "Смена 31.07",
         "missingOrders": 0,
-        "revenue": 1220,
+        "revenue": 1272,
         "status": "ok"
       },
       {
@@ -201382,7 +201420,7 @@
         "status": "ok"
       }
     ],
-    "total": 3065
+    "total": 3066
   },
   "payments": [
     {
@@ -201395,7 +201433,7 @@
     },
     {
       "method": "Alif",
-      "total": 309
+      "total": 361
     },
     {
       "method": "Dushanbe City",
@@ -201407,6 +201445,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4113,
+      "items": [
+        "Клубничный жасмин big x1",
+        "Жасмин лимон big x1"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 4112,
       "items": [
@@ -201464,14 +201511,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 4105,
-      "items": [
-        "Bubble Gum mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -201627,6 +201666,11 @@
       "total": 80
     },
     {
+      "name": "Клубничный жасмин big",
+      "qty": 3,
+      "total": 78
+    },
+    {
       "name": "МангоБанан mini",
       "qty": 3,
       "total": 75
@@ -201640,13 +201684,8 @@
       "name": "Клубничный жасмин mini",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-31T16:04:55.039Z"
+  "updatedAt": "2026-07-31T16:15:15.338Z"
 }

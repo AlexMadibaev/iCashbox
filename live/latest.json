@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.82142857142857,
-    "checks": 28,
+    "average": 33.172413793103445,
+    "checks": 29,
     "expenseTotal": 205,
-    "net": 714,
-    "revenue": 919
+    "net": 757,
+    "revenue": 962
   },
   "data": {
-    "actions": 6656,
+    "actions": 6658,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3055,
+    "orders": 3056,
     "products": 60,
     "shifts": 70
   },
   "activity": [
     {
+      "id": 1785479336443,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:28",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785479336443,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:28",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785478913473,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:05",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785473692981,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:54",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785473692981,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:54",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3055,
+    "current": 3056,
     "old": [
       {
         "createdAt": "2026-07-30T10:35:34.057Z",
@@ -99703,6 +99703,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-31T06:45:50.417Z",
+        "id": 4103,
+        "items": [
+          "Blue mini x1",
+          "Клубничный жасмин mini x1",
+          "Тапиока доп x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-тапиока-доп",
+            "name": "Тапиока доп",
+            "price": 3,
+            "qty": 1,
+            "size": "",
+            "total": 3
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 43,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-31",
+        "shiftLabel": "Смена 31.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 43
+      },
       {
         "createdAt": "2026-07-31T06:28:56.312Z",
         "id": 4102,
@@ -200135,14 +200182,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 28,
-        "expectedOrders": 28,
+        "databaseOrders": 29,
+        "expectedOrders": 29,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-31",
         "label": "Смена 31.07",
         "missingOrders": 0,
-        "revenue": 919,
+        "revenue": 962,
         "status": "ok"
       },
       {
@@ -201056,7 +201103,7 @@
         "status": "ok"
       }
     ],
-    "total": 3055
+    "total": 3056
   },
   "payments": [
     {
@@ -201069,7 +201116,7 @@
     },
     {
       "method": "Alif",
-      "total": 216
+      "total": 259
     },
     {
       "method": "Dushanbe City",
@@ -201081,6 +201128,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4103,
+      "items": [
+        "Blue mini x1",
+        "Клубничный жасмин mini x1",
+        "Тапиока доп x1"
+      ],
+      "status": "Оплачен",
+      "total": 43
+    },
     {
       "id": 4102,
       "items": [
@@ -201139,15 +201196,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 4095,
-      "items": [
-        "МангоБанан mini x1",
-        "Фреш лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -201288,6 +201336,11 @@
       "total": 90
     },
     {
+      "name": "Blue mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "МангоБанан mini",
       "qty": 3,
       "total": 75
@@ -201298,7 +201351,7 @@
       "total": 70
     },
     {
-      "name": "Blue mini",
+      "name": "Клубничный жасмин mini",
       "qty": 3,
       "total": 60
     },
@@ -201316,13 +201369,8 @@
       "name": "Клубничный жасмин big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "Клубничный жасмин mini",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-31T13:32:12.209Z"
+  "updatedAt": "2026-07-31T13:49:06.251Z"
 }

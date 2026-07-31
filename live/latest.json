@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 29.5,
-    "checks": 14,
+    "average": 31.533333333333335,
+    "checks": 15,
     "expenseTotal": 205,
-    "net": 208,
-    "revenue": 413
+    "net": 268,
+    "revenue": 473
   },
   "data": {
-    "actions": 6628,
+    "actions": 6630,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3041,
+    "orders": 3042,
     "products": 60,
     "shifts": 70
   },
   "activity": [
     {
+      "id": 1785465637736,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:40",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785465637736,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:40",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785463830996,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785461752717,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:35",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785461752717,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:35",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3041,
+    "current": 3042,
     "old": [
       {
         "createdAt": "2026-07-30T10:35:34.057Z",
@@ -99703,6 +99703,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-31T02:55:11.274Z",
+        "id": 4089,
+        "items": [
+          "Мороженое манго x1",
+          "Blue mini x1",
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-манго",
+            "name": "Мороженое манго",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-31",
+        "shiftLabel": "Смена 31.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-31T02:40:37.595Z",
         "id": 4088,
@@ -199666,14 +199713,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 14,
-        "expectedOrders": 14,
+        "databaseOrders": 15,
+        "expectedOrders": 15,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-31",
         "label": "Смена 31.07",
         "missingOrders": 0,
-        "revenue": 413,
+        "revenue": 473,
         "status": "ok"
       },
       {
@@ -200587,12 +200634,12 @@
         "status": "ok"
       }
     ],
-    "total": 3041
+    "total": 3042
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 241
+      "total": 301
     },
     {
       "method": "Карта",
@@ -200612,6 +200659,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4089,
+      "items": [
+        "Мороженое манго x1",
+        "Blue mini x1",
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 4088,
       "items": [
@@ -200671,14 +200728,6 @@
       ],
       "status": "Оплачен",
       "total": 65
-    },
-    {
-      "id": 4081,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -200819,6 +200868,16 @@
       "total": 60
     },
     {
+      "name": "Мороженое манго",
+      "qty": 2,
+      "total": 40
+    },
+    {
+      "name": "Blue mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Клубничный big",
       "qty": 1,
       "total": 30
@@ -200842,18 +200901,8 @@
       "name": "Клубничный жасмин big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "МангоБанан mini",
-      "qty": 1,
-      "total": 25
-    },
-    {
-      "name": "Клубничный mini",
-      "qty": 1,
-      "total": 25
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-31T09:43:53.531Z"
+  "updatedAt": "2026-07-31T09:58:27.420Z"
 }

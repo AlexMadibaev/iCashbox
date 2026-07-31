@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.733333333333334,
-    "checks": 30,
+    "average": 32.32258064516129,
+    "checks": 31,
     "expenseTotal": 205,
-    "net": 777,
-    "revenue": 982
+    "net": 797,
+    "revenue": 1002
   },
   "data": {
-    "actions": 6660,
+    "actions": 6662,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3057,
+    "orders": 3058,
     "products": 60,
     "shifts": 70
   },
   "activity": [
     {
+      "id": 1785482960554,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785482960554,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:29",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785480350561,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:57",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785475428286,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785475428286,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:23",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3057,
+    "current": 3058,
     "old": [
       {
         "createdAt": "2026-07-30T10:35:34.057Z",
@@ -99703,6 +99703,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-31T07:29:35.579Z",
+        "id": 4105,
+        "items": [
+          "Bubble Gum mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-31",
+        "shiftLabel": "Смена 31.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-31T07:29:20.414Z",
         "id": 4104,
@@ -200211,14 +200240,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 30,
-        "expectedOrders": 30,
+        "databaseOrders": 31,
+        "expectedOrders": 31,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-31",
         "label": "Смена 31.07",
         "missingOrders": 0,
-        "revenue": 982,
+        "revenue": 1002,
         "status": "ok"
       },
       {
@@ -201132,12 +201161,12 @@
         "status": "ok"
       }
     ],
-    "total": 3057
+    "total": 3058
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 592
+      "total": 612
     },
     {
       "method": "Карта",
@@ -201157,6 +201186,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4105,
+      "items": [
+        "Bubble Gum mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 4104,
       "items": [
@@ -201217,14 +201254,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 4097,
-      "items": [
-        "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -201401,5 +201430,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-31T14:32:36.232Z"
+  "updatedAt": "2026-07-31T14:32:49.743Z"
 }

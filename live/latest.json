@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 31.823529411764707,
-    "checks": 34,
+    "average": 32.628571428571426,
+    "checks": 35,
     "expenseTotal": 205,
-    "net": 877,
-    "revenue": 1082
+    "net": 937,
+    "revenue": 1142
   },
   "data": {
-    "actions": 6668,
+    "actions": 6670,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3061,
+    "orders": 3062,
     "products": 60,
     "shifts": 70
   },
   "activity": [
     {
+      "id": 1785485672827,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:14",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785485672827,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:14",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785484516586,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:45",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785479336443,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:28",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785479336443,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:28",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3061,
+    "current": 3062,
     "old": [
       {
         "createdAt": "2026-07-30T10:35:34.057Z",
@@ -99703,6 +99703,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-31T08:41:35.388Z",
+        "id": 4109,
+        "items": [
+          "Американо x1",
+          "Babl tea mini x1",
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-американо",
+            "name": "Американо",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-31",
+        "shiftLabel": "Смена 31.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-31T08:14:32.703Z",
         "id": 4108,
@@ -200327,14 +200374,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 34,
-        "expectedOrders": 34,
+        "databaseOrders": 35,
+        "expectedOrders": 35,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-31",
         "label": "Смена 31.07",
         "missingOrders": 0,
-        "revenue": 1082,
+        "revenue": 1142,
         "status": "ok"
       },
       {
@@ -201248,12 +201295,12 @@
         "status": "ok"
       }
     ],
-    "total": 3061
+    "total": 3062
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 652
+      "total": 712
     },
     {
       "method": "Карта",
@@ -201273,6 +201320,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4109,
+      "items": [
+        "Американо x1",
+        "Babl tea mini x1",
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 4108,
       "items": [
@@ -201330,14 +201387,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4101,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -201473,17 +201522,22 @@
   },
   "topProducts": [
     {
+      "name": "Blue mini",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "Айс Латте",
       "qty": 3,
       "total": 90
     },
     {
-      "name": "Мороженое Орео",
+      "name": "Babl tea mini",
       "qty": 4,
       "total": 80
     },
     {
-      "name": "Blue mini",
+      "name": "Мороженое Орео",
       "qty": 4,
       "total": 80
     },
@@ -201506,13 +201560,8 @@
       "name": "Манго Маракуя mini",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-31T15:17:48.535Z"
+  "updatedAt": "2026-07-31T15:44:51.324Z"
 }

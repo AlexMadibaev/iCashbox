@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 31.941176470588236,
-    "checks": 17,
+    "average": 31.27777777777778,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 338,
-    "revenue": 543
+    "net": 358,
+    "revenue": 563
   },
   "data": {
-    "actions": 6634,
+    "actions": 6636,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3044,
+    "orders": 3045,
     "products": 60,
     "shifts": 70
   },
   "activity": [
     {
+      "id": 1785467263909,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:07",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785467263909,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:07",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785466683753,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:07",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785462959977,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:55",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785462959977,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:55",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3044,
+    "current": 3045,
     "old": [
       {
         "createdAt": "2026-07-30T10:35:34.057Z",
@@ -99703,6 +99703,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-31T03:44:55.576Z",
+        "id": 4092,
+        "items": [
+          "Мороженое рожок x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 2,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-07-31",
+        "shiftLabel": "Смена 31.07",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-07-31T03:07:43.815Z",
         "id": 4091,
@@ -199771,14 +199800,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-07-31",
         "label": "Смена 31.07",
         "missingOrders": 0,
-        "revenue": 543,
+        "revenue": 563,
         "status": "ok"
       },
       {
@@ -200692,12 +200721,12 @@
         "status": "ok"
       }
     ],
-    "total": 3044
+    "total": 3045
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 331
+      "total": 351
     },
     {
       "method": "Карта",
@@ -200717,6 +200746,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4092,
+      "items": [
+        "Мороженое рожок x2"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 4091,
       "items": [
@@ -200775,15 +200812,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4084,
-      "items": [
-        "Фреш лимон mini x1",
-        "МангоБанан mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -200944,6 +200972,11 @@
       "total": 40
     },
     {
+      "name": "Мороженое рожок",
+      "qty": 3,
+      "total": 30
+    },
+    {
       "name": "Клубничный big",
       "qty": 1,
       "total": 30
@@ -200952,13 +200985,8 @@
       "name": "Клубника big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Виноградный тропический big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-07-31T10:10:59.698Z"
+  "updatedAt": "2026-07-31T10:48:11.610Z"
 }

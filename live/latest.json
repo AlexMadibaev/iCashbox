@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.61290322580645,
-    "checks": 31,
+    "average": 44.40625,
+    "checks": 32,
     "expenseTotal": 205,
-    "net": 1116,
-    "revenue": 1321
+    "net": 1216,
+    "revenue": 1421
   },
   "data": {
-    "actions": 6753,
+    "actions": 6755,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3103,
+    "orders": 3104,
     "products": 60,
     "shifts": 71
   },
   "activity": [
     {
+      "id": 1785571225101,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785571225101,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:00",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785571095153,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785563691667,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:54",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785563691667,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:54",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3103,
+    "current": 3104,
     "old": [
       {
         "createdAt": "2026-07-31T10:25:44.478Z",
@@ -101161,6 +101161,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-01T08:05:46.822Z",
+        "id": 4151,
+        "items": [
+          "Клубничный mini x2",
+          "Черника mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          },
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 2,
+            "size": "",
+            "total": 50
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-01",
+        "shiftLabel": "Смена 01.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 100
+      },
       {
         "createdAt": "2026-08-01T08:00:24.989Z",
         "id": 4150,
@@ -203183,14 +203221,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 31,
-        "expectedOrders": 31,
+        "databaseOrders": 32,
+        "expectedOrders": 32,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-01",
         "label": "Смена 01.08",
         "missingOrders": 0,
-        "revenue": 1321,
+        "revenue": 1421,
         "status": "ok"
       },
       {
@@ -204117,12 +204155,12 @@
         "status": "ok"
       }
     ],
-    "total": 3103
+    "total": 3104
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 893
+      "total": 993
     },
     {
       "method": "Карта",
@@ -204142,6 +204180,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4151,
+      "items": [
+        "Клубничный mini x2",
+        "Черника mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 100
+    },
     {
       "id": 4150,
       "items": [
@@ -204201,14 +204248,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4143,
-      "items": [
-        "Blue big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -204349,6 +204388,16 @@
       "total": 160
     },
     {
+      "name": "Клубничный mini",
+      "qty": 5,
+      "total": 125
+    },
+    {
+      "name": "Черника mini",
+      "qty": 5,
+      "total": 125
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 6,
       "total": 120
@@ -204364,16 +204413,6 @@
       "total": 100
     },
     {
-      "name": "Клубничный mini",
-      "qty": 3,
-      "total": 75
-    },
-    {
-      "name": "Черника mini",
-      "qty": 3,
-      "total": 75
-    },
-    {
       "name": "Манго Маракуя mini",
       "qty": 3,
       "total": 60
@@ -204385,5 +204424,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-01T15:03:41.421Z"
+  "updatedAt": "2026-08-01T15:09:03.436Z"
 }

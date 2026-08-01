@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.42857142857143,
-    "checks": 28,
+    "average": 41.93103448275862,
+    "checks": 29,
     "expenseTotal": 205,
-    "net": 955,
-    "revenue": 1160
+    "net": 1011,
+    "revenue": 1216
   },
   "data": {
-    "actions": 6747,
+    "actions": 6749,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3100,
+    "orders": 3101,
     "products": 60,
     "shifts": 71
   },
   "activity": [
     {
+      "id": 1785568422646,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:13",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785568422646,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:13",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785568140227,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:13",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785560532356,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:02",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785560532356,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:02",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3100,
+    "current": 3101,
     "old": [
       {
         "createdAt": "2026-07-31T10:25:44.478Z",
@@ -101161,6 +101161,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-01T07:42:29.085Z",
+        "id": 4148,
+        "items": [
+          "Клубничный big x1",
+          "Клубничный жасмин big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-клубничный-жасмин-big",
+            "name": "Клубничный жасмин big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 56,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-01",
+        "shiftLabel": "Смена 01.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 56
+      },
       {
         "createdAt": "2026-08-01T07:13:42.525Z",
         "id": 4147,
@@ -203069,14 +203107,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 28,
-        "expectedOrders": 28,
+        "databaseOrders": 29,
+        "expectedOrders": 29,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-01",
         "label": "Смена 01.08",
         "missingOrders": 0,
-        "revenue": 1160,
+        "revenue": 1216,
         "status": "ok"
       },
       {
@@ -204003,7 +204041,7 @@
         "status": "ok"
       }
     ],
-    "total": 3100
+    "total": 3101
   },
   "payments": [
     {
@@ -204020,7 +204058,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 30
+      "total": 86
     },
     {
       "method": "Семья",
@@ -204028,6 +204066,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4148,
+      "items": [
+        "Клубничный big x1",
+        "Клубничный жасмин big x1"
+      ],
+      "status": "Оплачен",
+      "total": 56
+    },
     {
       "id": 4147,
       "items": [
@@ -204081,14 +204128,6 @@
       "id": 4141,
       "items": [
         "Мороженое Орео x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 4140,
-      "items": [
-        "Babl tea mini x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -204268,5 +204307,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-01T14:16:58.089Z"
+  "updatedAt": "2026-08-01T14:45:45.797Z"
 }

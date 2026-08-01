@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 40,
-    "checks": 2,
+    "average": 53.333333333333336,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -125,
-    "revenue": 80
+    "net": -45,
+    "revenue": 160
   },
   "data": {
     "actions": 6697,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3074,
+    "orders": 3075,
     "products": 60,
     "shifts": 71
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3074,
+    "current": 3075,
     "old": [
       {
         "createdAt": "2026-07-31T10:25:44.478Z",
@@ -101161,6 +101161,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-31T23:46:00.363Z",
+        "id": 4122,
+        "items": [
+          "Мороженое клубничное x4"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 4,
+            "size": "",
+            "total": 80
+          }
+        ],
+        "payments": {
+          "Наличные": 80,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-01",
+        "shiftLabel": "Смена 01.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 80
+      },
       {
         "createdAt": "2026-07-31T23:11:33.413Z",
         "id": 4121,
@@ -202198,14 +202227,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-01",
         "label": "Смена 01.08",
         "missingOrders": 0,
-        "revenue": 80,
+        "revenue": 160,
         "status": "ok"
       },
       {
@@ -203132,12 +203161,12 @@
         "status": "ok"
       }
     ],
-    "total": 3074
+    "total": 3075
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 80
+      "total": 160
     },
     {
       "method": "Карта",
@@ -203157,6 +203186,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4122,
+      "items": [
+        "Мороженое клубничное x4"
+      ],
+      "status": "Оплачен",
+      "total": 80
+    },
     {
       "id": 4121,
       "items": [
@@ -203308,6 +203345,11 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое клубничное",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "АйсМатча клубника",
       "qty": 1,
       "total": 35
@@ -203324,5 +203366,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-01T06:14:51.414Z"
+  "updatedAt": "2026-08-01T06:49:17.605Z"
 }

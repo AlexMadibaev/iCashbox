@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 47.72222222222222,
-    "checks": 18,
+    "average": 46.526315789473685,
+    "checks": 19,
     "expenseTotal": 205,
-    "net": 654,
-    "revenue": 859
+    "net": 679,
+    "revenue": 884
   },
   "data": {
-    "actions": 6727,
+    "actions": 6729,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3090,
+    "orders": 3091,
     "products": 60,
     "shifts": 71
   },
   "activity": [
     {
+      "id": 1785559782407,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:49",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785559782407,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:49",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785559156138,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:09",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785552856274,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:54",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785552856274,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:54",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3090,
+    "current": 3091,
     "old": [
       {
         "createdAt": "2026-07-31T10:25:44.478Z",
@@ -101161,6 +101161,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-01T04:51:42.055Z",
+        "id": 4138,
+        "items": [
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 25,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-01",
+        "shiftLabel": "Смена 01.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-08-01T04:49:42.285Z",
         "id": 4137,
@@ -202770,14 +202799,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 18,
-        "expectedOrders": 18,
+        "databaseOrders": 19,
+        "expectedOrders": 19,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-01",
         "label": "Смена 01.08",
         "missingOrders": 0,
-        "revenue": 859,
+        "revenue": 884,
         "status": "ok"
       },
       {
@@ -203704,12 +203733,12 @@
         "status": "ok"
       }
     ],
-    "total": 3090
+    "total": 3091
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 662
+      "total": 687
     },
     {
       "method": "Карта",
@@ -203729,6 +203758,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4138,
+      "items": [
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 4137,
       "items": [
@@ -203784,18 +203821,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4130,
-      "items": [
-        "Мороженое с чёрным сахаром x3",
-        "Matcha mini x1",
-        "МангоБанан mini x1",
-        "Blue mini x1",
-        "Черника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 160
     }
   ],
   "shifts": {
@@ -203946,6 +203971,11 @@
       "total": 100
     },
     {
+      "name": "Клубничный mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "Черника mini",
       "qty": 3,
       "total": 75
@@ -203964,13 +203994,8 @@
       "name": "Манго big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "Клубничный mini",
-      "qty": 2,
-      "total": 50
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-01T11:52:59.210Z"
+  "updatedAt": "2026-08-01T11:54:57.535Z"
 }

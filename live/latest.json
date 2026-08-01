@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 55.30769230769231,
-    "checks": 13,
+    "average": 53.142857142857146,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 514,
-    "revenue": 719
+    "net": 539,
+    "revenue": 744
   },
   "data": {
-    "actions": 6717,
+    "actions": 6719,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3085,
+    "orders": 3086,
     "products": 60,
     "shifts": 71
   },
   "activity": [
     {
+      "id": 1785553771817,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:09",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785553771817,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:09",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785552856274,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:55",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785545486270,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:51",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785545486270,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:51",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3085,
+    "current": 3086,
     "old": [
       {
         "createdAt": "2026-07-31T10:25:44.478Z",
@@ -101161,6 +101161,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-01T03:14:23.529Z",
+        "id": 4133,
+        "items": [
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 25,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-01",
+        "shiftLabel": "Смена 01.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-08-01T03:09:31.704Z",
         "id": 4132,
@@ -202625,14 +202654,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-01",
         "label": "Смена 01.08",
         "missingOrders": 0,
-        "revenue": 719,
+        "revenue": 744,
         "status": "ok"
       },
       {
@@ -203559,12 +203588,12 @@
         "status": "ok"
       }
     ],
-    "total": 3085
+    "total": 3086
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 552
+      "total": 577
     },
     {
       "method": "Карта",
@@ -203584,6 +203613,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4133,
+      "items": [
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 4132,
       "items": [
@@ -203645,16 +203682,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 4125,
-      "items": [
-        "Манго big x2",
-        "Фруктовый лёд малина x1",
-        "Bubble Gum mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 92
     }
   ],
   "shifts": {
@@ -203815,6 +203842,11 @@
       "total": 52
     },
     {
+      "name": "Клубничный mini",
+      "qty": 2,
+      "total": 50
+    },
+    {
       "name": "Черника mini",
       "qty": 2,
       "total": 50
@@ -203823,13 +203855,8 @@
       "name": "Клубничный жасмин mini",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-01T10:12:49.078Z"
+  "updatedAt": "2026-08-01T10:17:38.937Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.078947368421055,
-    "checks": 38,
+    "average": 43.12820512820513,
+    "checks": 39,
     "expenseTotal": 205,
-    "net": 1432,
-    "revenue": 1637
+    "net": 1477,
+    "revenue": 1682
   },
   "data": {
-    "actions": 6767,
+    "actions": 6769,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3110,
+    "orders": 3111,
     "products": 60,
     "shifts": 71
   },
   "activity": [
     {
+      "id": 1785573446118,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:37",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785573446118,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:37",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785573246884,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:10",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785571546953,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:05",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785571546953,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:05",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3110,
+    "current": 3111,
     "old": [
       {
         "createdAt": "2026-07-31T10:25:44.478Z",
@@ -101161,6 +101161,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-01T08:42:25.696Z",
+        "id": 4158,
+        "items": [
+          "МангоБанан mini x1",
+          "Фруктовый лёд малина x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-фруктовый-лёд-малина",
+            "name": "Фруктовый лёд малина",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 45,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-01",
+        "shiftLabel": "Смена 01.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-08-01T08:37:26.002Z",
         "id": 4157,
@@ -203440,14 +203478,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 38,
-        "expectedOrders": 38,
+        "databaseOrders": 39,
+        "expectedOrders": 39,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-01",
         "label": "Смена 01.08",
         "missingOrders": 0,
-        "revenue": 1637,
+        "revenue": 1682,
         "status": "ok"
       },
       {
@@ -204374,7 +204412,7 @@
         "status": "ok"
       }
     ],
-    "total": 3110
+    "total": 3111
   },
   "payments": [
     {
@@ -204391,7 +204429,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 86
+      "total": 131
     },
     {
       "method": "Семья",
@@ -204399,6 +204437,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4158,
+      "items": [
+        "МангоБанан mini x1",
+        "Фруктовый лёд малина x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 4157,
       "items": [
@@ -204460,14 +204507,6 @@
       ],
       "status": "Оплачен",
       "total": 100
-    },
-    {
-      "id": 4150,
-      "items": [
-        "ПиноКолада mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -204644,5 +204683,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-01T15:40:41.362Z"
+  "updatedAt": "2026-08-01T15:45:41.007Z"
 }

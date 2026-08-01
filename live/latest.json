@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 60,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -145,
+    "revenue": 60
   },
   "data": {
-    "actions": 6693,
+    "actions": 6695,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3072,
+    "orders": 3073,
     "products": 60,
     "shifts": 71
   },
   "activity": [
+    {
+      "id": 1785538314902,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:51",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785538314902,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:51",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785535066406,
       "source": "Локально",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1785489213817,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:13",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785489213817,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:13",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785489182054,
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:13",
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3072,
+    "current": 3073,
     "old": [
       {
         "createdAt": "2026-07-31T10:25:44.478Z",
@@ -101161,6 +101161,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-07-31T22:51:54.739Z",
+        "id": 4120,
+        "items": [
+          "Клубничный mini x1",
+          "АйсМатча клубника x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-01",
+        "shiftLabel": "Смена 01.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-07-31T10:25:44.478Z",
         "id": 4119,
@@ -202131,15 +202169,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-08-01",
         "label": "Смена 01.08",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 60,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -203065,12 +203103,12 @@
         "status": "ok"
       }
     ],
-    "total": 3072
+    "total": 3073
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 60
     },
     {
       "method": "Карта",
@@ -203089,7 +203127,17 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 4120,
+      "items": [
+        "Клубничный mini x1",
+        "АйсМатча клубника x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -203221,7 +203269,18 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "АйсМатча клубника",
+      "qty": 1,
+      "total": 35
+    },
+    {
+      "name": "Клубничный mini",
+      "qty": 1,
+      "total": 25
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-08-01T05:01:04.372Z"
+  "updatedAt": "2026-08-01T05:55:12.854Z"
 }

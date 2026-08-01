@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 51.9,
-    "checks": 10,
+    "average": 61.72727272727273,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 314,
-    "revenue": 519
+    "net": 474,
+    "revenue": 679
   },
   "data": {
-    "actions": 6713,
+    "actions": 6715,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3082,
+    "orders": 3083,
     "products": 60,
     "shifts": 71
   },
   "activity": [
     {
+      "id": 1785552300154,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:45",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785552300154,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:45",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785551894926,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:28",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785543663669,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:21",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785543663669,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:21",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3082,
+    "current": 3083,
     "old": [
       {
         "createdAt": "2026-07-31T10:25:44.478Z",
@@ -101161,6 +101161,71 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-01T02:45:00.014Z",
+        "id": 4130,
+        "items": [
+          "Мороженое с чёрным сахаром x3",
+          "Matcha mini x1",
+          "МангоБанан mini x1",
+          "Blue mini x1",
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-чёрным-сахаром",
+            "name": "Мороженое с чёрным сахаром",
+            "price": 20,
+            "qty": 3,
+            "size": "",
+            "total": 60
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 200,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-01",
+        "shiftLabel": "Смена 01.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 160
+      },
       {
         "createdAt": "2026-08-01T02:38:14.789Z",
         "id": 4129,
@@ -202502,14 +202567,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-01",
         "label": "Смена 01.08",
         "missingOrders": 0,
-        "revenue": 519,
+        "revenue": 679,
         "status": "ok"
       },
       {
@@ -203436,12 +203501,12 @@
         "status": "ok"
       }
     ],
-    "total": 3082
+    "total": 3083
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 352
+      "total": 512
     },
     {
       "method": "Карта",
@@ -203461,6 +203526,18 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4130,
+      "items": [
+        "Мороженое с чёрным сахаром x3",
+        "Matcha mini x1",
+        "МангоБанан mini x1",
+        "Blue mini x1",
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 160
+    },
     {
       "id": 4129,
       "items": [
@@ -203524,14 +203601,6 @@
       ],
       "status": "Оплачен",
       "total": 46
-    },
-    {
-      "id": 4122,
-      "items": [
-        "Мороженое клубничное x4"
-      ],
-      "status": "Оплачен",
-      "total": 80
     }
   ],
   "shifts": {
@@ -203672,14 +203741,29 @@
       "total": 100
     },
     {
+      "name": "Мороженое с чёрным сахаром",
+      "qty": 3,
+      "total": 60
+    },
+    {
+      "name": "Matcha mini",
+      "qty": 2,
+      "total": 60
+    },
+    {
+      "name": "Blue mini",
+      "qty": 3,
+      "total": 60
+    },
+    {
       "name": "Манго big",
       "qty": 2,
       "total": 52
     },
     {
-      "name": "Blue mini",
+      "name": "Черника mini",
       "qty": 2,
-      "total": 40
+      "total": 50
     },
     {
       "name": "Клубничный жасмин mini",
@@ -203690,23 +203774,8 @@
       "name": "Babl tea mini",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "АйсМатча клубника",
-      "qty": 1,
-      "total": 35
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 1,
-      "total": 30
-    },
-    {
-      "name": "Babl tea big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-01T09:41:32.691Z"
+  "updatedAt": "2026-08-01T09:48:17.775Z"
 }

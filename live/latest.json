@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.76923076923077,
-    "checks": 26,
+    "average": 42.44444444444444,
+    "checks": 27,
     "expenseTotal": 205,
-    "net": 881,
-    "revenue": 1086
+    "net": 941,
+    "revenue": 1146
   },
   "data": {
-    "actions": 6838,
+    "actions": 6840,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3145,
+    "orders": 3146,
     "products": 60,
     "shifts": 72
   },
   "activity": [
     {
+      "id": 1785661151929,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785661151929,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:59",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785657806265,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:50",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785652645220,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:37",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785652645220,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:37",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3145,
+    "current": 3146,
     "old": [
       {
         "createdAt": "2026-08-01T10:37:20.511Z",
@@ -102776,6 +102776,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-02T09:03:13.900Z",
+        "id": 4193,
+        "items": [
+          "Bubble Gum mini x1",
+          "Смузи Шавель Ананас x1"
+        ],
+        "lines": [
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-смузи-шавель-ананас",
+            "name": "Смузи Шавель Ананас",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 60,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-02",
+        "shiftLabel": "Смена 02.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-08-02T08:59:11.803Z",
         "id": 4192,
@@ -206241,14 +206279,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 26,
-        "expectedOrders": 26,
+        "databaseOrders": 27,
+        "expectedOrders": 27,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-02",
         "label": "Смена 02.08",
         "missingOrders": 0,
-        "revenue": 1086,
+        "revenue": 1146,
         "status": "ok"
       },
       {
@@ -207188,12 +207226,12 @@
         "status": "ok"
       }
     ],
-    "total": 3145
+    "total": 3146
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 880
+      "total": 940
     },
     {
       "method": "Карта",
@@ -207213,6 +207251,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4193,
+      "items": [
+        "Bubble Gum mini x1",
+        "Смузи Шавель Ананас x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 4192,
       "items": [
@@ -207271,16 +207318,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 4185,
-      "items": [
-        "Мороженое рожок x2",
-        "АйсМатча клубника x1",
-        "ПиноКолада big x1"
-      ],
-      "status": "Оплачен",
-      "total": 85
     }
   ],
   "shifts": {
@@ -207441,6 +207478,11 @@
       "total": 75
     },
     {
+      "name": "Смузи Шавель Ананас",
+      "qty": 1,
+      "total": 40
+    },
+    {
       "name": "Мороженое клубничное",
       "qty": 2,
       "total": 40
@@ -207449,13 +207491,8 @@
       "name": "Смузи Ягодный",
       "qty": 1,
       "total": 40
-    },
-    {
-      "name": "Мороженое Орео",
-      "qty": 2,
-      "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-02T16:02:30.659Z"
+  "updatedAt": "2026-08-02T16:06:30.787Z"
 }

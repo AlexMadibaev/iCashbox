@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 30,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -175,
+    "revenue": 30
   },
   "data": {
     "actions": 6788,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3119,
+    "orders": 3120,
     "products": 60,
     "shifts": 72
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3119,
+    "current": 3120,
     "old": [
       {
         "createdAt": "2026-08-01T10:37:20.511Z",
@@ -102776,6 +102776,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-01T22:59:17.556Z",
+        "id": 4167,
+        "items": [
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-02",
+        "shiftLabel": "Смена 02.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-08-01T10:37:20.511Z",
         "id": 4166,
@@ -205361,15 +205390,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-08-02",
         "label": "Смена 02.08",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 30,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -206308,12 +206337,12 @@
         "status": "ok"
       }
     ],
-    "total": 3119
+    "total": 3120
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 0
+      "total": 30
     },
     {
       "method": "Карта",
@@ -206332,7 +206361,16 @@
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 4167,
+      "items": [
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -206464,7 +206502,13 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "Matcha mini",
+      "qty": 1,
+      "total": 30
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-08-02T04:13:07.641Z"
+  "updatedAt": "2026-08-02T06:02:36.543Z"
 }

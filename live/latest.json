@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 42.52,
-    "checks": 25,
+    "average": 41.76923076923077,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 858,
-    "revenue": 1063
+    "net": 881,
+    "revenue": 1086
   },
   "data": {
-    "actions": 6836,
+    "actions": 6838,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3144,
+    "orders": 3145,
     "products": 60,
     "shifts": 72
   },
   "activity": [
     {
+      "id": 1785657806265,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:03",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785657806265,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:03",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785657245613,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785650612866,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:03",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785650612866,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:03",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3144,
+    "current": 3145,
     "old": [
       {
         "createdAt": "2026-08-01T10:37:20.511Z",
@@ -102776,6 +102776,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-02T08:59:11.803Z",
+        "id": 4192,
+        "items": [
+          "Babl tea mini x1",
+          "Тапиока доп x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-тапиока-доп",
+            "name": "Тапиока доп",
+            "price": 3,
+            "qty": 1,
+            "size": "",
+            "total": 3
+          }
+        ],
+        "payments": {
+          "Наличные": 23,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-02",
+        "shiftLabel": "Смена 02.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 23
+      },
       {
         "createdAt": "2026-08-02T08:03:26.144Z",
         "id": 4191,
@@ -206203,14 +206241,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-02",
         "label": "Смена 02.08",
         "missingOrders": 0,
-        "revenue": 1063,
+        "revenue": 1086,
         "status": "ok"
       },
       {
@@ -207150,12 +207188,12 @@
         "status": "ok"
       }
     ],
-    "total": 3144
+    "total": 3145
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 857
+      "total": 880
     },
     {
       "method": "Карта",
@@ -207175,6 +207213,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4192,
+      "items": [
+        "Babl tea mini x1",
+        "Тапиока доп x1"
+      ],
+      "status": "Оплачен",
+      "total": 23
+    },
     {
       "id": 4191,
       "items": [
@@ -207234,15 +207281,6 @@
       ],
       "status": "Оплачен",
       "total": 85
-    },
-    {
-      "id": 4184,
-      "items": [
-        "Смузи Ягодный x1",
-        "Клубничный mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 65
     }
   ],
   "shifts": {
@@ -207389,8 +207427,8 @@
     },
     {
       "name": "Babl tea mini",
-      "qty": 4,
-      "total": 80
+      "qty": 5,
+      "total": 100
     },
     {
       "name": "Babl tea big",
@@ -207419,5 +207457,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-02T15:06:44.751Z"
+  "updatedAt": "2026-08-02T16:02:30.659Z"
 }

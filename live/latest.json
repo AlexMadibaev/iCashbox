@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.64705882352941,
-    "checks": 17,
+    "average": 44.833333333333336,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 537,
-    "revenue": 742
+    "net": 602,
+    "revenue": 807
   },
   "data": {
-    "actions": 6820,
+    "actions": 6822,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3136,
+    "orders": 3137,
     "products": 60,
     "shifts": 72
   },
   "activity": [
     {
+      "id": 1785649166792,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:39",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785649166792,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:39",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785646359972,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:54",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785642810139,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:53",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785642810139,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:53",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3136,
+    "current": 3137,
     "old": [
       {
         "createdAt": "2026-08-01T10:37:20.511Z",
@@ -102776,6 +102776,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-02T05:55:19.688Z",
+        "id": 4184,
+        "items": [
+          "Смузи Ягодный x1",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-смузи-ягодный",
+            "name": "Смузи Ягодный",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-02",
+        "shiftLabel": "Смена 02.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 65
+      },
       {
         "createdAt": "2026-08-02T05:39:26.675Z",
         "id": 4183,
@@ -205926,14 +205964,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-02",
         "label": "Смена 02.08",
         "missingOrders": 0,
-        "revenue": 742,
+        "revenue": 807,
         "status": "ok"
       },
       {
@@ -206873,12 +206911,12 @@
         "status": "ok"
       }
     ],
-    "total": 3136
+    "total": 3137
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 586
+      "total": 651
     },
     {
       "method": "Карта",
@@ -206898,6 +206936,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4184,
+      "items": [
+        "Смузи Ягодный x1",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 65
+    },
     {
       "id": 4183,
       "items": [
@@ -206958,15 +207005,6 @@
       ],
       "status": "Оплачен",
       "total": 72
-    },
-    {
-      "id": 4176,
-      "items": [
-        "Babl tea mini x1",
-        "Babl tea big x1"
-      ],
-      "status": "Оплачен",
-      "total": 46
     }
   ],
   "shifts": {
@@ -207122,6 +207160,11 @@
       "total": 52
     },
     {
+      "name": "Смузи Ягодный",
+      "qty": 1,
+      "total": 40
+    },
+    {
       "name": "Babl tea mini",
       "qty": 2,
       "total": 40
@@ -207135,13 +207178,8 @@
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Blue big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-02T12:42:45.371Z"
+  "updatedAt": "2026-08-02T12:58:38.293Z"
 }

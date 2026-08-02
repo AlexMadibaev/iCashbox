@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.6875,
-    "checks": 16,
+    "average": 43.64705882352941,
+    "checks": 17,
     "expenseTotal": 205,
-    "net": 462,
-    "revenue": 667
+    "net": 537,
+    "revenue": 742
   },
   "data": {
-    "actions": 6818,
+    "actions": 6820,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3135,
+    "orders": 3136,
     "products": 60,
     "shifts": 72
   },
   "activity": [
     {
+      "id": 1785646359972,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:52",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785646359972,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:52",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785644700940,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:53",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785642735648,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:52",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785642735648,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:52",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3135,
+    "current": 3136,
     "old": [
       {
         "createdAt": "2026-08-01T10:37:20.511Z",
@@ -102776,6 +102776,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-02T05:39:26.675Z",
+        "id": 4183,
+        "items": [
+          "ПиноКолада mini x3"
+        ],
+        "lines": [
+          {
+            "id": "product-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 3,
+            "size": "",
+            "total": 75
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-02",
+        "shiftLabel": "Смена 02.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 75
+      },
       {
         "createdAt": "2026-08-02T04:52:39.837Z",
         "id": 4182,
@@ -205897,14 +205926,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 16,
-        "expectedOrders": 16,
+        "databaseOrders": 17,
+        "expectedOrders": 17,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-02",
         "label": "Смена 02.08",
         "missingOrders": 0,
-        "revenue": 667,
+        "revenue": 742,
         "status": "ok"
       },
       {
@@ -206844,12 +206873,12 @@
         "status": "ok"
       }
     ],
-    "total": 3135
+    "total": 3136
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 511
+      "total": 586
     },
     {
       "method": "Карта",
@@ -206869,6 +206898,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4183,
+      "items": [
+        "ПиноКолада mini x3"
+      ],
+      "status": "Оплачен",
+      "total": 75
+    },
     {
       "id": 4182,
       "items": [
@@ -206930,14 +206967,6 @@
       ],
       "status": "Оплачен",
       "total": 46
-    },
-    {
-      "id": 4175,
-      "items": [
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -207083,6 +207112,11 @@
       "total": 105
     },
     {
+      "name": "ПиноКолада mini",
+      "qty": 3,
+      "total": 75
+    },
+    {
       "name": "Babl tea big",
       "qty": 2,
       "total": 52
@@ -207106,13 +207140,8 @@
       "name": "Blue big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Bubble Gum big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-02T11:55:58.324Z"
+  "updatedAt": "2026-08-02T12:42:45.371Z"
 }

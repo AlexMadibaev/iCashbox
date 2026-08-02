@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43.2,
-    "checks": 30,
+    "average": 43.096774193548384,
+    "checks": 31,
     "expenseTotal": 205,
-    "net": 1091,
-    "revenue": 1296
+    "net": 1131,
+    "revenue": 1336
   },
   "data": {
-    "actions": 6846,
+    "actions": 6848,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3149,
+    "orders": 3150,
     "products": 60,
     "shifts": 72
   },
   "activity": [
     {
+      "id": 1785661960396,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:12",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785661960396,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:12",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785661917264,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:03",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785657245613,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:54",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785657245613,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:54",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3149,
+    "current": 3150,
     "old": [
       {
         "createdAt": "2026-08-01T10:37:20.511Z",
@@ -102776,6 +102776,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-02T09:17:32.968Z",
+        "id": 4197,
+        "items": [
+          "Фреш лимон big x1",
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-фреш-лимон-big",
+            "name": "Фреш лимон big",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-02",
+        "shiftLabel": "Смена 02.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-08-02T09:12:40.277Z",
         "id": 4196,
@@ -206366,14 +206404,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 30,
-        "expectedOrders": 30,
+        "databaseOrders": 31,
+        "expectedOrders": 31,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-02",
         "label": "Смена 02.08",
         "missingOrders": 0,
-        "revenue": 1296,
+        "revenue": 1336,
         "status": "ok"
       },
       {
@@ -207313,12 +207351,12 @@
         "status": "ok"
       }
     ],
-    "total": 3149
+    "total": 3150
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1070
+      "total": 1110
     },
     {
       "method": "Карта",
@@ -207338,6 +207376,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4197,
+      "items": [
+        "Фреш лимон big x1",
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4196,
       "items": [
@@ -207395,14 +207442,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4189,
-      "items": [
-        "Фреш лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 15
     }
   ],
   "shifts": {
@@ -207579,5 +207618,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-02T16:15:57.408Z"
+  "updatedAt": "2026-08-02T16:20:50.065Z"
 }

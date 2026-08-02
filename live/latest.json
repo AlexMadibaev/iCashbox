@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 26.714285714285715,
-    "checks": 7,
+    "average": 28.375,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": -18,
-    "revenue": 187
+    "net": 22,
+    "revenue": 227
   },
   "data": {
-    "actions": 6800,
+    "actions": 6802,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3126,
+    "orders": 3127,
     "products": 60,
     "shifts": 72
   },
   "activity": [
     {
+      "id": 1785640882958,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:21",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785640882958,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:21",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785639106505,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:20",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785625157721,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:59",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785625157721,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:59",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3126,
+    "current": 3127,
     "old": [
       {
         "createdAt": "2026-08-01T10:37:20.511Z",
@@ -102776,6 +102776,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-02T03:24:46.281Z",
+        "id": 4174,
+        "items": [
+          "Мороженое с чёрным сахаром x1",
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-чёрным-сахаром",
+            "name": "Мороженое с чёрным сахаром",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-02",
+        "shiftLabel": "Смена 02.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-08-02T03:21:22.841Z",
         "id": 4173,
@@ -205573,14 +205611,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-02",
         "label": "Смена 02.08",
         "missingOrders": 0,
-        "revenue": 187,
+        "revenue": 227,
         "status": "ok"
       },
       {
@@ -206520,12 +206558,12 @@
         "status": "ok"
       }
     ],
-    "total": 3126
+    "total": 3127
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 161
+      "total": 201
     },
     {
       "method": "Карта",
@@ -206545,6 +206583,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4174,
+      "items": [
+        "Мороженое с чёрным сахаром x1",
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4173,
       "items": [
@@ -206736,6 +206783,11 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое Орео",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
@@ -206761,21 +206813,16 @@
       "total": 25
     },
     {
+      "name": "Мороженое с чёрным сахаром",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Манго Маракуя mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Мороженое Орео",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 1,
-      "total": 10
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-02T10:24:41.621Z"
+  "updatedAt": "2026-08-02T10:28:35.069Z"
 }

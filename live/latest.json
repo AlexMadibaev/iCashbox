@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 43,
-    "checks": 32,
+    "average": 45.06060606060606,
+    "checks": 33,
     "expenseTotal": 205,
-    "net": 1171,
-    "revenue": 1376
+    "net": 1282,
+    "revenue": 1487
   },
   "data": {
-    "actions": 6850,
+    "actions": 6852,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3151,
+    "orders": 3152,
     "products": 60,
     "shifts": 72
   },
   "activity": [
     {
+      "id": 1785662297306,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:18",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785662297306,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:18",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785662253105,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:03",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785661151929,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:59",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785661151929,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:59",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3151,
+    "current": 3152,
     "old": [
       {
         "createdAt": "2026-08-01T10:37:20.511Z",
@@ -102776,6 +102776,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-02T09:27:54.275Z",
+        "id": 4199,
+        "items": [
+          "Клубничный big x2",
+          "Bubble Gum big x1",
+          "МангоБанан mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          },
+          {
+            "id": "product-bubble-gum-big",
+            "name": "Bubble Gum big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 200,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-02",
+        "shiftLabel": "Смена 02.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 111
+      },
       {
         "createdAt": "2026-08-02T09:18:17.173Z",
         "id": 4198,
@@ -206433,14 +206480,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 32,
-        "expectedOrders": 32,
+        "databaseOrders": 33,
+        "expectedOrders": 33,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-02",
         "label": "Смена 02.08",
         "missingOrders": 0,
-        "revenue": 1376,
+        "revenue": 1487,
         "status": "ok"
       },
       {
@@ -207380,12 +207427,12 @@
         "status": "ok"
       }
     ],
-    "total": 3151
+    "total": 3152
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1110
+      "total": 1221
     },
     {
       "method": "Карта",
@@ -207405,6 +207452,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4199,
+      "items": [
+        "Клубничный big x2",
+        "Bubble Gum big x1",
+        "МангоБанан mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 111
+    },
     {
       "id": 4198,
       "items": [
@@ -207463,14 +207520,6 @@
       ],
       "status": "Оплачен",
       "total": 23
-    },
-    {
-      "id": 4191,
-      "items": [
-        "Babl tea mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -207636,16 +207685,16 @@
       "total": 75
     },
     {
-      "name": "Манго Маракуя mini",
+      "name": "Клубничный big",
       "qty": 2,
-      "total": 40
+      "total": 60
     },
     {
-      "name": "Смузи Шавель Ананас",
-      "qty": 1,
-      "total": 40
+      "name": "Bubble Gum big",
+      "qty": 2,
+      "total": 52
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-02T16:21:34.244Z"
+  "updatedAt": "2026-08-02T16:31:12.951Z"
 }

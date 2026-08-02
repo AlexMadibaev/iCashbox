@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 34.09090909090909,
-    "checks": 11,
+    "average": 38.75,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 170,
-    "revenue": 375
+    "net": 260,
+    "revenue": 465
   },
   "data": {
     "actions": 6810,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3130,
+    "orders": 3131,
     "products": 60,
     "shifts": 72
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3130,
+    "current": 3131,
     "old": [
       {
         "createdAt": "2026-08-01T10:37:20.511Z",
@@ -102776,6 +102776,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-02T03:54:29.641Z",
+        "id": 4178,
+        "items": [
+          "АйсМатча клубника x1",
+          "Matcha mini x1",
+          "Мороженое матча x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-матча",
+            "name": "Мороженое матча",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-02",
+        "shiftLabel": "Смена 02.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 90
+      },
       {
         "createdAt": "2026-08-02T03:53:30.019Z",
         "id": 4177,
@@ -205725,14 +205772,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-02",
         "label": "Смена 02.08",
         "missingOrders": 0,
-        "revenue": 375,
+        "revenue": 465,
         "status": "ok"
       },
       {
@@ -206672,12 +206719,12 @@
         "status": "ok"
       }
     ],
-    "total": 3130
+    "total": 3131
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 349
+      "total": 439
     },
     {
       "method": "Карта",
@@ -206697,6 +206744,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4178,
+      "items": [
+        "АйсМатча клубника x1",
+        "Matcha mini x1",
+        "Мороженое матча x1"
+      ],
+      "status": "Оплачен",
+      "total": 90
+    },
     {
       "id": 4177,
       "items": [
@@ -206756,15 +206813,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4170,
-      "items": [
-        "Мороженое рожок x1",
-        "Мороженое Орео x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -206901,8 +206949,8 @@
   "topProducts": [
     {
       "name": "Matcha mini",
-      "qty": 2,
-      "total": 60
+      "qty": 3,
+      "total": 90
     },
     {
       "name": "Babl tea big",
@@ -206913,6 +206961,11 @@
       "name": "Мороженое Орео",
       "qty": 2,
       "total": 40
+    },
+    {
+      "name": "АйсМатча клубника",
+      "qty": 1,
+      "total": 35
     },
     {
       "name": "Айс Латте",
@@ -206933,13 +206986,8 @@
       "name": "Жасмин лимон big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Черника mini",
-      "qty": 1,
-      "total": 25
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-02T10:57:19.574Z"
+  "updatedAt": "2026-08-02T10:58:15.817Z"
 }

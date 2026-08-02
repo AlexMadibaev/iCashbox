@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 38.75,
-    "checks": 12,
+    "average": 41.15384615384615,
+    "checks": 13,
     "expenseTotal": 205,
-    "net": 260,
-    "revenue": 465
+    "net": 330,
+    "revenue": 535
   },
   "data": {
     "actions": 6812,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3131,
+    "orders": 3132,
     "products": 60,
     "shifts": 72
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3131,
+    "current": 3132,
     "old": [
       {
         "createdAt": "2026-08-01T10:37:20.511Z",
@@ -102776,6 +102776,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-02T03:57:34.006Z",
+        "id": 4179,
+        "items": [
+          "АйсМатча клубника x2"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 2,
+            "size": "",
+            "total": 70
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 70,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-02",
+        "shiftLabel": "Смена 02.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 70
+      },
       {
         "createdAt": "2026-08-02T03:54:29.641Z",
         "id": 4178,
@@ -205772,14 +205801,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 12,
-        "expectedOrders": 12,
+        "databaseOrders": 13,
+        "expectedOrders": 13,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-02",
         "label": "Смена 02.08",
         "missingOrders": 0,
-        "revenue": 465,
+        "revenue": 535,
         "status": "ok"
       },
       {
@@ -206719,7 +206748,7 @@
         "status": "ok"
       }
     ],
-    "total": 3131
+    "total": 3132
   },
   "payments": [
     {
@@ -206728,7 +206757,7 @@
     },
     {
       "method": "Карта",
-      "total": 0
+      "total": 70
     },
     {
       "method": "Alif",
@@ -206744,6 +206773,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4179,
+      "items": [
+        "АйсМатча клубника x2"
+      ],
+      "status": "Оплачен",
+      "total": 70
+    },
     {
       "id": 4178,
       "items": [
@@ -206805,14 +206842,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 4171,
-      "items": [
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -206948,6 +206977,11 @@
   },
   "topProducts": [
     {
+      "name": "АйсМатча клубника",
+      "qty": 3,
+      "total": 105
+    },
+    {
       "name": "Matcha mini",
       "qty": 3,
       "total": 90
@@ -206961,11 +206995,6 @@
       "name": "Мороженое Орео",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "АйсМатча клубника",
-      "qty": 1,
-      "total": 35
     },
     {
       "name": "Айс Латте",
@@ -206989,5 +207018,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-02T10:58:18.015Z"
+  "updatedAt": "2026-08-02T11:01:13.896Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 41.15384615384615,
-    "checks": 13,
+    "average": 42.5,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 330,
-    "revenue": 535
+    "net": 390,
+    "revenue": 595
   },
   "data": {
-    "actions": 6812,
+    "actions": 6814,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3132,
+    "orders": 3133,
     "products": 60,
     "shifts": 72
   },
   "activity": [
     {
+      "id": 1785643054133,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:57",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785643054133,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:57",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785642869758,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785640882958,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:21",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785640882958,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:21",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3132,
+    "current": 3133,
     "old": [
       {
         "createdAt": "2026-08-01T10:37:20.511Z",
@@ -102776,6 +102776,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-02T04:20:22.164Z",
+        "id": 4180,
+        "items": [
+          "Matcha mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 60,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-02",
+        "shiftLabel": "Смена 02.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-08-02T03:57:34.006Z",
         "id": 4179,
@@ -205801,14 +205830,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-02",
         "label": "Смена 02.08",
         "missingOrders": 0,
-        "revenue": 535,
+        "revenue": 595,
         "status": "ok"
       },
       {
@@ -206748,7 +206777,7 @@
         "status": "ok"
       }
     ],
-    "total": 3132
+    "total": 3133
   },
   "payments": [
     {
@@ -206761,7 +206790,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 60
     },
     {
       "method": "Dushanbe City",
@@ -206773,6 +206802,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4180,
+      "items": [
+        "Matcha mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 4179,
       "items": [
@@ -206834,14 +206871,6 @@
       ],
       "status": "Оплачен",
       "total": 25
-    },
-    {
-      "id": 4172,
-      "items": [
-        "Жасмин лимон big x1"
-      ],
-      "status": "Оплачен",
-      "total": 26
     }
   ],
   "shifts": {
@@ -206977,14 +207006,14 @@
   },
   "topProducts": [
     {
+      "name": "Matcha mini",
+      "qty": 5,
+      "total": 150
+    },
+    {
       "name": "АйсМатча клубника",
       "qty": 3,
       "total": 105
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 3,
-      "total": 90
     },
     {
       "name": "Babl tea big",
@@ -207018,5 +207047,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-02T11:01:13.896Z"
+  "updatedAt": "2026-08-02T11:23:40.894Z"
 }

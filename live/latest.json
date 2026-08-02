@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 44.833333333333336,
-    "checks": 18,
+    "average": 46.94736842105263,
+    "checks": 19,
     "expenseTotal": 205,
-    "net": 602,
-    "revenue": 807
+    "net": 687,
+    "revenue": 892
   },
   "data": {
-    "actions": 6822,
+    "actions": 6824,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3137,
+    "orders": 3138,
     "products": 60,
     "shifts": 72
   },
   "activity": [
     {
+      "id": 1785650119803,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:55",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785650119803,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:55",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785649166792,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "15:57",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785642869758,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:54",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785642869758,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "15:54",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3137,
+    "current": 3138,
     "old": [
       {
         "createdAt": "2026-08-01T10:37:20.511Z",
@@ -102776,6 +102776,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-02T06:03:32.755Z",
+        "id": 4185,
+        "items": [
+          "Мороженое рожок x2",
+          "АйсМатча клубника x1",
+          "ПиноКолада big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 2,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-02",
+        "shiftLabel": "Смена 02.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 85
+      },
       {
         "createdAt": "2026-08-02T05:55:19.688Z",
         "id": 4184,
@@ -205964,14 +206011,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 18,
-        "expectedOrders": 18,
+        "databaseOrders": 19,
+        "expectedOrders": 19,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-02",
         "label": "Смена 02.08",
         "missingOrders": 0,
-        "revenue": 807,
+        "revenue": 892,
         "status": "ok"
       },
       {
@@ -206911,12 +206958,12 @@
         "status": "ok"
       }
     ],
-    "total": 3137
+    "total": 3138
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 651
+      "total": 736
     },
     {
       "method": "Карта",
@@ -206936,6 +206983,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4185,
+      "items": [
+        "Мороженое рожок x2",
+        "АйсМатча клубника x1",
+        "ПиноКолада big x1"
+      ],
+      "status": "Оплачен",
+      "total": 85
+    },
     {
       "id": 4184,
       "items": [
@@ -206995,16 +207052,6 @@
       ],
       "status": "Оплачен",
       "total": 90
-    },
-    {
-      "id": 4177,
-      "items": [
-        "Клубника big x1",
-        "Манго Маракуя big x1",
-        "Мороженое клубничное x1"
-      ],
-      "status": "Оплачен",
-      "total": 72
     }
   ],
   "shifts": {
@@ -207146,8 +207193,8 @@
     },
     {
       "name": "АйсМатча клубника",
-      "qty": 3,
-      "total": 105
+      "qty": 4,
+      "total": 140
     },
     {
       "name": "ПиноКолада mini",
@@ -207175,11 +207222,11 @@
       "total": 40
     },
     {
-      "name": "Айс Латте",
-      "qty": 1,
+      "name": "Мороженое рожок",
+      "qty": 3,
       "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-02T12:58:38.293Z"
+  "updatedAt": "2026-08-02T13:06:51.614Z"
 }

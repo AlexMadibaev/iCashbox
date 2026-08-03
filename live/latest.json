@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 26.428571428571427,
-    "checks": 7,
+    "average": 30,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": -20,
-    "revenue": 185
+    "net": 35,
+    "revenue": 240
   },
   "data": {
-    "actions": 6875,
+    "actions": 6877,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3163,
+    "orders": 3164,
     "products": 60,
     "shifts": 73
   },
   "activity": [
     {
+      "id": 1785718054404,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785718054404,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:47",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785717688061,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "09:59",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785706141526,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:29",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785706141526,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:29",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3163,
+    "current": 3164,
     "old": [
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
@@ -104029,6 +104029,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-03T00:49:11.987Z",
+        "id": 4211,
+        "items": [
+          "Черника mini x1",
+          "ПиноКолада big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-пиноколада-big",
+            "name": "ПиноКолада big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-03",
+        "shiftLabel": "Смена 03.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 55
+      },
       {
         "createdAt": "2026-08-03T00:47:34.282Z",
         "id": 4210,
@@ -208088,14 +208126,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-03",
         "label": "Смена 03.08",
         "missingOrders": 0,
-        "revenue": 185,
+        "revenue": 240,
         "status": "ok"
       },
       {
@@ -209048,12 +209086,12 @@
         "status": "ok"
       }
     ],
-    "total": 3163
+    "total": 3164
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 50
+      "total": 105
     },
     {
       "method": "Карта",
@@ -209073,6 +209111,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4211,
+      "items": [
+        "Черника mini x1",
+        "ПиноКолада big x1"
+      ],
+      "status": "Оплачен",
+      "total": 55
+    },
     {
       "id": 4210,
       "items": [
@@ -209270,9 +209317,19 @@
       "total": 35
     },
     {
+      "name": "ПиноКолада big",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Matcha mini",
       "qty": 1,
       "total": 30
+    },
+    {
+      "name": "Черника mini",
+      "qty": 1,
+      "total": 25
     },
     {
       "name": "Мороженое матча",
@@ -209293,18 +209350,8 @@
       "name": "Мороженое рожок",
       "qty": 2,
       "total": 20
-    },
-    {
-      "name": "Мороженое с чёрным сахаром",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Фреш лимон mini",
-      "qty": 1,
-      "total": 15
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-03T07:50:54.489Z"
+  "updatedAt": "2026-08-03T07:52:31.444Z"
 }

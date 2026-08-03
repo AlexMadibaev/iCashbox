@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.81666666666667,
-    "checks": 60,
+    "average": 39.459016393442624,
+    "checks": 61,
     "expenseTotal": 205,
-    "net": 2124,
-    "revenue": 2329
+    "net": 2202,
+    "revenue": 2407
   },
   "data": {
-    "actions": 6987,
+    "actions": 6989,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3216,
+    "orders": 3217,
     "products": 60,
     "shifts": 73
   },
   "activity": [
     {
+      "id": 1785752006757,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:13",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785752006757,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:13",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785751689813,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785749136610,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:25",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785749136610,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:25",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3216,
+    "current": 3217,
     "old": [
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
@@ -104029,6 +104029,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-03T10:17:32.901Z",
+        "id": 4264,
+        "items": [
+          "АйсМатча клубника x1",
+          "Bubble Gum mini x2",
+          "Кокос добавка x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          },
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-кокос-добавка",
+            "name": "Кокос добавка",
+            "price": 3,
+            "qty": 1,
+            "size": "",
+            "total": 3
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 78,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-03",
+        "shiftLabel": "Смена 03.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 78
+      },
       {
         "createdAt": "2026-08-03T10:13:26.637Z",
         "id": 4263,
@@ -209904,14 +209951,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 60,
-        "expectedOrders": 60,
+        "databaseOrders": 61,
+        "expectedOrders": 61,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-03",
         "label": "Смена 03.08",
         "missingOrders": 0,
-        "revenue": 2329,
+        "revenue": 2407,
         "status": "ok"
       },
       {
@@ -210864,7 +210911,7 @@
         "status": "ok"
       }
     ],
-    "total": 3216
+    "total": 3217
   },
   "payments": [
     {
@@ -210873,7 +210920,7 @@
     },
     {
       "method": "Карта",
-      "total": 0
+      "total": 78
     },
     {
       "method": "Alif",
@@ -210889,6 +210936,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4264,
+      "items": [
+        "АйсМатча клубника x1",
+        "Bubble Gum mini x2",
+        "Кокос добавка x1"
+      ],
+      "status": "Оплачен",
+      "total": 78
+    },
     {
       "id": 4263,
       "items": [
@@ -210950,14 +211007,6 @@
       ],
       "status": "Оплачен",
       "total": 40
-    },
-    {
-      "id": 4256,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -211134,5 +211183,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-03T17:16:46.562Z"
+  "updatedAt": "2026-08-03T17:20:52.145Z"
 }

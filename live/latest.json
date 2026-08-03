@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 30,
-    "checks": 8,
+    "average": 32.44444444444444,
+    "checks": 9,
     "expenseTotal": 205,
-    "net": 35,
-    "revenue": 240
+    "net": 87,
+    "revenue": 292
   },
   "data": {
-    "actions": 6877,
+    "actions": 6879,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3164,
+    "orders": 3165,
     "products": 60,
     "shifts": 73
   },
   "activity": [
     {
+      "id": 1785718152161,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:49",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785718152161,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:49",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785718054404,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:03",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785707965133,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:59",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785707965133,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:59",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3164,
+    "current": 3165,
     "old": [
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
@@ -104029,6 +104029,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-03T00:52:28.696Z",
+        "id": 4212,
+        "items": [
+          "Blue big x1",
+          "Виноградный тропический big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-big",
+            "name": "Blue big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-виноградный-тропический-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 52,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-03",
+        "shiftLabel": "Смена 03.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-08-03T00:49:11.987Z",
         "id": 4211,
@@ -208126,14 +208164,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 8,
-        "expectedOrders": 8,
+        "databaseOrders": 9,
+        "expectedOrders": 9,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-03",
         "label": "Смена 03.08",
         "missingOrders": 0,
-        "revenue": 240,
+        "revenue": 292,
         "status": "ok"
       },
       {
@@ -209086,7 +209124,7 @@
         "status": "ok"
       }
     ],
-    "total": 3164
+    "total": 3165
   },
   "payments": [
     {
@@ -209103,7 +209141,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 55
+      "total": 107
     },
     {
       "method": "Семья",
@@ -209111,6 +209149,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4212,
+      "items": [
+        "Blue big x1",
+        "Виноградный тропический big x1"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 4211,
       "items": [
@@ -209169,14 +209216,6 @@
       ],
       "status": "Оплачен",
       "total": 10
-    },
-    {
-      "id": 4204,
-      "items": [
-        "АйсМатча клубника x1"
-      ],
-      "status": "Оплачен",
-      "total": 35
     }
   ],
   "shifts": {
@@ -209327,6 +209366,16 @@
       "total": 30
     },
     {
+      "name": "Blue big",
+      "qty": 1,
+      "total": 26
+    },
+    {
+      "name": "Виноградный тропический big",
+      "qty": 1,
+      "total": 26
+    },
+    {
       "name": "Черника mini",
       "qty": 1,
       "total": 25
@@ -209340,18 +209389,8 @@
       "name": "Манго Маракуя mini",
       "qty": 1,
       "total": 20
-    },
-    {
-      "name": "Мороженое классическое",
-      "qty": 1,
-      "total": 20
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 2,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-03T07:52:31.444Z"
+  "updatedAt": "2026-08-03T07:55:48.368Z"
 }

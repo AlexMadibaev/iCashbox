@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.42857142857143,
-    "checks": 14,
+    "average": 37,
+    "checks": 15,
     "expenseTotal": 205,
-    "net": 305,
-    "revenue": 510
+    "net": 350,
+    "revenue": 555
   },
   "data": {
-    "actions": 6889,
+    "actions": 6891,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3170,
+    "orders": 3171,
     "products": 60,
     "shifts": 73
   },
   "activity": [
     {
+      "id": 1785721485129,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:44",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785721485129,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:44",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785720391914,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785718152161,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:49",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785718152161,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:49",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3170,
+    "current": 3171,
     "old": [
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
@@ -104029,6 +104029,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-03T02:07:17.483Z",
+        "id": 4218,
+        "items": [
+          "Черника mini x1",
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 45,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-03",
+        "shiftLabel": "Смена 03.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-08-03T01:44:45.009Z",
         "id": 4217,
@@ -208318,14 +208356,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 14,
-        "expectedOrders": 14,
+        "databaseOrders": 15,
+        "expectedOrders": 15,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-03",
         "label": "Смена 03.08",
         "missingOrders": 0,
-        "revenue": 510,
+        "revenue": 555,
         "status": "ok"
       },
       {
@@ -209278,12 +209316,12 @@
         "status": "ok"
       }
     ],
-    "total": 3170
+    "total": 3171
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 271
+      "total": 316
     },
     {
       "method": "Карта",
@@ -209303,6 +209341,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4218,
+      "items": [
+        "Черника mini x1",
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 4217,
       "items": [
@@ -209361,15 +209408,6 @@
       ],
       "status": "Оплачен",
       "total": 55
-    },
-    {
-      "id": 4210,
-      "items": [
-        "Matcha mini x1",
-        "Манго Маракуя mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -209520,6 +209558,11 @@
       "total": 52
     },
     {
+      "name": "Черника mini",
+      "qty": 2,
+      "total": 50
+    },
+    {
       "name": "Манго mini",
       "qty": 2,
       "total": 40
@@ -209538,13 +209581,8 @@
       "name": "ПиноКолада big",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Matcha mini",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-03T08:48:05.507Z"
+  "updatedAt": "2026-08-03T09:10:38.082Z"
 }

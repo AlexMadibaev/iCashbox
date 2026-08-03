@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.775862068965516,
-    "checks": 58,
+    "average": 38.79661016949152,
+    "checks": 59,
     "expenseTotal": 205,
-    "net": 2044,
-    "revenue": 2249
+    "net": 2084,
+    "revenue": 2289
   },
   "data": {
-    "actions": 6983,
+    "actions": 6985,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3214,
+    "orders": 3215,
     "products": 60,
     "shifts": 73
   },
   "activity": [
     {
+      "id": 1785751358307,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:02",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785751358307,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:02",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785751347171,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785748995318,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:23",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785748995318,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:23",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3214,
+    "current": 3215,
     "old": [
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
@@ -104029,6 +104029,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-03T10:08:09.676Z",
+        "id": 4262,
+        "items": [
+          "Мороженое Орео x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-03",
+        "shiftLabel": "Смена 03.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-08-03T10:02:38.184Z",
         "id": 4261,
@@ -209837,14 +209866,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 58,
-        "expectedOrders": 58,
+        "databaseOrders": 59,
+        "expectedOrders": 59,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-03",
         "label": "Смена 03.08",
         "missingOrders": 0,
-        "revenue": 2249,
+        "revenue": 2289,
         "status": "ok"
       },
       {
@@ -210797,12 +210826,12 @@
         "status": "ok"
       }
     ],
-    "total": 3214
+    "total": 3215
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1225
+      "total": 1265
     },
     {
       "method": "Карта",
@@ -210822,6 +210851,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4262,
+      "items": [
+        "Мороженое Орео x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4261,
       "items": [
@@ -210883,14 +210920,6 @@
       ],
       "status": "Оплачен",
       "total": 61
-    },
-    {
-      "id": 4254,
-      "items": [
-        "Мороженое клубничное x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -211026,6 +211055,11 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое Орео",
+      "qty": 7,
+      "total": 140
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 13,
       "total": 130
@@ -211051,11 +211085,6 @@
       "total": 104
     },
     {
-      "name": "Мороженое Орео",
-      "qty": 5,
-      "total": 100
-    },
-    {
       "name": "Babl tea mini",
       "qty": 5,
       "total": 100
@@ -211067,5 +211096,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-03T17:05:57.289Z"
+  "updatedAt": "2026-08-03T17:11:29.738Z"
 }

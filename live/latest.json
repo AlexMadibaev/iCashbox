@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.2,
-    "checks": 10,
+    "average": 33.81818181818182,
+    "checks": 11,
     "expenseTotal": 205,
-    "net": 127,
-    "revenue": 332
+    "net": 167,
+    "revenue": 372
   },
   "data": {
-    "actions": 6881,
+    "actions": 6883,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3166,
+    "orders": 3167,
     "products": 60,
     "shifts": 73
   },
   "activity": [
     {
+      "id": 1785719201578,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785719201578,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:06",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785718348821,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:06",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785714136630,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:42",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785714136630,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:42",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3166,
+    "current": 3167,
     "old": [
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
@@ -104029,6 +104029,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-03T01:19:45.677Z",
+        "id": 4214,
+        "items": [
+          "Манго mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-mini",
+            "name": "Манго mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-03",
+        "shiftLabel": "Смена 03.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-08-03T01:06:41.445Z",
         "id": 4213,
@@ -208193,14 +208222,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 10,
-        "expectedOrders": 10,
+        "databaseOrders": 11,
+        "expectedOrders": 11,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-03",
         "label": "Смена 03.08",
         "missingOrders": 0,
-        "revenue": 332,
+        "revenue": 372,
         "status": "ok"
       },
       {
@@ -209153,12 +209182,12 @@
         "status": "ok"
       }
     ],
-    "total": 3166
+    "total": 3167
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 145
+      "total": 185
     },
     {
       "method": "Карта",
@@ -209178,6 +209207,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4214,
+      "items": [
+        "Манго mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4213,
       "items": [
@@ -209237,14 +209274,6 @@
       ],
       "status": "Оплачен",
       "total": 10
-    },
-    {
-      "id": 4206,
-      "items": [
-        "Мороженое с чёрным сахаром x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -209380,6 +209409,11 @@
   },
   "topProducts": [
     {
+      "name": "Манго mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Matcha big",
       "qty": 1,
       "total": 40
@@ -209413,13 +209447,8 @@
       "name": "Черника mini",
       "qty": 1,
       "total": 25
-    },
-    {
-      "name": "Мороженое матча",
-      "qty": 1,
-      "total": 25
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-03T08:10:02.081Z"
+  "updatedAt": "2026-08-03T08:23:06.296Z"
 }

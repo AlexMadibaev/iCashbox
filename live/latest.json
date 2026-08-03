@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 36.48780487804878,
-    "checks": 41,
+    "average": 36.714285714285715,
+    "checks": 42,
     "expenseTotal": 205,
-    "net": 1291,
-    "revenue": 1496
+    "net": 1337,
+    "revenue": 1542
   },
   "data": {
-    "actions": 6949,
+    "actions": 6951,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3197,
+    "orders": 3198,
     "products": 60,
     "shifts": 73
   },
   "activity": [
+    {
+      "id": 1785743984342,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785743984342,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:59",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785742910810,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785740013792,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:53",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785740013792,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:53",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3197,
+    "current": 3198,
     "old": [
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
@@ -104029,6 +104029,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-03T08:03:21.675Z",
+        "id": 4245,
+        "items": [
+          "Babl tea mini x1",
+          "Клубничный жасмин big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубничный-жасмин-big",
+            "name": "Клубничный жасмин big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 46,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-03",
+        "shiftLabel": "Смена 03.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 46
+      },
       {
         "createdAt": "2026-08-03T07:59:44.221Z",
         "id": 4244,
@@ -209236,14 +209274,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 41,
-        "expectedOrders": 41,
+        "databaseOrders": 42,
+        "expectedOrders": 42,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-03",
         "label": "Смена 03.08",
         "missingOrders": 0,
-        "revenue": 1496,
+        "revenue": 1542,
         "status": "ok"
       },
       {
@@ -210196,7 +210234,7 @@
         "status": "ok"
       }
     ],
-    "total": 3197
+    "total": 3198
   },
   "payments": [
     {
@@ -210209,7 +210247,7 @@
     },
     {
       "method": "Alif",
-      "total": 242
+      "total": 288
     },
     {
       "method": "Dushanbe City",
@@ -210221,6 +210259,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4245,
+      "items": [
+        "Babl tea mini x1",
+        "Клубничный жасмин big x1"
+      ],
+      "status": "Оплачен",
+      "total": 46
+    },
     {
       "id": 4244,
       "items": [
@@ -210282,14 +210329,6 @@
       ],
       "status": "Оплачен",
       "total": 35
-    },
-    {
-      "id": 4237,
-      "items": [
-        "Мороженое Орео x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -210466,5 +210505,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-03T15:03:04.561Z"
+  "updatedAt": "2026-08-03T15:06:40.505Z"
 }

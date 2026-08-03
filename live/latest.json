@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 33.40909090909091,
-    "checks": 22,
+    "average": 32.82608695652174,
+    "checks": 23,
     "expenseTotal": 205,
-    "net": 530,
-    "revenue": 735
+    "net": 550,
+    "revenue": 755
   },
   "data": {
-    "actions": 6911,
+    "actions": 6913,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3178,
+    "orders": 3179,
     "products": 60,
     "shifts": 73
   },
   "activity": [
+    {
+      "id": 1785729695641,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:01",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785729695641,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:01",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785727437635,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:49",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785725166670,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:46",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785725166670,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:46",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3178,
+    "current": 3179,
     "old": [
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
@@ -104029,6 +104029,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-03T04:11:21.645Z",
+        "id": 4226,
+        "items": [
+          "Жасмин гранат mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-жасмин-гранат-mini",
+            "name": "Жасмин гранат mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-03",
+        "shiftLabel": "Смена 03.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-08-03T04:01:35.518Z",
         "id": 4225,
@@ -208568,14 +208597,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 22,
-        "expectedOrders": 22,
+        "databaseOrders": 23,
+        "expectedOrders": 23,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-03",
         "label": "Смена 03.08",
         "missingOrders": 0,
-        "revenue": 735,
+        "revenue": 755,
         "status": "ok"
       },
       {
@@ -209528,12 +209557,12 @@
         "status": "ok"
       }
     ],
-    "total": 3178
+    "total": 3179
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 471
+      "total": 491
     },
     {
       "method": "Карта",
@@ -209553,6 +209582,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4226,
+      "items": [
+        "Жасмин гранат mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 4225,
       "items": [
@@ -209609,15 +209646,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 4218,
-      "items": [
-        "Черника mini x1",
-        "Клубника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 45
     }
   ],
   "shifts": {
@@ -209794,5 +209822,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-03T11:04:56.017Z"
+  "updatedAt": "2026-08-03T11:14:42.374Z"
 }

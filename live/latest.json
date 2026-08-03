@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.9,
-    "checks": 30,
+    "average": 36.03225806451613,
+    "checks": 31,
     "expenseTotal": 205,
-    "net": 902,
-    "revenue": 1107
+    "net": 912,
+    "revenue": 1117
   },
   "data": {
-    "actions": 6927,
+    "actions": 6929,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3186,
+    "orders": 3187,
     "products": 60,
     "shifts": 73
   },
   "activity": [
     {
+      "id": 1785736613013,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:56",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785736613013,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:56",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785735872753,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:11",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785733211239,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:00",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785733211239,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:00",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3186,
+    "current": 3187,
     "old": [
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
@@ -104029,6 +104029,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-03T06:04:33.474Z",
+        "id": 4234,
+        "items": [
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 10,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-03",
+        "shiftLabel": "Смена 03.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 10
+      },
       {
         "createdAt": "2026-08-03T05:56:52.907Z",
         "id": 4233,
@@ -208854,14 +208883,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 30,
-        "expectedOrders": 30,
+        "databaseOrders": 31,
+        "expectedOrders": 31,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-03",
         "label": "Смена 03.08",
         "missingOrders": 0,
-        "revenue": 1107,
+        "revenue": 1117,
         "status": "ok"
       },
       {
@@ -209814,12 +209843,12 @@
         "status": "ok"
       }
     ],
-    "total": 3186
+    "total": 3187
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 671
+      "total": 681
     },
     {
       "method": "Карта",
@@ -209839,6 +209868,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4234,
+      "items": [
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 10
+    },
     {
       "id": 4233,
       "items": [
@@ -209900,14 +209937,6 @@
       ],
       "status": "Оплачен",
       "total": 112
-    },
-    {
-      "id": 4226,
-      "items": [
-        "Жасмин гранат mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -210058,6 +210087,11 @@
       "total": 78
     },
     {
+      "name": "Мороженое рожок",
+      "qty": 6,
+      "total": 60
+    },
+    {
       "name": "Черника big",
       "qty": 2,
       "total": 60
@@ -210066,11 +210100,6 @@
       "name": "Виноградный тропический big",
       "qty": 2,
       "total": 52
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 5,
-      "total": 50
     },
     {
       "name": "МангоБанан mini",
@@ -210084,5 +210113,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-03T13:00:13.409Z"
+  "updatedAt": "2026-08-03T13:07:53.927Z"
 }

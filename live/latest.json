@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 0,
-    "checks": 0,
+    "average": 35,
+    "checks": 1,
     "expenseTotal": 205,
-    "net": -205,
-    "revenue": 0
+    "net": -170,
+    "revenue": 35
   },
   "data": {
     "actions": 6863,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3156,
+    "orders": 3157,
     "products": 60,
     "shifts": 73
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3156,
+    "current": 3157,
     "old": [
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
@@ -104029,6 +104029,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-02T21:29:01.398Z",
+        "id": 4204,
+        "items": [
+          "АйсМатча клубника x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-клубника",
+            "name": "АйсМатча клубника",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 35,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-03",
+        "shiftLabel": "Смена 03.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
         "id": 4203,
@@ -207867,15 +207896,15 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 0,
-        "expectedOrders": 0,
+        "databaseOrders": 1,
+        "expectedOrders": 1,
         "hasArchive": false,
-        "inDatabase": false,
+        "inDatabase": true,
         "key": "2026-08-03",
         "label": "Смена 03.08",
         "missingOrders": 0,
-        "revenue": 0,
-        "status": "empty"
+        "revenue": 35,
+        "status": "ok"
       },
       {
         "archiveLoaded": true,
@@ -208827,7 +208856,7 @@
         "status": "ok"
       }
     ],
-    "total": 3156
+    "total": 3157
   },
   "payments": [
     {
@@ -208844,14 +208873,23 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 0
+      "total": 35
     },
     {
       "method": "Семья",
       "total": 0
     }
   ],
-  "recentOrders": [],
+  "recentOrders": [
+    {
+      "id": 4204,
+      "items": [
+        "АйсМатча клубника x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    }
+  ],
   "shifts": {
     "history": [
       {
@@ -208983,7 +209021,13 @@
     "low": [],
     "total": 8
   },
-  "topProducts": [],
+  "topProducts": [
+    {
+      "name": "АйсМатча клубника",
+      "qty": 1,
+      "total": 35
+    }
+  ],
   "ok": true,
-  "updatedAt": "2026-08-03T04:11:40.401Z"
+  "updatedAt": "2026-08-03T04:32:21.976Z"
 }

@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 22.5,
-    "checks": 2,
+    "average": 21.666666666666668,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -160,
-    "revenue": 45
+    "net": -140,
+    "revenue": 65
   },
   "data": {
-    "actions": 6865,
+    "actions": 6867,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3158,
+    "orders": 3159,
     "products": 60,
     "shifts": 73
   },
   "activity": [
+    {
+      "id": 1785707965133,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "09:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785707965133,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "09:59",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785706141526,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785663395582,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:36",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785662874414,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:27",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3158,
+    "current": 3159,
     "old": [
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
@@ -104029,6 +104029,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-02T23:03:03.137Z",
+        "id": 4206,
+        "items": [
+          "Мороженое с чёрным сахаром x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-чёрным-сахаром",
+            "name": "Мороженое с чёрным сахаром",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 20,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-03",
+        "shiftLabel": "Смена 03.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-08-02T21:59:24.991Z",
         "id": 4205,
@@ -207925,14 +207954,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-03",
         "label": "Смена 03.08",
         "missingOrders": 0,
-        "revenue": 45,
+        "revenue": 65,
         "status": "ok"
       },
       {
@@ -208885,7 +208914,7 @@
         "status": "ok"
       }
     ],
-    "total": 3158
+    "total": 3159
   },
   "payments": [
     {
@@ -208898,7 +208927,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 20
     },
     {
       "method": "Dushanbe City",
@@ -208910,6 +208939,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4206,
+      "items": [
+        "Мороженое с чёрным сахаром x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 4205,
       "items": [
@@ -209065,11 +209102,16 @@
       "total": 35
     },
     {
+      "name": "Мороженое с чёрным сахаром",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 1,
       "total": 10
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-03T05:02:45.771Z"
+  "updatedAt": "2026-08-03T06:06:23.683Z"
 }

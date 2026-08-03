@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 18,
-    "checks": 5,
+    "average": 22.5,
+    "checks": 6,
     "expenseTotal": 205,
-    "net": -115,
-    "revenue": 90
+    "net": -70,
+    "revenue": 135
   },
   "data": {
-    "actions": 6871,
+    "actions": 6875,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3161,
+    "orders": 3162,
     "products": 60,
     "shifts": 73
   },
   "activity": [
     {
+      "id": 1785717688061,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:41",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785717688061,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:41",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1785715588340,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:06",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785715588340,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:06",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785714136630,
       "source": "Локально",
       "status": "Сохранено",
@@ -78,34 +106,6 @@
       "status": "Сохранено",
       "time": "09:29",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1785704899863,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:08",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1785667751509,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:49",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785667751509,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:49",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785667010536,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:36",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3161,
+    "current": 3162,
     "old": [
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
@@ -104029,6 +104029,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-03T00:41:27.917Z",
+        "id": 4209,
+        "items": [
+          "Мороженое матча x1",
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-матча",
+            "name": "Мороженое матча",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 45,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-03",
+        "shiftLabel": "Смена 03.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-08-03T00:06:28.221Z",
         "id": 4208,
@@ -208012,14 +208050,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 5,
-        "expectedOrders": 5,
+        "databaseOrders": 6,
+        "expectedOrders": 6,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-03",
         "label": "Смена 03.08",
         "missingOrders": 0,
-        "revenue": 90,
+        "revenue": 135,
         "status": "ok"
       },
       {
@@ -208972,7 +209010,7 @@
         "status": "ok"
       }
     ],
-    "total": 3161
+    "total": 3162
   },
   "payments": [
     {
@@ -208985,7 +209023,7 @@
     },
     {
       "method": "Alif",
-      "total": 35
+      "total": 80
     },
     {
       "method": "Dushanbe City",
@@ -208997,6 +209035,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4209,
+      "items": [
+        "Мороженое матча x1",
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 4208,
       "items": [
@@ -209176,6 +209223,16 @@
       "total": 35
     },
     {
+      "name": "Мороженое матча",
+      "qty": 1,
+      "total": 25
+    },
+    {
+      "name": "Мороженое классическое",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 2,
       "total": 20
@@ -209192,5 +209249,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-03T07:09:48.696Z"
+  "updatedAt": "2026-08-03T07:44:49.232Z"
 }

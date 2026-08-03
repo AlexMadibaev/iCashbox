@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.44444444444444,
-    "checks": 9,
+    "average": 33.2,
+    "checks": 10,
     "expenseTotal": 205,
-    "net": 87,
-    "revenue": 292
+    "net": 127,
+    "revenue": 332
   },
   "data": {
-    "actions": 6879,
+    "actions": 6881,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3165,
+    "orders": 3166,
     "products": 60,
     "shifts": 73
   },
   "activity": [
     {
+      "id": 1785718348821,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:52",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785718348821,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:52",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785718152161,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "11:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785711783261,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:03",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785711783261,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:03",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3165,
+    "current": 3166,
     "old": [
       {
         "createdAt": "2026-08-02T10:49:11.396Z",
@@ -104029,6 +104029,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-03T01:06:41.445Z",
+        "id": 4213,
+        "items": [
+          "Matcha big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-03",
+        "shiftLabel": "Смена 03.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-08-03T00:52:28.696Z",
         "id": 4212,
@@ -208164,14 +208193,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 9,
-        "expectedOrders": 9,
+        "databaseOrders": 10,
+        "expectedOrders": 10,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-03",
         "label": "Смена 03.08",
         "missingOrders": 0,
-        "revenue": 292,
+        "revenue": 332,
         "status": "ok"
       },
       {
@@ -209124,12 +209153,12 @@
         "status": "ok"
       }
     ],
-    "total": 3165
+    "total": 3166
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 105
+      "total": 145
     },
     {
       "method": "Карта",
@@ -209149,6 +209178,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4213,
+      "items": [
+        "Matcha big x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4212,
       "items": [
@@ -209208,14 +209245,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4205,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -209351,6 +209380,11 @@
   },
   "topProducts": [
     {
+      "name": "Matcha big",
+      "qty": 1,
+      "total": 40
+    },
+    {
       "name": "АйсМатча клубника",
       "qty": 1,
       "total": 35
@@ -209384,13 +209418,8 @@
       "name": "Мороженое матча",
       "qty": 1,
       "total": 25
-    },
-    {
-      "name": "Манго Маракуя mini",
-      "qty": 1,
-      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-03T07:55:48.368Z"
+  "updatedAt": "2026-08-03T08:10:02.081Z"
 }

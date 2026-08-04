@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 35.696969696969695,
-    "checks": 33,
+    "average": 36.294117647058826,
+    "checks": 34,
     "expenseTotal": 205,
-    "net": 973,
-    "revenue": 1178
+    "net": 1029,
+    "revenue": 1234
   },
   "data": {
-    "actions": 7056,
+    "actions": 7058,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3250,
+    "orders": 3251,
     "products": 60,
     "shifts": 74
   },
   "activity": [
+    {
+      "id": 1785822927002,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:55",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785822927002,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:55",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785822622162,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:22",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785820769006,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785820769006,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:19",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3250,
+    "current": 3251,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T06:25:15.030Z",
+        "id": 4298,
+        "items": [
+          "Babl tea big x1",
+          "Matcha mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-big",
+            "name": "Babl tea big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          },
+          {
+            "id": "product-matcha-mini",
+            "name": "Matcha mini",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 70,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 56
+      },
       {
         "createdAt": "2026-08-04T05:55:26.874Z",
         "id": 4297,
@@ -213073,14 +213111,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 33,
-        "expectedOrders": 33,
+        "databaseOrders": 34,
+        "expectedOrders": 34,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 1178,
+        "revenue": 1234,
         "status": "ok"
       },
       {
@@ -214046,12 +214084,12 @@
         "status": "ok"
       }
     ],
-    "total": 3250
+    "total": 3251
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 707
+      "total": 763
     },
     {
       "method": "Карта",
@@ -214071,6 +214109,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4298,
+      "items": [
+        "Babl tea big x1",
+        "Matcha mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 56
+    },
     {
       "id": 4297,
       "items": [
@@ -214128,15 +214175,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 4290,
-      "items": [
-        "Babl tea mini x1",
-        "Жасмин гранат mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -214273,8 +214311,8 @@
   "topProducts": [
     {
       "name": "Babl tea big",
-      "qty": 5,
-      "total": 130
+      "qty": 6,
+      "total": 156
     },
     {
       "name": "Айс Латте",
@@ -214297,6 +214335,11 @@
       "total": 70
     },
     {
+      "name": "Matcha mini",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Фруктовый лёд малина",
       "qty": 3,
       "total": 60
@@ -214305,13 +214348,8 @@
       "name": "Мороженое классическое",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Мороженое манго",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T12:58:47.023Z"
+  "updatedAt": "2026-08-04T13:28:36.519Z"
 }

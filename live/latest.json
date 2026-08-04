@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.44230769230769,
-    "checks": 52,
+    "average": 37.113207547169814,
+    "checks": 53,
     "expenseTotal": 205,
-    "net": 1742,
-    "revenue": 1947
+    "net": 1762,
+    "revenue": 1967
   },
   "data": {
-    "actions": 7094,
+    "actions": 7096,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3269,
+    "orders": 3270,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785833222566,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785833222566,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:47",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785833169275,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:28",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785831855858,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:24",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785831855858,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:24",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3269,
+    "current": 3270,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T08:47:41.986Z",
+        "id": 4317,
+        "items": [
+          "Мороженое рожок x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 2,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 20,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-08-04T08:47:02.426Z",
         "id": 4316,
@@ -213723,14 +213752,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 52,
-        "expectedOrders": 52,
+        "databaseOrders": 53,
+        "expectedOrders": 53,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 1947,
+        "revenue": 1967,
         "status": "ok"
       },
       {
@@ -214696,7 +214725,7 @@
         "status": "ok"
       }
     ],
-    "total": 3269
+    "total": 3270
   },
   "payments": [
     {
@@ -214713,7 +214742,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 406
+      "total": 426
     },
     {
       "method": "Семья",
@@ -214721,6 +214750,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4317,
+      "items": [
+        "Мороженое рожок x2"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 4316,
       "items": [
@@ -214779,16 +214816,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 4309,
-      "items": [
-        "Blue big x1",
-        "Bubble Gum big x1",
-        "Клубничный big x1"
-      ],
-      "status": "Оплачен",
-      "total": 82
     }
   ],
   "shifts": {
@@ -214949,6 +214976,11 @@
       "total": 120
     },
     {
+      "name": "Мороженое рожок",
+      "qty": 10,
+      "total": 100
+    },
+    {
       "name": "Matcha mini",
       "qty": 3,
       "total": 90
@@ -214957,13 +214989,8 @@
       "name": "Айс Латте",
       "qty": 3,
       "total": 90
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 8,
-      "total": 80
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T15:50:22.304Z"
+  "updatedAt": "2026-08-04T15:51:02.072Z"
 }

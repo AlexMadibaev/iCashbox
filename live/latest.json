@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.975,
-    "checks": 40,
+    "average": 34.73170731707317,
+    "checks": 41,
     "expenseTotal": 205,
-    "net": 1154,
-    "revenue": 1359
+    "net": 1219,
+    "revenue": 1424
   },
   "data": {
-    "actions": 7070,
+    "actions": 7072,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3257,
+    "orders": 3258,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785829278704,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:41",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785829278704,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:41",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785827013177,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:42",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785824715166,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:25",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785824715166,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:25",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3257,
+    "current": 3258,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T07:54:47.486Z",
+        "id": 4305,
+        "items": [
+          "Мороженое клубничное x2",
+          "Капучино x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-капучино",
+            "name": "Капучино",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 65
+      },
       {
         "createdAt": "2026-08-04T07:41:18.554Z",
         "id": 4304,
@@ -213285,14 +213323,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 40,
-        "expectedOrders": 40,
+        "databaseOrders": 41,
+        "expectedOrders": 41,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 1359,
+        "revenue": 1424,
         "status": "ok"
       },
       {
@@ -214258,12 +214296,12 @@
         "status": "ok"
       }
     ],
-    "total": 3257
+    "total": 3258
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 853
+      "total": 918
     },
     {
       "method": "Карта",
@@ -214283,6 +214321,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4305,
+      "items": [
+        "Мороженое клубничное x2",
+        "Капучино x1"
+      ],
+      "status": "Оплачен",
+      "total": 65
+    },
     {
       "id": 4304,
       "items": [
@@ -214339,14 +214386,6 @@
       ],
       "status": "Оплачен",
       "total": 56
-    },
-    {
-      "id": 4297,
-      "items": [
-        "Фруктовый лёд малина x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -214487,17 +214526,17 @@
       "total": 156
     },
     {
+      "name": "Мороженое клубничное",
+      "qty": 6,
+      "total": 120
+    },
+    {
       "name": "Айс Латте",
       "qty": 3,
       "total": 90
     },
     {
       "name": "Мороженое классическое",
-      "qty": 4,
-      "total": 80
-    },
-    {
-      "name": "Мороженое клубничное",
       "qty": 4,
       "total": 80
     },
@@ -214523,5 +214562,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T14:44:40.259Z"
+  "updatedAt": "2026-08-04T14:58:08.997Z"
 }

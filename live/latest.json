@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 35.75,
-    "checks": 28,
+    "average": 35.89655172413793,
+    "checks": 29,
     "expenseTotal": 205,
-    "net": 796,
-    "revenue": 1001
+    "net": 836,
+    "revenue": 1041
   },
   "data": {
-    "actions": 7046,
+    "actions": 7048,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3245,
+    "orders": 3246,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785820965970,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:22",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785820965970,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:22",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785820769006,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:00",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785818642468,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:44",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785818642468,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:44",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3245,
+    "current": 3246,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T05:29:42.543Z",
+        "id": 4293,
+        "items": [
+          "Babl tea mini x1",
+          "Жасмин лимон mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-лимон-mini",
+            "name": "Жасмин лимон mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-08-04T05:22:45.830Z",
         "id": 4292,
@@ -212910,14 +212948,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 28,
-        "expectedOrders": 28,
+        "databaseOrders": 29,
+        "expectedOrders": 29,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 1001,
+        "revenue": 1041,
         "status": "ok"
       },
       {
@@ -213883,12 +213921,12 @@
         "status": "ok"
       }
     ],
-    "total": 3245
+    "total": 3246
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 657
+      "total": 697
     },
     {
       "method": "Карта",
@@ -213908,6 +213946,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4293,
+      "items": [
+        "Babl tea mini x1",
+        "Жасмин лимон mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4292,
       "items": [
@@ -213962,14 +214009,6 @@
       "id": 4286,
       "items": [
         "Мороженое классическое x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 4285,
-      "items": [
-        "Клубничный жасмин mini x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -214149,5 +214188,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T12:26:06.370Z"
+  "updatedAt": "2026-08-04T12:33:04.210Z"
 }

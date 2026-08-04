@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.6,
-    "checks": 25,
+    "average": 36.73076923076923,
+    "checks": 26,
     "expenseTotal": 205,
-    "net": 710,
-    "revenue": 915
+    "net": 750,
+    "revenue": 955
   },
   "data": {
-    "actions": 7040,
+    "actions": 7042,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3242,
+    "orders": 3243,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785819756883,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:02",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785819756883,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:02",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785819706389,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "16:36",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785816231174,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:03",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785816231174,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:03",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3242,
+    "current": 3243,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T05:16:10.779Z",
+        "id": 4290,
+        "items": [
+          "Babl tea mini x1",
+          "Жасмин гранат mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-babl-tea-mini",
+            "name": "Babl tea mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-жасмин-гранат-mini",
+            "name": "Жасмин гранат mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 20,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-08-04T05:02:36.749Z",
         "id": 4289,
@@ -212814,14 +212852,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 25,
-        "expectedOrders": 25,
+        "databaseOrders": 26,
+        "expectedOrders": 26,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 915,
+        "revenue": 955,
         "status": "ok"
       },
       {
@@ -213787,12 +213825,12 @@
         "status": "ok"
       }
     ],
-    "total": 3242
+    "total": 3243
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 611
+      "total": 631
     },
     {
       "method": "Карта",
@@ -213804,7 +213842,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 152
+      "total": 172
     },
     {
       "method": "Семья",
@@ -213812,6 +213850,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4290,
+      "items": [
+        "Babl tea mini x1",
+        "Жасмин гранат mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4289,
       "items": [
@@ -213868,14 +213915,6 @@
       ],
       "status": "Оплачен",
       "total": 52
-    },
-    {
-      "id": 4282,
-      "items": [
-        "Bubble Gum mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -214052,5 +214091,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T12:05:56.667Z"
+  "updatedAt": "2026-08-04T12:19:32.313Z"
 }

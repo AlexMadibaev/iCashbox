@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 40.86666666666667,
-    "checks": 15,
+    "average": 39.5625,
+    "checks": 16,
     "expenseTotal": 205,
-    "net": 408,
-    "revenue": 613
+    "net": 428,
+    "revenue": 633
   },
   "data": {
-    "actions": 7020,
+    "actions": 7024,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3232,
+    "orders": 3233,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785814169601,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:29",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785814169601,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:29",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1785813255460,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:14",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785813255460,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:14",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785811400025,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:00",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785808592769,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:56",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785808592769,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:56",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785807809924,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:43",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785807809924,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:43",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3232,
+    "current": 3233,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T03:29:29.497Z",
+        "id": 4280,
+        "items": [
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-08-04T03:14:15.343Z",
         "id": 4279,
@@ -212515,14 +212544,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 15,
-        "expectedOrders": 15,
+        "databaseOrders": 16,
+        "expectedOrders": 16,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 613,
+        "revenue": 633,
         "status": "ok"
       },
       {
@@ -213488,12 +213517,12 @@
         "status": "ok"
       }
     ],
-    "total": 3232
+    "total": 3233
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 389
+      "total": 409
     },
     {
       "method": "Карта",
@@ -213513,6 +213542,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4280,
+      "items": [
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 4279,
       "items": [
@@ -213572,14 +213609,6 @@
       ],
       "status": "Оплачен",
       "total": 105
-    },
-    {
-      "id": 4272,
-      "items": [
-        "Мороженое клубничное x3"
-      ],
-      "status": "Оплачен",
-      "total": 60
     }
   ],
   "shifts": {
@@ -213756,5 +213785,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T10:17:37.108Z"
+  "updatedAt": "2026-08-04T10:32:51.599Z"
 }

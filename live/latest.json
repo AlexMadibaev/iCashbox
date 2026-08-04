@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 30,
-    "checks": 6,
+    "average": 33.142857142857146,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": -25,
-    "revenue": 180
+    "net": 27,
+    "revenue": 232
   },
   "data": {
-    "actions": 7002,
+    "actions": 7004,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3223,
+    "orders": 3224,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785804084180,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:41",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785804084180,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:41",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785802766405,
       "source": "Локально",
       "status": "Сохранено",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "09:47",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1785790337595,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "08:52",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1785752253022,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:17",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3223,
+    "current": 3224,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T00:51:45.043Z",
+        "id": 4271,
+        "items": [
+          "Виноградный тропический big x2"
+        ],
+        "lines": [
+          {
+            "id": "product-виноградный-тропический-big",
+            "name": "Виноградный тропический big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 52,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 52
+      },
       {
         "createdAt": "2026-08-04T00:41:24.054Z",
         "id": 4270,
@@ -212218,14 +212247,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 180,
+        "revenue": 232,
         "status": "ok"
       },
       {
@@ -213191,7 +213220,7 @@
         "status": "ok"
       }
     ],
-    "total": 3223
+    "total": 3224
   },
   "payments": [
     {
@@ -213204,7 +213233,7 @@
     },
     {
       "method": "Alif",
-      "total": 60
+      "total": 112
     },
     {
       "method": "Dushanbe City",
@@ -213216,6 +213245,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4271,
+      "items": [
+        "Виноградный тропический big x2"
+      ],
+      "status": "Оплачен",
+      "total": 52
+    },
     {
       "id": 4270,
       "items": [
@@ -213399,6 +213436,11 @@
   },
   "topProducts": [
     {
+      "name": "Виноградный тропический big",
+      "qty": 2,
+      "total": 52
+    },
+    {
       "name": "Фреш лимон mini",
       "qty": 3,
       "total": 45
@@ -213430,5 +213472,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T07:44:45.644Z"
+  "updatedAt": "2026-08-04T07:55:06.808Z"
 }

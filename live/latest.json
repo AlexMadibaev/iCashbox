@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 42,
-    "checks": 11,
+    "average": 39.583333333333336,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 257,
-    "revenue": 462
+    "net": 270,
+    "revenue": 475
   },
   "data": {
-    "actions": 7012,
+    "actions": 7016,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3228,
+    "orders": 3229,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785810277049,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:24",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785810277049,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:24",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1785808852647,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:00",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785808852647,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:00",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785808592769,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:51",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785804084180,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:41",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785804084180,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:41",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785802766405,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785802766405,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:19",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3228,
+    "current": 3229,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T02:24:36.931Z",
+        "id": 4276,
+        "items": [
+          "Эспрессо x1"
+        ],
+        "lines": [
+          {
+            "id": "product-эспрессо",
+            "name": "Эспрессо",
+            "price": 13,
+            "qty": 1,
+            "size": "",
+            "total": 13
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 13
+      },
       {
         "createdAt": "2026-08-04T02:00:52.526Z",
         "id": 4275,
@@ -212381,14 +212410,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 462,
+        "revenue": 475,
         "status": "ok"
       },
       {
@@ -213354,12 +213383,12 @@
         "status": "ok"
       }
     ],
-    "total": 3228
+    "total": 3229
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 290
+      "total": 303
     },
     {
       "method": "Карта",
@@ -213379,6 +213408,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4276,
+      "items": [
+        "Эспрессо x1"
+      ],
+      "status": "Оплачен",
+      "total": 13
+    },
     {
       "id": 4275,
       "items": [
@@ -213437,14 +213474,6 @@
       ],
       "status": "Оплачен",
       "total": 15
-    },
-    {
-      "id": 4268,
-      "items": [
-        "Фреш лимон mini x2"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -213621,5 +213650,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T09:04:12.592Z"
+  "updatedAt": "2026-08-04T09:27:59.302Z"
 }

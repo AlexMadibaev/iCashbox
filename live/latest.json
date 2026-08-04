@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.557377049180324,
-    "checks": 61,
+    "average": 38.58064516129032,
+    "checks": 62,
     "expenseTotal": 205,
-    "net": 2147,
-    "revenue": 2352
+    "net": 2187,
+    "revenue": 2392
   },
   "data": {
-    "actions": 7112,
+    "actions": 7114,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3278,
+    "orders": 3279,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785838642010,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:17",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785838642010,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:17",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785838537150,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "21:15",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785834100275,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:01",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785834100275,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "21:01",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3278,
+    "current": 3279,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T10:20:51.190Z",
+        "id": 4326,
+        "items": [
+          "Мороженое с чёрным сахаром x1",
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-с-чёрным-сахаром",
+            "name": "Мороженое с чёрным сахаром",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-08-04T10:17:21.877Z",
         "id": 4325,
@@ -214020,14 +214058,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 61,
-        "expectedOrders": 61,
+        "databaseOrders": 62,
+        "expectedOrders": 62,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 2352,
+        "revenue": 2392,
         "status": "ok"
       },
       {
@@ -214993,12 +215031,12 @@
         "status": "ok"
       }
     ],
-    "total": 3278
+    "total": 3279
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1323
+      "total": 1363
     },
     {
       "method": "Карта",
@@ -215018,6 +215056,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4326,
+      "items": [
+        "Мороженое с чёрным сахаром x1",
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4325,
       "items": [
@@ -215077,14 +215124,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4318,
-      "items": [
-        "Мороженое клубничное x5"
-      ],
-      "status": "Оплачен",
-      "total": 100
     }
   ],
   "shifts": {
@@ -215230,14 +215269,14 @@
       "total": 208
     },
     {
+      "name": "Мороженое классическое",
+      "qty": 10,
+      "total": 200
+    },
+    {
       "name": "Blue big",
       "qty": 7,
       "total": 182
-    },
-    {
-      "name": "Мороженое классическое",
-      "qty": 9,
-      "total": 180
     },
     {
       "name": "Мороженое Орео",
@@ -215261,5 +215300,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T17:20:42.006Z"
+  "updatedAt": "2026-08-04T17:24:10.842Z"
 }

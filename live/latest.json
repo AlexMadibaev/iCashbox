@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.50847457627118,
-    "checks": 59,
+    "average": 38.53333333333333,
+    "checks": 60,
     "expenseTotal": 205,
-    "net": 2067,
-    "revenue": 2272
+    "net": 2107,
+    "revenue": 2312
   },
   "data": {
-    "actions": 7108,
+    "actions": 7110,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3276,
+    "orders": 3277,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785838073585,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:07",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785838073585,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:07",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785837742664,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:52",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785833262110,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:47",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785833262110,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:47",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3276,
+    "current": 3277,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T10:15:37.024Z",
+        "id": 4324,
+        "items": [
+          "Мороженое клубничное x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-08-04T10:07:53.461Z",
         "id": 4323,
@@ -213962,14 +213991,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 59,
-        "expectedOrders": 59,
+        "databaseOrders": 60,
+        "expectedOrders": 60,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 2272,
+        "revenue": 2312,
         "status": "ok"
       },
       {
@@ -214935,12 +214964,12 @@
         "status": "ok"
       }
     ],
-    "total": 3276
+    "total": 3277
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 1283
+      "total": 1323
     },
     {
       "method": "Карта",
@@ -214960,6 +214989,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4324,
+      "items": [
+        "Мороженое клубничное x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4323,
       "items": [
@@ -215019,14 +215056,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4316,
-      "items": [
-        "Babl tea big x2"
-      ],
-      "status": "Оплачен",
-      "total": 52
     }
   ],
   "shifts": {
@@ -215163,8 +215192,8 @@
   "topProducts": [
     {
       "name": "Мороженое клубничное",
-      "qty": 11,
-      "total": 220
+      "qty": 13,
+      "total": 260
     },
     {
       "name": "Babl tea big",
@@ -215203,5 +215232,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T17:11:15.046Z"
+  "updatedAt": "2026-08-04T17:18:59.498Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.01754385964912,
-    "checks": 57,
+    "average": 38.39655172413793,
+    "checks": 58,
     "expenseTotal": 205,
-    "net": 1962,
-    "revenue": 2167
+    "net": 2022,
+    "revenue": 2227
   },
   "data": {
-    "actions": 7104,
+    "actions": 7106,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3274,
+    "orders": 3275,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785835008572,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:16",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785835008572,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "21:16",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785834936677,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:47",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785833169275,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:46",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785833169275,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:46",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3274,
+    "current": 3275,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T10:02:22.496Z",
+        "id": 4322,
+        "items": [
+          "Мороженое классическое x1",
+          "Matcha big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-matcha-big",
+            "name": "Matcha big",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 60,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-08-04T09:16:48.452Z",
         "id": 4321,
@@ -213886,14 +213924,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 57,
-        "expectedOrders": 57,
+        "databaseOrders": 58,
+        "expectedOrders": 58,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 2167,
+        "revenue": 2227,
         "status": "ok"
       },
       {
@@ -214859,7 +214897,7 @@
         "status": "ok"
       }
     ],
-    "total": 3274
+    "total": 3275
   },
   "payments": [
     {
@@ -214876,7 +214914,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 446
+      "total": 506
     },
     {
       "method": "Семья",
@@ -214884,6 +214922,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4322,
+      "items": [
+        "Мороженое классическое x1",
+        "Matcha big x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 4321,
       "items": [
@@ -214942,14 +214989,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 4314,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -215101,8 +215140,8 @@
     },
     {
       "name": "Мороженое классическое",
-      "qty": 8,
-      "total": 160
+      "qty": 9,
+      "total": 180
     },
     {
       "name": "Мороженое рожок",
@@ -215126,5 +215165,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T16:20:08.378Z"
+  "updatedAt": "2026-08-04T17:05:44.265Z"
 }

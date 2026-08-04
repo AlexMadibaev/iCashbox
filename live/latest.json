@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 25,
-    "checks": 3,
+    "average": 26.25,
+    "checks": 4,
     "expenseTotal": 205,
-    "net": -130,
-    "revenue": 75
+    "net": -100,
+    "revenue": 105
   },
   "data": {
-    "actions": 6996,
+    "actions": 6998,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3220,
+    "orders": 3221,
     "products": 60,
     "shifts": 74
   },
   "activity": [
+    {
+      "id": 1785796389155,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:33",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785796389155,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:33",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785793992859,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:08",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785751689813,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:08",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785751358307,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:02",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3220,
+    "current": 3221,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T00:11:19.024Z",
+        "id": 4268,
+        "items": [
+          "Фреш лимон mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-фреш-лимон-mini",
+            "name": "Фреш лимон mini",
+            "price": 15,
+            "qty": 2,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-08-03T22:33:09.012Z",
         "id": 4267,
@@ -212122,14 +212151,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 3,
-        "expectedOrders": 3,
+        "databaseOrders": 4,
+        "expectedOrders": 4,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 75,
+        "revenue": 105,
         "status": "ok"
       },
       {
@@ -213095,12 +213124,12 @@
         "status": "ok"
       }
     ],
-    "total": 3220
+    "total": 3221
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 75
+      "total": 105
     },
     {
       "method": "Карта",
@@ -213120,6 +213149,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4268,
+      "items": [
+        "Фреш лимон mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 4267,
       "items": [
@@ -213283,6 +213320,11 @@
       "total": 35
     },
     {
+      "name": "Фреш лимон mini",
+      "qty": 2,
+      "total": 30
+    },
+    {
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
@@ -213294,5 +213336,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T05:36:31.476Z"
+  "updatedAt": "2026-08-04T07:14:40.796Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 34.73170731707317,
-    "checks": 41,
+    "average": 34.857142857142854,
+    "checks": 42,
     "expenseTotal": 205,
-    "net": 1219,
-    "revenue": 1424
+    "net": 1259,
+    "revenue": 1464
   },
   "data": {
-    "actions": 7072,
+    "actions": 7074,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3258,
+    "orders": 3259,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785830087611,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:54",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785830087611,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:54",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785829278704,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785825724058,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:42",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785825724058,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:42",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3258,
+    "current": 3259,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T07:57:58.498Z",
+        "id": 4306,
+        "items": [
+          "Клубничный big x1",
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 20,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-08-04T07:54:47.486Z",
         "id": 4305,
@@ -213323,14 +213361,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 41,
-        "expectedOrders": 41,
+        "databaseOrders": 42,
+        "expectedOrders": 42,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 1424,
+        "revenue": 1464,
         "status": "ok"
       },
       {
@@ -214296,12 +214334,12 @@
         "status": "ok"
       }
     ],
-    "total": 3258
+    "total": 3259
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 918
+      "total": 938
     },
     {
       "method": "Карта",
@@ -214313,7 +214351,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 314
+      "total": 334
     },
     {
       "method": "Семья",
@@ -214321,6 +214359,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4306,
+      "items": [
+        "Клубничный big x1",
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4305,
       "items": [
@@ -214377,15 +214424,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4298,
-      "items": [
-        "Babl tea big x1",
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 56
     }
   ],
   "shifts": {
@@ -214531,6 +214569,11 @@
       "total": 120
     },
     {
+      "name": "Клубничный big",
+      "qty": 3,
+      "total": 90
+    },
+    {
       "name": "Айс Латте",
       "qty": 3,
       "total": 90
@@ -214554,13 +214597,8 @@
       "name": "Фреш лимон mini",
       "qty": 4,
       "total": 60
-    },
-    {
-      "name": "Babl tea mini",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T14:58:08.997Z"
+  "updatedAt": "2026-08-04T15:01:18.264Z"
 }

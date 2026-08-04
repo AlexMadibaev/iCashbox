@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 35.666666666666664,
-    "checks": 36,
+    "average": 35.513513513513516,
+    "checks": 37,
     "expenseTotal": 205,
-    "net": 1079,
-    "revenue": 1284
+    "net": 1109,
+    "revenue": 1314
   },
   "data": {
-    "actions": 7062,
+    "actions": 7064,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3253,
+    "orders": 3254,
     "products": 60,
     "shifts": 74
   },
   "activity": [
+    {
+      "id": 1785825800050,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:43",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785825800050,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:43",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785825724058,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:38",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785821418404,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:30",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785821418404,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:30",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3253,
+    "current": 3254,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T06:48:02.901Z",
+        "id": 4301,
+        "items": [
+          "Клубничный big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 30,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-08-04T06:43:19.928Z",
         "id": 4300,
@@ -213169,14 +213198,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 36,
-        "expectedOrders": 36,
+        "databaseOrders": 37,
+        "expectedOrders": 37,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 1284,
+        "revenue": 1314,
         "status": "ok"
       },
       {
@@ -214142,12 +214171,12 @@
         "status": "ok"
       }
     ],
-    "total": 3253
+    "total": 3254
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 813
+      "total": 843
     },
     {
       "method": "Карта",
@@ -214167,6 +214196,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4301,
+      "items": [
+        "Клубничный big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 4300,
       "items": [
@@ -214224,15 +214261,6 @@
       ],
       "status": "Оплачен",
       "total": 10
-    },
-    {
-      "id": 4293,
-      "items": [
-        "Babl tea mini x1",
-        "Жасмин лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -214398,16 +214426,16 @@
       "total": 70
     },
     {
-      "name": "Matcha mini",
+      "name": "Клубничный big",
       "qty": 2,
       "total": 60
     },
     {
-      "name": "Фруктовый лёд малина",
-      "qty": 3,
+      "name": "Matcha mini",
+      "qty": 2,
       "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T13:46:39.938Z"
+  "updatedAt": "2026-08-04T13:51:23.353Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 36.808510638297875,
-    "checks": 47,
+    "average": 37.604166666666664,
+    "checks": 48,
     "expenseTotal": 205,
-    "net": 1525,
-    "revenue": 1730
+    "net": 1600,
+    "revenue": 1805
   },
   "data": {
-    "actions": 7084,
+    "actions": 7086,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3264,
+    "orders": 3265,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785832114196,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:28",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785832114196,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:28",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785831855858,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:57",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785830087611,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:54",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785830087611,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:54",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3264,
+    "current": 3265,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T08:30:01.982Z",
+        "id": 4312,
+        "items": [
+          "МангоБанан mini x1",
+          "МангоБанан big x1",
+          "Мороженое классическое x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мангобанан-mini",
+            "name": "МангоБанан mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-классическое",
+            "name": "Мороженое классическое",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 75
+      },
       {
         "createdAt": "2026-08-04T08:28:34.075Z",
         "id": 4311,
@@ -213551,14 +213598,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 47,
-        "expectedOrders": 47,
+        "databaseOrders": 48,
+        "expectedOrders": 48,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 1730,
+        "revenue": 1805,
         "status": "ok"
       },
       {
@@ -214524,12 +214571,12 @@
         "status": "ok"
       }
     ],
-    "total": 3264
+    "total": 3265
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 938
+      "total": 1013
     },
     {
       "method": "Карта",
@@ -214549,6 +214596,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4312,
+      "items": [
+        "МангоБанан mini x1",
+        "МангоБанан big x1",
+        "Мороженое классическое x1"
+      ],
+      "status": "Оплачен",
+      "total": 75
+    },
     {
       "id": 4311,
       "items": [
@@ -214611,14 +214668,6 @@
       ],
       "status": "Оплачен",
       "total": 65
-    },
-    {
-      "id": 4304,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -214774,14 +214823,14 @@
       "total": 120
     },
     {
+      "name": "Мороженое классическое",
+      "qty": 5,
+      "total": 100
+    },
+    {
       "name": "Айс Латте",
       "qty": 3,
       "total": 90
-    },
-    {
-      "name": "Мороженое классическое",
-      "qty": 4,
-      "total": 80
     },
     {
       "name": "Фреш лимон mini",
@@ -214795,5 +214844,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T15:31:54.381Z"
+  "updatedAt": "2026-08-04T15:33:21.889Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 38.39655172413793,
-    "checks": 58,
+    "average": 38.50847457627118,
+    "checks": 59,
     "expenseTotal": 205,
-    "net": 2022,
-    "revenue": 2227
+    "net": 2067,
+    "revenue": 2272
   },
   "data": {
-    "actions": 7106,
+    "actions": 7108,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3275,
+    "orders": 3276,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785837742664,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:02",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785837742664,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:02",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785835008572,
       "source": "Локально",
       "status": "Сохранено",
@@ -88,20 +102,6 @@
     },
     {
       "id": 1785833262110,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:47",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785833222566,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:47",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785833222566,
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:47",
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3275,
+    "current": 3276,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T10:07:53.461Z",
+        "id": 4323,
+        "items": [
+          "Мороженое Орео x1",
+          "Клубничный mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 45,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-08-04T10:02:22.496Z",
         "id": 4322,
@@ -213924,14 +213962,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 58,
-        "expectedOrders": 58,
+        "databaseOrders": 59,
+        "expectedOrders": 59,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 2227,
+        "revenue": 2272,
         "status": "ok"
       },
       {
@@ -214897,7 +214935,7 @@
         "status": "ok"
       }
     ],
-    "total": 3275
+    "total": 3276
   },
   "payments": [
     {
@@ -214910,7 +214948,7 @@
     },
     {
       "method": "Alif",
-      "total": 418
+      "total": 463
     },
     {
       "method": "Dushanbe City",
@@ -214922,6 +214960,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4323,
+      "items": [
+        "Мороженое Орео x1",
+        "Клубничный mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 4322,
       "items": [
@@ -214980,15 +215027,6 @@
       ],
       "status": "Оплачен",
       "total": 52
-    },
-    {
-      "id": 4315,
-      "items": [
-        "Мороженое классическое x2",
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 50
     }
   ],
   "shifts": {
@@ -215165,5 +215203,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T17:05:44.265Z"
+  "updatedAt": "2026-08-04T17:11:15.046Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.92857142857143,
-    "checks": 14,
+    "average": 40.86666666666667,
+    "checks": 15,
     "expenseTotal": 205,
-    "net": 368,
-    "revenue": 573
+    "net": 408,
+    "revenue": 613
   },
   "data": {
-    "actions": 7018,
+    "actions": 7020,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3231,
+    "orders": 3232,
     "products": 60,
     "shifts": 74
   },
   "activity": [
     {
+      "id": 1785811400025,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:43",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785811400025,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:43",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785811347291,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:43",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785806778520,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:26",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785806778520,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:26",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3231,
+    "current": 3232,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T03:14:15.343Z",
+        "id": 4279,
+        "items": [
+          "Фруктовый лёд малина x2"
+        ],
+        "lines": [
+          {
+            "id": "product-фруктовый-лёд-малина",
+            "name": "Фруктовый лёд малина",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-08-04T02:43:19.886Z",
         "id": 4278,
@@ -212486,14 +212515,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 14,
-        "expectedOrders": 14,
+        "databaseOrders": 15,
+        "expectedOrders": 15,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 573,
+        "revenue": 613,
         "status": "ok"
       },
       {
@@ -213459,12 +213488,12 @@
         "status": "ok"
       }
     ],
-    "total": 3231
+    "total": 3232
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 349
+      "total": 389
     },
     {
       "method": "Карта",
@@ -213484,6 +213513,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4279,
+      "items": [
+        "Фруктовый лёд малина x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4278,
       "items": [
@@ -213543,14 +213580,6 @@
       ],
       "status": "Оплачен",
       "total": 60
-    },
-    {
-      "id": 4271,
-      "items": [
-        "Виноградный тропический big x2"
-      ],
-      "status": "Оплачен",
-      "total": 52
     }
   ],
   "shifts": {
@@ -213711,6 +213740,11 @@
       "total": 45
     },
     {
+      "name": "Фруктовый лёд малина",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Мороженое манго",
       "qty": 2,
       "total": 40
@@ -213719,13 +213753,8 @@
       "name": "Мороженое Орео",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "АйсМатча клубника",
-      "qty": 1,
-      "total": 35
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T09:46:39.925Z"
+  "updatedAt": "2026-08-04T10:17:37.108Z"
 }

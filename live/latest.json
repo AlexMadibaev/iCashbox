@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 24,
-    "checks": 5,
+    "average": 30,
+    "checks": 6,
     "expenseTotal": 205,
-    "net": -85,
-    "revenue": 120
+    "net": -25,
+    "revenue": 180
   },
   "data": {
-    "actions": 7000,
+    "actions": 7002,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3222,
+    "orders": 3223,
     "products": 60,
     "shifts": 74
   },
   "activity": [
+    {
+      "id": 1785802766405,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:19",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785802766405,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:19",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785802279168,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:17",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785752253022,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:17",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785752006757,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:13",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3222,
+    "current": 3223,
     "old": [
       {
         "createdAt": "2026-08-03T10:17:32.901Z",
@@ -106113,6 +106113,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T00:41:24.054Z",
+        "id": 4270,
+        "items": [
+          "Мороженое клубничное x1",
+          "Мороженое Орео x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-клубничное",
+            "name": "Мороженое клубничное",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 60,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-04",
+        "shiftLabel": "Смена 04.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-08-04T00:19:26.266Z",
         "id": 4269,
@@ -212180,14 +212218,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 5,
-        "expectedOrders": 5,
+        "databaseOrders": 6,
+        "expectedOrders": 6,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-04",
         "label": "Смена 04.08",
         "missingOrders": 0,
-        "revenue": 120,
+        "revenue": 180,
         "status": "ok"
       },
       {
@@ -213153,7 +213191,7 @@
         "status": "ok"
       }
     ],
-    "total": 3222
+    "total": 3223
   },
   "payments": [
     {
@@ -213166,7 +213204,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 60
     },
     {
       "method": "Dushanbe City",
@@ -213178,6 +213216,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4270,
+      "items": [
+        "Мороженое клубничное x1",
+        "Мороженое Орео x2"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 4269,
       "items": [
@@ -213357,6 +213404,11 @@
       "total": 45
     },
     {
+      "name": "Мороженое Орео",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "АйсМатча манго",
       "qty": 1,
       "total": 35
@@ -213367,11 +213419,16 @@
       "total": 30
     },
     {
+      "name": "Мороженое клубничное",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 1,
       "total": 10
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-04T07:22:47.918Z"
+  "updatedAt": "2026-08-04T07:44:45.644Z"
 }

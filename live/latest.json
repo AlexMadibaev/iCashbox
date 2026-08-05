@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 36,
-    "checks": 17,
+    "average": 37.333333333333336,
+    "checks": 18,
     "expenseTotal": 205,
-    "net": 407,
-    "revenue": 612
+    "net": 467,
+    "revenue": 672
   },
   "data": {
-    "actions": 7149,
+    "actions": 7153,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3296,
+    "orders": 3297,
     "products": 60,
     "shifts": 75
   },
   "activity": [
     {
+      "id": 1785907451077,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:24",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785907451077,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:24",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1785903688855,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:21",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785903688855,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "16:21",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785901029246,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:39",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785897563648,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:39",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785897563648,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:39",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785897399707,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:36",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785897399707,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "14:36",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3296,
+    "current": 3297,
     "old": [
       {
         "createdAt": "2026-08-04T10:20:51.190Z",
@@ -108136,6 +108136,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-05T05:24:10.953Z",
+        "id": 4344,
+        "items": [
+          "Смузи Ягодный x1",
+          "Blue mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-смузи-ягодный",
+            "name": "Смузи Ягодный",
+            "price": 40,
+            "qty": 1,
+            "size": "",
+            "total": 40
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-05",
+        "shiftLabel": "Смена 05.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 60
+      },
       {
         "createdAt": "2026-08-05T04:21:28.710Z",
         "id": 4343,
@@ -216628,14 +216666,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 17,
-        "expectedOrders": 17,
+        "databaseOrders": 18,
+        "expectedOrders": 18,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-05",
         "label": "Смена 05.08",
         "missingOrders": 0,
-        "revenue": 612,
+        "revenue": 672,
         "status": "ok"
       },
       {
@@ -217614,12 +217652,12 @@
         "status": "ok"
       }
     ],
-    "total": 3296
+    "total": 3297
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 355
+      "total": 415
     },
     {
       "method": "Карта",
@@ -217639,6 +217677,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4344,
+      "items": [
+        "Смузи Ягодный x1",
+        "Blue mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 60
+    },
     {
       "id": 4343,
       "items": [
@@ -217696,14 +217743,6 @@
       ],
       "status": "Оплачен",
       "total": 80
-    },
-    {
-      "id": 4336,
-      "items": [
-        "Черника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 25
     }
   ],
   "shifts": {
@@ -217864,6 +217903,11 @@
       "total": 50
     },
     {
+      "name": "Смузи Ягодный",
+      "qty": 1,
+      "total": 40
+    },
+    {
       "name": "АйсМатча манго",
       "qty": 1,
       "total": 35
@@ -217872,13 +217916,8 @@
       "name": "Клубничный big",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Айс Латте",
-      "qty": 1,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-05T11:25:21.135Z"
+  "updatedAt": "2026-08-05T12:27:35.156Z"
 }

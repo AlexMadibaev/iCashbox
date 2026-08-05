@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.973684210526315,
-    "checks": 38,
+    "average": 35.15384615384615,
+    "checks": 39,
     "expenseTotal": 205,
-    "net": 1086,
-    "revenue": 1291
+    "net": 1166,
+    "revenue": 1371
   },
   "data": {
-    "actions": 7191,
+    "actions": 7193,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3317,
+    "orders": 3318,
     "products": 60,
     "shifts": 75
   },
   "activity": [
     {
+      "id": 1785924528446,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:08",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785924528446,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "22:08",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785922826325,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "20:33",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785918656753,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:30",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785918656753,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "20:30",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3317,
+    "current": 3318,
     "old": [
       {
         "createdAt": "2026-08-04T10:20:51.190Z",
@@ -108136,6 +108136,62 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-05T10:22:49.880Z",
+        "id": 4365,
+        "items": [
+          "Клубника mini x1",
+          "Blue mini x1",
+          "Bubble Gum mini x1",
+          "Мороженое Орео x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-blue-mini",
+            "name": "Blue mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-bubble-gum-mini",
+            "name": "Bubble Gum mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 80,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-05",
+        "shiftLabel": "Смена 05.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 80
+      },
       {
         "createdAt": "2026-08-05T10:08:48.321Z",
         "id": 4364,
@@ -217282,14 +217338,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 38,
-        "expectedOrders": 38,
+        "databaseOrders": 39,
+        "expectedOrders": 39,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-05",
         "label": "Смена 05.08",
         "missingOrders": 0,
-        "revenue": 1291,
+        "revenue": 1371,
         "status": "ok"
       },
       {
@@ -218268,7 +218324,7 @@
         "status": "ok"
       }
     ],
-    "total": 3317
+    "total": 3318
   },
   "payments": [
     {
@@ -218285,7 +218341,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 318
+      "total": 398
     },
     {
       "method": "Семья",
@@ -218293,6 +218349,17 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4365,
+      "items": [
+        "Клубника mini x1",
+        "Blue mini x1",
+        "Bubble Gum mini x1",
+        "Мороженое Орео x1"
+      ],
+      "status": "Оплачен",
+      "total": 80
+    },
     {
       "id": 4364,
       "items": [
@@ -218351,14 +218418,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4357,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -218499,6 +218558,16 @@
       "total": 120
     },
     {
+      "name": "Клубника mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
+      "name": "Мороженое Орео",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Babl tea big",
       "qty": 3,
       "total": 78
@@ -218522,18 +218591,8 @@
       "name": "Манго Маракуя mini",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Клубника mini",
-      "qty": 3,
-      "total": 60
-    },
-    {
-      "name": "Мороженое Орео",
-      "qty": 3,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-05T17:12:12.081Z"
+  "updatedAt": "2026-08-05T17:26:13.494Z"
 }

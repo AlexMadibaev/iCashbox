@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.125,
-    "checks": 8,
+    "average": 37.77777777777778,
+    "checks": 9,
     "expenseTotal": 205,
-    "net": 60,
-    "revenue": 265
+    "net": 135,
+    "revenue": 340
   },
   "data": {
-    "actions": 7131,
+    "actions": 7133,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3287,
+    "orders": 3288,
     "products": 60,
     "shifts": 75
   },
   "activity": [
     {
+      "id": 1785894021561,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:40",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785894021561,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:40",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785891042761,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "10:47",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785882413127,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:26",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785882413127,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "10:26",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3287,
+    "current": 3288,
     "old": [
       {
         "createdAt": "2026-08-04T10:20:51.190Z",
@@ -108136,6 +108136,53 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-05T02:13:05.382Z",
+        "id": 4335,
+        "items": [
+          "Мороженое Орео x1",
+          "Черника big x1",
+          "Мороженое матча x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-орео",
+            "name": "Мороженое Орео",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-мороженое-матча",
+            "name": "Мороженое матча",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 75,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-05",
+        "shiftLabel": "Смена 05.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 75
+      },
       {
         "createdAt": "2026-08-05T01:40:21.438Z",
         "id": 4334,
@@ -216331,14 +216378,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 8,
-        "expectedOrders": 8,
+        "databaseOrders": 9,
+        "expectedOrders": 9,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-05",
         "label": "Смена 05.08",
         "missingOrders": 0,
-        "revenue": 265,
+        "revenue": 340,
         "status": "ok"
       },
       {
@@ -217317,7 +217364,7 @@
         "status": "ok"
       }
     ],
-    "total": 3287
+    "total": 3288
   },
   "payments": [
     {
@@ -217330,7 +217377,7 @@
     },
     {
       "method": "Alif",
-      "total": 75
+      "total": 150
     },
     {
       "method": "Dushanbe City",
@@ -217342,6 +217389,16 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4335,
+      "items": [
+        "Мороженое Орео x1",
+        "Черника big x1",
+        "Мороженое матча x1"
+      ],
+      "status": "Оплачен",
+      "total": 75
+    },
     {
       "id": 4334,
       "items": [
@@ -217399,14 +217456,6 @@
       ],
       "status": "Оплачен",
       "total": 10
-    },
-    {
-      "id": 4327,
-      "items": [
-        "Айс Латте x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -217542,6 +217591,16 @@
   },
   "topProducts": [
     {
+      "name": "Мороженое Орео",
+      "qty": 3,
+      "total": 60
+    },
+    {
+      "name": "Черника big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Капучино",
       "qty": 2,
       "total": 50
@@ -217550,16 +217609,6 @@
       "name": "Клубника mini",
       "qty": 2,
       "total": 40
-    },
-    {
-      "name": "Мороженое Орео",
-      "qty": 2,
-      "total": 40
-    },
-    {
-      "name": "Черника big",
-      "qty": 1,
-      "total": 30
     },
     {
       "name": "Клубничный big",
@@ -217572,16 +217621,16 @@
       "total": 30
     },
     {
-      "name": "Клубничный mini",
+      "name": "Мороженое матча",
       "qty": 1,
       "total": 25
     },
     {
-      "name": "Мороженое рожок",
-      "qty": 2,
-      "total": 20
+      "name": "Клубничный mini",
+      "qty": 1,
+      "total": 25
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-05T08:43:45.103Z"
+  "updatedAt": "2026-08-05T09:16:29.323Z"
 }

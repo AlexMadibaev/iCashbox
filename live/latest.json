@@ -6,23 +6,37 @@
     "open": true
   },
   "summary": {
-    "average": 31.25,
-    "checks": 4,
+    "average": 35,
+    "checks": 5,
     "expenseTotal": 205,
-    "net": -80,
-    "revenue": 125
+    "net": -30,
+    "revenue": 175
   },
   "data": {
-    "actions": 7123,
+    "actions": 7125,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3283,
+    "orders": 3284,
     "products": 60,
     "shifts": 75
   },
   "activity": [
+    {
+      "id": 1785883643139,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785883643139,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "10:47",
+      "type": "Создание заказа"
+    },
     {
       "id": 1785883629083,
       "source": "Локально",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "22:17",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785838642010,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:17",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785838537150,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:15",
       "type": "Списание ингредиентов"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3283,
+    "current": 3284,
     "old": [
       {
         "createdAt": "2026-08-04T10:20:51.190Z",
@@ -108136,6 +108136,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T23:55:17.401Z",
+        "id": 4331,
+        "items": [
+          "Клубничный big x1",
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-big",
+            "name": "Клубничный big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          },
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-05",
+        "shiftLabel": "Смена 05.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-08-04T22:47:23.004Z",
         "id": 4330,
@@ -216206,14 +216244,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 4,
-        "expectedOrders": 4,
+        "databaseOrders": 5,
+        "expectedOrders": 5,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-05",
         "label": "Смена 05.08",
         "missingOrders": 0,
-        "revenue": 125,
+        "revenue": 175,
         "status": "ok"
       },
       {
@@ -217192,12 +217230,12 @@
         "status": "ok"
       }
     ],
-    "total": 3283
+    "total": 3284
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 50
+      "total": 100
     },
     {
       "method": "Карта",
@@ -217217,6 +217255,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4331,
+      "items": [
+        "Клубничный big x1",
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 4330,
       "items": [
@@ -217384,9 +217431,19 @@
   },
   "topProducts": [
     {
+      "name": "Клубника mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Мороженое Орео",
       "qty": 2,
       "total": 40
+    },
+    {
+      "name": "Клубничный big",
+      "qty": 1,
+      "total": 30
     },
     {
       "name": "Айс Латте",
@@ -217399,16 +217456,11 @@
       "total": 25
     },
     {
-      "name": "Клубника mini",
-      "qty": 1,
-      "total": 20
-    },
-    {
       "name": "Мороженое рожок",
       "qty": 1,
       "total": 10
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-05T05:50:45.404Z"
+  "updatedAt": "2026-08-05T06:58:41.046Z"
 }

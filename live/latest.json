@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 34.26086956521739,
-    "checks": 23,
+    "average": 33.666666666666664,
+    "checks": 24,
     "expenseTotal": 205,
-    "net": 583,
-    "revenue": 788
+    "net": 603,
+    "revenue": 808
   },
   "data": {
-    "actions": 7161,
+    "actions": 7165,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3302,
+    "orders": 3303,
     "products": 60,
     "shifts": 75
   },
   "activity": [
     {
+      "id": 1785911253462,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:27",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785911253462,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:27",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1785909875874,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:04",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785909875874,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:04",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785909732811,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785907451077,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:24",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785907451077,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:24",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785903688855,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:21",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785903688855,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:21",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3302,
+    "current": 3303,
     "old": [
       {
         "createdAt": "2026-08-04T10:20:51.190Z",
@@ -108136,6 +108136,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-05T06:27:33.300Z",
+        "id": 4350,
+        "items": [
+          "Манго Маракуя mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 20,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-05",
+        "shiftLabel": "Смена 05.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-08-05T06:04:35.743Z",
         "id": 4349,
@@ -216811,14 +216840,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 23,
-        "expectedOrders": 23,
+        "databaseOrders": 24,
+        "expectedOrders": 24,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-05",
         "label": "Смена 05.08",
         "missingOrders": 0,
-        "revenue": 788,
+        "revenue": 808,
         "status": "ok"
       },
       {
@@ -217797,12 +217826,12 @@
         "status": "ok"
       }
     ],
-    "total": 3302
+    "total": 3303
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 475
+      "total": 495
     },
     {
       "method": "Карта",
@@ -217822,6 +217851,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4350,
+      "items": [
+        "Манго Маракуя mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 4349,
       "items": [
@@ -217878,14 +217915,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 4342,
-      "items": [
-        "Виноградный тропический mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -218046,6 +218075,11 @@
       "total": 50
     },
     {
+      "name": "Манго Маракуя mini",
+      "qty": 2,
+      "total": 40
+    },
+    {
       "name": "Смузи Ягодный",
       "qty": 1,
       "total": 40
@@ -218054,13 +218088,8 @@
       "name": "АйсМатча манго",
       "qty": 1,
       "total": 35
-    },
-    {
-      "name": "Мороженое рожок",
-      "qty": 3,
-      "total": 30
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-05T13:07:57.900Z"
+  "updatedAt": "2026-08-05T13:30:57.497Z"
 }

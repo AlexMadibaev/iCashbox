@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.51851851851852,
-    "checks": 27,
+    "average": 33.142857142857146,
+    "checks": 28,
     "expenseTotal": 205,
-    "net": 673,
-    "revenue": 878
+    "net": 723,
+    "revenue": 928
   },
   "data": {
-    "actions": 7169,
+    "actions": 7171,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3306,
+    "orders": 3307,
     "products": 60,
     "shifts": 75
   },
   "activity": [
     {
+      "id": 1785915254398,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:34",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785915254398,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:34",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785915061742,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:02",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785909176922,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:52",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785909176922,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:52",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3306,
+    "current": 3307,
     "old": [
       {
         "createdAt": "2026-08-04T10:20:51.190Z",
@@ -108136,6 +108136,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-05T07:45:11.465Z",
+        "id": 4354,
+        "items": [
+          "ПиноКолада mini x1",
+          "Черника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-пиноколада-mini",
+            "name": "ПиноКолада mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-черника-mini",
+            "name": "Черника mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-05",
+        "shiftLabel": "Смена 05.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 50
+      },
       {
         "createdAt": "2026-08-05T07:34:14.254Z",
         "id": 4353,
@@ -216927,14 +216965,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 27,
-        "expectedOrders": 27,
+        "databaseOrders": 28,
+        "expectedOrders": 28,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-05",
         "label": "Смена 05.08",
         "missingOrders": 0,
-        "revenue": 878,
+        "revenue": 928,
         "status": "ok"
       },
       {
@@ -217913,12 +217951,12 @@
         "status": "ok"
       }
     ],
-    "total": 3306
+    "total": 3307
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 545
+      "total": 595
     },
     {
       "method": "Карта",
@@ -217938,6 +217976,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4354,
+      "items": [
+        "ПиноКолада mini x1",
+        "Черника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 50
+    },
     {
       "id": 4353,
       "items": [
@@ -217993,14 +218040,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 4346,
-      "items": [
-        "Мороженое с чёрным сахаром x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
     }
   ],
   "shifts": {
@@ -218161,6 +218200,11 @@
       "total": 60
     },
     {
+      "name": "Черника mini",
+      "qty": 2,
+      "total": 50
+    },
+    {
       "name": "Капучино",
       "qty": 2,
       "total": 50
@@ -218169,13 +218213,8 @@
       "name": "Смузи Ягодный",
       "qty": 1,
       "total": 40
-    },
-    {
-      "name": "АйсМатча манго",
-      "qty": 1,
-      "total": 35
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-05T14:37:36.236Z"
+  "updatedAt": "2026-08-05T14:48:35.055Z"
 }

@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 33.793103448275865,
-    "checks": 29,
+    "average": 33.333333333333336,
+    "checks": 30,
     "expenseTotal": 205,
-    "net": 775,
-    "revenue": 980
+    "net": 795,
+    "revenue": 1000
   },
   "data": {
-    "actions": 7173,
+    "actions": 7175,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3308,
+    "orders": 3309,
     "products": 60,
     "shifts": 75
   },
   "activity": [
     {
+      "id": 1785916799786,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:59",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785916799786,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "19:59",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785915911610,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "18:27",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785909875874,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:04",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785909875874,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "18:04",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3308,
+    "current": 3309,
     "old": [
       {
         "createdAt": "2026-08-04T10:20:51.190Z",
@@ -108136,6 +108136,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-05T08:13:57.448Z",
+        "id": 4356,
+        "items": [
+          "Мороженое рожок x2"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 2,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 20,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-05",
+        "shiftLabel": "Смена 05.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-08-05T07:59:59.650Z",
         "id": 4355,
@@ -216994,14 +217023,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 29,
-        "expectedOrders": 29,
+        "databaseOrders": 30,
+        "expectedOrders": 30,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-05",
         "label": "Смена 05.08",
         "missingOrders": 0,
-        "revenue": 980,
+        "revenue": 1000,
         "status": "ok"
       },
       {
@@ -217980,7 +218009,7 @@
         "status": "ok"
       }
     ],
-    "total": 3308
+    "total": 3309
   },
   "payments": [
     {
@@ -217997,7 +218026,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 158
+      "total": 178
     },
     {
       "method": "Семья",
@@ -218005,6 +218034,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4356,
+      "items": [
+        "Мороженое рожок x2"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 4355,
       "items": [
@@ -218061,14 +218098,6 @@
       ],
       "status": "Оплачен",
       "total": 26
-    },
-    {
-      "id": 4348,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -218234,16 +218263,16 @@
       "total": 60
     },
     {
-      "name": "Черника mini",
-      "qty": 2,
+      "name": "Мороженое рожок",
+      "qty": 5,
       "total": 50
     },
     {
-      "name": "Капучино",
+      "name": "Черника mini",
       "qty": 2,
       "total": 50
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-05T15:03:23.275Z"
+  "updatedAt": "2026-08-05T15:17:21.088Z"
 }

@@ -6,11 +6,11 @@
     "open": true
   },
   "summary": {
-    "average": 20,
-    "checks": 2,
+    "average": 28.333333333333332,
+    "checks": 3,
     "expenseTotal": 205,
-    "net": -165,
-    "revenue": 40
+    "net": -120,
+    "revenue": 85
   },
   "data": {
     "actions": 7121,
@@ -18,7 +18,7 @@
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3281,
+    "orders": 3282,
     "products": 60,
     "shifts": 75
   },
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3281,
+    "current": 3282,
     "old": [
       {
         "createdAt": "2026-08-04T10:20:51.190Z",
@@ -108136,6 +108136,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-04T22:47:08.943Z",
+        "id": 4329,
+        "items": [
+          "Клубничный mini x1",
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубничный-mini",
+            "name": "Клубничный mini",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          },
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 45,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-05",
+        "shiftLabel": "Смена 05.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 45
+      },
       {
         "createdAt": "2026-08-04T22:26:52.992Z",
         "id": 4328,
@@ -216139,14 +216177,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 2,
-        "expectedOrders": 2,
+        "databaseOrders": 3,
+        "expectedOrders": 3,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-05",
         "label": "Смена 05.08",
         "missingOrders": 0,
-        "revenue": 40,
+        "revenue": 85,
         "status": "ok"
       },
       {
@@ -217125,7 +217163,7 @@
         "status": "ok"
       }
     ],
-    "total": 3281
+    "total": 3282
   },
   "payments": [
     {
@@ -217138,7 +217176,7 @@
     },
     {
       "method": "Alif",
-      "total": 0
+      "total": 45
     },
     {
       "method": "Dushanbe City",
@@ -217150,6 +217188,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4329,
+      "items": [
+        "Клубничный mini x1",
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 45
+    },
     {
       "id": 4328,
       "items": [
@@ -217305,11 +217352,21 @@
       "total": 30
     },
     {
+      "name": "Клубничный mini",
+      "qty": 1,
+      "total": 25
+    },
+    {
+      "name": "Клубника mini",
+      "qty": 1,
+      "total": 20
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 1,
       "total": 10
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-05T05:30:17.487Z"
+  "updatedAt": "2026-08-05T05:50:32.837Z"
 }

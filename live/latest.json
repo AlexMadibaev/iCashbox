@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 32.72727272727273,
-    "checks": 33,
+    "average": 34.294117647058826,
+    "checks": 34,
     "expenseTotal": 205,
-    "net": 875,
-    "revenue": 1080
+    "net": 961,
+    "revenue": 1166
   },
   "data": {
-    "actions": 7181,
+    "actions": 7183,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3312,
+    "orders": 3313,
     "products": 60,
     "shifts": 75
   },
   "activity": [
     {
+      "id": 1785918811501,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:33",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785918811501,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "20:33",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785918656753,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "19:45",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785915254398,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:34",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785915254398,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "19:34",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3312,
+    "current": 3313,
     "old": [
       {
         "createdAt": "2026-08-04T10:20:51.190Z",
@@ -108136,6 +108136,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-05T09:04:17.350Z",
+        "id": 4360,
+        "items": [
+          "МангоБанан big x2",
+          "Манго Маракуя big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мангобанан-big",
+            "name": "МангоБанан big",
+            "price": 30,
+            "qty": 2,
+            "size": "",
+            "total": 60
+          },
+          {
+            "id": "product-манго-маракуя-big",
+            "name": "Манго Маракуя big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 86,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-05",
+        "shiftLabel": "Смена 05.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 86
+      },
       {
         "createdAt": "2026-08-05T08:33:31.374Z",
         "id": 4359,
@@ -217119,14 +217157,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 33,
-        "expectedOrders": 33,
+        "databaseOrders": 34,
+        "expectedOrders": 34,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-05",
         "label": "Смена 05.08",
         "missingOrders": 0,
-        "revenue": 1080,
+        "revenue": 1166,
         "status": "ok"
       },
       {
@@ -218105,7 +218143,7 @@
         "status": "ok"
       }
     ],
-    "total": 3312
+    "total": 3313
   },
   "payments": [
     {
@@ -218118,7 +218156,7 @@
     },
     {
       "method": "Alif",
-      "total": 227
+      "total": 313
     },
     {
       "method": "Dushanbe City",
@@ -218130,6 +218168,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4360,
+      "items": [
+        "МангоБанан big x2",
+        "Манго Маракуя big x1"
+      ],
+      "status": "Оплачен",
+      "total": 86
+    },
     {
       "id": 4359,
       "items": [
@@ -218187,14 +218234,6 @@
       ],
       "status": "Оплачен",
       "total": 20
-    },
-    {
-      "id": 4352,
-      "items": [
-        "Matcha mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -218345,6 +218384,11 @@
       "total": 75
     },
     {
+      "name": "МангоБанан big",
+      "qty": 2,
+      "total": 60
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 6,
       "total": 60
@@ -218363,13 +218407,8 @@
       "name": "Мороженое Орео",
       "qty": 3,
       "total": 60
-    },
-    {
-      "name": "Черника big",
-      "qty": 2,
-      "total": 60
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-05T15:36:53.290Z"
+  "updatedAt": "2026-08-05T16:07:41.067Z"
 }

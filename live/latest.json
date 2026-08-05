@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.76923076923077,
-    "checks": 13,
+    "average": 37.92857142857143,
+    "checks": 14,
     "expenseTotal": 205,
-    "net": 286,
-    "revenue": 491
+    "net": 326,
+    "revenue": 531
   },
   "data": {
-    "actions": 7141,
+    "actions": 7143,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3292,
+    "orders": 3293,
     "products": 60,
     "shifts": 75
   },
   "activity": [
     {
+      "id": 1785897582881,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:39",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785897582881,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:39",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785897563648,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "13:40",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785891042761,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:50",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785891042761,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:50",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3292,
+    "current": 3293,
     "old": [
       {
         "createdAt": "2026-08-04T10:20:51.190Z",
@@ -108136,6 +108136,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-05T03:16:07.081Z",
+        "id": 4340,
+        "items": [
+          "Манго Маракуя mini x1",
+          "Клубничный жасмин mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-манго-маракуя-mini",
+            "name": "Манго Маракуя mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          },
+          {
+            "id": "product-клубничный-жасмин-mini",
+            "name": "Клубничный жасмин mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 40,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-05",
+        "shiftLabel": "Смена 05.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-08-05T02:39:42.737Z",
         "id": 4339,
@@ -216503,14 +216541,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 13,
-        "expectedOrders": 13,
+        "databaseOrders": 14,
+        "expectedOrders": 14,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-05",
         "label": "Смена 05.08",
         "missingOrders": 0,
-        "revenue": 491,
+        "revenue": 531,
         "status": "ok"
       },
       {
@@ -217489,12 +217527,12 @@
         "status": "ok"
       }
     ],
-    "total": 3292
+    "total": 3293
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 260
+      "total": 300
     },
     {
       "method": "Карта",
@@ -217514,6 +217552,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4340,
+      "items": [
+        "Манго Маракуя mini x1",
+        "Клубничный жасмин mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4339,
       "items": [
@@ -217572,14 +217619,6 @@
       ],
       "status": "Оплачен",
       "total": 30
-    },
-    {
-      "id": 4332,
-      "items": [
-        "Мороженое рожок x1"
-      ],
-      "status": "Оплачен",
-      "total": 10
     }
   ],
   "shifts": {
@@ -217756,5 +217795,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-05T09:43:04.645Z"
+  "updatedAt": "2026-08-05T10:19:30.624Z"
 }

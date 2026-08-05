@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 37.92857142857143,
-    "checks": 14,
+    "average": 37.733333333333334,
+    "checks": 15,
     "expenseTotal": 205,
-    "net": 326,
-    "revenue": 531
+    "net": 361,
+    "revenue": 566
   },
   "data": {
-    "actions": 7143,
+    "actions": 7145,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3293,
+    "orders": 3294,
     "products": 60,
     "shifts": 75
   },
   "activity": [
     {
+      "id": 1785899767216,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:16",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785899767216,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "15:16",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785897582881,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "14:13",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785894021561,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:40",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785894021561,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "13:40",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3293,
+    "current": 3294,
     "old": [
       {
         "createdAt": "2026-08-04T10:20:51.190Z",
@@ -108136,6 +108136,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-05T03:20:46.659Z",
+        "id": 4341,
+        "items": [
+          "АйсМатча манго x1"
+        ],
+        "lines": [
+          {
+            "id": "product-айсматча-манго",
+            "name": "АйсМатча манго",
+            "price": 35,
+            "qty": 1,
+            "size": "",
+            "total": 35
+          }
+        ],
+        "payments": {
+          "Наличные": 100,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-05",
+        "shiftLabel": "Смена 05.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 35
+      },
       {
         "createdAt": "2026-08-05T03:16:07.081Z",
         "id": 4340,
@@ -216541,14 +216570,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 14,
-        "expectedOrders": 14,
+        "databaseOrders": 15,
+        "expectedOrders": 15,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-05",
         "label": "Смена 05.08",
         "missingOrders": 0,
-        "revenue": 531,
+        "revenue": 566,
         "status": "ok"
       },
       {
@@ -217527,12 +217556,12 @@
         "status": "ok"
       }
     ],
-    "total": 3293
+    "total": 3294
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 300
+      "total": 335
     },
     {
       "method": "Карта",
@@ -217552,6 +217581,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4341,
+      "items": [
+        "АйсМатча манго x1"
+      ],
+      "status": "Оплачен",
+      "total": 35
+    },
     {
       "id": 4340,
       "items": [
@@ -217611,14 +217648,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 4333,
-      "items": [
-        "Черника big x1"
-      ],
-      "status": "Оплачен",
-      "total": 30
     }
   ],
   "shifts": {
@@ -217779,6 +217808,11 @@
       "total": 50
     },
     {
+      "name": "АйсМатча манго",
+      "qty": 1,
+      "total": 35
+    },
+    {
       "name": "Клубничный big",
       "qty": 1,
       "total": 30
@@ -217787,13 +217821,8 @@
       "name": "Айс Латте",
       "qty": 1,
       "total": 30
-    },
-    {
-      "name": "Blue big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-05T10:19:30.624Z"
+  "updatedAt": "2026-08-05T10:24:09.392Z"
 }

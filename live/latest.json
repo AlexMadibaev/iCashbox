@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 30.833333333333332,
-    "checks": 6,
+    "average": 30.714285714285715,
+    "checks": 7,
     "expenseTotal": 205,
-    "net": -20,
-    "revenue": 185
+    "net": 10,
+    "revenue": 215
   },
   "data": {
-    "actions": 7127,
+    "actions": 7129,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3285,
+    "orders": 3286,
     "products": 60,
     "shifts": 75
   },
   "activity": [
     {
+      "id": 1785888294079,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:04",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785888294079,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "12:04",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785887717521,
       "source": "Локально",
       "status": "Сохранено",
@@ -92,20 +106,6 @@
       "status": "Сохранено",
       "time": "09:36",
       "type": "Создание заказа"
-    },
-    {
-      "id": 1785878636596,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "09:23",
-      "type": "Открытие смены"
-    },
-    {
-      "id": 1785838851324,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "22:20",
-      "type": "Списание ингредиентов"
     }
   ],
   "expenses": {
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3285,
+    "current": 3286,
     "old": [
       {
         "createdAt": "2026-08-04T10:20:51.190Z",
@@ -108136,6 +108136,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-05T00:50:42.625Z",
+        "id": 4333,
+        "items": [
+          "Черника big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-черника-big",
+            "name": "Черника big",
+            "price": 30,
+            "qty": 1,
+            "size": "",
+            "total": 30
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 30,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-05",
+        "shiftLabel": "Смена 05.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 30
+      },
       {
         "createdAt": "2026-08-05T00:04:53.957Z",
         "id": 4332,
@@ -216273,14 +216302,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 6,
-        "expectedOrders": 6,
+        "databaseOrders": 7,
+        "expectedOrders": 7,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-05",
         "label": "Смена 05.08",
         "missingOrders": 0,
-        "revenue": 185,
+        "revenue": 215,
         "status": "ok"
       },
       {
@@ -217259,7 +217288,7 @@
         "status": "ok"
       }
     ],
-    "total": 3285
+    "total": 3286
   },
   "payments": [
     {
@@ -217272,7 +217301,7 @@
     },
     {
       "method": "Alif",
-      "total": 45
+      "total": 75
     },
     {
       "method": "Dushanbe City",
@@ -217284,6 +217313,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4333,
+      "items": [
+        "Черника big x1"
+      ],
+      "status": "Оплачен",
+      "total": 30
+    },
     {
       "id": 4332,
       "items": [
@@ -217478,6 +217515,11 @@
       "total": 40
     },
     {
+      "name": "Черника big",
+      "qty": 1,
+      "total": 30
+    },
+    {
       "name": "Клубничный big",
       "qty": 1,
       "total": 30
@@ -217499,5 +217541,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-05T07:08:17.694Z"
+  "updatedAt": "2026-08-05T07:54:06.215Z"
 }

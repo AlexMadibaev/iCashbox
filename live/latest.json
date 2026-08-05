@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 40.45454545454545,
-    "checks": 11,
+    "average": 39.25,
+    "checks": 12,
     "expenseTotal": 205,
-    "net": 240,
-    "revenue": 445
+    "net": 266,
+    "revenue": 471
   },
   "data": {
-    "actions": 7137,
+    "actions": 7139,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3290,
+    "orders": 3291,
     "products": 60,
     "shifts": 75
   },
   "activity": [
     {
+      "id": 1785897399707,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:36",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785897399707,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:36",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785896416677,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:04",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785887717521,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:55",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785887717521,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "11:55",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3290,
+    "current": 3291,
     "old": [
       {
         "createdAt": "2026-08-04T10:20:51.190Z",
@@ -108136,6 +108136,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-05T02:39:23.530Z",
+        "id": 4338,
+        "items": [
+          "Blue big x1"
+        ],
+        "lines": [
+          {
+            "id": "product-blue-big",
+            "name": "Blue big",
+            "price": 26,
+            "qty": 1,
+            "size": "",
+            "total": 26
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 26,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-05",
+        "shiftLabel": "Смена 05.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 26
+      },
       {
         "createdAt": "2026-08-05T02:36:39.566Z",
         "id": 4337,
@@ -216445,14 +216474,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 11,
-        "expectedOrders": 11,
+        "databaseOrders": 12,
+        "expectedOrders": 12,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-05",
         "label": "Смена 05.08",
         "missingOrders": 0,
-        "revenue": 445,
+        "revenue": 471,
         "status": "ok"
       },
       {
@@ -217431,7 +217460,7 @@
         "status": "ok"
       }
     ],
-    "total": 3290
+    "total": 3291
   },
   "payments": [
     {
@@ -217448,7 +217477,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 30
+      "total": 56
     },
     {
       "method": "Семья",
@@ -217456,6 +217485,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4338,
+      "items": [
+        "Blue big x1"
+      ],
+      "status": "Оплачен",
+      "total": 26
+    },
     {
       "id": 4337,
       "items": [
@@ -217515,14 +217552,6 @@
       ],
       "status": "Оплачен",
       "total": 50
-    },
-    {
-      "id": 4330,
-      "items": [
-        "Мороженое Орео x2"
-      ],
-      "status": "Оплачен",
-      "total": 40
     }
   ],
   "shifts": {
@@ -217693,11 +217722,11 @@
       "total": 30
     },
     {
-      "name": "Черника mini",
+      "name": "Blue big",
       "qty": 1,
-      "total": 25
+      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-05T09:40:03.148Z"
+  "updatedAt": "2026-08-05T09:42:45.488Z"
 }

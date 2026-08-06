@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 29.263157894736842,
-    "checks": 19,
+    "average": 30.9,
+    "checks": 20,
     "expenseTotal": 205,
-    "net": 351,
-    "revenue": 556
+    "net": 413,
+    "revenue": 618
   },
   "data": {
-    "actions": 7236,
+    "actions": 7240,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3339,
+    "orders": 3340,
     "products": 60,
     "shifts": 76
   },
   "activity": [
     {
+      "id": 1785995633046,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:53",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785995633046,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:53",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1785995308780,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:48",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785995308780,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "17:48",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785995210582,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:34",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785993036630,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:10",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785993036630,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:10",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785989968304,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:19",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785989968304,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "16:19",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3339,
+    "current": 3340,
     "old": [
       {
         "createdAt": "2026-08-05T10:37:16.329Z",
@@ -109451,6 +109451,44 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-06T05:53:52.904Z",
+        "id": 4387,
+        "items": [
+          "Bubble Gum big x2",
+          "Мороженое рожок x1"
+        ],
+        "lines": [
+          {
+            "id": "product-bubble-gum-big",
+            "name": "Bubble Gum big",
+            "price": 26,
+            "qty": 2,
+            "size": "",
+            "total": 52
+          },
+          {
+            "id": "product-мороженое-рожок",
+            "name": "Мороженое рожок",
+            "price": 10,
+            "qty": 1,
+            "size": "",
+            "total": 10
+          }
+        ],
+        "payments": {
+          "Наличные": 110,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-06",
+        "shiftLabel": "Смена 06.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 62
+      },
       {
         "createdAt": "2026-08-06T05:48:28.639Z",
         "id": 4386,
@@ -219298,14 +219336,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 19,
-        "expectedOrders": 19,
+        "databaseOrders": 20,
+        "expectedOrders": 20,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-06",
         "label": "Смена 06.08",
         "missingOrders": 0,
-        "revenue": 556,
+        "revenue": 618,
         "status": "ok"
       },
       {
@@ -220297,12 +220335,12 @@
         "status": "ok"
       }
     ],
-    "total": 3339
+    "total": 3340
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 306
+      "total": 368
     },
     {
       "method": "Карта",
@@ -220322,6 +220360,15 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4387,
+      "items": [
+        "Bubble Gum big x2",
+        "Мороженое рожок x1"
+      ],
+      "status": "Оплачен",
+      "total": 62
+    },
     {
       "id": 4386,
       "items": [
@@ -220377,14 +220424,6 @@
       "id": 4380,
       "items": [
         "Клубника mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 20
-    },
-    {
-      "id": 4379,
-      "items": [
-        "Bubble Gum mini x1"
       ],
       "status": "Оплачен",
       "total": 20
@@ -220529,8 +220568,13 @@
     },
     {
       "name": "Мороженое рожок",
-      "qty": 6,
-      "total": 60
+      "qty": 7,
+      "total": 70
+    },
+    {
+      "name": "Bubble Gum big",
+      "qty": 2,
+      "total": 52
     },
     {
       "name": "Виноградный тропический big",
@@ -220556,13 +220600,8 @@
       "name": "Babl tea big",
       "qty": 1,
       "total": 26
-    },
-    {
-      "name": "Манго Маракуя big",
-      "qty": 1,
-      "total": 26
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-06T12:51:51.941Z"
+  "updatedAt": "2026-08-06T12:57:18.494Z"
 }

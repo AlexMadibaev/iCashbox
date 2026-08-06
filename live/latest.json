@@ -6,24 +6,52 @@
     "open": true
   },
   "summary": {
-    "average": 25.142857142857142,
-    "checks": 7,
+    "average": 24.5,
+    "checks": 8,
     "expenseTotal": 205,
-    "net": -29,
-    "revenue": 176
+    "net": -9,
+    "revenue": 196
   },
   "data": {
-    "actions": 7212,
+    "actions": 7216,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3327,
+    "orders": 3328,
     "products": 60,
     "shifts": 76
   },
   "activity": [
     {
+      "id": 1785983623603,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:33",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785983623603,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "14:33",
+      "type": "Создание заказа"
+    },
+    {
+      "id": 1785980870963,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:47",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785980870963,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "13:47",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785979131179,
       "source": "Локально",
       "status": "Сохранено",
@@ -77,34 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "12:37",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785975955269,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:25",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785975955269,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:25",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785975009462,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:10",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785975009462,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "12:10",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3327,
+    "current": 3328,
     "old": [
       {
         "createdAt": "2026-08-05T10:37:16.329Z",
@@ -109451,6 +109451,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-06T02:33:43.485Z",
+        "id": 4375,
+        "items": [
+          "Клубника mini x1"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 1,
+            "size": "",
+            "total": 20
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 20,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-06",
+        "shiftLabel": "Смена 06.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 20
+      },
       {
         "createdAt": "2026-08-06T01:47:50.793Z",
         "id": 4374,
@@ -218914,14 +218943,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 7,
-        "expectedOrders": 7,
+        "databaseOrders": 8,
+        "expectedOrders": 8,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-06",
         "label": "Смена 06.08",
         "missingOrders": 0,
-        "revenue": 176,
+        "revenue": 196,
         "status": "ok"
       },
       {
@@ -219913,7 +219942,7 @@
         "status": "ok"
       }
     ],
-    "total": 3327
+    "total": 3328
   },
   "payments": [
     {
@@ -219930,7 +219959,7 @@
     },
     {
       "method": "Dushanbe City",
-      "total": 26
+      "total": 46
     },
     {
       "method": "Семья",
@@ -219938,6 +219967,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4375,
+      "items": [
+        "Клубника mini x1"
+      ],
+      "status": "Оплачен",
+      "total": 20
+    },
     {
       "id": 4374,
       "items": [
@@ -220146,8 +220183,13 @@
       "name": "Манго Маракуя big",
       "qty": 1,
       "total": 26
+    },
+    {
+      "name": "Клубника mini",
+      "qty": 1,
+      "total": 20
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-06T08:51:15.582Z"
+  "updatedAt": "2026-08-06T09:37:09.314Z"
 }

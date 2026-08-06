@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 28.807692307692307,
-    "checks": 26,
+    "average": 29.22222222222222,
+    "checks": 27,
     "expenseTotal": 205,
-    "net": 544,
-    "revenue": 749
+    "net": 584,
+    "revenue": 789
   },
   "data": {
-    "actions": 7250,
+    "actions": 7252,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3346,
+    "orders": 3347,
     "products": 60,
     "shifts": 76
   },
   "activity": [
     {
+      "id": 1785998075735,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:34",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785998075735,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:34",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785998032901,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:56",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785995633046,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:53",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785995633046,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:53",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3346,
+    "current": 3347,
     "old": [
       {
         "createdAt": "2026-08-05T10:37:16.329Z",
@@ -109451,6 +109451,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-06T06:38:16.401Z",
+        "id": 4394,
+        "items": [
+          "Клубника mini x2"
+        ],
+        "lines": [
+          {
+            "id": "product-клубника-mini",
+            "name": "Клубника mini",
+            "price": 20,
+            "qty": 2,
+            "size": "",
+            "total": 40
+          }
+        ],
+        "payments": {
+          "Наличные": 0,
+          "Карта": 0,
+          "Alif": 40,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-06",
+        "shiftLabel": "Смена 06.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 40
+      },
       {
         "createdAt": "2026-08-06T06:34:35.598Z",
         "id": 4393,
@@ -219510,14 +219539,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 26,
-        "expectedOrders": 26,
+        "databaseOrders": 27,
+        "expectedOrders": 27,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-06",
         "label": "Смена 06.08",
         "missingOrders": 0,
-        "revenue": 749,
+        "revenue": 789,
         "status": "ok"
       },
       {
@@ -220509,7 +220538,7 @@
         "status": "ok"
       }
     ],
-    "total": 3346
+    "total": 3347
   },
   "payments": [
     {
@@ -220522,7 +220551,7 @@
     },
     {
       "method": "Alif",
-      "total": 138
+      "total": 178
     },
     {
       "method": "Dushanbe City",
@@ -220534,6 +220563,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4394,
+      "items": [
+        "Клубника mini x2"
+      ],
+      "status": "Оплачен",
+      "total": 40
+    },
     {
       "id": 4393,
       "items": [
@@ -220590,15 +220627,6 @@
       ],
       "status": "Оплачен",
       "total": 62
-    },
-    {
-      "id": 4386,
-      "items": [
-        "МангоБанан mini x1",
-        "Фруктовый лёд малина x1"
-      ],
-      "status": "Оплачен",
-      "total": 45
     }
   ],
   "shifts": {
@@ -220739,6 +220767,11 @@
       "total": 100
     },
     {
+      "name": "Клубника mini",
+      "qty": 4,
+      "total": 80
+    },
+    {
       "name": "Мороженое рожок",
       "qty": 8,
       "total": 80
@@ -220764,16 +220797,11 @@
       "total": 40
     },
     {
-      "name": "Клубника mini",
-      "qty": 2,
-      "total": 40
-    },
-    {
       "name": "Мороженое Орео",
       "qty": 2,
       "total": 40
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-06T13:37:58.958Z"
+  "updatedAt": "2026-08-06T13:41:39.713Z"
 }

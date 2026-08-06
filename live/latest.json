@@ -6,24 +6,38 @@
     "open": true
   },
   "summary": {
-    "average": 29.73913043478261,
-    "checks": 23,
+    "average": 29.541666666666668,
+    "checks": 24,
     "expenseTotal": 205,
-    "net": 479,
-    "revenue": 684
+    "net": 504,
+    "revenue": 709
   },
   "data": {
-    "actions": 7244,
+    "actions": 7246,
     "archivedDays": 1,
     "expenses": 2,
     "lowStock": 0,
     "orderCheckIssues": 0,
-    "orders": 3343,
+    "orders": 3344,
     "products": 60,
     "shifts": 76
   },
   "activity": [
     {
+      "id": 1785996723745,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:12",
+      "type": "Списание ингредиентов"
+    },
+    {
+      "id": 1785996723745,
+      "source": "Локально",
+      "status": "Сохранено",
+      "time": "18:12",
+      "type": "Создание заказа"
+    },
+    {
       "id": 1785996190367,
       "source": "Локально",
       "status": "Сохранено",
@@ -91,20 +105,6 @@
       "source": "Локально",
       "status": "Сохранено",
       "time": "17:46",
-      "type": "Создание заказа"
-    },
-    {
-      "id": 1785994743412,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:39",
-      "type": "Списание ингредиентов"
-    },
-    {
-      "id": 1785994743412,
-      "source": "Локально",
-      "status": "Сохранено",
-      "time": "17:39",
       "type": "Создание заказа"
     }
   ],
@@ -192,7 +192,7 @@
         "revenue": 1832
       }
     ],
-    "current": 3343,
+    "current": 3344,
     "old": [
       {
         "createdAt": "2026-08-05T10:37:16.329Z",
@@ -109451,6 +109451,35 @@
       }
     ],
     "orders": [
+      {
+        "createdAt": "2026-08-06T06:24:47.198Z",
+        "id": 4391,
+        "items": [
+          "Мороженое матча x1"
+        ],
+        "lines": [
+          {
+            "id": "product-мороженое-матча",
+            "name": "Мороженое матча",
+            "price": 25,
+            "qty": 1,
+            "size": "",
+            "total": 25
+          }
+        ],
+        "payments": {
+          "Наличные": 50,
+          "Карта": 0,
+          "Alif": 0,
+          "Dushanbe City": 0,
+          "Семья": 0
+        },
+        "shiftKey": "2026-08-06",
+        "shiftLabel": "Смена 06.08",
+        "source": "database",
+        "status": "Оплачен",
+        "total": 25
+      },
       {
         "createdAt": "2026-08-06T06:12:03.622Z",
         "id": 4390,
@@ -219423,14 +219452,14 @@
       {
         "archiveLoaded": true,
         "archivedOrders": 0,
-        "databaseOrders": 23,
-        "expectedOrders": 23,
+        "databaseOrders": 24,
+        "expectedOrders": 24,
         "hasArchive": false,
         "inDatabase": true,
         "key": "2026-08-06",
         "label": "Смена 06.08",
         "missingOrders": 0,
-        "revenue": 684,
+        "revenue": 709,
         "status": "ok"
       },
       {
@@ -220422,12 +220451,12 @@
         "status": "ok"
       }
     ],
-    "total": 3343
+    "total": 3344
   },
   "payments": [
     {
       "method": "Наличка",
-      "total": 434
+      "total": 459
     },
     {
       "method": "Карта",
@@ -220447,6 +220476,14 @@
     }
   ],
   "recentOrders": [
+    {
+      "id": 4391,
+      "items": [
+        "Мороженое матча x1"
+      ],
+      "status": "Оплачен",
+      "total": 25
+    },
     {
       "id": 4390,
       "items": [
@@ -220504,15 +220541,6 @@
       ],
       "status": "Оплачен",
       "total": 15
-    },
-    {
-      "id": 4383,
-      "items": [
-        "Babl tea big x1",
-        "Жасмин лимон mini x1"
-      ],
-      "status": "Оплачен",
-      "total": 46
     }
   ],
   "shifts": {
@@ -220689,5 +220717,5 @@
     }
   ],
   "ok": true,
-  "updatedAt": "2026-08-06T13:15:28.804Z"
+  "updatedAt": "2026-08-06T13:28:12.286Z"
 }
